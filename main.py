@@ -1,0 +1,41 @@
+from contextlib import asynccontextmanager
+from fastapi import FastAPI, Depends, Query, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from database import engine, Base, get_db
+from schemas import SearchResponse
+from services.food_service import search_food
+from services.seed_service import seed_data
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Khởi tạo DB schemas nếu chưa có
+    async with engine.begin() as conn:
+        # Cài đặt extension vector nếu chưa có
+        await conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
+        await conn.run_sync(Base.metadata.create_all)
+    
+    # Chạy data seeder
+    await seed_data()
+    yield
+    # Cleanup khi tắt server
+    await engine.dispose()
+
+app = FastAPI(lifespan=lifespan, title="Food AI API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+from sqlalchemy import text # import for raw sql
+
+@app.get("/foods/search", response_model=SearchResponse)
+async def search_endpoint(q: str = Query(None), db: AsyncSession = Depends(get_db)):
+    if not q:
+        raise HTTPException(status_code=400, detail="Vui lòng nhập câu hỏi tìm kiếm.")
+    return await search_food(q, db)

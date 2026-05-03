@@ -1,0 +1,5284 @@
+[
+{
+"id": "e2a4a3b8-6a5c-4d89-9b9a-4c9f8a3d1c2b",
+"name": "Mì Quảng Ếch",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi mì gạo mềm dai kết hợp cùng thịt ếch chắc ngọt, chan lượng nhỏ nước dùng đậm đà, béo ngậy, xen lẫn chút bùi bùi giòn rụm của lạc rang.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "7b8e1f5d-9c3a-4e2b-8a4d-6f1c9e5b3a2d",
+"name": "Mì Quảng Tôm Thịt",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi mì gạo dẻo mềm ăn kèm tôm săn chắc và thịt heo béo ngậy, thấm đẫm nước lèo đậm đà, sền sệt, thoang thoảng vị mặn ngọt và chút bùi bùi.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Chay Phật giáo",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "3c9d2f8e-1a5b-4c7d-9e6a-2b8f1c4d7e5a",
+"name": "Mì Quảng Gà ta",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Thịt gà dai giòn, ngọt thịt hòa quyện cùng sợi mì gạo mềm dẻo, chan nước lèo mặn ngọt đậm đà, sền sệt, điểm xuyết vị bùi béo đặc trưng.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+"name": "Mì Quảng Cá lóc",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Phi lê cá lóc mềm tơi, ngọt thanh dùng kèm sợi mì gạo dẻo dai, quyện trong nước dùng đậm đà, sền sệt, mang hương vị mặn mà cùng chút bùi bùi.",
+"hard_filters": [
+"Hải sản",
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Nước sền sệt",
+"Mềm/Tan trong miệng",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "f5e4d3c2-b1a0-4f9e-8d7c-6b5a4f3e2d1c",
+"name": "Mì Quảng Bò",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi mì gạo dẻo dai kết hợp cùng thịt bò mềm mọng, chan nước lèo sền sệt, đậm đà vị mặn ngọt xen lẫn sự béo ngậy và bùi bùi.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Nước sền sệt",
+"Mềm/Tan trong miệng",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "d4c3b2a1-e5f6-4g7h-8i9j-0k1l2m3n4o5p",
+"name": "Mì Quảng Sứa",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Thịt sứa giòn sần sật ăn cùng sợi mì gạo mềm dai, quyện đẫm nước dùng sền sệt mang vị mặn mà, béo ngậy và chút ngọt thanh tự nhiên.",
+"hard_filters": [
+"Hải sản",
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4",
+"name": "Bún chả cá Đà Nẵng",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi bún mềm trơn ngụp lặn trong nước dùng ngọt thanh, chua nhẹ, kết hợp cùng chả cá dai giòn sần sật và vị đậm đà đặc trưng của mắm ruốc.",
+"hard_filters": [
+"Hải sản",
+"Cà chua",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Chua",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "1q2w3e4r-5t6y-7u8i-9o0p-a1s2d3f4g5h6",
+"name": "Bún cá ngừ",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Nước dùng trong vắt, mang vị ngọt thanh chua dịu, chan lên sợi bún mềm và lát cá ngừ chắc thịt, đậm đà mặn mòi hương vị biển khơi.",
+"hard_filters": [
+"Hải sản",
+"Cà chua",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Chua",
+"Nóng hổi",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "z1x2c3v4-b5n6-m7q8-w9e0-r1t2y3u4i5o6",
+"name": "Bún sứa nước lèo",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi bún mềm dai hòa quyện cùng thịt sứa giòn sần sật, chan nước lèo thanh mát, ngọt dịu, chua nhẹ, tạo nên hương vị mặn ngọt hài hòa.",
+"hard_filters": [
+"Hải sản",
+"Cà chua",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Thanh mát/Lạnh",
+"Món nước",
+"Chua",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "p0o9i8u7-y6t5-r4e3-w2q1-m0n9b8v7c6x5",
+"name": "Bún mắm nêm heo quay",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi bún tươi mềm trộn đều cùng thịt heo quay da giòn rụm, rưới mắm nêm đậm đặc, mặn mà, cay nồng và thoang thoảng mùi thơm lên men đặc trưng.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt",
+"Hải sản",
+"Cao huyết áp",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Cay",
+"Món khô/Trộn",
+"Giòn/Giòn rụm",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "l1k2j3h4-g5f6-d7s8-a9p0-o1i2u3y4t5r6",
+"name": "Bún mắm nêm nem chả",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Bún dẻo mềm kết hợp chả lụa dai giòn và nem chua thanh nhẹ, hòa quyện trong mắm nêm mặn mà, cay xé lưỡi, tạo nên kết cấu phong phú.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt",
+"Hải sản",
+"Cao huyết áp",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Cay",
+"Món khô/Trộn",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "m1n2b3v4-c5x6-z7l8-k9j0-h1g2f3d4s5a6",
+"name": "Bún mắm nêm thịt luộc",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Thịt heo luộc thái mỏng mềm mại, ngậy béo ăn cùng bún tươi dẻo trơn, quyện đẫm vị mặn chát, cay nồng và đậm đà của mắm nêm lên men.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt",
+"Hải sản",
+"Cao huyết áp",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Cay",
+"Món khô/Trộn",
+"Mềm/Tan trong miệng",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "q1w2e3r4-t5y6-u7i8-o9p0-a1s2d3f4g5h6",
+"name": "Bánh tráng cuốn thịt heo hai đầu da",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Lát thịt heo mềm ngậy với hai đầu mỡ da giòn sần sật, cuốn trong bánh tráng mỏng dai và bánh ướt dẻo mềm, chấm mắm nêm mặn mà, cay nồng.",
+"hard_filters": [
+"Hải sản",
+"Cao huyết áp",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung",
+"Món Việt truyền thống"
+]
+},
+{
+"id": "z1x2c3v4-b5n6-m7l8-k9j0-h1g2f3d4s5a6",
+"name": "Bánh tráng cuốn thịt heo quay",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Thịt heo quay béo ngậy với lớp da giòn rụm, cuộn chặt cùng bánh ướt dẻo và bánh tráng mỏng dai, chấm đẫm mắm nêm cay xé, mặn mà.",
+"hard_filters": [
+"Hải sản",
+"Cao huyết áp",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Giòn/Giòn rụm",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung",
+"Món Việt truyền thống"
+]
+},
+{
+"id": "p1o2i3u4-y5t6-r7e8-w9q0-m1n2b3v4c5x6",
+"name": "Bê thui Cầu Mống",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Lát thịt bê mọng nước, mềm ngọt với lớp da mỏng nướng giòn sần sật, chấm đẫm mắm cái mặn mà, cay nồng, ăn kèm các loại rau thơm chát nhẹ.",
+"hard_filters": [
+"Hải sản",
+"Cao huyết áp",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Mồi nhậu",
+"Dai/Sần sật",
+"Mềm/Tan trong miệng",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+"name": "Bánh xèo miền Trung (giòn rụm)",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Vỏ bánh mỏng chiên vàng giòn rụm, ôm lấy nhân tôm thịt ngọt béo và giá đỗ giòn mát, chấm cùng nước mắm chua ngọt, cay nhẹ, đậm đà.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Chiên/Rán",
+"Giòn/Giòn rụm",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung",
+"Ăn vặt"
+]
+},
+{
+"id": "q1w2e3r4-t5y6-u7i8-o9p0-z1x2c3v4b5n6",
+"name": "Nem lụi nướng sả",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Hỗn hợp thịt nạc và mỡ xay nhuyễn nướng xém vàng, mang hương vị ngọt béo, mặn mà, kết cấu dai mềm dẻo mịn, dậy mùi sả thơm lừng.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Nướng",
+"Mềm/Tan trong miệng",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung",
+"Ăn no"
+]
+},
+{
+"id": "m1n2b3v4-c5x6-z7l8-k9j0-p1o2i3u4y5t6",
+"name": "Ram cuốn cải",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Lớp vỏ ram chiên vàng giòn rụm, nhân thịt béo ngậy hòa quyện, được cuộn tròn trong lá cải bẹ xanh mang vị the cay, đắng nhẹ, chấm mắm chua ngọt.",
+"hard_filters": [
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Chiên/Rán",
+"Giòn/Giòn rụm",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung",
+"Đắng"
+]
+},
+{
+"id": "h1g2f3d4-s5a6-q1w2-e3r4-t5y6u7i8o9p0",
+"name": "Bánh bèo chén",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Cốt bánh từ bột gạo trắng muốt, dẻo mềm, tan trong miệng, rắc bên trên tôm chấy khô mặn ngọt, tóp mỡ giòn tan và chan nước mắm thanh dịu.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Mềm/Tan trong miệng",
+"Hấp/Luộc",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "z1x2c3v4-b5n6-m7q8-w9e0-r1t2y3u4i5o6",
+"name": "Bánh nậm",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Lớp bột gạo mỏng manh, mềm mịn dẻo tan, bao bọc phần nhân tôm thịt băm nhỏ mặn mà, ngọt thịt, thoang thoảng hương thơm thanh tao của lá chuối.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Thanh đạm",
+"Mềm/Tan trong miệng",
+"Hấp/Luộc",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+"name": "Bánh lọc lá",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Vỏ bánh bột lọc trong suốt, dai dai sần sật, ẩn chứa bên trong nhân tôm thịt săn chắc, mặn ngọt đậm đà, mang kết cấu dẻo dai vui miệng.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Dai/Sần sật",
+"Hấp/Luộc",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "f5e4d3c2-b1a0-4f9e-8d7c-6b5a4f3e2d1c",
+"name": "Bánh lọc trần",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Viên bánh bột lọc trần dai giòn, dẻo quẹo bao bọc tôm rim mặn ngọt mặn mà, thường ăn kèm mỡ hành béo ngậy và nước mắm ớt cay nồng.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Dai/Sần sật",
+"Hấp/Luộc",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "d4c3b2a1-e5f6-4g7h-8i9j-0k1l2m3n4o5p",
+"name": "Bánh ít trần",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Vỏ bánh làm từ bột nếp dẻo dai, dính nhẹ, ôm trọn nhân đậu xanh thịt băm hoặc nhân tôm bùi béo, mặn ngọt, rắc tôm chấy đậm đà bên trên.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Dai/Sần sật",
+"Hấp/Luộc",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4",
+"name": "Bánh đập",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Kết hợp độc đáo giữa bánh tráng nướng giòn rụm và bánh ướt mỏng dẻo dai, phủ mỡ hành béo ngậy, chấm cùng mắm nêm mặn chát, cay xé đầy kích thích.",
+"hard_filters": [
+"Hải sản",
+"Dạ dày/Đại tràng",
+"Cao huyết áp",
+"Thuần chay"
+],
+"soft_filters": [
+"Đậm đà",
+"Giòn/Giòn rụm",
+"Dai/Sần sật",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "1q2w3e4r-5t6y-7u8i-9o0p-a1s2d3f4g5h6",
+"name": "Tré Đà Nẵng",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Thịt đầu heo và tai heo thái mỏng mang độ giòn sần sật đặc trưng, ủ lên men tạo vị chua nhẹ, mặn mà, xen lẫn cay nồng của riềng tỏi.",
+"hard_filters": [
+"Dạ dày/Đại tràng",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Chua",
+"Cay",
+"Giòn/Giòn rụm",
+"Mồi nhậu",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "z1x2c3v4-b5n6-m7q8-w9e0-r1t2y3u4i5o6",
+"name": "Chả bò Đà Nẵng",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Khối chả thịt bò màu hồng nhạt, mang độ dai giòn sần sật, dẻo mịn, vị ngọt đậm đà của thịt hòa quyện cùng hương cay nồng sặc sụa của tiêu sọ.",
+"hard_filters": [
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Dai/Sần sật",
+"Mồi nhậu",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "p0o9i8u7-y6t5-r4e3-w2q1-m0n9b8v7c6x5",
+"name": "Gỏi cá Nam Ô (Gỏi khô)",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Phi lê cá tươi rói dẻo mềm, được phủ kín lớp thính bùi béo giòn tan, vị ngọt tự nhiên quyện lẫn chút cay the, mặn mà và không hề tanh.",
+"hard_filters": [
+"Hải sản",
+"Đậu phộng/Các loại hạt",
+"Dạ dày/Đại tràng",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Gỏi/Trộn sống",
+"Mồi nhậu",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "l1k2j3h4-g5f6-d7s8-a9p0-o1i2u3y4t5r6",
+"name": "Gỏi cá Nam Ô (Gỏi ướt)",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Những lát cá sống mọng nước, mềm dẻo ngâm trong nước sốt cay xé lưỡi, mặn mà đậm đặc, dậy vị ngọt tươi tự nhiên và kết cấu béo ngậy.",
+"hard_filters": [
+"Hải sản",
+"Đậu phộng/Các loại hạt",
+"Dạ dày/Đại tràng",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Cay",
+"Gỏi/Trộn sống",
+"Mồi nhậu",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "m1n2b3v4-c5x6-z7l8-k9j0-h1g2f3d4s5a6",
+"name": "Bánh canh ruộng",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi bánh canh bột lọc dai dẻo hoặc bột gạo mềm trơn, ngụp lặn trong nước lèo sền sệt, mặn ngọt đậm đà, xen lẫn chả cá dai sật béo ngậy.",
+"hard_filters": [
+"Hải sản",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "q1w2e3r4-t5y6-u7i8-o9p0-a1s2d3f4g5h6",
+"name": "Bánh canh Nam Phổ",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi bánh mềm tơi hòa trong nước dùng màu cam đỏ đặc sánh sền sệt, đậm đà vị ngọt béo từ tôm và cua băm nhuyễn, tan ngay trong miệng.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Nước sền sệt",
+"Mềm/Tan trong miệng",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "z1x2c3v4-b5n6-m7l8-k9j0-h1g2f3d4s5a6",
+"name": "Bánh canh cá lóc nướng",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Nước lèo sền sệt, mặn mà và ngọt thanh ôm lấy sợi bột dẻo dai, ăn kèm thịt cá lóc nướng mềm xốp, thơm lừng béo ngậy.",
+"hard_filters": [
+"Hải sản",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "p1o2i3u4-y5t6-r7e8-w9q0-m1n2b3v4c5x6",
+"name": "Bánh canh xương chả",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Nước hầm xương ngọt thanh, trong vắt chan lên sợi bánh canh dai dẻo, kết hợp cùng xương heo mềm rục và lát chả cá giòn sần sật mặn mà.",
+"hard_filters": [
+"Hải sản",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Nóng hổi",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+"name": "Bánh canh ghẹ",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Nước lèo sền sệt mang màu đỏ au sánh mịn, đậm đà vị ngọt hải sản, chan cùng sợi bánh dai dẻo và thịt ghẹ săn chắc, béo ngậy.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "q1w2e3r4-t5y6-u7i8-o9p0-z1x2c3v4b5n6",
+"name": "Mít non trộn tôm thịt",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Mít non xé tơi mềm mại mang vị ngọt bùi, trộn lẫn tôm thịt săn chắc, quyện nước mắm chua ngọt đậm đà, xen lẫn lạc rang giòn rụm béo ngậy.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Đậu phộng/Các loại hạt",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Gỏi/Trộn sống",
+"Giòn/Giòn rụm",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "m1n2b3v4-c5x6-z7l8-k9j0-p1o2i3u4y5t6",
+"name": "Gỏi mít non đậu phộng",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi mít non luộc chín có độ dai mềm, bùi bùi, trộn cùng rau thơm thanh mát và đậu phộng rang giòn tan, mang hương vị chua ngọt, thanh nhẹ.",
+"hard_filters": [
+"Đậu phộng/Các loại hạt"
+],
+"soft_filters": [
+"Thanh đạm",
+"Gỏi/Trộn sống",
+"Giòn/Giòn rụm",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung",
+"Healthy/Ít calo"
+]
+},
+{
+"id": "h1g2f3d4-s5a6-q1w2-e3r4-t5y6u7i8o9p0",
+"name": "Cao lầu Hội An",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi mì màu vàng nâu dai dẻo sần sật, ăn cùng thịt xíu mặn ngọt đậm đà, điểm xuyết da heo chiên giòn rụm, chan chút nước sốt sền sệt béo ngậy.",
+"hard_filters": [
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "z1x2c3v4-b5n6-m7q8-w9e0-r1t2y3u4i5o6",
+"name": "Bánh vạc Hội An (Bông hồng trắng)",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Lớp vỏ bột gạo mỏng manh, trong suốt và dẻo mềm, bọc lấy nhân tôm thịt xay nhuyễn mặn ngọt tinh tế, dùng cùng nước mắm chua ngọt thanh dịu.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Thanh đạm",
+"Mềm/Tan trong miệng",
+"Hấp/Luộc",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+"name": "Hoành thánh chiên",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Vỏ bột chiên phồng giòn rụm tan ngay trong miệng, bọc phần nhân tôm thịt béo ngậy, ăn kèm nước sốt cà chua sền sệt mang vị chua ngọt mặn mà.",
+"hard_filters": [
+"Lúa mì/Gluten",
+"Hải sản",
+"Cà chua",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Chiên/Rán",
+"Giòn/Giòn rụm",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "f5e4d3c2-b1a0-4f9e-8d7c-6b5a4f3e2d1c",
+"name": "Bún lòng xào nghệ",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Sợi bún mềm dai xào chung với lòng heo dai sần sật béo ngậy, phủ một màu vàng óng, mang hương vị mặn mà cùng mùi hăng nồng của nghệ tươi.",
+"hard_filters": [
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Món khô/Trộn",
+"Xào",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "d4c3b2a1-e5f6-4g7h-8i9j-0k1l2m3n4o5p",
+"name": "Bò né",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Miếng thịt bò mềm mọng nước xèo xèo trên chảo gang nóng hổi, quyện vị béo ngậy của trứng ốp la, pate dẻo mịn và nước sốt mặn ngọt sền sệt.",
+"hard_filters": [
+"Trứng",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Nóng hổi",
+"Mềm/Tan trong miệng",
+"Ăn sáng",
+"Ăn no",
+"Món Việt truyền thống"
+]
+},
+{
+"id": "9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4",
+"name": "Bánh tráng kẹp",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Miếng bánh tráng mỏng giòn rụm hoặc cuộn dẻo dai, kẹp nhân pate béo ngậy, trứng cút mặn bùi và mỡ hành thơm lức, phủ tương ớt cay nồng mặn mà.",
+"hard_filters": [
+"Trứng",
+"Thuần chay"
+],
+"soft_filters": [
+"Đậm đà",
+"Cay",
+"Giòn/Giòn rụm",
+"Ăn vặt",
+"Ẩm thực đường phố",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "1q2w3e4r-5t6y-7u8i-9o0p-a1s2d3f4g5h6",
+"name": "Ốc bươu nhồi thịt",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Phần thịt ốc giòn sần sật băm nhuyễn cùng giò sống dai dẻo, nhồi lại vào vỏ ốc, hấp chín mang vị ngọt thanh, mặn mà thoảng mùi sả gừng ấm nóng.",
+"hard_filters": [
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Dai/Sần sật",
+"Hấp/Luộc",
+"Mồi nhậu",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "z1x2c3v4-b5n6-m7q8-w9e0-r1t2y3u4i5o6",
+"name": "Cháo lươn",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Hạt gạo bung mềm rục, tan trong miệng cùng nước hầm sền sệt ngọt thanh, ăn kèm những miếng thịt lươn xào săn chắc, béo ngậy và đậm đà cay nồng.",
+"hard_filters": [
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Nóng hổi",
+"Nước sền sệt",
+"Mềm/Tan trong miệng",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "p0o9i8u7-y6t5-r4e3-w2q1-m0n9b8v7c6x5",
+"name": "Cháo vịt",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Hạt cháo ninh nhừ dẻo mềm, ngậy béo vị nước luộc thịt, kết hợp cùng những lát thịt vịt luộc dai ngọt săn chắc, chấm kèm mắm gừng cay mặn đậm đà.",
+"hard_filters": [
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Nóng hổi",
+"Mềm/Tan trong miệng",
+"Ăn no",
+"Ăn đêm/khuya",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "l1k2j3h4-g5f6-d7s8-a9p0-o1i2u3y4t5r6",
+"name": "Bánh canh cua",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Nước dùng đặc sánh, sền sệt mang vị ngọt tự nhiên của hải sản, bao bọc lấy sợi bánh dai dẻo và những thớ thịt cua trắng ngần, béo ngậy mặn mà.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Món nước",
+"Nước sền sệt",
+"Dai/Sần sật",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+{
+"id": "m1n2b3v4-c5x6-z7l8-k9j0-h1g2f3d4s5a6",
+"name": "Bánh xèo tôm nhảy (Đặc sản Bình Định)",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Lớp vỏ bột mỏng chiên vàng ươm, giòn rụm tan ngay trong miệng, nổi bật với nhân tôm nguyên con săn chắc, mặn ngọt đậm đà cuốn cùng rau thanh mát.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Chay Phật giáo"
+],
+"soft_filters": [
+"Đậm đà",
+"Chiên/Rán",
+"Giòn/Giòn rụm",
+"Ăn no",
+"Đặc sản Đà Nẵng/Miền Trung",
+"Món Việt truyền thống"
+]
+},
+{
+"id": "q1w2e3r4-t5y6-u7i8-o9p0-a1s2d3f4g5h6",
+"name": "Ram ít cuốn",
+"category": "Đặc sản Đà Nẵng & Miền Trung",
+"description": "Kết hợp hài hòa giữa đế ram chiên vàng giòn rụm béo ngậy và viên bánh nếp bên trên dẻo dai mềm mại, chứa nhân tôm thịt mặn mà ngọt thơm.",
+"hard_filters": [
+"Hải sản",
+"Động vật có vỏ",
+"Thuần chay",
+"Halal"
+],
+"soft_filters": [
+"Đậm đà",
+"Chiên/Rán",
+"Giòn/Giòn rụm",
+"Dai/Sần sật",
+"Ăn vặt",
+"Đặc sản Đà Nẵng/Miền Trung"
+]
+},
+  {
+    "id": "e6a12b45-1c34-4b56-a789-0d12e34f5678",
+    "name": "Chíp chíp hấp sả",
+    "category": "Hải sản",
+    "description": "Thịt ốc nhỏ dẻo mềm, dai nhẹ ngập trong nước dùng trong vắt, mang vị ngọt dịu thanh mát tự nhiên và thoang thoảng hương thơm ấm nóng sặc sụa.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Hấp/Luộc",
+      "Dai/Sần sật",
+      "Mồi nhậu",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "f7b23c56-2d45-5c67-b890-1e23f45g6789",
+    "name": "Nghêu hấp thái",
+    "category": "Hải sản",
+    "description": "Thịt nghêu dai dẻo béo ngậy hòa quyện trong nước súp đỏ cam đặc trưng, bùng nổ vị mặn mà, chua thanh, ngọt nhẹ và cay xé rát lưỡi.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Dạ dày/Đại tràng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Món nước",
+      "Mồi nhậu",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "a8c34d67-3e56-6d78-c901-2f34g56h7890",
+    "name": "Ốc hương rang muối tuyết",
+    "category": "Hải sản",
+    "description": "Kết cấu thịt ốc giòn sần sật, nhai vui miệng, bọc ngoài lớp áo muối tuyết bám đều mang vị mặn chát, cay nồng và khô ráo đậm đà.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Cay",
+      "Món khô/Trộn",
+      "Giòn/Giòn rụm",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "b9d45e78-4f67-7e89-d012-3g45h67i8901",
+    "name": "Ốc hương xào bơ tỏi",
+    "category": "Hải sản",
+    "description": "Thịt ốc dai giòn ngập trong lớp xốt sánh mịn, bóng bẩy cực kỳ béo ngậy, mặn ngọt đậm đà xen lẫn những vụn tỏi phi giòn tan bùi bùi.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Sữa/Lactose",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Xào",
+      "Nước sền sệt",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "c0e56f89-5g78-8f90-e123-4h56i78j9012",
+    "name": "Mực nhảy hấp hành gừng",
+    "category": "Hải sản",
+    "description": "Thịt mực tươi rói mang kết cấu giòn sật, nhai dai dai nhưng vẫn dẻo dính, tỏa vị ngọt thanh đạm tự nhiên quyện cùng chút cay ấm nồng dịu.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Hấp/Luộc",
+      "Dai/Sần sật",
+      "Mồi nhậu",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "d1f67g90-6h89-9g01-f234-5i67j89k0123",
+    "name": "Mực nướng sa tế",
+    "category": "Hải sản",
+    "description": "Miếng thịt dày cùi dai giòn sần sật, phủ đẫm lớp xốt sền sệt đỏ au mặn mà, béo nhẹ và bùng nổ vị cay xé lưỡi cực kích thích.",
+    "hard_filters": [
+      "Hải sản",
+      "Dạ dày/Đại tràng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Nướng",
+      "Dai/Sần sật",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "e2g78h01-7i90-0h12-g345-6j78k90l1234",
+    "name": "Mực một nắng nướng than",
+    "category": "Hải sản",
+    "description": "Bề ngoài xém nhẹ mang độ giòn giòn, bên trong thớ thịt dẻo mềm, dai sật đặc trưng, nhai kỹ sẽ tiết ra vị mặn mòi và ngọt lịm tự nhiên.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Ngọt",
+      "Nướng",
+      "Dai/Sần sật",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "f3h89i12-8j01-1i23-h456-7k89l01m2345",
+    "name": "Tôm sú nướng mắm nhĩ",
+    "category": "Hải sản",
+    "description": "Thịt tôm săn chắc, dai ngọt mọng nước nằm trọn trong lớp vỏ giòn tan nướng xém, thấm đẫm hương vị mặn chát, đậm đặc nồng nàn từ nước mắm.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "g4i90j23-9k12-2j34-i567-8l90m12n3456",
+    "name": "Tôm hùm nướng phô mai",
+    "category": "Hải sản",
+    "description": "Thớ thịt dày cuộn tròn săn chắc, ngọt lịm bao phủ bởi lớp xốt dẻo quánh, dính ngập béo ngậy, vàng óng, mang vị mặn ngọt đan xen hài hòa.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Sữa/Lactose",
+      "Tim mạch/Mỡ máu",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "h5j01k34-0l23-3k45-j678-9m01n23o4567",
+    "name": "Cua rang me",
+    "category": "Hải sản",
+    "description": "Thịt cua béo ngậy dẻo mềm tẩm ướp đậm đà, ngập trong nước xốt đặc sánh sền sệt, chua chua ngọt ngọt gắt nhẹ, bung tỏa vị mặn mà đọng lại.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Ngọt",
+      "Nước sền sệt",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "i6k12l45-1m34-4l56-k789-0n12o34p5678",
+    "name": "Ghẹ xanh hấp",
+    "category": "Hải sản",
+    "description": "Những tảng thịt trắng muốt săn chắc, thớ mềm mọng mang vị ngọt lịm tự nhiên, thanh đạm không tẩm ướp gia vị, nhai dẻo tan nhẹ nhàng trong miệng.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Ngọt",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "j7l23m56-2n45-5m67-l890-1o23p45q6789",
+    "name": "Lẩu hải sản chua cay",
+    "category": "Hải sản",
+    "description": "Các loại hải sản dai giòn sần sật béo ngậy ngập lặn trong nước dùng lỏng sánh nhẹ màu đỏ ớt, bùng nổ vị chua thanh, cay xé rát rạt.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Cà chua",
+      "Dạ dày/Đại tràng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Món nước",
+      "Nóng hổi",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "k8m34n67-3o56-6n78-m901-2p34q56r7890",
+    "name": "Hàu nướng mỡ hành",
+    "category": "Hải sản",
+    "description": "Khối thịt ướt át mềm nhũn, béo ngập khoang miệng phủ kín lớp hành lá phi mỡ xèo xèo giòn rụm, quyện lẫn vị mặn mà và đậu phộng bùi bùi.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "l9n45o78-4p67-7o89-n012-3q45r67s8901",
+    "name": "Hàu nướng phô mai",
+    "category": "Hải sản",
+    "description": "Thịt hàu sữa núng nính, mềm tan béo ngậy hòa quyện hoàn hảo dưới lớp bọc xốt phô mai đặc quánh, kéo sợi dẻo dai mang vị mặn ngọt ngậy sữa.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Sữa/Lactose",
+      "Tim mạch/Mỡ máu",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "m0o56p89-5q78-8p90-o123-4r56s78t9012",
+    "name": "Sò điệp nướng mỡ hành",
+    "category": "Hải sản",
+    "description": "Cồi sò trắng nõn mềm dẻo, dai nhẹ và ngọt thanh tự nhiên, rưới đẫm xốt hành mỡ bóng loáng, mặn mà cùng hạt đậu phộng giòn tan bùi béo.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "n1p67q90-6r89-9q01-p234-5s67t89u0123",
+    "name": "Nhum biển nướng trứng",
+    "category": "Hải sản",
+    "description": "Thịt dẻo mềm sệt sệt, kết hợp lòng đỏ trứng đánh nhuyễn đặc quánh nướng xém, tan ngay trên đầu lưỡi, mang hương vị mặn mòi béo ngậy tột độ.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Trứng",
+      "Tim mạch/Mỡ máu",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "o2q78r01-7s90-0r12-q345-6t78u90v1234",
+    "name": "Cá mú hấp xì dầu",
+    "category": "Hải sản",
+    "description": "Phi lê cá trắng bóc mềm tơi, ngọt thịt thấm đẫm lớp nước lỏng sậm màu, mặn ngọt dịu nhẹ của xì dầu, thoang thoảng mùi gừng hành thanh nhã.",
+    "hard_filters": [
+      "Hải sản",
+      "Đậu nành",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Món nước",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "p3r89s12-8t01-1s23-r456-7u89v01w2345",
+    "name": "Cá đuối nướng mỡ hành",
+    "category": "Hải sản",
+    "description": "Lớp vỏ xém ngoài dai nhẹ bao bọc thớ thịt dẻo mềm sần sật nhai trúng sụn giòn, ngập ngụa trong mỡ hành béo ngậy mặn mà và đậu phộng bùi bùi.",
+    "hard_filters": [
+      "Hải sản",
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "q4s90t23-9u12-2t34-s567-8v90w12x3456",
+    "name": "Sò huyết rang me",
+    "category": "Hải sản",
+    "description": "Phần thịt mọng máu dai sật đậm vị mặn mòi tự nhiên, quyện chặt lớp nước xốt keo đặc bám dính quanh vỏ mang vị chua ngọt gắt gắt, béo nhẹ.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Ngọt",
+      "Nước sền sệt",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "r5t01u34-0v23-3u45-t678-9w01x23y4567",
+    "name": "Tôm tít (bề bề) rang muối",
+    "category": "Hải sản",
+    "description": "Lớp áo muối mặn chát, cay tê râm ran bám quanh vỏ giòn rụm, ẩn chứa phần thịt dẻo săn, ngọt lịm tự nhiên mang kết cấu khô ráo đậm đà.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Giòn/Giòn rụm",
+      "Món khô/Trộn",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "s6u12v45-1w34-4v56-u789-0x12y34z5678",
+    "name": "Lẩu cá bớp măng chua",
+    "category": "Hải sản",
+    "description": "Khúc thịt cá săn chắc, dẻo dai béo ngậy đắm trong thứ nước súp lỏng mặn mà, bùng vị chua gắt của măng thái mỏng sần sật và chút cay nồng.",
+    "hard_filters": [
+      "Hải sản",
+      "Dạ dày/Đại tràng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Ăn no",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "t7v23w56-2x45-5w67-v890-1y23z45a6789",
+    "name": "Cua huỳnh đế hấp",
+    "category": "Hải sản",
+    "description": "Những tảng thịt cua khổng lồ trắng phau, kết cấu xốp mềm nhưng chắc nịch, ứa nước ngọt lịm nguyên bản, thanh đạm béo ngậy đọng lại lâu sau khi nhai.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Ngọt",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "u8w34x67-3y56-6x78-w901-2z34a56b7890",
+    "name": "Mực sữa chiên nước mắm",
+    "category": "Hải sản",
+    "description": "Bề ngoài chiên giòn rụm óng ánh sốt kẹo dính, bên trong thịt mực dai giòn sần sật béo ngậy, bùng nổ hương vị mặn mòi, ngọt gắt và cay tê.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "v9x45y78-4z67-7y89-x012-3a45b67c8901",
+    "name": "Bạch tuộc nướng sa tế",
+    "category": "Hải sản",
+    "description": "Xúc tu nướng xém ngoài dẻo dai sần sật nhai cực đã, phủ ngập lớp xốt sền sệt đỏ au, cay xé rát rạt mặn ngọt đậm đà, thơm lừng mỡ béo.",
+    "hard_filters": [
+      "Hải sản",
+      "Dạ dày/Đại tràng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Nướng",
+      "Dai/Sần sật",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "w0y56z89-5a78-8z90-y123-4b56c78d9012",
+    "name": "Ốc móng tay xào rau muống",
+    "category": "Hải sản",
+    "description": "Thịt ốc dài dai dẻo sần sật xào chung với cọng rau muống giòn xốp rỗng ruột, bóng mướt dầu mỡ, mang hương vị mặn ngọt mộc mạc thơm lừng tỏi tía.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Dai/Sần sật",
+      "Giòn/Giòn rụm",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "x1z67a90-6b89-9a01-z234-5c67d89e0123",
+    "name": "Ốc len xào dừa",
+    "category": "Hải sản",
+    "description": "Thịt ốc nhỏ dai giòn dẻo dai bơi trong nồi xốt cốt dừa lỏng sánh mịn cực kỳ béo ngậy, bùi bùi, mang hương vị ngọt ngào mằn mặn đầy lôi cuốn.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Ngọt",
+      "Xào",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "y2a78b01-7c90-0b12-a345-6e78f90g1234",
+    "name": "Sò lông nướng mỡ hành",
+    "category": "Hải sản",
+    "description": "Thớ thịt dai dai sần sật ứa nước ngọt mặn tự nhiên, nằm ngập trong mỡ hành xèo xèo béo ngậy bóng bẩy, rắc thêm lớp đậu phộng rang giòn tan rụm.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Dai/Sần sật",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "z3b89c12-8d01-1c23-b456-7f89g01h2345",
+    "name": "Cháo hàu",
+    "category": "Hải sản",
+    "description": "Hạt gạo nở bung mềm rục sền sệt, lẩn khuất những miếng thịt hàu béo ngập ứa nước ngọt lịm, đậm đà vị tiêu cay tê và ấm nồng thanh nhã.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Ăn no",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "a4c90d23-9e12-2d34-c567-8g90h12i3456",
+    "name": "Gỏi sứa trộn vả",
+    "category": "Hải sản",
+    "description": "Sợi sứa trong vắt giòn sần sật nhai vui tai, trộn cùng những lát vả mang vị chát nhẹ dẻo bùi, thấm đẫm mắm ớt chua ngọt cay xé lưỡi mặn mà.",
+    "hard_filters": [
+      "Hải sản",
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Gỏi/Trộn sống",
+      "Chua",
+      "Dai/Sần sật",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "b5d01e34-0f23-3e45-d678-9h01i23j4567",
+    "name": "Còi biên mai nướng muối ớt",
+    "category": "Hải sản",
+    "description": "Miếng cồi thịt dẻo dai săn chắc mang vị ngọt thanh, áo lớp ngoài xém giòn với bột muối ớt mặn chát, cay nồng rát rạt cực kỳ khô ráo.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Cay",
+      "Nướng",
+      "Dai/Sần sật",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "c6e12f45-1g34-4f56-e789-0i12j34k5678",
+    "name": "Tôm hùm đất (Crawfish) sốt Cajun",
+    "category": "Hải sản",
+    "description": "Thịt tôm nhỏ chắc nịch dai ngọt, ngụp lặn ngập ngụa trong thố xốt sền sệt màu cam đỏ béo ngậy bơ tỏi, cay xé rát đặc trưng gia vị thảo mộc.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Sữa/Lactose",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "d7f23g56-2h45-5g67-f890-1j23k45l6789",
+    "name": "Phở bò tái lăn",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi bánh dẻo ướt trơn tuột ngâm trong nước lèo mặn ngọt béo ngậy váng mỡ, bọc lấy thớ bò xào tái xém mềm mọng, sần sật ngập mùi tỏi phi nồng nàn.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "e8g34h67-3i56-6h78-g901-2k34l56m7890",
+    "name": "Phở bò nạm gầu",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi gạo mềm trơn ăn cùng phần mỡ gầu giòn sật ngậy béo và thịt nạm dẻo dai, chan nước dùng trong vắt, thanh ngọt đậm vị xương hầm thoảng mùi quế hồi.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Béo ngậy",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f9h45i78-4j67-7i89-h012-3l45m67n8901",
+    "name": "Phở gà ta",
+    "category": "Bún, Phở, Miến",
+    "description": "Thịt gà luộc da giòn sần sật, thớ thịt dai ngọt ướt át quyện sợi phở mềm, lặn trong nước dùng lỏng váng mỡ gà óng ả mang vị thanh tao, mặn dịu.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "g0i56j89-5k78-8j90-i123-4m56n78o9012",
+    "name": "Bún bò Huế (Giò, gân, chả)",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi bún to tròn dẻo dai cùng miếng giò rục mềm, gân bò sần sật, chả dai giòn, ngập trong nước dùng đỏ cam mặn mà, cay nồng sặc sụa mùi ruốc sả.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "h1j67k90-6l89-9k01-j234-5n67o89p0123",
+    "name": "Bún bò bắp",
+    "category": "Bún, Phở, Miến",
+    "description": "Lát thịt bắp đan xen những vân gân trong suốt dẻo dai sần sật, ướt át chan ngập nước dùng cay xé, mặn mà đậm đặc mắm ruốc cùng sợi bún to trơn.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "i2k78l01-7m90-0l12-k345-6o78p90q1234",
+    "name": "Bún riêu cua đồng",
+    "category": "Bún, Phở, Miến",
+    "description": "Tảng gạch cua xốp mềm béo ngậy tan ngay đầu lưỡi hòa cùng sợi bún nhỏ, nước dùng lỏng váng mỡ màu đỏ au mang vị chua thanh, mặn ngọt nhẹ nhàng.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Cà chua",
+      "Trái cây có múi",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "j3l89m12-8n01-1m23-l456-7p89q01r2345",
+    "name": "Bún ốc",
+    "category": "Bún, Phở, Miến",
+    "description": "Những con ốc béo múp dai giòn sần sật, nhai rột rột kết hợp sợi bún trơn mềm, ngập trong làn nước lèo trong vắt vị chua gắt thanh tao và cay the.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Cà chua",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Thanh đạm",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "k4m90n23-9o12-2n34-m567-8q90r12s3456",
+    "name": "Bún thịt nướng",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi bún tươi dẻo ướt trộn đều cùng thịt xém cạnh nướng than dai mềm, óng ả mỡ béo, rưới ngập nước mắm chua ngọt mặn mà xen lẫn đậu phộng giòn rụm.",
+    "hard_filters": [
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "l5n01o34-0p23-3o45-n678-9r01s23t4567",
+    "name": "Bún chả Hà Nội",
+    "category": "Bún, Phở, Miến",
+    "description": "Viên thịt băm mềm nhuyễn béo ngậy và thịt thái lát xém giòn ngâm lặn lội trong chén nước chấm lỏng ấm nóng, vị mặn ngọt thanh chua nhẹ, ăn kèm bún lá mềm dẻo.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "m6o12p45-1q34-4p56-o789-0s12t34u5678",
+    "name": "Bún đậu mắm tôm",
+    "category": "Bún, Phở, Miến",
+    "description": "Đậu hũ chiên ngoài giòn trong xốp béo, thịt luộc dẻo mềm cùng bún lá nén chặt, chấm đẫm vào chén mắm tím đặc quánh mặn chát, cay nồng chua bùng nổ.",
+    "hard_filters": [
+      "Đậu nành",
+      "Hải sản",
+      "Trái cây có múi",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Món khô/Trộn",
+      "Giòn/Giòn rụm",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "n7p23q56-2r45-5q67-p890-1t23u45v6789",
+    "name": "Miến lươn trộn",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi miến dong xào khô ráo, dai dai dẻo quẹo trộn lẫn những vụn thịt lươn chiên giòn tan rôm rốp, thấm đẫm xốt sền sệt mặn ngọt đậm đà, thơm lừng hành phi.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Giòn/Giòn rụm",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "o8q34r67-3s56-6r78-q901-2u34v56w7890",
+    "name": "Miến lươn nước",
+    "category": "Bún, Phở, Miến",
+    "description": "Thịt lươn xào mềm béo ngậy nhai dẻo tan hoặc chiên giòn rụm ngụp trong nước dùng xương thanh tao trong vắt, ôm lấy những sợi dong dẻo trơn ướt át đẫm vị đậm đà.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "p9r45s78-4t67-7s89-r012-3v45w67x8901",
+    "name": "Miến măng gà",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi miến mỏng dẻo dai hòa quyện măng khô ninh rục mềm sần sật, chan nước lèo mặn ngọt thanh nhẹ váng mỡ gà óng ả, cắn kèm thịt gà luộc săn chắc.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Dai/Sần sật",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "q0s56t89-5u78-8t90-s123-4w56x78y9012",
+    "name": "Miến xào hải sản",
+    "category": "Bún, Phở, Miến",
+    "description": "Những sợi dong tơi rời bóng mướt dầu mỡ, dai dẻo sần sật xào chung với mực, tôm săn chắc nảy bật trong miệng, phủ đầy vị mặn ngọt đậm đà béo ngậy.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "r1t67u90-6v89-9u01-t234-5x67y89z0123",
+    "name": "Mì vằn thắn",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi mì trứng vàng óng dai sật, kết hợp sủi cảo mềm tan nhân thịt tôm béo ngậy bọc trong nước súp lỏng mặn ngọt thanh thanh, lẩn khuất miếng gan heo bùi dẻo.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "s2u78v01-7w90-0v12-u345-6y78z90a1234",
+    "name": "Hủ tiếu Nam Vang",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi gạo tơi xốp hơi dai giòn đắm mình trong nước dùng xương thanh ngọt, quyện cùng tôm săn chắc, thịt băm béo ngậy và gan luộc bùi bùi, thoảng mùi tỏi phi.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "t3v89w12-8x01-1w23-v456-7z89a01b2345",
+    "name": "Hủ tiếu gõ",
+    "category": "Bún, Phở, Miến",
+    "description": "Bát hủ tiếu bình dân với sợi dai mảnh, lặn ngụp trong nước lèo mặn ngọt mỏng nhẹ, điểm xuyết vài lát thịt xắt mỏng dính mềm tan và tóp mỡ giòn rụm béo ngậy.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Ẩm thực đường phố",
+      "Ăn đêm/khuya"
+    ]
+  },
+  {
+    "id": "u4w90x23-9y12-2x34-w567-8a90b12c3456",
+    "name": "Hủ tiếu mực",
+    "category": "Bún, Phở, Miến",
+    "description": "Khoanh mực trắng phau giòn sật, ngọt lịm tự nhiên dùng kèm sợi hủ tiếu dẻo dai trong làn súp nóng trong vắt, mang vị mặn dịu thanh tao, thơm nồng tỏi phi.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "v5x01y34-0z23-3y45-x678-9b01c23d4567",
+    "name": "Bún bề bề",
+    "category": "Bún, Phở, Miến",
+    "description": "Thịt bề bề dai dẻo săn chắc ngọt nước, nổi bật trên nền bún mềm trơn và làn súp chua thanh gắt nhẹ mặn mà đậm đặc hải sản váng dầu đỏ.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Cà chua",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "w6y12z45-1a34-4z56-y789-0c12d34e5678",
+    "name": "Bánh đa cua",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi bánh đa đỏ dai dẻo bản to nhai sần sật, nước súp lỏng mặn mòi váng mỡ gạch béo ngậy, ngọt gắt vị cua đồng bùi bùi và thoảng chả lá lốt mềm thơm.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "x7z23a56-2b45-5a67-z890-1d23e45f6789",
+    "name": "Phở cuốn Hà Nội",
+    "category": "Bún, Phở, Miến",
+    "description": "Lớp bánh phở bản to trắng muốt dẻo mềm ướt át cuộn chặt thớ bò xào tỏi nảy dai béo ngậy, chấm đẫm nước mắm pha lỏng lỏng chua ngọt thanh dịu tột độ.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Mềm/Tan trong miệng",
+      "Ăn vặt",
+      "Thanh mát/Lạnh"
+    ]
+  },
+  {
+    "id": "y8a34b67-3c56-6b78-a901-2e34f56g7890",
+    "name": "Phở xào mềm",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi phở ướt xào tơi mềm nhũn áo lớp dầu mỡ bóng loáng sền sệt béo ngậy, cuộn cùng thịt bò mềm mọng nước, dậy hương mặn ngọt xì dầu nồng nàn tỏi xào.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "z9b45c78-4d67-7c89-b012-3f45g67h8901",
+    "name": "Bún cá rô đồng",
+    "category": "Bún, Phở, Miến",
+    "description": "Miếng cá rô chiên giòn rụm nhai vỡ vụn hoặc luộc dẻo mềm ngọt thịt béo ngậy, bơi trong nước súp xương thanh ngọt, mặn dịu chan lên sợi bún mỏng trơn tuột.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Giòn/Giòn rụm",
+      "Ăn no",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "a0c56d89-5e78-8d90-c123-4g56h78i9012",
+    "name": "Bún chả cá Quy Nhơn",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi bún nhỏ trơn tuột chan ngập súp trong veo ngọt thanh chua nhẹ, nổi bật với lát chả cá dai giòn sần sật nhai dính răng, mặn mòi đậm đặc vị biển khơi.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "b1d67e90-6f89-9e01-d234-5h67i89j0123",
+    "name": "Bún sườn sụn nấu sấu",
+    "category": "Bún, Phở, Miến",
+    "description": "Nước súp thanh mỏng bùng vị chua chát nhẹ râm ran của quả sấu, quyện cùng miếng sườn sụn ninh nhừ cắn giòn sật rộp rộp béo ngậy, bún dẻo ướt nuốt trôi dễ dàng.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Thanh đạm",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "c2e78f01-7g90-0f12-e345-6i78j90k1234",
+    "name": "Bún dọc mùng",
+    "category": "Bún, Phở, Miến",
+    "description": "Thân mùng xốp rỗng hút trọn nước súp thanh mỏng ngọt dịu nhai giòn xốp rột rột, hòa cùng viên mọc thịt nấm nhĩ dẻo dai béo ngậy và sợi bún trơn mềm.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Giòn/Giòn rụm",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d3f89g12-8h01-1g23-f456-7j89k01l2345",
+    "name": "Hủ tiếu Nam Vang khô (trộn)",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi gạo tơi dai dẻo trộn đẫm xốt xì dầu tỏi mặn ngọt bóng bẩy đặc sánh, ăn kèm tôm thịt săn chắc dẻo mềm béo ngậy, bát súp thanh ngọt húp riêng.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Mặn",
+      "Ngọt",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "e4g90h23-9i12-2h34-g567-8k90l12m3456",
+    "name": "Mì xào giòn hải sản",
+    "category": "Bún, Phở, Miến",
+    "description": "Tảng mì chiên phồng xốp giòn rụm tan rôm rốp phủ ngập nước xốt đặc sánh sền sệt béo ngậy, bọc lấy tôm mực dai sật săn chắc mang vị mặn ngọt đậm đà.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Nước sền sệt",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f5h01i34-0j23-3i45-h678-9l01m23n4567",
+    "name": "Bánh đa cua bể",
+    "category": "Bún, Phở, Miến",
+    "description": "Sợi bánh to bản dai dẻo sần sật lội trong làn súp lỏng váng mỡ mặn mòi, bọc lấy những thớ thịt cua biển trắng ngần béo ngậy, mọng nước ngọt gắt tự nhiên.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "g6i12j45-1k34-4j56-i789-0m12n34o5678",
+    "name": "Bún thang",
+    "category": "Bún, Phở, Miến",
+    "description": "Bát bún tinh xảo với sợi nhỏ mềm tuột hòa cùng gà xé mềm, trứng tráng mỏng xốp, giò lụa dai béo quyện trong nước dùng lỏng vắt thanh tao, mặn ngọt nhẹ nhàng.",
+    "hard_filters": [
+      "Trứng",
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "h7j23k56-2l45-5k67-j890-1n23o45p6789",
+    "name": "Miến xào cua",
+    "category": "Bún, Phở, Miến",
+    "description": "Những sợi dong tơi rời xào khô ráo bóng mỡ dẻo dai sần sật, bọc kín bởi vụn thịt cua xé nhuyễn tơi xốp béo ngậy bùi bùi, mang vị mặn ngọt đậm đà.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Béo ngậy"
+    ]
+  },
+  {
+    "id": "e4f8d9b2-1a3c-4e5f-b6c7-8d9e0f1a2b3c",
+    "name": "Cơm gà xé Hội An",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Hạt cơm vàng óng tơi xốp béo ngậy mỡ luộc, kết hợp thịt gà xé dai ngọt sần sật, điểm xuyết vị chua thanh và giòn mát của gỏi đu đủ.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f5a9e0c3-2b4d-5f6a-c7d8-9e0f1a2b3c4d",
+    "name": "Cơm gà quay",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Cơm trắng dẻo mềm dọn kèm đùi gà xém da ngoài giòn rụm, thớ thịt bên trong ướt át mềm mọng, béo ngậy và đẫm vị mặn ngọt đậm đà.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "a6b0f1d4-3c5e-6a7b-d8e9-0f1a2b3c4d5e",
+    "name": "Cơm niêu",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Lớp cháy dưới đáy cứng giòn rụm nhai rôm rốp, phần trên nếp tẻ trắng muốt dẻo mềm thanh đạm, thoang thoảng mùi đất nung mộc mạc thơm lừng.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Thanh đạm",
+      "Giòn/Giòn rụm",
+      "Mềm/Tan trong miệng",
+      "Ăn no",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "b7c1g2e5-4d6f-7b8c-e9f0-1a2b3c4d5e6f",
+    "name": "Cơm hến",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Hạt cơm nguội tơi rời hòa lẫn thịt hến dai ngọt sần sật, bùng nổ vị mặn chát của mắm ruốc, cay xé rát cùng tóp mỡ đậu phộng giòn tan.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Đậu phộng/Các loại hạt",
+      "Dạ dày/Đại tràng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Món khô/Trộn",
+      "Giòn/Giòn rụm",
+      "Ăn no",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "c8d2h3f6-5e7a-8c9d-f0a1-2b3c4d5e6f7a",
+    "name": "Cơm tấm sườn bì chả",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Hạt tấm tơi xốp nhai bùi bùi ăn cùng sườn mỡ mặn ngọt mọng nước, sợi bì dai sật và chả trứng xốp mềm béo ngậy rưới mắm mặn ngọt sền sệt.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Nướng",
+      "Ăn no",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "d9e3i4g7-6f8b-9d0e-a1b2-3c4d5e6f7a8b",
+    "name": "Cơm thố gà nướng",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Thố cơm nóng hổi tơi dẻo bóng mỡ quyện lẫn thịt gà săn chắc, tẩm ướp đậm đặc mặn ngọt, thoảng mùi xém lửa nướng béo ngậy thơm nồng.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nóng hổi",
+      "Nướng",
+      "Ăn no",
+      "Món khô/Trộn"
+    ]
+  },
+  {
+    "id": "e0f4j5h8-7a9c-0e1f-b2c3-4d5e6f7a8b9c",
+    "name": "Cơm rang dưa bò",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Hạt cơm rang bóng bẩy giòn dai săn lại, bao trùm bởi vị chua gắt mặn mà của dưa muối sần sật và thịt bò xào dẻo mềm béo ngậy tỏi.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Chiên/Rán",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f1a5k6i9-8b0d-1f2a-c3d4-5e6f7a8b9c0d",
+    "name": "Cơm chiên hải sản",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Cơm chiên tơi xốp nhuộm màu óng ả béo mỡ, lẩn khuất những miếng mực tôm giòn sật săn chắc, bùng nổ vị mặn ngọt hải sản đậm đà bùi bùi.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "a2b6l7j0-9c1e-2a3b-d4e5-6f7a8b9c0d1e",
+    "name": "Cơm chiên dương châu",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Hạt cơm khô rời nảy bật nhai dẻo dẻo, quyện lẫn lạp xưởng mặn ngọt dai dai, tôm béo ngậy và đậu tằm bùi xốp, áo đều lớp trứng vàng ươm.",
+    "hard_filters": [
+      "Hải sản",
+      "Trứng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn no",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "b3c7m8k1-0d2f-3b4c-e5f6-7a8b9c0d1e2f",
+    "name": "Cá kho tộ",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Khúc cá nục nạc săn chắc dẻo dai béo ngậy váng mỡ, ngâm lặn lội trong nước xốt kẹo quánh sền sệt, mặn chát đan xen vị ngọt gắt và tiêu cay nồng.",
+    "hard_filters": [
+      "Hải sản",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Ngọt",
+      "Nước sền sệt",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "c4d8n9l2-1e3a-4c5d-f6a7-8b9c0d1e2f3a",
+    "name": "Thịt luộc tôm chua",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Lát ba chỉ luộc mọng nước mềm tan lớp mỡ ngậy béo, cuộn ăn cùng con tôm ngâm dẻo dai sần sật, bùng nổ hương vị chua gắt, cay xé mặn mà.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Dạ dày/Đại tràng",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Mềm/Tan trong miệng",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "d5e9o0m3-2f4b-5d6e-a7b8-9c0d1e2f3a4b",
+    "name": "Canh chua cá lóc",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Nước canh lỏng trong veo thoảng hương ngò gai bùng vị chua gắt thanh mát của me và dứa, làm nền cho thớ cá lóc trắng bóc dẻo ngọt béo mềm.",
+    "hard_filters": [
+      "Hải sản",
+      "Cà chua",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "e6f0p1n4-3a5c-6e7f-b8c9-0d1e2f3a4b5c",
+    "name": "Rau muống xào tỏi",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Những cọng rau xanh mướt óng ả mỡ bàng bạc, kết cấu rỗng ruột giòn xốp nhai rột rột, mang vị mặn dịu ngọt thanh ngập ngụa mùi tỏi phi nồng nàn.",
+    "hard_filters": [
+      "Ngũ vị tân"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Giòn/Giòn rụm",
+      "Món Việt truyền thống",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "f7a1q2o5-4b6d-7f8a-c9d0-1e2f3a4b5c6d",
+    "name": "Thịt kho tàu",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Khối thịt mỡ núng nính rục nhừ tan chảy béo ngậy ngay đầu lưỡi cùng trứng vịt dai sật, ngâm trong làn nước lỏng màu cánh gián ngọt lịm mặn mòi.",
+    "hard_filters": [
+      "Trứng",
+      "Tim mạch/Mỡ máu",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Ngọt",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "a8b2r3p6-5c7e-8a9b-d0e1-2f3a4b5c6d7e",
+    "name": "Sườn xào chua ngọt",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Khúc sườn nạc săn chắc dẻo dai hơi xém giòn, được bọc kín bởi lớp xốt đỏ sánh dẻo quẹo bám dính, bùng nổ hương vị chua chua ngọt ngọt mặn mà.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Ngọt",
+      "Nước sền sệt",
+      "Dai/Sần sật"
+    ]
+  },
+  {
+    "id": "b9c3s4q7-6d8f-9b0c-e1f2-3a4b5c6d7e8f",
+    "name": "Đậu hũ nhồi thịt sốt cà",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Miếng đậu chiên vỏ mỏng dai ruột béo xốp, ôm lấy nhân thịt mộc nhĩ sần sật mặn mà, đắm mình trong làn xốt cà chua sền sệt đỏ au chua ngọt.",
+    "hard_filters": [
+      "Đậu nành",
+      "Cà chua",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "c0d4t5r8-7e9a-0c1d-f2a3-4b5c6d7e8f9a",
+    "name": "Canh khổ qua nhồi thịt",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Lớp quả xanh hầm nhừ rục mềm xốp mang vị đắng gắt thanh tao lan tỏa, bọc trọn lõi thịt băm mộc nhĩ dai sật béo ngậy mặn dịu trong nước súp lỏng.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đắng",
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "d1e5u6s9-8f0b-1d2e-a3b4-5c6d7e8f9a0b",
+    "name": "Bò xào cần tỏi",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Thớ thịt bò xào tái mọng nước dẻo dính béo ngậy, nhai cùng cọng cần tây tơi xốp giòn rụm sần sật, phủ ngập vị mặn ngọt xì dầu nồng nàn hăng tỏi.",
+    "hard_filters": [
+      "Ngũ vị tân",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Dai/Sần sật",
+      "Giòn/Giòn rụm",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "e2f6v7t0-9a1c-2e3f-b4c5-6d7e8f9a0b1c",
+    "name": "Mực xào dứa",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Khoanh mực trắng dai giòn sần sật nhai sướng miệng xào mọng nước cùng dứa vàng ươm xốp mềm, tuôn trào vị mặn ngọt chua chua thanh dịu nhẹ nhàng.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Xào",
+      "Dai/Sần sật",
+      "Giòn/Giòn rụm"
+    ]
+  },
+  {
+    "id": "f3a7w8u1-0b2d-3f4a-c5d6-7e8f9a0b1c2d",
+    "name": "Trứng chiên thịt băm",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Tảng trứng vàng ươm xém góc giòn mỏng, phần ruột xốp mềm béo ngậy lẩn khuất những hạt thịt băm dẻo dai mặn ngọt, thoảng mùi hành lá nướng chín tới.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Mềm/Tan trong miệng",
+      "Béo ngậy",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "a4b8x9v2-1c3e-4a5b-d6e7-8f9a0b1c2d3e",
+    "name": "Cơm cháy kho quẹt",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Miếng cơm ép mỏng sấy phồng nhai giòn rụm vỡ tan rôm rốp, quệt ngập vào niêu mắm đường đặc quánh kẹo sệt siêu mặn, siêu ngọt béo ngậy tóp mỡ tôm khô.",
+    "hard_filters": [
+      "Hải sản",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Ngọt",
+      "Giòn/Giòn rụm",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "id": "b5c9y0w3-2d4f-5b6c-e7f8-9a0b1c2d3e4f",
+    "name": "Cơm gà xối mỡ",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Cơm chiên tơi rời hơi cứng phủ bóng mỡ, dọn cùng đùi gà ngập dầu lớp da rộp giòn tan rụm, thịt trong ướt át dẻo dai béo ngậy mặn ngọt đậm đà.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Béo ngậy",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "c6d0z1x4-3e5a-6c7d-f8a9-0b1c2d3e4f5a",
+    "name": "Cơm chiên cá mặn",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Hạt cơm rang nảy khô rời rạc quyện những vụn cá nướng bùi bùi dẻo dính, bùng lên vị mặn chát đặc trưng ngập ngụa trong dầu mỡ béo ngậy.",
+    "hard_filters": [
+      "Hải sản",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d7e1a2y5-4f6b-7d8e-a9b0-1c2d3e4f5a6b",
+    "name": "Cơm chiên tỏi trứng",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Món ăn giản dị với cơm rang giòn tơi áo đều lớp màng trứng vàng xốp béo mềm, nổi bật vị mặn dịu ngọt thanh và nồng nàn tỏi phi rộp rộp.",
+    "hard_filters": [
+      "Trứng",
+      "Ngũ vị tân",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn no",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "e8f2b3z6-5a7c-8e9f-b0c1-2d3e4f5a6b7c",
+    "name": "Canh ngao nấu dứa",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Nước súp trong vắt lỏng nhẹ húp chua chua gắt gắt ngọt lịm từ dứa thái lát, thả vào những con ngao dẻo dính dai sật ngập nước ngọt biển khơi bùi bùi.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Thanh đạm",
+      "Món nước",
+      "Dai/Sần sật",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "f9a3c4a7-6b8d-9f0a-c1d2-3e4f5a6b7c8d",
+    "name": "Thịt ba chỉ rang cháy cạnh",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Lát thịt ba chỉ co rúm xém viền ngoài giòn dai, rưới đẫm lớp nước mắm đường sệt sệt đặc kẹo siêu mặn ngọt béo ngậy váng mỡ, nhai dẻo dẻo vui miệng.",
+    "hard_filters": [
+      "Cao huyết áp",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Ngọt",
+      "Dai/Sần sật",
+      "Nước sền sệt"
+    ]
+  },
+  {
+    "id": "a0b4d5b8-7c9e-0a1b-d2e3-4f5a6b7c8d9e",
+    "name": "Trứng đúc thịt băm",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Hỗn hợp trứng và nạc băm hấp cách thủy hoặc chiên dày đóng thành khối đặc xốp mềm mại tơi tan ngay trên lưỡi, béo ngậy mặn ngọt mộc mạc thơm hành.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "b1c5e6c9-8d0f-1b2c-e3f4-5a6b7c8d9e0f",
+    "name": "Đậu hũ xào nấm đông cô",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Những khối đậu chiên béo ngậy ruột mềm xốp xào lướt ván bóng mỡ cùng nấm mập mạp nhai dai giòn sần sật, rưới xốt xì dầu mặn ngọt lỏng sệt thanh tao.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Xào",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "c2d6f7d0-9e1a-2c3d-f4a5-6b7c8d9e0f1a",
+    "name": "Bò lúc lắc khoai tây",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Viên thịt bò vuông vức ngoài xém tái trong hồng đỏ ứa nước dẻo mềm béo ngậy, rưới xốt mặn ngọt sánh kẹo ăn kèm củ khoai chiên xốp xốp ngoài giòn tan.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Mềm/Tan trong miệng",
+      "Giòn/Giòn rụm",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d3e7g8e1-0f2b-3d4e-a5b6-7c8d9e0f1a2b",
+    "name": "Gà kho gừng",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Khúc gà chặt mỡ màng da dai sật thớ thịt săn dẻo, áo lớp xốt mặn mà ngọt gắt nâu sệt, bùng tỏa hương gừng xắt sợi cay ấm nồng râm ran khoang miệng.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "e4f8h9f2-1a3c-4e5f-b6c7-8d9e0f1a2b3c",
+    "name": "Cá kèo kho tộ",
+    "category": "Cơm & Ẩm thực gia đình",
+    "description": "Thân cá nhỏ nhai rục xương dẻo mềm ngập ngụa mỡ béo bùi đắng nhẹ phần ruột, kho kẹo trong nước xốt đen sánh đặc siêu mặn chát, ngọt gắt và tiêu cay xé.",
+    "hard_filters": [
+      "Hải sản",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Đắng",
+      "Nước sền sệt",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "f5a9i0g3-2b4d-5f6a-c7d8-9e0f1a2b3c4d",
+    "name": "Bánh kẹp pate",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Lớp bánh tráng nướng cứng giòn rụm vỡ rộp rộp kẹp trọn khối pate gan xay nhuyễn mịn màng siêu béo ngậy, rưới tương ớt mặn mà cay nồng nàn khô ráo.",
+    "hard_filters": [
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Giòn/Giòn rụm",
+      "Béo ngậy",
+      "Ăn vặt",
+      "Ẩm thực đường phố",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "a6b0j1h4-3c5e-6a7b-d8e9-0f1a2b3c4d5e",
+    "name": "Bánh kẹp trứng cút",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Bánh tráng nướng lửa than giòn tan rôm rốp lót lớp trứng cút mặn bùi béo xốp lan tỏa mỡ hành, điểm vụn thịt đậm vị cay xé rát rạt tương ớt kẹo dính.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Ẩm thực đường phố",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "b7c1k2i5-4d6f-7b8c-e9f0-1a2b3c4d5e6f",
+    "name": "Bánh tráng nướng (Pizza Đà Lạt)",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Đế bánh gạo mỏng dính nướng phồng giòn rụm giòn rụm, phủ kín trứng gà béo ngậy xốp mềm, xúc xích mặn mà dai sật và xốt mayonnaise sệt chua ngọt trơn tuột.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "c8d2l3j6-5e7a-8c9d-f0a1-2b3c4d5e6f7a",
+    "name": "Bánh tráng trộn",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Sợi bánh cắt mỏng dính nhai dai nhách dẻo quẹo áo đẫm xốt bò ướt át mặn ngọt cay xé, lẩn khuất khô bò sần sật, trứng cút bùi béo mỡ màng đậu phộng.",
+    "hard_filters": [
+      "Trứng",
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Món khô/Trộn",
+      "Dai/Sần sật",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "d9e3m4k7-6f8b-9d0e-a1b2-3c4d5e6f7a8b",
+    "name": "Ốc hút cốt dừa",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Những con ốc đinh nhỏ vỏ cứng hút mạnh lấy phần ruột dẻo dai sần sật, trôi tuột theo dòng xốt sền sệt siêu béo ngậy ngọt gắt cốt dừa bùi bùi cay nồng sả.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Ngọt",
+      "Béo ngậy",
+      "Mồi nhậu",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "e0f4n5l8-7a9c-0e1f-b2c3-4d5e6f7a8b9c",
+    "name": "Ốc đinh xào sả ớt",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Thịt ốc nhỏ dẻo dẻo giòn sật hút đánh rột ngập ngụa lớp nước lỏng váng mỡ màu cam đỏ, bùng cháy vị mặn ngọt đậm đà xé lưỡi cay rát sả ớt hăng nồng.",
+    "hard_filters": [
+      "Động vật có vỏ",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Xào",
+      "Mồi nhậu",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "f1a5o6m9-8b0d-1f2a-c3d4-5e6f7a8b9c0d",
+    "name": "Chân gà sả tắc",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Lớp da gà luộc chín ướp lạnh nhai giòn sần sật rộp rộp cực đã, bọc xương cứng rưới đẫm nước ngâm mỏng mặn mà ngọt gắt bùng vị chua tắc cay xé gừng sả.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Cay",
+      "Thanh mát/Lạnh",
+      "Dai/Sần sật",
+      "Ăn vặt",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "a2b6p7n0-9c1e-2a3b-d4e5-6f7a8b9c0d1e",
+    "name": "Chân gà nướng muối ớt",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Lớp da gà cháy xém khô queo dai nhách sần sật bọc ngoài lõi gân dẻo, áo lớp muối hạt mặn chát siêu cay rát rạt bám dính bóng mỡ bóng bẩy.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Cay",
+      "Nướng",
+      "Dai/Sần sật",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "b3c7q8o1-0d2f-3b4c-e5f6-7a8b9c0d1e2f",
+    "name": "Xúc xích nướng đá",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Thanh xúc xích vỏ ngoài dai giòn sần sật nứt toác mỡ xèo xèo, lõi thịt băm mềm mịn béo ngậy mọng nước tuôn trào vị mặn ngọt ngập nồng nàn tiêu đen.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "c4d8r9p2-1e3a-4c5d-f6a7-8b9c0d1e2f3a",
+    "name": "Xiên que nướng",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Những viên thịt cá nặn tròn bóng bẩy mỡ xém cạnh dai dẻo sần sật, phủ xốt sền sệt mặn mặn ngọt gắt cay nồng tương ớt nhai cực dính răng.",
+    "hard_filters": [
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Dai/Sần sật",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "d5e9s0q3-2f4b-5d6e-a7b8-9c0d1e2f3a4b",
+    "name": "Gỏi bò khô (Gan rim)",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Sợi đu đủ bào giòn xốp thanh mát ngâm nước mắm chua ngọt mặn mà lỏng nhẹ, cắn chung lát gan heo khô quắt dẻo dai bùi béo đen nhánh kẹo đường.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Ngọt",
+      "Gỏi/Trộn sống",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "e6f0t1r4-3a5c-6e7f-b8c9-0d1e2f3a4b5c",
+    "name": "Trứng cút lộn xào me",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Quả trứng nhỏ xíu nhai nguyên phần vỏ giòn dẻo sật sật béo ngập ruột mềm, đắm trong chảo xốt me sền sệt bóng dính cực kỳ chua gắt mặn ngọt hài hòa.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Xào",
+      "Nước sền sệt",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "f7a1u2s5-4b6d-7f8a-c9d0-1e2f3a4b5c6d",
+    "name": "Trứng vịt lộn hầm ngải cứu",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Khối trứng luộc béo ngậy có phần con dẻo mề mềm tan ngâm trong nước hầm lỏng thẫm màu thanh đạm bùng nổ vị đắng chát xốp xốp của lá ngải gân guốc.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đắng",
+      "Món nước",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Ăn vặt",
+      "Ăn đêm/khuya"
+    ]
+  },
+  {
+    "id": "a8b2v3t6-5c7e-8a9b-d0e1-2f3a4b5c6d7e",
+    "name": "Bắp xào mỡ hành",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Những hạt ngô rời rạc bóng bẩy vàng ươm nhai dẻo dẻo dai dai ứa nước ngọt thanh, xào săn mỡ hành ngậy béo ngập tép khô mặn chát giòn rụm rộp rộp.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Ngọt",
+      "Xào",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "b9c3w4u7-6d8f-9b0c-e1f2-3a4b5c6d7e8f",
+    "name": "Khoai lang nướng",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Lớp vỏ tím cháy xém mỏng dính bong tróc ôm trọn lõi củ vàng ươm bở tơi xốp xộp nóng bỏng tay, tan ngay trên đầu lưỡi tuôn trào vị ngọt lịm mộc mạc.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Ngọt",
+      "Nóng hổi",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "c0d4x5v8-7e9a-0c1d-f2a3-4b5c6d7e8f9a",
+    "name": "Bánh mì xíu mại",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Ổ bánh mì nướng vỏ giòn rụm ruột bông xốp quệt dính viên xíu mại thịt băm mộc nhĩ dẻo mềm béo ngậy mọng nước xốt cà chua lỏng sệt mặn ngọt chua nhẹ.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Cà chua",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Giòn/Giòn rụm",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "d1e5y6w9-8f0b-1d2e-a3b4-5c6d7e8f9a0b",
+    "name": "Bánh mì heo quay",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Miếng thịt lợn mỡ màng da nổ giòn tan rôm rốp thớ nạc mềm ướt kẹp lọt thỏm trong ổ bánh xốp cứng cạo viền, chan nước tương tỏi ớt mặn chát cay nồng.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Giòn/Giòn rụm",
+      "Ăn sáng",
+      "Ăn no",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "e2f6z7x0-9a1c-2e3f-b4c5-6d7e8f9a0b1c",
+    "name": "Bánh mì chả bò",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Ruột bánh mỏng xốp nén chặt những lát chả bò hồng hào dẻo dai sần sật mọng nước ngọt thịt ngập ngụa mùi tiêu sọ cay xé rát kẹp ngò rí thanh mát.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Dai/Sần sật",
+      "Ăn sáng",
+      "Ẩm thực đường phố",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "f3a7a8y1-0b2d-3f4a-c5d6-7e8f9a0b1c2d",
+    "name": "Bánh mì bột lọc",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Chiếc bánh mì xẻ đôi giòn khô xốp bao bọc những viên bột lọc luộc trong veo dai quẹo sần sật nhân tôm thịt mặn ngọt rưới mắm ớt cay xé dính răng.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Giòn/Giòn rụm",
+      "Dai/Sần sật",
+      "Ăn sáng",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "a4b8b9z2-1c3e-4a5b-d6e7-8f9a0b1c2d3e",
+    "name": "Bánh tiêu",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Khối bột tròn rỗng ruột chiên phồng xốp mềm dẻo dai nhẹ nhai bùi bùi hạt mè rang dính vỏ ngoài xém vàng áo lớp đường áo mỏng ngọt lịm mộc mạc.",
+    "hard_filters": [
+      "Lúa mì/Gluten"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Chiên/Rán",
+      "Mềm/Tan trong miệng",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "b5c9c0a3-2d4f-5b6c-e7f8-9a0b1c2d3e4f",
+    "name": "Bánh chuối chiên",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Miếng chuối ép xẹp bọc lớp bột mỏng chiên ngập dầu vỏ phồng to giòn rụm vỡ rộp rộp ruột trong dẻo quẹo nóng hổi ứa tứa vị ngọt gắt gao béo mỡ.",
+    "hard_filters": [
+      "Lúa mì/Gluten"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "c6d0d1b4-3e5a-6c7d-f8a9-0b1c2d3e4f5a",
+    "name": "Xôi xéo",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Nắm xôi nếp vàng óng dẻo dính từng hạt nén chặt đậu xanh giã nhuyễn bùi bở tơi xốp, tắm mình trong mỡ gà béo ngậy mặn dịu thơm nồng hành phi rộp rộp.",
+    "hard_filters": [
+      "Ngũ vị tân"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ăn no",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "d7e1e2c5-4f6b-7d8e-a9b0-1c2d3e4f5a6b",
+    "name": "Xôi mặn",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Nền xôi trắng dẻo mềm dính răng rải kín lạp xưởng dai sật chả lụa mướt mịn chà bông tơi xốp rưới xốt sệt mặn ngọt đậm đà béo ngậy mỡ hành.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ăn no",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "e8f2f3d6-5a7c-8e9f-b0c1-2d3e4f5a6b7c",
+    "name": "Xôi gà",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Khẩu phần xôi dẻo quẹo ướt át chan đẫm nước kho thịt mặn ngọt sền sệt béo mỡ đính kèm thịt gà xé tơi săn chắc dai ngọt đẫm vị đậm đà hành phi.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f9a3g4e7-6b8d-9f0a-c1d2-3e4f5a6b7c8d",
+    "name": "Bánh bao trứng muối",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Khối vỏ bột trắng to phồng xốp mềm tơi xé mịn màng nhạt thanh bọc lõi thịt xay dẻo dai béo ngậy mặn ngọt ấp ủ viên lòng đỏ trứng muối mặn chát bùi bở.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Ăn sáng",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "id": "a0b4h5f8-7c9e-0a1b-d2e3-4f5a6b7c8d9e",
+    "name": "Cá viên chiên mắm",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Từng viên chả cá chiên phồng xẹp ngoài dai giòn trong xốp dẻo sần sật ngập ngụa xốt nước mắm tỏi xào kẹo dính bóng bẩy siêu mặn siêu ngọt cay xé lưỡi.",
+    "hard_filters": [
+      "Hải sản",
+      "Cao huyết áp",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Chiên/Rán",
+      "Dai/Sần sật",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "b1c5i6g9-8d0f-1b2c-e3f4-5a6b7c8d9e0f",
+    "name": "Bò lá lốt nướng",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Lõi thịt bò băm mỡ màng dẻo dai ngọt thịt được cuộn kín bưng bởi lá lốt nướng xém đen giòn rụm bùng tỏa mùi hương thảo mộc nồng nàn mặn mà béo ngậy.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Mồi nhậu",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "c2d6j7h0-9e1a-2c3d-f4a5-6b7c8d9e0f1a",
+    "name": "Trứng cút nướng chén phô mai",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Chén đất nung rưới bơ xèo xèo ấp lòng đỏ trứng mượt mà chín tới xốp béo đan xen sợi phô mai dai nhách kéo sợi mặn ngọt ngập ngụa ruốc mặn chát.",
+    "hard_filters": [
+      "Trứng",
+      "Sữa/Lactose",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "d3e7k8i1-0f2b-3d4e-a5b6-7c8d9e0f1a2b",
+    "name": "Dồi sụn nướng",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Khúc ruột căng mọng vỏ dai nhách xém nướng lấp đầy hỗn hợp thịt băm dẻo mịn béo ngậy nhai trúng hạt sụn sần sật rộp rộp mặn ngọt nồng nàn lá mơ.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Dai/Sần sật",
+      "Mồi nhậu",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "e4f8l9j2-1a3c-4e5f-b6c7-8d9e0f1a2b3c",
+    "name": "Nem chua rán",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Thanh nem lợn ủ men tẩm bột xù chiên ngập dầu vỏ ngoài giòn rụm xốp xộp ruột trong dẻo quẹo dai sật béo mỡ ngập tương ớt cay xé rát ngọt gắt.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Dai/Sần sật",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "f5a9m0k3-2b4d-5f6a-c7d8-9e0f1a2b3c4d",
+    "name": "Phô mai que",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Thanh bột chiên xù vàng ươm vỏ cực giòn rụm nóng bỏng cắn phập ứa lõi phô mai trắng bóc dẻo quánh kéo sợi siêu dài béo ngậy mặn thanh sữa tươi.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "a6b0n1l4-3c5e-6a7b-d8e9-0f1a2b3c4d5e",
+    "name": "Khoai tây lốc xoáy",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Nguyên củ khoai tây bào mỏng vòng cung xâu que chiên giòn tan rôm rốp rỗng xốp nhai khô ráo áo phủ lớp bột phô mai mặn chát ngọt gắt bám dính ngón tay.",
+    "hard_filters": [
+      "Sữa/Lactose"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "b7c1o2m5-4d6f-7b8c-e9f0-1a2b3c4d5e6f",
+    "name": "Bánh tráng mắm ruốc nướng",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Miếng bánh gạo nướng co dúm giòn rụm vỡ nát phủ quệt lớp mắm ruốc đặc kẹo siêu mặn chát hôi hăng đặc trưng xen lẫn trứng cút béo xốp cay nồng mỡ hành.",
+    "hard_filters": [
+      "Trứng",
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "c8d2p3n6-5e7a-8c9d-f0a1-2b3c4d5e6f7a",
+    "name": "Gỏi xoài khô mực",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Sợi xoài xanh bào mỏng giòn xốp chua gắt rát rạt trộn lộn xộn những xé mực khô nướng dai nhách cứng cỏi rưới mắm mặn ngọt cay xé xộc mũi bùi đậu phộng.",
+    "hard_filters": [
+      "Hải sản",
+      "Đậu phộng/Các loại hạt",
+      "Dạ dày/Đại tràng",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Gỏi/Trộn sống",
+      "Dai/Sần sật",
+      "Mồi nhậu",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "d9e3q4o7-6f8b-9d0e-a1b2-3c4d5e6f7a8b",
+    "name": "Xôi chiên nhân thịt",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Khối nếp tròn dẹt ép chặt chiên phồng vỏ sần sùi giòn rụm cứng cáp ruột dẻo quẹo dính răng ôm nhân thịt băm mộc nhĩ dai sật mặn ngọt béo ngậy bóng mỡ.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Dai/Sần sật",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "e0f4r5p8-7a9c-0e1f-b2c3-4d5e6f7a8b9c",
+    "name": "Lạp xưởng nướng đá",
+    "category": "Ăn vặt & Đường phố",
+    "description": "Thanh lạp xưởng vỏ ruột dai nhách xém bóng mỡ lăn sỏi nóng hổi nhai dẻo dính tứa dầu béo ngậy ngập khoang miệng bùng cháy vị ngọt gắt mặn mà nồng nàn tiêu.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Ngọt",
+      "Béo ngậy",
+      "Nướng",
+      "Dai/Sần sật",
+      "Ăn vặt",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "e4f8a9b2-1c3d-4e5f-b6a7-8c9d0e1f2a3b",
+    "name": "Chè sầu riêng",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Thịt sầu riêng xay nhuyễn béo ngậy, ngọt lịm đặc trưng hòa quyện cùng các loại thạch dai sần sật, dẻo mềm ngập trong nước cốt dừa lỏng mướt mịn màng.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "f5a9b0c3-2d4e-5f6a-b7c8-9d0e1f2a3b4c",
+    "name": "Chè thái",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Các loại trái cây tươi xốp ngọt thanh kết hợp cùng sợi thạch xanh dai dẻo, sương sáo mềm tan bơi trong làn nước sữa dừa béo ngậy, ngọt ngào.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Thanh mát/Lạnh",
+      "Dai/Sần sật",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "a6b0c1d4-3e5f-6a7b-c8d9-0e1f2a3b4c5d",
+    "name": "Chè bưởi",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Cùi bưởi bọc bột lọc nhai giòn rụm sần sật đan xen hạt đậu xanh xốp bở tơi mềm, đắm mình trong nước đường sền sệt trong vắt phủ cốt dừa béo ngậy.",
+    "hard_filters": [
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Giòn/Giòn rụm",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "b7c1d2e5-4f6a-7b8c-d9e0-1f2a3b4c5d6e",
+    "name": "Chè chuối nướng",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Quả chuối xém lửa ứa mật ngọt gắt cuộn trong nếp dẻo quẹo dai nhách, rưới ngập lớp cốt dừa sền sệt béo ngậy điểm xuyết đậu phộng rang giòn tan rộp rộp.",
+    "hard_filters": [
+      "Đậu phộng/Các loại hạt",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "id": "c8d2e3f6-5a7b-8c9d-e0f1-2a3b4c5d6e7f",
+    "name": "Chè bắp",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Hạt ngô nếp non trong suốt nhai dẻo dẻo xốp xốp, hòa lẫn trong thứ nước đặc sánh sền sệt mang vị ngọt thanh tao mộc mạc và chút béo ngậy cốt dừa.",
+    "hard_filters": [
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "d9e3f4a7-6b8c-9d0e-f1a2-3b4c5d6e7f8a",
+    "name": "Chè xoa xoa hạt lựu",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Khối rau câu mềm tan, thạch đen dai nhẹ và hạt lựu bọc bột giòn sật sật sặc sỡ quyện trong nước đường lỏng ngọt thanh, béo ngậy đậu xanh đánh nhuyễn.",
+    "hard_filters": [
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Thanh mát/Lạnh",
+      "Giòn/Giòn rụm",
+      "Tráng miệng",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "e0f4a5b8-7c9d-0e1f-a2b3-4c5d6e7f8a9b",
+    "name": "Tàu hũ đá nước cốt dừa",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Tảng đậu nành đông đặc núng nính vô cùng mềm mịn tan ngay trên đầu lưỡi, ngập trong nước đường gừng ngọt lịm cay ấm và cốt dừa lỏng béo ngậy tột độ.",
+    "hard_filters": [
+      "Đậu nành",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "f1a5b6c9-8d0e-1f2a-b3c4-5d6e7f8a9b0c",
+    "name": "Tàu hũ trân châu đường đen",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Kết cấu mướt mịn tơi mềm của đậu hũ non béo ngậy hòa lẫn với những viên trân châu dẻo quẹo dai nhách, rưới lớp xốt kẹo sệt mang vị ngọt gắt sâu lắng.",
+    "hard_filters": [
+      "Đậu nành",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "a2b6c7d0-9e1f-2a3b-c4d5-6e7f8a9b0c1d",
+    "name": "Yaourt muối",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Hũ sữa chua lên men đông cứng dẻo xốp mang vị chua gắt ngọt dịu, chấm cùng chút muối tinh mặn chát râm ran tạo nên sự bùng nổ vị giác lạnh buốt.",
+    "hard_filters": [
+      "Sữa/Lactose"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Mặn",
+      "Ngọt",
+      "Thanh mát/Lạnh",
+      "Tráng miệng",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "b3c7d8e1-0f2a-3b4c-d5e6-7f8a9b0c1d2e",
+    "name": "Kem bơ",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Thịt bơ xay nhuyễn sền sệt béo ngậy mượt mà không chút lợn cợn lót dưới viên kem dừa dẻo xốp lạnh buốt ngọt lịm tan chảy, rắc vụn dừa khô giòn rụm.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "c4d8e9f2-1a3b-4c5d-e6f7-8a9b0c1d2e3f",
+    "name": "Kem nhãn",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Viên kem trắng sữa dẻo xốp tan chảy mang vị ngọt thanh béo ngậy, lẩn khuất những cùi nhãn tươi giòn sật mọng nước và hạt đậu phộng rang giòn tan bùi bùi.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Đậu phộng/Các loại hạt",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng",
+      "Giòn/Giòn rụm"
+    ]
+  },
+  {
+    "id": "d5e9f0a3-2b4c-5d6e-f7a8-9b0c1d2e3f4a",
+    "name": "Bingsu dâu tây",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Núi đá bào tuyết tơi xốp mỏng manh tan ngay tức khắc ngấm đẫm sữa đặc ngọt gắt béo ngậy, phủ đầy những lát dâu tây đỏ au mọng nước chua thanh giòn nhẹ.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Chua",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "b9c3d4e7-6f8a-9b0c-d1e2-3f4a5b6c7d8e",
+    "name": "Chè hạt sen nhãn lồng",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Nước đường phèn trong vắt lỏng nhẹ mang vị ngọt thanh mát, bao bọc cùi nhãn trắng giòn sật ôm trọn viên hạt sen hầm chín rục xốp bở tơi bùi bùi.",
+    "hard_filters": [
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng",
+      "Thanh đạm"
+    ]
+  },
+  {
+    "id": "c0d4e5f8-7a9b-0c1d-e2f3-4a5b6c7d8e9f",
+    "name": "Chè khúc bạch",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Những viên thạch sữa phô mai vuông vức núng nính nhai dẻo xốp mềm béo ngậy tuôn trào, nổi lềnh bềnh trong nước đường ngọt thanh cùng hạnh nhân lát giòn tan.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Đậu phộng/Các loại hạt",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "d1e5f6a9-8b0c-1d2e-f3a4-5b6c7d8e9f0a",
+    "name": "Chè đỗ đen nóng",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Hạt đậu đen ninh nhừ rục vỡ nát xốp bở bùi bùi lặn ngụp trong thứ nước màu thẫm ngọt lịm đặc sánh nhẹ, tỏa khói nóng hổi thơm nồng dầu chuối.",
+    "hard_filters": [
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Nóng hổi",
+      "Mềm/Tan trong miệng",
+      "Nước sền sệt",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "e2f6a7b0-9c1d-2e3f-a4b5-6c7d8e9f0a1b",
+    "name": "Bánh flan caramel",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Khối trứng sữa đặc mướt mịn màng không rỗ tơi tan thành dòng béo ngậy ngập khoang miệng, đẫm mình trong lớp xốt nâu kẹo sệt đắng gắt ngọt lịm cháy khét.",
+    "hard_filters": [
+      "Trứng",
+      "Sữa/Lactose",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Đắng",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "f3a7b8c1-0d2e-3f4a-b5c6-7d8e9f0a1b2c",
+    "name": "Sữa chua nếp cẩm",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Nền sữa chua trắng muốt đặc dẻo mang vị chua gắt thanh tao hòa trộn lộn xộn cùng xôi nếp lên men màu tím thẫm nhai dai nhách dính răng ngọt lịm men rượu.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Ngọt",
+      "Thanh mát/Lạnh",
+      "Dai/Sần sật",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "a4b8c9d2-1e3f-4a5b-c6d7-8e9f0a1b2c3d",
+    "name": "Trái cây tô trộn sữa chua",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Hỗn hợp các loại trái cây xắt hạt lựu nhai giòn xốp mọng nước ngọt thanh chua dịu, trộn ngập ngụa trong lớp sữa chua trắng lỏng lạnh buốt béo ngậy mượt mà.",
+    "hard_filters": [
+      "Sữa/Lactose"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Chua",
+      "Thanh mát/Lạnh",
+      "Tráng miệng",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "b5c9d0e3-2f4a-5b6c-d7e8-9f0a1b2c3d4e",
+    "name": "Rau câu dừa Thái",
+    "category": "Tráng miệng & Đồ ngọt",
+    "description": "Khối thạch hai lớp chia tầng đẹp mắt với lớp trong suốt giòn sật ngọt thanh nước dừa tươi và lớp đục mướt mịn dẻo xốp béo ngậy tột độ cốt dừa.",
+    "hard_filters": [
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Thanh mát/Lạnh",
+      "Dai/Sần sật",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "a0b4c5d8-7e9f-0a1b-c2d3-4e5f6a7b8c9d",
+    "name": "Kimbap truyền thống",
+    "category": "Món Á",
+    "description": "Cuộn cơm chặt tay dẻo quẹo nén kín bằng màng rong biển khô giòn mặn chát lặn ngụp nhân xúc xích trứng béo ngậy và rau củ xốp giòn rụm sần sật mộc mạc.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Giòn/Giòn rụm",
+      "Ăn no",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "b1c5d6e9-8f0a-1b2c-d3e4-5f6a7b8c9d0e",
+    "name": "Tokbokki phô mai",
+    "category": "Món Á",
+    "description": "Thỏi bánh gạo trắng phau dẻo quẹo nhai dai nhách ngập lặn trong chảo xốt đỏ au sền sệt siêu cay rát ngọt gắt bọc màng phô mai kéo dính dẻo dai béo ngậy tột độ.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Ngọt",
+      "Dai/Sần sật",
+      "Béo ngậy",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "c2d6e7f0-9a1b-2c3d-e4f5-6a7b8c9d0e1f",
+    "name": "Mì cay 7 cấp độ",
+    "category": "Món Á",
+    "description": "Sợi mì to béo vàng óng dai sật luộc không bở ngụp trong nồi súp lỏng đỏ quạch sôi sục bùng cháy vị cay xé lưỡi mặn ngọt đậm đặc tôm mực săn chắc.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Lúa mì/Gluten",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Món nước",
+      "Nóng hổi",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d3e7f8a1-0b2c-3d4e-f5a6-7b8c9d0e1f2a",
+    "name": "Gà rán Hàn Quốc (Gà sốt cay ngọt)",
+    "category": "Món Á",
+    "description": "Miếng thịt lợn cộm vỏ chiên xù xùi giòn tan rôm rốp không hề ỉu dính áo đẫm xốt keo sệt đỏ bầm siêu ngọt gắt siêu cay rát bọc lõi thịt trắng ướt át mềm mọng.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Ngọt",
+      "Cay",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "e4f8a9b2-1c3d-4e5f-a6b7-8c9d0e1f2a3b",
+    "name": "Thịt nướng BBQ Hàn Quốc (Samgyeopsal)",
+    "category": "Món Á",
+    "description": "Lát thịt ba chỉ dày cộp nướng xém cạnh mỡ xèo xèo chảy bóng bẩy nhai dai sật giòn giòn tứa dòng mỡ ngậy béo ngập vị ngọt thịt mộc mạc chấm xốt mặn chát.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Béo ngậy",
+      "Dai/Sần sật",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f5a9b0c3-2d4e-5f6a-b7c8-9d0e1f2a3b4c",
+    "name": "Mì lạnh Hàn Quốc (Naengmyeon)",
+    "category": "Món Á",
+    "description": "Sợi mì kiều mạch siêu mảnh dai nhách cắn không đứt ngâm lặn lội trong súp lỏng đóng đá lạnh buốt buốt răng mang vị chua gắt giấm táo ngọt lịm mặn mòi thanh tao.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Thanh mát/Lạnh",
+      "Món nước",
+      "Dai/Sần sật",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "a6b0c1d4-3e5f-6a7b-c8d9-0e1f2a3b4c5d",
+    "name": "Sushi cá hồi (Salmon Nigiri)",
+    "category": "Món Á",
+    "description": "Vắt cơm dấm nén chặt dẻo quẹo chua gắt nhẹ nhàng nâng đỡ lát cá tươi sống màu cam vân mỡ bóng bẩy cực kỳ mềm mướt tan chảy mỡ béo ngậy lịm ngọt trên lưỡi.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Gỏi/Trộn sống",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "b7c1d2e5-4f6a-7b8c-d9e0-1f2a3b4c5d6e",
+    "name": "Sashimi tổng hợp",
+    "category": "Món Á",
+    "description": "Những tảng thịt hải sản tươi rói không tẩm ướp thái dày cộp nhai dẻo dính hoặc sần sật tứa vị ngọt gắt đại dương béo ngậy nồng nàn thanh tao mát rượi nguyên bản.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Gỏi/Trộn sống",
+      "Thanh mát/Lạnh",
+      "Mềm/Tan trong miệng",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "c8d2e3f6-5a7b-8c9d-e0f1-2a3b4c5d6e7f",
+    "name": "Mì Ramen nước tương (Shoyu)",
+    "category": "Món Á",
+    "description": "Sợi mì xoăn màu vàng bóng nhai dẻo dai bơi trong nước súp nâu thẫm lỏng nhẹ mặn mòi umami xì dầu thơm ngập ngụa mỡ heo béo ngậy chắt lọc ngọt thanh xương hầm.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Đậu nành",
+      "Trứng",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Dai/Sần sật",
+      "Nóng hổi",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d9e3f4a7-6b8c-9d0e-f1a2-3b4c5d6e7f8a",
+    "name": "Mì Udon hải sản",
+    "category": "Món Á",
+    "description": "Sợi mì bột mì trắng to béo núng nính nhai siêu dẻo mềm mướt trơn ngâm nước dùng lỏng vắt ngọt lịm mặn mòi thanh đạm dọn kèm tôm mực săn chắc nhai giòn sật.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "e0f4a5b8-7c9d-0e1f-a2b3-4c5d6e7f8a9b",
+    "name": "Bánh xèo Nhật Bản (Okonomiyaki)",
+    "category": "Món Á",
+    "description": "Tảng bánh dày cộp áp chảo xém viền ngoài xốp bở ruột trong dẻo dẻo mỡ màng đan xen bắp cải giòn rộp rộp thịt béo ngậy rưới xốt sệt mặn ngọt chua gắt nồng.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f1a5b6c9-8d0e-1f2a-b3c4-5d6e7f8a9b0c",
+    "name": "Cơm cà ri Nhật Bản",
+    "category": "Món Á",
+    "description": "Sốt nâu vàng đặc quánh sền sệt béo ngậy dính dớp bùng nổ hương thảo mộc mặn dịu ngọt gắt nhai nát rau củ hầm nhừ tơi bở tan hòa quyện hạt cơm nếp dẻo quẹo.",
+    "hard_filters": [
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "a2b6c7d0-9e1f-2a3b-c4d5-6e7f8a9b0c1d",
+    "name": "Lẩu Thái Tomyum",
+    "category": "Món Á",
+    "description": "Nước súp lỏng váng mỡ ớt đỏ quạch sôi sùng sục đập thẳng xoang mũi mùi sả chanh gắt gao chua loét cay xé rát rạt cổ họng mặn ngọt hải sản dai sật giòn rộp.",
+    "hard_filters": [
+      "Hải sản",
+      "Động vật có vỏ",
+      "Trái cây có múi",
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Món nước",
+      "Nóng hổi",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "b3c7d8e1-0f2a-3b4c-d5e6-7f8a9b0c1d2e",
+    "name": "Pad Thái (Hủ tiếu xào Thái)",
+    "category": "Món Á",
+    "description": "Sợi gạo tơi dẻo xào xém mỡ săn dai nhách áo lớp xốt me nâu sệt chua gắt ngọt lịm mặn mòi ôm lọn tôm giòn sật ngập ngụa đậu phộng rang giòn tan bùi bùi.",
+    "hard_filters": [
+      "Trứng",
+      "Hải sản",
+      "Đậu phộng/Các loại hạt",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Ngọt",
+      "Xào",
+      "Dai/Sần sật",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "c4d8e9f2-1a3b-4c5d-e6f7-8a9b0c1d2e3f",
+    "name": "Gỏi đu đủ Thái (Som Tum)",
+    "category": "Món Á",
+    "description": "Sợi đu đủ xanh giã nát thấm đẫm nước mắm lỏng chua chua gắt gắt ngọt lịm siêu mặn chát cay xé lưỡi bốc hỏa nhai giòn xốp rột rộp bùi béo lạc rang tôm khô.",
+    "hard_filters": [
+      "Hải sản",
+      "Đậu phộng/Các loại hạt",
+      "Trái cây có múi",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Gỏi/Trộn sống",
+      "Giòn/Giòn rụm",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "d5e9f0a3-2b4c-5d6e-f7a8-9b0c1d2e3f4a",
+    "name": "Xôi xoài Thái Lan",
+    "category": "Món Á",
+    "description": "Nắm nếp dẻo quẹo dính răng mềm ướt mượt mà chan ngập cốt dừa sền sệt béo ngậy mặn mặn ngọt gắt cắn chung lát xoài chín vàng ươm chua dịu xốp mềm tan chảy.",
+    "hard_filters": [
+      "Tiểu đường"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Món Á",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "e6f0a1b4-3c5d-6e7f-a8b9-0c1d2e3f4a5b",
+    "name": "Vịt quay Bắc Kinh",
+    "category": "Món Á",
+    "description": "Tảng da vịt màu bã trầu quay nổ mỡ mỏng dính cắn giòn rụm tan vỡ rộp rộp béo ngậy tột độ lót xốt đen đặc kẹo siêu mặn ngọt cuộn bánh tráng xốp dai sật.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Đậu nành",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Béo ngậy",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "f7a1b2c5-4d6e-7f8a-b9c0-1d2e3f4a5b6c",
+    "name": "Dimsum (Há cảo, xíu mại)",
+    "category": "Món Á",
+    "description": "Lớp vỏ bột mỏng manh trong suốt nhai dẻo quẹo dai nhách bao bọc nguyên vẹn lõi tôm thịt xắt cục nén chặt sần sật nảy bật răng ứa vị ngọt mặn thanh tao mọng nước.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Hấp/Luộc",
+      "Dai/Sần sật",
+      "Món Á",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "id": "a8b2c3d6-5e7f-8a9b-c0d1-2e3f4a5b6c7d",
+    "name": "Bánh bao kim sa",
+    "category": "Món Á",
+    "description": "Khối vỏ bánh nặn mập mạp bóp nhẹ lún xốp mềm tơi như bông xé toạc trào tuôn xốt sền sệt lỏng nóng bỏng vàng óng béo ngậy mặn chát ngọt gắt bùi bở trứng muối.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Sữa/Lactose",
+      "Tiểu đường",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Mặn",
+      "Béo ngậy",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "b9c3d4e7-6f8a-9b0c-d1e2-3f4a5b6c7d8e",
+    "name": "Khâu nhục",
+    "category": "Món Á",
+    "description": "Tảng ba chỉ chưng lồng mỡ màng núng nính rã rời mềm rục tan chảy béo ngậy ngay chạm môi ngâm nước hầm đen nhánh lỏng sệt mặn mòi ngọt gắt hăng hắc ngũ vị hương.",
+    "hard_filters": [
+      "Ngũ vị tân",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "c0d4e5f8-7a9b-0c1d-e2f3-4a5b6c7d8e9f",
+    "name": "Mì vịt tiềm",
+    "category": "Món Á",
+    "description": "Sợi mì trứng chiên giòn rụm ngâm nước lỏng sậm màu thuốc bắc ngọt gắt mặn chát lặn lội tảng đùi vịt hầm nhừ dẻo xương lột da mỡ màng béo ngậy tơi xốp mềm mại.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d1e5f6a9-8b0c-1d2e-f3a4-5b6c7d8e9f0a",
+    "name": "Đậu hũ Tứ Xuyên",
+    "category": "Món Á",
+    "description": "Thố xốt sền sệt đỏ bầm dầu mỡ nổi lềnh bềnh cực kỳ cay xé rát tê dại đầu lưỡi mặn chát đan xen thịt băm dẻo dai bọc khối đậu non trắng mướt mềm nhũn tan chảy.",
+    "hard_filters": [
+      "Đậu nành",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Xào",
+      "Mềm/Tan trong miệng",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "e2f6a7b0-9c1d-2e3f-a4b5-6c7d8e9f0a1b",
+    "name": "Sủi cảo nước",
+    "category": "Món Á",
+    "description": "Nước súp trong trẻo lỏng nhẹ thanh tao ngọt lịm mặn mòi điểm xuyết cọng hẹ giòn xốp ôm lấy viên bột luộc trơn tuột nhai dẻo dính nhân thịt băm mộc nhĩ dai sật béo mỡ.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "f3a7b8c1-0d2e-3f4a-b5c6-7d8e9f0a1b2c",
+    "name": "Chân gà hấp xì dầu",
+    "category": "Món Á",
+    "description": "Khúc chân gà phồng rộp nhăn nheo hầm nhừ bong xương cắn mút lớp da dẻo quánh sền sệt mỡ màng ngâm đẫm xốt xì dầu đen kẹo đặc mặn chát ngọt gắt thơm nồng hoa hồi.",
+    "hard_filters": [
+      "Đậu nành",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Hấp/Luộc",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Món Á",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "a4b8c9d2-1e3f-4a5b-c6d7-8e9f0a1b2c3d",
+    "name": "Cơm gà Hải Nam",
+    "category": "Món Á",
+    "description": "Nắm cơm tơi xốp dẻo quẹo áo mỡ gà vàng bóng béo ngậy dọn chung thớ gà luộc ướt át ngọt thanh da giòn sật sật chấm xốt gừng ớt lỏng xé lưỡi mặn chát cay nồng.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Mềm/Tan trong miệng",
+      "Ăn no",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "b5c9d0e3-2f4a-5b6c-d7e8-9f0a1b2c3d4e",
+    "name": "Tempura hải sản (Nhật Bản)",
+    "category": "Món Á",
+    "description": "Lớp bột áo mỏng tanh phồng rộp xù xì chiên ngập dầu vỏ cắn giòn rụm tan nát rôm rốp không dính mỡ lộ lõi tôm mực trắng phau nhai dẻo dẻo săn chắc ngọt lịm mặn mòi.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "c6d0e1f4-3a5b-6c7d-e8f9-0a1b2c3d4e5f",
+    "name": "Cơm trứng cuộn Omurice",
+    "category": "Món Á",
+    "description": "Màng trứng mỏng xốp mướt mịn rách xẻ trào ruột dẻo ướt lấp đầy cơm chiên tương cà đỏ âu tơi rời chua gắt ngọt gắt mặn dịu rưới xốt nâu sền sệt béo mỡ đậm đà.",
+    "hard_filters": [
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Ngọt",
+      "Chiên/Rán",
+      "Mềm/Tan trong miệng",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d7e1f2a5-4b6c-7d8e-f9a0-1b2c3d4e5f6a",
+    "name": "Gà xào bắp cải phô mai Hàn Quốc (Dakgalbi)",
+    "category": "Món Á",
+    "description": "Chảo xốt ớt đỏ bầm sền sệt dính dớp siêu cay rát ngọt gắt mặn chát xào săn thịt gà dẻo dai bắp cải xốp bở bọc đẫm lớp phô mai nung chảy béo ngậy kéo sợi dài.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Ngọt",
+      "Béo ngậy",
+      "Xào",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "e8f2a3b6-5c7d-8e9f-a0b1-2c3d4e5f6a7b",
+    "name": "Miến xào Hàn Quốc (Japchae)",
+    "category": "Món Á",
+    "description": "Sợi miến khoai lang trong suốt bóng mỡ nhai siêu dai nhách dẻo quẹo xào lộn xộn thịt bò mềm mọng rau củ giòn xốp rộp rộp bùng vị mặn ngọt xì dầu thơm nồng nàn dầu mè.",
+    "hard_filters": [
+      "Đậu nành",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Ngọt",
+      "Xào",
+      "Dai/Sần sật",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "f9a3b4c7-6d8e-9f0a-b1c2-3d4e5f6a7b8c",
+    "name": "Mì tương đen Hàn Quốc (Jajangmyeon)",
+    "category": "Món Á",
+    "description": "Sợi mì tươi luộc mập mạp nhai dẻo dai quết đẫm xốt đậu đen đặc quánh kẹo sệt siêu mặn chát nhặng đắng nhẹ béo ngậy mỡ lợn ôm trọn thịt băm săn chắc khoai tây xốp bở.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Đậu nành",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Nước sền sệt",
+      "Dai/Sần sật",
+      "Món Á",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "a0b4c5d8-7e9f-0a1b-c2d3-4e5f6a7b8c9d",
+    "name": "Canh kim chi thịt heo đậu hũ",
+    "category": "Món Á",
+    "description": "Nước súp đỏ lỏng váng mỡ ớt sôi sục bùng vị chua gắt gao cay xé lưỡi mặn chát ôm khối đậu non trắng bóc cực mềm tan chảy nhai chung ba chỉ béo ngậy dẻo dai.",
+    "hard_filters": [
+      "Đậu nành",
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Món nước",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "b1c5d6e9-8f0a-1b2c-d3e4-5f6a7b8c9d0e",
+    "name": "Lẩu cay Tứ Xuyên (Mala)",
+    "category": "Món Á",
+    "description": "Nồi súp lỏng đóng váng mỡ bò đỏ au siêu cay rát tê liệt khoang miệng mặn chát ngập ngụa thảo mộc hăng hắc nhúng lẩu ngập thịt thà dẻo dai sần sật mọng nước béo ngậy.",
+    "hard_filters": [
+      "Ngũ vị tân",
+      "Dạ dày/Đại tràng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Món nước",
+      "Nóng hổi",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "c2d6e7f0-9a1b-2c3d-e4f5-6a7b8c9d0e1f",
+    "name": "Đậu hũ thúi chiên giòn",
+    "category": "Món Á",
+    "description": "Khối đậu nành lên men đen kịt bốc mùi thối nồng nặc chiên ngập dầu cắn vỏ xốp nổ giòn tan rôm rốp ruột dẻo ướt mềm nhũn tuôn vị mặn chát béo ngậy cay xé rát.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Mềm/Tan trong miệng",
+      "Món Á",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "id": "d3e7f8a1-0b2c-3d4e-f5a6-7b8c9d0e1f2a",
+    "name": "Cà ri Thái xanh",
+    "category": "Món Á",
+    "description": "Nước lèo cốt dừa xanh lục lỏng sánh béo ngậy ngọt lịm cay nồng nàn hăng hắc thảo mộc ôm gọn thịt thà xốp mềm cà pháo giòn sật rộp rộp ngập ngụa mùi lá chanh mặn mòi.",
+    "hard_filters": [
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Ngọt",
+      "Béo ngậy",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "e4f8a9b2-1c3d-4e5f-a6b7-8c9d0e1f2a3b",
+    "name": "Heo quay da giòn kiểu Thái",
+    "category": "Món Á",
+    "description": "Tảng thịt ba chỉ quay xém lửa lớp da nổ rộp cực kỳ giòn rụm tan vỡ rộp rộp ruột trong dẻo dai béo ngậy tứa mỡ chấm xốt lỏng chua gắt cay xé rát mặn ngọt.",
+    "hard_filters": [
+      "Thuần chay",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Món Á",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "f5a9b0c3-2d4e-5f6a-b7c8-9d0e1f2a3b4c",
+    "name": "Bánh xèo hành hải sản (Pajeon)",
+    "category": "Món Á",
+    "description": "Tảng bột chiên áp chảo dày cộp viền rìa giòn tan ruột tơi bở xốp mềm bọc kín mít cọng hành lá nhai dẻo dính tôm mực giòn sật béo ngậy mặn mòi chấm xì dầu chua gắt.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản",
+      "Trứng",
+      "Thuần chay"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Món Á"
+    ]
+  },
+  {
+    "id": "f3a7b8c1-0d2e-3f4a-b5c6-7d8e9f0a1b2c",
+    "name": "Bún chay nước lèo",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Sợi gạo dẻo ướt trơn tuột chan ngập súp trong vắt ngọt lịm thanh mát mộc mạc ăn kèm đậu hũ béo ngậy xốp xộp nấm dai sật.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "a4b8c9d2-1e3f-4a5b-c6d7-8e9f0a1b2c3d",
+    "name": "Mì Quảng chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Sợi mì gạo to bản dẻo dính lộn xộn xốt sền sệt mặn ngọt nấm đùi gà dai nhách đậu hũ béo ngậy bùi bùi đậu phộng rang giòn tan.",
+    "hard_filters": [
+      "Đậu nành",
+      "Đậu phộng/Các loại hạt"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Nước sền sệt",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Đặc sản Đà Nẵng/Miền Trung"
+    ]
+  },
+  {
+    "id": "b5c9d0e3-2f4a-5b6c-d7e8-9f0a1b2c3d4e",
+    "name": "Lẩu nấm chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Nồi súp lỏng trong trẻo sôi sục bốc khói ngọt thanh mộc mạc ngập các loại nấm mọng nước nhai giòn sần sật dai dẻo thanh đạm váng đậu béo ngậy.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Nóng hổi",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "c6d0e1f4-3a5b-6c7d-e8f9-0a1b2c3d4e5f",
+    "name": "Bánh xèo chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Tảng bột mỏng tang vàng óng mép viền nổ giòn rụm ôm nhân giá đỗ xốp giòn nấm hương dai sật dẻo ướt mặn ngọt thanh tao chua nhẹ.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Thanh đạm",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn no",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "d7e1f2a5-4b6c-7d8e-f9a0-1b2c3d4e5f6a",
+    "name": "Cơm gạo lứt muối mè",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Hạt gạo lứt đỏ au nguyên cám nhai dai nhách sần sật bùi bùi dẻo dính quyện lộn xộn hạt vừng giòn tan mặn chát mộc mạc no bụng.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Thanh đạm",
+      "Mặn",
+      "Dai/Sần sật",
+      "Ăn no",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "e8f2a3b6-5c7d-8e9f-a0b1-2c3d4e5f6a7b",
+    "name": "Gỏi hoa chuối chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Sợi bắp chuối bào mỏng dính nhai giòn xốp rột rột chát nhẹ rưới xốt mặn ngọt chua gắt gao cay xé lưỡi bùi béo lạc rang giòn tan.",
+    "hard_filters": [
+      "Đậu phộng/Các loại hạt"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Gỏi/Trộn sống",
+      "Giòn/Giòn rụm",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "f9a3b4c7-6d8e-9f0a-b1c2-3d4e5f6a7b8c",
+    "name": "Đậu hũ chiên sả ớt",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Khối đậu nành vuông vức vỏ xém cứng giòn tan ruột tơi bở xốp mềm béo ngậy bám vụn sả phi hăng nồng cay xé rát mặn chát.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Chiên/Rán",
+      "Mềm/Tan trong miệng",
+      "Ăn no",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "a0b4c5d8-7e9f-0a1b-c2d3-4e5f6a7b8c9d",
+    "name": "Nấm đùi gà kho tiêu",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Khúc nấm mập mạp nhai siêu dai nhách sần sật dẻo dính áo xốt xì dầu kẹo sệt đen nhánh siêu mặn chát ngọt gắt gao tiêu đen cay nồng.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Cay",
+      "Nước sền sệt",
+      "Dai/Sần sật",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "b1c5d6e9-8f0a-1b2c-d3e4-5f6a7b8c9d0e",
+    "name": "Canh rong biển hạt sen",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Bát nước súp trong vắt lỏng nhẹ ngọt thanh tao mát rượi lẩn khuất lá rong biển trơn tuột dẻo dính bùi bùi viên hạt sen rục xốp bở.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "c2d6e7f0-9a1b-2c3d-e4f5-6a7b8c9d0e1f",
+    "name": "Bánh bèo chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Đĩa bánh bột gạo trắng muốt tròn dẹt cực kỳ mướt mịn màng dẻo tan chảy rắc vụn bánh mì giòn rụm rưới mắm mặn ngọt chua gắt lỏng lỏng.",
+    "hard_filters": [
+      "Lúa mì/Gluten"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mềm/Tan trong miệng",
+      "Hấp/Luộc",
+      "Ăn vặt",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "d3e7f8a1-0b2c-3d4e-f5a6-7b8c9d0e1f2a",
+    "name": "Bánh bột lọc nhân đậu xanh",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Khối bột sắn trong suốt nhìn thấu nhai siêu dẻo quẹo dai nhách dính răng bọc lõi đậu xanh giã nhuyễn mặn mặn ngọt gắt bùi bở béo ngậy.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Ngọt",
+      "Mặn",
+      "Hấp/Luộc",
+      "Dai/Sần sật",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "id": "e4f8a9b2-1c3d-4e5f-a6b7-8c9d0e1f2a3b",
+    "name": "Chả giò chay (Ram chay)",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Cuốn ram phồng mỡ vỏ ngoài xốp xộp giòn tan rôm rốp vỡ vụn ruột trong dẻo ướt khoai môn bùi bở mộc nhĩ sần sật mặn dịu ngọt thanh.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "f5a9b0c3-2d4e-5f6a-b7c8-9d0e1f2a3b4c",
+    "name": "Mì xào rau củ",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Sợi bột mì xào khô ráo bóng mỡ dẻo dai sần sật đảo lộn xộn bắp cải cà rốt giòn xốp rộp rộp mặn ngọt xì dầu đậm đà.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Xào",
+      "Dai/Sần sật",
+      "Giòn/Giòn rụm",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "a6b0c1d4-3e5f-6a7b-c8d9-0e1f2a3b4c5d",
+    "name": "Cà tím nướng mỡ hành (dùng dầu thực vật)",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Quả cà nướng lột vỏ rã rời siêu mềm nhũn ướt át tan chảy ngập ngụa dầu thực vật hành phi béo ngậy rưới xì dầu mặn chát ngọt gắt.",
+    "hard_filters": [
+      "Ngũ vị tân",
+      "Đậu nành",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "b7c1d2e5-4f6a-7b8c-d9e0-1f2a3b4c5d6e",
+    "name": "Salad ức gà (Dành cho Eat Clean)",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Lá rau tươi rói rỗng ruột giòn xốp thanh mát lộn xộn thớ ức gà xé tơi săn chắc ngọt dẻo rưới xốt giấm táo chua gắt mặn dịu.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Chua",
+      "Gỏi/Trộn sống",
+      "Giòn/Giòn rụm",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "c8d2e3f6-5a7b-8c9d-e0f1-2a3b4c5d6e7f",
+    "name": "Poke Bowl cá hồi (Healthy)",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Bát gạo lứt dẻo dai bùi bùi phủ ngập thớ cá hồi sống mềm mướt béo ngậy tan chảy rong biển xốp giòn thanh mát rưới xốt mặn ngọt chua gắt.",
+    "hard_filters": [
+      "Hải sản",
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Gỏi/Trộn sống",
+      "Mềm/Tan trong miệng",
+      "Healthy/Ít calo",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d9e3f4a7-6b8c-9d0e-f1a2-3b4c5d6e7f8a",
+    "name": "Bánh mì đen bơ hạt",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Lát bánh mì lúa mạch đen nguyên cám xém giòn dai nhách chua nhẹ phết lớp bơ hạt đặc quánh siêu béo ngậy dính dớp mặn mặn ngọt lịm bùi bùi.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Đậu phộng/Các loại hạt"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Món khô/Trộn",
+      "Dai/Sần sật",
+      "Ăn sáng",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "e0f4a5b8-7c9d-0e1f-a2b3-4c5d6e7f8a9b",
+    "name": "Bún gạo lứt trộn ức gà",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Sợi bún đỏ au nhai dẻo dẻo dai sật sật khô ráo lộn xộn thớ gà tơi xé săn chắc ngọt thịt rưới xốt mắm chua gắt cay xé mặn mà.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Món khô/Trộn",
+      "Dai/Sần sật",
+      "Healthy/Ít calo",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f1a5b6c9-8d0e-1f2a-b3c4-5d6e7f8a9b0c",
+    "name": "Phở cuốn chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Lớp bánh phở bản to trắng muốt dẻo ướt mềm mại cuộn chặt đậu hũ béo ngậy nấm dai sật xà lách giòn xốp chấm tương đậu mặn chát ngọt gắt.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món khô/Trộn",
+      "Mềm/Tan trong miệng",
+      "Thanh mát/Lạnh",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "id": "a2b6c7d0-9e1f-2a3b-c4d5-6e7f8a9b0c1d",
+    "name": "Chả lụa chay kho tiêu",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Khoanh chả làm từ phù trúc nhai siêu dai sần sật dẻo dính áo đẫm xốt xì dầu đen kẹo đặc mặn chát ngọt gắt tiêu sọ cay xé rát.",
+    "hard_filters": [
+      "Đậu nành",
+      "Lúa mì/Gluten"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Cay",
+      "Nước sền sệt",
+      "Dai/Sần sật",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "b3c7d8e1-0f2a-3b4c-d5e6-7f8a9b0c1d2e",
+    "name": "Đậu hũ bao bố",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Lớp váng đậu phồng xốp dai nhách bọc kín nhân nấm mộc nhĩ sần sật dẻo ướt béo ngậy đắm trong xốt lỏng sệt mặn ngọt thanh tao nấm hương.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Dai/Sần sật",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "c4d8e9f2-1a3b-4c5d-e6f7-8a9b0c1d2e3f",
+    "name": "Cà ri chay nước cốt dừa",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Nước lèo vàng óng sền sệt siêu béo ngậy cốt dừa mặn ngọt gắt gao cay xé rát thảo mộc ôm khoai lang bùi bở xốp tơi đậu hũ mềm nhũn tan chảy.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Béo ngậy",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d5e9f0a3-2b4c-5d6e-f7a8-9b0c1d2e3f4a",
+    "name": "Lẩu nấm Thái chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Nồi súp lỏng đỏ quạch váng mỡ ớt bùng vị chua loét cay xé rát hăng hắc sả chanh mặn ngọt thanh đạm ngập nấm mọng nước dai sật giòn rộp.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Món nước",
+      "Nóng hổi",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "e6f0a1b4-3c5d-6e7f-a8b9-0c1d2e3f4a5b",
+    "name": "Bún mắm nêm chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Sợi bún gạo trắng dẻo ướt trơn tuột trộn đậu hũ chiên béo ngậy giòn xốp rưới mắm nêm thơm lên men chua gắt mặn chát cay xé rát.",
+    "hard_filters": [
+      "Đậu nành"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Cay",
+      "Món khô/Trộn",
+      "Đặc sản Đà Nẵng/Miền Trung",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f7a1b2c5-4d6e-7f8a-b9c0-1d2e3f4a5b6c",
+    "name": "Cơm chiên lá é chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Hạt cơm nguội rang tơi rời xốp nảy khô ráo bóng mỡ ngập ngụa vụn lá é xay nhuyễn bùng vị hăng hắc the the mặn chát ngọt lịm mộc mạc.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn no",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "a8b2c3d6-5e7f-8a9b-c0d1-2e3f4a5b6c7d",
+    "name": "Canh chua nấm chay",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Nước súp lỏng trong trẻo mộc mạc thanh tao bùng cháy vị chua gắt gao cà chua me ngọt lịm lẩn khuất nấm rơm mọng nước nhai dai sật mềm nhũn.",
+    "hard_filters": [
+      "Cà chua"
+    ],
+    "soft_filters": [
+      "Chua",
+      "Thanh đạm",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Món Việt truyền thống"
+    ]
+  },
+  {
+    "id": "b9c3d4e7-6f8a-9b0c-d1e2-3f4a5b6c7d8e",
+    "name": "Bánh canh nấm tràm",
+    "category": "Đồ Chay & Thực dưỡng",
+    "description": "Sợi bánh canh bột lọc dai dẻo sần sật lặn lội trong súp lỏng sánh đặc mặn ngọt thanh tao xen lẫn nấm tràm đặc trưng nhặng đắng nhẹ mọng nước.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Thanh đạm",
+      "Đắng",
+      "Món nước",
+      "Nước sền sệt",
+      "Dai/Sần sật",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "e2f6a7b0-9c1d-2e3f-a4b5-6c7d8e9f0a1b",
+    "name": "Pizza Hải sản (Seafood Pizza)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Đế bánh bột mì mỏng nướng giòn rụm, phủ ngập lớp phô mai béo ngậy dai dẻo kéo sợi cùng tôm, mực săn chắc mang vị ngọt thanh mặn mòi.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản",
+      "Động vật có vỏ",
+      "Sữa/Lactose"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món Âu",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "f3a7b8c1-0d2e-3f4a-b5c6-7d8e9f0a1b2c",
+    "name": "Pizza Phô mai (Margherita)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Lớp vỏ bột nướng giòn xốp ôm trọn nước xốt cà chua mang vị chua gắt và màng phô mai béo ngậy mặn dịu, dẻo dai kéo sợi.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Cà chua",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Món Âu",
+      "Nướng",
+      "Giòn/Giòn rụm"
+    ]
+  },
+  {
+    "id": "a4b8c9d2-1e3f-4a5b-c6d7-8e9f0a1b2c3d",
+    "name": "Pizza Bò băm (Beef Pizza)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Đế bánh giòn rụm phủ lớp thịt bò băm nhuyễn dẻo mịn béo ngậy, quyện cùng xốt cà chua chua ngọt mặn mà và phô mai dai dẻo.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Cà chua"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món Âu",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "b5c9d0e3-2f4a-5b6c-d7e8-9f0a1b2c3d4e",
+    "name": "Mì Ý sốt bò băm (Spaghetti Bolognese)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Sợi mì ống vàng óng dai sật hòa quyện cùng thịt bò băm dẻo mềm béo ngậy, ngấm đẫm nước xốt sền sệt chua ngọt mặn mà mượt mà.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Cà chua"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Nước sền sệt",
+      "Món khô/Trộn",
+      "Món Âu",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "c6d0e1f4-3a5b-6c7d-e8f9-0a1b2c3d4e5f",
+    "name": "Mì Ý sốt kem nấm (Carbonara)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Sợi mì dai dẻo áo lớp xốt kem trắng sền sệt cực kỳ béo ngậy, ngọt dịu, xen lẫn những lát nấm giòn sật mọng nước mộc mạc.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Món khô/Trộn",
+      "Món Âu",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d7e1f2a5-4b6c-7d8e-f9a0-1b2c3d4e5f6a",
+    "name": "Beefsteak bò Mỹ (Steak)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Tảng thịt mọng nước xém viền ngoài giòn nhẹ, phần lõi hồng đào mềm mướt tan chảy, tuôn trào vị mặn mà béo ngậy tột độ nguyên bản.",
+    "hard_filters": [
+      "Keto"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "e8f2a3b6-5c7d-8e9f-a0b1-2c3d4e5f6a7b",
+    "name": "Sườn nướng BBQ (BBQ Ribs)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Khúc sườn rã rời bong xương cực kỳ dẻo dai ướt át, bọc kín lớp xốt kẹo sệt bóng bẩy mang vị mặn chát, chua gắt và ngọt lịm.",
+    "hard_filters": [],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Mặn",
+      "Ngọt",
+      "Món Âu",
+      "Mồi nhậu"
+    ]
+  },
+  {
+    "id": "f9a3b4c7-6d8e-9f0a-b1c2-3d4e5f6a7b8c",
+    "name": "Cá hồi áp chảo sốt chanh dây",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Lát phi lê cá mỡ màng béo ngậy mềm tơi xốp, rưới ngập nước xốt sền sệt vàng óng bùng nổ vị chua gắt gao rát rạt và ngọt lịm.",
+    "hard_filters": [
+      "Hải sản",
+      "Keto",
+      "Eat Clean"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Béo ngậy",
+      "Chiên/Rán",
+      "Mềm/Tan trong miệng",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "a0b4c5d8-7e9f-0a1b-c2d3-4e5f6a7b8c9d",
+    "name": "Gà nướng thảo mộc nguyên con",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Thớ thịt gà ướt át dẻo dai mọng nước bọc trong lớp da giòn tan rôm rốp, ngập ngụa mùi thảo mộc nồng nàn mặn ngọt béo ngậy.",
+    "hard_filters": [
+      "Keto",
+      "Eat Clean"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Dai/Sần sật",
+      "Món Âu",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "b1c5d6e9-8f0a-1b2c-d3e4-5f6a7b8c9d0e",
+    "name": "Hamburger bò Mỹ",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Cặp bánh mì xốp bông kẹp chặt tảng thịt bò băm nén dày cộp tứa nước béo ngậy mặn mòi, đan xen xà lách giòn rụm thanh mát.",
+    "hard_filters": [
+      "Lúa mì/Gluten"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món khô/Trộn",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Ăn no",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "c2d6e7f0-9a1b-2c3d-e4f5-6a7b8c9d0e1f",
+    "name": "Bánh mì Sandwich Club",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Lớp bánh mì lát xém xốp giòn rụm ôm trọn nhân thịt nguội dai sật, trứng mỡ màng béo ngậy và xà lách thanh mát mang vị mặn ngọt mộc mạc.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Món khô/Trộn",
+      "Giòn/Giòn rụm",
+      "Ăn sáng",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "d3e7f8a1-0b2c-3d4e-f5a6-7b8c9d0e1f2a",
+    "name": "Salad cá ngừ",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Rau xanh tơi xốp giòn rụm thanh mát trộn lẫn thịt cá ngừ đóng hộp dẻo dính béo ngậy mặn chát, phủ xốt lỏng chua chua ngọt ngọt mượt mà.",
+    "hard_filters": [
+      "Hải sản",
+      "Eat Clean"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Chua",
+      "Gỏi/Trộn sống",
+      "Thanh mát/Lạnh",
+      "Healthy/Ít calo",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "e4f8a9b2-1c3d-4e5f-a6b7-8c9d0e1f2a3b",
+    "name": "Salad gà nướng",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Rau củ tươi mát giòn xốp lộn xộn thớ ức gà xém săn chắc ngọt dẻo, rưới xốt sệt mặn ngọt chua gắt thanh tao béo nhẹ.",
+    "hard_filters": [
+      "Eat Clean"
+    ],
+    "soft_filters": [
+      "Thanh đạm",
+      "Chua",
+      "Gỏi/Trộn sống",
+      "Dai/Sần sật",
+      "Healthy/Ít calo",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "f5a9b0c3-2d4e-5f6a-b7c8-9d0e1f2a3b4c",
+    "name": "Súp bí đỏ béo ngậy",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Bát súp lỏng sệt màu cam rực rỡ vô cùng mướt mịn màng nhuyễn nhừ tan chảy, mang vị ngọt lịm mộc mạc và béo ngậy ngập ngụa bơ sữa.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "a6b0c1d4-3e5f-6a7b-c8d9-0e1f2a3b4c5d",
+    "name": "Súp nấm truffle",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Chất lỏng sền sệt xay nhuyễn mượt mà béo ngậy kem, bùng nổ hương nấm nồng nàn hăng hắc, mang vị mặn dịu ngọt thanh mộc mạc ấm áp.",
+    "hard_filters": [
+      "Sữa/Lactose",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Nóng hổi"
+    ]
+  },
+  {
+    "id": "b7c1d2e5-4f6a-7b8c-d9e0-1f2a3b4c5d6e",
+    "name": "Bánh Tiramisu",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Khối bông lan đẫm cà phê đắng gắt ướt át xen kẽ lớp kem phô mai siêu béo ngậy mướt mịn tan chảy, đọng vị ngọt lịm nồng nàn.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Trứng",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Đắng",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "c8d2e3f6-5a7b-8c9d-e0f1-2a3b4c5d6e7f",
+    "name": "Bánh Cheesecake",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Đế bánh quy nén chặt xốp xộp nâng đỡ khối phô mai đặc quánh siêu béo ngậy, mặn mặn chua gắt nhẹ nhàng và ngọt lịm tan chảy.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Trứng",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Chua",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "d9e3f4a7-6b8c-9d0e-f1a2-3b4c5d6e7f8a",
+    "name": "Bánh Macaron",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Chiếc bánh nhỏ mỏng manh vỏ ngoài cắn giòn vỡ nát, ruột trong dẻo quẹo dính răng kẹp xốt kem đặc béo ngậy siêu ngọt lịm.",
+    "hard_filters": [
+      "Trứng",
+      "Sữa/Lactose",
+      "Đậu phộng/Các loại hạt",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Giòn/Giòn rụm",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "e0f4a5b8-7c9d-0e1f-a2b3-4c5d6e7f8a9b",
+    "name": "Bánh sừng bò (Croissant)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Chiếc bánh xé lớp mỏng tang vỏ ngoài giòn rụm vỡ vụn, ruột trong dai dẻo xốp mềm siêu béo ngậy ngập ngụa mùi bơ mặn ngọt nhẹ.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Giòn/Giòn rụm",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Ăn sáng"
+    ]
+  },
+  {
+    "id": "f1a5b6c9-8d0e-1f2a-b3c4-5d6e7f8a9b0c",
+    "name": "Khoai tây chiên",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Những thanh khoai mập mạp vỏ ngoài cứng giòn rụm rôm rốp lõi trong xốp bở tơi mềm béo ngậy, mặn chát vị muối tinh.",
+    "hard_filters": [
+      "Thuần chay",
+      "Chay Phật giáo"
+    ],
+    "soft_filters": [
+      "Mặn",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "a2b6c7d0-9e1f-2a3b-c4d5-6e7f8a9b0c1d",
+    "name": "Mì Ý sốt Pesto (Húng quế)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Sợi mì ống dẻo dai sần sật bám chặt lớp xốt xanh lá đặc sệt béo ngậy bùng nổ hương thảo mộc mặn chát bùi bùi.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Đậu phộng/Các loại hạt",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Béo ngậy",
+      "Món khô/Trộn",
+      "Nước sền sệt",
+      "Món Âu",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "b3c7d8e1-0f2a-3b4c-d5e6-7f8a9b0c1d2e",
+    "name": "Bít tết sốt tiêu đen",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Tảng thịt bò đỏ au mọng nước mềm nhũn tứa mỡ béo ngậy đắm mình trong dòng xốt nâu sền sệt mặn chát ngọt gắt cay xé rát hạt tiêu.",
+    "hard_filters": [
+      "Keto"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Nướng",
+      "Nước sền sệt",
+      "Mềm/Tan trong miệng",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "c4d8e9f2-1a3b-4c5d-e6f7-8a9b0c1d2e3f",
+    "name": "Gà hầm rượu vang (Coq au Vin)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Khúc thịt rã rời bong xương cực kỳ mềm mại ướt át áo lớp súp lỏng thẫm màu mặn mòi ngọt gắt nồng nàn men rượu.",
+    "hard_filters": [
+      "Ngũ vị tân"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Nóng hổi",
+      "Món Âu",
+      "Ăn no"
+    ]
+  },
+  {
+    "id": "d5e9f0a3-2b4c-5d6e-f7a8-9b0c1d2e3f4a",
+    "name": "Salad Caesar",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Lá xà lách tươi rói rỗng ruột nhai giòn rụm phủ xốt phô mai đặc quánh béo ngậy mặn chát chua gắt xen vụn bánh mì khô khốc.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Hải sản"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chua",
+      "Gỏi/Trộn sống",
+      "Giòn/Giòn rụm",
+      "Món Âu",
+      "Healthy/Ít calo"
+    ]
+  },
+  {
+    "id": "e6f0a1b4-3c5d-6e7f-a8b9-0c1d2e3f4a5b",
+    "name": "Bánh Taco bò kiểu Mexico",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Vỏ bánh ngô uốn cong cứng cáp cắn giòn tan nhồi nhét thịt bò băm dẻo mịn béo ngậy cay xé rát cùng xà lách thanh mát mặn ngọt chua chua.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Cà chua"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Cay",
+      "Giòn/Giòn rụm",
+      "Ăn vặt",
+      "Món Âu",
+      "Ẩm thực đường phố"
+    ]
+  },
+  {
+    "id": "f7a1b2c5-4d6e-7f8a-b9c0-1d2e3f4a5b6c",
+    "name": "Mực tẩm bột chiên xù (Calamari)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Khoanh mực trắng phau nhai dẻo dai sần sật bọc lớp bột áo xù xì mỡ màng giòn rụm béo ngậy, mang vị mặn mòi ngọt thanh.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Hải sản"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Chiên/Rán",
+      "Giòn/Giòn rụm",
+      "Dai/Sần sật",
+      "Mồi nhậu",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "a8b2c3d6-5e7f-8a9b-c0d1-2e3f4a5b6c7d",
+    "name": "Sườn cừu nướng thảo mộc",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Khúc sườn mọng mỡ xém than vỏ ngoài dai dẻo ruột hồng đào ướt át mềm mướt bùng vị béo ngậy hăng hắc đặc trưng mặn mòi.",
+    "hard_filters": [
+      "Keto",
+      "Halal"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Nướng",
+      "Mềm/Tan trong miệng",
+      "Béo ngậy",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "b9c3d4e7-6f8a-9b0c-d1e2-3f4a5b6c7d8e",
+    "name": "Súp hành tây kiểu Pháp",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Bát nước súp lỏng nhẹ mặn dịu ngọt lịm kẹo đường hành tây rã rời phủ vụn bánh mì ướt át màng phô mai béo ngậy kéo sợi dai dẻo.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Ngũ vị tân",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Món nước",
+      "Mềm/Tan trong miệng",
+      "Nóng hổi",
+      "Món Âu"
+    ]
+  },
+  {
+    "id": "c0d4e5f8-7a9b-0c1d-e2f3-4a5b6c7d8e9f",
+    "name": "Bánh Tart trứng nướng",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Đế bột nướng xếp lớp mỏng manh vỡ vụn giòn rụm ôm trọn phần kem trứng xém cháy đặc quánh núng nính béo ngậy siêu ngọt lịm tan chảy.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Sữa/Lactose",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Giòn/Giòn rụm",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "d1e5f6a9-8b0c-1d2e-f3a4-5b6c7d8e9f0a",
+    "name": "Bánh Waffle kem tươi",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Khối bánh nướng khuôn vỏ xốp giòn rụm ruột dẻo quẹo ướt át ngọt gắt ngập xốt kem sữa trắng mướt béo ngậy lạnh buốt tan trên lưỡi.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Trứng",
+      "Sữa/Lactose",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Ngọt",
+      "Béo ngậy",
+      "Nướng",
+      "Giòn/Giòn rụm",
+      "Món Âu",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "id": "e2f6a7b0-9c1d-2e3f-a4b5-6c7d8e9f0a1b",
+    "name": "Nui xào phô mai đút lò (Mac & Cheese)",
+    "category": "Món Âu & Châu Mỹ",
+    "description": "Hạt nui nhỏ xíu dẻo mềm đắm chìm hoàn toàn trong bể xốt phô mai vàng óng sền sệt siêu béo ngậy mặn chát ngọt gắt kéo sợi dính dớp.",
+    "hard_filters": [
+      "Lúa mì/Gluten",
+      "Sữa/Lactose",
+      "Chay trứng sữa"
+    ],
+    "soft_filters": [
+      "Đậm đà",
+      "Mặn",
+      "Béo ngậy",
+      "Mềm/Tan trong miệng",
+      "Món Âu",
+      "Ăn no"
+    ]
+  }
+]
