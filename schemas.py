@@ -6,6 +6,7 @@ class AIInsight(BaseModel):
     exclude: List[str]
     include: List[str]
     prefer: List[str]
+    warning_message: Optional[str] = None
 
 class Filters(BaseModel):
     hard: List[str]
@@ -15,11 +16,11 @@ class Filters(BaseModel):
 class FoodResult(BaseModel):
     id: uuid.UUID
     name: str
-    category: Optional[str]
     description: str
-    ingredients: List[str]
-    filters: Filters
-    matchScore: str
+    img_url: Optional[str] = None # Bổ sung thêm theo ERD
+    core_ingredients: List[str]   # Đổi tên từ ingredients
+    soft_tags: List[str]          # Gộp chung các filter lại theo ERD
+    matchScore: float             # Nên để kiểu float cho số điểm Vector thay vì str
 
 class SearchResponse(BaseModel):
     query: str

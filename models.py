@@ -9,12 +9,24 @@ class Food(Base):
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name = Column(String, nullable=False)
-    category = Column(String, nullable=True)
-    ingredients = Column(ARRAY(Text), nullable=False)
     description = Column(Text, nullable=False)
-    hard_filters = Column(JSONB, nullable=False)
-    dietary_filters = Column(JSONB, nullable=False, default=[])
-    soft_filters = Column(JSONB, nullable=False)
+    img_url = Column(String, nullable=True)
     
-    # Sử dụng HALFVEC với 768 chiều để tương thích với text-embedding-004
-    embedding = Column(HALFVEC(768), nullable=True)
+    core_ingredients = Column(ARRAY(Text), nullable=False, default=[])
+    soft_tags = Column(ARRAY(Text), nullable=False, default=[]) 
+    
+    # gemini-embedding-001 need vector 3072 dimension
+    embedding = Column(HALFVEC(3072), nullable=True)
+
+class Tag(Base):
+    __tablename__ = "tags"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    name = Column(String, nullable=False, unique=True) 
+    tag_type = Column(String, nullable=False)         
+    
+    # Rule Engine
+    exclude_soft_tag = Column(ARRAY(String), nullable=False, default=[])
+    prefer_soft_tag = Column(ARRAY(String), nullable=False, default=[])
+    exclude_ingredient = Column(ARRAY(String), nullable=False, default=[])
+    prefer_ingredient = Column(ARRAY(String), nullable=False, default=[])
