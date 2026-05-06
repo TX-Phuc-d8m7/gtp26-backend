@@ -14,68 +14,128 @@ client = genai.Client(vertexai=True, project=PROJECT_ID, location="us-central1")
 async def seed_data():
     async with AsyncSessionLocal() as db:
         # ==========================================
-        # 1. NẠP DỮ LIỆU LUẬT Y TẾ (TAGS)
+        # 1. NẠP VÀ CẬP NHẬT DỮ LIỆU LUẬT Y TẾ (TAGS)
         # ==========================================
-        result_tag = await db.execute(select(Tag).limit(1))
-        if result_tag.scalar_one_or_none() is None:
-            print("🏥 Bảng Tags trống. Đang nạp luật y tế...")
-            if os.path.exists("tags_data.json"):
-                with open("tags_data.json", "r", encoding="utf-8") as f:
-                    tags_data = json.load(f)
-                
-                for item in tags_data:
+        print("🏥 Đang kiểm tra và đồng bộ dữ liệu từ tags_data.json...")
+        tags_file_path = "tags_data.json"
+
+        if not os.path.exists(tags_file_path):
+            print(f"⚠️ Không tìm thấy file {tags_file_path}")
+        else:
+            with open(tags_file_path, "r", encoding="utf-8") as f:
+                tags_data = json.load(f)
+
+            # Lấy toàn bộ Tags hiện có trong DB để đối chiếu (Key là tên tag)
+            existing_tags_result = await db.execute(select(Tag))
+            existing_tags = {tag.name: tag for tag in existing_tags_result.scalars().all()}
+
+            tags_new_count = 0
+            tags_update_count = 0
+
+            for item in tags_data:
+                tag_name = item.get("name")
+                new_tag_type = item.get("tag_type")
+                new_exclude_soft = item.get("exclude_soft_tag", [])
+                new_prefer_soft = item.get("prefer_soft_tag", [])
+                new_exclude_ing = item.get("exclude_ingredient", [])
+                new_prefer_ing = item.get("prefer_ingredient", [])
+
+                if tag_name in existing_tags:
+                    tag = existing_tags[tag_name]
+                    
+                    # Kiểm tra xem có luật nào bị thay đổi so với DB không
+                    is_tag_changed = (
+                        tag.tag_type != new_tag_type or
+                        tag.exclude_soft_tag != new_exclude_soft or
+                        tag.prefer_soft_tag != new_prefer_soft or
+                        tag.exclude_ingredient != new_exclude_ing or
+                        tag.prefer_ingredient != new_prefer_ing
+                    )
+
+                    if is_tag_changed:
+                        # Cập nhật luật mới
+                        tag.tag_type = new_tag_type
+                        tag.exclude_soft_tag = new_exclude_soft
+                        tag.prefer_soft_tag = new_prefer_soft
+                        tag.exclude_ingredient = new_exclude_ing
+                        tag.prefer_ingredient = new_prefer_ing
+                        tags_update_count += 1
+                else:
+                    # Thêm mới nếu luật y tế này chưa tồn tại
                     new_tag = Tag(
-                        name=item.get("name"),
-                        tag_type=item.get("tag_type"),
-                        exclude_soft_tag=item.get("exclude_soft_tag", []),
-                        prefer_soft_tag=item.get("prefer_soft_tag", []),
-                        exclude_ingredient=item.get("exclude_ingredient", []),
-                        prefer_ingredient=item.get("prefer_ingredient", [])
+                        name=tag_name,
+                        tag_type=new_tag_type,
+                        exclude_soft_tag=new_exclude_soft,
+                        prefer_soft_tag=new_prefer_soft,
+                        exclude_ingredient=new_exclude_ing,
+                        prefer_ingredient=new_prefer_ing
                     )
                     db.add(new_tag)
-                await db.commit()
-                print(f"✅ Đã nạp xong {len(tags_data)} quy tắc y khoa!")
-            else:
-                print("⚠️ Không tìm thấy file tags_data.json")
-        else:
-            print("✅ Dữ liệu Tags đã tồn tại.")
+                    tags_new_count += 1
+
+            await db.commit()
+            print(f"✅ Hoàn tất đồng bộ Tags: Thêm mới {tags_new_count} quy tắc, Cập nhật {tags_update_count} quy tắc.")
 
         # ==========================================
         # 2. NẠP DỮ LIỆU MÓN ĂN (FOOD) VÀ EMBEDDING
         # ==========================================
 
-        # 1. Check and import raw data
-        result = await db.execute(select(Food).limit(1))
-        first_food = result.scalar_one_or_none()
+        print("📂 Đang kiểm tra và đồng bộ dữ liệu từ foods_enriched.json...")
+        file_path = 'foods_enriched.json'
 
-        if first_food is None:
-            # 1.1 Get foods_enriched.json from backend-food-preparing/label-data
-            print("📂 Database trống. Đang nạp dữ liệu từ foods_enriched.json...")
-            file_path = "foods_enriched.json"
-            if not os.path.exists(file_path):
-                print(f"❌ Không tìm thấy file {file_path}")
-                return
+        if not os.path.exists(file_path):
+            print(f"❌ Không tìm thấy file {file_path}")
+            return
+        
+        with open(file_path, "r", encoding="utf-8") as f:
+            foods_data = json.load(f)
+        
+        existing_foods_result = await db.execute(select(Food))
+        existing_foods = {food.name: food for food in existing_foods_result.scalars().all()}
 
-            with open(file_path, "r", encoding="utf-8") as f:
-                foods = json.load(f)
+        new_count = 0
+        update_count = 0
 
-            for item in foods:
+        for item in foods_data:
+            food_name = item.get("name")
+            new_core_ingredients = item.get("core_ingredients", [])
+            new_description = item.get("description", "")
+            new_soft_tags = item.get("soft_tags", [])
+
+            if food_name in existing_foods:
+                food = existing_foods[food_name]
+                
+                # Text thay đổi nên cần tạo lại vector
+                is_text_changed = (
+                    food.core_ingredients != new_core_ingredients or
+                    food.description != new_description or
+                    food.soft_tags != new_soft_tags
+                )
+                
+                if is_text_changed:
+                    # Cập nhật mọi dữ liệu mới vào DB
+                    food.core_ingredients = new_core_ingredients
+                    food.description = new_description
+                    food.soft_tags = new_soft_tags
+                    
+                    # CHỈ reset vector nếu nội dung text bị thay đổi
+                    if is_text_changed:
+                        food.embedding = None 
+                        
+                    update_count += 1
+            else:
                 new_food = Food(
-                    name=item.get("name"),
-                    core_ingredients=item.get("core_ingredients", []),
-                    description=item.get("description", ""),
-                    soft_tags=item.get("soft_tags", []),
-
-                    # preprocessing_ingredients=item.get("preprocessing_ingredients", []),
-                    # raw_ingredients=item.get("raw_ingredients", []),
-                    # raw_instructions=item.get("raw_instructions", ""),
+                    name=food_name,
+                    core_ingredients=new_core_ingredients,
+                    description=new_description,
+                    soft_tags=new_soft_tags,
                     embedding=None
                 )
                 db.add(new_food)
-            await db.commit()
-            print(f"✅ Đã nạp xong {len(foods)} món ăn vào database.")
-        else:
-            print("✅ Dữ liệu thô đã tồn tại. Bỏ qua bước nạp file JSON.")
+                new_count += 1
+
+        await db.commit()
+        print(f"✅ Hoàn tất đồng bộ: Thêm mới {new_count} món, Cập nhật {update_count} món.")
 
         # 2. Check and create embedding vector
         result = await db.execute(select(Food).where(Food.embedding.is_(None)))
@@ -105,7 +165,10 @@ async def seed_data():
                     return client.models.embed_content(
                         model='gemini-embedding-001', 
                         contents=text_to_embed,
-                        config=types.EmbedContentConfig(output_dimensionality=3072)
+                        config=types.EmbedContentConfig(
+                            output_dimensionality=3072,
+                            task_type="RETRIEVAL_DOCUMENT"  # Đây là document (món ăn), không phải query
+                        )
                     )
                 
                 embedding_response = await asyncio.to_thread(get_embedding)

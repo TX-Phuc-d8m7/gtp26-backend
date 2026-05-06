@@ -1,0 +1,147 @@
+{
+  "Cao huyết áp": {
+    "general_advice": "Ưu tiên món ăn nhạt muối, nhiều rau xanh, hạn chế mỡ động vật và thực phẩm chế biến sẵn.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Dặn quán không cho nước béo, không húp nước lèo/nước hầm xương vì rất nhiều muối và mỡ. Chỉ ăn phần cái (topping) và bún/phở, xin thêm rau sống ăn kèm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mặn",
+        "warning_text": "Yêu cầu quán nêm nhạt hơn bình thường, không thêm nước mắm hoặc muối ra bàn. Nếu có chấm, hỏi xin loại tương ít mặn hoặc pha loãng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thực phẩm chế biến sẵn",
+        "warning_text": "Thực phẩm chế biến sẵn (xúc xích, chả, pate, đồ hộp) chứa lượng muối bảo quản rất cao. Nếu ăn, chỉ lấy một lượng nhỏ làm topping và đừng ăn cả phần nước đi kèm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Lẩu",
+        "warning_text": "Tuyệt đối không húp nước lẩu, đặc biệt lẩu mắm, lẩu thái chứa cực nhiều muối và gia vị kích thích. Chỉ nhúng rau, thịt nạc và ăn bún/mì nhạt."
+      }
+    ]
+  },
+  "Viêm loét dạ dày": {
+    "general_advice": "Ăn chín kỹ, mềm, không chua không cay, chia nhỏ bữa ăn và ăn đúng giờ để giảm tiết axit dạ dày.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chua",
+        "warning_text": "Dặn quán bỏ hoàn toàn chanh, me, dấm, cà chua ra khỏi món. Nếu là nước chấm, hỏi loại không chua hoặc chỉ chấm một lượng rất ít. Các món gỏi trộn dấm nên yêu cầu giảm chua tối đa."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cay",
+        "warning_text": "Yêu cầu quán không cho ớt, tiêu, tương ớt vào món. Nếu món mặc định có ớt (như bún bò Huế), dặn rõ 'không ớt' ngay khi gọi để bếp chế biến riêng, không phải nhặt ớt ra sau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Dầu ăn nhiều sẽ làm dạ dày tiết nhiều axit hơn. Nếu phải ăn đồ chiên, ăn kèm rất nhiều rau luộc để trung hòa, và ăn chậm, nhai kỹ để giảm tải cho dạ dày."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Sống/Chín tái",
+        "warning_text": "Thịt/cá chín tái hoặc sống (sashimi, gỏi sống) có thể gây kích ứng niêm mạc dạ dày đang viêm. Yêu cầu nhúng kỹ trong lẩu hoặc chọn phần chín hoàn toàn, tránh gỏi sống."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Sống / Chín tái",
+        "warning_text": "Thịt/cá chín tái hoặc sống (sashimi, gỏi sống) có thể gây kích ứng niêm mạc dạ dày đang viêm. Yêu cầu nhúng kỹ trong lẩu hoặc chọn phần chín hoàn toàn, tránh gỏi sống."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Rang",
+        "warning_text": "Món rang khô có bề mặt cứng và khô, khó tiêu hóa hơn và có thể cạ vào niêm mạc dạ dày. Nếu ăn, nên nhai rất kỹ, ăn lượng nhỏ và uống nhiều nước trong lúc ăn."
+      }
+    ]
+  },
+  "Bệnh Gout": {
+    "general_advice": "Hạn chế tối đa nội tạng, hải sản, thực phẩm giàu đạm từ động vật và đồ uống có cồn để kiểm soát nồng độ acid uric trong máu.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nội tạng",
+        "warning_text": "Nội tạng (gan, thận, tim, lòng) là nguồn purin cực cao, cực kỳ nguy hiểm cho bệnh Gout. Nếu chọn món lẩu hay bún có nội tạng, hãy yêu cầu quán bỏ hoàn toàn phần lòng ra khỏi tô, chỉ lấy phần thịt nạc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Nước hầm xương, nước dùng hải sản, nước lẩu đậm đà chứa lượng purin hòa tan rất cao từ quá trình hầm. Tuyệt đối không húp nước, chỉ ăn phần cái và bún/cơm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu đạm",
+        "warning_text": "Khi ăn món giàu đạm động vật (thịt nướng, lẩu thịt), hãy kiểm soát khẩu phần, chỉ ăn 1 phần nhỏ khoảng 100g thịt nạc/bữa. Ưu tiên đậu hũ, trứng hoặc thịt trắng (gà, vịt) thay cho thịt đỏ và hải sản."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Rượu bia là tác nhân số 1 làm tăng acid uric và kích hoạt cơn Gout cấp tính. Nếu ăn trong bữa nhậu, hãy uống nhiều nước lọc thay thế, ăn nhiều rau xanh và từ chối bia rượu."
+      }
+    ]
+  },
+  "Tiểu đường": {
+    "general_advice": "Ưu tiên món hấp/luộc, nhiều chất xơ, hạn chế tinh bột trắng, đường và đồ chiên rán để kiểm soát đường huyết sau ăn.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ngọt",
+        "warning_text": "Dặn quán không cho thêm đường, không dùng sốt ngọt (sốt teriyaki, sốt hoisin, nước sốt cà chua ngọt). Nếu là tráng miệng, chọn trái cây ít ngọt (ổi, táo) thay cho chè, kem, bánh ngọt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Bánh ngọt, bánh mì ngọt, bánh flan, đồ uống có đường làm tăng đường huyết đột ngột. Nếu phải ăn vặt, chọn khoai lang luộc hoặc sữa chua không đường thay thế."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên rán (khoai tây chiên, chả giò, đậu hũ chiên) có chỉ số glycemic cao và chứa nhiều chất béo bão hòa, gây kháng insulin. Xin quán đổi sang phương pháp hấp hoặc nướng không dầu nếu có thể."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ăn no",
+        "warning_text": "Ăn quá no một lúc làm đường huyết tăng vọt. Hãy chia phần ăn ra, ăn rau trước, đạm sau và cơm/bún cuối cùng. Yêu cầu quán phục vụ cơm/bún riêng để tự kiểm soát lượng tinh bột."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu tinh bột",
+        "warning_text": "Món giàu tinh bột (cơm trắng, bún, phở, bánh mì) làm tăng đường huyết nhanh sau ăn. Hãy yêu cầu khẩu phần nhỏ tinh bột, ăn rau và đạm trước, hoặc chọn gạo lứt/bún gạo lứt thay thế nếu quán có."
+      }
+    ]
+  },
+  "Gan nhiễm mỡ": {
+    "general_advice": "Tránh hoàn toàn rượu bia, hạn chế chất béo bão hòa, đường fructose và thực phẩm chế biến sẵn để giảm tải cho gan.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Yêu cầu quán bỏ da gà, da heo, mỡ heo, váng mỡ ra khỏi món trước khi chế biến. Nếu là phở, bún bò, hỏi xin loại nước trong (gầy) thay vì nước béo. Hạn chế chấm các loại sốt béo như mayonnaise, bơ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thực phẩm chế biến sẵn",
+        "warning_text": "Xúc xích, pate, thịt hộp, đồ ăn nhanh chứa chất bảo quản và chất béo trans gây viêm gan và tích lũy mỡ gan. Nếu ăn, chỉ dùng lượng nhỏ làm topping, không ăn nguyên bữa."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nội tạng",
+        "warning_text": "Gan, thận, lòng chứa lượng cholesterol và chất béo rất cao, làm tăng gánh nặng chuyển hóa cho gan. Hãy yêu cầu quán bỏ phần lòng, thay bằng thịt nạc (thịt gà ức, tôm)."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Rượu bia dù với lượng nhỏ cũng trực tiếp gây độc tế bào gan và làm gan nhiễm mỡ tiến triển nặng hơn. Trong bữa nhậu, hãy chỉ uống nước lọc, nước ép không đường và ăn nhiều rau xanh luộc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu tinh bột",
+        "warning_text": "Tinh bột trắng (cơm, bánh mì, bún) chuyển hóa thành đường và tích lũy mỡ gan. Kiểm soát khẩu phần tinh bột, ưu tiên ăn nhiều rau và đạm nạc hơn."
+      }
+    ]
+  }
+}
