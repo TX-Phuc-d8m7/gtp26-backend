@@ -1,14 +1,16 @@
-import os
-import json
 import asyncio
+import json
+import os
+import re
+
 import numpy as np
 from google import genai
 from google.genai import types
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import func, select, not_, text, cast, Text
-from sqlalchemy.dialects.postgresql import ARRAY
 from models import Food, Tag
-from schemas import SearchResponse, AIInsight, FoodResult
+from schemas import AIInsight, FoodResult, SearchResponse
+from sqlalchemy import Text, cast, func, not_, select, text
+from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy.ext.asyncio import AsyncSession
 
 PROJECT_ID = os.getenv("PROJECT_ID")
 client = genai.Client(vertexai=True, project=PROJECT_ID, location="us-central1")
@@ -18,17 +20,38 @@ client = genai.Client(vertexai=True, project=PROJECT_ID, location="us-central1")
 # =================================
 
 valid_health_tags = [
-    "Vết thương hở/Mới phẫu thuật", "Đang cho con bú", "Phụ nữ mang thai",
-    "Gan nhiễm mỡ/Men gan cao", "Béo phì", "Đầy bụng/Khó tiêu",
-    "Nhiệt miệng/Loét miệng", "Tiêu chảy", "Gout",
-    "Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)", "Táo bón",
-    "Tim mạch", "Trào ngược dạ dày thực quản (GERD)", "Viêm loét dạ dày",
-    "Suy thận", "Cao huyết áp", "Tiểu đường",
-    "Dị ứng mắm lên men", "Dị ứng bột ngọt (MSG)", "Dị ứng mè/vừng",
-    "Dị ứng trái cây có múi", "Dị ứng trứng", "Dị ứng cà chua",
-    "Dị ứng lúa mì", "Dị ứng đậu nành", "Bất dung nạp Lactose",
-    "Dị ứng sữa bò", "Dị ứng hạt cây", "Dị ứng đậu phộng",
-    "Dị ứng cá có vây", "Dị ứng động vật thân mềm", "Dị ứng động vật giáp xác"
+    "Vết thương hở/Mới phẫu thuật", 
+    "Đang cho con bú", 
+    "Phụ nữ mang thai",
+    "Gan nhiễm mỡ/Men gan cao", 
+    "Béo phì", 
+    "Đầy bụng/Khó tiêu",
+    "Nhiệt miệng/Loét miệng", 
+    "Tiêu chảy", 
+    "Gout",
+    "Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)", 
+    "Táo bón",
+    "Tim mạch", 
+    "Trào ngược dạ dày thực quản (GERD)", 
+    "Viêm loét dạ dày",
+    "Suy thận", 
+    "Cao huyết áp", 
+    "Tiểu đường",
+    "Dị ứng mắm lên men", 
+    "Dị ứng bột ngọt (MSG)", 
+    "Dị ứng mè/vừng",
+    "Dị ứng trái cây có múi", 
+    "Dị ứng trứng", 
+    "Dị ứng cà chua",
+    "Dị ứng lúa mì", 
+    "Dị ứng đậu nành", 
+    "Bất dung nạp Lactose",
+    "Dị ứng sữa bò", 
+    "Dị ứng hạt cây", 
+    "Dị ứng đậu phộng",
+    "Dị ứng cá có vây", 
+    "Dị ứng động vật thân mềm", 
+    "Dị ứng động vật giáp xác"
 ]
 
 valid_soft_tags = [
@@ -38,8 +61,8 @@ valid_soft_tags = [
     "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Hầm / Ninh", "Lẩu", "Kho/Rim", "Súp", "Cháo", "Rang",
     "Ăn no", "Ăn vặt", "Mồi nhậu", "Ăn sáng", "Ăn trưa", "Ăn chiều / xế", "Ăn tối", "Ăn khuya", "Tráng miệng", "Giải rượu", "Giải cảm", "Ấm bụng",
     "Đặc sản Đà Nẵng", "Ẩm thực đường phố", "Món Việt truyền thống", "Món Á", "Món Âu", "Thức ăn nhanh", "Món chay",
-    "Giàu chất xơ", "Giàu đạm", "Giàu vitamin", "Giàu tinh bột", "Nội tạng", "Sữa / Phô mai", "Thực phẩm chế biến sẵn", "Bánh ngọt",
-    "Dễ tiêu", "Khó tiêu / Nặng bụng"
+    "Giàu chất xơ", "Giàu đạm", "Giàu vitamin", "Giàu tinh bột", "Nội tạng", "Từ sữa / Phô mai", "Thực phẩm chế biến sẵn", "Bánh ngọt",
+    "Dễ tiêu", "Khó tiêu / Nặng bụng", "Healthy / Eat Clean", "Nhiều dầu mỡ / Calo cao", "Hải sản"
 ]
 
 DISH_TYPE_TAGS = {
@@ -47,6 +70,52 @@ DISH_TYPE_TAGS = {
     "Cuốn / Gói", "Kho/Rim", "Chiên / Rán", "Hấp / Luộc", "Xào", "Rang"
 }
 
+TAG_ALIAS_MAP = {
+    "hap/luoc": "Hấp / Luộc",
+    "hap / luoc": "Hấp / Luộc",
+    "song / chin tai": "Sống/Chín tái",
+    "cuon/goi": "Cuốn / Gói",
+    "thanh dam": "Thanh đạm",
+    "thanh mat / giai nhiet": "Thanh mát/Giải nhiệt",
+    "thanh mat/giai nhiet": "Thanh mát/Giải nhiệt",
+    "do an nhanh": "Thức ăn nhanh",
+    "an dem": "Ăn khuya",
+    "it beo": "Thanh đạm",
+    "giau chat so": "Giàu chất xơ",
+    "sua / pho mai": "Từ sữa / Phô mai",
+}
+
+# CHUẨN HOÁ DỮ LIỆU TÍNH CHẤT (SOFT TAGS)
+def _normalize_tag_key(tag: str) -> str:
+    return (tag or "").strip().lower().replace("đ", "d").replace(" ", "")
+
+def canonicalize_soft_tag(tag: str) -> str | None:
+    """
+    Chuẩn hóa toàn bộ biến thể soft_tag về danh mục chuẩn.
+    Mục tiêu: đảm bảo lưới guardrails không bị hụt do khác dấu cách/ký tự.
+    """
+    raw = (tag or "").strip()
+    if not raw:
+        return None
+
+    compact = raw.lower().replace("đ", "d")
+    compact = re.sub(r"\s+", " ", compact).strip()
+    canonical = TAG_ALIAS_MAP.get(compact, raw)
+
+    normalized_lookup = {_normalize_tag_key(t): t for t in valid_soft_tags}
+    return normalized_lookup.get(_normalize_tag_key(canonical))
+
+def canonicalize_soft_tags(tags: list[str]) -> list[str]:
+    seen = set()
+    result = []
+    for tag in tags or []:
+        canonical = canonicalize_soft_tag(tag)
+        if canonical and canonical not in seen:
+            seen.add(canonical)
+            result.append(canonical)
+    return result
+
+# TRÍCH XUẤT VÀ XỬ LÝ Ý ĐỊNH NGƯỜI DÙNG
 def supervisor_agent(user_input: str):
     system_instruction = f"""
     Bạn là chuyên gia phân tích ý định người dùng trong ẩm thực.
@@ -139,10 +208,13 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
         tags_db = result.scalars().all()
 
         for tag in tags_db:
-            medical_exclude_tags.update(tag.exclude_soft_tag)
-            medical_prefer_tags.update(tag.prefer_soft_tag)
+            medical_exclude_tags.update(canonicalize_soft_tags(tag.exclude_soft_tag))
+            medical_prefer_tags.update(canonicalize_soft_tags(tag.prefer_soft_tag))
             medical_exclude_ings.update(tag.exclude_ingredient)
             medical_prefer_ings.update(tag.prefer_ingredient)
+
+    user_include_tags = set(canonicalize_soft_tags(list(user_include_tags)))
+    user_exclude_tags = set(canonicalize_soft_tags(list(user_exclude_tags)))
 
     # Logic check warning message for ingredients
     user_likes_lower = {ing.lower() for ing in user_likes_ings}
@@ -150,10 +222,9 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
     conflicting_ings = user_likes_lower.intersection(medical_exclude_lower)
 
     # Logic check warning message for soft tags
-    user_tags_lower = {tag.lower() for tag in user_include_tags}
-    medical_exclude_tags_lower = {tag.lower() for tag in medical_exclude_tags}
+    user_tags_lower = {_normalize_tag_key(tag) for tag in user_include_tags}
+    medical_exclude_tags_lower = {_normalize_tag_key(tag) for tag in medical_exclude_tags}
     conflicting_tags = user_tags_lower.intersection(medical_exclude_tags_lower)
-    warning_message = None
     
     all_conflicts = list(conflicting_ings) + list(conflicting_tags)
     warning_message = None
@@ -273,7 +344,7 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, hãy tư vấn người dùng m�
             model="gemini-2.5-flash",
             config=types.GenerateContentConfig(
                 system_instruction=system_prompt,
-                temperature=0.5,
+                temperature=0.2,
             ),
             contents=f"Câu hỏi gốc của người dùng: {user_query}"
         )
@@ -301,7 +372,7 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
     # ---------------------------------------------------------
     
     if not payload:
-        # Xử lý fallback nếu LLM tịt ngòi
+        # Xử lý fallback nếu LLM báo lỗi
         return SearchResponse(query=query, ai_insight=AIInsight(exclude=[], include=[], prefer=[]), results=[])
     
     user_exclude_dishes = payload["user_exclude_dishes"]
@@ -384,8 +455,8 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
 
     # 🛡️ CHUẨN HÓA DANH SÁCH CẤM (Viết thường, xóa toàn bộ khoảng trắng)
     # Gộp cả tag cấm của y tế (medical_e_tags) và tag user không thích (user_exclude_tags)
-    all_banned_tags = medical_e_tags + payload.get("user_exclude_tags", [])
-    banned_tags_normalized = {t.lower().replace(" ", "") for t in all_banned_tags}
+    all_banned_tags = canonicalize_soft_tags(medical_e_tags + payload.get("user_exclude_tags", []))
+    banned_tags_normalized = {_normalize_tag_key(t) for t in all_banned_tags}
 
     print(f"🔢 [BƯỚC 4 - COSINE SIMILARITY] Tính điểm từng món:")
     scored = []
@@ -395,7 +466,7 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
             continue
 
         # 🛡️ LƯỚI LỌC PHÒNG NGỰ: Chuẩn hóa soft_tags của món ăn hiện tại
-        f_tags_normalized = {t.lower().replace(" ", "") for t in food.soft_tags}
+        f_tags_normalized = {_normalize_tag_key(t) for t in canonicalize_soft_tags(food.soft_tags)}
 
         # 🛡️ KIỂM TRA VI PHẠM: Nếu giao nhau với danh sách cấm -> Loại bỏ lập tức
         conflict_tags = f_tags_normalized.intersection(banned_tags_normalized)
@@ -454,7 +525,7 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
         ai_insight=AIInsight(
             exclude=medical_e_tags + final_e_ings,
             include=symptoms, # Trả về list bệnh lý để UI dễ hiển thị Warning
-            prefer=medical_p_tags + final_p_ings,
+            prefer=medical_p_tags + final_p_ings + medical_p_ings,
             warning_message=warning_message
         ),
         results=results_list,

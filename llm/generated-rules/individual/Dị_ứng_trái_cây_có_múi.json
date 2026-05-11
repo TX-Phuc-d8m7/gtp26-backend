@@ -1,0 +1,28 @@
+{
+  "name": "Dị ứng trái cây có múi",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Chua"
+  ],
+  "prefer_soft_tag": [],
+  "exclude_ingredient": [
+    "chanh",
+    "chanh day",
+    "cam",
+    "buoi",
+    "quat",
+    "tac",
+    "la chanh",
+    "nuoc chanh",
+    "nuoc cot chanh",
+    "nuoc ep cam",
+    "nuoc chanh leo",
+    "nuoc cot tac",
+    "chanh ot",
+    "muoi tieu chanh",
+    "la buoi",
+    "la quat",
+    "la cam"
+  ],
+  "prefer_ingredient": []
+}

@@ -17,7 +17,7 @@ async def seed_data():
         # 1. NẠP VÀ CẬP NHẬT DỮ LIỆU LUẬT Y TẾ (TAGS)
         # ==========================================
         print("🏥 Đang kiểm tra và đồng bộ dữ liệu từ tags_data.json...")
-        tags_file_path = "tags_data.json"
+        tags_file_path = "standard-data/tags_data.json"
 
         if not os.path.exists(tags_file_path):
             print(f"⚠️ Không tìm thấy file {tags_file_path}")

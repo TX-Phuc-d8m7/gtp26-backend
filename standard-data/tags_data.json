@@ -216,8 +216,8 @@
     {
         "name": "Tiểu đường",
         "tag_type": "DISEASE",
-        "exclude_soft_tag": [ "Đồ ăn nhanh", "Chiên / Rán", "Ngọt", "Giàu tinh bột"],
-        "prefer_soft_tag": [ "Hấp/Luộc", "Gỏi / Nộm / Trộn", "Cuốn / Gói" ],
+        "exclude_soft_tag": [ "Thức ăn nhanh", "Chiên / Rán", "Ngọt", "Giàu tinh bột"],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Gỏi / Nộm / Trộn", "Cuốn / Gói" ],
         "exclude_ingredient": [
             "đường", "đường trắng", "đường nâu", "đường phèn", "đường mía", 
             "đường cát", "đường tinh luyện", "đường hóa học",
@@ -245,7 +245,7 @@
         "name": "Cao huyết áp",
         "tag_type": "DISEASE",
         "exclude_soft_tag": [ "Chiên / Rán", "Đậm đà", "Béo ngậy", "Ăn vặt" ],
-        "prefer_soft_tag": [ "Hấp/Luộc", "Thanh Đạm", "Cuốn / Gói" ],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh đạm", "Cuốn / Gói" ],
         "exclude_ingredient": [
             "muối", "muối ăn", "nước mắm", "mắm tôm", "mắm ruốc", "mắm nêm",
             "dưa muối", "cà pháo", "kim chi", "thịt xông khói", "xúc xích", "lạp xưởng",
@@ -266,7 +266,7 @@
         "name": "Suy thận",
         "tag_type": "DISEASE",
         "exclude_soft_tag": [ "Mặn", "Giàu đạm", "Nội tạng", "Thức ăn nhanh", "Chiên / Rán", "Xào", "Nướng" ],
-        "prefer_soft_tag": [ "Hấp/Luộc", "Thanh đạm", "Ít béo" ],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh đạm" ],
         "exclude_ingredient": [ 
             "muối", "muối ăn", "nước mắm", "mắm tôm", "mắm ruốc", "mắm nêm", "tương đen", "xì dầu",
             "dưa muối", "cà pháo", "kim chi", "thịt xông khói", "xúc xích", "lạp xưởng",
@@ -287,7 +287,7 @@
         "name": "Trào ngược dạ dày thực quản (GERD)",
         "tag_type": "DISEASE",
         "exclude_soft_tag": [ "Chua", "Cay", "Béo ngậy", "Chiên / Rán", "Thức ăn nhanh" ],
-        "prefer_soft_tag": [ "Thanh đạm", "Hấp/Luộc", "Giàu chất sơ", "Cuốn/Gói", "Ấm bụng", "Mềm" ],
+        "prefer_soft_tag": [ "Thanh đạm", "Hấp / Luộc", "Giàu chất xơ", "Cuốn / Gói", "Ấm bụng", "Mềm" ],
         "exclude_ingredient": [
             "thịt mỡ", "sung", "hồng", "hồng xiêm", "cam", "chanh", "quýt", "bưởi", "tắc", "nước cam", "nước chanh", "nước bưởi", "nước quýt",
             "nước cốt chanh", "muối", "bia", "rượu", "phô mai", "thịt xông khói", "giăm bông",
@@ -303,13 +303,15 @@
     {
         "name": "Viêm loét dạ dày",
         "tag_type": "DISEASE",
-        "exclude_soft_tag": [ "Chiên / Rán", "Xào", "Thức ăn nhanh", "Khó tiêu / Nặng bụng", "Chua", "Cay", "Nội tạng", "Sống / Chín tái", "Rang" ],
-        "prefer_soft_tag": [ "Thanh đạm", "Hấp/Luộc", "Mềm", "Món nước", "Dễ tiêu", "Cháo", "Súp", "Ấm bụng" ],
+        "exclude_soft_tag": [ "Chiên / Rán", "Xào", "Thức ăn nhanh", "Khó tiêu / Nặng bụng", "Chua", "Cay", "Nội tạng", "Sống/Chín tái", "Rang", "Giàu đạm", "Dai / Sần sật"],
+        "prefer_soft_tag": [ "Thanh đạm", "Hấp / Luộc", "Mềm", "Món nước", "Dễ tiêu", "Cháo", "Súp", "Ấm bụng" ],
         "exclude_ingredient": [
             "tôm", "cua", "sụn gà", "chân gà", "cánh gà", "cổ gà", "đầu cá", "ớt", "mù tạt",
-            "bia", "rượu", "cam", "chanh", "quýt", "bưởi", "tắc", "nước cam", "nước chanh", "nước bưởi", "nước quýt",
-            "nước cốt chanh", "giấm", "giá đỗ", "dưa muối", "cần tây", "cà pháo", "kim chi",
-            "măng", "mắm tôm", "mắm ruốc", "mắm nêm"
+            "bia", "rượu", 
+            "cam", "chanh", "tắc", "nước chanh","nước cốt chanh", "giấm", "giá đỗ", "dưa muối", "cần tây", "cà pháo", "kim chi", "măng", "măng chua",
+            "ngải cứu", "lá lốt",
+            "vịt", "thịt vịt", "ngan", "thịt ngan",
+            "mắm tôm", "mắm ruốc", "mắm nêm"
         ], 
         "prefer_ingredient": [
             "cơm", "chuối", "bánh mỳ", "bánh mỳ sandwich", "sữa chua không đường", "gừng",
@@ -358,7 +360,7 @@
         "name": "Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)",
         "tag_type": "SYMPTON",
         "exclude_soft_tag": [ "Món lạnh", "Chiên / Rán", "Chua", "Cay", "Giòn / Giòn rụm", "Rang" ],
-        "prefer_soft_tag": [ "Món nước", "Mềm", "Nóng hổi", "Ấm bụng", "Thanh đạm", "Giải cảm", "Ấm bụng" ],
+        "prefer_soft_tag": [ "Món nước", "Mềm", "Nóng hổi", "Ấm bụng", "Thanh đạm", "Giải cảm" ],
         "exclude_ingredient": [
             "ớt", "tiêu", "mù tạt", "gừng khô", "hạt tiêu",
             "lòng lợn", "tôm", "cua",
@@ -374,11 +376,10 @@
         "name": "Gout",
         "tag_type": "DISEASE",
         "exclude_soft_tag": [ "Hải sản", "Nội tạng", "Mồi nhậu" ],
-        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh mát / Giải nhiệt" ],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh mát/Giải nhiệt" ],
         "exclude_ingredient": [
             "thịt bò", "thịt bê", "thịt cừu", "thịt dê", "thịt trâu", "thịt ngựa", "thịt nai",
-            "gan", "thận", "tim", "óc heo", "tiết canh", "tôm", "cua", "ghẹ", "sò điệp", "hàu", "cá trích", 
-            "cá mòi", "cá ngừ", "nấm", "măng tây", "giá đỗ", "dọc mùng"
+            "gan", "thận", "tim", "óc heo", "tiết canh", "tôm", "cua", "ghẹ", "sò điệp", "hàu", "cá", "nấm", "măng tây", "giá đỗ", "dọc mùng", "nghêu", "sò", "ốc", "hến"
         ], 
         "prefer_ingredient": [
             "gạo", "bánh mì", "khoai tây", "ngũ cốc nguyên hạt", "đậu nành", "đậu phụ",
@@ -388,7 +389,7 @@
     {
         "name": "Tiêu chảy",
         "tag_type": "DISEASE",
-        "exclude_soft_tag": [ "Giàu chất xơ", "Nướng", "Chiên / Rán", "Xào", "Sống / Chín tái"],
+        "exclude_soft_tag": [ "Giàu chất xơ", "Nướng", "Chiên / Rán", "Xào", "Sống/Chín tái"],
         "prefer_soft_tag": [ "Hấp / Luộc", "Hầm / Ninh", "Súp", "Cháo" ],
         "exclude_ingredient": [
             "sữa tươi", "phô mai", "sữa đặc", "mỡ lợn", "thịt xông khói", "xúc xích",
@@ -408,7 +409,7 @@
         "name": "Nhiệt miệng/Loét miệng",
         "tag_type": "SYMPTON",
         "exclude_soft_tag": [ "Mặn", "Cay", "Giòn / Giòn rụm", "Chua", "Chiên / Rán" ],
-        "prefer_soft_tag": [ "Món nước", "Cháo", "Súp", "Thanh mát / Giải nhiệt" ],
+        "prefer_soft_tag": [ "Món nước", "Cháo", "Súp", "Thanh mát/Giải nhiệt" ],
         "exclude_ingredient": [
            "ớt", "tiêu", "tỏi", "gừng", "mù tạt", "cam", "chanh", "bưởi",
            "nước cốt chanh", "muối", "dứa", "thơm", "giấm", "dưa muối", "cà pháo", 
@@ -437,7 +438,7 @@
     {
         "name": "Béo phì",
         "tag_type": "SYMPTON",
-        "exclude_soft_tag": [ "Chiên / Rán", "Nướng", "Xào", "Thức ăn nhanh", "Ăn vặt", "Ăn đêm", "Nội tạng", "Giàu tinh bột" ],
+        "exclude_soft_tag": [ "Chiên / Rán", "Nướng", "Xào", "Thức ăn nhanh", "Ăn vặt", "Ăn khuya", "Nội tạng", "Giàu tinh bột" ],
         "prefer_soft_tag": [ "Giàu chất xơ", "Giàu đạm", "Hấp / Luộc" ],
         "exclude_ingredient": [
            "bánh mì trắng", "cơm", "gạo", "mỡ lợn", "xúc xích", "lạp xưởng",
@@ -457,7 +458,7 @@
         "name": "Gan nhiễm mỡ / Men gan cao",
         "tag_type": "SYMPTON",
         "exclude_soft_tag": [ "Chiên / Rán", "Nướng", "Xào", "Thức ăn nhanh", "Nội tạng", "Mặn", "Giàu tinh bột" ],
-        "prefer_soft_tag": [ "Thanh mát / Giải nhiệt", "Hấp / Luộc" ],
+        "prefer_soft_tag": [ "Thanh mát/Giải nhiệt", "Hấp / Luộc" ],
         "exclude_ingredient": [
            "bánh mì trắng", "cơm", "gạo", "đường", "đường trắng", "mật ong", "sữa đặc",
            "muối", "mì ống", "thịt bò", "thịt nai", "thịt dê", "thịt cừu",
@@ -472,7 +473,7 @@
     {
         "name": "Phụ nữ mang thai",
         "tag_type": "STATUS",
-        "exclude_soft_tag": [ "Sống / Chín tái", "Nội tạng", "Cay", "Mồi nhậu", "Thức ăn nhanh", "Ăn vặt", "Ẩm thực đường phố" ],
+        "exclude_soft_tag": [ "Sống/Chín tái", "Nội tạng", "Cay", "Mồi nhậu", "Thức ăn nhanh", "Ăn vặt", "Ẩm thực đường phố" ],
         "prefer_soft_tag": [ "Giàu đạm", "Giàu vitamin", "Nóng hổi" ],
         "exclude_ingredient": [
            "gan lợn", "gan bò", "giá đỗ", "nem chua", "măng tươi", "dứa", "thơm",
@@ -488,7 +489,7 @@
     {
         "name": "Đang cho con bú",
         "tag_type": "STATUS",
-        "exclude_soft_tag": [ "Sống / Chín tái", "Nội tạng", "Cay", "Mồi nhậu", "Thức ăn nhanh", "Ăn vặt", "Ẩm thực đường phố" ],
+        "exclude_soft_tag": [ "Sống/Chín tái", "Nội tạng", "Cay", "Mồi nhậu", "Thức ăn nhanh", "Ăn vặt", "Ẩm thực đường phố" ],
         "prefer_soft_tag": [ "Giàu đạm", "Nóng hổi", "Món nước", "Súp" ],
         "exclude_ingredient": [
            "lá lốt", "măng chua", "măng tươi", "hành", "tiêu", "tỏi", "ớt"
@@ -500,7 +501,7 @@
     {
         "name": "Vết thương hở / Mới phẫu thuật",
         "tag_type": "STATUS",
-        "exclude_soft_tag": [ "Đậm đà", "Cay", "Chua", "Giòn / Giòn rụm", "Món khô", "Sống / Chín tái", "Chiên / Rán" ],
+        "exclude_soft_tag": [ "Đậm đà", "Cay", "Chua", "Giòn / Giòn rụm", "Món khô", "Sống/Chín tái", "Chiên / Rán" ],
         "prefer_soft_tag": [ "Nóng hổi", "Món nước", "Súp", "Cháo", "Giàu đạm", "Giàu vitamin" ],
         "exclude_ingredient": [
            "tiêu", "ớt", "mù tạt", "đậu phộng", "rau muống",

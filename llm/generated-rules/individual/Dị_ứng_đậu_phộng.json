@@ -1,0 +1,23 @@
+{
+  "name": "Dị ứng đậu phộng",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Gỏi / Nộm / Trộn"
+  ],
+  "prefer_soft_tag": [
+    "Hấp / Luộc",
+    "Xào",
+    "Kho/Rim",
+    "Thanh đạm"
+  ],
+  "exclude_ingredient": [
+    "dau phong",
+    "dau phung",
+    "lac",
+    "dau phong rang",
+    "bo dau phong",
+    "sa te",
+    "mam nem"
+  ],
+  "prefer_ingredient": []
+}

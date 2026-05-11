@@ -1,0 +1,51 @@
+{
+  "name": "Dị ứng động vật thân mềm",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Hải sản"
+  ],
+  "prefer_soft_tag": [
+    "Giàu đạm"
+  ],
+  "exclude_ingredient": [
+    "oc",
+    "so diep",
+    "hau sua",
+    "ngheu",
+    "chip chip",
+    "so long",
+    "so huyet",
+    "oc huong",
+    "bach tuoc",
+    "muc",
+    "muc ong",
+    "muc nang",
+    "muc trung",
+    "rang muc",
+    "oc buou",
+    "oc mong tay",
+    "oc len",
+    "so lua",
+    "vem xanh",
+    "bao ngu",
+    "oc giac",
+    "oc heo",
+    "oc nhay",
+    "oc bulot",
+    "ruot oc buou dong lanh hang viet nam xuat khau",
+    "tu hai",
+    "hen",
+    "so deo",
+    "ngheu hoa",
+    "ngheu trang",
+    "ruot hau",
+    "dau hao"
+  ],
+  "prefer_ingredient": [
+    "thit heo",
+    "thit bo",
+    "ga",
+    "trung",
+    "dau hu"
+  ]
+}

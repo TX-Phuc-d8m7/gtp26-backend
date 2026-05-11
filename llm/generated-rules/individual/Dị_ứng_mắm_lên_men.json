@@ -1,0 +1,40 @@
+{
+  "name": "Dị ứng mắm lên men",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Đậm đà"
+  ],
+  "prefer_soft_tag": [
+    "Thanh đạm",
+    "Món chay",
+    "Healthy / Eat Clean",
+    "Dễ tiêu"
+  ],
+  "exclude_ingredient": [
+    "mam",
+    "nuoc mam",
+    "mam tom",
+    "mam ruoc",
+    "mam nem",
+    "mam tep",
+    "mam co linh lang",
+    "mam ngon",
+    "nuoc mam chua ngot",
+    "nuoc mam toi ot",
+    "nuoc mam hat nem",
+    "nuoc mam keo",
+    "nuoc mam loang",
+    "nuoc mam phu quoc",
+    "nuoc mam tom",
+    "dau hao",
+    "dau hao chay",
+    "nuoc mam chay"
+  ],
+  "prefer_ingredient": [
+    "muoi",
+    "nuoc tuong",
+    "xi dau",
+    "hat nem chay",
+    "hat nem nam"
+  ]
+}

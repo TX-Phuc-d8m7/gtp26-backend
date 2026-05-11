@@ -1,0 +1,598 @@
+# Patch preview for tags_data.json
+
+Danh sách dưới đây chỉ là đề xuất. Script KHÔNG ghi đè tags_data.json.
+
+## Tiểu đường
+- matched_exclude_soft_tags: ['Chiên / Rán', 'Giàu tinh bột', 'Ngọt', 'Thức ăn nhanh']
+- add 101 ingredients:
+  - banh gio cheo quay an cung
+  - banh lady finger
+  - banh pho cat soi nho vua
+  - bo nhat
+  - bo vien
+  - bot bang
+  - bot banh ran
+  - bot cacao
+  - bot gion
+  - bot khoai tay
+  - bot nep
+  - bot nghe
+  - bot no
+  - bot noi
+  - bot pho mai
+  - bot rau cau
+  - bot su tu
+  - bot tra xanh
+  - bot xu
+  - ca phe den
+  - cacao
+  - cha lua
+  - chocolate den
+  - chuoi
+  - cot dua
+  - cream cheese
+  - cua
+  - da bao
+  - da u an
+  - da vien
+  - ... (+71 more)
+
+## Cao huyết áp
+- matched_exclude_soft_tags: ['Béo ngậy', 'Chiên / Rán', 'Ăn vặt', 'Đậm đà']
+- add 194 ingredients:
+  - bach tuoc
+  - baking powder
+  - baking soda
+  - banh lady finger
+  - banh mi
+  - banh trang cuon
+  - bap
+  - bap cai tim
+  - bi do
+  - bi ngoi
+  - bo
+  - bo kho
+  - bo lat
+  - bo man
+  - bo nhat
+  - bo thuc vat
+  - bo tuong an
+  - bong cai trang
+  - bong cai xanh
+  - bot bang
+  - bot cacao
+  - bot gion
+  - bot gung
+  - bot hanh
+  - bot mi
+  - bot nem
+  - bot noi
+  - bot pho mai
+  - bot rau cau
+  - bot su tu
+  - ... (+164 more)
+
+## Suy thận
+- matched_exclude_soft_tags: ['Chiên / Rán', 'Giàu đạm', 'Mặn', 'Nướng', 'Nội tạng', 'Thức ăn nhanh', 'Xào']
+- add 139 ingredients:
+  - banh canh
+  - banh canh bot gao
+  - banh gio cheo quay an cung
+  - banh pho
+  - banh pho cat soi nho vua
+  - banh trang cuon
+  - bap bo
+  - bap cai tim
+  - bap chuoi
+  - be be
+  - bo man
+  - bo tuong an
+  - bo vien
+  - bong cai trang
+  - bot gion
+  - bot khoai tay
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca dieu hong
+  - ca duoi
+  - ca hoi
+  - ca ngu
+  - ca thu
+  - cai muoi
+  - cai thao
+  - cha bong
+  - cha ca
+  - cha ca nha trang
+  - ... (+109 more)
+
+## Trào ngược dạ dày thực quản (GERD)
+- matched_exclude_soft_tags: ['Béo ngậy', 'Cay', 'Chiên / Rán', 'Chua', 'Thức ăn nhanh']
+- add 194 ingredients:
+  - baking powder
+  - baking soda
+  - banh lady finger
+  - banh mi
+  - banh trang cuon
+  - bap
+  - bap cai tim
+  - bi do
+  - bo kho
+  - bo lat
+  - bo man
+  - bo nhat
+  - bo thuc vat
+  - bo tuong an
+  - bong cai xanh
+  - bot bang
+  - bot cacao
+  - bot gion
+  - bot gung
+  - bot hanh
+  - bot mi
+  - bot ot
+  - bot pho mai
+  - bot rau cau
+  - bot su tu
+  - bot toi
+  - bot tra xanh
+  - bot xu
+  - ca chia voi
+  - ca chua bi
+  - ... (+164 more)
+
+## Viêm loét dạ dày
+- matched_exclude_soft_tags: ['Cay', 'Chiên / Rán', 'Chua', 'Dai / Sần sật', 'Giàu đạm', 'Khó tiêu / Nặng bụng', 'Nội tạng', 'Rang', 'Sống/Chín tái', 'Thức ăn nhanh', 'Xào']
+- add 123 ingredients:
+  - bach tuoc
+  - banh trang cuon
+  - bap cai tim
+  - bo kho
+  - bo thuc vat
+  - bo tuong an
+  - bong cai trang
+  - bot gion
+  - bot ot
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca chua bi
+  - ca dieu hong
+  - ca duoi
+  - ca hoi
+  - ca ngu
+  - ca trich
+  - cai thao
+  - chanh day
+  - chuoi chat
+  - cot me
+  - cua dong
+  - dam
+  - dam toi
+  - dau me
+  - dua de lay nuoc
+  - dua nao
+  - duong cat
+  - ... (+93 more)
+
+## Tim mạch
+- matched_exclude_soft_tags: ['Chiên / Rán', 'Mặn', 'Nướng']
+- add 108 ingredients:
+  - banh canh
+  - banh canh bot gao
+  - banh gio cheo quay an cung
+  - banh pho
+  - banh pho cat soi nho vua
+  - banh trang cuon
+  - bap bo
+  - bap chuoi
+  - be be
+  - bo man
+  - bo vien
+  - bot gion
+  - bot khoai tay
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca duoi
+  - ca thu
+  - cai muoi
+  - cha bong
+  - cha ca
+  - cha ca nha trang
+  - cha trung
+  - chocolate den
+  - chuoi chat
+  - com trang
+  - cot me
+  - cream cheese
+  - cua thit
+  - ... (+78 more)
+
+## Táo bón
+- matched_exclude_soft_tags: ['Chiên / Rán', 'Món khô', 'Mặn']
+- add 122 ingredients:
+  - banh canh
+  - banh canh bot gao
+  - banh gio cheo quay an cung
+  - banh mi
+  - banh pho
+  - banh pho cat soi nho vua
+  - bap bo
+  - bap chuoi
+  - be be
+  - bo man
+  - bo vien
+  - bot gion
+  - bot khoai tay
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chua bi
+  - ca dieu hong
+  - ca hoi
+  - ca ngu
+  - ca thu
+  - cai muoi
+  - cai thao
+  - cai xoi
+  - cha bong
+  - cha ca
+  - cha ca nha trang
+  - cha lua
+  - chocolate den
+  - chuoi chat
+  - ... (+92 more)
+
+## Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)
+- matched_exclude_soft_tags: ['Cay', 'Chiên / Rán', 'Chua', 'Giòn / Giòn rụm', 'Món lạnh', 'Rang']
+- add 109 ingredients:
+  - banh mi
+  - banh trang cuon
+  - bo kho
+  - bo thuc vat
+  - bot gion
+  - bot ot
+  - bot pho mai
+  - bot rau cau
+  - bot su tu
+  - bot tra xanh
+  - bot xu
+  - ca chia voi
+  - ca chua bi
+  - ca dieu hong
+  - ca duoi
+  - ca trich
+  - cai thao
+  - chanh day
+  - chuoi chat
+  - cot me
+  - cu hanh
+  - cua dong
+  - da vien
+  - dam
+  - dam toi
+  - dau me
+  - dua de lay nuoc
+  - dua nao
+  - duong cat
+  - gia vi lau thai
+  - ... (+79 more)
+
+## Gout
+- matched_exclude_soft_tags: ['Hải sản', 'Mồi nhậu', 'Nội tạng']
+- add 42 ingredients:
+  - banh trang cuon
+  - bap cai tim
+  - bia
+  - ca chia voi
+  - ca duoi
+  - ca hoi
+  - cot me
+  - dau me
+  - duong cat
+  - gan bo
+  - gan heo
+  - ha nh tim
+  - hanh tim
+  - hanh tim phi vang
+  - la buoi
+  - la chanh
+  - la quat
+  - lac
+  - long do trung
+  - long do trung ga
+  - long nhan
+  - long trang trung
+  - mam me
+  - me
+  - me rang
+  - muoi ot
+  - muoi ot xanh
+  - nuoc cham
+  - nuoc cot me
+  - nuoc mo
+  - ... (+12 more)
+
+## Tiêu chảy
+- matched_exclude_soft_tags: ['Chiên / Rán', 'Giàu chất xơ', 'Nướng', 'Sống/Chín tái', 'Xào']
+- add 48 ingredients:
+  - banh trang cuon
+  - bo man
+  - bo tuong an
+  - bong cai trang
+  - bot gion
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca chua bi
+  - ca duoi
+  - cai thao
+  - cha trung
+  - chao
+  - chocolate den
+  - com trang
+  - cream cheese
+  - dau bap
+  - dau co ve
+  - dau tay
+  - gao tam
+  - hanh ba ro
+  - hanh cu
+  - kinh gioi
+  - la buoi
+  - la quat
+  - lac
+  - long do trung ga
+  - mam co linh lang
+  - mang tay
+  - ... (+18 more)
+
+## Nhiệt miệng/Loét miệng
+- matched_exclude_soft_tags: ['Cay', 'Chiên / Rán', 'Chua', 'Giòn / Giòn rụm', 'Mặn']
+- add 162 ingredients:
+  - banh canh
+  - banh canh bot gao
+  - banh gio cheo quay an cung
+  - banh mi
+  - banh pho
+  - banh pho cat soi nho vua
+  - banh trang cuon
+  - bap bo
+  - bap chuoi
+  - be be
+  - bo kho
+  - bo thuc vat
+  - bo vien
+  - bot gion
+  - bot khoai tay
+  - bot ot
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca chua bi
+  - ca dieu hong
+  - ca duoi
+  - ca thu
+  - ca trich
+  - cai muoi
+  - cai thao
+  - cha bong
+  - cha ca
+  - cha ca nha trang
+  - ... (+132 more)
+
+## Đầy bụng / Khó tiêu
+- matched_exclude_soft_tags: ['Cay', 'Chiên / Rán', 'Chua']
+- add 102 ingredients:
+  - banh trang cuon
+  - bo kho
+  - bo thuc vat
+  - bot gion
+  - bot ot
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca chua bi
+  - ca dieu hong
+  - ca duoi
+  - ca trich
+  - cai thao
+  - chanh
+  - chanh day
+  - chuoi chat
+  - cot me
+  - cua
+  - cua dong
+  - dam
+  - dam toi
+  - dau me
+  - dua de lay nuoc
+  - dua nao
+  - duong cat
+  - gia vi lau thai
+  - giam
+  - giam an
+  - giam gao
+  - ... (+72 more)
+
+## Béo phì
+- matched_exclude_soft_tags: ['Chiên / Rán', 'Giàu tinh bột', 'Nướng', 'Nội tạng', 'Thức ăn nhanh', 'Xào', 'Ăn khuya', 'Ăn vặt']
+- add 91 ingredients:
+  - banh gio cheo quay an cung
+  - banh pho cat soi nho vua
+  - banh trang cuon
+  - bap cai tim
+  - bo kho
+  - bo man
+  - bo nhat
+  - bo tuong an
+  - bo vien
+  - bot gion
+  - bot noi
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca duoi
+  - cacao
+  - cai thao
+  - cha trung
+  - chocolate den
+  - com trang
+  - cot dua
+  - cot me
+  - cream cheese
+  - dau me
+  - dau tay
+  - dinh huong
+  - dua chuot
+  - gan bo
+  - gan heo
+  - ... (+61 more)
+
+## Gan nhiễm mỡ / Men gan cao
+- matched_exclude_soft_tags: ['Chiên / Rán', 'Giàu tinh bột', 'Mặn', 'Nướng', 'Nội tạng', 'Thức ăn nhanh', 'Xào']
+- add 132 ingredients:
+  - banh canh
+  - banh canh bot gao
+  - banh gio cheo quay an cung
+  - banh pho
+  - banh pho cat soi nho vua
+  - banh trang cuon
+  - bap bo
+  - bap cai tim
+  - bap chuoi
+  - be be
+  - bo man
+  - bo tuong an
+  - bo vien
+  - bot gion
+  - bot khoai tay
+  - bot pho mai
+  - bot su tu
+  - bot xu
+  - ca chia voi
+  - ca duoi
+  - ca thu
+  - cai muoi
+  - cai thao
+  - cha bong
+  - cha ca
+  - cha ca nha trang
+  - cha trung
+  - chocolate den
+  - chuoi chat
+  - com trang
+  - ... (+102 more)
+
+## Phụ nữ mang thai
+- matched_exclude_soft_tags: ['Cay', 'Mồi nhậu', 'Nội tạng', 'Sống/Chín tái', 'Thức ăn nhanh', 'Ăn vặt', 'Ẩm thực đường phố']
+- add 102 ingredients:
+  - banh trang cuon
+  - bap cai tim
+  - bia
+  - bo kho
+  - bo nhat
+  - bo thuc vat
+  - bot noi
+  - bot ot
+  - bot pho mai
+  - ca chia voi
+  - ca duoi
+  - ca trich
+  - cacao
+  - cai thao
+  - cot dua
+  - cot me
+  - cua
+  - dam toi
+  - dau me
+  - dua chuot
+  - dua de lay nuoc
+  - dua nao
+  - duong cat
+  - gan heo
+  - gia vi lau thai
+  - giam gao
+  - gio heo
+  - ha nh tim
+  - hanh cu
+  - hanh tim
+  - ... (+72 more)
+
+## Đang cho con bú
+- matched_exclude_soft_tags: ['Cay', 'Mồi nhậu', 'Nội tạng', 'Sống/Chín tái', 'Thức ăn nhanh', 'Ăn vặt', 'Ẩm thực đường phố']
+- add 101 ingredients:
+  - banh trang cuon
+  - bap cai tim
+  - bia
+  - bo kho
+  - bo nhat
+  - bo thuc vat
+  - bot noi
+  - bot ot
+  - bot pho mai
+  - ca chia voi
+  - ca duoi
+  - ca trich
+  - cacao
+  - cai thao
+  - cot dua
+  - cot me
+  - cua
+  - dam toi
+  - dau me
+  - dua chuot
+  - dua de lay nuoc
+  - dua nao
+  - duong cat
+  - gan bo
+  - gan heo
+  - gia vi lau thai
+  - giam gao
+  - gio heo
+  - ha nh tim
+  - hanh cu
+  - ... (+71 more)
+
+## Vết thương hở / Mới phẫu thuật
+- matched_exclude_soft_tags: ['Cay', 'Chiên / Rán', 'Chua', 'Giòn / Giòn rụm', 'Món khô', 'Sống/Chín tái', 'Đậm đà']
+- add 200 ingredients:
+  - bach tuoc
+  - banh mi
+  - banh trang cuon
+  - bi ngoi
+  - bo kho
+  - bo man
+  - bo thuc vat
+  - bo tuong an
+  - bong cai trang
+  - bot gion
+  - bot gung
+  - bot hanh
+  - bot nem
+  - bot ot
+  - bot pho mai
+  - bot su tu
+  - bot toi
+  - bot xu
+  - ca bop
+  - ca chia voi
+  - ca chua bi
+  - ca dieu hong
+  - ca duoi
+  - ca hoi
+  - ca ngu
+  - ca trich
+  - cai thao
+  - cai xoi
+  - carrot
+  - cha chay
+  - ... (+170 more)

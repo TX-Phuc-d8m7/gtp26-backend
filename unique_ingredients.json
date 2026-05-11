@@ -1,0 +1,9866 @@
+[
+  {
+    "ingredient": "duong",
+    "count_in_foods": 225,
+    "sample_foods": [
+      "Bánh bò thốt nốt",
+      "Bánh bông lan trứng muối",
+      "Kem ống",
+      "Bánh chuối hấp cốt dừa",
+      "Bún mắm nêm"
+    ]
+  },
+  {
+    "ingredient": "muoi",
+    "count_in_foods": 171,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Bánh đậu xanh trái cây",
+      "Phở bò gầu",
+      "Bánh bò thốt nốt",
+      "Bánh bông lan trứng muối"
+    ]
+  },
+  {
+    "ingredient": "tieu",
+    "count_in_foods": 165,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Cá nục hấp cuốn bánh tráng",
+      "Bánh bò nướng",
+      "Cơm tấm ba rọi nướng",
+      "Bò xào cần tỏi"
+    ]
+  },
+  {
+    "ingredient": "dau an",
+    "count_in_foods": 159,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Phở bò gầu",
+      "Bánh bò thốt nốt",
+      "Bánh bông lan trứng muối",
+      "Bánh bò nướng"
+    ]
+  },
+  {
+    "ingredient": "toi",
+    "count_in_foods": 152,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Bún mắm nêm",
+      "Cá chìa vôi nướng muối ớt",
+      "Cá nục hấp cuốn bánh tráng",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "hanh la",
+    "count_in_foods": 125,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Cá nục hấp cuốn bánh tráng",
+      "Cá đuối nướng sả nghệ",
+      "Cơm chiên hải sản"
+    ]
+  },
+  {
+    "ingredient": "nuoc",
+    "count_in_foods": 125,
+    "sample_foods": [
+      "Bánh đậu xanh trái cây",
+      "Bánh bò thốt nốt",
+      "Bánh chuối hấp cốt dừa",
+      "Bánh bò nướng",
+      "Bánh tráng cuốn sốt bơ"
+    ]
+  },
+  {
+    "ingredient": "hat nem",
+    "count_in_foods": 112,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Bún hải sản",
+      "Cá chìa vôi nướng muối ớt",
+      "Cá nục hấp cuốn bánh tráng"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam",
+    "count_in_foods": 108,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Bún hải sản",
+      "Cá nục hấp cuốn bánh tráng",
+      "Cá đuối nướng sả nghệ",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "ot",
+    "count_in_foods": 108,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bún mắm nêm",
+      "Cá chìa vôi nướng muối ớt",
+      "Cá nục hấp cuốn bánh tráng",
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "hanh tim",
+    "count_in_foods": 89,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Gỏi cá trích",
+      "Bánh bò nướng",
+      "Bún chả Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "nuoc tuong",
+    "count_in_foods": 71,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ",
+      "Bò xào cần tỏi",
+      "Cơm chiên hải sản",
+      "Sườn xào chua ngọt",
+      "Mì vịt tiềm"
+    ]
+  },
+  {
+    "ingredient": "hanh tay",
+    "count_in_foods": 70,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Phở bò gầu",
+      "Phở gà",
+      "Bò xào cần tỏi",
+      "Mực xào dứa"
+    ]
+  },
+  {
+    "ingredient": "bot ngot",
+    "count_in_foods": 64,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Bún mắm nêm",
+      "Canh chua cá đuối",
+      "Phở bò nạm"
+    ]
+  },
+  {
+    "ingredient": "ca rot",
+    "count_in_foods": 59,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ",
+      "Cơm chiên hải sản",
+      "Mực xào dứa",
+      "Mì vịt tiềm",
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "dau hao",
+    "count_in_foods": 57,
+    "sample_foods": [
+      "Bánh bò nướng",
+      "Bò xào cần tỏi",
+      "Sườn xào chua ngọt",
+      "Mì Ramen nước tương",
+      "Đậu hũ Tứ Xuyên"
+    ]
+  },
+  {
+    "ingredient": "bot nang",
+    "count_in_foods": 51,
+    "sample_foods": [
+      "Bánh bò thốt nốt",
+      "Kem ống",
+      "Bánh chuối hấp cốt dừa",
+      "Bò xào cần tỏi",
+      "Đậu hũ Tứ Xuyên"
+    ]
+  },
+  {
+    "ingredient": "tuong ot",
+    "count_in_foods": 51,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Bò xào cần tỏi",
+      "Sườn xào chua ngọt",
+      "Thịt nướng BBQ Hàn Quốc",
+      "Đậu hũ Tứ Xuyên"
+    ]
+  },
+  {
+    "ingredient": "trung ga",
+    "count_in_foods": 47,
+    "sample_foods": [
+      "Cơm chiên hải sản",
+      "Cơm cà ri Nhật Bản",
+      "Bánh gối nhân thịt trứng cút",
+      "Khổ qua xào trứng",
+      "Bò bía mặn"
+    ]
+  },
+  {
+    "ingredient": "chanh",
+    "count_in_foods": 44,
+    "sample_foods": [
+      "Bún mắm nêm",
+      "Cá chìa vôi nướng muối ớt",
+      "Cá nục hấp cuốn bánh tráng",
+      "Cá đuối nướng sả nghệ",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "gung",
+    "count_in_foods": 42,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Đậu hũ Tứ Xuyên",
+      "Chân gà hấp xì dầu",
+      "Phở bò nạm",
+      "Bánh flan caramel"
+    ]
+  },
+  {
+    "ingredient": "sa",
+    "count_in_foods": 42,
+    "sample_foods": [
+      "Bún hải sản",
+      "Cá chìa vôi nướng muối ớt",
+      "Cá đuối nướng sả nghệ",
+      "Bánh bò nướng",
+      "Bún chả Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "nuoc loc",
+    "count_in_foods": 38,
+    "sample_foods": [
+      "Kem ống",
+      "Cá nục hấp cuốn bánh tráng",
+      "Bò xào cần tỏi",
+      "Bún chả Hà Nội",
+      "Bánh mì bột lọc"
+    ]
+  },
+  {
+    "ingredient": "tom",
+    "count_in_foods": 37,
+    "sample_foods": [
+      "Bún hải sản",
+      "Cơm chiên hải sản",
+      "Bún chả tôm",
+      "Nem nướng Nha Trang",
+      "Bánh xèo Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "ca chua",
+    "count_in_foods": 36,
+    "sample_foods": [
+      "Bún hải sản",
+      "Canh chua cá đuối",
+      "Bún chả cá",
+      "Bún cá ngừ",
+      "Bún riêu ốc"
+    ]
+  },
+  {
+    "ingredient": "bo",
+    "count_in_foods": 35,
+    "sample_foods": [
+      "Kem ống",
+      "Bánh bò nướng",
+      "Hồ lô nướng",
+      "Tôm đất xóc tỏi",
+      "Mì Ý sốt bò băm"
+    ]
+  },
+  {
+    "ingredient": "dau me",
+    "count_in_foods": 33,
+    "sample_foods": [
+      "Bánh bò nướng",
+      "Thịt nướng BBQ Hàn Quốc",
+      "Chân gà hấp xì dầu",
+      "Bánh bao trứng muối",
+      "Vịt quay Bắc Kinh"
+    ]
+  },
+  {
+    "ingredient": "hanh phi",
+    "count_in_foods": 33,
+    "sample_foods": [
+      "Cá đuối nướng sả nghệ",
+      "Gỏi cá trích",
+      "Bánh tráng bơ Tây Ninh",
+      "Hủ tiếu Nam Vang",
+      "Bún thịt nướng"
+    ]
+  },
+  {
+    "ingredient": "gia vi",
+    "count_in_foods": 32,
+    "sample_foods": [
+      "Sườn xào chua ngọt",
+      "Mì vịt tiềm",
+      "Ốc hút cốt dừa",
+      "Lẩu gà lá é",
+      "Gỏi xoài cá trê chiên xù"
+    ]
+  },
+  {
+    "ingredient": "rau ram",
+    "count_in_foods": 31,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Bánh tráng bơ Tây Ninh",
+      "Bún bò Huế",
+      "Bún măng vịt"
+    ]
+  },
+  {
+    "ingredient": "bot nem",
+    "count_in_foods": 30,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Bánh bò nướng",
+      "Cơm tấm ba rọi nướng",
+      "Ốc đinh xào sả ớt",
+      "Bánh tráng kẹp hành"
+    ]
+  },
+  {
+    "ingredient": "hanh",
+    "count_in_foods": 29,
+    "sample_foods": [
+      "Đậu hũ Tứ Xuyên",
+      "Bún chả tôm",
+      "Mì vằn thắn xá xíu",
+      "Bún thịt nướng",
+      "Miến trộn Thái Lan"
+    ]
+  },
+  {
+    "ingredient": "banh trang",
+    "count_in_foods": 27,
+    "sample_foods": [
+      "Cá đuối nướng sả nghệ",
+      "Gỏi cá trích",
+      "Mì Quảng Cá lóc",
+      "Bánh tráng kẹp hành",
+      "Bánh tráng bơ Tây Ninh"
+    ]
+  },
+  {
+    "ingredient": "bot mi",
+    "count_in_foods": 27,
+    "sample_foods": [
+      "Bánh gối nhân thịt trứng cút",
+      "Bánh bao trứng muối",
+      "Bánh xèo Nhật Bản",
+      "Pizza Bò băm",
+      "Bánh sừng bò"
+    ]
+  },
+  {
+    "ingredient": "bun",
+    "count_in_foods": 26,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bún mắm nêm",
+      "Cá đuối nướng sả nghệ",
+      "Bún chả cá",
+      "Bún cá ngừ"
+    ]
+  },
+  {
+    "ingredient": "dau phong",
+    "count_in_foods": 26,
+    "sample_foods": [
+      "Kem ống",
+      "Bánh chuối hấp cốt dừa",
+      "Cá đuối nướng sả nghệ",
+      "Gỏi cá trích",
+      "Bánh tráng cuốn sốt bơ"
+    ]
+  },
+  {
+    "ingredient": "rau",
+    "count_in_foods": 26,
+    "sample_foods": [
+      "Cá chìa vôi nướng muối ớt",
+      "Cá nục hấp cuốn bánh tráng",
+      "Cá đuối nướng sả nghệ",
+      "Gỏi cá trích",
+      "Mì Ramen nước tương"
+    ]
+  },
+  {
+    "ingredient": "ngo ri",
+    "count_in_foods": 25,
+    "sample_foods": [
+      "Phở gà",
+      "Mì Quảng Tôm Thịt",
+      "Bánh mì bột lọc",
+      "Bún chả cá",
+      "Bánh bao trứng muối"
+    ]
+  },
+  {
+    "ingredient": "dua leo",
+    "count_in_foods": 24,
+    "sample_foods": [
+      "Bún mắm nêm",
+      "Cá nục hấp cuốn bánh tráng",
+      "Cơm chiên hải sản",
+      "Phở gà trộn",
+      "Salad Hy Lạp"
+    ]
+  },
+  {
+    "ingredient": "sua",
+    "count_in_foods": 24,
+    "sample_foods": [
+      "Kem ống",
+      "Bánh chuối hấp cốt dừa",
+      "Bánh sừng bò",
+      "Bánh mì nướng kiểu Pháp",
+      "Bánh Mousse socola"
+    ]
+  },
+  {
+    "ingredient": "dau",
+    "count_in_foods": 22,
+    "sample_foods": [
+      "Cá chìa vôi nướng muối ớt",
+      "Cá đuối nướng sả nghệ",
+      "Cơm cà ri Nhật Bản",
+      "Bún chả tôm",
+      "Ốc hút cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "trung",
+    "count_in_foods": 22,
+    "sample_foods": [
+      "Bún chả tôm",
+      "Bún riêu ốc",
+      "Lạp Thái",
+      "Phở cuốn Hà Nội",
+      "Bánh sừng bò"
+    ]
+  },
+  {
+    "ingredient": "xa lach",
+    "count_in_foods": 22,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ",
+      "Hủ tiếu Nam Vang",
+      "Bò bía mặn",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Bún thịt nướng"
+    ]
+  },
+  {
+    "ingredient": "thit",
+    "count_in_foods": 21,
+    "sample_foods": [
+      "Mì vằn thắn xá xíu",
+      "Miến trộn Thái Lan",
+      "Pizza Phô mai",
+      "Hủ tiếu mực",
+      "Pasta sốt hải sản cay"
+    ]
+  },
+  {
+    "ingredient": "thit bo",
+    "count_in_foods": 21,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Bánh bò nướng",
+      "Bò xào cần tỏi",
+      "Phở bò nạm",
+      "Cơm trộn Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "bot bap",
+    "count_in_foods": 20,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Cơm cà ri Nhật Bản",
+      "Phở bò nạm",
+      "Phở xào mềm",
+      "Bánh canh tôm thịt"
+    ]
+  },
+  {
+    "ingredient": "gia",
+    "count_in_foods": 20,
+    "sample_foods": [
+      "Mực xào dứa",
+      "Mì Quảng Chay",
+      "Hủ tiếu Nam Vang",
+      "Phở xào mềm",
+      "Phở bắp bò"
+    ]
+  },
+  {
+    "ingredient": "rau thom",
+    "count_in_foods": 20,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Tôm sú hấp bia",
+      "Phở bò trộn",
+      "Bún chay nước lèo"
+    ]
+  },
+  {
+    "ingredient": "duong phen",
+    "count_in_foods": 19,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Bún hải sản",
+      "Phở bò nạm",
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "hanh kho",
+    "count_in_foods": 19,
+    "sample_foods": [
+      "Bún bề bề",
+      "Sò điệp nướng mỡ hành",
+      "Miến lươn nước",
+      "Miến lươn trộn",
+      "Miến xào hải sản"
+    ]
+  },
+  {
+    "ingredient": "mam",
+    "count_in_foods": 19,
+    "sample_foods": [
+      "Canh chua cá đuối",
+      "Ốc hút cốt dừa",
+      "Miến trộn Thái Lan",
+      "Bánh canh chả cua",
+      "Mít non trộn tôm thịt"
+    ]
+  },
+  {
+    "ingredient": "me",
+    "count_in_foods": 19,
+    "sample_foods": [
+      "Cơm tấm ba rọi nướng",
+      "Canh chua cá đuối",
+      "Trứng cút nướng chén phô mai",
+      "Bún riêu ốc",
+      "Cua rang me"
+    ]
+  },
+  {
+    "ingredient": "mat ong",
+    "count_in_foods": 17,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Bún chả tôm",
+      "Nem nướng Nha Trang",
+      "Vịt quay Bắc Kinh",
+      "Gà xào bắp cải phô mai Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "nuoc cot dua",
+    "count_in_foods": 17,
+    "sample_foods": [
+      "Bánh đậu xanh trái cây",
+      "Bánh bò thốt nốt",
+      "Kem ống",
+      "Gỏi cá trích",
+      "Ốc hút cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "sua dac",
+    "count_in_foods": 17,
+    "sample_foods": [
+      "Kem ống",
+      "Bánh mì nướng kiểu Pháp",
+      "Khoai tây chiên",
+      "Gà rán sốt cay",
+      "Bánh khoai mỡ chiên"
+    ]
+  },
+  {
+    "ingredient": "bot canh",
+    "count_in_foods": 16,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Vịt quay Bắc Kinh",
+      "Mì vằn thắn xá xíu"
+    ]
+  },
+  {
+    "ingredient": "bot gion",
+    "count_in_foods": 16,
+    "sample_foods": [
+      "Sườn xào chua ngọt",
+      "Khoai tây lốc xoáy",
+      "Miến lươn nước",
+      "Miến lươn trộn",
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "bot nghe",
+    "count_in_foods": 16,
+    "sample_foods": [
+      "Bánh bò thốt nốt",
+      "Bánh chuối hấp cốt dừa",
+      "Bún cá rô đồng",
+      "Lẩu gà lá é",
+      "Phở gà trộn"
+    ]
+  },
+  {
+    "ingredient": "dau hu",
+    "count_in_foods": 16,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang",
+      "Súp rong biển đậu hũ Nhật",
+      "Mì Ý sốt Pesto",
+      "Bún chay nước lèo",
+      "Đậu hũ chiên sả ớt"
+    ]
+  },
+  {
+    "ingredient": "nam dui ga",
+    "count_in_foods": 16,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Đậu hũ Tứ Xuyên",
+      "Hủ tiếu Nam Vang",
+      "Bò cuộn phô mai nướng",
+      "Mì ramen"
+    ]
+  },
+  {
+    "ingredient": "nam huong",
+    "count_in_foods": 16,
+    "sample_foods": [
+      "Mì vịt tiềm",
+      "Đậu hũ Tứ Xuyên",
+      "Bánh gối nhân thịt trứng cút",
+      "Hủ tiếu Nam Vang",
+      "Bún chả tôm"
+    ]
+  },
+  {
+    "ingredient": "thit heo",
+    "count_in_foods": 16,
+    "sample_foods": [
+      "Canh rau ngót nấu thịt băm",
+      "Bánh gối nhân thịt trứng cút",
+      "Nem nướng Nha Trang",
+      "Mì vằn thắn xá xíu",
+      "Bún thịt nướng"
+    ]
+  },
+  {
+    "ingredient": "hat nem chay",
+    "count_in_foods": 15,
+    "sample_foods": [
+      "Mì udon",
+      "Mì Quảng chay",
+      "Lẩu nấm chay",
+      "Đậu hũ chiên sả ớt",
+      "Chả giò chay (Ram chay)"
+    ]
+  },
+  {
+    "ingredient": "muc",
+    "count_in_foods": 15,
+    "sample_foods": [
+      "Bún hải sản",
+      "Cơm chiên hải sản",
+      "Bún Thái",
+      "Miến trộn Thái Lan",
+      "Hủ tiếu mực"
+    ]
+  },
+  {
+    "ingredient": "nam meo",
+    "count_in_foods": 15,
+    "sample_foods": [
+      "Bánh bao trứng muối",
+      "Mì hoành thánh",
+      "Gỏi mít non chay",
+      "Bánh nậm chay",
+      "Ram cuốn cải"
+    ]
+  },
+  {
+    "ingredient": "trung cut",
+    "count_in_foods": 15,
+    "sample_foods": [
+      "Trứng cút nướng chén phô mai",
+      "Bánh tráng bơ Tây Ninh",
+      "Bánh gối nhân thịt trứng cút",
+      "Hủ tiếu mực",
+      "Bánh canh ruộng"
+    ]
+  },
+  {
+    "ingredient": "banh mi",
+    "count_in_foods": 14,
+    "sample_foods": [
+      "Bánh bò nướng",
+      "Bánh mì bột lọc",
+      "Pizza Phô mai",
+      "Sườn cừu nướng thảo mộc",
+      "Bánh mì bơ tỏi nướng giòn"
+    ]
+  },
+  {
+    "ingredient": "com",
+    "count_in_foods": 14,
+    "sample_foods": [
+      "Cơm chiên hải sản",
+      "Cơm nắm cá ngừ mayo",
+      "Cơm chiên kim chi bò Mỹ",
+      "Poke Bowl cá hồi (Healthy)",
+      "Cơm chiên lá é chay"
+    ]
+  },
+  {
+    "ingredient": "dua",
+    "count_in_foods": 14,
+    "sample_foods": [
+      "Bún hải sản",
+      "Mực xào dứa",
+      "Mì vịt tiềm",
+      "Bún Thái",
+      "Pizza Bò băm"
+    ]
+  },
+  {
+    "ingredient": "ngo",
+    "count_in_foods": 14,
+    "sample_foods": [
+      "Canh chua cá đuối",
+      "Ốc hút cốt dừa",
+      "Bún bò Huế",
+      "Phở tái lăn",
+      "Phở khô Gia Lai"
+    ]
+  },
+  {
+    "ingredient": "thom",
+    "count_in_foods": 14,
+    "sample_foods": [
+      "Canh chua cá đuối",
+      "Bún chả cá",
+      "Bún cá ngừ",
+      "Canh chua nấm chay",
+      "Bún chả cá chay"
+    ]
+  },
+  {
+    "ingredient": "tuong ca",
+    "count_in_foods": 14,
+    "sample_foods": [
+      "Bò xào cần tỏi",
+      "Ốc hút cốt dừa",
+      "Pizza Xúc xích Ý",
+      "Mì Ý hải sản sốt cà chua",
+      "Bò cuộn phô mai nướng"
+    ]
+  },
+  {
+    "ingredient": "bot gao",
+    "count_in_foods": 13,
+    "sample_foods": [
+      "Bánh bò thốt nốt",
+      "Bánh canh ghẹ",
+      "Bánh nậm chay",
+      "Bánh nậm",
+      "Bánh gói"
+    ]
+  },
+  {
+    "ingredient": "cai trang",
+    "count_in_foods": 13,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Hủ tiếu Nam Vang",
+      "Bún riêu ốc",
+      "Hủ tiếu mực"
+    ]
+  },
+  {
+    "ingredient": "dau dieu",
+    "count_in_foods": 13,
+    "sample_foods": [
+      "Chân gà hấp xì dầu",
+      "Bánh canh ghẹ",
+      "Bánh canh cua",
+      "Bún chả cá chay",
+      "Bánh bột lọc"
+    ]
+  },
+  {
+    "ingredient": "dau phong rang",
+    "count_in_foods": 13,
+    "sample_foods": [
+      "Phở xào giòn",
+      "Phở bò trộn",
+      "Phở gà trộn",
+      "Mì Quảng chay",
+      "Mì Quảng trộn chay"
+    ]
+  },
+  {
+    "ingredient": "la chanh",
+    "count_in_foods": 13,
+    "sample_foods": [
+      "Bún hải sản",
+      "Ốc đinh xào sả ớt",
+      "Ốc hút cốt dừa",
+      "Bún Thái",
+      "Tôm tít rang muối"
+    ]
+  },
+  {
+    "ingredient": "gao",
+    "count_in_foods": 12,
+    "sample_foods": [
+      "Cơm trộn Hàn Quốc",
+      "Canh khổ qua nhồi đậu hũ",
+      "Bánh xèo",
+      "Cháo vịt",
+      "Cháo lòng"
+    ]
+  },
+  {
+    "ingredient": "gia do",
+    "count_in_foods": 12,
+    "sample_foods": [
+      "Canh chua cá đuối",
+      "Bún chả tôm",
+      "Phở gà trộn",
+      "Miến lươn nước",
+      "Miến lươn trộn"
+    ]
+  },
+  {
+    "ingredient": "me rang",
+    "count_in_foods": 12,
+    "sample_foods": [
+      "Bánh chuối hấp cốt dừa",
+      "Thịt nướng BBQ Hàn Quốc",
+      "Mì Ramen nước tương",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Cá hồi nướng sốt Teriyaki"
+    ]
+  },
+  {
+    "ingredient": "ot bot",
+    "count_in_foods": 12,
+    "sample_foods": [
+      "Đậu hũ Tứ Xuyên",
+      "Mì Quảng Cá lóc",
+      "Bún thịt nướng",
+      "Canh tương đậu Hàn Quốc",
+      "Bánh canh ruộng"
+    ]
+  },
+  {
+    "ingredient": "bot ot",
+    "count_in_foods": 11,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Mì Ý sốt Pesto",
+      "Bánh canh cá lóc",
+      "Nấm kim châm chiên giòn"
+    ]
+  },
+  {
+    "ingredient": "dau xanh",
+    "count_in_foods": 11,
+    "sample_foods": [
+      "Bánh đậu xanh trái cây",
+      "Canh rong biển hạt sen",
+      "Bánh bèo chay",
+      "Bánh bột lọc nhân đậu xanh",
+      "Cháo nghêu"
+    ]
+  },
+  {
+    "ingredient": "hanh ngo",
+    "count_in_foods": 11,
+    "sample_foods": [
+      "Bún riêu ốc",
+      "Mì xá xíu",
+      "Mì xào bò",
+      "Mì xào trứng",
+      "Bánh canh xương chả"
+    ]
+  },
+  {
+    "ingredient": "sua khong duong",
+    "count_in_foods": 11,
+    "sample_foods": [
+      "Bánh bông lan trứng muối",
+      "Bánh bao trứng muối",
+      "Pizza Bò băm",
+      "Bít tết sốt tiêu đen",
+      "Bánh Waffle kem tươi"
+    ]
+  },
+  {
+    "ingredient": "bo lat",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Răng mực xào bơ tỏi",
+      "Bánh mì kẹp xúc xích",
+      "Mì Ý",
+      "Cá hồi áp chảo sốt chanh dây",
+      "Bắp xào mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "cha ca",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bánh tráng kẹp hành",
+      "Bún Thái",
+      "Bánh canh xương chả",
+      "Bánh canh chả cá"
+    ]
+  },
+  {
+    "ingredient": "ga",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Lẩu gà lá é",
+      "Phở khô Gia Lai",
+      "Gà hầm rượu vang",
+      "Salad gà nướng",
+      "Thịt xông khói cuộn măng tây nướng"
+    ]
+  },
+  {
+    "ingredient": "khoai tay",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Khoai tây lốc xoáy",
+      "Beefsteak bò Mỹ",
+      "Salad Nga",
+      "Mì udon",
+      "Bò kho chay"
+    ]
+  },
+  {
+    "ingredient": "mam nem",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Bún mắm nêm",
+      "Cá chìa vôi nướng muối ớt",
+      "Cá đuối nướng sả nghệ",
+      "Cá chìa vôi nướng muối ớt",
+      "Bánh đập"
+    ]
+  },
+  {
+    "ingredient": "mayonnaise",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Bánh xèo Nhật Bản",
+      "Salad cá ngừ",
+      "Pizza Xúc xích Ý",
+      "Salad Nga"
+    ]
+  },
+  {
+    "ingredient": "mi chinh",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Gà hầm rượu vang",
+      "Nấm rơm kho tộ",
+      "Bún gạo lứt trộn ức gà",
+      "Cháo lươn",
+      "Bún hến"
+    ]
+  },
+  {
+    "ingredient": "moc nhi",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Bánh gối nhân thịt trứng cút",
+      "Bún chả tôm",
+      "Miến xào hải sản",
+      "Lẩu nấm chay",
+      "Chả giò chay (Ram chay)"
+    ]
+  },
+  {
+    "ingredient": "nam kim cham",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Mì Ý",
+      "Lẩu nấm chay",
+      "Đậu hũ non sốt nấm",
+      "Canh chua nấm chay"
+    ]
+  },
+  {
+    "ingredient": "nghe",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Cá chìa vôi nướng muối ớt",
+      "Cá đuối nướng sả nghệ",
+      "Mì Quảng Cá lóc",
+      "Bún lòng xào nghệ",
+      "Cá chìa vôi nướng muối ớt"
+    ]
+  },
+  {
+    "ingredient": "pho mai",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Trứng cút nướng chén phô mai",
+      "Mì Ý sốt bò băm",
+      "Pizza Xúc xích Ý",
+      "Salad Hy Lạp",
+      "Bò cuộn phô mai nướng"
+    ]
+  },
+  {
+    "ingredient": "rong bien",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Cơm trộn Hàn Quốc",
+      "Súp rong biển đậu hũ Nhật",
+      "Cơm nắm cá ngừ mayo",
+      "Mì trộn",
+      "Mì udon"
+    ]
+  },
+  {
+    "ingredient": "sa te",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Bánh mì bột lọc",
+      "Nem nướng Nha Trang",
+      "Phở khô Gia Lai",
+      "Bánh canh chả cua",
+      "Khoai tây múi cau nướng"
+    ]
+  },
+  {
+    "ingredient": "xuc xich",
+    "count_in_foods": 10,
+    "sample_foods": [
+      "Trứng cút nướng chén phô mai",
+      "Pizza Phô mai",
+      "Mì Ý sốt bò băm",
+      "Salad Nga",
+      "Bánh mì kẹp xúc xích"
+    ]
+  },
+  {
+    "ingredient": "dau olive",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Hồ lô nướng",
+      "Sườn cừu nướng thảo mộc",
+      "Salad Hy Lạp",
+      "Salad bơ tôm áp chảo",
+      "Bánh mì nướng bơ tỏi phô mai chảy"
+    ]
+  },
+  {
+    "ingredient": "hat tieu",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật",
+      "Phở tái",
+      "Pizza Bò băm",
+      "Gà hầm rượu vang",
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "hoa hoi",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Phở tái lăn",
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "ngo gai",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Canh chua cá đuối",
+      "Phở khô Gia Lai",
+      "Canh chua nấm chay",
+      "Bánh canh tôm thịt",
+      "Cháo lươn"
+    ]
+  },
+  {
+    "ingredient": "ngu vi huong",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Vịt quay Bắc Kinh",
+      "Mì vằn thắn xá xíu",
+      "Sườn nướng BBQ",
+      "Đậu hũ sốt ngũ vị",
+      "Salad gà nướng"
+    ]
+  },
+  {
+    "ingredient": "nuoc soi",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Bánh mì bột lọc",
+      "Hủ tiếu Nam Vang",
+      "Ốc móng tay xào me",
+      "Bánh bột lọc chiên",
+      "Bánh ram ít"
+    ]
+  },
+  {
+    "ingredient": "ot chuong",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Bò xào cần tỏi",
+      "Mì Quảng Tôm Thịt",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Gà xào hạt điều kiểu Thái",
+      "Salad Hy Lạp"
+    ]
+  },
+  {
+    "ingredient": "toi phi",
+    "count_in_foods": 9,
+    "sample_foods": [
+      "Sườn xào chua ngọt",
+      "Hủ tiếu Nam Vang",
+      "Phở bò trộn",
+      "Khoai tây chiên",
+      "Bánh tráng chấm sốt tắc"
+    ]
+  },
+  {
+    "ingredient": "boa ro",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Gỏi hoa chuối chay",
+      "Nấm đùi gà kho tiêu",
+      "Chả lụa chay kho tiêu",
+      "Nấm rơm kho tộ"
+    ]
+  },
+  {
+    "ingredient": "bot cacao",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Bánh Tiramisu",
+      "Bánh Cheesecake",
+      "Bánh Macaron",
+      "Bánh Brownie hạt óc chó",
+      "Bánh tai heo"
+    ]
+  },
+  {
+    "ingredient": "bot toi",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Vịt quay Bắc Kinh",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Mì vằn thắn xá xíu",
+      "Tôm đất xóc tỏi",
+      "Sườn nướng BBQ"
+    ]
+  },
+  {
+    "ingredient": "hung lui",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Gỏi cá trích",
+      "Mì Quảng Cá lóc",
+      "Bún đậu mắm tôm",
+      "Ram tôm đất Bình Định",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "long do trung",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Bánh bông lan trứng muối",
+      "Bánh Tiramisu",
+      "Bánh Cheesecake",
+      "Bánh Mousse socola",
+      "Rau câu phô mai"
+    ]
+  },
+  {
+    "ingredient": "mi quang",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Mì Quảng Tôm Thịt",
+      "Mì Quảng Cá lóc",
+      "Mì Quảng Chay",
+      "Mì Quảng chay",
+      "Mì Quảng trộn chay"
+    ]
+  },
+  {
+    "ingredient": "mo heo",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Ốc móng tay xào me",
+      "Cà tím nướng mỡ hành",
+      "Trứng chiên thịt băm"
+    ]
+  },
+  {
+    "ingredient": "nam",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Bún riêu ốc",
+      "Bò hầm rượu vang kiểu Pháp",
+      "Mì udon",
+      "Mì hoành thánh",
+      "Bánh canh ghẹ"
+    ]
+  },
+  {
+    "ingredient": "nam bao ngu",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Mì Quảng Chay",
+      "Hủ tiếu Nam Vang",
+      "Mì Quảng chay",
+      "Chả nấm bào ngư",
+      "Gỏi mít non chay"
+    ]
+  },
+  {
+    "ingredient": "nam dong co",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Lẩu nấm chay",
+      "Bánh lọc trần chay",
+      "Bò kho chay",
+      "Mì xào rau củ",
+      "Cơm cháy kho quẹt"
+    ]
+  },
+  {
+    "ingredient": "que",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Phở tái",
+      "Phở tái lăn"
+    ]
+  },
+  {
+    "ingredient": "ruou trang",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Cơm bò gyudon Nhật Bản",
+      "Bít tết sốt tiêu đen",
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "thit ba chi",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Bún mắm nêm",
+      "Cơm tấm ba rọi nướng",
+      "Thịt nướng BBQ Hàn Quốc",
+      "Bánh xèo",
+      "Đậu hũ sốt ngũ vị"
+    ]
+  },
+  {
+    "ingredient": "whipping cream",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Bánh Tiramisu",
+      "Bánh Cheesecake",
+      "Mì Ý",
+      "Bánh mousse chanh leo",
+      "Bánh crepe sầu riêng"
+    ]
+  },
+  {
+    "ingredient": "xi dau",
+    "count_in_foods": 8,
+    "sample_foods": [
+      "Vịt quay Bắc Kinh",
+      "Cơm bò gyudon Nhật Bản",
+      "Tempeh áp chảo",
+      "Bún hến",
+      "Cá mú hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "bap cai",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Cơm cà ri Nhật Bản",
+      "Bún chả cá",
+      "Bánh xèo Nhật Bản",
+      "Bún cá ngừ",
+      "Bún chả cá chay"
+    ]
+  },
+  {
+    "ingredient": "bap my",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bún chả cá",
+      "Bún cá ngừ",
+      "Salad Nga",
+      "Hoành thánh chiên",
+      "Súp cua óc heo"
+    ]
+  },
+  {
+    "ingredient": "bot nep",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Nem nướng Nha Trang",
+      "Bánh ram ít",
+      "Khoai môn lệ phố",
+      "Bánh mochi kem lạnh",
+      "Bánh cam đường"
+    ]
+  },
+  {
+    "ingredient": "bot no",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Bánh cam đường",
+      "Gà rán Hàn Quốc",
+      "Bánh bao kim sa"
+    ]
+  },
+  {
+    "ingredient": "bot xu",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Cơm cà ri Nhật Bản",
+      "Thịt heo chiên xù (Tonkatsu)",
+      "Tôm cuộn thịt xông khói nướng",
+      "Nem chua rán"
+    ]
+  },
+  {
+    "ingredient": "chuoi",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Kem ống",
+      "Bánh chuối hấp cốt dừa",
+      "Bánh chuối chiên",
+      "Bánh xèo",
+      "Chuối nướng cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "dau phu",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Mì Quảng Tôm Thịt",
+      "Bún đậu mắm tôm",
+      "Mì udon",
+      "Chả giò chay (Ram chay)",
+      "Phở cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "dau que",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Cơm chiên hải sản",
+      "Lạp Thái",
+      "Miến xào cua",
+      "Cá hồi áp chảo sốt chanh dây",
+      "Cơm chiên Dương Châu"
+    ]
+  },
+  {
+    "ingredient": "giam",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Sườn xào chua ngọt",
+      "Sò điệp nướng mỡ hành",
+      "Hủ tiếu khô",
+      "Bít tết sốt tiêu đen",
+      "Khoai tây múi cau nướng"
+    ]
+  },
+  {
+    "ingredient": "gio",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bánh bao trứng muối",
+      "Nem nướng Nha Trang",
+      "Nem lụi",
+      "Nem chua rán",
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "hanh toi",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Mực xào dứa",
+      "Mì vằn thắn xá xíu",
+      "Bò cuộn phô mai nướng",
+      "Bánh lọc trần chay",
+      "Miến xào cua biển"
+    ]
+  },
+  {
+    "ingredient": "hung que",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bò bía mặn",
+      "Lạp Thái",
+      "Phở khô Gia Lai",
+      "Bê thui bóp thấu",
+      "Miến măng chay"
+    ]
+  },
+  {
+    "ingredient": "mien",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bánh gối nhân thịt trứng cút",
+      "Miến trộn Thái Lan",
+      "Miến xào cua",
+      "Miến xào hải sản",
+      "Miến măng chay"
+    ]
+  },
+  {
+    "ingredient": "mo hanh",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Cơm tấm ba rọi nướng",
+      "Bánh bột lọc",
+      "Cơm tấm sườn nướng",
+      "Bánh căn",
+      "Bánh tráng phơi sương muối nhuyễn"
+    ]
+  },
+  {
+    "ingredient": "nam rom",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Lẩu gà lá é",
+      "Lẩu nấm chay",
+      "Đậu hũ chiên sả ớt",
+      "Bánh canh cua",
+      "Gỏi mít non chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc cot chanh",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bánh bông lan trứng muối",
+      "Bánh tráng cuốn sốt bơ",
+      "Bánh mì bột lọc",
+      "Bún đậu mắm tôm",
+      "Gỏi hoa chuối chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam chay",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Lạp Thái",
+      "Lẩu nấm chay",
+      "Bánh bèo chay",
+      "Chả giò chay (Ram chay)",
+      "Canh chua nấm chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc nong",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bún chả tôm",
+      "Cua rang me",
+      "Bánh tráng cuốn sốt me",
+      "Bánh mochi kem lạnh",
+      "Bánh cam đường"
+    ]
+  },
+  {
+    "ingredient": "ot sung",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bê thui bóp thấu",
+      "Mì xào rau củ",
+      "Tôm tít rang muối",
+      "Cá dìa nướng muối ớt",
+      "Tai heo ngâm mắm tắc"
+    ]
+  },
+  {
+    "ingredient": "pho mai mozzarella",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Hồ lô nướng",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Pizza Phô mai",
+      "Pizza Bò băm",
+      "Pizza 4 loại phô mai"
+    ]
+  },
+  {
+    "ingredient": "rau mui",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Đậu hũ Tứ Xuyên",
+      "Salad Nga",
+      "Gỏi hoa chuối chay",
+      "Chả giò chay (Ram chay)",
+      "Gỏi sứa trộn"
+    ]
+  },
+  {
+    "ingredient": "rau muong",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Ốc móng tay xào me",
+      "Canh khổ qua nhồi đậu hũ",
+      "Lẩu chao chay",
+      "Rau muống xào tỏi",
+      "Canh rau muống nấu hến"
+    ]
+  },
+  {
+    "ingredient": "thit ba roi",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bánh canh tôm thịt",
+      "Mít non trộn tôm thịt",
+      "Bánh bột lọc",
+      "Bánh bột lọc trần",
+      "Bánh ram ít"
+    ]
+  },
+  {
+    "ingredient": "thit ga",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Phở gà",
+      "Đùi gà nướng kiểu Nhật",
+      "Phở gà trộn",
+      "Xôi gà",
+      "Mì Quảng Gà ta"
+    ]
+  },
+  {
+    "ingredient": "xuong heo",
+    "count_in_foods": 7,
+    "sample_foods": [
+      "Bún cá rô đồng",
+      "Bún bò Huế",
+      "Phở tái lăn",
+      "Bánh canh cá lóc",
+      "Bánh canh ghẹ"
+    ]
+  },
+  {
+    "ingredient": "banh pho",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Phở gà",
+      "Phở xào giòn",
+      "Phở tái lăn",
+      "Phở bò trộn",
+      "Phở cuốn Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "bap",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Cơm chiên hải sản",
+      "Chả bắp chiên xù chay",
+      "Salad gà nướng",
+      "Cơm gà xối mỡ",
+      "Bắp xào mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "bot khoai tay",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Bánh ram ít",
+      "Gà rán Hàn Quốc",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "cai thia",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Mì vịt tiềm",
+      "Mì xào hải sản",
+      "Bánh canh xương chả",
+      "Mỳ xíu chay",
+      "Cơm tấm sườn bì chả"
+    ]
+  },
+  {
+    "ingredient": "dam",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Nem nướng Nha Trang",
+      "Vịt quay Bắc Kinh",
+      "Phở tái lăn",
+      "Gỏi bò khô",
+      "Bánh bao kim sa"
+    ]
+  },
+  {
+    "ingredient": "dau oliu",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Vịt quay Bắc Kinh",
+      "Mì Ý sốt Pesto",
+      "Pizza Xúc xích Ý",
+      "Mì Ý hải sản sốt cà chua",
+      "Mỳ xíu chay"
+    ]
+  },
+  {
+    "ingredient": "dui ga",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Mì Ramen nước tương",
+      "Hồ lô nướng",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Cơm gà xối mỡ",
+      "Cơm gà quay"
+    ]
+  },
+  {
+    "ingredient": "duong nau",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Bún chay nước lèo",
+      "Bánh xèo gạo lứt chay",
+      "Khoai tây chiên",
+      "Milo dầm trân châu",
+      "Mì Quảng Gà ta"
+    ]
+  },
+  {
+    "ingredient": "he",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Mực xào dứa",
+      "Hủ tiếu Nam Vang",
+      "Mì hoành thánh",
+      "Bánh canh cá lóc",
+      "Bánh căn"
+    ]
+  },
+  {
+    "ingredient": "khoai lang",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Bò kho chay",
+      "Đậu hũ bao bố",
+      "Bì cuốn chay",
+      "Khoai lang nướng",
+      "Bánh tôm Hồ Tây"
+    ]
+  },
+  {
+    "ingredient": "kim chi",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Cơm trộn Hàn Quốc",
+      "Cơm chiên kim chi bò Mỹ",
+      "Mì lạnh Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "la dua",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Bánh chuối hấp cốt dừa",
+      "Bánh da lợn",
+      "Bánh chín tầng mây",
+      "Sữa chua trân châu",
+      "Chuối nếp nướng cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "lap xuong",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Cơm chiên Dương Châu",
+      "Cơm chiên trứng",
+      "Thịt luộc tôm chua",
+      "Xôi mặn",
+      "Xôi gà"
+    ]
+  },
+  {
+    "ingredient": "nuoc dua",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Mì vịt tiềm",
+      "Ốc hút cốt dừa",
+      "Cơm cá nục kho cà chua",
+      "Cao lầu Hội An",
+      "Rau câu trái dừa nguyên quả"
+    ]
+  },
+  {
+    "ingredient": "nuoc lanh",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên",
+      "Ốc bươu hấp sả",
+      "Rau câu trái dừa nguyên quả"
+    ]
+  },
+  {
+    "ingredient": "san",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang",
+      "Bò bía mặn",
+      "Bánh canh cá lóc",
+      "Đậu hũ bao bố",
+      "Bì cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "sua chua",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Yaourt muối",
+      "Kem nhãn",
+      "Sữa chua nếp cẩm",
+      "Trái cây tô trộn sữa chua",
+      "Sữa chua trân châu"
+    ]
+  },
+  {
+    "ingredient": "suon non",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Sườn xào chua ngọt",
+      "Bún riêu ốc",
+      "Canh tương đậu Hàn Quốc",
+      "Sườn nướng BBQ",
+      "Cháo sườn ngải cứu"
+    ]
+  },
+  {
+    "ingredient": "thao",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Phở tái",
+      "Phở tái lăn"
+    ]
+  },
+  {
+    "ingredient": "uc ga",
+    "count_in_foods": 6,
+    "sample_foods": [
+      "Gà xào hạt điều kiểu Thái",
+      "Salad ức gà sốt mè rang",
+      "Salad ức gà (Eat Clean)",
+      "Bún gạo lứt trộn ức gà",
+      "Dimsum"
+    ]
+  },
+  {
+    "ingredient": "bap cai tim",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ",
+      "Gà xào bắp cải phô mai Hàn Quốc",
+      "Phở cuốn chay",
+      "Cá hồi áp chảo sốt chanh dây",
+      "Cơm thịt heo rim tôm"
+    ]
+  },
+  {
+    "ingredient": "bap chuoi",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bún hải sản",
+      "Mì Quảng Cá lóc",
+      "Bún Thái",
+      "Cơm hến",
+      "Cao lầu Hội An"
+    ]
+  },
+  {
+    "ingredient": "bi do",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Hồ lô nướng",
+      "Súp bí đỏ béo ngậy",
+      "Bún chả cá chay",
+      "Nấm kim châm chiên giòn",
+      "Cơm hấp lá sen chay"
+    ]
+  },
+  {
+    "ingredient": "bo vien",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Mì cay 7 cấp độ",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "bot rau cau",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bánh đậu xanh trái cây",
+      "Bánh trung thu rau câu",
+      "Rau câu sơn thủy",
+      "Rau câu ngũ sắc",
+      "Rau câu trái dừa nguyên quả"
+    ]
+  },
+  {
+    "ingredient": "ca chua bi",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Lạp Thái",
+      "Salad bơ tôm áp chảo",
+      "Salad ức gà (Eat Clean)",
+      "Cá thu Nhật kho cà chua",
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "ca hoi",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Cá hồi nướng sốt Teriyaki",
+      "Cá hồi nướng măng tây",
+      "Sandwich cá hồi xông khói",
+      "Cá hồi áp chảo sốt chanh dây",
+      "Sushi cá hồi"
+    ]
+  },
+  {
+    "ingredient": "ca ngu",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bún chả cá",
+      "Bún cá ngừ",
+      "Cơm nắm cá ngừ mayo",
+      "Salad cá ngừ",
+      "Pizza Hải sản"
+    ]
+  },
+  {
+    "ingredient": "cai",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Mì Quảng Cá lóc",
+      "Mì vằn thắn xá xíu",
+      "Phở tái",
+      "Bánh canh cá lóc",
+      "Lẩu hải sản chua cay"
+    ]
+  },
+  {
+    "ingredient": "com trang",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Cơm tấm ba rọi nướng",
+      "Cá hồi nướng sốt Teriyaki",
+      "Cơm gà xối mỡ",
+      "Cơm gà quay",
+      "Kimbap truyền thống"
+    ]
+  },
+  {
+    "ingredient": "dau ha lan",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Salad ức gà sốt mè rang",
+      "Súp cua óc heo",
+      "Cơm gà xối mỡ",
+      "Cơm chiên cá mặn",
+      "Bánh mì xíu mại"
+    ]
+  },
+  {
+    "ingredient": "dinh huong",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "gan bo",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Gan rim tỏi ớt",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "hac xi dau",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang",
+      "Mì vằn thắn xá xíu",
+      "Cơm bò gyudon Nhật Bản",
+      "Phở xào mềm",
+      "Nấm kho rau củ"
+    ]
+  },
+  {
+    "ingredient": "hat dieu",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Bún riêu ốc",
+      "Gà xào hạt điều kiểu Thái",
+      "Bánh Brownie hạt óc chó",
+      "Bánh quy bơ hạt điều"
+    ]
+  },
+  {
+    "ingredient": "hat mui",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "hat sen",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Canh rong biển hạt sen",
+      "Súp cua óc heo",
+      "Cơm hấp lá sen chay",
+      "Canh mướp nấu nấm",
+      "Bánh trung thu rau câu"
+    ]
+  },
+  {
+    "ingredient": "kem",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bánh Waffle kem tươi",
+      "Salad Nga",
+      "Bánh Mousse socola",
+      "Mì Ý sốt kem nấm",
+      "Bánh mochi kem lạnh"
+    ]
+  },
+  {
+    "ingredient": "kho qua",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Khổ qua xào trứng",
+      "Mướp đắng kho tiêu chay",
+      "Canh khổ qua nhồi đậu hũ",
+      "Canh khổ qua nhồi thịt",
+      "Bò xào khổ qua"
+    ]
+  },
+  {
+    "ingredient": "la chuoi",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bánh nậm chay",
+      "Bánh nậm",
+      "Bánh gói",
+      "Cá dìa nướng muối ớt",
+      "Chuối nếp nướng cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "mam ruoc",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bún chả cá",
+      "Bún cá ngừ",
+      "Bún bò Huế",
+      "Cơm hến",
+      "Bánh tráng mắm ruốc nướng"
+    ]
+  },
+  {
+    "ingredient": "mam tom",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bún riêu ốc",
+      "Bún đậu mắm tôm",
+      "Bánh đa cua",
+      "Cà pháo mắm tôm",
+      "Bún bắp bò"
+    ]
+  },
+  {
+    "ingredient": "mi trung",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Mì vằn thắn xá xíu",
+      "Mì xá xíu",
+      "Mì xào bò",
+      "Mì xào trứng",
+      "Mì hoành thánh"
+    ]
+  },
+  {
+    "ingredient": "mi y",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Mì Ý sốt bò băm",
+      "Mì Ý sốt Pesto",
+      "Pasta sốt hải sản cay",
+      "Mì Ý",
+      "Mì Ý sốt kem nấm"
+    ]
+  },
+  {
+    "ingredient": "ot hiem",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Ốc hút cốt dừa",
+      "Bún chay nước lèo",
+      "Bê thui bóp thấu",
+      "Nghêu hấp thái",
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "re ngo",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Bún sứa",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "suon bo",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Mì Quảng sườn non",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "tac",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Ốc hương hấp sả",
+      "Bánh tráng trộn",
+      "Bánh tráng phơi sương muối nhuyễn",
+      "Tai heo ngâm mắm tắc",
+      "Chân gà sả tắc"
+    ]
+  },
+  {
+    "ingredient": "than bo",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở tái",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "thanh cua",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Salad Caesar",
+      "Súp cua óc heo",
+      "Pizza Hải sản",
+      "Bánh căn",
+      "Sushi cá hồi"
+    ]
+  },
+  {
+    "ingredient": "tieu hat",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở gà",
+      "Phở bò nạm",
+      "Khổ qua rừng kho tiêu",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "tom kho",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Bún riêu ốc",
+      "Mì vằn thắn xá xíu",
+      "Xôi mặn",
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "tuong an pho",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Bánh bò nướng",
+      "Phở bò nạm",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "xoai xanh",
+    "count_in_foods": 5,
+    "sample_foods": [
+      "Bánh tráng bơ Tây Ninh",
+      "Nem nướng Nha Trang",
+      "Gỏi xoài cá trê chiên xù",
+      "Gỏi xoài khô mực",
+      "Bánh tráng cuốn bơ"
+    ]
+  },
+  {
+    "ingredient": "bac ha",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Canh chua cá đuối",
+      "Cơm hến",
+      "Xiên que nướng",
+      "Lẩu cá bớp măng chua"
+    ]
+  },
+  {
+    "ingredient": "bo nhat",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bánh bông lan trứng muối",
+      "Beefsteak bò Mỹ",
+      "Bánh quy bơ hạt điều",
+      "Bánh tai heo"
+    ]
+  },
+  {
+    "ingredient": "bot hanh",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Mì vằn thắn xá xíu",
+      "Sườn nướng BBQ",
+      "Cơm thịt heo rim mực",
+      "Gà rán Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "ca nuc",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Cá nục hấp cuốn bánh tráng",
+      "Bánh tráng cuốn cá nục hấp",
+      "Cơm cá nục kho cà chua",
+      "Bánh căn"
+    ]
+  },
+  {
+    "ingredient": "can tay",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bò xào cần tỏi",
+      "Miến trộn Thái Lan",
+      "Miến xào cua",
+      "Mực xào cần tỏi"
+    ]
+  },
+  {
+    "ingredient": "cha bong",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Trứng cút nướng chén phô mai",
+      "Bánh tráng mắm ruốc nướng",
+      "Bánh chưng chiên"
+    ]
+  },
+  {
+    "ingredient": "cua dong",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bún riêu ốc",
+      "Bún riêu cua đồng",
+      "Bánh đa cua",
+      "Canh cua rau đay mồng tơi"
+    ]
+  },
+  {
+    "ingredient": "dau hanh",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Nấm đùi gà kho tiêu",
+      "Hoành thánh nước",
+      "Sushi cá hồi",
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "duong thot not",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bánh đậu xanh trái cây",
+      "Hủ tiếu Nam Vang",
+      "Nấm kho rau củ",
+      "Bánh trung thu rau câu"
+    ]
+  },
+  {
+    "ingredient": "gao nep",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Cháo lòng",
+      "Cháo sườn ngải cứu",
+      "Xôi xéo",
+      "Xôi chiên nhân thịt"
+    ]
+  },
+  {
+    "ingredient": "hanh boaro",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang",
+      "Súp rong biển đậu hũ Nhật",
+      "Canh tương đậu Hàn Quốc",
+      "Mì udon"
+    ]
+  },
+  {
+    "ingredient": "khoai mon",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Gỏi hoa chuối chay",
+      "Lẩu chao chay",
+      "Ram cuốn cải",
+      "Khoai môn lệ phố"
+    ]
+  },
+  {
+    "ingredient": "la lot",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Trứng chiên hành",
+      "Canh mít non nấu tôm",
+      "Bò lá lốt nướng",
+      "Bún ốc"
+    ]
+  },
+  {
+    "ingredient": "men",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bánh sừng bò",
+      "Pizza Xúc xích Ý",
+      "Bánh bao kim sa",
+      "Bánh sừng bò (Croissant)"
+    ]
+  },
+  {
+    "ingredient": "mien dong",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Miến lươn nước",
+      "Miến lươn trộn",
+      "Chả giò chay (Ram chay)",
+      "Miến xào nấm mèo"
+    ]
+  },
+  {
+    "ingredient": "mit non",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Gỏi mít non chay",
+      "Mít non trộn tôm thịt",
+      "Mít non kho tộ chay",
+      "Canh mít non nấu tôm"
+    ]
+  },
+  {
+    "ingredient": "mui tau",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Phở tái",
+      "Bánh canh chả cua",
+      "Bê thui bóp thấu",
+      "Canh mướp nấu nấm"
+    ]
+  },
+  {
+    "ingredient": "muoi ot",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Cá đuối nướng sả nghệ",
+      "Ốc nhảy hấp sả",
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "muoi tieu",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Nấm đùi gà kho tiêu",
+      "Tôm tít rang muối",
+      "Bánh mì chả bò",
+      "Tôm càng xanh nướng mọi"
+    ]
+  },
+  {
+    "ingredient": "nen",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Mì Quảng Cá lóc",
+      "Mì Quảng Bò",
+      "Mì Quảng đặc biệt",
+      "Mì Quảng Gà ta"
+    ]
+  },
+  {
+    "ingredient": "nuoc da lanh",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "nuoc ga",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Phở gà trộn",
+      "Súp bí đỏ béo ngậy",
+      "Mì Quảng sườn non",
+      "Cháo gà"
+    ]
+  },
+  {
+    "ingredient": "ot sa te",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bì cuốn chay",
+      "Gan rim tỏi ớt",
+      "Bạch tuộc nướng sa tế",
+      "Ốc hương xào bơ tỏi"
+    ]
+  },
+  {
+    "ingredient": "rau an kem",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bún chả cá",
+      "Bún cá ngừ",
+      "Mì Quảng Ếch",
+      "Mì Quảng Gà ta"
+    ]
+  },
+  {
+    "ingredient": "rau xa lach",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bún mắm nêm",
+      "Bánh cuốn",
+      "Xiên que nướng",
+      "Bánh mì xíu mại"
+    ]
+  },
+  {
+    "ingredient": "re hanh",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "sau rieng",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Kem bơ",
+      "Trái cây tô trộn sữa chua",
+      "Bánh crepe sầu riêng",
+      "Kem bơ sầu riêng"
+    ]
+  },
+  {
+    "ingredient": "sot mayonnaise",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Trứng cút nướng chén phô mai",
+      "Bánh tráng bơ Tây Ninh",
+      "Cơm nắm cá ngừ mayo",
+      "Gỏi rong biển"
+    ]
+  },
+  {
+    "ingredient": "tep kho",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Trứng cút nướng chén phô mai",
+      "Bánh kẹp trứng cút",
+      "Bánh tráng nướng",
+      "Bánh tráng mắm ruốc nướng"
+    ]
+  },
+  {
+    "ingredient": "thit nac",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Bún riêu ốc",
+      "Đậu hũ xào nấm đông cô",
+      "Canh khổ qua nhồi thịt",
+      "Cơm mực nhồi thịt sốt cà"
+    ]
+  },
+  {
+    "ingredient": "tieu xanh",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Đậu hũ chiên sả ớt",
+      "Nấm đùi gà kho tiêu",
+      "Bún mắm tai mui",
+      "Sườn non kho thơm"
+    ]
+  },
+  {
+    "ingredient": "tom dat",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Tôm đất xóc tỏi",
+      "Mít non trộn tôm thịt",
+      "Bánh bột lọc trần",
+      "Tôm đất rang muối"
+    ]
+  },
+  {
+    "ingredient": "topping",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Lẩu chao chay",
+      "Kem bơ",
+      "Kem bơ sầu riêng",
+      "Tokbokki phô mai"
+    ]
+  },
+  {
+    "ingredient": "vani",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Kem ống",
+      "Kem nhãn",
+      "Bánh quy bơ hạt điều",
+      "Bánh su kem vỏ giòn"
+    ]
+  },
+  {
+    "ingredient": "xuong bo",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "xuong ga",
+    "count_in_foods": 4,
+    "sample_foods": [
+      "Phở gà",
+      "Bánh canh chả cá",
+      "Bánh canh cá lóc",
+      "Súp cua óc heo"
+    ]
+  },
+  {
+    "ingredient": "baking powder",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh bao trứng muối",
+      "Pizza Bò băm",
+      "Bánh waffle"
+    ]
+  },
+  {
+    "ingredient": "banh canh",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh canh xương chả",
+      "Bánh canh chả cá",
+      "Bánh canh chả cua"
+    ]
+  },
+  {
+    "ingredient": "banh gio cheo quay an cung",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "banh pho cat soi nho vua",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "banh trang cuon",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cá chìa vôi nướng muối ớt",
+      "Cá chìa vôi nướng muối ớt",
+      "Bánh xèo"
+    ]
+  },
+  {
+    "ingredient": "bi ngoi",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Mì udon",
+      "Mì tương đen Hàn Quốc",
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "bo dau phong",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ",
+      "Mì hoành thánh",
+      "Mì lạnh Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "bo kho",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh tráng kẹp",
+      "Bánh kẹp trứng cút",
+      "Gỏi bò khô"
+    ]
+  },
+  {
+    "ingredient": "bo thuc vat",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Trứng cút nướng chén phô mai",
+      "Khoai tây chiên",
+      "Bánh sừng bò (Croissant)"
+    ]
+  },
+  {
+    "ingredient": "bot gung",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Vịt quay Bắc Kinh",
+      "Đùi gà nướng kiểu Nhật",
+      "Mì hoành thánh"
+    ]
+  },
+  {
+    "ingredient": "bot tra xanh",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh mochi kem lạnh",
+      "Bánh quy bơ hạt điều",
+      "Sữa chua dẻo trà xanh"
+    ]
+  },
+  {
+    "ingredient": "ca dieu hong",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico",
+      "Khoai tây múi cau nướng",
+      "Cá hanh hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "ca duoi",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cá đuối nướng sả nghệ",
+      "Canh chua cá đuối",
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "ca loc",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Mì Quảng Cá lóc",
+      "Bánh canh cá lóc",
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "cai thao",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún gạo lứt trộn ức gà",
+      "Miến xào nấm mèo",
+      "Cơm gà kho sả ớt"
+    ]
+  },
+  {
+    "ingredient": "cai xoi",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cơm trộn Hàn Quốc",
+      "Miến xào Hàn Quốc",
+      "Kimbap truyền thống"
+    ]
+  },
+  {
+    "ingredient": "cha ca nha trang",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún chả cá",
+      "Bún cá ngừ",
+      "Bún sứa"
+    ]
+  },
+  {
+    "ingredient": "cha chay",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún chả cá chay",
+      "Lẩu chao chay",
+      "Cơm hấp lá sen chay"
+    ]
+  },
+  {
+    "ingredient": "cha lua",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh mì bột lọc",
+      "Miến xào Hàn Quốc",
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "chao",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Lẩu chao chay",
+      "Đậu bắp luộc chấm chao",
+      "Rau lang luộc"
+    ]
+  },
+  {
+    "ingredient": "chuoi chat",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Nem nướng Nha Trang",
+      "Bê thui bóp thấu",
+      "Thịt luộc tôm chua"
+    ]
+  },
+  {
+    "ingredient": "com nguoi",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cơm hến",
+      "Cơm cháy kho quẹt",
+      "Bánh căn"
+    ]
+  },
+  {
+    "ingredient": "cot dua",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh tai heo",
+      "Lẩu Thái Tomyum",
+      "Xôi xoài Thái Lan"
+    ]
+  },
+  {
+    "ingredient": "cot me",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bún Thái",
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "cream cheese",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh bông lan trứng muối",
+      "Bánh mì nướng kiểu Pháp",
+      "Tôm hùm nướng phô mai"
+    ]
+  },
+  {
+    "ingredient": "da u an",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Mì Quảng Vịt",
+      "Bánh canh Nam Phổ",
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "dau co ve",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Chả bắp chiên xù chay",
+      "Bún xào nghệ chay",
+      "Đậu hũ kho dứa"
+    ]
+  },
+  {
+    "ingredient": "dau hu non",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Canh chua nấm chay",
+      "Súp bắp non tóc tiên chay",
+      "Mì lạnh Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "dau khuon",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Gỏi hoa chuối chay",
+      "Gỏi mít non chay",
+      "Đậu hũ sốt ngũ vị"
+    ]
+  },
+  {
+    "ingredient": "dua chuot",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ",
+      "Bánh tôm Hồ Tây",
+      "Mì tương đen Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "dua nao",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh chuối hấp cốt dừa",
+      "Gỏi cá trích",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "dua xiem",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún măng vịt",
+      "Sườn non kho thơm",
+      "Khâu nhục"
+    ]
+  },
+  {
+    "ingredient": "giam an",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "giam gao",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Gỏi cá trích",
+      "Bún chả Hà Nội",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "gio heo",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh canh cua",
+      "Bánh canh chả cua",
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "hanh ba ro",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Đậu hũ bao bố",
+      "Đậu hũ kho dứa",
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "hanh cu",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh tráng kẹp hành",
+      "Đậu hũ non sốt nấm",
+      "Bánh tráng kẹp"
+    ]
+  },
+  {
+    "ingredient": "hanh tay cat mui cau",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "hat nem nam",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún chả cá chay",
+      "Kim chi chay",
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "hon hop thit bap bo",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "kinh gioi",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún đậu mắm tôm",
+      "Bún chay nước lèo",
+      "Salad diêm mạch"
+    ]
+  },
+  {
+    "ingredient": "la e",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Mì Quảng Cá lóc",
+      "Lẩu gà lá é",
+      "Cơm chiên lá é chay"
+    ]
+  },
+  {
+    "ingredient": "la hung lui",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)",
+      "Xiên que nướng",
+      "Bánh rán mật"
+    ]
+  },
+  {
+    "ingredient": "mam me",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh tráng bơ Tây Ninh",
+      "Ram tôm đất Bình Định",
+      "Bánh tráng cuốn bơ"
+    ]
+  },
+  {
+    "ingredient": "mang tay",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cá hồi nướng măng tây",
+      "Thịt xông khói cuộn măng tây nướng",
+      "Súp nấm tuyết chay"
+    ]
+  },
+  {
+    "ingredient": "mayonaise",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Salad gà nướng",
+      "Khoai tây chiên",
+      "Bánh mì nướng muối ớt"
+    ]
+  },
+  {
+    "ingredient": "men no",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Pizza Bò băm",
+      "Bánh mì kẹp xúc xích",
+      "Bánh tiêu"
+    ]
+  },
+  {
+    "ingredient": "muoi ot xanh",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cá chìa vôi nướng muối ớt",
+      "Cá chìa vôi nướng muối ớt",
+      "Ghẹ xanh hấp"
+    ]
+  },
+  {
+    "ingredient": "muoi tom",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Bánh tráng trộn",
+      "Bánh tráng chấm sốt tắc"
+    ]
+  },
+  {
+    "ingredient": "muop",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Canh mướp nấu nấm",
+      "Cơm mực nhồi thịt sốt cà",
+      "Canh mướp nấu thịt băm"
+    ]
+  },
+  {
+    "ingredient": "my chinh",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh canh vịt",
+      "Cơm gà Hải Nam",
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "nuoc cham",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún chả tôm",
+      "Ốc nhảy hấp sả",
+      "Sò lông nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh canh chả cua",
+      "Súp hải sản kiểu Ý",
+      "Sủi cảo nước"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung ga",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Súp vi cá",
+      "Bánh giò nóng",
+      "Lẩu Thái Tomyum"
+    ]
+  },
+  {
+    "ingredient": "nuoc ham xuong",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Cơm bò gyudon Nhật Bản",
+      "Bánh canh tôm thịt",
+      "Cháo quẩy"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam chua ngot",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh tráng kẹp hành",
+      "Bánh cuốn",
+      "Bò lá lốt nướng"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam toi ot",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Ram tôm đất Bình Định",
+      "Sushi cá hồi",
+      "Ốc móng tay xào rau muống"
+    ]
+  },
+  {
+    "ingredient": "oc huong",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Ốc hương hấp sả",
+      "Ốc hương rang muối tuyết",
+      "Ốc hương xào bơ tỏi"
+    ]
+  },
+  {
+    "ingredient": "ot do",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Gỏi mít non chay",
+      "Ốc hương hấp sả",
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "ot xanh",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Chíp chíp hấp sả",
+      "Bánh Taco bò kiểu Mexico",
+      "Tai heo ngâm mắm tắc"
+    ]
+  },
+  {
+    "ingredient": "rau cu",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Súp nấm tuyết chay",
+      "Cơm chiên trứng",
+      "Cơm niêu hải sản"
+    ]
+  },
+  {
+    "ingredient": "rau ngo",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Mì vằn thắn xá xíu",
+      "Lẩu nấm chay",
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "rau que",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Chíp chíp hấp sả",
+      "Gỏi xoài cá trê chiên xù",
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "rieng",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún hải sản",
+      "Ốc hút cốt dừa",
+      "Bún Thái"
+    ]
+  },
+  {
+    "ingredient": "ruou vodka hoac ruou trang - do de khu mui bo",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "so diep",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Sò điệp nướng mỡ hành",
+      "Mì hoành thánh",
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "su hao",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún chả tôm",
+      "Miến xào hải sản",
+      "Tai heo ngâm mắm tắc"
+    ]
+  },
+  {
+    "ingredient": "su su",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang",
+      "Bún chả cá",
+      "Bún cá ngừ"
+    ]
+  },
+  {
+    "ingredient": "suon chay",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún xào nghệ chay",
+      "Cơm hấp lá sen chay",
+      "Bì cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "tao",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Salad Nga",
+      "Bánh táo nướng",
+      "Gỏi rong biển"
+    ]
+  },
+  {
+    "ingredient": "tau hu ky",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bún chả cá chay",
+      "Bánh xèo chay",
+      "Xiên que nướng"
+    ]
+  },
+  {
+    "ingredient": "thit nac vai",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Canh rong biển hạt sen",
+      "Xôi chiên nhân thịt",
+      "Mì tương đen Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "tieu dap nho",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở bò gầu",
+      "Phở bò nạm",
+      "Phở bò viên"
+    ]
+  },
+  {
+    "ingredient": "tom su",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Tôm sú hấp bia",
+      "Bánh canh tôm thịt",
+      "Súp cua óc heo"
+    ]
+  },
+  {
+    "ingredient": "trung muoi",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh bông lan trứng muối",
+      "Bánh bao trứng muối",
+      "Bánh bao kim sa"
+    ]
+  },
+  {
+    "ingredient": "tuong ca chua",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Mì Ý sốt bò băm",
+      "Pizza Hải sản",
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "tuong den",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Phở gà",
+      "Bò bía mặn",
+      "Phở khô Gia Lai"
+    ]
+  },
+  {
+    "ingredient": "vanilla",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh Macaron",
+      "Bánh waffle",
+      "Bánh su kem"
+    ]
+  },
+  {
+    "ingredient": "vit",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Vịt quay Bắc Kinh",
+      "Bún măng vịt",
+      "Cháo vịt"
+    ]
+  },
+  {
+    "ingredient": "vung",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Mì udon",
+      "Sữa chua trân châu",
+      "Bánh tráng xoài"
+    ]
+  },
+  {
+    "ingredient": "xoai",
+    "count_in_foods": 3,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico",
+      "Kem nhãn",
+      "Bánh tráng xoài"
+    ]
+  },
+  {
+    "ingredient": "bach tuoc",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cơm niêu hải sản",
+      "Bạch tuộc nướng sa tế"
+    ]
+  },
+  {
+    "ingredient": "baking soda",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh bò thốt nốt",
+      "Gà rán Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "banh canh bot gao",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh canh cá lóc",
+      "Bánh canh tôm thịt"
+    ]
+  },
+  {
+    "ingredient": "banh da",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh đa cua",
+      "Mì Quảng Ếch"
+    ]
+  },
+  {
+    "ingredient": "banh lady finger",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Tiramisu",
+      "Bánh tiramisu"
+    ]
+  },
+  {
+    "ingredient": "bap bo",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún bò Huế",
+      "Bún bắp bò"
+    ]
+  },
+  {
+    "ingredient": "bap non",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Súp bắp non tóc tiên chay",
+      "Cà ri Thái xanh"
+    ]
+  },
+  {
+    "ingredient": "be be",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh đa cua",
+      "Tôm tít rang muối"
+    ]
+  },
+  {
+    "ingredient": "bia",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Tôm sú hấp bia",
+      "Sò lụa hấp sả"
+    ]
+  },
+  {
+    "ingredient": "bo lat chay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Lẩu nấm chay",
+      "Bò xào khổ qua"
+    ]
+  },
+  {
+    "ingredient": "bo man",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh mì bơ tỏi nướng giòn",
+      "Nấm nướng giấy bạc chay"
+    ]
+  },
+  {
+    "ingredient": "bo tuong an",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bò lúc lắc khoai tây",
+      "Thiên lý xào thịt bò"
+    ]
+  },
+  {
+    "ingredient": "bong cai trang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Gà xào hạt điều kiểu Thái",
+      "Súp hải sản kiểu Ý"
+    ]
+  },
+  {
+    "ingredient": "bong cai xanh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Ý",
+      "Tôm cuộn thịt xông khói nướng"
+    ]
+  },
+  {
+    "ingredient": "bot bang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh chuối hấp cốt dừa",
+      "Chuối nếp nướng cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "bot banh ran",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh rán Doraemon",
+      "Bánh rán mật"
+    ]
+  },
+  {
+    "ingredient": "bot mau dieu",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Nem nướng Nha Trang",
+      "Bún bò Huế"
+    ]
+  },
+  {
+    "ingredient": "bot ngo",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh bông lan trứng muối",
+      "Đậu hũ Tứ Xuyên"
+    ]
+  },
+  {
+    "ingredient": "bot noi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Waffle kem tươi",
+      "Bánh tiêu"
+    ]
+  },
+  {
+    "ingredient": "bot pho mai",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Khoai tây lốc xoáy",
+      "Khoai tây chiên lắc phô mai"
+    ]
+  },
+  {
+    "ingredient": "bot su tu",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Đậu hũ non sốt nấm",
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "bun kho",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún bề bề",
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "bun lut",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở tái",
+      "Bún gạo lứt trộn ức gà"
+    ]
+  },
+  {
+    "ingredient": "ca bop",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Lẩu cá bớp măng chua",
+      "Cá bớp kho tộ"
+    ]
+  },
+  {
+    "ingredient": "ca chia voi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cá chìa vôi nướng muối ớt",
+      "Cá chìa vôi nướng muối ớt"
+    ]
+  },
+  {
+    "ingredient": "ca phe den",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Tiramisu",
+      "Bánh tiramisu"
+    ]
+  },
+  {
+    "ingredient": "ca thu",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh đa cua",
+      "Bún sứa"
+    ]
+  },
+  {
+    "ingredient": "ca trich",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Gỏi cá trích",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "ca vien",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cơm tấm sườn bì chả",
+      "Đồ viên chiên thập cẩm"
+    ]
+  },
+  {
+    "ingredient": "cacao",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh quy bơ hạt điều",
+      "Milo dầm trân châu"
+    ]
+  },
+  {
+    "ingredient": "cai do",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Hủ tiếu mực",
+      "Dimsum"
+    ]
+  },
+  {
+    "ingredient": "cai muoi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang",
+      "Kimbap truyền thống"
+    ]
+  },
+  {
+    "ingredient": "cam",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh rán mật",
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "carrot",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì xào rau củ",
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "cha trung",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cơm tấm ba rọi nướng",
+      "Cơm tấm sườn bì chả"
+    ]
+  },
+  {
+    "ingredient": "chanh day",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cá hồi áp chảo sốt chanh dây",
+      "Bánh mousse chanh leo"
+    ]
+  },
+  {
+    "ingredient": "cherry",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Waffle kem tươi",
+      "Gan ngỗng áp chảo"
+    ]
+  },
+  {
+    "ingredient": "chocolate den",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Macaron",
+      "Bánh Lava socola chảy"
+    ]
+  },
+  {
+    "ingredient": "cu hanh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Salad diêm mạch",
+      "Tôm cuộn thịt xông khói nướng"
+    ]
+  },
+  {
+    "ingredient": "cua",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cua rang me",
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "cua thit",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cua gạch rang muối",
+      "Miến xào cua"
+    ]
+  },
+  {
+    "ingredient": "da bao",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh flan caramel",
+      "Tàu hũ trân châu đường đen"
+    ]
+  },
+  {
+    "ingredient": "da vien",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Kem bơ",
+      "Kem bơ sầu riêng"
+    ]
+  },
+  {
+    "ingredient": "dam toi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến lươn nước",
+      "Miến lươn trộn"
+    ]
+  },
+  {
+    "ingredient": "dau bap",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Đậu bắp luộc chấm chao",
+      "Nấm kho rau củ"
+    ]
+  },
+  {
+    "ingredient": "dau hanh la",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún đậu mắm tôm",
+      "Cháo hàu"
+    ]
+  },
+  {
+    "ingredient": "dau phung",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Bò",
+      "Bún mắm tai mui"
+    ]
+  },
+  {
+    "ingredient": "dau tay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Waffle kem tươi",
+      "Bánh mì nướng kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "diep ca",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Cá lóc",
+      "Ram tôm đất Bình Định"
+    ]
+  },
+  {
+    "ingredient": "dua de lay nuoc",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bún Thái"
+    ]
+  },
+  {
+    "ingredient": "duo ng",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún thang",
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "duong cat",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Chân gà sả tắc",
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "ech",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng đặc biệt",
+      "Mì Quảng Ếch"
+    ]
+  },
+  {
+    "ingredient": "ga ta",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến măng gà",
+      "Lạp xưởng nướng đá"
+    ]
+  },
+  {
+    "ingredient": "gan heo",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún đậu mắm tôm",
+      "Cháo lòng"
+    ]
+  },
+  {
+    "ingredient": "gao tam",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cơm tấm sườn bì chả",
+      "Cơm tấm sườn nướng"
+    ]
+  },
+  {
+    "ingredient": "gao te",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cháo nghêu",
+      "Cháo sườn ngải cứu"
+    ]
+  },
+  {
+    "ingredient": "ghe",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ghẹ xanh hấp",
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "gia vi lau thai",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bún Thái"
+    ]
+  },
+  {
+    "ingredient": "gu ng",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Vịt",
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "ha nh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Vịt",
+      "Bánh canh Nam Phổ"
+    ]
+  },
+  {
+    "ingredient": "ha nh tim",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún thang",
+      "Miến măng gà"
+    ]
+  },
+  {
+    "ingredient": "ha t nem",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Vịt",
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "hanh baro",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "hanh boa-ro",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Chả nấm bào ngư",
+      "Súp bắp non tóc tiên chay"
+    ]
+  },
+  {
+    "ingredient": "hanh hoa",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến xào cua",
+      "Tu hài nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "hanh tim phi vang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh canh chả cá",
+      "Mít non trộn tôm thịt"
+    ]
+  },
+  {
+    "ingredient": "hanh trang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh bò nướng",
+      "Tôm hùm nướng phô mai"
+    ]
+  },
+  {
+    "ingredient": "hat chia",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh táo nướng",
+      "Trái cây tô trộn sữa chua"
+    ]
+  },
+  {
+    "ingredient": "hat de",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Hồ lô nướng",
+      "Bánh quy bơ hạt điều"
+    ]
+  },
+  {
+    "ingredient": "hen",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún hến",
+      "Canh rau muống nấu hến"
+    ]
+  },
+  {
+    "ingredient": "hoa dau biec",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh bò thốt nốt",
+      "Rau câu sơn thủy"
+    ]
+  },
+  {
+    "ingredient": "hoi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở tái",
+      "Phở khô Gia Lai"
+    ]
+  },
+  {
+    "ingredient": "hung cay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Gỏi cá trích",
+      "Gỏi cá trích"
+    ]
+  },
+  {
+    "ingredient": "huong thao",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Sườn cừu nướng thảo mộc",
+      "Gan ngỗng áp chảo"
+    ]
+  },
+  {
+    "ingredient": "ketchup",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Beefsteak bò Mỹ",
+      "Bò cuộn phô mai nướng"
+    ]
+  },
+  {
+    "ingredient": "kho bo",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh tráng bơ Tây Ninh",
+      "Bánh tráng trộn"
+    ]
+  },
+  {
+    "ingredient": "kho muc",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh tráng trộn",
+      "Gỏi xoài khô mực"
+    ]
+  },
+  {
+    "ingredient": "la bac ha",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)",
+      "Bánh rán mật"
+    ]
+  },
+  {
+    "ingredient": "la buoi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ốc đinh xào sả ớt",
+      "Ốc hút xào sả ớt"
+    ]
+  },
+  {
+    "ingredient": "la cam",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Rau câu sơn thủy",
+      "Xôi xoài Thái Lan"
+    ]
+  },
+  {
+    "ingredient": "la hoanh thanh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì vằn thắn xá xíu",
+      "Mì hoành thánh"
+    ]
+  },
+  {
+    "ingredient": "la kim",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Tokbokki lề đường",
+      "Kimbap truyền thống"
+    ]
+  },
+  {
+    "ingredient": "la quat",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ốc đinh xào sả ớt",
+      "Ốc hút xào sả ớt"
+    ]
+  },
+  {
+    "ingredient": "la thom",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Gà xào hạt điều kiểu Thái",
+      "Bánh mì nướng bơ tỏi phô mai chảy"
+    ]
+  },
+  {
+    "ingredient": "lac",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Sò điệp nướng mỡ hành",
+      "Hàu sữa nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "long do trung ga",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh táo nướng",
+      "Bánh mì kẹp xúc xích"
+    ]
+  },
+  {
+    "ingredient": "long nhan",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh trung thu rau câu",
+      "Rau câu ngũ sắc"
+    ]
+  },
+  {
+    "ingredient": "long trang trung",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Macaron",
+      "Cua huỳnh đế hấp"
+    ]
+  },
+  {
+    "ingredient": "luon",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cháo lươn",
+      "Cháo lươn đậu xanh"
+    ]
+  },
+  {
+    "ingredient": "luon kho",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến lươn nước",
+      "Miến lươn trộn"
+    ]
+  },
+  {
+    "ingredient": "mam co linh lang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Salad ức gà (Eat Clean)",
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "mang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến măng chay",
+      "Bún ốc"
+    ]
+  },
+  {
+    "ingredient": "mang chua",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún măng vịt",
+      "Lẩu cá bớp măng chua"
+    ]
+  },
+  {
+    "ingredient": "mat mia",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Nấm đùi gà kho tiêu",
+      "Cơm cháy kho quẹt"
+    ]
+  },
+  {
+    "ingredient": "men ngot",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh bò thốt nốt",
+      "Bánh bao trứng muối"
+    ]
+  },
+  {
+    "ingredient": "mi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Lẩu hải sản chua cay",
+      "Lẩu cá bớp măng chua"
+    ]
+  },
+  {
+    "ingredient": "mi gion",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì xào hải sản",
+      "Mì xào giòn"
+    ]
+  },
+  {
+    "ingredient": "mi la",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Bò",
+      "Mì Quảng Ếch"
+    ]
+  },
+  {
+    "ingredient": "mi vang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì vịt tiềm",
+      "Mỳ xíu chay"
+    ]
+  },
+  {
+    "ingredient": "mirin",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật",
+      "Cơm bò gyudon Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "moc",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cơm mực nhồi thịt sốt cà",
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "mong toi",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Canh cua rau đay mồng tơi",
+      "Cơm mực nhồi thịt sốt cà"
+    ]
+  },
+  {
+    "ingredient": "muc ong",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mực xào dứa",
+      "Cơm mực nhồi thịt sốt cà"
+    ]
+  },
+  {
+    "ingredient": "mui ta",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở tái",
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "mui tay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Sườn cừu nướng thảo mộc",
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "muo i",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Vịt",
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "muoi hot",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang",
+      "Rau lang luộc"
+    ]
+  },
+  {
+    "ingredient": "nac",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh tráng kẹp hành",
+      "Bánh bao trứng muối"
+    ]
+  },
+  {
+    "ingredient": "nep",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Xôi mặn",
+      "Xôi gà"
+    ]
+  },
+  {
+    "ingredient": "nep cam",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Sữa chua nếp cẩm",
+      "Chuối nếp nướng cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "ngo ngot",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Pizza Xúc xích Ý",
+      "Salad ức gà sốt mè rang"
+    ]
+  },
+  {
+    "ingredient": "ngu coc",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)",
+      "Trái cây tô trộn sữa chua"
+    ]
+  },
+  {
+    "ingredient": "nuo c ma m",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Vịt",
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "nuoc chanh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh bò nướng",
+      "Bánh tiêu"
+    ]
+  },
+  {
+    "ingredient": "nuoc cot me",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Trứng cút lộn xào me",
+      "Sò huyết rang me"
+    ]
+  },
+  {
+    "ingredient": "nuoc cot tac",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh bột lọc",
+      "Ốc hương xào bơ tỏi"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung rau",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay",
+      "Súp nấm tuyết chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc mo",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cá đuối nướng sả nghệ",
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "oc",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ốc đinh xào sả ớt",
+      "Ốc hút xào sả ớt"
+    ]
+  },
+  {
+    "ingredient": "oc buou",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún riêu ốc",
+      "Ốc bươu hấp sả"
+    ]
+  },
+  {
+    "ingredient": "oc len",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ốc hút cốt dừa",
+      "Ốc len xào dừa"
+    ]
+  },
+  {
+    "ingredient": "oc mong tay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ốc móng tay xào me",
+      "Ốc móng tay xào rau muống"
+    ]
+  },
+  {
+    "ingredient": "ot cay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ốc đinh xào sả ớt",
+      "Ốc hút xào sả ớt"
+    ]
+  },
+  {
+    "ingredient": "ot chuong do",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở cuốn chay",
+      "Xiên que nướng"
+    ]
+  },
+  {
+    "ingredient": "ot chuong vang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở cuốn chay",
+      "Xiên que nướng"
+    ]
+  },
+  {
+    "ingredient": "ot kho",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún bò tái bắp",
+      "Lẩu hải sản chua cay"
+    ]
+  },
+  {
+    "ingredient": "ot trai",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Đậu hũ kho tương hột",
+      "Sò huyết rang me"
+    ]
+  },
+  {
+    "ingredient": "parsley",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Hồ lô nướng",
+      "Bánh mì bơ tỏi nướng giòn"
+    ]
+  },
+  {
+    "ingredient": "pate",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh tráng kẹp",
+      "Bánh cuốn nóng thịt băm"
+    ]
+  },
+  {
+    "ingredient": "pho kho",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở bắp bò",
+      "Phở gà trộn"
+    ]
+  },
+  {
+    "ingredient": "rau cai",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh đa cua",
+      "Bún gạo lứt trộn ức gà"
+    ]
+  },
+  {
+    "ingredient": "rau dang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh canh cá lóc",
+      "Cháo hàu"
+    ]
+  },
+  {
+    "ingredient": "rau day",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Canh cua rau đay mồng tơi",
+      "Canh mướp nấu thịt băm"
+    ]
+  },
+  {
+    "ingredient": "rau mam",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ",
+      "Gan ngỗng áp chảo"
+    ]
+  },
+  {
+    "ingredient": "rau mui ta",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến xào hải sản",
+      "Salad diêm mạch"
+    ]
+  },
+  {
+    "ingredient": "rau mui tay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở gà",
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "rau muong che",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bún Thái"
+    ]
+  },
+  {
+    "ingredient": "rau ngot",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Canh rau ngót nấu thịt băm",
+      "Bún bề bề"
+    ]
+  },
+  {
+    "ingredient": "rau nhut",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún hải sản",
+      "Bún Thái"
+    ]
+  },
+  {
+    "ingredient": "rau thom an kem",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở gà",
+      "Bún mắm nêm"
+    ]
+  },
+  {
+    "ingredient": "ruoc",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bắp xào mỡ hành",
+      "Bánh mì nướng muối ớt"
+    ]
+  },
+  {
+    "ingredient": "ruou rum",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Tiramisu",
+      "Bánh tiramisu"
+    ]
+  },
+  {
+    "ingredient": "ruou vang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Gà hầm rượu vang",
+      "Bò hầm rượu vang kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "socola",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Cheesecake",
+      "Bánh Brownie hạt óc chó"
+    ]
+  },
+  {
+    "ingredient": "sot",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Gà xào hạt điều kiểu Thái",
+      "Mì cay 7 cấp độ"
+    ]
+  },
+  {
+    "ingredient": "sot ca chua",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Pizza Bò băm",
+      "Bánh Taco bò kiểu Mexico"
+    ]
+  },
+  {
+    "ingredient": "sot dau dam",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Salad ức gà (Eat Clean)",
+      "Salad gà nướng"
+    ]
+  },
+  {
+    "ingredient": "sot mayonaise",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì ramen",
+      "Nấm kim châm chiên giòn"
+    ]
+  },
+  {
+    "ingredient": "sot tuong me",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bò bía mặn",
+      "Gà xào bắp cải phô mai Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "suon",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cháo quẩy",
+      "Cơm tấm sườn bì chả"
+    ]
+  },
+  {
+    "ingredient": "suon cot let",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Cơm tấm sườn nướng",
+      "Cơm tấm sườn ốp la"
+    ]
+  },
+  {
+    "ingredient": "suon non chay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bò kho chay",
+      "Cao lầu Hội An"
+    ]
+  },
+  {
+    "ingredient": "sup",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Ốc đinh xào sả ớt",
+      "Ốc hút xào sả ớt"
+    ]
+  },
+  {
+    "ingredient": "tempeh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Đậu hũ non sốt nấm",
+      "Tempeh áp chảo"
+    ]
+  },
+  {
+    "ingredient": "thi la",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún cá rô đồng",
+      "Cá mú hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "thit ba roi heo",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bún đậu mắm tôm",
+      "Khâu nhục"
+    ]
+  },
+  {
+    "ingredient": "thit bap bo",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở cuốn Hà Nội",
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "thit heo nac",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Mì Quảng Tôm Thịt",
+      "Bánh nậm"
+    ]
+  },
+  {
+    "ingredient": "thit vit",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh canh vịt",
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "tim ga",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Phở gà",
+      "Cháo lòng"
+    ]
+  },
+  {
+    "ingredient": "tinh bot khoai tay",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Chân gà hấp xì dầu",
+      "Mì tương đen Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "tinh chat vani",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh Tiramisu",
+      "Bánh tiramisu"
+    ]
+  },
+  {
+    "ingredient": "tom cang xanh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến xào cua biển",
+      "Lẩu hải sản chua cay"
+    ]
+  },
+  {
+    "ingredient": "tom the",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Súp hải sản kiểu Ý",
+      "Lẩu hải sản chua cay"
+    ]
+  },
+  {
+    "ingredient": "tran chau",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Tàu hũ trân châu đường đen",
+      "Sữa chua trân châu"
+    ]
+  },
+  {
+    "ingredient": "trung vit lon",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Trứng vịt lộn hầm ngải cứu",
+      "Bún bắp bò"
+    ]
+  },
+  {
+    "ingredient": "tuong dau",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc",
+      "Cơm trộn Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "tuong hot",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Đậu hũ kho tương hột",
+      "Bì cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "vem xanh",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Vẹm xanh nướng mỡ hành",
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "vo tom",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bánh canh ghẹ",
+      "Bánh canh Nam Phổ"
+    ]
+  },
+  {
+    "ingredient": "vung rang",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Bê thui bóp thấu",
+      "Gỏi rong biển"
+    ]
+  },
+  {
+    "ingredient": "xuong luon",
+    "count_in_foods": 2,
+    "sample_foods": [
+      "Miến lươn nước",
+      "Miến lươn trộn"
+    ]
+  },
+  {
+    "ingredient": "ba chi bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ba chỉ bò cuộn nấm kim châm nướng"
+    ]
+  },
+  {
+    "ingredient": "ba dau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh tương đậu Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "ba ro",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ chiên sả ớt"
+    ]
+  },
+  {
+    "ingredient": "bacon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Xúc xích Ý"
+    ]
+  },
+  {
+    "ingredient": "banh bi kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cao lầu Hội An"
+    ]
+  },
+  {
+    "ingredient": "banh canh bot loc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh cua"
+    ]
+  },
+  {
+    "ingredient": "banh canh kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh ruộng"
+    ]
+  },
+  {
+    "ingredient": "banh chung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh chưng chiên"
+    ]
+  },
+  {
+    "ingredient": "banh da nem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chả giò chay (Ram chay)"
+    ]
+  },
+  {
+    "ingredient": "banh flan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh flan caramel"
+    ]
+  },
+  {
+    "ingredient": "banh gao pho mai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki phô mai"
+    ]
+  },
+  {
+    "ingredient": "banh gio cheo quay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "banh mi sandwich",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm hến"
+    ]
+  },
+  {
+    "ingredient": "banh phong tom chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bèo chay"
+    ]
+  },
+  {
+    "ingredient": "banh sandwich",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh gối"
+    ]
+  },
+  {
+    "ingredient": "banh tortilla",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico"
+    ]
+  },
+  {
+    "ingredient": "banh trang gao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh cuốn"
+    ]
+  },
+  {
+    "ingredient": "banh trang rau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "banh uot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh đập"
+    ]
+  },
+  {
+    "ingredient": "bao ngu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "bao tu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún đậu mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "bap bo thai mong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở bắp bò"
+    ]
+  },
+  {
+    "ingredient": "bap cai thao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá hồi áp chảo sốt chanh dây"
+    ]
+  },
+  {
+    "ingredient": "bap cai trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gà xào bắp cải phô mai Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "bap chuoi bao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "bap dong hop",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico"
+    ]
+  },
+  {
+    "ingredient": "bap gio heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bò Huế"
+    ]
+  },
+  {
+    "ingredient": "bap hat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "bap ngo ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "bap ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh lọc trần chay"
+    ]
+  },
+  {
+    "ingredient": "bate",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh kẹp trứng cút"
+    ]
+  },
+  {
+    "ingredient": "bau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh bầu nấu tôm hành"
+    ]
+  },
+  {
+    "ingredient": "be be boc non",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bề bề"
+    ]
+  },
+  {
+    "ingredient": "bi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm tấm ba rọi nướng"
+    ]
+  },
+  {
+    "ingredient": "bi heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Nem chua rán"
+    ]
+  },
+  {
+    "ingredient": "bo bap",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "bo lac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bít tết sốt tiêu đen"
+    ]
+  },
+  {
+    "ingredient": "bo phile",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Bò"
+    ]
+  },
+  {
+    "ingredient": "bo t ga o",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh Nam Phổ"
+    ]
+  },
+  {
+    "ingredient": "bo t nghe",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "bo t ngo t",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "bo tai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "boaro",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi mít non chay"
+    ]
+  },
+  {
+    "ingredient": "bong bi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm hến"
+    ]
+  },
+  {
+    "ingredient": "bong cai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "bong dien die n",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "bot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo hành hải sản"
+    ]
+  },
+  {
+    "ingredient": "bot banh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh nậm chay"
+    ]
+  },
+  {
+    "ingredient": "bot banh cuon tron san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh nậm chay"
+    ]
+  },
+  {
+    "ingredient": "bot banh mi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Xúc xích Ý"
+    ]
+  },
+  {
+    "ingredient": "bot banh xeo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo chay"
+    ]
+  },
+  {
+    "ingredient": "bot ca cao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Waffle kem tươi"
+    ]
+  },
+  {
+    "ingredient": "bot cajun",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "bot chuoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh chuối chiên"
+    ]
+  },
+  {
+    "ingredient": "bot den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mochi kem lạnh"
+    ]
+  },
+  {
+    "ingredient": "bot ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chân gà hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "bot ga knorr",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "bot gac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bò thốt nốt"
+    ]
+  },
+  {
+    "ingredient": "bot gao nep",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo quẩy"
+    ]
+  },
+  {
+    "ingredient": "bot gao te",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo quẩy"
+    ]
+  },
+  {
+    "ingredient": "bot gelatin",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sữa chua dẻo trà xanh"
+    ]
+  },
+  {
+    "ingredient": "bot gia vi fajita",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico"
+    ]
+  },
+  {
+    "ingredient": "bot hanh nhan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Macaron"
+    ]
+  },
+  {
+    "ingredient": "bot hanh toi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Xiên que nướng"
+    ]
+  },
+  {
+    "ingredient": "bot hoa hien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Vịt quay Bắc Kinh"
+    ]
+  },
+  {
+    "ingredient": "bot jelly",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau câu phô mai"
+    ]
+  },
+  {
+    "ingredient": "bot kem rose",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki phô mai"
+    ]
+  },
+  {
+    "ingredient": "bot khai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tiêu"
+    ]
+  },
+  {
+    "ingredient": "bot kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cua gạch rang muối"
+    ]
+  },
+  {
+    "ingredient": "bot khoai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật"
+    ]
+  },
+  {
+    "ingredient": "bot lam thach",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tàu hũ trân châu đường đen"
+    ]
+  },
+  {
+    "ingredient": "bot mi ngang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sườn non chiên giòn chay"
+    ]
+  },
+  {
+    "ingredient": "bot my",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh vịt"
+    ]
+  },
+  {
+    "ingredient": "bot nem bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "bot nem bo matna",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "bot nem chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sườn non chiên giòn chay"
+    ]
+  },
+  {
+    "ingredient": "bot nem rau cu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sủi cảo nước"
+    ]
+  },
+  {
+    "ingredient": "bot no/ baking powder",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Lava socola chảy"
+    ]
+  },
+  {
+    "ingredient": "bot que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì nướng kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "bot san/bot gao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh chuối hấp cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "bot sup tomyum",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu Thái Tomyum"
+    ]
+  },
+  {
+    "ingredient": "bot tam kho gion",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gà rán sốt cay"
+    ]
+  },
+  {
+    "ingredient": "bot tan mi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh lọc trần chay"
+    ]
+  },
+  {
+    "ingredient": "bot te",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh cam đường"
+    ]
+  },
+  {
+    "ingredient": "bot vo banh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bao trứng muối"
+    ]
+  },
+  {
+    "ingredient": "bot xa xiu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mỳ xíu chay"
+    ]
+  },
+  {
+    "ingredient": "bot yen mach / bot nguyen cam",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Lava socola chảy"
+    ]
+  },
+  {
+    "ingredient": "bun gao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ sốt ngũ vị"
+    ]
+  },
+  {
+    "ingredient": "bun gao lut",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chay nước lèo"
+    ]
+  },
+  {
+    "ingredient": "bun la",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún đậu mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "bun tau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ bao bố"
+    ]
+  },
+  {
+    "ingredient": "buoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm tấm sườn bì chả"
+    ]
+  },
+  {
+    "ingredient": "bup chuoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng đặc biệt"
+    ]
+  },
+  {
+    "ingredient": "ca bao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt heo chiên xù (Tonkatsu)"
+    ]
+  },
+  {
+    "ingredient": "ca basa",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "ca chem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico"
+    ]
+  },
+  {
+    "ingredient": "ca chua beef",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún sứa"
+    ]
+  },
+  {
+    "ingredient": "ca chua to",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "ca com kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "ca dia den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá dìa nướng muối ớt"
+    ]
+  },
+  {
+    "ingredient": "ca gio",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu hải sản chua cay"
+    ]
+  },
+  {
+    "ingredient": "ca hanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá hanh nướng giấy bạc"
+    ]
+  },
+  {
+    "ingredient": "ca hoi xong khoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "ca mu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá mú hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "ca ngu bao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "ca ngu dong hop",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "ca nuc bong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh ruộng"
+    ]
+  },
+  {
+    "ingredient": "ca phao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "ca phao xanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cà pháo mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "ca phe",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh flan caramel"
+    ]
+  },
+  {
+    "ingredient": "ca phe hoa tan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau câu phô mai"
+    ]
+  },
+  {
+    "ingredient": "ca phi le",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá viên chiên mắm"
+    ]
+  },
+  {
+    "ingredient": "ca phoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cà ri Thái xanh"
+    ]
+  },
+  {
+    "ingredient": "ca ro dong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún cá rô đồng"
+    ]
+  },
+  {
+    "ingredient": "ca ro phi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm chiên cá mặn"
+    ]
+  },
+  {
+    "ingredient": "ca rot chua ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì heo quay"
+    ]
+  },
+  {
+    "ingredient": "ca thu nhat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá thu Nhật kho cà chua"
+    ]
+  },
+  {
+    "ingredient": "ca tim",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cà tím nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "ca trap",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá hanh hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "ca tre",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi xoài cá trê chiên xù"
+    ]
+  },
+  {
+    "ingredient": "cac loai rau thom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở cuốn Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "cai be xanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay"
+    ]
+  },
+  {
+    "ingredient": "cai duong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò lá lốt nướng"
+    ]
+  },
+  {
+    "ingredient": "cai mam",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi hoa chuối chay"
+    ]
+  },
+  {
+    "ingredient": "cai ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "cai thao bap",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "cai thao muoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "cai xoan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu bắp luộc chấm chao"
+    ]
+  },
+  {
+    "ingredient": "cam vang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gan ngỗng áp chảo"
+    ]
+  },
+  {
+    "ingredient": "can",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu hải sản chua cay"
+    ]
+  },
+  {
+    "ingredient": "can tau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "cang tom hum",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Udon hải sản"
+    ]
+  },
+  {
+    "ingredient": "canh ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì hoành thánh"
+    ]
+  },
+  {
+    "ingredient": "cao lau kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cao lầu Hội An"
+    ]
+  },
+  {
+    "ingredient": "caramel",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh flan caramel"
+    ]
+  },
+  {
+    "ingredient": "cha bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì chả bò"
+    ]
+  },
+  {
+    "ingredient": "cha bong ga cay rong bien me trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh waffle"
+    ]
+  },
+  {
+    "ingredient": "cha bong tom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh nậm"
+    ]
+  },
+  {
+    "ingredient": "cha cua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh chả cua"
+    ]
+  },
+  {
+    "ingredient": "cha lua chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chả lụa chay kho tiêu"
+    ]
+  },
+  {
+    "ingredient": "cha nem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả tôm"
+    ]
+  },
+  {
+    "ingredient": "cha que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò bía mặn"
+    ]
+  },
+  {
+    "ingredient": "chan ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chân gà hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "chan ga rut xuong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chân gà sả tắc"
+    ]
+  },
+  {
+    "ingredient": "chan gio",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bắp bò"
+    ]
+  },
+  {
+    "ingredient": "chan nam dong co",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến măng chay"
+    ]
+  },
+  {
+    "ingredient": "chan sua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi sứa trộn"
+    ]
+  },
+  {
+    "ingredient": "chanh ot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún riêu cua đồng"
+    ]
+  },
+  {
+    "ingredient": "chao do",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khâu nhục"
+    ]
+  },
+  {
+    "ingredient": "chao tom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì heo quay"
+    ]
+  },
+  {
+    "ingredient": "chip chip",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chíp chíp hấp sả"
+    ]
+  },
+  {
+    "ingredient": "chocolate",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Macaron"
+    ]
+  },
+  {
+    "ingredient": "chocolate den nau chay/ bot cacao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Lava socola chảy"
+    ]
+  },
+  {
+    "ingredient": "chom chom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Trái cây tô trộn sữa chua"
+    ]
+  },
+  {
+    "ingredient": "chuoi kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sữa chua trân châu"
+    ]
+  },
+  {
+    "ingredient": "coca",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cao lầu Hội An"
+    ]
+  },
+  {
+    "ingredient": "com lut",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm thịt heo rim tôm"
+    ]
+  },
+  {
+    "ingredient": "com nua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm thịt heo rim mực"
+    ]
+  },
+  {
+    "ingredient": "com tam",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm tấm sườn bì chả"
+    ]
+  },
+  {
+    "ingredient": "cot banh bong lan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mousse chanh leo"
+    ]
+  },
+  {
+    "ingredient": "cot chanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo chay"
+    ]
+  },
+  {
+    "ingredient": "cot tac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng chấm sốt tắc"
+    ]
+  },
+  {
+    "ingredient": "creamcheese",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Cheesecake"
+    ]
+  },
+  {
+    "ingredient": "cu ca i kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "cu cai trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hoành thánh nước"
+    ]
+  },
+  {
+    "ingredient": "cu den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh chín tầng mây"
+    ]
+  },
+  {
+    "ingredient": "cu hanh tim",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng trộn chay"
+    ]
+  },
+  {
+    "ingredient": "cu san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay"
+    ]
+  },
+  {
+    "ingredient": "cua bien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh cua"
+    ]
+  },
+  {
+    "ingredient": "cua gach",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cua gạch rang muối"
+    ]
+  },
+  {
+    "ingredient": "cua huynh de",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cua huỳnh đế hấp"
+    ]
+  },
+  {
+    "ingredient": "da",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Milo dầm trân châu"
+    ]
+  },
+  {
+    "ingredient": "da heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm tấm sườn bì chả"
+    ]
+  },
+  {
+    "ingredient": "da heo quay gion",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt heo quay kho cải chua"
+    ]
+  },
+  {
+    "ingredient": "da u ba p",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "da u pho ng",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "da u ro ng",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "dai hoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chân gà hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "dam gao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sủi cảo nước"
+    ]
+  },
+  {
+    "ingredient": "dam hoa qua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tôm Hồ Tây"
+    ]
+  },
+  {
+    "ingredient": "dam ot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến măng chay"
+    ]
+  },
+  {
+    "ingredient": "dam tao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "dau ca bop",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu cá bớp măng chua"
+    ]
+  },
+  {
+    "ingredient": "dau cat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún riêu cua đồng"
+    ]
+  },
+  {
+    "ingredient": "dau dong hop",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico"
+    ]
+  },
+  {
+    "ingredient": "dau hanh trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở tái lăn"
+    ]
+  },
+  {
+    "ingredient": "dau hao chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò xào khổ qua"
+    ]
+  },
+  {
+    "ingredient": "dau hoa lan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "dau hu trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ xào nấm đông cô"
+    ]
+  },
+  {
+    "ingredient": "dau hu trung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ non sốt nấm"
+    ]
+  },
+  {
+    "ingredient": "dau hu vuong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò kho chay"
+    ]
+  },
+  {
+    "ingredient": "dau lang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo lòng"
+    ]
+  },
+  {
+    "ingredient": "dau lang mo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ Tứ Xuyên"
+    ]
+  },
+  {
+    "ingredient": "dau lupin",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "dau mau dieu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bột lọc trần"
+    ]
+  },
+  {
+    "ingredient": "dau nanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm thịt heo rim tôm"
+    ]
+  },
+  {
+    "ingredient": "dau o liu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý sốt kem nấm"
+    ]
+  },
+  {
+    "ingredient": "dau ot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "dau ot sa te",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lạp xưởng nướng đá"
+    ]
+  },
+  {
+    "ingredient": "dau rong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua nấm chay"
+    ]
+  },
+  {
+    "ingredient": "dau tay say",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad ức gà sốt mè rang"
+    ]
+  },
+  {
+    "ingredient": "dau toi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "dau toi phi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến xào cua biển"
+    ]
+  },
+  {
+    "ingredient": "dau trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ sốt cà chua"
+    ]
+  },
+  {
+    "ingredient": "dau tuong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "dau tuong len men",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "dau vang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "dau vung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật"
+    ]
+  },
+  {
+    "ingredient": "de banh ngan lop",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh táo nướng"
+    ]
+  },
+  {
+    "ingredient": "de banh pizza",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Hải sản"
+    ]
+  },
+  {
+    "ingredient": "de banh trung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Tart trứng nướng"
+    ]
+  },
+  {
+    "ingredient": "de pizza",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza 4 loại phô mai"
+    ]
+  },
+  {
+    "ingredient": "den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp hải sản kiểu Ý"
+    ]
+  },
+  {
+    "ingredient": "diem mach",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad diêm mạch"
+    ]
+  },
+  {
+    "ingredient": "do chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm tấm ba rọi nướng"
+    ]
+  },
+  {
+    "ingredient": "doi huyet da",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún đậu mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "dot khoai lang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau lang luộc"
+    ]
+  },
+  {
+    "ingredient": "dot tay gung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "dot tay que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "du du",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "du du xanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi bò khô"
+    ]
+  },
+  {
+    "ingredient": "dua cai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm rang dưa bò"
+    ]
+  },
+  {
+    "ingredient": "dua cai muoi chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt heo quay kho cải chua"
+    ]
+  },
+  {
+    "ingredient": "dua chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bò nướng"
+    ]
+  },
+  {
+    "ingredient": "dua chuot muoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "dua leo baby",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh khổ qua nhồi đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "dua mon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh chưng chiên"
+    ]
+  },
+  {
+    "ingredient": "dua rau muong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi sứa trộn"
+    ]
+  },
+  {
+    "ingredient": "dua soi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh cam đường"
+    ]
+  },
+  {
+    "ingredient": "dui vit",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì vịt tiềm"
+    ]
+  },
+  {
+    "ingredient": "duo ng phe n",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "duoi bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở tái lăn"
+    ]
+  },
+  {
+    "ingredient": "duoi heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "duong an kieng",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Lava socola chảy"
+    ]
+  },
+  {
+    "ingredient": "duong den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tàu hũ trân châu đường đen"
+    ]
+  },
+  {
+    "ingredient": "duong do",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "duong vang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "fresh cream",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Macaron"
+    ]
+  },
+  {
+    "ingredient": "fromage",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm cuộn thịt xông khói nướng"
+    ]
+  },
+  {
+    "ingredient": "ga vien tuy thich",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "gac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh chín tầng mây"
+    ]
+  },
+  {
+    "ingredient": "gan ngong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gan ngỗng áp chảo"
+    ]
+  },
+  {
+    "ingredient": "gao lut",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay"
+    ]
+  },
+  {
+    "ingredient": "gao nhat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm cà ri Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "gau bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở tái"
+    ]
+  },
+  {
+    "ingredient": "gelatin",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mousse chanh leo"
+    ]
+  },
+  {
+    "ingredient": "gelatin bot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Mousse socola"
+    ]
+  },
+  {
+    "ingredient": "gia vi ajiquick bun bo hue",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bò tái bắp"
+    ]
+  },
+  {
+    "ingredient": "gia vi co ban",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bề bề"
+    ]
+  },
+  {
+    "ingredient": "gia vi ham thuoc bac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Trứng vịt lộn hầm ngải cứu"
+    ]
+  },
+  {
+    "ingredient": "gia vi italian seasoning",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý sốt kem nấm"
+    ]
+  },
+  {
+    "ingredient": "gia vi knorr chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm hấp lá sen chay"
+    ]
+  },
+  {
+    "ingredient": "gia vi mi hoanh thanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì vằn thắn xá xíu"
+    ]
+  },
+  {
+    "ingredient": "gia vi my indomie",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì trộn Indomie"
+    ]
+  },
+  {
+    "ingredient": "gia vi nem chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mít non kho tộ chay"
+    ]
+  },
+  {
+    "ingredient": "gia vi pho bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bắp bò"
+    ]
+  },
+  {
+    "ingredient": "gia vi taco",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Taco bò kiểu Mexico"
+    ]
+  },
+  {
+    "ingredient": "giam tao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng cuốn sốt bơ"
+    ]
+  },
+  {
+    "ingredient": "giam trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mousse chanh leo"
+    ]
+  },
+  {
+    "ingredient": "gieng",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu Thái Tomyum"
+    ]
+  },
+  {
+    "ingredient": "gio cha",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh cuốn nóng thịt băm"
+    ]
+  },
+  {
+    "ingredient": "goc hanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Dimsum"
+    ]
+  },
+  {
+    "ingredient": "goc hanh la",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "goc ngo ri",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "granola",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Trái cây tô trộn sữa chua"
+    ]
+  },
+  {
+    "ingredient": "gung mong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "gung to",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở tái lăn"
+    ]
+  },
+  {
+    "ingredient": "ha nh la",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "ha nh ti m",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "hanh boa ro",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Nấm kho rau củ"
+    ]
+  },
+  {
+    "ingredient": "hanh boro",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bèo chay"
+    ]
+  },
+  {
+    "ingredient": "hanh la xat khuc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún măng vịt"
+    ]
+  },
+  {
+    "ingredient": "hanh ngam chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh ruộng"
+    ]
+  },
+  {
+    "ingredient": "hanh phi san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Vẹm xanh nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "hanh po ro",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm hấp lá sen chay"
+    ]
+  },
+  {
+    "ingredient": "hanh poro",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo chay"
+    ]
+  },
+  {
+    "ingredient": "hanh tam",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo lươn"
+    ]
+  },
+  {
+    "ingredient": "hanh tay cat lat nho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "hanh tay nho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mít non trộn tôm thịt"
+    ]
+  },
+  {
+    "ingredient": "hanh tay tim",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Xiên que nướng"
+    ]
+  },
+  {
+    "ingredient": "hanh tim dap dap",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún măng vịt"
+    ]
+  },
+  {
+    "ingredient": "hanh tim kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh ram ít"
+    ]
+  },
+  {
+    "ingredient": "hanh tim lon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh xương chả"
+    ]
+  },
+  {
+    "ingredient": "hanh tim phi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Trứng cút lộn xào me"
+    ]
+  },
+  {
+    "ingredient": "hat ho dao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Brownie hạt óc chó"
+    ]
+  },
+  {
+    "ingredient": "hat luu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "hat mui hoac re mui gia",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở tái"
+    ]
+  },
+  {
+    "ingredient": "hat nem dashi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp rong biển đậu hũ Nhật"
+    ]
+  },
+  {
+    "ingredient": "hat nem hai san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm nướng phô mai"
+    ]
+  },
+  {
+    "ingredient": "hat nen",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh vịt"
+    ]
+  },
+  {
+    "ingredient": "hat thong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh táo nướng"
+    ]
+  },
+  {
+    "ingredient": "hau sua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hàu sữa nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "he la",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún lòng xào nghệ"
+    ]
+  },
+  {
+    "ingredient": "hoa chuoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi hoa chuối chay"
+    ]
+  },
+  {
+    "ingredient": "hoa chuoi bao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá đuối"
+    ]
+  },
+  {
+    "ingredient": "hoa thien ly",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thiên lý xào thịt bò"
+    ]
+  },
+  {
+    "ingredient": "hoanh thanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hoành thánh chiên"
+    ]
+  },
+  {
+    "ingredient": "hoanh thanh la",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hoành thánh nước"
+    ]
+  },
+  {
+    "ingredient": "hoisin sauce",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bò nướng"
+    ]
+  },
+  {
+    "ingredient": "hu ky",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "hu ng lui",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "hu tieu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "hu tieu kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu mực"
+    ]
+  },
+  {
+    "ingredient": "hung lang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún đậu mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "hung que tay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sườn cừu nướng thảo mộc"
+    ]
+  },
+  {
+    "ingredient": "hung que trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá đuối"
+    ]
+  },
+  {
+    "ingredient": "hung thom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò bía mặn"
+    ]
+  },
+  {
+    "ingredient": "huyet ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "kecap sot xi dau ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ramen nước tương"
+    ]
+  },
+  {
+    "ingredient": "kem danh bong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Mousse socola"
+    ]
+  },
+  {
+    "ingredient": "kem dua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kem bơ"
+    ]
+  },
+  {
+    "ingredient": "kem dua/vani",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kem bơ sầu riêng"
+    ]
+  },
+  {
+    "ingredient": "kem trung vi la dua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Tart trứng nướng"
+    ]
+  },
+  {
+    "ingredient": "kem vani",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kem bơ"
+    ]
+  },
+  {
+    "ingredient": "khe",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo"
+    ]
+  },
+  {
+    "ingredient": "khe chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bê thui bóp thấu"
+    ]
+  },
+  {
+    "ingredient": "kho qua rung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khổ qua rừng kho tiêu"
+    ]
+  },
+  {
+    "ingredient": "khoai lang tim",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai môn lệ phố"
+    ]
+  },
+  {
+    "ingredient": "khoai lang/khoai tay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh cam đường"
+    ]
+  },
+  {
+    "ingredient": "khoai mi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh khoai mì nướng"
+    ]
+  },
+  {
+    "ingredient": "khoai mo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh khoai mỡ chiên"
+    ]
+  },
+  {
+    "ingredient": "khoai so",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò kho chay"
+    ]
+  },
+  {
+    "ingredient": "khoai tu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sườn non chiên giòn chay"
+    ]
+  },
+  {
+    "ingredient": "kim chi chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kim chi chay"
+    ]
+  },
+  {
+    "ingredient": "kim chi su hao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm gà quay"
+    ]
+  },
+  {
+    "ingredient": "kimchi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh tương đậu Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "ky tu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh trung thu rau câu"
+    ]
+  },
+  {
+    "ingredient": "la e que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ốc hút cốt dừa"
+    ]
+  },
+  {
+    "ingredient": "la gung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún ốc"
+    ]
+  },
+  {
+    "ingredient": "la hung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad diêm mạch"
+    ]
+  },
+  {
+    "ingredient": "la hung que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gà xào hạt điều kiểu Thái"
+    ]
+  },
+  {
+    "ingredient": "la ngai cuu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Trứng vịt lộn hầm ngải cứu"
+    ]
+  },
+  {
+    "ingredient": "la ngo gai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu cá bớp măng chua"
+    ]
+  },
+  {
+    "ingredient": "la ngo ri",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm nướng phô mai"
+    ]
+  },
+  {
+    "ingredient": "la nguyet que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò hầm rượu vang kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "la parsley",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý sốt kem nấm"
+    ]
+  },
+  {
+    "ingredient": "la phu truc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "la que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu cá bớp măng chua"
+    ]
+  },
+  {
+    "ingredient": "la rau ram",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng trộn"
+    ]
+  },
+  {
+    "ingredient": "la sen",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm hấp lá sen chay"
+    ]
+  },
+  {
+    "ingredient": "la tau hu ki gion",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh lọc trần chay"
+    ]
+  },
+  {
+    "ingredient": "la tau hu ky",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cao lầu Hội An"
+    ]
+  },
+  {
+    "ingredient": "la thyme",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Hải sản"
+    ]
+  },
+  {
+    "ingredient": "la thyme kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt xông khói cuộn măng tây nướng"
+    ]
+  },
+  {
+    "ingredient": "la tia to",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "lap suon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh gối nhân thịt trứng cút"
+    ]
+  },
+  {
+    "ingredient": "lap xuong do",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò bía mặn"
+    ]
+  },
+  {
+    "ingredient": "lap xuong gan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò bía mặn"
+    ]
+  },
+  {
+    "ingredient": "lat ot xat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún măng vịt"
+    ]
+  },
+  {
+    "ingredient": "le",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi rong biển"
+    ]
+  },
+  {
+    "ingredient": "lo xanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "loi ngo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "long ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "long gia heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún lòng xào nghệ"
+    ]
+  },
+  {
+    "ingredient": "long heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún đậu mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "long lon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Dồi sụn nướng"
+    ]
+  },
+  {
+    "ingredient": "ma m ruo c",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh Nam Phổ"
+    ]
+  },
+  {
+    "ingredient": "ma m tom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "mach nha",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm cháy kho quẹt"
+    ]
+  },
+  {
+    "ingredient": "majonnaise",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Crepe nhân mặn"
+    ]
+  },
+  {
+    "ingredient": "mam co gai thai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "mam ngon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "mam tep",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "man thau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "man thau kim chi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "mang kho phia de n",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến măng gà"
+    ]
+  },
+  {
+    "ingredient": "mang nua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả cá chay"
+    ]
+  },
+  {
+    "ingredient": "mang truc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo chay"
+    ]
+  },
+  {
+    "ingredient": "maple syrup",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì nướng kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "mascapone",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Tiramisu"
+    ]
+  },
+  {
+    "ingredient": "mascarpone",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tiramisu"
+    ]
+  },
+  {
+    "ingredient": "mat dua nuoc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò bía mặn"
+    ]
+  },
+  {
+    "ingredient": "matcha",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bò thốt nốt"
+    ]
+  },
+  {
+    "ingredient": "mau da u die u",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "mau ha t dieu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh Nam Phổ"
+    ]
+  },
+  {
+    "ingredient": "mau thuc pham",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh đậu xanh trái cây"
+    ]
+  },
+  {
+    "ingredient": "mayo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng cuốn bơ"
+    ]
+  },
+  {
+    "ingredient": "mayonase",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm đất rang muối"
+    ]
+  },
+  {
+    "ingredient": "me den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh chuối chiên"
+    ]
+  },
+  {
+    "ingredient": "me vang co nguyet",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "men instant",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Yaourt muối"
+    ]
+  },
+  {
+    "ingredient": "mi goi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì ramen"
+    ]
+  },
+  {
+    "ingredient": "mi khoai tay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì tương đen Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "mi korea",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "mi qua ng",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "mi ramen",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ramen nước tương"
+    ]
+  },
+  {
+    "ingredient": "mi soi nho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì lạnh Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "mi tuy chon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì trộn"
+    ]
+  },
+  {
+    "ingredient": "mi udon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì udon"
+    ]
+  },
+  {
+    "ingredient": "mien khoai lang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến xào Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "milo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Milo dầm trân châu"
+    ]
+  },
+  {
+    "ingredient": "mit",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kem ống"
+    ]
+  },
+  {
+    "ingredient": "mo ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm gà Hải Nam"
+    ]
+  },
+  {
+    "ingredient": "mu tat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt nướng BBQ Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "mu tat dijon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sườn cừu nướng thảo mộc"
+    ]
+  },
+  {
+    "ingredient": "mu tat vang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "muc baby",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp hải sản kiểu Ý"
+    ]
+  },
+  {
+    "ingredient": "muc nang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mực nang nướng sa tế"
+    ]
+  },
+  {
+    "ingredient": "muc tam bot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mực chiên giòn"
+    ]
+  },
+  {
+    "ingredient": "muc trung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mực sữa chiên nước mắm"
+    ]
+  },
+  {
+    "ingredient": "mui",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad cá ngừ"
+    ]
+  },
+  {
+    "ingredient": "muoi cham hai san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "muoi ham",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả cá chay"
+    ]
+  },
+  {
+    "ingredient": "muoi hong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì lạnh Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "muoi nem mi goi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh mướp nấu thịt băm"
+    ]
+  },
+  {
+    "ingredient": "muoi nhuyen",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng cuốn bơ"
+    ]
+  },
+  {
+    "ingredient": "muoi tay ninh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng bơ Tây Ninh"
+    ]
+  },
+  {
+    "ingredient": "muoi tieu chanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "muoi toi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad bơ tôm áp chảo"
+    ]
+  },
+  {
+    "ingredient": "muoi tom hanh phi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng cuốn bơ"
+    ]
+  },
+  {
+    "ingredient": "muoi tom tay ninh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mực nướng sa tế"
+    ]
+  },
+  {
+    "ingredient": "muop dang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "muop huong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "mut dau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh rán mật"
+    ]
+  },
+  {
+    "ingredient": "mut mo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh táo nướng"
+    ]
+  },
+  {
+    "ingredient": "my",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì cay 7 cấp độ"
+    ]
+  },
+  {
+    "ingredient": "my indomie",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì trộn Indomie"
+    ]
+  },
+  {
+    "ingredient": "my pasta",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò cuộn phô mai nướng"
+    ]
+  },
+  {
+    "ingredient": "my y",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý hải sản sốt cà chua"
+    ]
+  },
+  {
+    "ingredient": "na m huong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "nam hai san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "nam hau thu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò kho chay"
+    ]
+  },
+  {
+    "ingredient": "nam huong kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "nam linh chi nau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu gà lá é"
+    ]
+  },
+  {
+    "ingredient": "nam loc nhung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo hàu"
+    ]
+  },
+  {
+    "ingredient": "nam meo kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh khổ qua nhồi đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "nam mo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "nam moc nhi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ sốt ngũ vị"
+    ]
+  },
+  {
+    "ingredient": "nam rom kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "nam so",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ non sốt nấm"
+    ]
+  },
+  {
+    "ingredient": "nam tuyet",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp nấm tuyết chay"
+    ]
+  },
+  {
+    "ingredient": "nem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả tôm"
+    ]
+  },
+  {
+    "ingredient": "nep cai hoa vang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Xôi xoài Thái Lan"
+    ]
+  },
+  {
+    "ingredient": "nep lut",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay"
+    ]
+  },
+  {
+    "ingredient": "ngai cuu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo sườn ngải cứu"
+    ]
+  },
+  {
+    "ingredient": "ngheu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Nghêu hấp thái"
+    ]
+  },
+  {
+    "ingredient": "ngheu hoa",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu hải sản chua cay"
+    ]
+  },
+  {
+    "ingredient": "ngheu trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo nghêu"
+    ]
+  },
+  {
+    "ingredient": "ngo sen muoi chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "ngo ta",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "ngo tay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ram cuốn cải"
+    ]
+  },
+  {
+    "ingredient": "ngu vi huong kim hung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "nhan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kem nhãn"
+    ]
+  },
+  {
+    "ingredient": "nhan dau den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bột lọc chiên"
+    ]
+  },
+  {
+    "ingredient": "nhan tom thit",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì bột lọc"
+    ]
+  },
+  {
+    "ingredient": "nhum",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Nhum biển nướng"
+    ]
+  },
+  {
+    "ingredient": "non tom bien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Tôm Thịt"
+    ]
+  },
+  {
+    "ingredient": "nui",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp hải sản kiểu Ý"
+    ]
+  },
+  {
+    "ingredient": "nuo c co t me",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "nuo c du a kho de nuo c du a ngo t ko bi chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "nuo c ma m gu ng",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "nuoc am",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bột lọc trần"
+    ]
+  },
+  {
+    "ingredient": "nuoc chanh leo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau câu ngũ sắc"
+    ]
+  },
+  {
+    "ingredient": "nuoc com",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Nấm kho rau củ"
+    ]
+  },
+  {
+    "ingredient": "nuoc cot dua dac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ốc len xào dừa"
+    ]
+  },
+  {
+    "ingredient": "nuoc cot dua loang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ốc len xào dừa"
+    ]
+  },
+  {
+    "ingredient": "nuoc da",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai lang nướng"
+    ]
+  },
+  {
+    "ingredient": "nuoc dashi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm bò gyudon Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "nuoc dua dao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bò thốt nốt"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò hầm rượu vang kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung ca com",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung ca kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki phô mai"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung nam/san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến măng chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung ninh xuong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "nuoc dung xuong heo hoac ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì vằn thắn xá xíu"
+    ]
+  },
+  {
+    "ingredient": "nuoc ep cam",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "nuoc hen",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún hến"
+    ]
+  },
+  {
+    "ingredient": "nuoc hoa dau biec",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau câu ngũ sắc"
+    ]
+  },
+  {
+    "ingredient": "nuoc la dua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau câu ngũ sắc"
+    ]
+  },
+  {
+    "ingredient": "nuoc leo hu tieu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam chay chua ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam hat nem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ốc móng tay xào me"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam keo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi xoài khô mực"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam loang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sò lông nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam ngon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng cuốn cá nục hấp"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam phu quoc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "nuoc mam tom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh ram ít"
+    ]
+  },
+  {
+    "ingredient": "nuoc mau dieu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bò Huế"
+    ]
+  },
+  {
+    "ingredient": "nuoc mo muoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc nem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm tấm ba rọi nướng"
+    ]
+  },
+  {
+    "ingredient": "nuoc ngot 7up",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bột lọc nhân đậu xanh"
+    ]
+  },
+  {
+    "ingredient": "nuoc ninh xuong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu Thái Tomyum"
+    ]
+  },
+  {
+    "ingredient": "nuoc sot bo kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng kẹp"
+    ]
+  },
+  {
+    "ingredient": "nuoc sot dau nanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì lạnh Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "nuoc sot me rang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad ức gà sốt mè rang"
+    ]
+  },
+  {
+    "ingredient": "nuoc sot tron sot tuong nhat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "nuoc tac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua nấm chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc tuong nhat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "nuoc tuong ot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau lang luộc"
+    ]
+  },
+  {
+    "ingredient": "nuoc tuong tamari",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay"
+    ]
+  },
+  {
+    "ingredient": "nuoc tuong thuong hang hk",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "nuoc tuong tron pho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở khô Gia Lai"
+    ]
+  },
+  {
+    "ingredient": "nuoc vo gao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "o liu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý sốt kem nấm"
+    ]
+  },
+  {
+    "ingredient": "o mai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sữa chua trân châu"
+    ]
+  },
+  {
+    "ingredient": "o t sa te",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "oc bulot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "oc buou ruot vang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "oc cho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Brownie hạt óc chó"
+    ]
+  },
+  {
+    "ingredient": "oc giac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau muống xào tỏi"
+    ]
+  },
+  {
+    "ingredient": "oc heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp cua óc heo"
+    ]
+  },
+  {
+    "ingredient": "oc nhay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ốc nhảy hấp sả"
+    ]
+  },
+  {
+    "ingredient": "olive",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad Hy Lạp"
+    ]
+  },
+  {
+    "ingredient": "oregano",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad Hy Lạp"
+    ]
+  },
+  {
+    "ingredient": "oregano kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hồ lô nướng"
+    ]
+  },
+  {
+    "ingredient": "ot bot cayenne",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "ot bot kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gan rim tỏi ớt"
+    ]
+  },
+  {
+    "ingredient": "ot chinsu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý sốt bò băm"
+    ]
+  },
+  {
+    "ingredient": "ot chuong xanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò lúc lắc khoai tây"
+    ]
+  },
+  {
+    "ingredient": "ot moi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng đặc biệt"
+    ]
+  },
+  {
+    "ingredient": "ot rim",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng cuốn bơ"
+    ]
+  },
+  {
+    "ingredient": "ot tuong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi bò khô"
+    ]
+  },
+  {
+    "ingredient": "ot xat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lạp Thái"
+    ]
+  },
+  {
+    "ingredient": "pa te gan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Nem nướng Nha Trang"
+    ]
+  },
+  {
+    "ingredient": "pheo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún đậu mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "phi le bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào bò"
+    ]
+  },
+  {
+    "ingredient": "pho kho gia lai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở khô Gia Lai"
+    ]
+  },
+  {
+    "ingredient": "pho mai bo cuoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bông lan trứng muối"
+    ]
+  },
+  {
+    "ingredient": "pho mai brie",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza 4 loại phô mai"
+    ]
+  },
+  {
+    "ingredient": "pho mai emmental",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza 4 loại phô mai"
+    ]
+  },
+  {
+    "ingredient": "pho mai gouda",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza 4 loại phô mai"
+    ]
+  },
+  {
+    "ingredient": "pho mai parmesan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì nướng bơ tỏi phô mai chảy"
+    ]
+  },
+  {
+    "ingredient": "pho mai soi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm nướng phô mai"
+    ]
+  },
+  {
+    "ingredient": "pho san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "phomai bo cuoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm nướng phô mai"
+    ]
+  },
+  {
+    "ingredient": "quat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún gạo lứt trộn ức gà"
+    ]
+  },
+  {
+    "ingredient": "quay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo quẩy"
+    ]
+  },
+  {
+    "ingredient": "que thom",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu mực"
+    ]
+  },
+  {
+    "ingredient": "que tre",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Xiên que nướng"
+    ]
+  },
+  {
+    "ingredient": "ram tom dat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ram tôm đất Bình Định"
+    ]
+  },
+  {
+    "ingredient": "rang muc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Răng mực xào bơ tỏi"
+    ]
+  },
+  {
+    "ingredient": "rau bo ngot nhat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh rau ngót nấu tôm băm"
+    ]
+  },
+  {
+    "ingredient": "rau cai chip",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở bắp bò"
+    ]
+  },
+  {
+    "ingredient": "rau can nuoc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún cá rô đồng"
+    ]
+  },
+  {
+    "ingredient": "rau can tau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến xào cua biển"
+    ]
+  },
+  {
+    "ingredient": "rau cat hat luu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "rau den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm mực nhồi thịt sốt cà"
+    ]
+  },
+  {
+    "ingredient": "rau hon hop",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá đuối nướng sả nghệ"
+    ]
+  },
+  {
+    "ingredient": "rau lang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau lang xào tỏi"
+    ]
+  },
+  {
+    "ingredient": "rau muc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm niêu hải sản"
+    ]
+  },
+  {
+    "ingredient": "rau muong bao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "rau ngo gai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "rau om",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá lóc"
+    ]
+  },
+  {
+    "ingredient": "rau say",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì cay 7 cấp độ"
+    ]
+  },
+  {
+    "ingredient": "rau thi la",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lẩu nấm chay"
+    ]
+  },
+  {
+    "ingredient": "rau xanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sủi cảo nước"
+    ]
+  },
+  {
+    "ingredient": "re mui",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún mắm tai mui"
+    ]
+  },
+  {
+    "ingredient": "rong bien la kim",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "rong toc tien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp bắp non tóc tiên chay"
+    ]
+  },
+  {
+    "ingredient": "ruoc ga/ heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bông lan trứng muối"
+    ]
+  },
+  {
+    "ingredient": "ruot hau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo hàu"
+    ]
+  },
+  {
+    "ingredient": "ruot oc buou dong lanh hang viet nam xuat khau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún ốc"
+    ]
+  },
+  {
+    "ingredient": "ruou nau an",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "ruou sake",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm bò gyudon Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "sa dap dap",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún bò Huế"
+    ]
+  },
+  {
+    "ingredient": "sa te tom tu lam",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún dọc mùng"
+    ]
+  },
+  {
+    "ingredient": "sake",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật"
+    ]
+  },
+  {
+    "ingredient": "sate",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng phơi sương muối nhuyễn"
+    ]
+  },
+  {
+    "ingredient": "say an lien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng bơ Tây Ninh"
+    ]
+  },
+  {
+    "ingredient": "shortening",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bao trứng muối"
+    ]
+  },
+  {
+    "ingredient": "siro dau tay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Rau câu ngũ sắc"
+    ]
+  },
+  {
+    "ingredient": "siro duong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mực sữa chiên nước mắm"
+    ]
+  },
+  {
+    "ingredient": "siro duong ngo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "snack ot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "so co la",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Mousse socola"
+    ]
+  },
+  {
+    "ingredient": "so deo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sò lông nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "so duong bi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ốc nhảy hấp sả"
+    ]
+  },
+  {
+    "ingredient": "so huyet",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sò huyết rang me"
+    ]
+  },
+  {
+    "ingredient": "so long",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sò lông nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "so lua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sò lụa hấp sả"
+    ]
+  },
+  {
+    "ingredient": "soi pho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở xào mềm"
+    ]
+  },
+  {
+    "ingredient": "soi pho kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pad Thái"
+    ]
+  },
+  {
+    "ingredient": "sot bbq",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ba chỉ bò cuộn nấm kim châm nướng"
+    ]
+  },
+  {
+    "ingredient": "sot bbq han quoc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm chiên kim chi bò Mỹ"
+    ]
+  },
+  {
+    "ingredient": "sot bo hoang kim",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "sot bo toi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "sot ca",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Xúc xích Ý"
+    ]
+  },
+  {
+    "ingredient": "sot ca ri nhat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm cà ri Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "sot ca ri xanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cà ri Thái xanh"
+    ]
+  },
+  {
+    "ingredient": "sot caesar",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad Caesar"
+    ]
+  },
+  {
+    "ingredient": "sot cham thit",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ba chỉ bò cuộn nấm kim châm nướng"
+    ]
+  },
+  {
+    "ingredient": "sot dau nanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật"
+    ]
+  },
+  {
+    "ingredient": "sot ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gà xào bắp cải phô mai Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "sot kem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza 4 loại phô mai"
+    ]
+  },
+  {
+    "ingredient": "sot kho da dung",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sườn non kho thơm"
+    ]
+  },
+  {
+    "ingredient": "sot magoner",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì kẹp xúc xích"
+    ]
+  },
+  {
+    "ingredient": "sot mu tac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sandwich cá hồi xông khói"
+    ]
+  },
+  {
+    "ingredient": "sot mu tat mat ong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "sot nau bo luc lac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò xào cần tỏi"
+    ]
+  },
+  {
+    "ingredient": "sot okonomiyaki",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "sot ot gochujang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gà xào bắp cải phô mai Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "sot pesto",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý sốt Pesto"
+    ]
+  },
+  {
+    "ingredient": "sot sate",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pasta sốt hải sản cay"
+    ]
+  },
+  {
+    "ingredient": "sot soja",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật"
+    ]
+  },
+  {
+    "ingredient": "sot sua chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "sot tac",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tráng chấm sốt tắc"
+    ]
+  },
+  {
+    "ingredient": "sot tartare",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "sot teriyaki",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cá hồi nướng sốt Teriyaki"
+    ]
+  },
+  {
+    "ingredient": "sot thai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Nghêu hấp thái"
+    ]
+  },
+  {
+    "ingredient": "sot thit bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò xào cần tỏi"
+    ]
+  },
+  {
+    "ingredient": "sot tieu den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bít tết sốt tiêu đen"
+    ]
+  },
+  {
+    "ingredient": "sot tron goi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi rong biển"
+    ]
+  },
+  {
+    "ingredient": "sot tuong den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì tương đen Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "sot tuong den jajang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì udon"
+    ]
+  },
+  {
+    "ingredient": "sot tuong ot ngot kieu han",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "sot xao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò lúc lắc khoai tây"
+    ]
+  },
+  {
+    "ingredient": "sot xao mien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến xào cua biển"
+    ]
+  },
+  {
+    "ingredient": "sot xi dau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ramen nước tương"
+    ]
+  },
+  {
+    "ingredient": "sot xi muoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây múi cau nướng"
+    ]
+  },
+  {
+    "ingredient": "sot yakitori",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đùi gà nướng kiểu Nhật"
+    ]
+  },
+  {
+    "ingredient": "sua an lien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún sứa"
+    ]
+  },
+  {
+    "ingredient": "sua beo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì kẹp xúc xích"
+    ]
+  },
+  {
+    "ingredient": "sua bot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì kẹp xúc xích"
+    ]
+  },
+  {
+    "ingredient": "sua chua khong duong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây chiên"
+    ]
+  },
+  {
+    "ingredient": "sua cong thuc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh tart trứng"
+    ]
+  },
+  {
+    "ingredient": "sua dau nanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tàu hũ trân châu đường đen"
+    ]
+  },
+  {
+    "ingredient": "sua dau nanh khong duong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì lạnh Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "sui cao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sủi cảo nước"
+    ]
+  },
+  {
+    "ingredient": "suo n non",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh Nam Phổ"
+    ]
+  },
+  {
+    "ingredient": "suon cuu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Sườn cừu nướng thảo mộc"
+    ]
+  },
+  {
+    "ingredient": "suon heo non",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún riêu cua đồng"
+    ]
+  },
+  {
+    "ingredient": "suon sun",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Dồi sụn nướng"
+    ]
+  },
+  {
+    "ingredient": "suong sao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh flan caramel"
+    ]
+  },
+  {
+    "ingredient": "sup lo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò cuộn phô mai nướng"
+    ]
+  },
+  {
+    "ingredient": "syrup thot not",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gỏi đu đủ Thái"
+    ]
+  },
+  {
+    "ingredient": "tai heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tai heo ngâm mắm tắc"
+    ]
+  },
+  {
+    "ingredient": "tan o",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "tao be",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "tao do",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gan ngỗng áp chảo"
+    ]
+  },
+  {
+    "ingredient": "tau hu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mỳ xíu chay"
+    ]
+  },
+  {
+    "ingredient": "tau hu non",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh flan caramel"
+    ]
+  },
+  {
+    "ingredient": "tau xi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Chân gà hấp xì dầu"
+    ]
+  },
+  {
+    "ingredient": "tep nho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bột lọc"
+    ]
+  },
+  {
+    "ingredient": "than",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh kẹp trứng cút"
+    ]
+  },
+  {
+    "ingredient": "than uong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kimbap truyền thống"
+    ]
+  },
+  {
+    "ingredient": "thao qua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở bò gân"
+    ]
+  },
+  {
+    "ingredient": "thinh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm tấm sườn bì chả"
+    ]
+  },
+  {
+    "ingredient": "thinh gao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bì cuốn chay"
+    ]
+  },
+  {
+    "ingredient": "thit ba chi heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt luộc chấm mắm nêm"
+    ]
+  },
+  {
+    "ingredient": "thit ba chi hoi mo chut",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "thit ba roi xong khoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò hầm rượu vang kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "thit be thui",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bê thui bóp thấu"
+    ]
+  },
+  {
+    "ingredient": "thit bo my",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Beefsteak bò Mỹ"
+    ]
+  },
+  {
+    "ingredient": "thit bo phile",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò lúc lắc khoai tây"
+    ]
+  },
+  {
+    "ingredient": "thit chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Lạp Thái"
+    ]
+  },
+  {
+    "ingredient": "thit chi chay mua san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xào rau củ"
+    ]
+  },
+  {
+    "ingredient": "thit cot let",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm cà ri Nhật Bản"
+    ]
+  },
+  {
+    "ingredient": "thit cua bien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến xào cua biển"
+    ]
+  },
+  {
+    "ingredient": "thit de chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò kho chay"
+    ]
+  },
+  {
+    "ingredient": "thit de suon lan gan riem than bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "thit ghe",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh ghẹ"
+    ]
+  },
+  {
+    "ingredient": "thit hen",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm hến"
+    ]
+  },
+  {
+    "ingredient": "thit heo co mo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh cuốn"
+    ]
+  },
+  {
+    "ingredient": "thit heo xong khoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm cuộn thịt xông khói nướng"
+    ]
+  },
+  {
+    "ingredient": "thit hun khoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt xông khói cuộn măng tây nướng"
+    ]
+  },
+  {
+    "ingredient": "thit mo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún ốc"
+    ]
+  },
+  {
+    "ingredient": "thit mui heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún mắm tai mui"
+    ]
+  },
+  {
+    "ingredient": "thit nac dam",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt heo chiên xù (Tonkatsu)"
+    ]
+  },
+  {
+    "ingredient": "thit nac rang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cơm thịt heo rim tôm"
+    ]
+  },
+  {
+    "ingredient": "thit nguoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Phô mai"
+    ]
+  },
+  {
+    "ingredient": "thit san",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "thit tai heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún mắm tai mui"
+    ]
+  },
+  {
+    "ingredient": "thit than bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở xào mềm"
+    ]
+  },
+  {
+    "ingredient": "thit vai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh kim chi thịt heo đậu hũ"
+    ]
+  },
+  {
+    "ingredient": "thit vai heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả tôm"
+    ]
+  },
+  {
+    "ingredient": "thit xa xiu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì xá xíu"
+    ]
+  },
+  {
+    "ingredient": "thit xao hanh tay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở xào giòn"
+    ]
+  },
+  {
+    "ingredient": "thot not",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh bò thốt nốt"
+    ]
+  },
+  {
+    "ingredient": "tia",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún ốc"
+    ]
+  },
+  {
+    "ingredient": "tia to",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Gà xào bắp cải phô mai Hàn Quốc"
+    ]
+  },
+  {
+    "ingredient": "tieu bot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Miến xào cua"
+    ]
+  },
+  {
+    "ingredient": "tieu chanh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún riêu ốc"
+    ]
+  },
+  {
+    "ingredient": "tieu den",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bít tết sốt tiêu đen"
+    ]
+  },
+  {
+    "ingredient": "tim heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún đậu mắm tôm"
+    ]
+  },
+  {
+    "ingredient": "tinh bot bap",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phô mai que"
+    ]
+  },
+  {
+    "ingredient": "tinh bot ngo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Cheesecake"
+    ]
+  },
+  {
+    "ingredient": "tinh chat vanila",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Cheesecake"
+    ]
+  },
+  {
+    "ingredient": "tinh dau hoa buoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh dẻo nhân đậu xanh"
+    ]
+  },
+  {
+    "ingredient": "to i",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "to i o t",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "toc tien",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp cua óc heo"
+    ]
+  },
+  {
+    "ingredient": "toi co don",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh chua cá đuối"
+    ]
+  },
+  {
+    "ingredient": "toi ngam chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hủ tiếu Nam Vang"
+    ]
+  },
+  {
+    "ingredient": "toi nhuyen de tach rieng ra",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "tom cang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm càng xanh nướng mọi"
+    ]
+  },
+  {
+    "ingredient": "tom chay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh ram ít"
+    ]
+  },
+  {
+    "ingredient": "tom chua",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Thịt luộc tôm chua"
+    ]
+  },
+  {
+    "ingredient": "tom hum dat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm hùm đất sốt Cajun"
+    ]
+  },
+  {
+    "ingredient": "tom lon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Bò"
+    ]
+  },
+  {
+    "ingredient": "tom lot vo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Ý"
+    ]
+  },
+  {
+    "ingredient": "tom mu ni",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm mũ ni nướng bơ tỏi"
+    ]
+  },
+  {
+    "ingredient": "top mo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cà tím nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "top mo heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở khô Gia Lai"
+    ]
+  },
+  {
+    "ingredient": "trai cay",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh Mousse socola"
+    ]
+  },
+  {
+    "ingredient": "tru ng ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún thang"
+    ]
+  },
+  {
+    "ingredient": "trung bach thao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Cháo lòng"
+    ]
+  },
+  {
+    "ingredient": "trung cut lon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Trứng cút lộn xào me"
+    ]
+  },
+  {
+    "ingredient": "trung ga boc vo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Gà ta"
+    ]
+  },
+  {
+    "ingredient": "trung ga ta",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp cua óc heo"
+    ]
+  },
+  {
+    "ingredient": "trung non",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "trung vit",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Trứng đúc thịt băm"
+    ]
+  },
+  {
+    "ingredient": "tteokbokki",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki lề đường"
+    ]
+  },
+  {
+    "ingredient": "tu hai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tu hài nướng mỡ hành"
+    ]
+  },
+  {
+    "ingredient": "tuong ca ketchup",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Phô mai"
+    ]
+  },
+  {
+    "ingredient": "tuong miso",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp rong biển đậu hũ Nhật"
+    ]
+  },
+  {
+    "ingredient": "tuong ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì heo quay"
+    ]
+  },
+  {
+    "ingredient": "tuong ok",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "tuong ot han quoc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tokbokki phô mai"
+    ]
+  },
+  {
+    "ingredient": "tuong ot ngot",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh mì chả bò"
+    ]
+  },
+  {
+    "ingredient": "tuong ot xao",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả cá chay"
+    ]
+  },
+  {
+    "ingredient": "tuong xi muoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây múi cau nướng"
+    ]
+  },
+  {
+    "ingredient": "udon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Udon hải sản"
+    ]
+  },
+  {
+    "ingredient": "vang dau",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Kim chi chay"
+    ]
+  },
+  {
+    "ingredient": "vani/dau chuoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh trung thu rau câu"
+    ]
+  },
+  {
+    "ingredient": "vem",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh ngao nấu dứa"
+    ]
+  },
+  {
+    "ingredient": "vi ca",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Súp vi cá"
+    ]
+  },
+  {
+    "ingredient": "vi tinh",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Tôm đất rang muối"
+    ]
+  },
+  {
+    "ingredient": "vien nau pho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở gà"
+    ]
+  },
+  {
+    "ingredient": "vien sup bo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò hầm rượu vang kiểu Pháp"
+    ]
+  },
+  {
+    "ingredient": "vien sup ga",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh ngao nấu dứa"
+    ]
+  },
+  {
+    "ingredient": "vung trang",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh cam đường"
+    ]
+  },
+  {
+    "ingredient": "wasabi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Poke Bowl cá hồi (Healthy)"
+    ]
+  },
+  {
+    "ingredient": "xa",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở tái"
+    ]
+  },
+  {
+    "ingredient": "xa la ch",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Mì Quảng Vịt"
+    ]
+  },
+  {
+    "ingredient": "xa lach romaine",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Salad Caesar"
+    ]
+  },
+  {
+    "ingredient": "xa lat",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh xèo gạo lứt chay"
+    ]
+  },
+  {
+    "ingredient": "xa lay phan goc",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Phở sốt vang"
+    ]
+  },
+  {
+    "ingredient": "xa xiu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Xôi gà"
+    ]
+  },
+  {
+    "ingredient": "xi muoi",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Khoai tây múi cau nướng"
+    ]
+  },
+  {
+    "ingredient": "xi muoi thai lan",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Ghẹ rang me"
+    ]
+  },
+  {
+    "ingredient": "xoai que",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Xôi xoài Thái Lan"
+    ]
+  },
+  {
+    "ingredient": "xot bo kho",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bò kho chay"
+    ]
+  },
+  {
+    "ingredient": "xot thit sa",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún chả Hà Nội"
+    ]
+  },
+  {
+    "ingredient": "xuc xich mini",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Xúc xích Ý"
+    ]
+  },
+  {
+    "ingredient": "xuc xich pho mai",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Pizza Xúc xích Ý"
+    ]
+  },
+  {
+    "ingredient": "xuong",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Hoành thánh nước"
+    ]
+  },
+  {
+    "ingredient": "xuong duoi heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Canh mít non nấu tôm"
+    ]
+  },
+  {
+    "ingredient": "xuong lon",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bún ốc"
+    ]
+  },
+  {
+    "ingredient": "xuong sun heo",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Bánh canh xương chả"
+    ]
+  },
+  {
+    "ingredient": "xuyen tieu",
+    "count_in_foods": 1,
+    "sample_foods": [
+      "Đậu hũ Tứ Xuyên"
+    ]
+  }
+]

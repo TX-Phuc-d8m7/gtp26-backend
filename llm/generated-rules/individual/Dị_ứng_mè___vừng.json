@@ -1,0 +1,17 @@
+{
+  "name": "Dị ứng mè / vừng",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [],
+  "prefer_soft_tag": [],
+  "exclude_ingredient": [
+    "me",
+    "dau me",
+    "me rang",
+    "vung",
+    "vung rang",
+    "me den",
+    "sot tuong me",
+    "nuoc sot me rang"
+  ],
+  "prefer_ingredient": []
+}
