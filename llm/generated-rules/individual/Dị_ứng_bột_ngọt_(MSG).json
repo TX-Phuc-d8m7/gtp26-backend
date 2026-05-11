@@ -1,0 +1,36 @@
+{
+  "name": "Dị ứng bột ngọt (MSG)",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Đậm đà",
+    "Thực phẩm chế biến sẵn",
+    "Thức ăn nhanh"
+  ],
+  "prefer_soft_tag": [
+    "Thanh đạm",
+    "Healthy / Eat Clean",
+    "Dễ tiêu"
+  ],
+  "exclude_ingredient": [
+    "bot ngot",
+    "mi chinh",
+    "hat nem",
+    "bot nem",
+    "gia vi",
+    "bot nem chay",
+    "hat nem chay"
+  ],
+  "prefer_ingredient": [
+    "muoi",
+    "duong",
+    "tieu",
+    "hanh",
+    "toi",
+    "gung",
+    "sa",
+    "nuoc mam",
+    "nuoc tuong",
+    "chanh",
+    "ot"
+  ]
+}

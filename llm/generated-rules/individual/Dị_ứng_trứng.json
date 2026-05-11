@@ -1,0 +1,60 @@
+{
+  "name": "Dị ứng trứng",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Bánh ngọt",
+    "Thực phẩm chế biến sẵn",
+    "Chiên / Rán",
+    "Từ sữa / Phô mai"
+  ],
+  "prefer_soft_tag": [
+    "Món chay",
+    "Giàu đạm",
+    "Hấp / Luộc",
+    "Kho/Rim",
+    "Xào",
+    "Lẩu",
+    "Súp"
+  ],
+  "exclude_ingredient": [
+    "trung",
+    "trung ga",
+    "trung cut",
+    "trung vit",
+    "trung vit lon",
+    "trung cut lon",
+    "trung muoi",
+    "trung bach thao",
+    "trung non",
+    "long do trung",
+    "long trang trung",
+    "cha trung",
+    "mayonnaise",
+    "sot mayonnaise",
+    "mi trung",
+    "banh flan",
+    "kem",
+    "sot kem",
+    "banh mi sandwich",
+    "banh sandwich",
+    "banh lady finger",
+    "long do trung ga",
+    "trung ga boc vo",
+    "trung ga ta",
+    "pate",
+    "xuc xich",
+    "lap xuong",
+    "bot xu",
+    "sot"
+  ],
+  "prefer_ingredient": [
+    "thit bo",
+    "thit heo",
+    "thit ga",
+    "tom",
+    "dau hu",
+    "nam",
+    "gao",
+    "bun"
+  ]
+}

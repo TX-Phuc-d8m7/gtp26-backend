@@ -1,0 +1,59 @@
+{
+  "name": "Vết thương hở / Mới phẫu thuật",
+  "tag_type": "STATUS",
+  "exclude_soft_tag": [
+    "Sống/Chín tái",
+    "Cay",
+    "Hải sản",
+    "Nhiều dầu mỡ / Calo cao",
+    "Khó tiêu / Nặng bụng",
+    "Chiên / Rán",
+    "Nướng",
+    "Gỏi / Nộm / Trộn"
+  ],
+  "prefer_soft_tag": [
+    "Giàu đạm",
+    "Giàu vitamin",
+    "Dễ tiêu",
+    "Mềm",
+    "Hấp / Luộc",
+    "Hầm / Ninh",
+    "Súp",
+    "Cháo",
+    "Thanh đạm"
+  ],
+  "exclude_ingredient": [
+    "rau muong",
+    "thit bo",
+    "thit ga",
+    "nep",
+    "gao nep",
+    "tom",
+    "cua",
+    "muc",
+    "oc",
+    "so huyet",
+    "ghe",
+    "trung",
+    "mam tom",
+    "mam ruoc",
+    "ot",
+    "tieu",
+    "sa te",
+    "ruou trang",
+    "bia",
+    "kim chi"
+  ],
+  "prefer_ingredient": [
+    "thit heo",
+    "ca loc",
+    "thit nac",
+    "xuong heo",
+    "dau hu",
+    "nam",
+    "ca rot",
+    "bi do",
+    "cai",
+    "gung"
+  ]
+}

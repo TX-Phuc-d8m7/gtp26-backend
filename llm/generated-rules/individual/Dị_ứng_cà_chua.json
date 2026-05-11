@@ -1,0 +1,27 @@
+{
+  "name": "Dị ứng cà chua",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Thực phẩm chế biến sẵn",
+    "Nước sền sệt",
+    "Chua",
+    "Thức ăn nhanh"
+  ],
+  "prefer_soft_tag": [
+    "Thanh đạm",
+    "Hấp / Luộc",
+    "Món khô",
+    "Healthy / Eat Clean"
+  ],
+  "exclude_ingredient": [
+    "ca chua",
+    "ca chua bi",
+    "tuong ca",
+    "tuong ca chua",
+    "sot ca chua",
+    "ketchup",
+    "ca chua to",
+    "ca chua beef"
+  ],
+  "prefer_ingredient": []
+}

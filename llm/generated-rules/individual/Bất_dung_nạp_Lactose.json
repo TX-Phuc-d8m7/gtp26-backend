@@ -1,0 +1,56 @@
+{
+  "name": "Bất dung nạp Lactose",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Từ sữa / Phô mai",
+    "Béo ngậy",
+    "Bánh ngọt"
+  ],
+  "prefer_soft_tag": [
+    "Dễ tiêu",
+    "Thanh đạm",
+    "Món chay",
+    "Healthy / Eat Clean"
+  ],
+  "exclude_ingredient": [
+    "sua",
+    "pho mai",
+    "bo",
+    "kem",
+    "sua dac",
+    "sua chua",
+    "whipping cream",
+    "mayonnaise",
+    "sot mayonaise",
+    "cream cheese",
+    "mascarpone",
+    "fromage",
+    "pho mai mozzarella",
+    "bo thuc vat",
+    "sua bot",
+    "sua beo",
+    "kem vani",
+    "banh flan",
+    "sot kem",
+    "sua khong duong",
+    "sua chua khong duong",
+    "sua cong thuc",
+    "pho mai bo cuoi",
+    "pho mai brie",
+    "pho mai emmental",
+    "pho mai gouda",
+    "pho mai parmesan",
+    "pho mai soi",
+    "fresh cream",
+    "kem danh bong",
+    "bo man",
+    "bo lat",
+    "sot caesar"
+  ],
+  "prefer_ingredient": [
+    "sua dau nanh",
+    "nuoc cot dua",
+    "cot dua",
+    "sua dau nanh khong duong"
+  ]
+}

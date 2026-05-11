@@ -26,3 +26,4 @@ class SearchResponse(BaseModel):
     query: str
     ai_insight: AIInsight
     results: List[FoodResult]
+    ai_response: Optional[str] = None  # Lời tư vấn tự nhiên từ Post-processing Agent

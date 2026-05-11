@@ -8,7 +8,7 @@ async function run() {
     scopes: 'https://www.googleapis.com/auth/cloud-platform'
   });
   const client = await auth.getClient();
-  const projectId = process.env.PROJECT_ID || 'project-1d1e4159-a35c-4ba1-9c9';
+  const projectId = process.env.PROJECT_ID;
   const location = 'us-central1';
 
   const url = `https://${location}-aiplatform.googleapis.com/v1/projects/${projectId}/locations/${location}/publishers/google/models/text-embedding-004:predict`;

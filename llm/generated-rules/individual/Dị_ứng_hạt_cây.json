@@ -1,0 +1,23 @@
+{
+  "name": "Dị ứng hạt cây",
+  "tag_type": "ALLERGY",
+  "exclude_soft_tag": [
+    "Bánh ngọt"
+  ],
+  "prefer_soft_tag": [],
+  "exclude_ingredient": [
+    "dau dieu",
+    "hat dieu",
+    "hat ho dao",
+    "hat de",
+    "hat thong",
+    "oc cho",
+    "bot hanh nhan",
+    "dau phong",
+    "dau phong rang",
+    "bo dau phong",
+    "dau phung",
+    "lac"
+  ],
+  "prefer_ingredient": []
+}
