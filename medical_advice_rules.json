@@ -1,146 +1,886 @@
 {
-  "Cao huyết áp": {
-    "general_advice": "Ưu tiên món ăn nhạt muối, nhiều rau xanh, hạn chế mỡ động vật và thực phẩm chế biến sẵn.",
+  "Dị ứng động vật giáp xác": {
+    "general_advice": "Tránh tuyệt đối tôm, cua, ghẹ, bề bề và các chế phẩm liên quan. Khi ăn ngoài, cần hỏi kỹ nước dùng, nước chấm, topping và nguy cơ dùng chung dụng cụ chế biến.",
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
+        "trigger_value": "Hải sản",
+        "warning_text": "Món có nhóm hải sản nên cần hỏi rõ có tôm, cua, ghẹ, bề bề, chả tôm, chả cua hoặc nước hầm từ giáp xác không. Nếu quán không chắc thành phần, nên đổi sang món không hải sản."
+      },
+      {
+        "trigger_type": "soft_tag",
         "trigger_value": "Món nước",
-        "warning_text": "Dặn quán không cho nước béo, không húp nước lèo/nước hầm xương vì rất nhiều muối và mỡ. Chỉ ăn phần cái (topping) và bún/phở, xin thêm rau sống ăn kèm."
-      },
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Mặn",
-        "warning_text": "Yêu cầu quán nêm nhạt hơn bình thường, không thêm nước mắm hoặc muối ra bàn. Nếu có chấm, hỏi xin loại tương ít mặn hoặc pha loãng."
-      },
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Thực phẩm chế biến sẵn",
-        "warning_text": "Thực phẩm chế biến sẵn (xúc xích, chả, pate, đồ hộp) chứa lượng muối bảo quản rất cao. Nếu ăn, chỉ lấy một lượng nhỏ làm topping và đừng ăn cả phần nước đi kèm."
+        "warning_text": "Nước dùng món nước có thể được ninh chung với vỏ tôm, cua hoặc hải sản. Hãy hỏi kỹ nước lèo/nước hầm, không chỉ nhìn topping trên mặt món."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Lẩu",
-        "warning_text": "Tuyệt đối không húp nước lẩu, đặc biệt lẩu mắm, lẩu thái chứa cực nhiều muối và gia vị kích thích. Chỉ nhúng rau, thịt nạc và ăn bún/mì nhạt."
+        "warning_text": "Lẩu rất dễ dùng chung nước dùng hoặc dụng cụ với tôm cua. Nếu có dị ứng giáp xác, chỉ chọn nồi riêng hoàn toàn và nước lẩu không có nền hải sản."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ẩm thực đường phố",
+        "warning_text": "Quán đường phố thường dùng chung vỉ nướng, chảo, muỗng gắp cho nhiều loại hải sản. Hãy hỏi về nguy cơ nhiễm chéo trước khi ăn."
       }
     ]
   },
-  "Viêm loét dạ dày": {
-    "general_advice": "Ăn chín kỹ, mềm, không chua không cay, chia nhỏ bữa ăn và ăn đúng giờ để giảm tiết axit dạ dày.",
+  "Dị ứng động vật thân mềm": {
+    "general_advice": "Tránh mực, bạch tuộc, ốc, nghêu, sò, hàu, hến và nước dùng/chế phẩm từ các nguyên liệu này. Cần kiểm tra cả topping lẫn nước chấm.",
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Chua",
-        "warning_text": "Dặn quán bỏ hoàn toàn chanh, me, dấm, cà chua ra khỏi món. Nếu là nước chấm, hỏi loại không chua hoặc chỉ chấm một lượng rất ít. Các món gỏi trộn dấm nên yêu cầu giảm chua tối đa."
+        "trigger_value": "Hải sản",
+        "warning_text": "Món hải sản có thể chứa mực, ốc, nghêu, sò hoặc nước luộc từ thân mềm. Hãy hỏi cụ thể từng loại hải sản trong món trước khi ăn."
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Cay",
-        "warning_text": "Yêu cầu quán không cho ớt, tiêu, tương ớt vào món. Nếu món mặc định có ớt (như bún bò Huế), dặn rõ 'không ớt' ngay khi gọi để bếp chế biến riêng, không phải nhặt ớt ra sau."
-      },
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Chiên / Rán",
-        "warning_text": "Dầu ăn nhiều sẽ làm dạ dày tiết nhiều axit hơn. Nếu phải ăn đồ chiên, ăn kèm rất nhiều rau luộc để trung hòa, và ăn chậm, nhai kỹ để giảm tải cho dạ dày."
-      },
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
-        "warning_text": "Thịt/cá chín tái hoặc sống (sashimi, gỏi sống) có thể gây kích ứng niêm mạc dạ dày đang viêm. Yêu cầu nhúng kỹ trong lẩu hoặc chọn phần chín hoàn toàn, tránh gỏi sống."
-      },
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Sống / Chín tái",
-        "warning_text": "Thịt/cá chín tái hoặc sống (sashimi, gỏi sống) có thể gây kích ứng niêm mạc dạ dày đang viêm. Yêu cầu nhúng kỹ trong lẩu hoặc chọn phần chín hoàn toàn, tránh gỏi sống."
-      },
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Rang",
-        "warning_text": "Món rang khô có bề mặt cứng và khô, khó tiêu hóa hơn và có thể cạ vào niêm mạc dạ dày. Nếu ăn, nên nhai rất kỹ, ăn lượng nhỏ và uống nhiều nước trong lúc ăn."
-      }
-    ]
-  },
-  "Bệnh Gout": {
-    "general_advice": "Hạn chế tối đa nội tạng, hải sản, thực phẩm giàu đạm từ động vật và đồ uống có cồn để kiểm soát nồng độ acid uric trong máu.",
-    "conditional_warnings": [
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Nội tạng",
-        "warning_text": "Nội tạng (gan, thận, tim, lòng) là nguồn purin cực cao, cực kỳ nguy hiểm cho bệnh Gout. Nếu chọn món lẩu hay bún có nội tạng, hãy yêu cầu quán bỏ hoàn toàn phần lòng ra khỏi tô, chỉ lấy phần thịt nạc."
+        "trigger_value": "Dai / Sần sật",
+        "warning_text": "Các món có kết cấu dai/sần sật thường có mực, ốc, bạch tuộc hoặc sò. Nếu bị dị ứng thân mềm, cần xác nhận nguyên liệu chính không thuộc nhóm này."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Món nước",
-        "warning_text": "Nước hầm xương, nước dùng hải sản, nước lẩu đậm đà chứa lượng purin hòa tan rất cao từ quá trình hầm. Tuyệt đối không húp nước, chỉ ăn phần cái và bún/cơm."
+        "warning_text": "Nước dùng có thể được nấu từ nghêu, sò, hến hoặc mực khô để lấy vị ngọt. Nên hỏi kỹ nền nước dùng, đặc biệt với bún, mì, lẩu hải sản."
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Giàu đạm",
-        "warning_text": "Khi ăn món giàu đạm động vật (thịt nướng, lẩu thịt), hãy kiểm soát khẩu phần, chỉ ăn 1 phần nhỏ khoảng 100g thịt nạc/bữa. Ưu tiên đậu hũ, trứng hoặc thịt trắng (gà, vịt) thay cho thịt đỏ và hải sản."
-      },
-      {
-        "trigger_type": "soft_tag",
-        "trigger_value": "Mồi nhậu",
-        "warning_text": "Rượu bia là tác nhân số 1 làm tăng acid uric và kích hoạt cơn Gout cấp tính. Nếu ăn trong bữa nhậu, hãy uống nhiều nước lọc thay thế, ăn nhiều rau xanh và từ chối bia rượu."
+        "trigger_value": "Xào",
+        "warning_text": "Món xào hải sản dễ dùng chung chảo với mực, ốc, nghêu, sò. Nếu dị ứng nặng, nên chọn món chế biến riêng thay vì chỉ yêu cầu bỏ topping."
       }
     ]
   },
-  "Tiểu đường": {
-    "general_advice": "Ưu tiên món hấp/luộc, nhiều chất xơ, hạn chế tinh bột trắng, đường và đồ chiên rán để kiểm soát đường huyết sau ăn.",
+  "Dị ứng cá có vây": {
+    "general_advice": "Tránh cá, chả cá, cá viên, nước mắm, mắm cá và nước dùng có nền cá. Khi ăn ngoài, cần hỏi rõ cả gia vị và nước chấm.",
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Ngọt",
-        "warning_text": "Dặn quán không cho thêm đường, không dùng sốt ngọt (sốt teriyaki, sốt hoisin, nước sốt cà chua ngọt). Nếu là tráng miệng, chọn trái cây ít ngọt (ổi, táo) thay cho chè, kem, bánh ngọt."
+        "trigger_value": "Hải sản",
+        "warning_text": "Món hải sản có thể chứa cá hoặc chả cá dù tên món không ghi rõ. Cần hỏi kỹ có cá, cá viên, chả cá, nước mắm hoặc nước dùng cá không."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Nhiều món nước dùng cá, đầu cá hoặc chả cá để tạo vị ngọt. Nếu dị ứng cá, hãy hỏi nền nước dùng thay vì chỉ kiểm tra topping."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mặn",
+        "warning_text": "Nếu món có mắm hoặc nước mắm, cần tránh vì thường có nguồn gốc từ cá hoặc thủy sản lên men."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Đậm đà",
+        "warning_text": "Các món đậm đà thường dùng nước mắm, mắm nêm hoặc hạt nêm hải sản. Hãy yêu cầu xác nhận gia vị nền trước khi ăn."
+      }
+    ]
+  },
+  "Dị ứng đậu phộng": {
+    "general_advice": "Tránh đậu phộng/lạc, bơ đậu phộng, dầu đậu phộng, muối đậu phộng và nước sốt có đậu phộng. Cần hỏi kỹ topping rắc sau cùng.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Gỏi, nộm, bún trộn và món trộn rất hay rắc đậu phộng hoặc dùng sốt đậu phộng. Hãy dặn bỏ hoàn toàn đậu phộng và dùng dụng cụ trộn riêng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cuốn / Gói",
+        "warning_text": "Các món cuốn thường chấm sốt đậu phộng hoặc rắc lạc. Cần đổi sang nước chấm không đậu phộng và hỏi kỹ thành phần sốt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ẩm thực đường phố",
+        "warning_text": "Đồ ăn đường phố dễ có đậu phộng rang, dầu đậu phộng hoặc muối lạc dùng chung. Nếu dị ứng nặng, nên ưu tiên quán kiểm soát nguyên liệu tốt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ăn vặt",
+        "warning_text": "Món ăn vặt có thể dùng đậu phộng, bơ đậu phộng hoặc topping hạt. Hãy kiểm tra cả phần nhân, sốt và topping."
+      }
+    ]
+  },
+  "Dị ứng hạt cây": {
+    "general_advice": "Tránh hạt điều, hạnh nhân, óc chó, mắc ca, hạt dẻ và các loại sốt/bột/sữa làm từ hạt cây. Cần kiểm tra kỹ món bánh, salad và món chay.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Bánh ngọt thường có hạnh nhân, óc chó, hạt điều, bột hạt hoặc trang trí bằng hạt. Cần hỏi rõ thành phần bột, nhân và topping."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món chay",
+        "warning_text": "Món chay đôi khi dùng hạt điều, hạnh nhân hoặc sữa hạt để tạo độ béo. Nếu dị ứng hạt cây, hãy hỏi kỹ nền sốt và nguyên liệu tạo béo."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Healthy / Eat Clean",
+        "warning_text": "Món eat clean có thể dùng granola, hạt, bơ hạt hoặc sữa hạt. Cần kiểm tra kỹ trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Tráng miệng",
+        "warning_text": "Món tráng miệng có nguy cơ chứa hạt trong nhân, kem, sốt hoặc phần rắc trên mặt. Hãy chọn món không hạt và không dùng chung dụng cụ."
+      }
+    ]
+  },
+  "Dị ứng sữa bò": {
+    "general_advice": "Tránh sữa bò, bơ, phô mai, kem, whipping cream, sữa đặc và các loại sốt kem/phô mai. Cần kiểm tra cả bánh, nước sốt và món Âu.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Từ sữa / Phô mai",
+        "warning_text": "Món có sữa/phô mai cần tránh hoàn toàn nếu dị ứng sữa bò. Không chỉ bỏ phô mai trên mặt, vì sữa hoặc bơ có thể nằm trong sốt, vỏ bánh hoặc nhân."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Món béo ngậy có thể dùng bơ, kem, sữa đặc hoặc phô mai. Hãy hỏi rõ chất tạo béo là gì trước khi ăn."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Bánh ngọt",
-        "warning_text": "Bánh ngọt, bánh mì ngọt, bánh flan, đồ uống có đường làm tăng đường huyết đột ngột. Nếu phải ăn vặt, chọn khoai lang luộc hoặc sữa chua không đường thay thế."
+        "warning_text": "Bánh ngọt thường có sữa, bơ, kem hoặc phô mai. Nếu dị ứng sữa bò, nên tránh nếu không có xác nhận thành phần rõ ràng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Âu",
+        "warning_text": "Nhiều món Âu dùng bơ, kem, phô mai hoặc sốt sữa. Hãy yêu cầu món không dairy và xác nhận bếp không dùng bơ khi chế biến."
+      }
+    ]
+  },
+  "Bất dung nạp Lactose": {
+    "general_advice": "Hạn chế sữa tươi, sữa đặc, kem tươi, whipping cream và sữa nguyên kem. Tùy mức dung nạp cá nhân, có thể cần chọn món không lactose hoặc dùng khẩu phần rất nhỏ.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Từ sữa / Phô mai",
+        "warning_text": "Món có sữa/phô mai có thể gây đầy bụng, đau bụng hoặc tiêu chảy. Nếu vẫn muốn ăn, nên chọn khẩu phần nhỏ và ưu tiên loại ít lactose nếu có."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Sốt kem, sữa đặc, kem tươi và phô mai dễ gây khó chịu tiêu hóa ở người bất dung nạp lactose. Hãy hỏi chất tạo béo trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Tráng miệng",
+        "warning_text": "Kem, bánh flan, mousse, cheesecake và đồ uống sữa thường chứa lactose. Nên chọn trái cây hoặc món không sữa nếu dễ bị triệu chứng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món lạnh",
+        "warning_text": "Món lạnh làm từ kem hoặc sữa có thể làm triệu chứng tiêu hóa rõ hơn. Kiểm tra thành phần trước khi dùng."
+      }
+    ]
+  },
+  "Dị ứng đậu nành": {
+    "general_advice": "Tránh đậu nành, đậu hũ/đậu phụ, nước tương/xì dầu, tương hột, chao, miso, tempeh và các chế phẩm từ đậu nành.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món chay",
+        "warning_text": "Món chay thường dùng đậu hũ, tàu hũ ky, nước tương, chao hoặc đạm đậu nành. Nếu dị ứng đậu nành, cần hỏi kỹ nguồn đạm và gia vị."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Á",
+        "warning_text": "Nhiều món Á dùng nước tương, tương hột, miso hoặc dầu đậu nành. Hãy hỏi rõ gia vị nền trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Đậm đà",
+        "warning_text": "Món đậm đà có thể dùng nước tương, tương hột hoặc chao để tạo vị. Cần xác nhận không có chế phẩm đậu nành."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Xào",
+        "warning_text": "Món xào rất hay dùng nước tương/dầu hào. Nếu dị ứng đậu nành, hãy yêu cầu không dùng nước tương hoặc đổi món khác nếu bếp không đảm bảo."
+      }
+    ]
+  },
+  "Dị ứng lúa mì": {
+    "general_advice": "Tránh bột mì, bánh mì, mì trứng, mì gói, seitan/mì căn, một số loại nước tương và món tẩm bột chiên. Cần hỏi kỹ thành phần bột và nước sốt.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Bánh ngọt thường dùng bột mì. Nếu dị ứng lúa mì, nên tránh trừ khi món được xác nhận dùng bột không lúa mì và không nhiễm chéo."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu tinh bột",
+        "warning_text": "Món giàu tinh bột có thể dùng mì, bánh mì, vỏ bánh hoặc bột mì. Hãy hỏi rõ nguồn tinh bột trước khi ăn."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Chiên / Rán",
-        "warning_text": "Đồ chiên rán (khoai tây chiên, chả giò, đậu hũ chiên) có chỉ số glycemic cao và chứa nhiều chất béo bão hòa, gây kháng insulin. Xin quán đổi sang phương pháp hấp hoặc nướng không dầu nếu có thể."
+        "warning_text": "Đồ chiên thường được áo bột mì hoặc bột chiên có lúa mì. Cần xác nhận lớp bột và dầu chiên không dùng chung với món có lúa mì."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Âu",
+        "warning_text": "Món Âu như pizza, pasta, bánh mì, sốt roux thường chứa lúa mì. Nên hỏi kỹ thành phần nền món."
+      }
+    ]
+  },
+  "Dị ứng trứng": {
+    "general_advice": "Tránh trứng gà, trứng vịt, trứng cút, mayonnaise, sốt trứng, mì trứng và các loại bánh dùng trứng.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Bánh ngọt thường dùng trứng trong cốt bánh, kem hoặc nhân. Nếu dị ứng trứng, cần xác nhận công thức không trứng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Từ sữa / Phô mai",
+        "warning_text": "Một số món kem, bánh flan, custard hoặc sốt béo có cả trứng và sữa. Hãy hỏi rõ thành phần nếu dị ứng trứng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Món chiên có thể được nhúng trứng trước khi áo bột. Cần hỏi kỹ bước tẩm bột và dụng cụ chiên."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Á",
+        "warning_text": "Nhiều món mì, cơm chiên, bánh xèo, tempura hoặc topping có trứng. Cần dặn bỏ trứng và hỏi phần bột/sốt có trứng không."
+      }
+    ]
+  },
+  "Dị ứng cà chua": {
+    "general_advice": "Tránh cà chua tươi, sốt cà chua, tương cà, sốt pizza, sốt mì Ý và nước dùng có nền cà chua.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chua",
+        "warning_text": "Món chua có thể dùng cà chua hoặc sốt cà chua để tạo vị. Hãy hỏi rõ nguồn vị chua trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Âu",
+        "warning_text": "Pizza, pasta, soup và nhiều món Âu dùng sốt cà chua. Nếu dị ứng cà chua, cần chọn sốt trắng hoặc món không cà chua."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Các món sốt sệt có thể dùng tương cà hoặc cà chua xay. Cần hỏi thành phần nước sốt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Một số món canh, bún, lẩu có cà chua trong nước dùng. Hãy hỏi trước nếu món có màu đỏ/cam hoặc vị chua nhẹ."
+      }
+    ]
+  },
+  "Dị ứng trái cây có múi": {
+    "general_advice": "Tránh cam, chanh, quýt, bưởi, tắc/quất, vỏ hoặc nước cốt của các loại này. Cần kiểm tra cả nước chấm và phần vắt sau cùng.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chua",
+        "warning_text": "Món chua rất hay dùng chanh, tắc hoặc quất. Hãy hỏi rõ nguồn vị chua, không chỉ yêu cầu bỏ lát chanh ăn kèm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Gỏi/nộm thường dùng nước cốt chanh hoặc tắc trong nước trộn. Cần yêu cầu nước trộn riêng không citrus."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Hải sản",
+        "warning_text": "Hải sản thường ăn kèm muối tiêu chanh hoặc sốt tắc. Hãy chọn nước chấm không chứa chanh/tắc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giải rượu",
+        "warning_text": "Món/nước giải rượu có thể dùng chanh, cam hoặc tắc để tạo vị chua. Cần kiểm tra thành phần trước khi dùng."
+      }
+    ]
+  },
+  "Dị ứng mè / vừng": {
+    "general_advice": "Tránh mè/vừng, dầu mè, muối mè, sốt mè rang, bánh tráng/bánh đa có mè và các món rắc mè sau cùng.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Á",
+        "warning_text": "Món Á hay dùng dầu mè, mè rang hoặc sốt mè. Hãy hỏi kỹ gia vị hoàn thiện món."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Món trộn có thể dùng dầu mè hoặc rắc mè. Cần yêu cầu không mè và nước sốt riêng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nướng",
+        "warning_text": "Món nướng có thể rắc mè hoặc phết sốt mè ở cuối. Hãy dặn bỏ mè ngay khi gọi món."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Một số bánh dùng mè/vừng trong vỏ, nhân hoặc topping. Cần hỏi rõ thành phần và tránh nhiễm chéo."
+      }
+    ]
+  },
+  "Dị ứng bột ngọt (MSG)": {
+    "general_advice": "Tránh bột ngọt/mì chính, hạt nêm, bột nêm, bột canh và các gói gia vị công nghiệp nếu có phản ứng rõ với MSG.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Đậm đà",
+        "warning_text": "Món đậm đà có thể dùng hạt nêm, bột ngọt hoặc gói gia vị. Hãy yêu cầu không bột ngọt/hạt nêm và nêm bằng nguyên liệu tự nhiên nếu có thể."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Nước lèo/nước dùng quán ăn thường có hạt nêm hoặc bột ngọt. Nếu nhạy cảm, nên hỏi trước và hạn chế húp nước."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thức ăn nhanh",
+        "warning_text": "Thức ăn nhanh và gói gia vị chế biến sẵn có thể chứa chất điều vị. Hãy ưu tiên món tươi, ít gia vị công nghiệp."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ẩm thực đường phố",
+        "warning_text": "Quán đường phố thường nêm sẵn bột ngọt/hạt nêm. Cần dặn rõ từ đầu vì sau khi nấu xong khó điều chỉnh."
+      }
+    ]
+  },
+  "Dị ứng mắm lên men": {
+    "general_advice": "Tránh mắm tôm, mắm ruốc, mắm nêm, mắm tép, nước mắm và các nước chấm lên men từ cá/tôm.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mặn",
+        "warning_text": "Món có vị mặn đặc trưng có thể dùng mắm lên men. Hãy hỏi rõ nước chấm và gia vị nền."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Đậm đà",
+        "warning_text": "Nhiều món đậm đà dùng mắm ruốc, mắm nêm hoặc nước mắm để tạo vị. Cần xác nhận trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Việt truyền thống",
+        "warning_text": "Món Việt truyền thống thường dùng nước mắm hoặc mắm lên men. Nếu dị ứng, hãy yêu cầu thay bằng nước tương nếu phù hợp và an toàn với bạn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Gỏi/nộm/bún trộn thường dùng nước mắm hoặc mắm nêm trong nước trộn. Cần yêu cầu nước trộn không mắm."
+      }
+    ]
+  },
+  "Tiểu đường": {
+    "general_advice": "Ưu tiên rau không tinh bột, đạm nạc, khẩu phần tinh bột vừa phải, hạn chế đường thêm, đồ ngọt, nước ngọt và tinh bột tinh chế.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ngọt",
+        "warning_text": "Món ngọt có thể làm đường huyết tăng nhanh. Nếu vẫn dùng, nên chọn khẩu phần rất nhỏ, tránh ăn lúc đói và không uống thêm nước ngọt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Bánh ngọt thường nhiều đường và bột tinh chế. Nên đổi sang trái cây ít ngọt, sữa chua không đường hoặc món giàu chất xơ hơn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu tinh bột",
+        "warning_text": "Món nhiều cơm, bún, phở, mì, bánh mì làm tăng đường huyết sau ăn. Hãy giảm phần tinh bột, ăn rau trước, đạm sau và tinh bột cuối cùng."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Ăn no",
-        "warning_text": "Ăn quá no một lúc làm đường huyết tăng vọt. Hãy chia phần ăn ra, ăn rau trước, đạm sau và cơm/bún cuối cùng. Yêu cầu quán phục vụ cơm/bún riêng để tự kiểm soát lượng tinh bột."
+        "warning_text": "Ăn quá no khiến đường huyết khó kiểm soát. Nên chia phần ăn, dừng khi vừa đủ và tránh gọi thêm đồ uống có đường."
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Giàu tinh bột",
-        "warning_text": "Món giàu tinh bột (cơm trắng, bún, phở, bánh mì) làm tăng đường huyết nhanh sau ăn. Hãy yêu cầu khẩu phần nhỏ tinh bột, ăn rau và đạm trước, hoặc chọn gạo lứt/bún gạo lứt thay thế nếu quán có."
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên rán dễ nhiều năng lượng và chất béo, làm kiểm soát đường huyết kém hơn. Nếu có thể, chọn hấp, luộc, nướng ít dầu."
       }
     ]
   },
-  "Gan nhiễm mỡ": {
-    "general_advice": "Tránh hoàn toàn rượu bia, hạn chế chất béo bão hòa, đường fructose và thực phẩm chế biến sẵn để giảm tải cho gan.",
+  "Cao huyết áp": {
+    "general_advice": "Ưu tiên món ít muối, nhiều rau, hạn chế nước dùng mặn, đồ chế biến sẵn, mắm, nước chấm đậm và chất béo bão hòa.",
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Béo ngậy",
-        "warning_text": "Yêu cầu quán bỏ da gà, da heo, mỡ heo, váng mỡ ra khỏi món trước khi chế biến. Nếu là phở, bún bò, hỏi xin loại nước trong (gầy) thay vì nước béo. Hạn chế chấm các loại sốt béo như mayonnaise, bơ."
+        "trigger_value": "Món nước",
+        "warning_text": "Nước lèo/nước dùng thường chứa nhiều muối. Nên ăn phần cái, hạn chế húp nước và xin thêm rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mặn",
+        "warning_text": "Yêu cầu nêm nhạt, không thêm nước mắm/muối/tương mặn trên bàn. Nếu có nước chấm, dùng rất ít hoặc pha loãng."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Thực phẩm chế biến sẵn",
-        "warning_text": "Xúc xích, pate, thịt hộp, đồ ăn nhanh chứa chất bảo quản và chất béo trans gây viêm gan và tích lũy mỡ gan. Nếu ăn, chỉ dùng lượng nhỏ làm topping, không ăn nguyên bữa."
+        "warning_text": "Chả, xúc xích, pate, đồ hộp và topping chế biến sẵn thường nhiều natri. Nên giảm topping này hoặc đổi sang thịt/cá tươi."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Lẩu",
+        "warning_text": "Nước lẩu thường rất mặn và đậm gia vị. Nên nhúng rau/thịt nạc, hạn chế húp nước và không thêm sa tế/mắm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Đậm đà",
+        "warning_text": "Món đậm đà thường có nhiều nước mắm, hạt nêm hoặc sốt mặn. Hãy yêu cầu giảm gia vị từ đầu."
+      }
+    ]
+  },
+  "Suy thận": {
+    "general_advice": "Người bệnh thận cần cá nhân hóa lượng đạm, muối, kali, phospho và nước theo chỉ định. Nên ưu tiên món nhạt, khẩu phần vừa và tránh tự dùng muối thay thế giàu kali.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mặn",
+        "warning_text": "Món mặn làm tăng gánh nặng giữ nước và huyết áp. Nên yêu cầu nêm nhạt, hạn chế nước chấm và không húp nước dùng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Món nước làm khó kiểm soát lượng dịch và natri. Nếu đang bị hạn chế nước, chỉ ăn phần cái và hỏi bác sĩ/dietitian về lượng dịch phù hợp."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu đạm",
+        "warning_text": "Khẩu phần đạm trong bệnh thận cần theo giai đoạn bệnh và điều trị. Không tự tăng nhiều thịt/cá/hải sản nếu chưa có hướng dẫn chuyên môn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Từ sữa / Phô mai",
+        "warning_text": "Sữa, phô mai và chế phẩm sữa có thể nhiều phospho/kali. Nếu bệnh thận tiến triển, cần hỏi chuyên gia dinh dưỡng trước khi dùng thường xuyên."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thực phẩm chế biến sẵn",
+        "warning_text": "Đồ chế biến sẵn thường nhiều natri và phụ gia phosphate. Nên ưu tiên món tươi, nêm đơn giản."
+      }
+    ]
+  },
+  "Trào ngược dạ dày thực quản (GERD)": {
+    "general_advice": "Ăn khẩu phần nhỏ, tránh nằm ngay sau ăn, hạn chế món cay, chua, nhiều dầu mỡ, chocolate/cà phê và bữa khuya nếu dễ trào ngược.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cay",
+        "warning_text": "Món cay dễ kích thích trào ngược. Nên dặn không ớt, không sa tế, không tương ớt và tránh nước chấm cay."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chua",
+        "warning_text": "Vị chua từ me, giấm, chanh, cà chua có thể làm trào ngược khó chịu hơn. Nên giảm hoặc bỏ thành phần chua."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên nhiều dầu làm chậm rỗng dạ dày và dễ trào ngược. Nên chọn món hấp/luộc/nướng ít dầu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Món béo, sốt kem, phô mai, nước cốt dừa có thể làm triệu chứng nặng hơn. Nên ăn ít và tránh ăn sát giờ ngủ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ăn khuya",
+        "warning_text": "Ăn khuya dễ làm trào ngược khi nằm ngủ. Nếu cần ăn, chọn phần nhỏ, mềm, ít dầu và ăn trước khi nằm ít nhất vài giờ."
+      }
+    ]
+  },
+  "Viêm loét dạ dày": {
+    "general_advice": "Ưu tiên món mềm, chín kỹ, ít dầu, không quá cay/chua, ăn chậm và chia nhỏ bữa nếu dễ đau hoặc cồn cào dạ dày.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chua",
+        "warning_text": "Vị chua có thể kích ứng niêm mạc dạ dày. Hãy dặn bỏ chanh, me, giấm, cà chua chua và giảm nước trộn chua."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cay",
+        "warning_text": "Món cay dễ làm đau rát dạ dày. Yêu cầu không ớt, không tiêu, không sa tế và tránh nước chấm cay."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Dầu mỡ nhiều làm món khó tiêu hơn. Nếu vẫn ăn, dùng lượng nhỏ, nhai kỹ và ăn kèm rau mềm/luộc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Sống/Chín tái",
+        "warning_text": "Thịt/cá sống hoặc tái có thể làm dạ dày đang viêm khó chịu hơn. Nên chọn món chín kỹ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Rang",
+        "warning_text": "Món rang khô/cứng có thể khó tiêu. Nên ăn chậm, nhai kỹ và chọn phần mềm hơn nếu có."
+      }
+    ]
+  },
+  "Tim mạch": {
+    "general_advice": "Ưu tiên rau, ngũ cốc nguyên hạt, đạm nạc, cá phù hợp, ít muối, ít đường, hạn chế mỡ động vật, đồ chiên và thực phẩm chế biến sẵn.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên thường nhiều năng lượng và chất béo không có lợi cho tim mạch. Nên chọn hấp, luộc, nướng ít dầu hoặc xào ít dầu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Món béo ngậy có thể nhiều mỡ động vật, bơ, kem hoặc phô mai. Nên giảm phần sốt béo, bỏ da/mỡ và chọn khẩu phần nhỏ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thực phẩm chế biến sẵn",
+        "warning_text": "Thực phẩm chế biến sẵn thường nhiều muối, chất béo bão hòa và phụ gia. Hạn chế chả, xúc xích, pate, đồ hộp."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mặn",
+        "warning_text": "Món mặn làm tăng gánh nặng huyết áp. Hãy yêu cầu nêm nhạt và dùng ít nước chấm."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Nội tạng",
-        "warning_text": "Gan, thận, lòng chứa lượng cholesterol và chất béo rất cao, làm tăng gánh nặng chuyển hóa cho gan. Hãy yêu cầu quán bỏ phần lòng, thay bằng thịt nạc (thịt gà ức, tôm)."
+        "warning_text": "Nội tạng thường nhiều cholesterol. Nếu có bệnh tim mạch/rối loạn mỡ máu, nên tránh hoặc dùng rất ít theo hướng dẫn bác sĩ."
+      }
+    ]
+  },
+  "Táo bón": {
+    "general_advice": "Ưu tiên món nhiều chất xơ, rau, trái cây phù hợp, uống đủ nước và vận động nhẹ. Hạn chế món quá khô, ít rau, nhiều dầu mỡ hoặc nhiều tinh bột tinh chế.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món khô",
+        "warning_text": "Món khô dễ thiếu nước và rau. Nên ăn kèm canh, rau luộc hoặc salad, đồng thời uống đủ nước trong ngày."
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Mồi nhậu",
-        "warning_text": "Rượu bia dù với lượng nhỏ cũng trực tiếp gây độc tế bào gan và làm gan nhiễm mỡ tiến triển nặng hơn. Trong bữa nhậu, hãy chỉ uống nước lọc, nước ép không đường và ăn nhiều rau xanh luộc."
+        "trigger_value": "Giàu chất xơ",
+        "warning_text": "Món giàu chất xơ có lợi cho táo bón, nhưng nên tăng từ từ và uống đủ nước để tránh đầy bụng."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Giàu tinh bột",
-        "warning_text": "Tinh bột trắng (cơm, bánh mì, bún) chuyển hóa thành đường và tích lũy mỡ gan. Kiểm soát khẩu phần tinh bột, ưu tiên ăn nhiều rau và đạm nạc hơn."
+        "warning_text": "Nếu món nhiều tinh bột trắng nhưng ít rau, hãy giảm phần cơm/bún/bánh và thêm rau xanh hoặc đậu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên có thể làm bữa ăn nặng bụng và ít chất xơ. Nên ăn ít, kèm rau và nước."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Bánh ngọt thường ít chất xơ, nhiều đường và bột tinh chế. Nếu đang táo bón, nên ưu tiên trái cây, sữa chua phù hợp hoặc món nhiều rau."
+      }
+    ]
+  },
+  "Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)": {
+    "general_advice": "Ưu tiên món ấm, mềm, dễ nuốt, đủ nước; hạn chế món quá cay, quá lạnh, chiên khô hoặc nhiều dầu nếu làm rát họng/khó chịu.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nóng hổi",
+        "warning_text": "Món ấm có thể dễ chịu cho họng, nhưng tránh ăn quá nóng vì có thể làm rát niêm mạc. Nên để nguội bớt trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món lạnh",
+        "warning_text": "Món lạnh có thể làm một số người ho/rát họng hơn. Nếu đang viêm họng, nên thử lượng nhỏ hoặc chọn món ấm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cay",
+        "warning_text": "Ớt, tiêu, sa tế có thể kích thích ho và rát họng. Nên yêu cầu không cay."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên khô/giòn có thể làm khó nuốt và kích ứng họng. Nên chọn cháo, súp, món nước ấm hoặc món mềm hơn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giải cảm",
+        "warning_text": "Món giải cảm nên ăn ấm, vừa gia vị, không quá cay. Uống đủ nước và nghỉ ngơi vẫn là quan trọng."
+      }
+    ]
+  },
+  "Gout": {
+    "general_advice": "Hạn chế nội tạng, thịt đỏ, hải sản nhiều purin, nước hầm đậm, rượu bia và đồ uống/ngọt nhiều đường; uống đủ nước và kiểm soát khẩu phần đạm.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nội tạng",
+        "warning_text": "Nội tạng là nhóm rất giàu purin, không phù hợp cho gout. Nếu món có lòng, gan, tim, óc, huyết, nên đổi món khác."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Hải sản",
+        "warning_text": "Hải sản có thể nhiều purin, đặc biệt nghêu, sò, ốc, cá nhỏ, mực, tôm cua. Nếu vẫn ăn, chỉ dùng lượng nhỏ và tránh ăn kèm bia rượu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Nước hầm xương, nước dùng hải sản hoặc nước lẩu có thể chứa purin hòa tan. Nên hạn chế húp nước, ăn phần cái vừa đủ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu đạm",
+        "warning_text": "Món giàu đạm động vật cần kiểm soát khẩu phần. Ưu tiên đạm nạc vừa phải, đậu hũ/trứng nếu phù hợp và tăng rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Bia rượu làm tăng nguy cơ cơn gout. Nếu món mang tính nhậu, nên uống nước lọc và tránh rượu bia."
+      }
+    ]
+  },
+  "Tiêu chảy": {
+    "general_advice": "Ưu tiên bù nước, món mềm, chín kỹ, ít dầu, ít gia vị; tránh món sống/tái, cay, nhiều chất béo, nhiều sữa nếu làm tiêu chảy nặng hơn.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Sống/Chín tái",
+        "warning_text": "Món sống/tái có nguy cơ làm tiêu chảy nặng hơn hoặc kéo dài. Nên chọn món chín kỹ hoàn toàn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cay",
+        "warning_text": "Gia vị cay kích thích ruột và có thể làm đi ngoài nhiều hơn. Nên dặn không ớt, tiêu, sa tế."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên nhiều dầu khó tiêu khi đang tiêu chảy. Nên chọn cháo, súp, cơm mềm, món luộc/hấp."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Từ sữa / Phô mai",
+        "warning_text": "Sữa và kem có thể làm tiêu chảy nặng hơn ở một số người, nhất là khi tạm thời kém dung nạp lactose. Nên tránh nếu thấy đầy bụng/đi ngoài nhiều."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món lạnh",
+        "warning_text": "Món lạnh có thể làm bụng khó chịu hơn. Nên ưu tiên món ấm, mềm và dễ tiêu."
+      }
+    ]
+  },
+  "Nhiệt miệng/Loét miệng": {
+    "general_advice": "Ưu tiên món mềm, nguội vừa, ít cay/chua/mặn, dễ nhai nuốt; tránh món giòn cứng, quá nóng hoặc gia vị mạnh làm xót vết loét.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cay",
+        "warning_text": "Món cay làm xót và đau vùng loét miệng. Hãy yêu cầu không ớt, không tiêu, không sa tế."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chua",
+        "warning_text": "Vị chua từ chanh, tắc, giấm, me có thể làm rát vết loét. Nên giảm hoặc bỏ phần chua."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giòn / Giòn rụm",
+        "warning_text": "Đồ giòn cứng có thể cọ vào vết loét và gây đau. Nên chọn món mềm, cắt nhỏ, ăn chậm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nóng hổi",
+        "warning_text": "Món quá nóng làm xót miệng. Nên để nguội bớt trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mặn",
+        "warning_text": "Vị mặn đậm có thể gây xót vùng loét. Nên nêm nhạt và chấm rất ít."
+      }
+    ]
+  },
+  "Đầy bụng / Khó tiêu": {
+    "general_advice": "Ưu tiên món mềm, ấm, ít dầu, khẩu phần vừa; ăn chậm, nhai kỹ, tránh quá no, nhiều dầu mỡ, nhiều gas hoặc quá nhiều đạm trong một bữa.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Khó tiêu / Nặng bụng",
+        "warning_text": "Món đã có tính khó tiêu nên ăn khẩu phần nhỏ, tránh gọi thêm tinh bột/dầu mỡ và không nằm ngay sau ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Món béo ngậy làm chậm tiêu. Nên bỏ bớt sốt béo, da/mỡ và ăn kèm rau mềm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên dễ gây đầy bụng. Nếu cần ăn, dùng ít và ưu tiên phần không quá ngấm dầu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ăn no",
+        "warning_text": "Ăn quá no làm đầy bụng nặng hơn. Hãy chia phần ăn, dừng khi vừa đủ và ăn chậm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Sốt sệt/cà ri/kho có thể nhiều dầu và gia vị. Nên dùng ít phần sốt, tăng rau và uống nước ấm."
+      }
+    ]
+  },
+  "Béo phì": {
+    "general_advice": "Ưu tiên khẩu phần vừa, nhiều rau, đạm nạc, cách chế biến ít dầu; hạn chế đồ chiên, đồ ngọt, nước ngọt, thức ăn nhanh và ăn quá no.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên nhiều năng lượng. Nên chọn món hấp/luộc/nướng ít dầu hoặc giảm một nửa khẩu phần chiên."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Món béo ngậy thường giàu năng lượng. Nên giảm sốt, bỏ da/mỡ, chọn phần nạc và ăn kèm nhiều rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ngọt",
+        "warning_text": "Đồ ngọt dễ làm dư năng lượng. Nếu vẫn ăn, chọn khẩu phần nhỏ và tránh uống kèm nước ngọt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thức ăn nhanh",
+        "warning_text": "Thức ăn nhanh thường nhiều năng lượng, muối và chất béo. Nên hạn chế tần suất và chọn phần nhỏ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ăn no",
+        "warning_text": "Mục tiêu là ăn đủ no, không quá no. Nên ăn rau trước, đạm nạc sau và kiểm soát phần tinh bột."
+      }
+    ]
+  },
+  "Gan nhiễm mỡ / Men gan cao": {
+    "general_advice": "Hạn chế rượu bia, đồ ngọt, tinh bột tinh chế, chất béo bão hòa và thực phẩm chế biến sẵn; ưu tiên rau, đạm nạc và khẩu phần vừa.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Món béo ngậy có thể nhiều mỡ động vật, bơ, kem hoặc nước cốt dừa. Nên giảm sốt béo, bỏ da/mỡ và chọn phần nạc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên làm tăng năng lượng và chất béo. Nên chọn món hấp, luộc, nướng ít dầu hoặc xào ít dầu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ngọt",
+        "warning_text": "Đồ ngọt và nước ngọt làm tăng gánh nặng chuyển hóa cho gan. Nên tránh đồ uống có đường, bánh ngọt, chè/kem nhiều đường."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu tinh bột",
+        "warning_text": "Tinh bột trắng dư thừa có thể chuyển hóa thành mỡ. Nên giảm phần cơm/bún/mì, tăng rau và đạm nạc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Rượu bia làm gan nhiễm mỡ/men gan cao nặng hơn. Nếu ăn món nhậu, nên uống nước lọc và tránh rượu bia."
+      }
+    ]
+  },
+  "Phụ nữ mang thai": {
+    "general_advice": "Ưu tiên món chín kỹ, đủ đạm, rau, tinh bột vừa phải; tránh món sống/tái, thực phẩm không rõ nguồn gốc, quá nhiều caffeine, rượu bia và món dễ nhiễm khuẩn.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Sống/Chín tái",
+        "warning_text": "Khi mang thai nên tránh thịt/cá/trứng sống hoặc tái do nguy cơ nhiễm khuẩn/ký sinh trùng. Hãy chọn món chín kỹ hoàn toàn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Gỏi/nộm có thể dùng rau sống, hải sản tái hoặc nước trộn chưa nấu. Nên chọn món chín, rau rửa kỹ và nguồn an toàn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món lạnh",
+        "warning_text": "Món lạnh chế biến sẵn cần bảo quản tốt. Nếu không chắc vệ sinh, nên chọn món nóng, mới nấu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Hải sản",
+        "warning_text": "Hải sản cần nấu chín kỹ và chọn loại an toàn. Tránh hải sản sống/tái, không rõ nguồn gốc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nội tạng",
+        "warning_text": "Nội tạng có thể nhiều vitamin A/cholesterol và cần vệ sinh kỹ. Khi mang thai nên hạn chế và hỏi bác sĩ nếu ăn thường xuyên."
+      }
+    ]
+  },
+  "Đang cho con bú": {
+    "general_advice": "Ưu tiên ăn đa dạng, đủ năng lượng, đủ nước, đạm chất lượng và rau quả; hạn chế rượu bia, caffeine quá nhiều và món gây khó chịu rõ cho mẹ hoặc bé.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Nếu món thường đi kèm rượu bia, nên tránh rượu bia khi đang cho con bú hoặc trao đổi bác sĩ về thời điểm an toàn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cay",
+        "warning_text": "Món cay không phải lúc nào cũng cần kiêng tuyệt đối, nhưng nếu mẹ hoặc bé khó chịu sau khi ăn cay, nên giảm mức cay và theo dõi."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món lạnh",
+        "warning_text": "Món lạnh/để lâu cần đảm bảo vệ sinh để tránh rối loạn tiêu hóa cho mẹ. Ưu tiên món mới nấu, bảo quản tốt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu đạm",
+        "warning_text": "Món giàu đạm có thể hỗ trợ nhu cầu dinh dưỡng khi cho con bú, nhưng nên chọn đạm chín kỹ, ít dầu và ăn kèm rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Món quá béo dễ làm mẹ đầy bụng và dư năng lượng. Nên chọn phần nạc, ít sốt béo và khẩu phần vừa."
+      }
+    ]
+  },
+  "Vết thương hở / Mới phẫu thuật": {
+    "general_advice": "Ưu tiên đủ đạm, năng lượng, vitamin và khoáng chất để hỗ trợ lành thương; chọn món chín kỹ, vệ sinh, hạn chế rượu bia và món có nguy cơ nhiễm khuẩn.",
+    "conditional_warnings": [
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu đạm",
+        "warning_text": "Đạm rất cần cho quá trình lành thương. Nên chọn đạm chín kỹ, ít dầu như thịt nạc, cá phù hợp, trứng hoặc đậu hũ nếu không bị dị ứng/kiêng riêng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Sống/Chín tái",
+        "warning_text": "Món sống/tái làm tăng nguy cơ nhiễm khuẩn, không phù hợp khi có vết thương hở hoặc mới phẫu thuật. Nên chọn món chín kỹ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Rượu bia có thể ảnh hưởng hồi phục và tương tác thuốc. Nếu mới phẫu thuật, nên tránh rượu bia và hỏi bác sĩ về kiêng cữ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Chiên / Rán",
+        "warning_text": "Đồ chiên nhiều dầu không phải lựa chọn tốt khi cần hồi phục. Nên ưu tiên món hấp, luộc, hầm mềm và nhiều rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu vitamin",
+        "warning_text": "Món giàu vitamin từ rau củ/trái cây phù hợp có thể hỗ trợ dinh dưỡng cho lành thương. Nên ăn kèm đạm và uống đủ nước."
       }
     ]
   }

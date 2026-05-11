@@ -51,8 +51,48 @@ VALID_SOFT_TAGS = [
     "Dễ tiêu", "Khó tiêu / Nặng bụng", "Healthy / Eat Clean", "Nhiều dầu mỡ / Calo cao",
 ]
 
+TASTE_TAGS = {"Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy"}
+FORM_TAGS = {"Món nước", "Món khô", "Nước sền sệt"}
+METHOD_TAGS = {
+    "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
+    "Hầm / Ninh", "Lẩu", "Kho/Rim", "Súp", "Cháo", "Rang"
+}
+MEAL_TIME_TAGS = {"Ăn sáng", "Ăn trưa", "Ăn tối", "Ăn chiều / xế", "Ăn khuya"}
+OCCASION_TAGS = {"Ăn no", "Ăn vặt", "Mồi nhậu", "Tráng miệng", "Giải rượu", "Giải cảm", "Ấm bụng"}
+CATEGORY_LIKE_TAGS = TASTE_TAGS | MEAL_TIME_TAGS | OCCASION_TAGS
+
+SWEET_DISH_KEYWORDS = ["chè", "kẹo", "bánh ngọt", "bánh kem", "kem", "flan", "mousse", "panna cotta", "rau câu", "bingsu", "brownie", "macaron", "tiramisu", "cheesecake", "lava", "waffle"]
+SALTY_DISH_KEYWORDS = ["mắm", "khô", "muối", "kho quẹt", "chao", "muối tiêu", "dưa muối", "cá khô", "mực khô", "ruốc"]
+SOUR_DISH_KEYWORDS = ["chua", "canh chua", "lẩu thái", "gỏi", "nộm", "trộn", "kim chi", "sốt me", "rang me", "om sấu", "mẻ"]
+SOUR_CORE_KEYWORDS = ["me", "sấu", "mẻ", "giấm", "dấm", "măng chua", "kim chi", "dưa muối", "tôm chua"]
+SPICY_DISH_KEYWORDS = ["cay", "mì cay", "lẩu thái", "sa tế", "bún bò huế", "cà ri", "gà rán sốt cay", "sốt cay"]
+SPICY_CORE_KEYWORDS = ["sa tế", "tương ớt", "gochujang", "ớt bột", "dầu ớt", "ớt khô", "ớt hiểm", "gia vị lẩu thái"]
+BITTER_CORE_KEYWORDS = ["khổ qua", "mướp đắng", "ngải cứu", "lá đắng"]
+RICH_CORE_KEYWORDS = ["mỡ", "ba chỉ", "da heo", "da gà", "da vịt", "bơ", "phô mai", "cheese", "kem", "whipping cream", "nước cốt dừa", "mayonnaise", "mayo", "sữa đặc", "sữa tươi", "cá hồi"]
+
+TAG_PRIORITY = [
+    "Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy",
+    "Món nước", "Món khô", "Nước sền sệt",
+    "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
+    "Hầm / Ninh", "Lẩu", "Kho/Rim", "Súp", "Cháo", "Rang",
+    "Hải sản", "Nội tạng", "Từ sữa / Phô mai", "Thực phẩm chế biến sẵn", "Bánh ngọt",
+    "Giàu chất xơ", "Giàu đạm", "Giàu vitamin", "Giàu tinh bột",
+    "Dễ tiêu", "Khó tiêu / Nặng bụng", "Healthy / Eat Clean", "Nhiều dầu mỡ / Calo cao",
+    "Nóng hổi", "Thanh mát/Giải nhiệt", "Món lạnh",
+    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống/Chín tái",
+    "Đặc sản Đà Nẵng", "Ẩm thực đường phố", "Món Việt truyền thống", "Món Á", "Món Âu",
+    "Thức ăn nhanh", "Món chay",
+    "Ăn sáng", "Ăn trưa", "Ăn tối", "Ăn chiều / xế", "Ăn khuya", "Ăn no", "Ăn vặt",
+    "Mồi nhậu", "Tráng miệng", "Giải rượu", "Giải cảm", "Ấm bụng",
+]
+
+TAG_PRIORITY_INDEX = {tag: i for i, tag in enumerate(TAG_PRIORITY)}
+
 OFFAL_KEYWORDS = ["gan", "lòng", "mề", "óc", "tim", "cật", "dồi", "ruột", "bao tử", "dạ dày", "phèo", "huyết", "tiết", "pín"]
-DANANG_KEYWORDS = ["mì quảng", "mỳ quảng", "bún chả cá", "bún mắm nêm", "bún thịt nướng", "bánh tráng cuốn thịt heo", "bánh xèo", "nem lụi", "bánh bèo", "mít non trộn", "ốc hút", "gỏi cá", "tré", "bánh đập", "bún mắm", "cao lầu"]
+DANANG_KEYWORDS = ["mì quảng", "mỳ quảng", "bún chả cá", "bún mắm nêm", "bánh tráng cuốn thịt heo", "nem lụi", "mít non trộn", "ốc hút", "gỏi cá nam ô", "tré", "bánh đập", "cao lầu"]
+VIETNAMESE_KEYWORDS = ["phở", "bún", "miến", "hủ tiếu", "cơm", "canh", "kho", "gỏi cuốn", "bánh mì", "xôi", "cháo", "lẩu", "mì quảng", "mỳ quảng"]
+ASIAN_KEYWORDS = ["hàn quốc", "nhật", "thái", "trung quốc", "bibimbap", "teriyaki", "miso", "kim chi", "gochujang", "gyudon", "tonkatsu"]
+WESTERN_KEYWORDS = ["pizza", "pasta", "mì ý", "spaghetti", "steak", "burger", "sandwich", "cheesecake", "panna cotta", "mousse"]
 
 # Heuristic dictionary: minh bạch hóa rủi ro ẩn từ nguyên liệu
 INGREDIENT_RISK_TAG_MAP = {
@@ -75,6 +115,142 @@ def apply_ingredient_risk_heuristics(tags: set[str], ingredient_text: str) -> li
             tags.add(risk_tag)
             logs.append(f"Thêm '{risk_tag}' (heuristic ingredient map)")
     return logs
+
+def dedupe_keep_order(items: list[str]) -> list[str]:
+    seen = set()
+    result = []
+    for item in items:
+        if item and item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+
+def add_tag(tags: list[str], tag: str, logs: list[str], reason: str):
+    if tag in VALID_SOFT_TAGS and tag not in tags:
+        tags.append(tag)
+        logs.append(f"Thêm '{tag}' ({reason})")
+
+def remove_tag(tags: list[str], tag: str, logs: list[str] | None = None, reason: str = ""):
+    if tag in tags:
+        tags.remove(tag)
+        if logs is not None:
+            logs.append(f"Xóa '{tag}' ({reason})" if reason else f"Xóa '{tag}'")
+
+def has_any(text: str, keywords: list[str]) -> bool:
+    return any(kw in text for kw in keywords)
+
+def has_category_signal(text: str, keywords: list[str]) -> bool:
+    return has_any(text, keywords)
+
+def is_dessert_like(name_lower: str, tags: list[str]) -> bool:
+    return bool({"Tráng miệng", "Bánh ngọt", "Từ sữa / Phô mai"} & set(tags)) or has_category_signal(name_lower, SWEET_DISH_KEYWORDS)
+
+def is_main_meal_like(name_lower: str, tags: list[str]) -> bool:
+    main_meal_words = ["cơm", "bún", "phở", "miến", "hủ tiếu", "mì", "lẩu", "cháo", "bánh canh", "bánh mì", "xôi", "kho", "xào", "nướng"]
+    return "Ăn no" in tags or has_category_signal(name_lower, main_meal_words)
+
+def is_snack_like(name_lower: str, tags: list[str]) -> bool:
+    snack_words = ["bánh tráng", "bánh rán", "khoai tây chiên", "ốc", "chè", "kem", "bánh ngọt", "bánh xèo", "gỏi", "nộm"]
+    return "Tráng miệng" in tags or has_category_signal(name_lower, snack_words)
+
+def is_late_night_like(name_lower: str, tags: list[str]) -> bool:
+    late_words = ["cháo", "súp", "phở", "hủ tiếu", "mì nước", "miến"]
+    heavy_tags = {"Chiên / Rán", "Nướng", "Nhiều dầu mỡ / Calo cao", "Khó tiêu / Nặng bụng"}
+    return has_category_signal(name_lower, late_words) and not bool(heavy_tags & set(tags))
+
+def choose_form_tag(food_name: str, full_text: str, current_tags: list[str]) -> str:
+    name_lower = food_name.lower()
+
+    if has_any(name_lower, ["mì quảng", "mỳ quảng", "cao lầu", "cà ri", "kho", "rim", "sốt", "sauce", "cháo", "súp", "soup"]):
+        return "Nước sền sệt"
+    if has_any(name_lower, ["canh", "phở", "bún bò", "bún riêu", "bún mắm", "bún chả cá", "hủ tiếu", "miến", "mì nước", "lẩu"]):
+        return "Món nước"
+    if has_any(name_lower, ["cơm", "xôi", "bánh mì", "bánh mỳ", "pizza", "salad", "gỏi", "nộm", "trộn", "cuốn", "nướng", "chiên", "rán", "xào"]):
+        return "Món khô"
+
+    for tag in current_tags:
+        if tag in FORM_TAGS:
+            return tag
+
+    if has_any(full_text, ["nước dùng", "nước lèo", "chan nước", "nước hầm", "nước lẩu"]):
+        return "Món nước"
+    if has_any(full_text, ["nước sốt", "sốt sệt", "sánh", "sền sệt"]):
+        return "Nước sền sệt"
+    return "Món khô"
+
+def infer_method_tags(food_name: str, full_text: str) -> list[str]:
+    name_lower = food_name.lower()
+    checks = [
+        ("Lẩu", ["lẩu"]),
+        ("Cháo", ["cháo"]),
+        ("Súp", ["súp", "soup"]),
+        ("Chiên / Rán", ["chiên", "rán", "deep fry", "fry"]),
+        ("Nướng", ["nướng", "áp chảo", "grill", "bbq"]),
+        ("Hấp / Luộc", ["hấp", "luộc", "trụng", "chần"]),
+        ("Xào", ["xào", "đảo chảo"]),
+        ("Gỏi / Nộm / Trộn", ["gỏi", "nộm", "trộn", "salad"]),
+        ("Cuốn / Gói", ["cuốn", "gói"]),
+        ("Kho/Rim", ["kho", "rim", "om"]),
+        ("Rang", ["rang"]),
+        ("Hầm / Ninh", ["hầm", "ninh", "nước dùng", "nước hầm"]),
+    ]
+
+    inferred = []
+    for tag, keywords in checks:
+        if has_any(name_lower, keywords) or has_any(full_text, keywords):
+            inferred.append(tag)
+    return inferred[:2]
+
+def ensure_one_form_tag(tags: list[str], food_name: str, full_text: str, logs: list[str]):
+    chosen = choose_form_tag(food_name, full_text, tags)
+    for tag in list(tags):
+        if tag in FORM_TAGS and tag != chosen:
+            remove_tag(tags, tag, logs, f"chỉ giữ một tag dạng món: {chosen}")
+    add_tag(tags, chosen, logs, "bổ sung dạng món bắt buộc")
+
+def ensure_method_tag(tags: list[str], food_name: str, full_text: str, logs: list[str]):
+    if METHOD_TAGS.intersection(tags):
+        return
+    inferred = infer_method_tags(food_name, full_text)
+    if inferred:
+        add_tag(tags, inferred[0], logs, "bổ sung phương pháp chế biến bắt buộc")
+    else:
+        add_tag(tags, "Gỏi / Nộm / Trộn" if "salad" in food_name.lower() else "Hấp / Luộc", logs, "fallback phương pháp chế biến")
+
+def ensure_taste_tag(tags: list[str], full_text: str, logs: list[str]):
+    if TASTE_TAGS.intersection(tags):
+        return
+    if has_any(full_text, ["khổ qua", "mướp đắng", "ngải cứu"]):
+        add_tag(tags, "Đắng", logs, "bổ sung vị chủ đạo")
+    elif has_any(full_text, ["me", "sấu", "mẻ", "giấm", "dấm", "kim chi", "chua"]):
+        add_tag(tags, "Chua", logs, "bổ sung vị chủ đạo")
+    elif has_any(full_text, ["ớt", "sa tế", "gochujang", "cay"]):
+        add_tag(tags, "Cay", logs, "bổ sung vị chủ đạo")
+    elif has_any(full_text, ["chè", "kem", "bánh ngọt", "kẹo", "flan"]):
+        add_tag(tags, "Ngọt", logs, "bổ sung vị chủ đạo")
+    else:
+        add_tag(tags, "Đậm đà", logs, "bổ sung vị chủ đạo mặc định")
+
+def prune_tags(tags: list[str], max_tags: int = 8) -> list[str]:
+    essential = []
+    for group in (TASTE_TAGS, FORM_TAGS, METHOD_TAGS):
+        group_tags = [tag for tag in tags if tag in group]
+        first = min(group_tags, key=lambda tag: TAG_PRIORITY_INDEX.get(tag, len(TAG_PRIORITY_INDEX))) if group_tags else None
+        if first:
+            essential.append(first)
+
+    ordered = sorted(
+        dedupe_keep_order(tags),
+        key=lambda tag: TAG_PRIORITY_INDEX.get(tag, len(TAG_PRIORITY_INDEX)),
+    )
+
+    result = dedupe_keep_order(essential)
+    for tag in ordered:
+        if tag not in result:
+            result.append(tag)
+        if len(result) >= max_tags:
+            break
+    return result
 
 # =====================================================================
 # SYSTEM PROMPT
@@ -220,7 +396,12 @@ ITEM_SCHEMA = {
     "properties": {
         "core_ingredients": {"type": "ARRAY", "items": {"type": "STRING"}},
         "preprocessing_ingredients": {"type": "ARRAY", "items": {"type": "STRING"}},
-        "soft_tags": {"type": "ARRAY", "items": {"type": "STRING"}},
+        "soft_tags": {
+            "type": "ARRAY",
+            "items": {"type": "STRING", "enum": VALID_SOFT_TAGS},
+            "minItems": 3,
+            "maxItems": 8,
+        },
         "description": {"type": "STRING"},
         "reasoning": {"type": "STRING", "description": "Giải thích ngắn gọn tại sao chọn các tags này"}
     },
@@ -230,85 +411,154 @@ ITEM_SCHEMA = {
 # =====================================================================
 # HÀM HẬU XỬ LÝ PYTHON (POST-PROCESSING)
 # =====================================================================
-def post_process_tags(food_name, raw_ingredients_list, ai_tags):
-    tags = set(ai_tags).intersection(VALID_SOFT_TAGS)
+def post_process_tags(food_name, raw_ingredients_list, raw_instructions, ai_tags):
+    tags = [tag for tag in dedupe_keep_order(ai_tags or []) if tag in VALID_SOFT_TAGS]
     logs = []
 
     name_lower = food_name.lower()
     ingred_text = " ".join(raw_ingredients_list).lower()
-    logs.extend(apply_ingredient_risk_heuristics(tags, ingred_text))
+    full_text = f"{name_lower} {ingred_text} {(raw_instructions or '').lower()}"
+
+    heuristic_tags = set(tags)
+    logs.extend(apply_ingredient_risk_heuristics(heuristic_tags, ingred_text))
+    for tag in TAG_PRIORITY:
+        if tag in heuristic_tags and tag not in tags:
+            tags.append(tag)
 
     # --- 1. HARD-MAPPING (Thêm tag bắt buộc) ---
     has_offal = any(re.search(rf'\b{kw}\b', ingred_text) for kw in OFFAL_KEYWORDS)
     if has_offal and "Nội tạng" not in tags:
-        tags.add("Nội tạng")
+        tags.append("Nội tạng")
         logs.append("Thêm 'Nội tạng'")
     elif not has_offal and "Nội tạng" in tags:
-        tags.discard("Nội tạng")
+        remove_tag(tags, "Nội tạng")
 
     if any(kw in name_lower for kw in DANANG_KEYWORDS) and "Đặc sản Đà Nẵng" not in tags:
-        tags.add("Đặc sản Đà Nẵng")
+        tags.append("Đặc sản Đà Nẵng")
         logs.append("Thêm 'Đặc sản Đà Nẵng'")
+    elif "Đặc sản Đà Nẵng" in tags and not any(kw in name_lower for kw in DANANG_KEYWORDS):
+        remove_tag(tags, "Đặc sản Đà Nẵng", logs, "không khớp danh sách đặc sản Đà Nẵng")
+
+    if has_any(name_lower, ASIAN_KEYWORDS):
+        add_tag(tags, "Món Á", logs, "nhận diện nhóm món Á")
+        remove_tag(tags, "Món Việt truyền thống", logs, "món không phải Việt thuần túy")
+    elif has_any(name_lower, WESTERN_KEYWORDS):
+        add_tag(tags, "Món Âu", logs, "nhận diện nhóm món Âu")
+        remove_tag(tags, "Món Việt truyền thống", logs, "món không phải Việt thuần túy")
+    elif has_any(name_lower, VIETNAMESE_KEYWORDS):
+        add_tag(tags, "Món Việt truyền thống", logs, "nhận diện món Việt")
+        remove_tag(tags, "Món Á", logs, "không gán Món Á cho món Việt thuần túy")
 
     if any(kw in name_lower for kw in ["mì quảng", "mỳ quảng", "cao lầu"]):
-        tags.discard("Món nước")
+        remove_tag(tags, "Món nước", logs, "Mì Quảng/Cao lầu không phải món nước ngập")
         if "Món khô" not in tags:
-            tags.add("Nước sền sệt")
+            add_tag(tags, "Nước sền sệt", logs, "Mì Quảng/Cao lầu có nước chan xăm xắp")
 
     if "cháo" in name_lower:
-        tags.update(["Cháo"])
-        tags.discard("Món nước")
+        add_tag(tags, "Cháo", logs, "nhận diện từ tên món")
+        remove_tag(tags, "Món nước", logs, "cháo được xếp dạng nước sền sệt")
+        add_tag(tags, "Nước sền sệt", logs, "bổ sung dạng món cho cháo")
     elif re.search(r'\b(súp|soup)\b', name_lower):
-        tags.update(["Súp"])
-        tags.discard("Món nước")
+        add_tag(tags, "Súp", logs, "nhận diện từ tên món")
+        remove_tag(tags, "Món nước", logs, "súp được xếp dạng nước sền sệt")
+        add_tag(tags, "Nước sền sệt", logs, "bổ sung dạng món cho súp")
 
     if re.search(r'\b(bánh mì|bánh mỳ)\b', name_lower):
-        tags.update(["Món khô", "Giòn / Giòn rụm"])
-        tags.discard("Món nước")
+        add_tag(tags, "Món khô", logs, "bánh mì là món khô")
+        add_tag(tags, "Giòn / Giòn rụm", logs, "kết cấu đặc trưng của bánh mì")
+        remove_tag(tags, "Món nước", logs, "bánh mì không phải món nước")
     elif re.search(r'\b(xôi)\b', name_lower):
-        tags.update(["Món khô", "Mềm"])
-        tags.discard("Món nước")
+        add_tag(tags, "Món khô", logs, "xôi là món khô")
+        add_tag(tags, "Mềm", logs, "kết cấu đặc trưng của xôi")
+        remove_tag(tags, "Món nước", logs, "xôi không phải món nước")
 
     if re.search(r'\b(cơm|canh|xào|kho)\b', name_lower):
-        tags.update(["Ăn trưa", "Ăn tối"])
+        add_tag(tags, "Ăn trưa", logs, "phù hợp bữa chính")
+        add_tag(tags, "Ăn tối", logs, "phù hợp bữa chính")
 
     if re.search(r'\b(phô mai|sữa chua|kem|yaourt|bơ|flan|panna cotta|mousse|rau câu|bingsu|chè)\b', name_lower) or \
        re.search(r'\b(sữa tươi|sữa đặc|whipping cream|bơ lạt)\b', ingred_text):
-        tags.update(["Từ sữa / Phô mai", "Béo ngậy", "Tráng miệng"])
+        add_tag(tags, "Từ sữa / Phô mai", logs, "có sữa/phô mai/kem")
+        add_tag(tags, "Béo ngậy", logs, "có sữa/phô mai/kem")
+        if re.search(r'\b(kem|flan|panna cotta|mousse|rau câu|bingsu|chè|bánh|cheesecake)\b', name_lower):
+            add_tag(tags, "Tráng miệng", logs, "nhận diện món tráng miệng")
 
     # --- 2. KIỂM SOÁT VỊ GIÁC (Chống AI ảo giác theo gia vị) ---
     if "Ngọt" in tags:
-        is_dessert = bool({"Tráng miệng", "Bánh ngọt", "Từ sữa / Phô mai"} & tags)
-        is_sweet_name = re.search(r'\b(chè|kẹo|bánh|kem|ngọt)\b', name_lower)
-        if not (is_dessert or is_sweet_name):
-            tags.discard("Ngọt")
+        if not is_dessert_like(name_lower, tags):
+            remove_tag(tags, "Ngọt")
             logs.append("Xóa 'Ngọt' (Chỉ có đường nêm nếm)")
 
     if "Mặn" in tags:
-        if not re.search(r'\b(mắm|khô|muối|kho quẹt|chao|muối tiêu)\b', name_lower):
-            tags.discard("Mặn")
-            logs.append("Xóa 'Mặn' (Dùng tag 'Đậm đà' thay thế)")
+        if not has_category_signal(name_lower, SALTY_DISH_KEYWORDS):
+            remove_tag(tags, "Mặn")
+            if not (TASTE_TAGS & set(tags)):
+                add_tag(tags, "Đậm đà", logs, "dùng thay cho vị mặn nêm nếm thông thường")
+            logs.append("Xóa 'Mặn' (muối/nước mắm chỉ là gia vị cân bằng)")
 
     if "Chua" in tags:
-        is_salad = bool({"Gỏi / Nộm / Trộn"} & tags)
-        has_sour_core = re.search(r'\b(chua|me|sấu|mẻ|giấm|dấm|măng)\b', name_lower + ingred_text)
-        if not (is_salad or has_sour_core):
-            tags.discard("Chua")
+        has_sour_identity = has_category_signal(name_lower, SOUR_DISH_KEYWORDS)
+        has_sour_core = has_category_signal(name_lower + " " + ingred_text, SOUR_CORE_KEYWORDS)
+        if not (has_sour_identity or has_sour_core):
+            remove_tag(tags, "Chua")
             logs.append("Xóa 'Chua' (Chanh/tắc chỉ là gia vị ăn kèm)")
 
+    if "Cay" in tags:
+        has_spicy_identity = has_category_signal(name_lower, SPICY_DISH_KEYWORDS)
+        has_spicy_core = has_category_signal(name_lower + " " + ingred_text, SPICY_CORE_KEYWORDS)
+        if not (has_spicy_identity or has_spicy_core):
+            remove_tag(tags, "Cay", logs, "ớt/tiêu chỉ là gia vị phụ")
+
+    if "Đắng" in tags:
+        if not has_category_signal(name_lower + " " + ingred_text, BITTER_CORE_KEYWORDS):
+            remove_tag(tags, "Đắng", logs, "không có nguyên liệu đắng làm vị chủ đạo")
+
+    if "Béo ngậy" in tags:
+        has_rich_core = has_category_signal(name_lower + " " + ingred_text, RICH_CORE_KEYWORDS)
+        if not (has_rich_core or {"Chiên / Rán", "Từ sữa / Phô mai", "Bánh ngọt"} & set(tags)):
+            remove_tag(tags, "Béo ngậy", logs, "không có nguyên liệu/cách chế biến tạo cảm giác béo ngậy rõ")
+
     # --- 3. MUTUALLY EXCLUSIVE (Loại trừ mâu thuẫn) ---
-    if {"Chiên / Rán", "Nhiều dầu mỡ / Calo cao"} & tags:
+    if {"Chiên / Rán", "Nhiều dầu mỡ / Calo cao"} & set(tags):
         for t in ["Thanh đạm", "Healthy / Eat Clean"]:
             if t in tags:
-                tags.discard(t)
+                remove_tag(tags, t)
                 logs.append(f"Xóa '{t}' (Trái ngược đồ chiên xào)")
 
-    if {"Tráng miệng", "Bánh ngọt", "Ngọt"} & tags:
+    if {"Tráng miệng", "Bánh ngọt", "Ngọt"} & set(tags):
         for t in ["Giàu đạm", "Nội tạng", "Mồi nhậu"]:
             if t in tags:
-                tags.discard(t)
+                remove_tag(tags, t)
 
-    return list(tags.intersection(VALID_SOFT_TAGS)), logs
+    # --- 4. KIỂM SOÁT TAG DỊP/BỮA ĂN (tránh làm loãng soft_tags) ---
+    if "Tráng miệng" in tags and not is_dessert_like(name_lower, tags):
+        remove_tag(tags, "Tráng miệng", logs, "không phải món ngọt/tráng miệng rõ ràng")
+
+    if "Mồi nhậu" in tags and not has_category_signal(name_lower, ["ốc", "nướng", "lòng", "khô", "gỏi", "nem chua", "bê thui", "mực", "ram", "chả"]):
+        remove_tag(tags, "Mồi nhậu", logs, "không phải đồ nhắm rõ ràng")
+
+    if "Ăn khuya" in tags and not is_late_night_like(name_lower, tags):
+        remove_tag(tags, "Ăn khuya", logs, "không phù hợp ăn khuya")
+
+    if "Ăn vặt" in tags and is_main_meal_like(name_lower, tags) and not is_snack_like(name_lower, tags):
+        remove_tag(tags, "Ăn vặt", logs, "món chính, không phải ăn vặt")
+
+    if "Ăn no" in tags and is_dessert_like(name_lower, tags):
+        remove_tag(tags, "Ăn no", logs, "món tráng miệng không nên là ăn no")
+
+    if "Ăn sáng" in tags and {"Chiên / Rán", "Nướng", "Mồi nhậu", "Tráng miệng"} & set(tags):
+        if not has_category_signal(name_lower, ["bánh mì", "xôi", "phở", "bún", "cháo", "mì", "hủ tiếu"]):
+            remove_tag(tags, "Ăn sáng", logs, "không phải món sáng điển hình")
+
+    ensure_one_form_tag(tags, food_name, full_text, logs)
+    ensure_method_tag(tags, food_name, full_text, logs)
+    ensure_taste_tag(tags, full_text, logs)
+
+    pruned = prune_tags(tags, max_tags=8)
+    if len(dedupe_keep_order(tags)) > len(pruned):
+        logs.append(f"Cắt còn {len(pruned)} tags quan trọng nhất")
+
+    return pruned, logs
 
 def print_diff(old_tags: list, new_tags: list):
     old_set = set(old_tags)
@@ -394,7 +644,7 @@ Cách làm: {raw_instructions}
             res = json.loads(response.text)
             
             # Post processing
-            cleaned_tags, autofix_logs = post_process_tags(food_name, raw_ingreds, res.get("soft_tags", []))
+            cleaned_tags, autofix_logs = post_process_tags(food_name, raw_ingreds, raw_instructions, res.get("soft_tags", []))
 
             # In logs
             if autofix_logs:

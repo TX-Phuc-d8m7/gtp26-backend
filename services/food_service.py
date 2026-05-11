@@ -20,12 +20,12 @@ client = genai.Client(vertexai=True, project=PROJECT_ID, location="us-central1")
 # =================================
 
 valid_health_tags = [
-    "Vết thương hở/Mới phẫu thuật", 
+    "Vết thương hở / Mới phẫu thuật", 
     "Đang cho con bú", 
     "Phụ nữ mang thai",
-    "Gan nhiễm mỡ/Men gan cao", 
+    "Gan nhiễm mỡ / Men gan cao", 
     "Béo phì", 
-    "Đầy bụng/Khó tiêu",
+    "Đầy bụng / Khó tiêu",
     "Nhiệt miệng/Loét miệng", 
     "Tiêu chảy", 
     "Gout",
@@ -39,7 +39,7 @@ valid_health_tags = [
     "Tiểu đường",
     "Dị ứng mắm lên men", 
     "Dị ứng bột ngọt (MSG)", 
-    "Dị ứng mè/vừng",
+    "Dị ứng mè / vừng",
     "Dị ứng trái cây có múi", 
     "Dị ứng trứng", 
     "Dị ứng cà chua",
@@ -53,6 +53,18 @@ valid_health_tags = [
     "Dị ứng động vật thân mềm", 
     "Dị ứng động vật giáp xác"
 ]
+
+HEALTH_TAG_ALIAS_MAP = {
+    "Vết thương hở/Mới phẫu thuật": "Vết thương hở / Mới phẫu thuật",
+    "Gan nhiễm mỡ/Men gan cao": "Gan nhiễm mỡ / Men gan cao",
+    "Đầy bụng/Khó tiêu": "Đầy bụng / Khó tiêu",
+    "Dị ứng mè/vừng": "Dị ứng mè / vừng",
+}
+
+MEDICAL_ADVICE_ALIAS_MAP = {
+    "Gout": "Bệnh Gout",
+    "Gan nhiễm mỡ / Men gan cao": "Gan nhiễm mỡ",
+}
 
 valid_soft_tags = [
     "Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy",
@@ -89,6 +101,39 @@ TAG_ALIAS_MAP = {
 def _normalize_tag_key(tag: str) -> str:
     return (tag or "").strip().lower().replace("đ", "d").replace(" ", "")
 
+def _strip_accents(text: str) -> str:
+    accents = {
+        "àáạảãâầấậẩẫăằắặẳẵ": "a",
+        "èéẹẻẽêềếệểễ": "e",
+        "ìíịỉĩ": "i",
+        "òóọỏõôồốộổỗơờớợởỡ": "o",
+        "ùúụủũưừứựửữ": "u",
+        "ỳýỵỷỹ": "y",
+        "đ": "d",
+    }
+    result = text or ""
+    for source, target in accents.items():
+        for ch in source:
+            result = result.replace(ch, target).replace(ch.upper(), target.upper())
+    return result
+
+def _normalize_ingredient_match_text(value: str) -> str:
+    text_value = _strip_accents(value or "").lower()
+    text_value = re.sub(r"[^a-z0-9/\s-]", " ", text_value)
+    return re.sub(r"\s+", " ", text_value).strip()
+
+def _ingredient_phrase_matches(text_value: str, phrase: str) -> bool:
+    normalized_phrase = _normalize_ingredient_match_text(phrase)
+    if not normalized_phrase:
+        return False
+    pattern = rf"(?<![a-z0-9]){re.escape(normalized_phrase)}(?![a-z0-9])"
+    return re.search(pattern, text_value) is not None
+
+def _food_has_excluded_ingredient(food: Food, excluded_ingredients: list[str]) -> bool:
+    ingredient_text = " ".join(food.core_ingredients or [])
+    normalized_text = _normalize_ingredient_match_text(ingredient_text)
+    return any(_ingredient_phrase_matches(normalized_text, ing) for ing in excluded_ingredients)
+
 def canonicalize_soft_tag(tag: str) -> str | None:
     """
     Chuẩn hóa toàn bộ biến thể soft_tag về danh mục chuẩn.
@@ -114,6 +159,9 @@ def canonicalize_soft_tags(tags: list[str]) -> list[str]:
             seen.add(canonical)
             result.append(canonical)
     return result
+
+def canonicalize_health_tag(tag: str) -> str:
+    return HEALTH_TAG_ALIAS_MAP.get((tag or "").strip(), (tag or "").strip())
 
 # TRÍCH XUẤT VÀ XỬ LÝ Ý ĐỊNH NGƯỜI DÙNG
 def supervisor_agent(user_input: str):
@@ -186,7 +234,7 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
     if "error" in extracted_data:
         return None
 
-    symptoms = extracted_data.get("health_constraints", [])
+    symptoms = [canonicalize_health_tag(tag) for tag in extracted_data.get("health_constraints", [])]
 
     user_include_dishes = extracted_data.get("include_dishes", [])
     user_exclude_dishes = extracted_data.get("exclude_dishes", [])
@@ -208,7 +256,10 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
         tags_db = result.scalars().all()
 
         for tag in tags_db:
-            medical_exclude_tags.update(canonicalize_soft_tags(tag.exclude_soft_tag))
+            # Dị ứng cần chặn theo nguyên liệu cụ thể. Chặn theo soft tag như "Hải sản"
+            # dễ loại nhầm các món không chứa tác nhân dị ứng trực tiếp.
+            if tag.tag_type != "ALLERGY":
+                medical_exclude_tags.update(canonicalize_soft_tags(tag.exclude_soft_tag))
             medical_prefer_tags.update(canonicalize_soft_tags(tag.prefer_soft_tag))
             medical_exclude_ings.update(tag.exclude_ingredient)
             medical_prefer_ings.update(tag.prefer_ingredient)
@@ -287,7 +338,7 @@ def post_processing_agent(
     general_advices: list[str] = []
 
     for symptom in user_symptoms:
-        rule = MEDICAL_ADVICE_RULES.get(symptom)
+        rule = MEDICAL_ADVICE_RULES.get(symptom) or MEDICAL_ADVICE_RULES.get(MEDICAL_ADVICE_ALIAS_MAP.get(symptom, ""))
         if not rule:
             print(f"  [POST-PROCESSING] Không có luật cho bệnh: {symptom}")
             continue
@@ -309,9 +360,10 @@ def post_processing_agent(
                 print(f"  ✅ Trigger khớp [{symptom}]: '{trigger_val}' -> Bơm cảnh báo")
 
     # --- Bước 4: Tổng hợp medical_warnings ---
+    advice_lines = general_advices + collected_warnings
     medical_warnings = "\n".join(
-        [f"- {w}" for w in collected_warnings]
-    ) if collected_warnings else "(Không có cảnh báo đặc biệt nào cho các món được gợi ý.)"
+        [f"- {w}" for w in advice_lines]
+    ) if advice_lines else "(Không có cảnh báo đặc biệt nào cho các món được gợi ý.)"
 
     foods_text = json.dumps(foods_summary, ensure_ascii=False, indent=2)
     symptoms_text = ", ".join(user_symptoms) if user_symptoms else "Không có bệnh lý đặc biệt"
@@ -442,6 +494,17 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
     db_result = await db.execute(stmt)
     # Đây là tập món ăn sạch sau khi lọc — vector search sẽ chạy trên tập này
     filtered_foods = db_result.scalars().all()
+
+    if final_e_ings:
+        before_python_filter = len(filtered_foods)
+        filtered_foods = [
+            food for food in filtered_foods
+            if not _food_has_excluded_ingredient(food, final_e_ings)
+        ]
+        print(
+            f"🛡️ [PYTHON INGREDIENT FILTER] Loại thêm "
+            f"{before_python_filter - len(filtered_foods)} món bằng so khớp nguyên liệu không dấu."
+        )
 
     print(f"\n{'='*60}")
     print(f"📦 [BƯỚC 3 - SQL FILTER] Còn lại {len(filtered_foods)} món sau khi loại exclude_ingredients:")

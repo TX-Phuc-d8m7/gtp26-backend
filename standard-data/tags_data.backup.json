@@ -1,0 +1,515 @@
+[
+    {
+        "name": "Dị ứng động vật giáp xác",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "tôm", "tôm hùm", "tôm tít", "tôm càng xanh", "tôm sú", 
+            "tôm đất", "tôm thẻ", "bề bề", "con ruốc", "con tép", "con khuyết", 
+            "mắm tôm", "mắm ruốc", "mắm tép",  "tôm khô", "ruốc khô", "tép khô", 
+            "bột tôm", "bột tôm khô", "nước cốt tôm", "nước cốt tôm khô", "cua", 
+            "cua đồng", "cua biển", "ghẹ", "ghẹ xanh", "càng cua", "bột cua", 
+            "thanh cua", "nước cốt cua", "mắm cua", "muối tôm", "bánh phồng tôm", 
+            "chả tôm", "chả cua"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng động vật thân mềm",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "nghêu", "ngêu", "sò", "ốc", "hàu", "hào", "trai", "hến", "vẹm", "tu hài", "bào ngư",
+            "mực", "mực ống", "mực lá", "mực găm", "mực cơm", "mực xà", "bạch tuộc", "mực khô", "mực một nắng",
+            "sá sùng", "sâu đất", "địa sâm",
+            "nước cốt mực", "bột mực", "chả mực", "mắm mực", "mắm sò", "mắm hàu", "mắm nhum",
+            "nước hầm hến", "nước luộc ốc"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng cá có vây",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "cá hồi", "cá ngừ", "cá thu", "cá lóc", "cá rô", "cá chép", "cá bống", "cá điêu hồng", "cá ngừ đại dương", "cá bớp", "cá cam", "cá đuối", "cá nục", "cá cơm", "cá trích", "cá linh",
+            "nước mắm", "nước mắm cá cơm", "nước mắm nhỉ", "nước mắm nguyên chất",
+            "mắm nêm", "mắm cá linh", "mắm cá lóc", "mắm thu", "mắm chưng",
+            "tinh chất cá", "bột cá", "dầu cá", "nước cốt cá", "nước hầm cá",
+            "chả cá", "chả cá Quy Nhơn", "chả cá Lã Vọng", "chả cá thác lác",
+            "khô cá", "cá khô", "cá chỉ vàng", "cá hộp", "cá ngừ hộp", "cá ngừ ngâm dầu", "cá mòi hộp", "cá thu hộp"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng đậu phộng",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "đậu phộng", "lạc", "đậu phụng", "hạt lạc",
+            "bơ đậu phộng", "bơ lạc", "kẹo lạc", "kẹo cu đơ",
+            "dầu đậu phộng", "dầu lạc",
+            "bột đậu phộng", "muối đậu phộng", "muối mè đậu phộng",
+            "nước sốt đậu phộng", "sốt tương đậu",
+            "đậu phộng rang", "đậu phộng da cá", "đậu phộng tỏi ớt"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng hạt cây",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "hạt điều", "hạt hạnh nhân", "hạt óc chó", "hạt mắc ca", "hạt macca", 
+            "hạt dẻ cười", "hạt dẻ", "hạt thông", "hạt hồ đào", "hạt phỉ", "hạt sachi",
+            "hạnh nhân", "óc chó", "mắc ca", "pistaschio", "hazelnut", "walnut", "cashew",
+            "bơ hạt điều", "bơ hạnh nhân", "sữa hạt hạnh nhân", "sữa hạt óc chó", "sữa hạt điều",
+            "dầu hạnh nhân", "dầu óc chó", "dầu mắc ca",
+            "bột hạnh nhân", "bột hạt phỉ",
+            "kẹo hạt điều", "bánh hạt điều", "ngũ cốc hạt", "granola"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng sữa bò",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "sữa bò", "sữa tươi", "sữa đặc", "sữa bột", "váng sữa",
+            "bơ", "bơ lạt", "bơ mặn", "phô mai", "cheese", "phomai",
+            "kem tươi", "whipping cream", "topping cream",
+            "sữa chua", "yogurt", "đạm whey", "casein",
+            "bánh mỳ bơ", "sốt kem", "sốt phô mai"
+        ],
+        "prefer_ingredient": ["đậu phụ", "đậu nành", "mè", "vừng", "hạt chia", "cá hồi", "cá thu", "cá cơm" ]
+    },
+    {
+        "name": "Bất dung nạp Lactose",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "sữa bò tươi", "sữa đặc", "sữa có đường", "sữa tươi nguyên kem",
+            "kem tươi", "whipping cream", "kem lạnh",
+            "sữa đặc có đường"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng đậu nành",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "đậu nành", "đỗ tương", 
+            "đậu hũ", "đậu phụ", "tào phớ", "đậu khuôn",
+            "sữa đậu nành", 
+            "nước tương", "xì dầu", "tương đen", 
+            "tương hột", "tương bần", "chao",
+            "dầu đậu nành", "miso", "edamame", "tempeh",
+            "natto", "kinako"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng lúa mì",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "lúa mì", "bột mì", "bột mì nguyên cám", 
+            "cám lúa mì", "mầm lúa mì", "bột mì đa dụng",
+            "mì trứng", "mì gói", "mì xào",
+            "seitan", "mì căn",
+            "xì dầu", "nước tương", "bánh mỳ", "bánh mỳ sandwich", 
+            "bánh mỳ baguette", "bánh mỳ ciabatta", "bánh mỳ pita", 
+            "bánh mỳ ngọt", "bánh mỳ hoa cúc",
+            "bia", "dầu hào", "nước sốt đậu"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng trứng",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "trứng gà", "trứng vịt", "trứng cút", "trứng ngỗng", "trứng chim cút",
+            "mì trứng", "chả trứng", "lòng đỏ trứng", "lòng trắng trứng", "bột trứng", "trứng muối", "trứng bắc thảo",
+            "sốt mayonnaise", "sốt trứng", "kem trứng"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng cà chua",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "cà chua", "cà chua bi", "cà chua cherry", "cà chua Roma", "cà chua beefsteak",
+            "sốt cà chua", "ketchup", "sốt spaghetti", "sốt pizza", "tương cà"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng trái cây có múi",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "cam", "quýt", "bưởi", "chanh", "quất", "tắc",
+            "nước cam", "nước quýt", "nước bưởi", "nước chanh", 
+            "nước cốt chanh", "lá chanh", "vỏ cam", "vỏ quýt", 
+            "vỏ bưởi", "vỏ chanh", "vỏ quất", "vỏ tắc", "trần bì", 
+            "thanh trà", "tinh dầu cam", "tinh dầu quýt", "tinh dầu bưởi", "tinh dầu chanh"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng mè / vừng",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "mè", "vừng", "hạt mè", "hạt vừng", 
+            "bánh tráng", "bánh tráng mè", "bánh tráng vừng", 
+            "bánh gạo mè", "bánh gạo vừng", 
+            "bánh quy mè", "bánh quy vừng", 
+            "bánh mì mè", "bánh mì vừng",
+            "dầu mè", "tinh dầu mè",
+            "mè đen", "mè trắng", "vừng đen", "vừng trắng",
+            "muối mè", "muối vừng", "xốt mè rang",
+            "bánh đa"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng bột ngọt (MSG)",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "bột ngọt", "mì chính", "hạt nêm", 
+            "bột nêm", "bột canh", "bột gia vị"
+        ],
+        "prefer_ingredient": []
+    },
+    {
+        "name": "Dị ứng mắm lên men",
+        "tag_type": "ALLERGY",
+        "exclude_soft_tag": [],
+        "prefer_soft_tag": [],
+        "exclude_ingredient": [
+            "mắm tôm", "mắm ruốc", "mắm tép", "mắm cái",
+            "mắm nêm", "mắm cá linh", "mắm cá lóc", "mắm thu", "mắm chưng",
+            "mắm mực", "mắm sò", "mắm hàu", "mắm nhum",
+            "nước mắm", "nước mắm cá cơm", "nước mắm nhỉ", "nước mắm nguyên chất"
+        ],
+        "prefer_ingredient": ["xì dầu", "nước tương"]
+    },
+    {
+        "name": "Tiểu đường",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Thức ăn nhanh", "Chiên / Rán", "Ngọt", "Giàu tinh bột"],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Gỏi / Nộm / Trộn", "Cuốn / Gói" ],
+        "exclude_ingredient": [
+            "đường", "đường trắng", "đường nâu", "đường phèn", "đường mía", 
+            "đường cát", "đường tinh luyện", "đường hóa học",
+            "mật ong", "siro ngô", "siro cây phong", "siro agave",
+            "kẹo ngọt", "kẹo mút", "kẹo dẻo", "kẹo cứng",
+            "bánh ngọt", "bánh kem", "bánh quy ngọt",
+            "nước ngọt có ga", "nước ép trái cây có đường",
+            "sữa đặc", "kem béo", "gạo", "bánh mì sandwich", 
+            "bánh mì ngọt", "bánh mì hoa cúc", "bánh mì baguette",
+            "bột năng", "bột bắp", "bột mì nguyên cám", "bột mì đa dụng",
+            "sầu riêng", "mít", "vải", "xoài", "nhãn", "xúc xích", "lạp xưởng"
+        ],
+        "prefer_ingredient": [
+            "gạo lứt", "yến mạch", "hạt kê", "bánh mì đen", "bún gạo lứt", "hạt diêm mạch",
+            "đường cỏ ngọt", "đường ăn kiêng",
+            "rau xanh", "các loại đậu non", "thịt heo nạc", "cá", "đậu phụ", 
+            "ổi", "bưởi", "táo xanh", "thanh long", "cam", "dâu tây", "bơ",
+            "đậu xanh", "đậu đen", "đậu lăng", "khoai lang",
+            "ức gà", "cá hồi", "cá thu", "hạnh nhân", "óc chó", "hạt điều",
+            "dầu oliu", "dầu đậu nành", "khổ qua", "mướp đắng", "nấm linh chi", 
+            "nấm đông cô", "nấm hương", "nấm mối", "nấm bào ngư", "tảo biển"
+        ]
+    },
+    {
+        "name": "Cao huyết áp",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Chiên / Rán", "Đậm đà", "Béo ngậy", "Ăn vặt" ],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh đạm", "Cuốn / Gói" ],
+        "exclude_ingredient": [
+            "muối", "muối ăn", "nước mắm", "mắm tôm", "mắm ruốc", "mắm nêm",
+            "dưa muối", "cà pháo", "kim chi", "thịt xông khói", "xúc xích", "lạp xưởng",
+            "mì tôm", "mỡ động vật", "da gà", "da vịt",
+            "gan", "lòng", "rượu", "bia", "cà phê",
+            "bột ngọt", "mì chính", "hạt nêm", "bột canh", "xì dầu", "mỡ hành"
+        ],
+        "prefer_ingredient": [
+            "cần tây", "cải bó xôi", "bông cải xanh", "rau xà lách",
+            "chuối", "bơ", "lựu", "táo", "nho", "việt quất",
+            "khoai tây", "khoai lang", "đậu nành", "đậu hà lan",
+            "cá hồi", "cá thu", "hạt chia", "hạt lanh", "hạnh nhân", "óc chó",
+            "ngũ cốc nguyên hạt", "gạo lứt", "yến mạch",
+            "tỏi", "hành tây", "quế", "nghệ", "dầu oliu", "sữa chua không đường", "củ dền"
+        ]
+    },
+    {
+        "name": "Suy thận",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Mặn", "Giàu đạm", "Nội tạng", "Thức ăn nhanh", "Chiên / Rán", "Xào", "Nướng" ],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh đạm" ],
+        "exclude_ingredient": [ 
+            "muối", "muối ăn", "nước mắm", "mắm tôm", "mắm ruốc", "mắm nêm", "tương đen", "xì dầu",
+            "dưa muối", "cà pháo", "kim chi", "thịt xông khói", "xúc xích", "lạp xưởng",
+            "chuối", "bơ", "cam", "quýt", "cà chua", "sầu riêng", "mít", "rau ngót", "rau muống", "khoai tây", "nội tạng động vật",
+            "lòng đỏ trứng", "sữa bò", "sữa đặc", "sữa bột", "váng sữa", "bơ", "phô mai", "kem tươi", "sữa chua",
+            "gạo lứt", "xúc xích", "đồ hộp", "mì tôm", "thịt bò", "tôm khô", "mực khô"
+        ],
+        "prefer_ingredient": [ 
+            "miến dong", "bột sắn dây", "gạo trắng", "bột năng", "bột lọc", "lòng trắng trứng",
+            "ức gà", "thịt heo nạc", "cá đồng", "cá lóc", "cá trắm", "cá chẽm", "cá hồi",
+            "dầu oliu", "dầu đậu nành", "dầu hạt cải", "dầu hướng dương",
+            "bầu", "bí xanh", "mướp", "su su", "bắp cải", "dưa chuột",
+            "lê", "táo", "dứa (thơm)", "dưa hấu", "nho",
+            "đường", "mật ong", "súp lơ trắng", "việt quất", "ớt chuông đỏ", "tỏi"
+        ]
+    },
+    {
+        "name": "Trào ngược dạ dày thực quản (GERD)",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Chua", "Cay", "Béo ngậy", "Chiên / Rán", "Thức ăn nhanh" ],
+        "prefer_soft_tag": [ "Thanh đạm", "Hấp / Luộc", "Giàu chất xơ", "Cuốn / Gói", "Ấm bụng", "Mềm" ],
+        "exclude_ingredient": [
+            "thịt mỡ", "sung", "hồng", "hồng xiêm", "cam", "chanh", "quýt", "bưởi", "tắc", "nước cam", "nước chanh", "nước bưởi", "nước quýt",
+            "nước cốt chanh", "muối", "bia", "rượu", "phô mai", "thịt xông khói", "giăm bông",
+            "sốt kem", "sốt salad", "ớt", "tiêu", "mù tạt", "tỏi", "hành tây", "bơ", "cà chua"
+        ],
+        "prefer_ingredient": [
+            "rau cải", "rau xanh", "lúa mạch", "ngũ cốc nguyên hạt",
+            "gừng", "nghệ", "mật ong", "sữa chua", "dưa hấu", "dưa gang", "táo", "chuối",
+            "đu đủ chín", "dưa leo", "thanh long", "yến mạch", "bánh mỳ", "khoai lang",
+            "ổi", "lựu"
+        ]
+    },
+    {
+        "name": "Viêm loét dạ dày",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Chiên / Rán", "Xào", "Thức ăn nhanh", "Khó tiêu / Nặng bụng", "Chua", "Cay", "Nội tạng", "Sống/Chín tái", "Rang", "Giàu đạm", "Dai / Sần sật"],
+        "prefer_soft_tag": [ "Thanh đạm", "Hấp / Luộc", "Mềm", "Món nước", "Dễ tiêu", "Cháo", "Súp", "Ấm bụng" ],
+        "exclude_ingredient": [
+            "tôm", "cua", "sụn gà", "chân gà", "cánh gà", "cổ gà", "đầu cá", "ớt", "mù tạt",
+            "bia", "rượu", 
+            "cam", "chanh", "tắc", "nước chanh","nước cốt chanh", "giấm", "giá đỗ", "dưa muối", "cần tây", "cà pháo", "kim chi", "măng", "măng chua",
+            "ngải cứu", "lá lốt",
+            "vịt", "thịt vịt", "ngan", "thịt ngan",
+            "mắm tôm", "mắm ruốc", "mắm nêm"
+        ], 
+        "prefer_ingredient": [
+            "cơm", "chuối", "bánh mỳ", "bánh mỳ sandwich", "sữa chua không đường", "gừng",
+            "đậu bắp", "nghệ", "mật ong", "thịt nạc băm", "ức gà"
+        ]
+    },
+    {
+        "name": "Tim mạch",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Chiên / Rán", "Mặn", "Nướng" ],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh đạm" ],
+        "exclude_ingredient": [
+            "thịt bò", "thịt bê", "thịt cừu", "thịt dê", "thịt trâu", "thịt ngựa", "thịt nai", "thịt ba chỉ heo",
+            "thịt mỡ", "mỡ lợn", "bánh mì trắng", "bánh mì sandwich", "bia", "rượu", "muối", "bơ", "phô mai",
+            "nước mắm", "mắm ruốc", "mắm nêm", "dầu hào", "hạt nêm", "mì chính", "bột canh",
+            "mì tôm", "thịt xông khói", "xúc xích", "lạp xưởng", "cá ngừ hộp", "dưa muối", "cà pháo"
+        ], 
+        "prefer_ingredient": [
+            "rau diếp cá", "rau bina", "cải xoăn", "cà rốt", "cà chua", "hạt đậu nành",
+            "bắp cải", "đậu bắp", "cam", "chuối", "xoài", "ổi", "táo", "dâu tây", "kiwi", "húng quế",
+            "nghệ", "tiêu đen", "cá hồi", "cá mòi", "cá trích", "cá thu", "cá ngừ", "yến mạch", "gạo lứt", 
+            "hạt diêm mạch", "hạt óc chó", "hạt hạnh nhân", "vừng", "mè", "hạt dẻ", 
+            "đậu đen", "đậu xanh", "đậu nành", "đậu đỏ", "tôm", "cua", "mực",
+            "thịt heo nạc", "thịt gà", "thịt vịt", "dầu oliu", "dầu hạt cải", "dầu mè", "dầu đậu nành",
+            "dầu gạo", "dầu hướng dương", "trứng"
+        ]
+    },
+    {
+        "name": "Táo bón",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Mặn", "Món khô", "Chiên / Rán" ],
+        "prefer_soft_tag": [ "Món nước", "Mềm", "Giàu chất xơ", "Súp", "Cháo" ],
+        "exclude_ingredient": [
+           "bánh mì trắng", "thịt bò", "thịt bê", "thịt cừu", "thịt dê", "thịt trâu", "thịt ngựa", "thịt nai", "thịt ba chỉ heo",
+           "xúc xích", "lạp xưởng", "ổi", "hồng"
+        ], 
+        "prefer_ingredient": [
+            "dưa muối", "súp lơ", "cà rốt", "đậu bắp", "bắp cải",
+            "bánh mì nguyên cám", "mận khô", "dầu oliu",
+            "đậu hà lan", "đậu lăng", "đậu xanh", "khoai lang", "khoai tây",
+            "sữa chua", "chuối", "yến mạch", "ngũ cốc nguyên hạt", "rau mồng tơi", "rau đay",
+            "cá", "tôm", "đậu phụ"
+        ]
+    },
+    {
+        "name": "Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)",
+        "tag_type": "SYMPTON",
+        "exclude_soft_tag": [ "Món lạnh", "Chiên / Rán", "Chua", "Cay", "Giòn / Giòn rụm", "Rang" ],
+        "prefer_soft_tag": [ "Món nước", "Mềm", "Nóng hổi", "Ấm bụng", "Thanh đạm", "Giải cảm" ],
+        "exclude_ingredient": [
+            "ớt", "tiêu", "mù tạt", "gừng khô", "hạt tiêu",
+            "lòng lợn", "tôm", "cua",
+            "rượu", "bia", "cam", "chanh", "quýt", "nếp"
+        ], 
+        "prefer_ingredient": [
+            "mật ong", "gừng", "tỏi", "hành lá", "tía tô", "lá hẹ",
+            "chanh đào", "quất", "quả phật thủ",
+            "thịt nạc", "thịt gà",  "cà rốt", "bí đỏ", "khoai tây"
+        ]
+    },
+    {
+        "name": "Gout",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Hải sản", "Nội tạng", "Mồi nhậu" ],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Thanh mát/Giải nhiệt" ],
+        "exclude_ingredient": [
+            "thịt bò", "thịt bê", "thịt cừu", "thịt dê", "thịt trâu", "thịt ngựa", "thịt nai",
+            "gan", "thận", "tim", "óc heo", "tiết canh", "tôm", "cua", "ghẹ", "sò điệp", "hàu", "cá", "nấm", "măng tây", "giá đỗ", "dọc mùng", "nghêu", "sò", "ốc", "hến"
+        ], 
+        "prefer_ingredient": [
+            "gạo", "bánh mì", "khoai tây", "ngũ cốc nguyên hạt", "đậu nành", "đậu phụ",
+            "sữa chua", "súp lơ xanh", "yến mạch"
+        ]
+    },
+    {
+        "name": "Tiêu chảy",
+        "tag_type": "DISEASE",
+        "exclude_soft_tag": [ "Giàu chất xơ", "Nướng", "Chiên / Rán", "Xào", "Sống/Chín tái"],
+        "prefer_soft_tag": [ "Hấp / Luộc", "Hầm / Ninh", "Súp", "Cháo" ],
+        "exclude_ingredient": [
+            "sữa tươi", "phô mai", "sữa đặc", "mỡ lợn", "thịt xông khói", "xúc xích",
+            "ớt", "tiêu", "gừng",
+            "rau sống", "rau muống", "rau ngót", "súp lơ", "bắp cải",
+            "đậu xanh", "đậu đen", "ngô", "mù tạt", "hành tây", "tỏi",
+            "mắm cái", "mắm nêm", "thanh long", "đu đủ", "cam", "quýt",
+            "bưởi"
+        ], 
+        "prefer_ingredient": [
+            "cà rốt", "cơm", "chuối", "táo", "bánh mì trắng", "bánh mì sandwich",
+            "gạo trắng", "khoai tây", "yến mạch", "ức gà", "cá lóc", "cá diêu hồng",
+            "trứng gà", "bí đỏ"
+        ]
+    },
+    {
+        "name": "Nhiệt miệng/Loét miệng",
+        "tag_type": "SYMPTON",
+        "exclude_soft_tag": [ "Mặn", "Cay", "Giòn / Giòn rụm", "Chua", "Chiên / Rán" ],
+        "prefer_soft_tag": [ "Món nước", "Cháo", "Súp", "Thanh mát/Giải nhiệt" ],
+        "exclude_ingredient": [
+           "ớt", "tiêu", "tỏi", "gừng", "mù tạt", "cam", "chanh", "bưởi",
+           "nước cốt chanh", "muối", "dứa", "thơm", "giấm", "dưa muối", "cà pháo", 
+           "nước mắm", "mắm nêm", "mắm cái", "mắm mực", "mắm cá linh"
+        ], 
+        "prefer_ingredient": [
+            "trứng", "thịt heo nạc", "nấm", "dưa chuột", "bí đao",
+            "khổ qua", "mướp đắng", "rau má", "rau diếp cá", "cần tây",
+            "rau mồng tơi", "súp lơ", "rau cải", "rau muống", "rau ngót",
+            "sắn dây", "xà lách", "đậu phụ", "đậu hũ", "cá lóc", "cá", "hạt sen"
+        ]
+    },
+    {
+        "name": "Đầy bụng / Khó tiêu",
+        "tag_type": "SYMPTON",
+        "exclude_soft_tag": [ "Chiên / Rán", "Chua", "Cay" ],
+        "prefer_soft_tag": [ "Thanh đạm", "Ấm bụng", "Hấp / Luộc", "Nóng hổi" ],
+        "exclude_ingredient": [
+           "bắp cải", "súp lơ", "sữa tươi", "phô mai"
+        ], 
+        "prefer_ingredient": [
+            "gừng", "thơm", "dứa", "tía tô", "củ cải trắng", "bạc hà",
+            "sữa chua"
+        ]
+    },
+    {
+        "name": "Béo phì",
+        "tag_type": "SYMPTON",
+        "exclude_soft_tag": [ "Chiên / Rán", "Nướng", "Xào", "Thức ăn nhanh", "Ăn vặt", "Ăn khuya", "Nội tạng", "Giàu tinh bột" ],
+        "prefer_soft_tag": [ "Giàu chất xơ", "Giàu đạm", "Hấp / Luộc" ],
+        "exclude_ingredient": [
+           "bánh mì trắng", "cơm", "gạo", "mỡ lợn", "xúc xích", "lạp xưởng",
+           "bơ", "bơ thực vật", "đường", "đường trắng", "mật ong", "sữa đặc",
+           "sốt phô mai", "sốt bơ trứng", "sốt mayonaise"
+        ], 
+        "prefer_ingredient": [
+            "gạo lứt", "khoai lang", "yến mạch", "đậu đen", "đậu đỏ",
+            "ức gà", "thăn lợn", "cá lóc", "cá diêu hồng", "cá hồi",
+            "lòng trắng trứng", "đậu phụ", "thịt heo nạc", "cá thu",
+            "tôm", "mực", "dầu oliu", "bông cải", "rau chân vịt", "bắp cải",
+            "cần tây", "dưa leo", "hạnh nhân", "óc chó", "hạt macca",
+            "bánh mì nguyên cám"
+        ]
+    },
+    {
+        "name": "Gan nhiễm mỡ / Men gan cao",
+        "tag_type": "SYMPTON",
+        "exclude_soft_tag": [ "Chiên / Rán", "Nướng", "Xào", "Thức ăn nhanh", "Nội tạng", "Mặn", "Giàu tinh bột" ],
+        "prefer_soft_tag": [ "Thanh mát/Giải nhiệt", "Hấp / Luộc" ],
+        "exclude_ingredient": [
+           "bánh mì trắng", "cơm", "gạo", "đường", "đường trắng", "mật ong", "sữa đặc",
+           "muối", "mì ống", "thịt bò", "thịt nai", "thịt dê", "thịt cừu",
+           "rượu", "bia"
+        ], 
+        "prefer_ingredient": [
+           "đậu phụ", "đậu hũ", "cá hồi", "cá ngừ", "cá mòi",
+           "yến mạch", "hạt óc chó", "bơ", "hạt hướng dương", "dầu oliu",
+           "tỏi", "gạo lứt", "atiso", "khổ qua", "mướp đắng", "rau má", "diếp cá"
+        ]
+    }, 
+    {
+        "name": "Phụ nữ mang thai",
+        "tag_type": "STATUS",
+        "exclude_soft_tag": [ "Sống/Chín tái", "Nội tạng", "Cay", "Mồi nhậu", "Thức ăn nhanh", "Ăn vặt", "Ẩm thực đường phố" ],
+        "prefer_soft_tag": [ "Giàu đạm", "Giàu vitamin", "Nóng hổi" ],
+        "exclude_ingredient": [
+           "gan lợn", "gan bò", "giá đỗ", "nem chua", "măng tươi", "dứa", "thơm",
+           "cá thu", "cá kiếm"
+        ], 
+        "prefer_ingredient": [
+            "thịt bò nạc", "ức gà", "cá hồi", "trứng",
+            "cải bó xôi", "súp lơ xanh", "khoai lang", "yến mạch", "gạo lứt",
+            "hạt óc chó", "hạt hạnh nhân", "hạt chia", "cam", "bưởi", "ổi",
+            "đậu phụ", "măng tây", "tôm"
+        ]
+    },
+    {
+        "name": "Đang cho con bú",
+        "tag_type": "STATUS",
+        "exclude_soft_tag": [ "Sống/Chín tái", "Nội tạng", "Cay", "Mồi nhậu", "Thức ăn nhanh", "Ăn vặt", "Ẩm thực đường phố" ],
+        "prefer_soft_tag": [ "Giàu đạm", "Nóng hổi", "Món nước", "Súp" ],
+        "exclude_ingredient": [
+           "lá lốt", "măng chua", "măng tươi", "hành", "tiêu", "tỏi", "ớt"
+        ], 
+        "prefer_ingredient": [
+            "đu đủ", "sung", "hạt sen", "móng giò heo", "sữa tươi", "rau ngót", "dứa"
+        ]
+    }, 
+    {
+        "name": "Vết thương hở / Mới phẫu thuật",
+        "tag_type": "STATUS",
+        "exclude_soft_tag": [ "Đậm đà", "Cay", "Chua", "Giòn / Giòn rụm", "Món khô", "Sống/Chín tái", "Chiên / Rán" ],
+        "prefer_soft_tag": [ "Nóng hổi", "Món nước", "Súp", "Cháo", "Giàu đạm", "Giàu vitamin" ],
+        "exclude_ingredient": [
+           "tiêu", "ớt", "mù tạt", "đậu phộng", "rau muống",
+           "xôi", "nếp", "thịt gà", "da gà", "dưa muối", "cà pháo"
+        ], 
+        "prefer_ingredient": [
+            "bông cải xanh", "rau cải xanh", "cải xoăn", "rau bó xôi", "cá trích", "cá thu", "cá hồi",
+            "hạt chia", "hạt lanh", "hạt óc chó", "thịt heo nạc", "cá lóc", "nghệ"
+        ]
+    }
+]
