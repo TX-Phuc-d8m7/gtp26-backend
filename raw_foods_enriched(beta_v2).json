@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Mì Quảng Ếch",
+    "description": "Mì Quảng Ếch là một trải nghiệm ẩm thực đầy lôi cuốn, với sợi mì lá tươi dai ngon quyện cùng thịt ếch được rang đậm đà, săn chắc. Nước chan sền sệt, thơm lừng thấm đẫm từng nguyên liệu, mang đến vị giác bùng nổ. Khi thưởng thức, bạn sẽ cảm nhận được độ giòn rụm của bánh đa nướng, vị thanh mát của rau sống và hương thơm nồng của hành lá, tạo nên một tổng thể hài hòa, khó quên.",
+    "core_ingredients": [
+      "ếch",
+      "mì lá tươi",
+      "rau ăn kèm",
+      "bánh đa nướng",
+      "hành lá"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Rang",
+      "Giàu đạm",
+      "Đặc sản Đà Nẵng",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "2 con ếch",
+      "100 g mì lá tươi",
+      "Rau ăn kèm (cải con, bắp chuối , rau muống bào )",
+      "Bánh đa nướng",
+      "Hành lá"
+    ],
+    "ingredients": [
+      "ếch",
+      "mì lá tươi",
+      "rau ăn kèm",
+      "bánh đa nướng",
+      "hành lá"
+    ],
+    "raw_instructions": "Ếch rang theo công thức này\nTrụng mì lá tươi vào tô, thêm rau sống các loại, thêm ếch và nước chan, thêm bánh đa và rắc hành lá lên trên là xong"
+  },
+  {
+    "name": "Mì Quảng Tôm Thịt",
+    "description": "Thưởng thức Mì Quảng Tôm Thịt, bạn sẽ cảm nhận được sự hòa quyện tinh tế giữa sợi mì Quảng tươi dai mềm và vị đậm đà của thịt nạc cùng nõn tôm biển xào săn chắc. Đậu phụ chiên béo ngậy cùng hành tây, ớt chuông tươi giòn tạo nên một bản giao hưởng vị giác đầy màu sắc. Dù được chế biến theo phong cách eat clean, món ăn vẫn giữ được nét đặc trưng của Mì Quảng với hương vị hài hòa, thơm lừng từ nước mắm tỏi ớt, hứa hẹn một bữa ăn trưa ngon miệng và đầy đủ dưỡng chất.",
+    "core_ingredients": [
+      "mì quảng tươi",
+      "thịt nạc",
+      "nõn tôm biển",
+      "đậu phụ chiên",
+      "hành tây",
+      "ớt chuông",
+      "ngò rí",
+      "dầu ăn",
+      "nước mắm",
+      "tỏi",
+      "ớt",
+      "hạt tiêu xay",
+      "đường",
+      "chanh"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Xào",
+      "Hải sản",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Đặc sản Đà Nẵng",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "Mì Quảng tươi",
+      "150 g Thịt nạc",
+      "100 g nõn tôm biển",
+      "1 miếng đậu phụ chiên",
+      "Hành tây , ớt chuông , ngò rí"
+    ],
+    "ingredients": [
+      "mì quảng tươi",
+      "thịt nạc",
+      "nõn tôm biển",
+      "đậu phụ chiên",
+      "hành tây",
+      "ớt chuông",
+      "ngò rí"
+    ],
+    "raw_instructions": "Làm nóng chảo với 1 ít dầu đủ láng chảo, cho thịt vào xào lửa lớn, sau đó cho tôm vào xào, tôm đổi màu thì cho đậu phụ xắt lấy mỏng vào, cho vào 1mc nước mắm tỏi ớt giã nhuyễn.\nTrút tôm thịt đậu phụ riêng ra, còn 1 ít nước tôm thịt trong chảo thì cho mì quảng vào đảo sơ cho nóng, thêm hành tây cắt múi cau, tắt bếp ngay.\nTrộn tôm thịt với mì quảng, cho vào ớt chuông cắt miếng vuông (để sống), trộn thêm hành ngò, hạt tiêu xay và măm măm.\nNếu nhạt vị thì có thể chan thêm một ít nước mắm tỏi ớt. Mình nấu theo kiểu eat clean ít gia vị nên sẽ hơi nhạt so với khẩu vị chung.\nCách làm: tỏi ớt giã nhuyễn với 1mc đường, thêm 4mc nước mắm, thêm 1mc chanh, quậy đều và nêm nếm lại theo khẩu vị. Dùng nhiều thì nhân tỷ lệ này lên. Cho vào lọ thuỷ tinh để ngăn mát tủ lạnh ăn được 1 tuần."
+  },
+  {
+    "name": "Mì Quảng Gà ta",
+    "description": "Mì Quảng Gà ta là một bản giao hưởng của hương vị đậm đà, béo ngậy, đánh thức mọi giác quan. Từng sợi mì vàng óng quyện trong nước dùng sền sệt, thơm lừng mùi nghệ, nén và các loại gia vị đặc trưng, mang đến cảm giác ấm áp và no bụng. Thịt gà ta mềm ngọt cùng trứng luộc béo bùi, ăn kèm rau sống thanh mát và bánh tráng giòn rụm chắc chắn sẽ làm hài lòng cả những thực khách khó tính nhất.",
+    "core_ingredients": [
+      "gà ta",
+      "nén",
+      "nghệ tươi",
+      "hành tím",
+      "tỏi",
+      "đường nâu",
+      "hạt nêm",
+      "đường phèn",
+      "dầu hào",
+      "muối",
+      "dầu phộng",
+      "tiêu",
+      "nước mắm",
+      "bánh tráng nướng",
+      "rau sống ăn kèm",
+      "mì quảng",
+      "trứng gà luộc chín bóc vỏ",
+      "nước dùng gà"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Hầm / Ninh",
+      "Giàu đạm",
+      "Đặc sản Đà Nẵng",
+      "Món Việt truyền thống",
+      "Ăn no",
+      "Ấm bụng"
+    ],
+    "raw_ingredients": [
+      "1 con gà ta",
+      "40 gr nén",
+      "40 gr nghệ tươi",
+      "40 gr hành tím và tỏi",
+      "10 gr đường nâu",
+      "10 gr hạt nêm",
+      "10 gr đường phèn",
+      "10 gr dầu hào",
+      "1 mcf muối",
+      "50 ml dầu phộng",
+      "1 mcf tiêu",
+      "1 muỗng canh nước mắm",
+      "Bánh tráng nướng, rau sống ăn kèm",
+      "1 kg mì quảng",
+      "6 quả trứng gà luộc chín bóc vỏ"
+    ],
+    "ingredients": [
+      "gà ta",
+      "nén",
+      "nghệ tươi",
+      "hành tím",
+      "tỏi",
+      "đường nâu",
+      "hạt nêm",
+      "đường phèn",
+      "dầu hào",
+      "mcf muối",
+      "dầu phộng",
+      "mcf tiêu",
+      "nước mắm",
+      "bánh tráng nướng",
+      "rau sống ăn kèm",
+      "mì quảng",
+      "trứng gà luộc chín bóc vỏ"
+    ],
+    "raw_instructions": "Gà ta rửa sạch, chặt khúc vừa ăn.\nGiã nén và nghệ chia 2 phần. Giã tỏi và hành tím. Ướp tất cả gia vị cùng 1 phần nén và nghệ vào gà. Cho 20ml dầu phộng vào. Ướp từ 30p-1h.\nLàm nóng chảo, cho dầu còn lại vào, cho phần nén nghệ còn lại vào đảo cho thơm, cho trứng vào, cho gà vào xào chín. Cho nước dùng xương/nước dùng gà/nước lọc vào đun sôi, hớt bọt, ủ 20p. Ủ để thịt chín mà không bị khô. Khi ăn đun sôi lại."
+  }
+]

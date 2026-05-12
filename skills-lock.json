@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "agentic-rag": {
+      "source": "latestaiagents/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/rag-architect/skills/agentic-rag/SKILL.md",
+      "computedHash": "7520070c3ba1ac660343047679cda902353783aff26ff5706aaa00a455a5d525"
+    },
+    "corrective-rag": {
+      "source": "latestaiagents/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/rag-architect/skills/corrective-rag/SKILL.md",
+      "computedHash": "47dbc0889b469508eb128ec16bf9f11b5f1fcfbc7334f0b5fa7dda94586fe7a1"
+    },
+    "graphrag-patterns": {
+      "source": "latestaiagents/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/rag-architect/skills/graphrag-patterns/SKILL.md",
+      "computedHash": "d0466f492f15d39802bc502cbe7ccce75c914a4e2470add52f38ea64c6996181"
+    },
+    "hybrid-retrieval": {
+      "source": "latestaiagents/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/rag-architect/skills/hybrid-retrieval/SKILL.md",
+      "computedHash": "7ce22000109e0e5a9d921ab258fc14575c37cad796ae803feec59d54efe11de8"
+    },
+    "production-rag-checklist": {
+      "source": "latestaiagents/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/rag-architect/skills/production-rag-checklist/SKILL.md",
+      "computedHash": "0d0b157ff956452849b3b29811dabbe974ea2022af95649fa75f6275a2414dba"
+    },
+    "rag-evaluation": {
+      "source": "latestaiagents/agent-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/rag-architect/skills/rag-evaluation/SKILL.md",
+      "computedHash": "e4d3734af1100825ca08778a571ee85d56bd4546ee52df32d421a7b0eb466978"
+    }
+  }
+}

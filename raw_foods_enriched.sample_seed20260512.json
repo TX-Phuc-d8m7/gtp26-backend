@@ -1,0 +1,1496 @@
+[
+  {
+    "name": "Tokbokki phô mai",
+    "description": "Món Tokbokki phô mai này sẽ đánh thức mọi giác quan của bạn với hương vị cay nồng đặc trưng từ tương ớt Hàn Quốc, hòa quyện cùng vị béo ngậy của bột kem và sữa tươi, cùng nhân phô mai tan chảy trong từng miếng bánh gạo. Nước sốt sánh mịn, đậm đà bám đều vào những miếng bánh gạo dai sần sật, tạo nên một trải nghiệm ẩm thực đường phố chuẩn vị Á Đông, ấm bụng và cực kỳ kích thích vị giác.",
+    "core_ingredients": [
+      "bột kem rose hanbe",
+      "tương ớt hàn quốc",
+      "nước dùng cá khô",
+      "sữa tươi không đường",
+      "tỏi băm",
+      "dầu mè",
+      "bánh gạo topokki hanbe nhân phô mai",
+      "topping"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Cay",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Dai / Sần sật",
+      "Ẩm thực đường phố"
+    ],
+    "raw_ingredients": [
+      "1 gói bột kem Rose HanBe 50g",
+      "1 muỗng canh tương ớt Hàn Quốc ( Gochujang )",
+      "200 –250 ml nước dùng cá khô (hoặc nước lọc )",
+      "100 ml sữa tươi không đường",
+      "1 muỗng cà phê tỏi băm",
+      "1 muỗng cà phê dầu mè",
+      "Bánh gạo Topokki Hanbe nhân phô mai",
+      "Topping , tùy thích)"
+    ],
+    "ingredients": [
+      "gói bột kem rose hanbe",
+      "tương ớt hàn quốc",
+      "– nước dùng cá khô",
+      "sữa tươi không đường",
+      "tỏi băm",
+      "dầu mè",
+      "bánh gạo topokki hanbe nhân phô mai",
+      "topping",
+      "tùy thích)"
+    ],
+    "raw_instructions": "Đun sôi nước dùng, cho bánh gạo vào nấu mềm\nHòa bột xốt: Cho bột kem Rose HanBe vào tô, thêm nước dùng và sữa tươi, khuấy đều đến khi tan mịn.\nNấu xốt: Bắc nồi lên bếp, cho tỏi băm và dầu mè phi thơm nhẹ, sau đó đổ hỗn hợp xốt vào.Tạo vị chuẩn Rose: Thêm gochujang, khuấy đều trên lửa vừa đến khi xốt sôi lăn tăn và sánh mịn.Cho bánh gạo, chả cá vào nấu 5–7 phút cho thấm xốt. Cuối cùng thêm phô mai nếu thích béo.Khuấy đều đến khi xốt sánh, bánh gạo nóng đều",
+    "source_index": 330
+  },
+  {
+    "name": "Bánh tráng bơ Tây Ninh",
+    "description": "Món bánh tráng bơ Tây Ninh là sự kết hợp hài hòa của nhiều hương vị và kết cấu. Vị đậm đà từ khô bò, tép sấy quyện cùng vị chua thanh của xoài xanh và mắm me, thêm chút béo ngậy từ sốt mayonnaise và đậu phộng rang giòn rụm. Tất cả được cuốn trong lớp bánh tráng mềm dai, tạo nên một trải nghiệm ẩm thực đường phố đầy hấp dẫn và khó quên, rất thích hợp để nhâm nhi vào buổi xế chiều.",
+    "core_ingredients": [
+      "tép sấy",
+      "xoài xanh",
+      "rau răm",
+      "khô bò",
+      "đậu phộng",
+      "trứng cút",
+      "muối tây ninh",
+      "hành phi",
+      "mắm me",
+      "tương ớt",
+      "sốt mayonnaise",
+      "bánh tráng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Cuốn / Gói",
+      "Chua",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Dai / Sần sật",
+      "Ẩm thực đường phố"
+    ],
+    "raw_ingredients": [
+      "Tép sấy ăn liền",
+      "Xoài xanh bào sợi",
+      "Rau răm",
+      "Khô bò",
+      "Đậu phộng rang",
+      "Trứng cút luộc",
+      "Muối tây ninh",
+      "Hành phi",
+      "Mắm me (thay bơ và sốt bò như ngoài tiệm)",
+      "Tương ớt",
+      "Sốt mayonnaise",
+      "Bánh tráng đỏ tây ninh ( bánh tráng cuốn bình thường cũng được)"
+    ],
+    "ingredients": [
+      "tép sấy ăn liền",
+      "xoài xanh bào sợi",
+      "rau răm",
+      "khô bò",
+      "đậu phộng rang",
+      "trứng cút luộc",
+      "muối tây ninh",
+      "hành phi",
+      "mắm me",
+      "tương ớt",
+      "sốt mayonnaise",
+      "bánh tráng đỏ tây ninh"
+    ],
+    "raw_instructions": "Chuẩn đầy đủ nguyên liệu\nNhúng ướt bánh tráng cho mỗi thứ 1 ít vào cuốn lại.\nCắt miếng vừa ăn\nXếp lên dĩa thêm tương ớt và sốt mayonnaise",
+    "source_index": 271
+  },
+  {
+    "name": "Tôm mũ ni nướng bơ tỏi",
+    "description": "Món tôm mũ ni nướng bơ tỏi mang đến hương vị béo ngậy đặc trưng từ bơ tan chảy quyện cùng mùi tỏi thơm lừng, kích thích mọi giác quan. Từng thớ thịt tôm mũ ni săn chắc, ngọt tự nhiên được nướng vừa tới, giữ trọn độ tươi ngon và đậm đà. Đây chắc chắn là lựa chọn tuyệt vời cho những buổi tụ họp hay bữa tối thịnh soạn, hứa hẹn một trải nghiệm ẩm thực khó quên.",
+    "core_ingredients": [
+      "tôm mũ ni",
+      "bơ",
+      "tỏi"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Nướng",
+      "Béo ngậy",
+      "Hải sản",
+      "Từ sữa / Phô mai",
+      "Giàu đạm",
+      "Ăn tối"
+    ],
+    "raw_ingredients": [
+      "1 kg tôm mũ ni",
+      "Bơ + tỏi"
+    ],
+    "ingredients": [
+      "tôm mũ ni",
+      "bơ",
+      "tỏi"
+    ],
+    "raw_instructions": "Tôm rửa sạch, chẻ đôi, bơ xào tỏi thơm, rải đều lên phần thịt, x\nẾp lên vỉ nướng 20 p ở 200 độ",
+    "source_index": 161
+  },
+  {
+    "name": "Cháo lươn Nghệ An",
+    "description": "Món cháo lươn Nghệ An mang đến hương vị đậm đà, khó quên từ thịt lươn đã được xào săn mềm, thấm đẫm gia vị. Cháo trắng được ninh nhừ, sánh mịn, hòa quyện cùng vị ngọt tự nhiên của lươn. Khi thưởng thức, bạn sẽ cảm nhận được sự ấm nóng lan tỏa, cùng hương thơm nồng của hành lá, mùi tàu và rau thơm, điểm xuyết chút chua cay từ chanh ớt, tạo nên một trải nghiệm ẩm thực đầy lôi cuốn và bổ dưỡng.",
+    "core_ingredients": [
+      "lươn",
+      "cháo",
+      "hành lá",
+      "mùi tàu",
+      "rau thơm",
+      "chanh",
+      "ớt",
+      "hành"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Cháo",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Ăn sáng",
+      "Ấm bụng"
+    ],
+    "raw_ingredients": [
+      "1 hộp lươn đã xào sẵn theo công thức gia truyền, cấp đông chuyển từ Vinh ra",
+      "1 nồi cháo trắng",
+      "Hành lá , mùi tàu , rau thơm , chanh , ớt"
+    ],
+    "ingredients": [
+      "hộp lươn đã xào sẵn theo công thức gia truyền",
+      "cấp đông chuyển từ vinh ra",
+      "nồi cháo trắng",
+      "hành lá",
+      "mùi tàu",
+      "rau thơm",
+      "chanh",
+      "ớt"
+    ],
+    "raw_instructions": "Rã đông hộp lươn xào sẵn. Có thể để ngoài tủ lạnh từ trước 1h.\nCho gạo vào nồi, ninh một nồi cháo trắng thật nhừ. Đừng nêm gia vị nha, lươn đã mặn sẵn rùi 😘\nPhi hành thơm, cho lươn và 1 ít nước đảo đều cho lươn săn mềm, nêm gia vị nếu cần\nCho cháo ra bát, múc lượng lươn vừa phải, rắc rau thơm và... đã có bát cháo lươn đúng vị nhé mọi người 👍\nLươn có thể làm cháo lươn, súp lươn, miến lươn, mỳ lươn hoặc xào sả ớt, om chuối đậu,... tuỳ món bạn muốn.",
+    "source_index": 91
+  },
+  {
+    "name": "Bánh rán mật",
+    "description": "Món bánh rán mật này sẽ đánh thức vị giác của bạn với hương vị ngọt ngào đặc trưng từ mật ong và mứt dâu, hòa quyện cùng chút thanh mát từ cam vàng. Từng chiếc bánh mềm mại, được chiên vàng nhẹ, mang đến cảm giác ấm áp và dễ chịu. Đây là lựa chọn hoàn hảo cho một buổi xế chiều thư thái hay một món tráng miệng ngọt ngào sau bữa ăn.",
+    "core_ingredients": [
+      "bột bánh rán pha sẵn",
+      "mứt dâu",
+      "mật ong",
+      "lá húng lủi",
+      "lá bạc hà",
+      "cam vàng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Ngọt",
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu tinh bột",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Ăn vặt",
+      "Tráng miệng"
+    ],
+    "raw_ingredients": [
+      "1 gói (gói 150gr) bột bánh rán pha sẵn",
+      "110 ml nước lọc",
+      "5 M mứt dâu Dalat",
+      "3 M mật ong",
+      "Lá húng lủi , lá bạc hà trang trí"
+    ],
+    "ingredients": [
+      "gói bột bánh rán pha sẵn",
+      "nước lọc",
+      "m mứt dâu dalat",
+      "m mật ong",
+      "lá húng lủi",
+      "lá bạc hà trang trí"
+    ],
+    "raw_instructions": "1/2 trái cam vàng cắt thành từng lát mỏng, 1/2 trái cam còn lại mài nhuyễn phần vỏ màu cam để lấy 1M vỏ cam nhuyễn.- Mứt dâu trộn với mật ong để tủ mát dùng phết lên trên bánh.- Trộn vỏ cam mài với 110ml nước, cho bột bánh rán pha sẵn vào, dùng phới khuấy hòa quyện.- Làm ấm nóng chảo chống dính, xếp 1 lát cam lên giữa chảo, đặt khuôn tròn không đáy ôm lấy lát cam, đổ từ từ bột bánh vào trong khuôn tạo hình bánh tròn đều.\nKế tiếp sẽ lấy khuôn ra, lúc này bột bánh sẽ tràn xuống bao lấy lát cam tươi. Chờ mặt bánh chín rồi mới lật lại, để thêm 1 phút. Lấy bánh ra để bánh vĩ thưa cho bánh thoát khí. Lần lượt đổ bánh đến khi hết phần bột.- Lưu ý : Toàn bộ quá trình chiên bánh với lửa nhỏ nhất có thể để tránh cháy/xém mặt bánh. (Các bạn thấy trong ảnh bánh hơi bị xém không đẹp là do mình sơ ý vụ lửa)\nLấy đĩa, đặt bánh chồng lên nhau, xen giữa các bánh là một lớp mứt dâu mật ong. Trang trí lá húng lủi/bạc hà. Có thể dùng kèm với các loại trái cây tùy thích.",
+    "source_index": 317
+  },
+  {
+    "name": "Súp bắp non tóc tiên chay",
+    "description": "Món súp chay thanh đạm này là sự kết hợp tinh tế giữa vị ngọt tự nhiên của bắp non giòn sần sật và độ mềm mại của đậu hũ non. Sợi rong tóc tiên thanh mát cùng chút gừng và hành boa-rô thơm nhẹ tạo nên hương vị hài hòa, ấm bụng. Nước súp sánh nhẹ, dùng nóng hổi sẽ mang lại cảm giác dễ chịu, rất thích hợp cho những bữa ăn nhẹ nhàng hoặc ăn khuya.",
+    "core_ingredients": [
+      "rong tóc tiên",
+      "đậu hủ non",
+      "bắp non",
+      "hành boa-rô",
+      "gừng",
+      "bột năng",
+      "hạt nêm chay",
+      "đường",
+      "nước tương"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Thanh đạm",
+      "Nước sền sệt",
+      "Súp",
+      "Nóng hổi",
+      "Giòn / Giòn rụm",
+      "Mềm",
+      "Món chay",
+      "Ấm bụng"
+    ],
+    "raw_ingredients": [
+      "1 gr rong tóc tiên",
+      "1 cây đậu hủ non",
+      "10 trái bắp non",
+      "1 cây hành boa-rô",
+      "1 củ gừng",
+      "50 gr bột năng",
+      "Gia vị: hạt nêm chay , đường, nước tương"
+    ],
+    "ingredients": [
+      "rong tóc tiên",
+      "đậu hủ non",
+      "bắp non",
+      "hành boa-rô",
+      "gừng",
+      "bột năng",
+      "gia vị: hạt nêm chay",
+      "đường",
+      "nước tương"
+    ],
+    "raw_instructions": "Nguyên liệu & sơ chế: Bắp non, boa-rô, gừng gọt vỏ rồi đem rửa sạch, để ráo. Sau đó lấy bắp non cắt lát xéo, đậu hủ non cắt khoanh tròn, boa-rô lấy phần đầu trắng cắt mỏng, gừng cắt sợi nhỏ, rong tóc tiên cắt đoạn ngắn rồi ngâm nước trước khi nấu 5 phút\nCho 1,5 lít nước vào nồi rồi nấu sôi. Khi nước sôi thì cho từ từ chén bột năng đã khuấy loãng với 7 muỗng canh nước vào & khuấy đều, nước sánh nhẹ. Rồi để bắp non vào, khi bắp nổi lên thì nêm gia vị: 1,5 m canh hạt nêm + 1/2 m canh đường + 1 m canh nước tương (nêm nếm lại theo vị nhà). Tiếp đến cho đậu hũ non vào, thấy đậu hũ nổi lên thì để rong tóc tiên đã vắt ráo nước vào (nên cho từng ít tóc tiên & dùng đũa khuấy để tóc tiên rời ra). Nồi soup sôi trở lại thì tắt bếp mới cho boa-rô & gừng vào\nThành phẩm: Soup sánh nhẹ, mềm thơm từ đậu hủ, giòn ngọt từ bắp... dùng nóng rất ngon",
+    "source_index": 466
+  },
+  {
+    "name": "Miến trộn Thái Lan",
+    "description": "Món miến trộn Thái Lan mang đến sự kết hợp hài hòa giữa vị chua thanh của chanh, vị ngọt mặn đậm đà từ nước mắm và đường, cùng chút béo bùi của mè rang. Sợi miến dai ngon quyện cùng mực tươi sần sật, thịt xay thơm lừng và rau củ giòn mát như hành tây, cà rốt, cần tây. Đây là một món ăn thanh đạm, kích thích vị giác, rất thích hợp cho những bữa ăn nhẹ nhàng nhưng vẫn đầy đủ dinh dưỡng.",
+    "core_ingredients": [
+      "nước mắm",
+      "đường",
+      "chanh",
+      "miến",
+      "mực",
+      "thịt xay",
+      "mè rang",
+      "hành tây",
+      "cần tây",
+      "cà rốt",
+      "hành củ",
+      "gừng",
+      "hành phi"
+    ],
+    "preprocessing_ingredients": [
+      "dấm"
+    ],
+    "soft_tags": [
+      "Đậm đà",
+      "Món nước",
+      "Gỏi / Nộm / Trộn",
+      "Chua",
+      "Hải sản",
+      "Giàu đạm",
+      "Dai / Sần sật",
+      "Món Á"
+    ],
+    "raw_ingredients": [
+      "4 muỗm mắm",
+      "12 muỗm đường",
+      "1 quả chanh",
+      "150 gr miến",
+      "200 gr mực",
+      "100 gr thịt xay",
+      "2 muỗm mè trắng rang",
+      "củ Hành tây , cần tây , carot , hành"
+    ],
+    "ingredients": [
+      "muỗm mắm",
+      "muỗm đường",
+      "chanh",
+      "miến",
+      "mực",
+      "thịt xay",
+      "muỗm mè trắng rang",
+      "củ hành tây",
+      "cần tây",
+      "carot",
+      "hành"
+    ],
+    "raw_instructions": "Ngâm miến 3p(nên dùng miến dong) rồi đun nước sôi, trụng miến thêm 1p rồi vớt ra xả nước lạnh để ráo nước\nMực hấp thêm gừng để cho thơm vớt ra để rao nước\nHành Tây, carot, hành củ xắt mỏng ngâm nước, thêm 1 muỗm dấm khoảng 15p thì vớt ra để ráo\nMắm nấu lên cùng đường cho sên lại để nguội\nThịt xay xào thơm với hành phi\nTrộn miến với mực, rau củ cùng nước mắm sau đó thêm nước cốt chanh cho vừa ăn\nCuối cùng sắp miến đã trộn ra dĩa cùng mực, rau củ, trải thịt xay lên trên, thêm cần tây và hành phi, mè rang",
+    "source_index": 369
+  },
+  {
+    "name": "Tôm tít rang muối",
+    "description": "Món tôm tít rang muối là sự kết hợp tuyệt vời giữa vị ngọt tự nhiên của bề bề tươi ngon cùng hương thơm lừng của sả, hành phi và lá chanh. Từng con bề bề được rang thấm đẫm gia vị muối tiêu mặn mà, béo ngậy, tạo nên một món ăn đậm đà, kích thích vị giác. Đây chắc chắn là lựa chọn hoàn hảo để nhâm nhi cùng bạn bè hoặc làm món chính đưa cơm.",
+    "core_ingredients": [
+      "bề bề",
+      "sả",
+      "ớt sừng",
+      "hành khô",
+      "dầu ăn",
+      "muối tiêu",
+      "lá chanh"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Rang",
+      "Hải sản",
+      "Giàu đạm"
+    ],
+    "raw_ingredients": [
+      "1 kg bề bề",
+      "5 cây sả",
+      "Ớt sừng",
+      "Hành khô , dầu ăn, muối tiêu"
+    ],
+    "ingredients": [
+      "bề bề",
+      "sả",
+      "ớt sừng",
+      "hành khô",
+      "dầu ăn",
+      "muối tiêu"
+    ],
+    "raw_instructions": "Bề bề bóc nõn\nHành sả thái mỏng\nBắc chảo dầu nóng, phi thơm hành sả\nCho bề bề vào đảo đều, cho muối, gia vị vào xào, có thể cho thêm lá chanh",
+    "source_index": 134
+  },
+  {
+    "name": "Cơm chiên hải sản trứng muối",
+    "description": "Món Cơm chiên hải sản trứng muối là sự kết hợp hài hòa giữa hạt cơm tơi vàng óng, vị ngọt tự nhiên của tôm sú tươi ngon và chút béo mặn đặc trưng từ lạp xưởng trứng muối. Dứa chín và rau củ thái hạt lựu như cà rốt, bí ngòi không chỉ tăng thêm màu sắc bắt mắt mà còn mang lại vị chua ngọt nhẹ, thanh mát, cân bằng cho món ăn. Khi thưởng thức, bạn sẽ cảm nhận được hương thơm nồng nàn của hành phi, vị đậm đà của gia vị thấm đều, tạo nên một trải nghiệm ẩm thực đầy hấp dẫn và đưa cơm.",
+    "core_ingredients": [
+      "tôm sú",
+      "cà rốt",
+      "bí ngòi",
+      "dứa chín",
+      "lạp xưởng trứng muối",
+      "trứng gà",
+      "cơm trắng",
+      "dầu ăn",
+      "hành",
+      "nước mắm",
+      "bột ngọt",
+      "bột tỏi",
+      "bột ớt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Chiên / Rán",
+      "Béo ngậy",
+      "Hải sản",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "200 gr tôm sú",
+      "1/2 củ cà rốt",
+      "1 củ bí ngòi",
+      "1 trái dứa chín",
+      "1 cây lạp xưởng trứng muối",
+      "2 quả trứng gà",
+      "3 chén cơm trắng"
+    ],
+    "ingredients": [
+      "tôm sú",
+      "cà rốt",
+      "bí ngòi",
+      "dứa chín",
+      "lạp xưởng trứng muối",
+      "trứng gà",
+      "cơm trắng"
+    ],
+    "raw_instructions": "Sơ chế nguyên liệu lạp xưởng, cà rốt, bí ngòi cắt hạt lựu, 1/2 tôm mang đi hấp\nDứa cắt nửa khoét ruột thái hạt lựu, 1/2 số tôm bằm nhỏ\nCho dầu ăn hành phi thơm, tôm tươi vào đảo đều, lạp xưởng và lần lượt rau củ\nCho cơm trắng vào đảo, trứng, và dứa vào đảo đều, cho 1 muỗng nước mắm, bột ngọt, bột tỏi, bột ớt theo khẩu vị vào đảo cho thấm gia vị",
+    "source_index": 167
+  },
+  {
+    "name": "Súp vi cá",
+    "description": "Món súp vi cá là sự kết hợp tinh tế giữa vị ngọt thanh của nước dùng gà và độ dai mềm đặc trưng của vi cá, được khử mùi tanh khéo léo. Nấm bào ngư thêm vào tạo nên hương vị tự nhiên, cùng với độ sệt nhẹ nhàng từ bột năng, mang đến một trải nghiệm ẩm thực ấm áp và bổ dưỡng. Đây là món ăn lý tưởng để khai vị hoặc bồi bổ cơ thể, với hương thơm dịu nhẹ và vị đậm đà khó quên.",
+    "core_ingredients": [
+      "vi cá",
+      "nước dùng gà",
+      "nấm bào ngư",
+      "bột năng",
+      "ngò",
+      "trứng cút"
+    ],
+    "preprocessing_ingredients": [
+      "rượu trắng",
+      "gừng"
+    ],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Súp",
+      "Hải sản",
+      "Giàu đạm",
+      "Mềm",
+      "Món Á",
+      "Ấm bụng"
+    ],
+    "raw_ingredients": [
+      "50 g Vi cá",
+      "2 lít Nước dùng gà",
+      "200 gr Nấm bào ngư"
+    ],
+    "ingredients": [
+      "vi cá",
+      "nước dùng gà",
+      "nấm bào ngư"
+    ],
+    "raw_instructions": "Ngâm Vi cá với rượu trắng và gừng để khử mùi tanh của vi cá\nNấu áp suất 30phút với nước dùng gà cho vi cá mềm\nCho nấm cắt nhỏ vào nấu tiếp khoảng 5phút nêm nếm gia vị rồi cho bột năng đã hoà tan vào súp nấu để nước sup đc sệt lại là xong. Trang trí ít ngò, có thể cho trứng cút nữa",
+    "source_index": 371
+  },
+  {
+    "name": "Cơm trứng cuộn Omurice",
+    "description": "Món cơm trứng cuộn Omurice này mang đến một trải nghiệm ẩm thực đầy hấp dẫn với lớp trứng gà mềm mịn, béo ngậy ôm trọn phần cơm chiên thơm lừng. Hương tỏi phi thoang thoảng cùng vị đậm đà của thịt băm và hạt nêm hòa quyện, tạo nên một bữa ăn ấm bụng và đầy đủ dinh dưỡng. Từng miếng cơm cuộn trứng tan chảy trong miệng, chắc chắn sẽ làm hài lòng cả những thực khách khó tính nhất, đặc biệt là các bé yêu.",
+    "core_ingredients": [
+      "cơm",
+      "tỏi",
+      "trứng gà",
+      "thịt",
+      "hạt nêm",
+      "dầu ăn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Béo ngậy",
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Ăn trưa"
+    ],
+    "raw_ingredients": [
+      "Cơm nửa chén",
+      "Tỏi",
+      "2 trái Trứng gà",
+      "Thịt ( mực , tôm ) hoặc không cần cũng được"
+    ],
+    "ingredients": [
+      "cơm nửa chén",
+      "tỏi",
+      "trứng gà",
+      "thịt hoặc không cần cũng được"
+    ],
+    "raw_instructions": "Phi tỏi thơm, cho cơm vào chiên sơ rồi cho thịt đã bằm nhuyễn vào,vì mình làm cho bé lớn nên cho 1 chút hạt nêm. Đảo đểu rồi đổ ra đĩa\nTrứng tách riêng lòng trắng, lòng đỏ vào 2 chén khác nhau,Cho 1 chút hạt nêm vào 2 chén quấy đều.\nBắc chảo dầu lên, mình đổ chén lòng đỏ vào trước, sau đó dùng dao mũi nhọn rạch thành từng đường cách nhau khoảng 2-3 cm. Sau đó nhấc xen kẽ các sợi trứng vừa cắt được ra ngoài. (lấy 1 sợi, để lại 1 sợi trên chảo cứ xen kẽ như vậy). Rồi đổ lòng trắng lên trên phần trứng còn lại trên chảo.để bếp nhỏ tới khi lòng trắng chín.\nPhần trứng lúc trước lấy ra mọi người có thể băm nhỏ trộn vào cơm đã chiên từ trước.sau đó xúc cơm đổ lên trứng đang trong chảo và trải đều ra rồi cuộn lại là xong. Cuộn dọc hay ngang tuỳ mọi người thích ^^",
+    "source_index": 353
+  },
+  {
+    "name": "Bánh dẻo nhân đậu xanh",
+    "description": "Bánh dẻo nhân đậu xanh mang đến hương vị ngọt ngào, bùi bùi đặc trưng của đậu xanh hòa quyện cùng chút béo nhẹ từ sữa tươi. Từng miếng bánh mềm dẻo, tan chảy trong miệng, thoang thoảng mùi thơm dịu của tinh dầu hoa bưởi, tạo nên một trải nghiệm ẩm thực truyền thống đầy tinh tế. Đây là món tráng miệng lý tưởng để nhâm nhi cùng tách trà nóng, gợi nhớ hương vị tuổi thơ.",
+    "core_ingredients": [
+      "đậu xanh",
+      "đường",
+      "dầu ăn",
+      "muối",
+      "bột nếp",
+      "bột gạo",
+      "bột năng",
+      "sữa tươi",
+      "tinh dầu hoa bưởi"
+    ],
+    "preprocessing_ingredients": [
+      "nước lạnh"
+    ],
+    "soft_tags": [
+      "Ngọt",
+      "Món khô",
+      "Hấp / Luộc",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Bánh ngọt",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "120 gr Đậu xanh bóc vỏ",
+      "350 gr Đường cát",
+      "60 ml dầu ăn",
+      "1 muỗng cafe muối",
+      "100 gr Bột nếp",
+      "100 gr Bột gạo",
+      "Bột năng 75 gr (có thể thay bột bắp )",
+      "400 ml Sữa tươi không đường",
+      "1 muỗng cafe Tinh dầu hoa bưởi (nếu có)"
+    ],
+    "ingredients": [
+      "đậu xanh bóc vỏ",
+      "đường cát",
+      "dầu ăn",
+      "muối",
+      "bột nếp",
+      "bột gạo",
+      "bột năng",
+      "sữa tươi không đường",
+      "tinh dầu hoa bưởi"
+    ],
+    "raw_instructions": "Đậu xanh ngâm nước lạnh trong 4 tiếng hoặc nước ấm 1- 2 tiếng cho nở mềm. Sau đó rửa sạch, bỏ lên bếp cho thêm nước vào nấu chín tầm 10- 15 phút. Tắt bếp ủ thêm 10 phút.\nỦ xong bạn cho đậu xanh vào máy xay sinh tố, cho 100gr đường vào xay cùng. Đổ hỗn hợp đã xay lên chảo sên cho dẻo mịn. Cứ tầm 5-10 phút bạn cho 1 muỗng cafe dầu vào đảo đều tay (30ml chia 3 lần). Sau đó lấy 15gr bột năng bạn pha tí nước cho tan và cho vào đậu xanh đang sên cho dẻo mịn. Sên tầm 30- 45 phút là được ạ.\nTrộn bột nếp, bột gạo, bột năng, 250gr đường, 1 xíu muối, 30ml dầu ăn, cho sữa tươi không đường vào từ từ khuấy đều. Lọc lại qua rây cho bột tan hoàn toàn. Để bột nghỉ 30 phút.\nTrong thời gian chờ bột nghỉ, mình vo tròn nhân đậu xanh. Sau đó khuấy đều bột lần nữa và đem đi hấp 30 - 40 phút. Nhớ dùng màng bọc thực phẩm che mặt tô hấp để nước không nhỏ vào tô bột. Bột trong là chín và chờ bột nguội bớt tí nhé.\nRắc bột năng ra bàn làm bột áo, cho bột vừa hấp ra bàn. Nhào nhẹ lại lần nữa. Cắt bột thành nhiều miếng nhỏ, ấn dẹt cho nhân vào cuộn tròn và ịn lên khuôn. Nhớ rắc bột áo lên cả khuôn vì có bột nếp sẽ rất dính tay. Vậy là xong rồi đó ạ.",
+    "source_index": 288
+  },
+  {
+    "name": "Đậu hũ nhồi thịt sốt cà",
+    "description": "Đậu hũ nhồi thịt sốt cà là món ăn quen thuộc, mang hương vị đậm đà khó cưỡng. Từng miếng đậu hũ mềm mại, bên trong là nhân thịt băm thấm đẫm gia vị, được chiên vàng nhẹ rồi kho cùng sốt cà chua sánh mịn. Món ăn nóng hổi, thơm lừng mùi hành tỏi và cà chua, chắc chắn sẽ làm ấm lòng và đưa cơm trong mỗi bữa ăn gia đình.",
+    "core_ingredients": [
+      "đậu",
+      "thịt băm",
+      "hành tím",
+      "tỏi",
+      "hành lá",
+      "hạt tiêu",
+      "cà chua",
+      "hành",
+      "bột ngọt",
+      "mắm",
+      "dầu ăn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Ăn no",
+      "Ấm bụng"
+    ],
+    "raw_ingredients": [
+      "Đậu",
+      "Thịt băm",
+      "Hành tím",
+      "Tỏi",
+      "Hành lá",
+      "Hạt tiêu",
+      "Cà chua",
+      "Hành",
+      "Gia vị, bột ngọt, mắm"
+    ],
+    "ingredients": [
+      "đậu",
+      "thịt băm",
+      "hành tím",
+      "tỏi",
+      "hành lá",
+      "hạt tiêu",
+      "cà chua",
+      "hành",
+      "gia vị",
+      "bột ngọt",
+      "mắm"
+    ],
+    "raw_instructions": "Đậu cắt miếng to, khoét miếng để nhồi thịt vào\nThịt ướp với gia vị, bột ngọt, hành tím, hạt tiêu (ướp khoảng 15 phút cho thấm gia vị)\nNhồi thịt vào đậu và cho lên bếp rán cho vàng đều 4 mặt\nCà chua băm nhỏ, cho dầu vào chảo + cà chua (nêm thêm gia vị với 1 chút mắm đảo đều cho mềm cà chua) rồi cho đậu nhồi thịt vào\nĐợi nước sôt ngấm vào đậu rồi thêm hành lá.Thành quả của mình đây❤️",
+    "source_index": 195
+  },
+  {
+    "name": "Miến xào hải sản",
+    "description": "Miến xào hải sản là món ăn quen thuộc, hấp dẫn với sợi miến dai mềm, thấm đẫm gia vị đậm đà. Tôm tươi ngọt kết hợp cùng nấm hương, mộc nhĩ và rau củ giòn sần sật, tạo nên một bản hòa tấu hương vị khó cưỡng. Món ăn thơm lừng mùi hành phi, vừa ngon miệng lại vừa cung cấp đủ năng lượng cho bữa trưa hay bữa tối.",
+    "core_ingredients": [
+      "miến",
+      "tôm",
+      "nấm hương",
+      "mộc nhĩ",
+      "cà rốt",
+      "su hào",
+      "hành tây",
+      "rau mùi ta",
+      "hành khô",
+      "hành lá",
+      "nước mắm",
+      "bột nêm",
+      "bột ngọt",
+      "muối",
+      "dầu ăn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món nước",
+      "Xào",
+      "Hải sản",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Món Việt truyền thống",
+      "Ăn trưa"
+    ],
+    "raw_ingredients": [
+      "300gr Miến",
+      "tôm (tùy mk thích ăn bao nhiêu)",
+      "100gr nấm hương + mộc nhĩ",
+      "1 củ cà rốt + su hào + hành tây",
+      "rau mùi ta",
+      "1 củ hành khô",
+      "hành lá",
+      "nước mắm, bột nêm, bột ngọt, muối,"
+    ],
+    "ingredients": [
+      "miến",
+      "tôm",
+      "nấm hương",
+      "mộc nhĩ",
+      "cà rốt",
+      "su hào",
+      "hành tây",
+      "rau mùi ta",
+      "hành khô",
+      "hành lá",
+      "nước mắm",
+      "bột nêm",
+      "bột ngọt",
+      "muối"
+    ],
+    "raw_instructions": "Ngâm Miến và mộc nhĩ + nấm hương với nước lạnh 7-8phút. Gọt cà rốt,su hào đem nạo thành sợi.Bóc hành tây rồi rửa và thái sợi nhỏ.Tôm đem lột sạch vỏ.\nCho dầu ăn vào chảo phi hành khô cho thơm rồi cho tôm vào đảo cho thêm ít nước mắm đến khi gần chín thì đổ ra đĩa. Giờ thì xào cà rốt su hào mộc nhĩ và nấm hương.... cho ít bột nêm,bột ngọt và ít muối đảo đến khi SH và cR mềm thì cho miến vào đảo 1 lượt rồi cho tôm vào xào đến khi miến chin mềm thì nêm nếm gia vị cho vừa miệng rồi cho rau mùi ta và hành lá vào là ok.\nCuối cùng bày ra đĩa và ăn thôi..hihi đây là mình xào cho 4-5 người ăn ạ !!! Chúc mọi người thành công nha",
+    "source_index": 44
+  },
+  {
+    "name": "Bánh canh ghẹ",
+    "description": "Một tô bánh canh ghẹ nóng hổi, đậm đà hương vị biển cả sẽ đánh thức mọi giác quan của bạn. Nước dùng được ninh từ xương heo và vỏ tôm ngọt thanh, hòa quyện cùng vị béo ngậy của thịt càng ghẹ tươi rói và chả cá dai ngon. Sợi bánh canh mềm mượt, thấm đẫm nước dùng, tạo nên một trải nghiệm ẩm thực đầy lôi cuốn và ấm áp.",
+    "core_ingredients": [
+      "xương heo",
+      "bột gạo",
+      "bột năng",
+      "thịt càng ghẹ",
+      "chả cá",
+      "nấm",
+      "vỏ tôm",
+      "cà rốt",
+      "củ cải trắng",
+      "hành lá",
+      "hành củ",
+      "rau răm",
+      "chanh",
+      "ớt",
+      "dầu màu điều",
+      "muối",
+      "đường",
+      "hạt nêm",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món nước",
+      "Hầm / Ninh",
+      "Hải sản",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Ăn trưa"
+    ],
+    "raw_ingredients": [
+      "500 gr xương heo",
+      "2,5 lít nước",
+      "400 gr bột gạo",
+      "100 gr bột năng",
+      "250 gr thịt càng ghẹ",
+      "250 gr chả cá",
+      "200 gr nấm",
+      "1 ít vỏ tôm (này tết mình làm tôm khô nên mình giữ lại vỏ tôm ) cho ngọt nước",
+      "Cà rốt , củ cải trắng",
+      "Hành lá , hành củ , rau răm , chanh , ớt",
+      "Dầu màu điều"
+    ],
+    "ingredients": [
+      "xương heo",
+      "nước",
+      "bột gạo",
+      "bột năng",
+      "thịt càng ghẹ",
+      "chả cá",
+      "nấm",
+      "ít vỏ tôm cho ngọt nước",
+      "cà rốt",
+      "củ cải trắng",
+      "hành lá",
+      "hành củ",
+      "rau răm",
+      "chanh",
+      "ớt",
+      "dầu màu điều"
+    ],
+    "raw_instructions": "Tất cả nguyên liệu đem rửa sạch để ráo nước\nNinh nước dùngXương rửa sạch trụng sơ qua với nước sôi. Cho xương đã trụng + cà rốt + củ cải + hành tím + muối + đường vô nồi áp suất ninh trong khoảng 6 phútSau đó lấy ra cho vỏ tôm vô ninh lửa nhỏ nhất trong 20 phút\nLàm bột gạo sắt400 gr Bột gạo + 100 gr bột năng + ít muối + ít dầu ăn ra tô trộn đều rồi cho nước nóng vào nhồi bộtCắt bột xong cho vô nồi nước sôi, khi nào thấy bánh nổi lên thì vớt ra rửa sạch\nLàm thịt càng ghẹCho hành tím + đầu hành vô phi thơm rồi cho thịt càng ghẹ vô xào, thêm ít hạt nêm, tiêu, xíu đường, màu điêu vô đảo nhẹ cho thấm gia vị\nThành phẩmĂn thôi nhé",
+    "source_index": 63
+  },
+  {
+    "name": "Sữa chua nếp cẩm",
+    "description": "Sữa chua nếp cẩm là món tráng miệng thanh mát, mang đến sự kết hợp độc đáo giữa vị ngọt dịu của nếp cẩm dẻo thơm và chút chua nhẹ, béo ngậy từ sữa chua. Từng hạt nếp cẩm mềm dẻo, mọng nước quyện cùng sữa chua mát lạnh tạo nên một trải nghiệm vị giác khó quên. Món ăn này không chỉ giúp giải nhiệt hiệu quả mà còn là lựa chọn tuyệt vời để ăn vặt hay tráng miệng sau bữa ăn.",
+    "core_ingredients": [
+      "nếp cẩm",
+      "sữa chua có đường",
+      "đường vàng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Ngọt",
+      "Món khô",
+      "Hấp / Luộc",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Thanh mát/Giải nhiệt",
+      "Món lạnh",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "300 g nếp cẩm",
+      "6 hũ sữa chua có đường",
+      "Đường vàng"
+    ],
+    "ingredients": [
+      "nếp cẩm",
+      "hũ sữa chua có đường",
+      "đường vàng"
+    ],
+    "raw_instructions": "Nếp cẩm khá khó mua, ngay cả các đại lý gạo cũng không bán do ít người mua, mình đặt trên mạng. Nếp vo sạch rồi đổ nước ngâm ít nhất 6 tiếng, sau đó đổ nước đi, cho vào nồi cơm điện nấu với mức nước nhiều hơn nấu cơm một chút, nếp chín cho đường vàng vào trộn đều tạo vị ngọt cho xôi\nKhi dùng cho 1 hũ sữa chua ra chén, múc nếp cẩm vừa nấu lên trên và thưởng thức. Để lạnh dùng sẽ ngon hơn",
+    "source_index": 291
+  },
+  {
+    "name": "Mỳ xíu chay",
+    "description": "Mỳ xíu chay là một lựa chọn tuyệt vời cho những ai yêu thích ẩm thực chay nhưng vẫn muốn thưởng thức hương vị đậm đà. Sợi mì vàng dai ngon hòa quyện cùng tàu hủ chiên giòn được tẩm ướp bột xá xíu thơm lừng, mang đến vị ngọt mặn hài hòa. Nước dùng thanh ngọt từ rau củ, kết hợp với cải thìa, giá đỗ tươi mát và hành ngò dậy mùi, tạo nên một tô mì ấm bụng, dễ chịu và đầy đủ dinh dưỡng.",
+    "core_ingredients": [
+      "tàu hủ",
+      "cải thìa",
+      "hành tây",
+      "mì vàng",
+      "giá đỗ",
+      "muối",
+      "đường",
+      "bột ngọt",
+      "bột xá xíu",
+      "dầu oliu",
+      "hành lá",
+      "ngò rí"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món nước",
+      "Chiên / Rán",
+      "Giàu đạm",
+      "Giòn / Giòn rụm",
+      "Món chay",
+      "Ăn trưa",
+      "Ấm bụng"
+    ],
+    "raw_ingredients": [
+      "1/2 cục (150g) tàu hủ",
+      "2 cọng cải thìa cắt khúc khoảng 3cm",
+      "1/2 củ hành tây nhỏ cắt hạt lựu",
+      "1 vắt mì vàng cọng nhỏ khô",
+      "1/2 nắm giá rửa sạch rồi để ráo",
+      "Muối, đường, chút bột ngọt , 2 muỗng canh bột xá xíu, dầu oliu",
+      "1 cọng hành lá và 3 cọng ngò cắt lát chung với nhau để vô chén"
+    ],
+    "ingredients": [
+      "cục tàu hủ",
+      "cọng cải thìa cắt khúc khoảng",
+      "hành tây nhỏ cắt hạt lựu",
+      "vắt mì vàng cọng nhỏ khô",
+      "nắm giá rửa sạch rồi để ráo",
+      "muối",
+      "đường",
+      "chút bột ngọt",
+      "bột xá xíu",
+      "dầu oliu",
+      "cọng hành lá",
+      "cọng ngò cắt lát chung với nhau để vô chén"
+    ],
+    "raw_instructions": "Cắt 10 lát tàu hủ, nêm bột xá xíu rồi để vào tủ lạnh\nTàu hủ còn lại, cắt cục vuông\nTrong 1 cái nồi, để 1 muỗng canh dầu oliu, đợi dầu nóng, để hành tây cắt hạt lựu vào, xào cho đến khi hành hơi vàng, để cải thìa cắt khúc vào, xào khoảng 5 phút rồi để 200ml nước lọc vào, đợi sôi, nêm muối đường chút bột ngọt cho vừa ăn\nLấy tàu hủ ướp bột xá xíu ra chiên giòn rồi cắt thành từng miếng dài\nTrước khi làm nước lèo, để 1 vắt mì vàng vào 1thao nước lọc nhỏ cho mì mềm, để vào rổ ráo nước\nĐể giá vào tô ăn súp, để mì vàng cọng nhỏ lên trên giá, để tàu hủ chiên lên trên cùng rồi chế nước lèo có tàu hủ luột và cải thìa vào, xong để thêm hành lá và ngò lên trên cùng\nChúc ăn ngon",
+    "source_index": 459
+  },
+  {
+    "name": "Sữa chua trân châu Hạ Long",
+    "description": "Sữa chua trân châu Hạ Long là món tráng miệng giải nhiệt tuyệt vời, mang đến sự kết hợp độc đáo giữa vị chua thanh mát của sữa chua đông đá và cái béo ngậy, thơm lừng của nước cốt dừa. Những viên trân châu dừa cùi dai sần sật, ấm nóng quyện cùng sữa chua lạnh mịn màng tạo nên trải nghiệm vị giác khó quên. Món ăn này không chỉ ngon miệng mà còn là lựa chọn lý tưởng cho những buổi chiều xế hay khi muốn tìm một món ăn vặt vừa lạ vừa quen.",
+    "core_ingredients": [
+      "sữa chua",
+      "sữa tươi",
+      "sữa đặc",
+      "trân châu",
+      "bột năng",
+      "đường",
+      "dừa cùi",
+      "đồ ăn kèm",
+      "dừa khô",
+      "chuối khô",
+      "ômai",
+      "vừng",
+      "dừa nạo",
+      "nước cốt dừa",
+      "lá dứa"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Ngọt",
+      "Món khô",
+      "Hấp / Luộc",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Thanh mát/Giải nhiệt",
+      "Món lạnh",
+      "Dai / Sần sật"
+    ],
+    "raw_ingredients": [
+      "Sữa chua",
+      "100 ml Lọ thủy tinh",
+      "1 hộp Sữa chua mua sẵn",
+      "Sữa tươi",
+      "1 hộp Sữa đặc ông thọ",
+      "Nước đun sôi. Và nước đun sôi để nguội",
+      "Lò nướng hoặc thùng xốp , nồi cơm điện",
+      "Trân châu",
+      "Bột năng",
+      "Đường",
+      "Dừa cùi",
+      "Đồ ăn kèm khác (có hoặc không)",
+      "Dừa khô",
+      "Chuối khô",
+      "Ômai"
+    ],
+    "ingredients": [
+      "sữa chua",
+      "lọ thủy tinh",
+      "hộp sữa chua mua sẵn",
+      "sữa tươi",
+      "hộp sữa đặc ông thọ",
+      "nước đun sôi",
+      "nước đun sôi để nguội",
+      "lò nướng hoặc thùng xốp",
+      "nồi cơm điện",
+      "trân châu",
+      "bột năng",
+      "đường",
+      "dừa cùi",
+      "đồ ăn kèm khác",
+      "dừa khô",
+      "chuối khô",
+      "ômai"
+    ],
+    "raw_instructions": "Sữa đặc ông thọ pha với nước nóng và sữa tươi theo tỉ lệ: 1 lon sữa đặc: 1 lon nước nóng : 1 lon nước đun sôi để nguội: lon sữa tươi. Có thể không cần sữa tươi thì thay bằng nước đun sôi để nguội, tuy nhiên sẽ không thơm ngon bằng. Tỉ lệ này chỉ mang tính tham khảo nếu các bếp có tỉ lệ làm sữa chua ngon hơn mong góp ý.\nSữa chua mua sẵn để làm men cái, để nguội nhiệt độ phòng. Khi thử hỗn hợp sữa đã pha âm ấm khoảng 40 độ thì đổ vào trộn đều.\nRót ra từng hũ thủy tinh nhỏ. Đậy lắp, ủ trong vòng 6_8h tùy theo nhiệt độ thời tiết nóng hay lạnh. Mình đọc cách ủ sữa chua thì ủ để kiểm soát nhiệt độ tốt nhất là sử dụng lò nướng, và có thể kéo xuống khoảng 4h. Còn nếu không ủ thùng xốp hay nồi cơm điện. Đương nhiên nếu có máy làm sữa chua thì không còn gì tốt hơn.\nKhi ủ đủ thời gian, nhẹ tay để tránh long chân và phá vỡ liên kết, cho vào ngăn đá tủ lạnh. (chú ý ngăn đá chứ không phải ngăn mát nhé) bước này nếu bị phá vỡ liên kết sữa chua sẽ có đá và không được mịn. Kiểm tra khi sữa chua cứng lại là có thể bỏ ra ăn\nTrong quá trình chờ ủ và chờ đông sữa chua, tiến hành nặn trân châu. 1 miếng cùi dừa nhỏ, cắt hạt lựu càng bé càng tốt, cỡ đầu que diêm. Trộn bột cùng cùi dừa, đường đảo đều. Đổ nước ấm_ nóng vào nhào sẽ dễ và dẻo hơn. Nhào thành 1 khối đồng nhất không dính tay thì vê nhỏ thành từng viên trân châu bé đang kính dưới 1cm. Lăn qua 1 lần bột khô. (bước này có thể làm nhiều và cất tủ lạnh ăn dần)\nBắc 1 nồi nước lên bếp, luộc trân châu nhỏ lửa 10_15p, tắt bếp, ủ thêm 10_15p nữa ngay trên bếp. Vớt ra để ráo rắc xíu vừng, dừa nạo lên, ăn nóng với sữa chua lạnh. Hoặc vớt ra bỏ nước lạnh để tiếp tục làm trân châu cốt dừa\nHoặc sau bước làm trân châu thì nấu thêm 1 nồi nước cốt dừa(nếu có lá dứa bỏ vào càng thơm), sau khi cốt dừa sôi, thả trân châu vào đun thêm 2p. Khi ăn là ăn nóng, kèm sữa chua đóng đá cứng.\nKhi ăn lấy sữa chua ra, để nguyên hộp sữa chua, múc cốt dừa 1 bát riêng, ăn đến đâu rưới cốt dừa trân châu vào và đào đào ăn dần. Cái ấm dẻo của trân châu, quyện cái lành lạnh của sữa chua. Vừa ăn vừa đào với hộp sữa chua đông đá chắc đặc chứ không xốp nhẹ như kem sữa chua. Đó là cái thú vui vừa ăn vừa tám chuyện của người Hạ Long.",
+    "source_index": 296
+  },
+  {
+    "name": "Mì trộn Indomie",
+    "description": "Món mì trộn Indomie này mang đến trải nghiệm vị giác đậm đà khó cưỡng, với sợi mì dai ngon thấm đẫm gia vị đặc trưng. Tôm tươi ngọt được xào thơm lừng, kết hợp cùng trứng ốp la béo ngậy, tạo nên một tổng thể hài hòa và đầy đủ dinh dưỡng. Chỉ cần thêm chút hành lá xanh mướt, bạn đã có ngay một bữa ăn nhanh gọn nhưng vẫn \"đưa miệng\" và ấm bụng.",
+    "core_ingredients": [
+      "mỳ indomie",
+      "tôm",
+      "trứng",
+      "hành lá",
+      "dầu hào",
+      "hạt nêm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Hải sản",
+      "Giàu đạm",
+      "Dai / Sần sật",
+      "Thức ăn nhanh",
+      "Ăn no"
+    ],
+    "raw_ingredients": [
+      "1 gói mỳ indomie",
+      "Tôm (mọi người muốn thế bằng các thứ khác cũng được)",
+      "1 quả trứng gà",
+      "Hành lá"
+    ],
+    "ingredients": [
+      "gói mỳ indomie",
+      "tôm",
+      "trứng gà",
+      "hành lá"
+    ],
+    "raw_instructions": "Bắt một nồi nước sôi, luộc mỳ trong 5 phút\nKhi mỳ chín vớt ra nước lạnh rồi để ráo nước (do mỳ này đặc biệt là phải để ráo nước thì mới ngon)\nBỏ gia vị có sẵn trong mỳ vào tô rồi trộn đều gia vị mỳ, sau đó bỏ mỳ vào tô rồi trộn đều\nBắt một chảo nóng bỏ tôm vào xào, có thể nêm ít dầu hào và hạt nêmChiên thêm một trứng ốp la\nCuối cùng là chỉ cần bỏ vào tô rồi để ít hành lá là ăn được rồi\nChúc mọi người luôn có thật nhiều sức khoẻ và sẽ nấu nhiều món ngon hơn nữa cho gia đình mình nhé (đừng quên là lưu lại để khi có dịp còn nấu cho người mình muốn nữa đó)",
+    "source_index": 372
+  },
+  {
+    "name": "Rau câu trái dừa nguyên quả",
+    "description": "Món rau câu trái dừa nguyên quả mang đến một trải nghiệm vị giác ngọt ngào, thanh mát đặc trưng của dừa tươi. Từng miếng rau câu mềm mại tan chảy trong miệng, hòa quyện cùng vị béo ngậy nhẹ nhàng từ cơm dừa và phô mai, tạo nên một món tráng miệng giải nhiệt tuyệt vời. Hương thơm dịu nhẹ của dừa sẽ đánh thức mọi giác quan, mang lại cảm giác sảng khoái và thư thái.",
+    "core_ingredients": [
+      "rau câu dẻo",
+      "nước dừa",
+      "nước lạnh",
+      "đường",
+      "dừa tươi",
+      "phô mai"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Ngọt",
+      "Món khô",
+      "Hấp / Luộc",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Thanh mát/Giải nhiệt",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "Rau câu dẻo 1 gói 10g",
+      "2 kg Nước dừa +nước lạnh",
+      "500 g đường",
+      "trái Dừa tươi nguyên"
+    ],
+    "ingredients": [
+      "rau câu dẻo gói",
+      "nước dừa",
+      "nước lạnh",
+      "đường",
+      "trái dừa tươi nguyên"
+    ],
+    "raw_instructions": "Sơ chế dừa.dừa gọt vỏ xanh,gọt nửa phần đầu cứng trái dừa đến sát gáo chọn dừa vừa ăn có cái dễ nạo.làm sạch phần nầy gọt ngược lại cho dừa gọn gàng cắt phần đế sao cho trái dừa đứng vững.đem rửa sạch dừa để ráo khoét chỗ gáo làm sạch một lỗ nhỏ lấy nước ra.đong phần nước này thêm vào nước lạnh đủ 2000g rồi đem nấu và cho đường vào nấu sôi vài dạo.nêm độ ngọt vừa ý\nRau câu tan hoàn toàn thì gọt miệng trái dừa rộng ra và nạo cái dừa trong trái xong để lại trong trái đó múc rau câu cho vào đầy.để nguội rồi cho vào ngăn mát tủ lạnh vì mình còn ít dừa nên phần dư mình đổ ra khuôn với phô mai xắt nhỏ",
+    "source_index": 297
+  },
+  {
+    "name": "Yaourt muối",
+    "description": "Món Yaourt muối này hứa hẹn mang đến một trải nghiệm vị giác độc đáo, với sự kết hợp hài hòa giữa vị chua nhẹ của sữa chua, ngọt thanh từ mật ong và chút mặn mà tinh tế. Từng chiếc bánh nướng vàng ươm, mềm mại, dẻo dai nhờ bột mì và bơ lạt, chắc chắn sẽ làm ấm lòng bạn trong những buổi xế chiều. Hương thơm dịu nhẹ của men và bơ lan tỏa, kích thích mọi giác quan, khiến bạn muốn thưởng thức ngay lập tức.",
+    "core_ingredients": [
+      "bột mì",
+      "sữa chua",
+      "men",
+      "mật ong",
+      "muối",
+      "bơ"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Chua",
+      "Món khô",
+      "Nướng",
+      "Ngọt",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Bánh ngọt",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "160 g bột mì số 13",
+      "110 g sữa chua có đường (mình dùng sữa chua tự làm)",
+      "3 g men instant",
+      "15 g mật ong",
+      "3 g muối",
+      "15 g bơ lạt"
+    ],
+    "ingredients": [
+      "bột mì số",
+      "sữa chua có đường",
+      "men instant",
+      "mật ong",
+      "muối",
+      "bơ lạt"
+    ],
+    "raw_instructions": "Cho tất cả nguyên liệu vào âu trộn. Muối và men để cách xa nhau, tránh tiếp xúc trực tiếp sẽ làm men bị yếu\nTrộn đều bằng spatula, khi không còn bột khô thì đậy kín cho bột nghỉ 10p\nSau đó nhồi tay cho khối bột trở nên mịn màng, dai, dẻo. Tiếp tục cho bột nghỉ 10p\nTiếp theo cho bơ lạt để mềm ở nhiệt độ phòng nhồi cho đến khi kéo được màng mỏng tương đối. Đậy kín ủ cho đến khi nở gấp đôi\nSau thời gian ủ lấy khối bột ra ép cho xẹp hơi. Tạo hình theo ý muốn. Tiếp tục cho bột nghỉ thêm 30-40p\nLàm nóng nckd trước 10p. Nướng 145 độ trong 20p",
+    "source_index": 284
+  },
+  {
+    "name": "Ốc hương hấp sả",
+    "description": "Món ốc hương hấp sả mang đến trải nghiệm vị giác đa chiều, từ hương thơm nồng nàn của sả quyện cùng vị ngọt tự nhiên của ốc khi hấp, đến sự béo ngậy, đậm đà của ốc chấy tỏi vàng ruộm. Chấm kèm muối tiêu chanh ớt chua cay mặn mà, món ăn này chắc chắn sẽ đánh thức mọi giác quan, khiến bạn không ngừng xuýt xoa và muốn thưởng thức mãi.",
+    "core_ingredients": [
+      "ốc hương",
+      "sả",
+      "tỏi",
+      "rau răm",
+      "ớt",
+      "hạt nêm",
+      "dầu ăn",
+      "đường",
+      "muối",
+      "tiêu",
+      "tắc",
+      "chanh"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Hấp / Luộc",
+      "Hải sản",
+      "Giàu đạm",
+      "Dai / Sần sật",
+      "Mồi nhậu"
+    ],
+    "raw_ingredients": [
+      "6 lạng ốc hương",
+      "4 cây sả, tỏi, rau răm , gia vị"
+    ],
+    "ingredients": [
+      "ốc hương",
+      "sả",
+      "tỏi",
+      "rau răm",
+      "gia vị"
+    ],
+    "raw_instructions": "Ốc hương ngâm 30p rồi rửa sạch.Chia đôi ra 2 phần, tuỳ bạn muốn ăn nào nhiều nào ít hen.1. hấp sả: cho ốc vào nồi, cắt sả mỏng vát xéo vào, hoặc đập dập cắt khúc tuỳ mình. Cho vài lát ớt đỏ, 2 muỗng cf hạt nêm. Cho nước lạnh tráng đáy nồi, có thể cho nhiều hơn nếu thích húp nước. Cho lên bếp nấu sôi 1 lúc, nếm nước vừa thì tắt bếp cho ra tô.\n2. Phần ốc chấy tỏi đem đi luộc sơ, cho ra rổ ráo nước.Băm nhỏ 6-7 tép tỏi loại to. Cho dầu vào chảo, cho tỏi vào phi cho vàngggg, vớt 1/2 ra chén, sau đó nhỏ lửa hoặc tắt bếp. Lúc này vào gia vị dễ bị cháy, nên chơi chiêu 🤣Cho vào 1 muỗng canh đường+2/3 muỗng canh hạt nêm, mở lửa nhỏ đảo đều. Cho ốc vào đảo đều. Cho thêm xíu nước để không bị cháy, đảo thêm 1 lúc cho gia vị hơi cạn thì tắt bếp. Cho ra dĩa, rưới 1/2 tỏi lúc nãy lên trên.\nLàm muối tiêu chấm: 1 muỗng cf muối+ 1mcf tiêu+3 mcf đường+tắc/chanh+ ớt. Quấy đều lên là xong òi ^^ ăn đỡ thèm mai mốt ra quán ăn sau hen hihi",
+    "source_index": 115
+  },
+  {
+    "name": "Bánh bông lan trứng muối",
+    "description": "Bánh bông lan trứng muối là sự kết hợp hoàn hảo giữa vị mặn bùi của trứng muối nướng, chút đậm đà của ruốc và lớp cốt bánh bông lan mềm xốp. Điểm nhấn chính là hai loại sốt béo ngậy: sốt dầu trứng thơm lừng và sốt phô mai sánh mịn, tan chảy trong miệng. Món bánh này mang đến trải nghiệm vị giác phong phú, vừa quen thuộc vừa đầy bất ngờ, rất thích hợp để thưởng thức vào bữa xế hoặc làm món ăn vặt.",
+    "core_ingredients": [
+      "trứng muối",
+      "ruốc",
+      "cốt bánh bông lan",
+      "lòng đỏ trứng",
+      "đường",
+      "muối",
+      "nước cốt chanh",
+      "dầu ăn",
+      "bơ nhạt",
+      "bột ngô",
+      "sữa không đường",
+      "cream cheese",
+      "phô mai con bò cười"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Nướng",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Bánh ngọt",
+      "Mềm",
+      "Ăn vặt"
+    ],
+    "raw_ingredients": [
+      "Trứng muối nướng chín và bóp nhuyễn",
+      "Ruốc gà/ heo",
+      "Cốt bánh",
+      "Sốt dầu trứng:",
+      "2 cái lòng đỏ trứng (tầm 18gr lòng đỏ cho 1 quả )",
+      "20 gr đường",
+      "1 chút muối",
+      "1/2 tsp nước cốt chanh",
+      "150-180 ml dầu ăn",
+      "20 gr bơ nhạt đun chảy",
+      "Sốt phô mai:",
+      "1 cái lòng đỏ trứng",
+      "25 gr đường",
+      "12 gr bột ngô",
+      "230 gr sữa không đường",
+      "60 gr cream cheese",
+      "3 viên phô mai con bò cười"
+    ],
+    "ingredients": [
+      "trứng muối nướng chín",
+      "bóp nhuyễn",
+      "ruốc gà/ heo",
+      "cốt bánh",
+      "sốt dầu trứng:",
+      "cái lòng đỏ trứng",
+      "đường",
+      "chút muối",
+      "nước cốt chanh",
+      "- dầu ăn",
+      "bơ nhạt đun chảy",
+      "sốt phô mai:",
+      "cái lòng đỏ trứng",
+      "đường",
+      "bột ngô",
+      "sữa không đường",
+      "cream cheese",
+      "viên phô mai con bò cười"
+    ],
+    "raw_instructions": "Sốt dầu trứng: lòng đỏ trứng, muối, nước cốt chanh, đường trộn đều. Đun sôi nước tắt bếp rồi đặt bát lên ngoáy đều cho hoà quyện, đường tan hết là ok. Sau đấy bỏ bát xuống bàn, cho từ từ từng muỗi dầu 1 vào bát hỗn hợp trứng, không cho nhiều và đầy, mỗi lần trộn tầm 7s là lại cho thêm 1 thìa dầu vào. Cho đến khi cảm thấy sốt đông đặc như mình muốn thì dừng lại. Đổ bơ chảy vào trộn lần cuối rồi bỏ vô tủ lạnh làm mát.\nSốt phô mai: lòng đỏ trứng đánh cùng với đường và bột bắp. Sau đấy đổ sữa ấm vào trộn cho bột bắp được tan ra thì bắc lên bếp đun lửa nhỏ ngoáy đến khi nào sốt sệt lại thì tắt bếp cho phô mai vào trộn tiếp. Đến khi tất cả đều hoà quyện thì có thể lọc lại qua rây cho sốt đỡ bị lợn cợn. Bỏ vô tủ lạnh làm mát\nCốt bánh thì mọi người có thể tìm công thức phù hợp với nhu cầu của bản thân và gia đình\nTất cả sốt nên được làm mát rồi mới bơm và trang trí lên bánh. Sau đó rắc trứng muối và ruốc tuỳ nhu cầu. Ăn ngon hơn khi bánh được làm lạnh ạ 😊",
+    "source_index": 302
+  },
+  {
+    "name": "Cơm gà Hải Nam",
+    "description": "Cơm gà Hải Nam là một bản giao hưởng của hương vị đậm đà và béo ngậy, đánh thức mọi giác quan. Từng miếng thịt gà luộc mềm mọng, da giòn sần sật, thấm đẫm vị ngọt tự nhiên và hương thơm nồng của gừng, hành. Hạt cơm dẻo thơm, óng ánh mỡ gà, quyện cùng nước chấm chua cay mặn ngọt, tạo nên một trải nghiệm ẩm thực khó quên, vừa ấm bụng lại vừa no lòng.",
+    "core_ingredients": [
+      "gà",
+      "hành tím",
+      "tỏi",
+      "hành lá",
+      "gừng",
+      "rau mùi",
+      "mỡ gà",
+      "muối",
+      "đường",
+      "mỳ chính",
+      "dầu hào",
+      "tiêu",
+      "ớt",
+      "nước mắm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Hấp / Luộc",
+      "Béo ngậy",
+      "Giàu đạm",
+      "Giòn / Giòn rụm",
+      "Món Việt truyền thống",
+      "Ăn trưa"
+    ],
+    "raw_ingredients": [
+      "1/2 con gà",
+      "Hành tím",
+      "tỏi",
+      "hành lá",
+      "gừng",
+      "rau mùi",
+      "Mỡ gà",
+      "gia vị",
+      "muối",
+      "đường",
+      "mỳ chính",
+      "dầu hào",
+      "tiêu",
+      "ớt"
+    ],
+    "ingredients": [
+      "gà",
+      "hành tím",
+      "tỏi",
+      "hành lá",
+      "gừng",
+      "rau mùi",
+      "mỡ gà",
+      "gia vị",
+      "muối",
+      "đường",
+      "mỳ chính",
+      "dầu hào",
+      "tiêu",
+      "ớt"
+    ],
+    "raw_instructions": "Gà rửa sạch lọc mỡ,hành lá thái nhỏ\nĐun sôi nước để nhúng gà 2-3 lần để da giòn(nhúng nước sôi rồi nhúng ngay nước lạnh)\nCho hành tỏi nguyên củ gừng tái lát cuống hành lá cuống rau mỳ vào xào với mỡ gà\nChia mỡ gà làm 2 phần.1 đổ vào gao 1 phần đổ vào canh luộc gà.\nLuộc gà sôi 15 phút múc bớt nước canh gà ra cho vào gạo.luộc gà thêm 10 phút vớt ra để trước quạt giúp da gà săn lại\nSốt chấm gà :hành thái nhỏ, tỏi, gừng băm nhỏ, muối, đường, mắm xào với mỡ gà",
+    "source_index": 352
+  },
+  {
+    "name": "Cá hồi áp chảo sốt chanh dây",
+    "description": "Món cá hồi áp chảo sốt chanh dây mang đến sự kết hợp tinh tế giữa vị béo ngậy tự nhiên của cá hồi và hương vị chua ngọt thanh mát từ sốt chanh dây. Từng miếng cá được áp chảo vàng ruộm với bơ, giữ trọn độ mềm ẩm bên trong. Kèm theo là các loại rau củ tươi giòn như bắp cải thảo, bắp cải tím, nấm kim châm và đậu que, tạo nên một bữa ăn cân bằng, thơm ngon và đầy đủ dinh dưỡng. Đây chắc chắn là lựa chọn tuyệt vời cho những ai yêu thích ẩm thực healthy mà vẫn đậm đà hương vị.",
+    "core_ingredients": [
+      "cá hồi",
+      "bắp cải thảo",
+      "bắp cải tím",
+      "nấm kim châm",
+      "đậu que",
+      "bơ",
+      "chanh dây",
+      "muối",
+      "đường",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Béo ngậy",
+      "Nước sền sệt",
+      "Chiên / Rán",
+      "Hải sản",
+      "Từ sữa / Phô mai",
+      "Giàu đạm",
+      "Ăn trưa"
+    ],
+    "raw_ingredients": [
+      "4 lát Phi lê cá hồi",
+      "1/2 bắp cải thảo",
+      "1/4 Bắp cải tím",
+      "1 pack nấm kim châm",
+      "100 gr Đậu que",
+      "Bơ lạt",
+      "5 trái chanh dây",
+      "Muối, đường, tiêu"
+    ],
+    "ingredients": [
+      "lát phi lê cá hồi",
+      "bắp cải thảo",
+      "bắp cải tím",
+      "pack nấm kim châm",
+      "đậu que",
+      "bơ lạt",
+      "chanh dây",
+      "muối",
+      "đường",
+      "tiêu"
+    ],
+    "raw_instructions": "Cá hồi rửa sạch để ráo nước, sau đó rắc vài hạt muối lên mặt mỗi miếng. Chanh dây cà bỏ bớt hạt, nấu sôi cùng 5 muỗng cafe đường và 1/2 muỗng cafe muối. Cải thảo cắt khúc, đậu que cắt khúc 1 đốt ngón tay, bắp cải tím bào sợi, nấm cắt gốc rửa sạch.\nBắc chảo lên bếp cho ráo, đun sôi bơ và cho cá vào áp chảo vàng 2 mặt, mỗi mặt 30 giây. Cá chín lấy ra rắc chút tiêu lên mặt. Lấy phần bơ còn trong chảo để xào sơ các loại rau trong 1 phút.\nTrình bày ra đĩa. Khi ăn tưới sốt lên cá. Dùng kèm cơm trắng, nước tương, tương ớt... Tuỳ khẩu vị... 😋😋😋😋",
+    "source_index": 387
+  },
+  {
+    "name": "Rau muống xào tỏi",
+    "description": "Món rau muống xào ốc giác là sự kết hợp hài hòa giữa vị ngọt tự nhiên của ốc giác dai sần sật và độ giòn tan của rau muống xanh mướt. Hương tỏi phi thơm lừng quyện cùng dầu hào đậm đà, nước mắm mặn mà tạo nên một món ăn hấp dẫn, đưa cơm. Thêm chút đậu phộng rang bùi bùi hay hành phi giòn rụm sẽ làm tăng thêm trải nghiệm vị giác, khiến bạn khó lòng cưỡng lại.",
+    "core_ingredients": [
+      "ốc giác",
+      "rau muống",
+      "tỏi",
+      "hành tím",
+      "ớt",
+      "dầu hào",
+      "nước mắm",
+      "hạt nêm",
+      "đường",
+      "tiêu",
+      "đậu phộng",
+      "hành phi",
+      "dầu ăn"
+    ],
+    "preprocessing_ingredients": [
+      "gừng",
+      "sả",
+      "muối"
+    ],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Xào",
+      "Hải sản",
+      "Giàu đạm",
+      "Giòn / Giòn rụm",
+      "Dai / Sần sật",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "500 g ốc giác (nên chọn ốc tươi hoặc phần thịt ốc đã làm sạch)",
+      "1 bó rau muống (chọn loại rau muống nước cọng to sẽ giòn hơn)",
+      "1 ít Gia vị: Tỏi băm , hành tím , ớt, dầu hào, nước mắm, hạt nêm, đường, tiêu",
+      "1 ít đậu phộng rang hoặc hành phi ăn kèm"
+    ],
+    "ingredients": [
+      "ốc giác",
+      "rau muống",
+      "ít gia vị: tỏi băm",
+      "hành tím",
+      "ớt",
+      "dầu hào",
+      "nước mắm",
+      "hạt nêm",
+      "đường",
+      "tiêu",
+      "ít đậu phộng rang hoặc hành phi ăn kèm"
+    ],
+    "raw_instructions": "Bước 1: Sơ chế ốc giác• Nếu là ốc nguyên con, luộc chín với gừng và sả để khử mùi tanh, sau đó lấy thịt ốc ra.• Thái thịt ốc thành những lát mỏng vừa ăn.• Mẹo nhỏ: Ướp ốc với 1 muỗng cà phê hạt nêm, chút tiêu và tỏi băm trong 15 phút để ốc đậm đà hơn.\nBước 2: Chuẩn bị rau muống• Rau muống nhặt bỏ bớt lá (để giữ độ giòn), cắt khúc vừa ăn.• Chần sơ rau qua nước sôi có pha chút muối, sau đó vớt ra ngâm ngay vào tô nước đá lạnh. Cách này giúp rau giữ được màu xanh mướt và độ giòn tan khi xào.\nBước 3: Xào ốc• Phi thơm tỏi băm với dầu ăn. Cho ốc giác vào xào nhanh tay trên lửa lớn. Khi thịt ốc săn lại và tỏa mùi thơm thì trút ra đĩa riêng (không xào quá lâu ốc sẽ bị dai).\nBước 4: Hoàn thiện• Tiếp tục dùng chảo đó, thêm chút dầu và tỏi phi thơm. Cho rau muống vào xào nhanh tay.• Nêm 1 muỗng canh dầu hào, 1/2 muỗng canh nước mắm, chút đường cho vừa vị.• Khi rau vừa chín tới, cho ốc giác đã xào vào đảo chung khoảng 30 giây rồi tắt bếp.\n✨ Bí quyết để món ăn \"xanh\" và \"giòn\"• Lửa lớn là chìa khóa: Luôn xào rau và ốc trên lửa lớn để rau không bị ra nước và giữ được màu xanh.• Nước chấm: Món này sẽ cực phẩm nếu chấm cùng nước mắm gừng hoặc muối tiêu chanh ớt.",
+    "source_index": 197
+  },
+  {
+    "name": "Cháo ngao",
+    "description": "Món cháo ngao ấm nóng, đậm đà hương vị biển cả từ nghêu tươi ngon, hòa quyện cùng vị ngọt thanh của xương heo hầm nhừ. Hạt gạo tẻ và đậu xanh được nấu mềm mịn, tan chảy trong miệng, mang đến cảm giác dễ chịu và bổ dưỡng. Thêm chút hành phi, hành lá thơm lừng và vị cay nhẹ của ớt, tiêu sẽ đánh thức mọi giác quan, là lựa chọn hoàn hảo cho một bữa sáng tràn đầy năng lượng hoặc bữa khuya ấm bụng.",
+    "core_ingredients": [
+      "nghêu",
+      "xương heo",
+      "gạo tẻ",
+      "đậu xanh",
+      "hành phi",
+      "hành lá",
+      "ớt",
+      "tiêu",
+      "dầu ăn",
+      "hạt nêm",
+      "đường",
+      "nước mắm",
+      "muối",
+      "mắm mặn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Nước sền sệt",
+      "Cháo",
+      "Hải sản",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Ăn sáng"
+    ],
+    "raw_ingredients": [
+      "500 g nghêu trắng",
+      "500 g xương heo",
+      "1 cup gạo tẻ , 1 nắm đậu xanh",
+      "Hành phi , hành lá",
+      "Ớt tươi xay , tiêu xay"
+    ],
+    "ingredients": [
+      "nghêu trắng",
+      "xương heo",
+      "cup gạo tẻ",
+      "nắm đậu xanh",
+      "hành phi",
+      "hành lá",
+      "ớt tươi xay",
+      "tiêu xay"
+    ],
+    "raw_instructions": "Nghêu hấp sơ cho vừa mở nắp thì tắt bếp rồi gỡ lấy thịt.Phi thơm 1 muỗng canh dầu điều với ít đầu hành, rồi cho thịt nghêu vào, để lửa lớn, thêm 1 muỗng canh hạt nêm & 1 muỗng canh đường vào, xào nhanh tay khoảng 1' là được, không xào lâu nghêu sẽ bị teo và dai nha.Hôm nay mình mua nghêu hơi bị nhỏ nên nhìn không được múp như nghêu cô Gió bán.\nXương heo trụng nước sôi cho sạch. Phi 1 muỗng dầu ăn với ít đầu hành, cho xương vào, thêm 1 muỗng canh hạt nêm, 1 muỗng canh nước mắm, 1/2 muỗng cafe muối vào. Xào cho xương thấm gia vị rồi cho nước hấp nghêu vào. Múc luôn phần nước xào nghêu cho vào nồi để cháo có màu đẹp.\nThêm vào 4 tô nước. Cho gạo và đậu xanh đã vo vào nồi. Để lửa vừa 7/9 cho nước sôi thì khuấy đều để gạo không dính đáy nồi rồi hớt bọt. Đậy nắp nấu liu riu lửa 1/9 trong khoảng 60' cho gạo nhừ là xong!\nMúc cháo vào tô kèm 1 miếng xương, múc nghêu lên trên, thêm nhiều hành phi và hành lá xắt nhuyễn, rắc ít tiêu xay và thêm ít ớt xay vào.Dọn kèm một chén mắm mặn có ớt dằm nữa là đúng bài rồi nè!",
+    "source_index": 90
+  },
+  {
+    "name": "Mì Udon hải sản",
+    "description": "Mì Udon hải sản mang đến trải nghiệm ẩm thực đậm đà, với sợi mì udon mềm mại quyện trong nước dùng dashi thanh ngọt, dậy mùi thơm của tôm và càng tôm hùm tươi ngon. Món ăn nóng hổi này không chỉ ấm bụng mà còn cung cấp đầy đủ dưỡng chất, là lựa chọn tuyệt vời cho những ai yêu thích hương vị biển cả và ẩm thực Á Đông.",
+    "core_ingredients": [
+      "udon",
+      "tôm",
+      "càng tôm hùm",
+      "hành",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [
+      "gói dashi"
+    ],
+    "soft_tags": [
+      "Đậm đà",
+      "Món nước",
+      "Hấp / Luộc",
+      "Hải sản",
+      "Giàu đạm",
+      "Mềm",
+      "Món Á",
+      "Ấm bụng"
+    ],
+    "raw_ingredients": [
+      "1 gói udon đông đá",
+      "3 con tôm và 1 càng tôm hùm đã luộc chín",
+      "2 gói dashi",
+      "500 ml nước"
+    ],
+    "ingredients": [
+      "gói udon đông đá",
+      "tôm",
+      "càng tôm hùm đã luộc chín",
+      "gói dashi",
+      "nước"
+    ],
+    "raw_instructions": "Nấu nước sôi, cho gói udon đông đá vào 1p vớt ra liền để ráo.\nNấu sôi 2 gói dashi vơi nước khoảng 7p. Vớt bỏ 2 gói dashi.\nCho hải sản và udon vào nồi dashi, thêm hành tiêu và dùng ngay khi súp còn nóng. Hình gói dashi cấp tốc",
+    "source_index": 337
+  },
+  {
+    "name": "Bánh xèo gạo lứt chay",
+    "description": "Thưởng thức món bánh xèo gạo lứt chay giòn rụm, thơm lừng với lớp vỏ bánh làm từ gạo lứt và nếp lứt, mang đến hương vị thanh đạm mà vẫn đậm đà. Nhân bánh đầy ắp rau củ tươi ngon như củ sắn, cà rốt, hành tây, giá, kết hợp cùng các loại rau sống thanh mát. Chấm cùng nước tương tamari pha ớt và nước mơ muối, món ăn này không chỉ kích thích vị giác mà còn rất tốt cho sức khỏe, phù hợp cho những ai yêu thích ẩm thực chay và lối sống Healthy.",
+    "core_ingredients": [
+      "gạo lứt",
+      "nếp lứt",
+      "củ sắn",
+      "cà rốt",
+      "hành tây",
+      "giá",
+      "hành lá",
+      "cải bẹ xanh",
+      "xà lách",
+      "rau thơm",
+      "nước tương tamari",
+      "ớt",
+      "nước dùng rau củ",
+      "dầu mè",
+      "muối hầm",
+      "đường nâu",
+      "nước mơ muối"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Đậm đà",
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giòn / Giòn rụm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Gạo lứt đỏ, nếp lứt trắng",
+      "Củ sắn dây , cà rốt, hành tây , giá, hành lá",
+      "Rau ăn bánh xèo: cải bẹ xanh , xà lát , rau thơm các loại",
+      "Nước tương tamari , ớt bằm, nước dùng rau củ"
+    ],
+    "ingredients": [
+      "gạo lứt đỏ",
+      "nếp lứt trắng",
+      "củ sắn dây",
+      "cà rốt",
+      "hành tây",
+      "giá",
+      "hành lá",
+      "rau ăn bánh xèo: cải bẹ xanh",
+      "xà lát",
+      "rau thơm các loại",
+      "nước tương tamari",
+      "ớt bằm",
+      "nước dùng rau củ"
+    ],
+    "raw_instructions": "Gạo lứt và 1 ít nếp lứt ngâm và nước lọc cho vào máy sinh tố xay thành bột (khi xay nhớ cho tí dầu mè) để bột nghỉ 15-30 phút. Hành lá cắt nhỏ trộn với bột\nNhân bánh: Cà rốt, củ sắn, hành tây cắt sợi; xào sơ với 1 ít muối hầm.\nPha nước chấm: Cho nước dùng rau củ pha với nước tương tamari và 1 tí ớt hoặc đường nâu, nước mơ muối và nước tương tamari, ớt\nBắt chảo đổ bột bánh tráng đều rồi cho nhân và ít giá vào, để vàng úp mặt lấy ra",
+    "source_index": 474
+  },
+  {
+    "name": "Bánh mousse chanh leo",
+    "description": "Bánh mousse chanh leo là sự kết hợp tinh tế giữa vị chua thanh mát đặc trưng của chanh dây và độ béo ngậy, mềm mịn của lớp kem mousse. Từng miếng bánh tan chảy trong miệng, mang đến cảm giác sảng khoái, ngọt ngào nhưng không hề ngấy. Lớp thạch chanh dây óng ánh phía trên cùng cốt bánh bông lan mềm mại tạo nên một trải nghiệm vị giác đa tầng, đánh thức mọi giác quan.",
+    "core_ingredients": [
+      "trứng gà",
+      "muối",
+      "giấm trắng",
+      "cốt chanh",
+      "đường",
+      "bột mỳ",
+      "sữa tươi",
+      "dầu ăn",
+      "nước cốt chanh dây",
+      "whipping cream",
+      "gelatin",
+      "hạt chanh dây"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Chua",
+      "Món khô",
+      "Nướng",
+      "Ngọt",
+      "Béo ngậy",
+      "Từ sữa / Phô mai",
+      "Thanh mát/Giải nhiệt",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "Cốt bánh bông lan",
+      "15 cm Khuôn bánh",
+      "2 quả trứng gà",
+      "1 chút muối",
+      "5 ml giấm trắng/ cốt chanh",
+      "35 g đường",
+      "80 g bột mỳ số 8",
+      "15 g sữa tươi",
+      "15 g dầu ăn",
+      "Cốt Chanh dây",
+      "160 ml nước cốt Chanh dây (2 quả Chanh dây )",
+      "80 g đường",
+      "Kem Mousse Chanh dây",
+      "70 ml nước cốt Chanh dây",
+      "200 ml Whipping cream",
+      "15 g Gelatin",
+      "Thạch Chanh dây",
+      "90 ml nước cốt Chanh dây",
+      "10 g Gelatin"
+    ],
+    "ingredients": [
+      "cốt bánh bông lan",
+      "khuôn bánh",
+      "trứng gà",
+      "chút muối",
+      "giấm trắng/ cốt chanh",
+      "đường",
+      "bột mỳ số",
+      "sữa tươi",
+      "dầu ăn",
+      "cốt chanh dây",
+      "nước cốt chanh dây",
+      "đường",
+      "kem mousse chanh dây",
+      "nước cốt chanh dây",
+      "whipping cream",
+      "gelatin",
+      "thạch chanh dây",
+      "nước cốt chanh dây",
+      "gelatin"
+    ],
+    "raw_instructions": "Làm nóng lò 20 phút ở nhiệt độ 150°C\nTách lòng trắng ra khỏi trứng gà, cho thêm chút muối rồi đánh bông. Sau 1 phút thì thêm cốt chanh/giấm trắng. Đánh tiếp 1 phút nữa rồi cho dần đường vào đánh bông cùng. Sau khi lòng trắng bông cứng, không rủ/chảy thì cho tiếp lòng đỏ vào, tiếp tục đánh bông hỗn hợp cho đến khi bông cứng. Lấy ray bột rắc mịn lên bề mặt, rồi trộn đều hỗn hợp bằng tay. Cho tiếp 2 nguyên liệu còn lại vào trộn cùng là xong hỗn hợp cốt bánh.\nLót giấy nến vào đáy khuôn. Nếu không muốn bánh dính thành thì lót thêm giấy vào thành khuôn. Đổ hỗn hợp vào khuôn và bỏ vào giữa lò nướng. Cho nhiệt độ 150°C trong 30 phút rồi bỏ bánh ra để nguội\nLấy bánh ra khỏi khuôn, cắt thành 2-3 phần.\nChuẩn bị nước cốt chanh dây theo tỉ lệ để chuẩn bị làm kem Mousse và thạch\nCho 35ml nước vào Gelatin để hòa tan. Sau đó để riêng\nCho Whipping cream ra đánh bông lên. Sau khi kem cứng thì cho 70ml nước cốt chanh đã chuẩn bị khi nãy và gelatin vào, trộn đều bằng tay.\nBọc tấm nhựa bọc thực phẩm vào đáy khuôn. Cho lát bánh mới cắt vào rồi đổ 1/3 hỗn hợp kem lên. Lặp lại quá trình cho đến khi đầy khuôn và bỏ vào ngăn mát 2-3 tiếng cho kem đông lại\nCho 20ml nước vào Gelatin để hòa tan. Tiếp đó cho vào 90ml nước cốt Chanh dây còn lại, trộn đều bằng tay.\nĐổ hỗn hợp vừa xong lên mặt bánh rồi để vào ngăn mát tầm 3-4 tiếng để thạch đông lại. Có thể thêm chút hạt Chanh dây lên thạch để trang trí\nSau khi hoàn thiện, dùng khăn ấm chườm xung quanh thành khuôn để bánh tự tách ra. Bánh giờ đây đã sẵn sàng để bạn thưởng thức.",
+    "source_index": 300
+  }
+]
