@@ -1,6 +1,7 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from database import engine, Base, get_db
@@ -15,6 +16,11 @@ async def lifespan(app: FastAPI):
         # Cài đặt extension vector nếu chưa có
         await conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
         await conn.run_sync(Base.metadata.create_all)
+        await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS taste_profile TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
+        await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS meal_context TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
+        await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS occasion_context TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
+        await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS raw_ingredients TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
+        await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS raw_instructions TEXT NOT NULL DEFAULT ''"))
     
     # Chạy data seeder
     await seed_data()
@@ -31,8 +37,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-from sqlalchemy import text # import for raw sql
 
 @app.get("/foods/search", response_model=SearchResponse)
 async def search_endpoint(q: str = Query(None), db: AsyncSession = Depends(get_db)):

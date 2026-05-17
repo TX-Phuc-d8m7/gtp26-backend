@@ -1,0 +1,6010 @@
+[
+  {
+    "name": "Taco tôm cá với salsa xoài",
+    "description": "Món Taco tôm cá với salsa xoài kết hợp vị ngọt tự nhiên của tôm hấp, cá áp chảo thơm lừng cùng salsa xoài chua ngọt thanh mát. Mỗi cuốn taco có rau củ giòn mát, bánh tortilla, đậu, bắp và chút béo ngậy từ phô mai, tạo nên món cuốn hải sản nhiều màu sắc, giàu đạm và rất kích thích vị giác.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "fillet cá chẻm",
+      "fillet cá diêu hồng",
+      "tôm càng xanh",
+      "chanh xanh",
+      "ớt xanh",
+      "ngò rí",
+      "xoài chín",
+      "đậu ngâm đóng hộp",
+      "bắp đóng hộp",
+      "dưa leo baby",
+      "hành tây Đà Lạt",
+      "ớt chuông",
+      "xà lách iceberg",
+      "muối",
+      "đường",
+      "bánh tortilla",
+      "phô mai"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Cuốn / Gói",
+      "Hải sản",
+      "Từ sữa / Phô mai",
+      "Giàu đạm",
+      "Thanh mát/Giải nhiệt",
+      "Giòn / Giòn rụm"
+    ],
+    "raw_ingredients": [
+      "500 g fillet cá chẻm",
+      "500 g fillet cá diêu hồng",
+      "800 g tôm càng xanh",
+      "6-7 quả chanh xanh",
+      "1-2 quả ớt xanh (tuỳ độ cay mong muốn)",
+      "50 g ngò rí",
+      "1 quả xoài chín",
+      "1 hũ đậu ngâm đóng hộp",
+      "1 hũ bắp đóng hộp",
+      "6-7 quả dưa leo baby",
+      "2 củ hành tây Đà Lạt",
+      "1 quả ớt chuông",
+      "1 cây xà lách iceberg",
+      "1 muỗng cà phê muối",
+      "2 muỗng cà phê đường",
+      "bánh tortilla",
+      "phô mai"
+    ],
+    "ingredients": [
+      "fillet cá chẻm",
+      "fillet cá diêu hồng",
+      "tôm càng xanh",
+      "chanh xanh",
+      "ớt xanh",
+      "ngò rí",
+      "xoài chín",
+      "đậu ngâm đóng hộp",
+      "bắp đóng hộp",
+      "dưa leo baby",
+      "hành tây Đà Lạt",
+      "ớt chuông",
+      "xà lách iceberg",
+      "muối",
+      "đường",
+      "bánh tortilla",
+      "phô mai"
+    ],
+    "raw_instructions": "Tôm rửa sạch, cho vào nồi không đổ nước, đậy nắp và hấp tới khi tôm vừa đổi màu cam thì tắt bếp. Bóc vỏ, thái nhỏ, vắt vào tô tôm một ít nước cốt chanh. Cá chẻm và cá diêu hồng rửa sạch, để ráo, róc da, cắt khối vừa ăn rồi áp chảo với một ít muối cho xém mặt. Trộn cá, tôm, dưa leo, hành tây và ngò rí với nước cốt chanh, nêm lại cho vừa vị chua mặn. Làm salsa xoài bằng cách trộn xoài thái hạt lựu, ớt xanh băm nhỏ, ngò rí, một ít muối, đường và nước cốt chanh. Khi ăn, lấy bánh tortilla, cho phần tôm cá, xà lách iceberg, phô mai, ớt chuông, bắp, đậu và salsa xoài lên trên rồi thưởng thức.",
+    "taste_profile": [
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Sườn cừu nướng thảo mộc",
+    "description": "Món sườn cừu nướng thảo mộc này hứa hẹn một bữa ăn thịnh soạn, với từng miếng sườn cừu mềm mọng, béo ngậy tan chảy trong miệng. Lớp vỏ thảo mộc giòn rụm, thơm lừng mùi hương thảo, húng quế và tỏi sẽ đánh thức mọi giác quan. Đây chắc chắn là lựa chọn hoàn hảo cho những ai yêu thích hương vị đậm đà, sang trọng và muốn thưởng thức một món ăn chuẩn Âu ngay tại nhà.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "dẻ sườn cừu",
+      "bánh mì",
+      "muối",
+      "tiêu",
+      "dầu olive",
+      "húng quế tây",
+      "mùi tây",
+      "hương thảo",
+      "tỏi",
+      "mù tạt dijon"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Mềm",
+      "Món Âu"
+    ],
+    "raw_ingredients": [
+      "Dẻ sườn cừu - 1 người/2 miếng sườn",
+      "100 gr bánh mì (dùng để làm breadcrumb )",
+      "muối, tiêu, dầu olive",
+      "húng quế tây , mùi tây, hương thảo , tỏi",
+      "Mù tạt dijon"
+    ],
+    "ingredients": [
+      "dẻ sườn cừu",
+      "bánh mì",
+      "muối",
+      "tiêu",
+      "dầu olive",
+      "húng quế tây",
+      "mùi tây",
+      "hương thảo",
+      "tỏi",
+      "mù tạt dijon"
+    ],
+    "raw_instructions": "Phần sườn cừu mình mua loại đã bóc mỡ sẵn và chỉ lọc đi phần thịt khoảng 2 đốt ngón tay phía trên. Ướp với muối và tiêu sau đó áp chảo đều 4 mặt trên dầu olive, thêm bơ và rosemary và rưới đều các mặt. Sau đó cho sườn cừu và lò nướng khoảng 200 độ C trong 7,8 phút.\nPhần crust : bánh mì cắt nhỏ, nướng giòn, thêm khoảng 30gr mùi tây và húng quế tây và hai nhánh hương thảo cắt nhỏ, 3 tép tỏi băm nhuyễn thêm muối, tiêu rồi xay nhuyễn. Phần thịt cừu bỏ ra khỏi lò thì quét một lớp mù tạt dijon lên trên, lăn qua phần vụn bánh mì, nướng thêm khoảng 3 phút là xong rùiii.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bánh Tart trứng nướng",
+    "description": "Món bánh tart trứng nướng này sẽ làm say lòng bất cứ ai với lớp vỏ bánh giòn rụm, vàng ươm cùng phần nhân kem trứng lá dứa mềm mịn, béo ngậy. Hương thơm dịu nhẹ của lá dứa hòa quyện cùng vị ngọt thanh của kem trứng tạo nên một trải nghiệm vị giác khó quên. Thưởng thức khi còn nóng hổi để cảm nhận trọn vẹn sự tan chảy trong miệng, một món tráng miệng hoặc ăn vặt hoàn hảo.",
+    "core_ingredient_indices": [
+      0,
+      1
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "hộp kem trứng vị lá dứa nhất hương",
+      "đế bánh trứng mua sẵn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Nóng hổi",
+      "Giòn / Giòn rụm",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "1 hộp kem trứng vị lá dứa Nhất Hương",
+      "Đế bánh trứng mua sẵn"
+    ],
+    "ingredients": [
+      "hộp kem trứng vị lá dứa nhất hương",
+      "đế bánh trứng mua sẵn"
+    ],
+    "raw_instructions": "Dùng cây nhọn châm vào đáy đế tart cho hết bọt khí.Làm nóng nồi chiên không dầu ở nhiệt độ 180°C trong vòng 5 phút.Rồi cho đế bánh tart vào nồi chiên không dầu nướng 5 phút ở nhiệt độ 160°C(tùy thuộc vào nồi để điều chỉnh nhiệt độ cho phù hợp nha).\nLấy đế bánh tart ra và đổ hỗn hợp kem trứng đầy 2/3 đế bánh tart.Bật nhiệt độ nồi chiên không dầu 160°C trong vòng 10 phút rồi cho bánh tart trứng vào nướng.Tùy nồi chiên không dầu để điều chỉnh nhiệt độ cho phù hợp.Bánh chín sau 10 phút nhưng có thể nướng thêm cho bánh vàng hơn nhé!\nBánh vàng giòn lấy nhẹ nhàng xếp ra đĩa.Mời cả nhà cùng thưởng thức lúc nóng giòn ngon lắm nha.😋😋😋",
+    "taste_profile": [
+      "Ngọt",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế"
+    ],
+    "occasion_context": [
+      "Tráng miệng",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Bánh Waffle kem tươi",
+    "description": "Bánh Waffle kem tươi là sự kết hợp hoàn hảo giữa lớp bánh nướng vàng ươm, mềm xốp cùng vị ngọt ngào, béo ngậy của kem tươi mát lạnh. Hương thơm nhẹ nhàng từ bột ca cao quyện cùng vị béo của sữa và trứng tạo nên một trải nghiệm vị giác khó quên. Thêm chút chua dịu từ dâu tây hay cherry tươi mọng, món tráng miệng này chắc chắn sẽ làm hài lòng bất cứ ai yêu thích đồ ngọt, mang lại cảm giác thư thái và ngon miệng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột mỳ",
+      "đường",
+      "bột nổi",
+      "bột ca cao",
+      "muối",
+      "trứng gà",
+      "dầu ăn",
+      "sữa tươi không đường",
+      "kem tươi",
+      "cherry",
+      "dâu tây"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "120 g bột mỳ",
+      "7 g đường",
+      "7 g bột nổi",
+      "10 g bột ca cao (thay bằng gói milo cũng ok nhé !)",
+      "1 g muối",
+      "1 quả trứng gà",
+      "20 ml dầu ăn",
+      "Sữa tươi không đường",
+      "Kem tươi",
+      "Cherry",
+      "Dâu tây"
+    ],
+    "ingredients": [
+      "bột mỳ",
+      "đường",
+      "bột nổi",
+      "bột ca cao",
+      "muối",
+      "trứng gà",
+      "dầu ăn",
+      "sữa tươi không đường",
+      "kem tươi",
+      "cherry",
+      "dâu tây"
+    ],
+    "raw_instructions": "Rây mịn bột ra tô\nTrộn đều cacao, đường, muối rồi đập trứng vào. !\nĐánh thật mạnh rồi đổ sữa, dầu ăn vào, để cho hỗn hợp nghỉ 1 lúc.\nTrong lúc đợi mình sẽ làm nóng máy nướng và quết bơ lên máy (nếu không có máy có thể dùng chảo nha)\nCho bột vào khuôn và nướng.\nCho bảnh ra đĩa chọn viên kem mà mình yêu thích rồi đặt trái dâu tây, cherry lên !!!!",
+    "taste_profile": [
+      "Ngọt",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế"
+    ],
+    "occasion_context": [
+      "Tráng miệng",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Pizza tôm phô mai",
+    "description": "Chiếc pizza tôm phô mai nóng hổi, thơm lừng với lớp đế giòn rụm, béo ngậy vị phô mai tan chảy quyện cùng sốt cà chua đậm đà. Tôm tươi ngọt, ngô giòn sần sật và chút bacon mằn mặn tạo nên một bản giao hưởng vị giác hấp dẫn, chắc chắn sẽ làm hài lòng những tín đồ của món ăn nhanh nhưng vẫn đầy đủ dinh dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột bánh mì",
+      "dầu oliu",
+      "men",
+      "đường",
+      "muối",
+      "sốt cà",
+      "phô mai thái sợi",
+      "tôm",
+      "ngô ngọt",
+      "mayonnaise",
+      "bacon"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Hải sản",
+      "Từ sữa / Phô mai",
+      "Nhiều dầu mỡ / Calo cao",
+      "Giòn / Giòn rụm"
+    ],
+    "raw_ingredients": [
+      "300 gr bột bánh mì",
+      "10 gr dầu oliu",
+      "200 gr nước",
+      "3 gr men",
+      "5 gr đường",
+      "6 gr muối",
+      "2 thìa sốt cà",
+      "2 thìa phô mai thái sợi",
+      "4-6 con tôm",
+      "2 thìa ngô ngọt",
+      "2 thìa mayonnaise",
+      "1 thìa bacon thái lát"
+    ],
+    "ingredients": [
+      "bột bánh mì",
+      "dầu oliu",
+      "nước",
+      "men",
+      "đường",
+      "muối",
+      "sốt cà",
+      "phô mai thái sợi",
+      "tôm",
+      "ngô ngọt",
+      "mayonnaise",
+      "bacon"
+    ],
+    "raw_instructions": "Trộn tất cả bột cho hỗn hợp tan đều để tủ lạnh qua đêm rồi hôm sau để bột nghỉ 30 phút ở nhiệt độ phòng. Sau đó chia bột, để nghỉ 45-60 phút cho bột nở gấp đôi rồi cán dẹt, thêm topping tôm phô mai. Để bánh lên chảo lửa vừa áp chảo cho cháy cạnh rồi nướng 180 độ 15-20 phút.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Pizza xúc xích phô mai",
+    "description": "Chiếc pizza xúc xích phô mai nóng hổi này sẽ làm bạn mê mẩn ngay từ miếng đầu tiên. Lớp vỏ bánh nướng giòn rụm bên ngoài, mềm xốp bên trong, quyện cùng vị đậm đà của xúc xích và tương cà. Đặc biệt, lớp phô mai béo ngậy tan chảy kéo sợi, tạo nên một trải nghiệm vị giác khó quên, đảm bảo sẽ làm hài lòng cả những thực khách khó tính nhất.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột bánh mì",
+      "dầu oliu",
+      "men",
+      "đường",
+      "muối",
+      "xúc xích mini",
+      "phô mai",
+      "tương cà"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Giòn / Giòn rụm",
+      "Món Âu",
+      "Thức ăn nhanh"
+    ],
+    "raw_ingredients": [
+      "300 gr bột bánh mì",
+      "10 gr dầu oliu",
+      "200 gr nước",
+      "3 gr men",
+      "5 gr đường",
+      "6 gr muối",
+      "6 cái xúc xích mini",
+      "2 thìa phô mai",
+      "2 thìa tương cà"
+    ],
+    "ingredients": [
+      "bột bánh mì",
+      "dầu oliu",
+      "nước",
+      "men",
+      "đường",
+      "muối",
+      "xúc xích mini",
+      "phô mai",
+      "tương cà"
+    ],
+    "raw_instructions": "Trộn tất cả bột cho hỗn hợp tan đều để tủ lạnh qua đêm rồi hôm sau để bột nghỉ 30 phút ở nhiệt độ phòng. Sau đó chia bột, để nghỉ 45-60 phút cho bột nở gấp đôi rồi cán dẹt, thêm topping xúc xích phô mai. Để bánh lên chảo lửa vừa áp chảo cho cháy cạnh rồi nướng 180 độ 15-20 phút.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Mì Ý hải sản sốt cà chua",
+    "description": "Mì Ý hải sản sốt cà chua là một bản giao hưởng vị giác đầy màu sắc, với sợi mì dai mềm quyện trong lớp sốt cà chua đỏ tươi, đậm đà. Hương thơm nồng nàn từ hành phi và cà chua tươi xay nhuyễn hòa quyện cùng vị ngọt tự nhiên của tôm tươi, tạo nên một món ăn vừa quen thuộc vừa hấp dẫn. Mỗi đũa mì là sự kết hợp hoàn hảo giữa vị chua thanh, ngọt dịu và mặn mà, chắc chắn sẽ làm hài lòng cả những thực khách khó tính nhất, đặc biệt thích hợp cho những bữa ăn ấm cúng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cà chua loại vừa",
+      "tôm loại vừa",
+      "mỳ ý",
+      "hành khô cắt mỏng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Xào",
+      "Hải sản",
+      "Giàu đạm",
+      "Mềm",
+      "Món Âu"
+    ],
+    "raw_ingredients": [
+      "3 trái cà chua loại vừa",
+      "5-6 con tôm loại vừa (hoặc các loại hải sản khác)",
+      "Mỳ Ý (lấy lượng vừa ăn)",
+      "Gia vị (đường, bột nêm, tương cà , tiêu,...)",
+      "Hành khô cắt mỏng"
+    ],
+    "ingredients": [
+      "cà chua loại vừa",
+      "tôm loại vừa",
+      "mỳ ý",
+      "gia vị",
+      "hành khô cắt mỏng"
+    ],
+    "raw_instructions": "CÀ CHUA:Xẻ cà chua hình chữ thập. Luộc sơ trong 3 phút. Sau đó vớt ra, bóc vỏ và bỏ hạt.Cho vào máy xay, xay nhuyễn, mịn. Cho ra bát trộn với 1 ít dầu ôliu (hoặc dầu ăn) và 1 ít tỏi băm nếu thích.\nMỲ Ý:Đun nước sôi, thêm tí muối. Lấy lượng mỳ vừa đủ ăn cho vào nồi (không bẻ mỳ) luộc tầm 7-9p tùy thích. Các bạn có thể ăn thử mỳ xem độ mềm đúng ý hay chưa.Sau đó vớt mỳ ra (chừa lại nước luộc).\nTÔM:Lột đầu và vỏ. Xào sơ với 1 ít dầu.\nBắt chảo lên bếp, cho hành vào phi thơm. Sau đó đổ phần cà chua đã xay vào, thêm 1-2 muỗng canh nước luộc mỳ ban nãy. Nêm vừa ăn (nêm hơi ngọt vị sẽ ngon hơn), thêm 1 ít tương cà cho đậm vị. Cho tôm vào đảo trên lửa vừa để tôm thấm sốt. Rắc thêm ít tiêu nữa là okla\nBạn có thể cho mỳ vào chảo và đảo đều để mỳ thấm sốt hơn, sau đó cho ra đĩa và thưởng thức.- Hoặc cho mỳ ra đĩa và rưới sốt lên, trộn đều và thưởng thức!2 cách này đều ngon như nhau nhoóo 😻\nTadaaaa, và đây là thành quả. Chúc các bạn ngon miệng!! Ăn vào ngày mưa là hết sẩy 😋😋",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bò hầm rượu vang kiểu Pháp",
+    "description": "Món Bò hầm rượu vang kiểu Pháp này sẽ đưa bạn vào một trải nghiệm ẩm thực đầy tinh tế và ấm cúng. Từng miếng bò nạc được hầm mềm tan trong nước sốt rượu vang đỏ đậm đà, quyện cùng vị ngọt tự nhiên của cà rốt, hành tây và nấm mỡ béo ngậy. Hương thơm nồng nàn của lá nguyệt quế và tỏi phi sẽ lan tỏa khắp gian bếp, hứa hẹn một bữa ăn thịnh soạn, ấm lòng, hoàn hảo cho những buổi tối se lạnh.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bò nạc",
+      "cà rốt",
+      "bơ",
+      "tép tỏi",
+      "hành tây lớn hoặc hành tây mini",
+      "nấm mỡ",
+      "rượu vang đỏ",
+      "nước dùng bò hoặc viên súp bò cô đặc",
+      "lá nguyệt quế",
+      "muối",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Hầm / Ninh",
+      "Giàu đạm",
+      "Nóng hổi",
+      "Mềm",
+      "Món Âu"
+    ],
+    "raw_ingredients": [
+      "700 gr bò nạc (phần phi lê hoặc thăn lưng)",
+      "2 củ cà rốt",
+      "30 gr bơ",
+      "2 tép tỏi",
+      "2 củ hành tây lớn hoặc 10 củ hành tây mini (đúng là phải dùng hành mini nhưng không có thì bạn có thể dùng củ to thay thế, chẻ tư chẻ tám là được)",
+      "10 cây nấm mỡ",
+      "1 chén rượu vang đỏ",
+      "Nước dùng bò hoặc 1 viên súp bò cô đặc",
+      "3 lá nguyệt quế",
+      "Muối, tiêu"
+    ],
+    "ingredients": [
+      "bò nạc",
+      "cà rốt",
+      "bơ",
+      "tép tỏi",
+      "hành tây lớn hoặc hành tây mini",
+      "nấm mỡ",
+      "rượu vang đỏ",
+      "nước dùng bò hoặc viên súp bò cô đặc",
+      "lá nguyệt quế",
+      "muối",
+      "tiêu"
+    ],
+    "raw_instructions": "Cắt hành tây làm 8, tỏi đập dập bỏ lõi mầm. Cà rốt gọt vỏ cắt khúc\nĐun bơ trong nồi gang cho tan rồi phi tỏi thơm, tiếp đến cho hành tây và thịt ba rọi xông khói vào xào cho săn lại\nVớt chúng ra dĩa rồi cho bò vào xào với bơ cho săn, tiếp đến là cà rốt xào khoảng vài phút.\n🌱Cho nước bò hầm hoặc nước lọc với viên súp cô đặc vào nồi sâm sấp thịt.🌱 Khi chúng sôi lên cho dĩa hành và thịt nguội lúc nãy trở lại nồi.🌱 Thêm vài lá nguyệt quế khô hoặc tươi đều tốt.\n🌱 Pha 2 mc bột mì với ít nước cho tan rồi đổ vào nồi khuấy đều🌱 Thêm 1 chén rượu vang đỏ🌱 Đậy nắp nồi lại hầm lửa nhỏ trong 3h30 phút.\n⏱ Sau 3h30 phút cho nấm vào nấu thêm 30 phút nữa.⏱ Tôi đã bắt đầu nấu món này từ 4pm và tới 8h, nhà đã lên đèn mới hầm xong nồi bò.\nMón bò bourguignon đã sẵn sàng cùng khoai tây luộc (hấp, nướng)Riêng tôi chỉ thích ăn với cơm trắng, các bạn đừng cười vụ khẩu vị tây ta lẫn lộn :)) hãy dùng bò bourguignon theo cách của riêng bạn.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Tôm cuộn thịt xông khói nướng",
+    "description": "Món Tôm cuộn thịt xông khói nướng là sự kết hợp độc đáo của nhiều hương vị và kết cấu. Từng cuộn tôm bọc phô mai và bơ, được áo bột chiên giòn rụm bên ngoài, mang đến vị béo ngậy, mặn mà tan chảy trong miệng. Kèm theo đó là miếng thịt bò phi lê nướng thơm lừng, đậm đà, cùng chút thanh mát từ bông cải xanh, tạo nên một trải nghiệm ẩm thực đầy lôi cuốn, rất thích hợp để nhâm nhi cùng bạn bè.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "fromage cỡ ngón tay",
+      "nhánh bông cải xanh",
+      "tôm to",
+      "thịt bò phi lê của úc",
+      "bơ chín",
+      "lát thịt heo xông khói",
+      "trứng gà",
+      "ít bột chiên giòn",
+      "ít bột chiên xù",
+      "mayonnaise"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Nướng",
+      "Hải sản",
+      "Giàu đạm",
+      "Giòn / Giòn rụm"
+    ],
+    "raw_ingredients": [
+      "1 miếng fromage cỡ ngón tay",
+      "1 nhánh bông cải xanh",
+      "2 con tôm to",
+      "1 miếng thịt bò phi lê của Úc",
+      "1 trái bơ chín ( loại nhỏ)",
+      "1 lát thịt heo xông khói",
+      "1 trái trứng gà",
+      "1 ít bột chiên giòn , và ít bột chiên xù",
+      "2 muỗng canh mayonnaise"
+    ],
+    "ingredients": [
+      "fromage cỡ ngón tay",
+      "nhánh bông cải xanh",
+      "tôm to",
+      "thịt bò phi lê của úc",
+      "bơ chín",
+      "lát thịt heo xông khói",
+      "trứng gà",
+      "ít bột chiên giòn",
+      "ít bột chiên xù",
+      "mayonnaise"
+    ],
+    "raw_instructions": "Bắc nước sôi trụng bông cải xanh cho vừa chín tới rồi vớt ra cho vô tô nước lạnh có đá\nLuộc chín 2 con tôm và có thể thêm ít hột bắp mỹ\nTrộn tôm,bắp luộc với mayonnaise\nLột bỏ hột bơ và màng sau đó để fromage vô trong rồi cuộn thịt xông khói đem lăn qua trứng gà đánh nhuyễn,kế tiếp lăn qua bột chiên giòn,lăn tiếp qua bột xù rồi thả vô chảo dầu nóng chiên vàng vớt ra rổ sắt để ráo\nƯớp bò với chút muối, chút tiêu rồi đem vô lò nướng (có thể nướng trên chảo chuyên dụng)\nSau bày ra dĩa cho thên ít lát củ hành lên bò ngay khi còn nóng\nThêm 2 ly vang nữa là feeling...!!",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn khuya"
+    ],
+    "occasion_context": []
+  },
+  {
+    "name": "Salad Hy Lạp",
+    "description": "Salad Hy Lạp là món salad Địa Trung Hải tươi mát với cà chua mọng nước, dưa leo giòn, ớt chuông, hành tây và olive. Vị béo mặn đặc trưng của phô mai Feta kết hợp cùng dầu olive, chút chua dịu từ nước cốt chanh và hương oregano tạo nên hương vị thanh mát nhưng vẫn đậm nét béo thơm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "phô mai feta",
+      "cà chua",
+      "ớt chuông xanh",
+      "hành tây",
+      "dưa leo",
+      "quả olive đen",
+      "lá oregano khô",
+      "dầu olive",
+      "nước cốt chanh",
+      "muối",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Từ sữa / Phô mai",
+      "Giàu chất xơ",
+      "Món Âu",
+      "Thanh mát/Giải nhiệt"
+    ],
+    "raw_ingredients": [
+      "200 gr phô mai Feta",
+      "3 trái cà chua lớn chín mọng",
+      "1 trái ớt chuông xanh",
+      "1 củ hành tây",
+      "1/2 trái dưa leo",
+      "Vài quả olive đen hoặc xanh tuỳ thích",
+      "1 nhúm lá oregano khô (optional)",
+      "2 mc dầu olive",
+      "1/2 mc nước cốt chanh",
+      "1/4 mcf muối",
+      "1/4 mcf tiêu"
+    ],
+    "ingredients": [
+      "phô mai feta",
+      "cà chua",
+      "ớt chuông xanh",
+      "hành tây",
+      "dưa leo",
+      "quả olive đen",
+      "lá oregano khô",
+      "dầu olive",
+      "nước cốt chanh",
+      "muối",
+      "tiêu"
+    ],
+    "raw_instructions": "Các loại rau củ cắt con cờ, củ hành và ớt chuông cắt lát nhỏ hơn\nOlive đen đâm cho hơi bể hoặc để nguyên tuỳ thích\nPhô mai cắt khối cho lên trên dĩa salad, rắc đều các loại gia vị và thưởng thức.",
+    "taste_profile": [
+      "Thanh đạm",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Bánh mì bơ tỏi nướng giòn",
+    "description": "Món bánh mì bơ tỏi nướng giòn rụm này sẽ đánh thức mọi giác quan của bạn. Từng miếng bánh mì vàng ươm, thơm lừng mùi tỏi nướng quyện cùng vị bơ béo ngậy, mằn mặn tan chảy trong miệng. Đây là lựa chọn hoàn hảo cho bữa sáng nhanh gọn, món ăn vặt buổi chiều hay dùng kèm các loại súp nóng hổi, mang lại cảm giác ấm bụng và cực kỳ \"đưa miệng\".",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bánh mì sandwich",
+      "bơ mặn",
+      "parsley khô hoặc tươi",
+      "tỏi tươi"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Giàu tinh bột",
+      "Nhiều dầu mỡ / Calo cao",
+      "Giòn / Giòn rụm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "Bánh mì sandwich",
+      "Bơ mặn",
+      "Parsley khô hoặc tươi",
+      "Tỏi tươi"
+    ],
+    "ingredients": [
+      "bánh mì sandwich",
+      "bơ mặn",
+      "parsley khô hoặc tươi",
+      "tỏi tươi"
+    ],
+    "raw_instructions": "Tỏi mài nhuyễn hoặc đâm nhuyễn\nMột lát bơ mặn đun chảy 30s trong lò vi sóng, trộn với tỏi và parsley xắt nhuyễn, nếu dùng bơ lạt quý vị thêm tí muối nhé.\nBánh mì sandwich cắt vuông, tôi đã dùng cái khuôn trái tim để cắt cho vui 💕 phần bánh mì dư không phí vì tôi đã dùng nó nướng được một cái bánh trứng nhỏ làm món tráng miệng (gồm sữa, đường, bánh mì và trứng) 👌🏻\nQuét một lớp mỏng hỗn hợp bơ tỏi lên khay nướng, xếp bánh mì vào, quét bơ tỏi lên trên mặt trên\nNướng 15 phút lửa trên dưới 180°C hoặc đến khi bánh mì vàng giòn như ý muốn. Nướng xong đem ra ngoài để nguội càng giòn hơn. Dùng với súp rau củ các loại.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn sáng",
+      "Ăn trưa"
+    ],
+    "occasion_context": [
+      "Ăn vặt",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Salad Nga",
+    "description": "Salad Nga mang đến sự kết hợp hài hòa giữa vị bùi bùi của khoai tây, ngọt thanh của cà rốt và bắp, cùng chút giòn nhẹ từ táo. Điểm nhấn là những miếng xúc xích đậm đà quyện trong lớp sốt mayonnaise béo ngậy, kem tươi sánh mịn. Món ăn thanh mát này không chỉ kích thích vị giác mà còn rất dễ ăn, thích hợp cho những bữa tiệc nhẹ hay đổi vị cho bữa cơm gia đình.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "khoai tây vừa",
+      "cà rốt nhỏ",
+      "táo",
+      "xúc xích",
+      "bắp mỹ",
+      "nắm rau mùi",
+      "kem tươi whipping cream",
+      "mayonnaise",
+      "nhúm muối",
+      "đường"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Từ sữa / Phô mai",
+      "Nhiều dầu mỡ / Calo cao",
+      "Thanh mát/Giải nhiệt",
+      "Món lạnh"
+    ],
+    "raw_ingredients": [
+      "1 củ khoai tây vừa",
+      "1 củ cà rốt nhỏ",
+      "1 quả táo",
+      "3 cây xúc xích (hoặc dùng thịt nguội jambon )",
+      "1 trái bắp mỹ",
+      "Sốt trộn",
+      "1 nắm rau mùi",
+      "2 tbsp kem tươi whipping cream (không có bỏ thay bằng 1tbsp sữa tươi)",
+      "5 tbsp mayonnaise",
+      "1 nhúm muối",
+      "1 tsp đường (không thích ăn vị ngọt nhẹ thì bỏ qua )"
+    ],
+    "ingredients": [
+      "khoai tây vừa",
+      "cà rốt nhỏ",
+      "táo",
+      "xúc xích",
+      "bắp mỹ",
+      "sốt trộn",
+      "nắm rau mùi",
+      "kem tươi whipping cream",
+      "mayonnaise",
+      "nhúm muối",
+      "đường"
+    ],
+    "raw_instructions": "Khoai tây, cà rốt thái hạt lựu. Ngô rửa sạch.\nCho khoai, cà rốt và ngô vào luộc trong nước sôi khoảng 4-5 phút cho chín mềm rồi vớt ra để ráo nước. Ngô chín thì vớt ra tách hạt.\nTáo gọt vỏ, thái hạt lựu\nXúc xích luộc chín, thái hạt lựu\nCho tất cả nguyên liệu đã nguội vào tô.\nRau mùi nhặt lá rồi rửa sạch, băm nhỏ.\nPha nước sốt: Rau mùi băm nhỏ, mayo, kem tươi (hoặc sữa tươi), muối, đường. Trộn đều tất cả nguyên liệu.\nTrộn đều nhẹ tay để khoai không bị nát.\nTrình bày: Cho vào khuôn ring tròn, bọc lại cất tủ mát 30p trước khi dùng.\nKhi ăn nhấc khuôn ra, trang trí thêm rau mùi hoặc trứng luộc bên trên rồi thưởng thức.",
+    "taste_profile": [
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Gan ngỗng áp chảo",
+    "description": "Món Gan ngỗng áp chảo là sự kết hợp tinh tế giữa vị béo ngậy tan chảy của gan ngỗng được áp chảo vàng ruộm cùng lớp vỏ giòn nhẹ. Nước sốt cherry chua ngọt, sánh mịn quyện cùng hương thơm thoang thoảng của hương thảo, tạo nên một bản giao hưởng vị giác đầy lôi cuốn. Thưởng thức cùng bánh mì nướng giòn và táo chiên thơm lừng, đây chắc chắn là món khai vị đẳng cấp, đánh thức mọi giác quan và để lại dư vị khó quên.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "gan ngỗng",
+      "táo đỏ",
+      "lát cam vàng",
+      "cherry",
+      "rau mầm",
+      "ổ bánh mì đặc ruột",
+      "nhánh hương thảo",
+      "muối",
+      "tiêu",
+      "đường",
+      "hạt nêm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Nội tạng",
+      "Giàu đạm",
+      "Nhiều dầu mỡ / Calo cao",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "6 miếng gan ngỗng",
+      "2 trái táo đỏ",
+      "6 lát cam vàng",
+      "180 gr cherry",
+      "100 gr rau mầm",
+      "1 ổ bánh mì đặc ruột",
+      "5 nhánh hương thảo (Rosemarry)",
+      "Muối",
+      "tiêu",
+      "đường",
+      "hạt nêm"
+    ],
+    "ingredients": [
+      "gan ngỗng",
+      "táo đỏ",
+      "lát cam vàng",
+      "cherry",
+      "rau mầm",
+      "ổ bánh mì đặc ruột",
+      "nhánh hương thảo",
+      "muối",
+      "tiêu",
+      "đường",
+      "hạt nêm"
+    ],
+    "raw_instructions": "Gan ngỗng rửa sơ qua nước vo gạo hoặc nước lạnh. để thật ráo. Ướp với chút muối và tiêu.\nTáo rửa sạch, cắt lát vừa ăn. Rau mầm rửa sạch để ráo nước. Bánh mì nướng giòn và cắt lát vừa ăn.\nCherry bỏ hột lấy phàn thịt rồi đem xay nhuyễn.\nCho 1 muỗng Café dầu ăn vào chảo. Cho 2 nhánh hương thảo vào rồi cho gan ngỗng lên áp chảo cho vàng 2 mặt. Khi chiên áp chảo cho thêm vài tép tỏi vào cho thơm. Gan ngỗng chín thì gắp ra để ráo bớt dầu.\nSẵn chảo thì đem táo chiên cho táo dậy mùi thơm rồi gắp ra để ráo dầu.\nRót bớt mỡ ra rồi cho cherry đã xay lúc này vào làm sốt. Nấu sôi lên và nêm gia vị vừa ăn. Nấu cho tới lúc thấy sốt sánh sệt lại là được.\nLót rau cải mầm phía dưới sau đó cho lát bánh mì lên trên. Cho miếng gan ngỗng lên. Xếp táo và cam xung quanh. Rưới ít sốt lên và trang trí với nhánh hương thảo.\nKhi ăn thì uống kèm rượu vang đỏ. Món này dùng làm món khai vị trong bữa tiệc",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn tối"
+    ],
+    "occasion_context": []
+  },
+  {
+    "name": "Bánh mì nướng kiểu Pháp",
+    "description": "Món bánh mì nướng kiểu Pháp là lựa chọn hoàn hảo cho bữa sáng hay bữa xế nhẹ nhàng. Những lát bánh mì mềm mại, thấm đẫm hỗn hợp trứng sữa béo ngậy, được chiên vàng ruộm thơm lừng. Khi thưởng thức, vị ngọt dịu của mật ong hòa quyện cùng chút chua thanh của dâu tây tươi và vị béo của cream cheese sẽ đánh thức mọi giác quan, mang lại cảm giác ấm áp và dễ chịu.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "lát sandwich",
+      "vài trái dâu tây",
+      "sữa tươi",
+      "trứng",
+      "mcf sữa đặc",
+      "mật ong",
+      "cream cheese"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Từ sữa / Phô mai",
+      "Giòn / Giòn rụm",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "2 lát sandwich",
+      "Vài trái dâu tây",
+      "Làm french toast",
+      "100 ml sữa tươi",
+      "1 quả trứng",
+      "1 mcf sữa đặc (optional)",
+      "Làm sandwich phô mai dâu",
+      "Mật ong",
+      "Cream cheese"
+    ],
+    "ingredients": [
+      "lát sandwich",
+      "vài trái dâu tây",
+      "làm french toast",
+      "sữa tươi",
+      "trứng",
+      "mcf sữa đặc",
+      "làm sandwich phô mai dâu",
+      "mật ong",
+      "cream cheese"
+    ],
+    "raw_instructions": "Làm French toast: đập trứng ra dĩa, khuấy tan, cho sữa tươi và chút xíu sữa đặc có đường (hoặc đường) hoặc không cần cũng được, thêm xíu bột quế nếu có cho thơm. Khuấy tan rồi cho bánh mì vào ngâm, trở đều 2 mặt cho thấm.\nCùng lúc đó bắt chảo lên, cho cục bơ nhỏ vào, đợi bơ tan chảy thì cho bánh mì đã nhúng trứng sữa vào chiên cho vàng ráo 2 mặt rồi dọn ra dĩa. Cắt trái cây lên rồi rưới mật ong/maple syrup vào ăn thôi.\nLàm bánh mì phô mai dâu tây còn dễ hơn: cho bánh mì vào lò nướng nhanh trong 3 phút. Lấy ra phết cream cheese lên, rồi để dâu tây cắt lát lên. Rưới thêm mật ong nếu thích. Vậy là xong trong 1 nốt nhạc 🤘🎶😋",
+    "taste_profile": [
+      "Ngọt",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn sáng"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Thịt xông khói cuộn măng tây nướng",
+    "description": "Món Thịt xông khói cuộn măng tây nướng là sự kết hợp tinh tế giữa vị đậm đà, béo ngậy của thịt xông khói và gà nướng, cùng chút thanh mát, giòn nhẹ của măng tây. Món ăn được nướng thơm lừng, dậy mùi gia vị thảo mộc, mang đến trải nghiệm ẩm thực vừa ngon miệng, vừa bổ dưỡng. Thêm chút bơ chín mềm mại, món ăn này chắc chắn sẽ làm hài lòng cả những thực khách khó tính nhất, rất thích hợp cho bữa trưa hoặc tối.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "măng tây",
+      "thịt hun khói",
+      "bơ chín",
+      "góc tư gà vàng của pháp",
+      "gia vị: tiêu",
+      "muối",
+      "lá thyme khô"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "150 gr măng tây",
+      "Thịt hun khói",
+      "1/2 trái bơ chín",
+      "2 góc tư gà vàng của Pháp",
+      "Gia vị: tiêu, muối, lá thyme khô"
+    ],
+    "ingredients": [
+      "măng tây",
+      "thịt hun khói",
+      "bơ chín",
+      "góc tư gà vàng của pháp",
+      "gia vị: tiêu",
+      "muối",
+      "lá thyme khô"
+    ],
+    "raw_instructions": "Gà rửa sạch, ướp xíu tiêu, muối, lá thyme khô, nướng trong NCKD 20’ 150 độ nhé\nMăng tây rửa sạch, cắt khúc như hình.Thịt hun khói cắt nhỏ, cuộn vào với măng tây. Lấy tăm định hình. Lúc áp chảo (nướng) xong có thể gỡ ra\nCắt bơ, và trang trí lên đĩa",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bánh Mousse socola",
+    "description": "Món mousse socola này sẽ đưa bạn vào một thế giới vị giác ngọt ngào và béo ngậy. Từng muỗng kem mềm mịn tan chảy trong miệng, hòa quyện cùng vị đắng nhẹ của socola và chút béo của kem tươi, tạo nên một trải nghiệm ẩm thực đầy lôi cuốn. Đây là lựa chọn hoàn hảo để kết thúc bữa ăn hoặc làm món tráng miệng giải tỏa căng thẳng.",
+    "core_ingredient_indices": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "sô cô la",
+      "sữa tươi",
+      "kem tươi",
+      "đường",
+      "gelatin bột",
+      "lòng đỏ trứng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Từ sữa / Phô mai",
+      "Nhiều dầu mỡ / Calo cao",
+      "Mềm",
+      "Món Âu"
+    ],
+    "raw_ingredients": [
+      "160 gr sô cô la",
+      "80 ml sữa tươi",
+      "300 ml kem tươi",
+      "10 gr đường",
+      "10 gr gelatin bột",
+      "2 lòng đỏ trứng"
+    ],
+    "ingredients": [
+      "sô cô la",
+      "sữa tươi",
+      "kem tươi",
+      "đường",
+      "gelatin bột",
+      "lòng đỏ trứng"
+    ],
+    "raw_instructions": "160gr sicula + 30ml sữa tươi cho vào lò vi sóng quay chảy. Khúc này phải canh, quay 30s, 1 phút lấy ra trộn đều rồi quay tiếp tránh bị cháy. Cách an toàn là đun cách thuỷ. Để nguội.\n50ml sữa tươi + 50ml kem tươi đun ấm rồi đổ vào 2 lòng đỏ trứng đánh đều. Lọc hỗn hợp trứng qua rây rồi trộn vào sicula ở trên. Sicula cần nguội bớt tránh bị chín trứng.\n10gr gelatin bột ngâm nở với 50ml nước rồi đun cách thuỷ cho tan, đổ tiếp vào hỗn hợp trứng sicula ở trên, khuấy hoà quyện\nĐánh bông mềm 250ml kem tươi, có thể thêm đường tuỳ ý. Trộn kem với hỗn hợp sicula ở trên là xong. Chia thành cốc nhỏ, để tủ lạnh khoảng 2 tiếng là dùng được. Khi ăn thêm kem đánh bông, trái cây tuỳ thích",
+    "taste_profile": [
+      "Ngọt",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Mồi nhậu",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "name": "Bánh táo nướng",
+    "description": "Món bánh táo nướng này sẽ đánh thức mọi giác quan của bạn ngay từ cái nhìn đầu tiên với lớp vỏ ngàn lớp vàng óng, giòn rụm. Khi cắn vào, vị ngọt thanh của táo hòa quyện cùng chút chua nhẹ từ mứt mơ sẽ lan tỏa, cùng với hương thơm ấm áp của bánh nướng. Hạt thông và hạt chia điểm xuyết thêm độ bùi bùi, tạo nên một trải nghiệm ẩm thực vừa quen thuộc vừa đầy tinh tế, hoàn hảo cho một buổi chiều thư thái hay làm món tráng miệng ấm cúng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đế bánh ngàn lớp",
+      "táo",
+      "mứt mơ",
+      "hạt thông",
+      "hạt chia",
+      "lòng đỏ trứng gà"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Bánh ngọt",
+      "Nhiều dầu mỡ / Calo cao",
+      "Giòn / Giòn rụm"
+    ],
+    "raw_ingredients": [
+      "1 chiếc đế bánh ngàn lớp",
+      "6-7 trái táo",
+      "1/2 cup mứt mơ",
+      "1/2 cup hạt thông",
+      "1 mc hạt chia",
+      "1 chiếc lòng đỏ trứng gà"
+    ],
+    "ingredients": [
+      "đế bánh ngàn lớp",
+      "táo",
+      "mứt mơ",
+      "hạt thông",
+      "hạt chia",
+      "lòng đỏ trứng gà"
+    ],
+    "raw_instructions": "Quét một lớp mứt mơ lên đế bánh rồi xếp táo cắt lát lên (mật nho còn một ít nên tôi dùng cho hết cùng mứt mơ, bạn có thể thay hoàn toàn bằng mứt mơ cho bước này)\nXếp táo lên hết quét thêm 1 lớp mứt mơ lên trên, gấp viền bánh lại quét lòng đỏ trứng lên viền, rắc hạt thông và hạt chia\nNướng 180°C 25-30 phút hoặc đến khi rìa bánh ngả màu vàng óng\nThưởng thức lúc nóng ấm là tuyệt vời nhất",
+    "taste_profile": [
+      "Ngọt"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Mồi nhậu",
+      "Tráng miệng"
+    ]
+  },
+  {
+    "name": "Bánh Brownie hạt óc chó",
+    "description": "Bánh Brownie hạt óc chó là món tráng miệng ngọt ngào, béo ngậy, tan chảy trong miệng với hương vị socola đậm đà. Từng miếng bánh mềm ẩm, xen lẫn chút giòn bùi của các loại hạt óc chó, hồ đào và hạt điều, tạo nên một trải nghiệm vị giác khó quên. Món bánh này chắc chắn sẽ làm hài lòng những tín đồ hảo ngọt và mang lại cảm giác ấm áp, thư thái.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bơ lạt",
+      "đường cát",
+      "socola đen",
+      "trứng gà",
+      "m cafe muối",
+      "bột mì",
+      "bột cacao",
+      "các loại hạt: quả óc chó",
+      "hạt hồ đào",
+      "hạt điều"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Bánh ngọt",
+      "Nhiều dầu mỡ / Calo cao",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "120 gr bơ lạt",
+      "50 gr đường cát",
+      "120 gr socola đen",
+      "2 quả trứng gà",
+      "1/4 m cafe muối",
+      "70 gr bột mì (số 8, cake flour )",
+      "25 gr bột cacao",
+      "Các loại hạt: quả óc chó ( walnut ), hạt hồ đào (pecan), hạt điều",
+      "Khuôn muffin vuông hoặc tròn"
+    ],
+    "ingredients": [
+      "bơ lạt",
+      "đường cát",
+      "socola đen",
+      "trứng gà",
+      "m cafe muối",
+      "bột mì",
+      "bột cacao",
+      "các loại hạt: quả óc chó",
+      "hạt hồ đào",
+      "hạt điều",
+      "khuôn muffin vuông hoặc tròn"
+    ],
+    "raw_instructions": "Nguyên liệu\nCho bơ vào tô rồi đặt lên nồi nước sôi chưng cách thủy cho bơ tan chảy, sau đó cho đường + muối vào & dùng phới lồng quậy cho đường tan, lúc này tô bơ dẻo sệt\nCũng cho sôcôla vào tô khác rồi chưng cách thủy cho sôcôla chảy ra, sau đó cho vào tô hỗn hợp bơ-đường quậy cho hỗn hợp quyện đều, xong cho từng quả trứng gà vào quậy đều, tiếp đến bỏ bột mì + bột cacao vào rây & rây qua tô hỗn hợp đó. Dùng phớt dẹt trộn đều thành tô bột bánh sánh mịn\nCho từng vá nhỏ bột bánh vào khuôn rồi cho hạt lên nhấn nhẹ hạt lõm xuống chút. Xong cho vào lò nướng ở nhiệt 180*C trong 17 đến 20 phút (làm nóng lò trước 10 phút)\nBánh chín, để bánh hơi nguội (5'), rồi lấy bánh ra để lên rack cho nguội & thoát hơi\nVới nguyên liệu trên làm được 9 cái bánh",
+    "taste_profile": [
+      "Ngọt",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Tráng miệng",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Bánh Lava socola chảy",
+    "description": "Chiếc bánh lava socola chảy này sẽ làm tan chảy mọi giác quan của bạn ngay từ miếng đầu tiên. Lớp vỏ bánh mềm mịn, thơm lừng mùi socola và yến mạch, ẩn chứa bên trong là dòng socola đen nóng hổi, sánh mịn tuôn trào đầy quyến rũ. Vị ngọt nhẹ nhàng từ đường ăn kiêng kết hợp cùng vị béo ngậy của socola tạo nên một bản giao hưởng vị giác hoàn hảo, là món tráng miệng tuyệt vời cho những ai yêu thích sự ngọt ngào và ấm áp.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột yến mạch / bột nguyên cám",
+      "trứng gà",
+      "sữa tươi không đường",
+      "bột nở/ baking powder",
+      "chocolate đen nấu chảy/ bột cacao",
+      "chooclate đen",
+      "đường ăn kiêng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Bánh ngọt",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "3 thìa ăn bột yến mạch / bột nguyên cám",
+      "1 quả trứng gà",
+      "50 ml sữa tươi không đường",
+      "1/2 thìa cafe bột nở/ baking powder",
+      "2 thìa ăn chocolate đen nấu chảy/ bột cacao",
+      "1-2 viên chooclate đen",
+      "2 thìa cafe đường ăn kiêng"
+    ],
+    "ingredients": [
+      "bột yến mạch / bột nguyên cám",
+      "trứng gà",
+      "sữa tươi không đường",
+      "bột nở/ baking powder",
+      "chocolate đen nấu chảy/ bột cacao",
+      "chooclate đen",
+      "đường ăn kiêng"
+    ],
+    "raw_instructions": "Ta cần 1 chiếc cốc sứ. Đập 1 quả trứng gà vào cốc rồi cho bột yến mạch, bột nở, socola tan chảy, sữa tươi không đường và đường ăn kiêng. Khuấy nhanh tay bằng thìa trong 1 phút.\nĐể bánh có socola tan chảy, mình cho vào giữa hỗn hợp 1 -2 viên socola đen.\nCho hỗn hợp bánh vào nồi chiên không dầu trong 180°C và 15 phút. Hoặc lò vi sóng 200°C với 5-10 phút nha.*Note 1: dùng tăm châm vào bánh thấy khô là được.*Note 2: nướng xong để bánh trong lò tầm 3 phút mới lấy ra nhé. Tránh bị xẹp bánh.\nThành quả là ta có Bánh lave chocolate tan chảy siêu ngon và hấp dẫn.Note: cho nhiều viên socola xíu nó sẽ chảy nhiều hơn.Mình có thể ăn trong cốc hoặc cho ra đĩa để ăn cũng được nhe.Chúc các bạn thành công!",
+    "taste_profile": [
+      "Ngọt",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Tráng miệng",
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Pizza 4 loại phô mai",
+    "description": "Chiếc pizza 4 loại phô mai này sẽ làm hài lòng mọi tín đồ hảo ngọt và béo ngậy! Từng miếng phô mai tan chảy, thơm lừng trên lớp đế giòn rụm, quyện cùng sốt kem béo ngậy, tạo nên một bản giao hưởng vị giác khó cưỡng. Món ăn này chắc chắn sẽ khiến bạn no bụng và thỏa mãn, đặc biệt khi thưởng thức cùng chút mật ong để cân bằng vị.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "phần đế seafood pizza",
+      "sốt kem seafood pizza",
+      "phô mai"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Nhiều dầu mỡ / Calo cao",
+      "Món Âu"
+    ],
+    "raw_ingredients": [
+      "Phần đế Seafood pizza",
+      "Sốt kem Seafood pizza",
+      "4 loại phomai (tuỳ ý)"
+    ],
+    "ingredients": [
+      "phần đế seafood pizza",
+      "sốt kem seafood pizza",
+      "phô mai"
+    ],
+    "raw_instructions": "Phomai ở đây mình dùng mozzarella, brie, gouda và emmental. Mọi người nên thay gouda bằng blue cheese vì gouda nó không chảy ra nhiều. Mozzarella nên dùng loại fresh sẽ ngon hơn loại processed.Bật lò nhiệt cao nhất trc 30p (khoảng 240 độ)\nDàn đế bánh thật mỏng, cho sốt kem lên trên, xong cho 4 loại phomai xếp xen kẽ lên, rồi nướng đến khi viền bánh hơi xém là được. Ăn kèm mật ong là y chanh 4 cheese pizza của 4P luôn ý.\nLưu ý: nên dùng khay đen để đế bánh chín nhanh nha mọi người vì để xa thanh nhiệt dưới lắm",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bò cuộn phô mai nướng",
+    "description": "Món Bò cuộn phô mai nướng này chắc chắn sẽ làm hài lòng những tín đồ mê thịt bò và phô mai. Từng miếng bò mềm mọng được tẩm ướp đậm đà, cuộn chặt lấy lớp phô mai béo ngậy tan chảy, nướng lên thơm lừng. Ăn kèm với pasta mềm mại và sốt cà chua chua ngọt, món ăn này không chỉ cung cấp đầy đủ dinh dưỡng mà còn mang đến trải nghiệm vị giác bùng nổ, đảm bảo no bụng và cực kỳ đưa miệng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "nấm đùi gà",
+      "súp lơ",
+      "mỳ pasta",
+      "bò",
+      "phô mai",
+      "cà chua",
+      "và các gia vị"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Giàu tinh bột",
+      "Nhiều dầu mỡ / Calo cao"
+    ],
+    "raw_ingredients": [
+      "Nấm đùi gà",
+      "súp lơ",
+      "mỳ pasta",
+      "bò",
+      "phô mai",
+      "cà chua",
+      "và các gia vị"
+    ],
+    "ingredients": [
+      "nấm đùi gà",
+      "súp lơ",
+      "mỳ pasta",
+      "bò",
+      "phô mai",
+      "cà chua",
+      "và các gia vị"
+    ],
+    "raw_instructions": "Tẩm gia vị bò và cuốn với phô mai sau đó nướng lên\nRửa sạch rau củ, phi hành tỏi, cho nấm và súp lơ vào xào sơ qua, đổ ra tô. Luộc pasta chín rồi cho ra tô\nCà chua thái hạt lựu cho vào xào, cho tương cà hoặc ketchup vào. Đợi cà chua nát hết cho tất cả những thứ đã làm vào đảo\nĂn ăn ăn ăn",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Salad bơ tôm áp chảo",
+    "description": "Món salad bơ tôm áp chảo kết hợp vị ngọt tự nhiên của tôm tươi được áp chảo vừa tới, độ béo mềm của bơ, chút chua dịu từ cốt chanh và vị thanh mát của xà lách, cà chua bi. Mỗi miếng ăn tươi mới, giàu đạm và chất xơ, đồng thời có độ béo rõ từ bơ và dầu olive trong phần sốt.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "xà lách",
+      "bơ",
+      "cà chua bi",
+      "tôm tươi",
+      "cốt nước chanh",
+      "đường",
+      "ít dầu olive",
+      "ít tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Hải sản",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Thanh mát/Giải nhiệt"
+    ],
+    "raw_ingredients": [
+      "2 cây xà lách",
+      "1/2 trái bơ",
+      "10-12 trái cà chua bi",
+      "300 g tôm tươi",
+      "1,5 muỗng cốt nước chanh",
+      "1,5 muỗng đường",
+      "3 muỗng nước lọc",
+      "1 ít dầu olive",
+      "1 ít tiêu"
+    ],
+    "ingredients": [
+      "xà lách",
+      "bơ",
+      "cà chua bi",
+      "tôm tươi",
+      "cốt nước chanh",
+      "đường",
+      "nước lọc",
+      "ít dầu olive",
+      "ít tiêu"
+    ],
+    "raw_instructions": "Xà lách, cà chua bi cherry đỏ, cà chua bi chocolate. Ngâm nước muối pha loãng 15 phút rồi rửa lại cho sạch sẽ để ráo. Tôm lột sạch vỏ, ướp với một ít muối tỏi. Rồi làm nóng chảo cho ít dầu ăn, cho tôm vào áp chảo cho chín.\nPha hỗn hợp sốt: chanh, muối, đường, nước, tiêu, dầu olive cho vào chén trộn đều. Xà lách cắt miếng vừa ăn. Xếp tấc cả lên dĩa.\nXếp tấc cả lên dĩa, chan đều nước sốt chanh lên dĩa salad. Vậy là thưởng thức được rồi nha!\nYummy 💖😋",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Giải rượu",
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Súp hải sản kiểu Ý",
+    "description": "Súp hải sản kiểu Ý này là sự kết hợp tinh tế giữa vị ngọt tự nhiên từ tôm thẻ, mực baby cùng các loại rau củ tươi ngon như dền, cà rốt, khoai tây và bông cải trắng. Món súp nóng hổi, đậm đà hương vị biển cả và rau củ, được nêm nếm vừa vặn với nước mắm, hạt nêm, mang đến cảm giác ấm bụng và dễ chịu. Đây là lựa chọn hoàn hảo cho một bữa sáng bổ dưỡng, giúp bạn khởi đầu ngày mới tràn đầy năng lượng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "preprocessing_ingredient_indices": [
+      10
+    ],
+    "core_ingredients": [
+      "dền",
+      "cà rốt",
+      "khoai tây",
+      "bông cải trắng",
+      "hành tây",
+      "tôm thẻ",
+      "mực baby",
+      "hành lá",
+      "nước mắm",
+      "hạt nêm",
+      "muối",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [
+      "muối"
+    ],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Súp",
+      "Hải sản",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Nóng hổi",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "1 củ dền",
+      "1/2 củ cà rốt",
+      "1 củ khoai tây",
+      "100 gram bông cải trắng",
+      "1/2 củ hành tây",
+      "100 gram tôm thẻ",
+      "100 gram mực baby",
+      "Hành lá , nước mắm, hạt nêm, muối, tiêu"
+    ],
+    "ingredients": [
+      "dền",
+      "cà rốt",
+      "khoai tây",
+      "bông cải trắng",
+      "hành tây",
+      "tôm thẻ",
+      "mực baby",
+      "hành lá",
+      "nước mắm",
+      "hạt nêm",
+      "muối",
+      "tiêu"
+    ],
+    "raw_instructions": "Luộc nuôi với 500 ml nước. Bỏ 1 muỗng muối vào. Đậy nắm, đợi nui chín, mềm bằng cách... ăn thử. Cho nui vào rổ sạch, xả lại với nước, để ráo.\nRửa sạch, rồi thái nhỏ rau củ. Hành lá, ngò rí thái nhỏ. (Nếu nấu cho các bé nhỏ thì nên thái nhỏ rau củ các bé sẽ dễ ăn hơn).\nBật bếp đợi chảo nóng. Cho 1 muỗng canh dầu ăn, cho đầu hành lá đập dập và hành tây vào xào, sau đó cho hải sản vào xào đến khi săn lại.\nCho hải sản đã xào vào cùng với rau củ và 700 ml nước dùng. Đậy nắp, lửa riu cho rau củ chín.\nKiểm tra rau củ chín bằng cách xuyên đũa. Khi rau củ chín, nêm 2 muỗng canh nước mắm, 1 muỗng canh hạt nêm, 1/2 muỗng canh muối vào nồi nước dùng. Nêm cho vừa ăn.\nCho nui, nước soup vào tô. Cho thêm hành ngò và tiêu lên mặt. Mời cả nhà ăn sáng !",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Bánh mì kẹp xúc xích",
+    "description": "Món bánh mì kẹp xúc xích này mang đến sự kết hợp hoàn hảo giữa vỏ bánh mềm mại, thơm lừng mùi bơ và sữa, cùng nhân xúc xích đậm đà, hấp dẫn. Khi cắn vào, bạn sẽ cảm nhận được độ dai nhẹ của bánh, vị béo ngậy của xúc xích hòa quyện cùng chút chua cay từ tương cà/ớt và sốt magoner, tạo nên một trải nghiệm ẩm thực đầy lôi cuốn và tiện lợi.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột mì",
+      "sữa tươi không đường",
+      "trứng gà",
+      "lòng đỏ trứng gà",
+      "bơ lạt",
+      "men nở",
+      "đường",
+      "sữa béo",
+      "xíu muối",
+      "xúc xích",
+      "tương cà hay tương ớt",
+      "sốt magoner"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Giàu tinh bột",
+      "Giòn / Giòn rụm",
+      "Mềm",
+      "Ẩm thực đường phố"
+    ],
+    "raw_ingredients": [
+      "200 g bột mì",
+      "80 g sữa tươi không đường",
+      "1 quả trứng gà",
+      "1 lòng đỏ trứng gà",
+      "20 g bơ Lạt",
+      "4 g men nở",
+      "15 g đường",
+      "15 g sữa béo",
+      "Xíu muối",
+      "Xúc xích",
+      "Tương cà hay tương ớt",
+      "Sốt magoner"
+    ],
+    "ingredients": [
+      "bột mì",
+      "sữa tươi không đường",
+      "trứng gà",
+      "lòng đỏ trứng gà",
+      "bơ lạt",
+      "men nở",
+      "đường",
+      "sữa béo",
+      "xíu muối",
+      "xúc xích",
+      "tương cà hay tương ớt",
+      "sốt magoner"
+    ],
+    "raw_instructions": "Cho sữa tươi, sữa bột, sữa béo, đường trứng gà và men trộn đều Tiếp theo cho bột mì và muối vào trộn đềuĐể bột nghỉ từ 40 phút đến 1 giờ\nĐau khi nghỉ lấy bột ra ép xẹp rồi chia thành khoảng 6 phầnCán mỏng khoảng 2 hay 3 mm, đặt nữa cây xúc xích ở giữa gói bột lại như hình\nNhớ phết hỗn hợp trứng sữa và rắc mè lên trước khi nướng nhéNướng 200 độ trong khoảng 10 đến 15 phút tuỳ lò\nNướng xong thêm sốt tuỳ ý là thưởng thức thôi",
+    "taste_profile": [
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Cá diêu hồng nướng giấy bạc",
+    "description": "Món cá điêu hồng nướng xí muội này sẽ đánh thức mọi giác quan của bạn. Từng thớ cá mềm ngọt, thấm đẫm vị đậm đà của sốt xí muội chua ngọt hài hòa, quyện cùng chút cay nồng từ ớt và sa tế, tạo nên một bản giao hưởng vị giác khó quên. Mùi thơm lừng của cá nướng lan tỏa, hứa hẹn một bữa ăn ấm cúng, đưa cơm và đầy đủ dinh dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cá điêu hồng",
+      "hành tây",
+      "hành lá",
+      "xí muội",
+      "sốt xí muội",
+      "tương xí muội",
+      "dầu hào",
+      "tương ớt",
+      "sa tế",
+      "đường",
+      "bột ngọt",
+      "tiêu",
+      "dầu điều",
+      "ớt băm",
+      "tỏi",
+      "hành tím"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Hải sản",
+      "Giàu đạm",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "1 con cá điêu hồng",
+      "200 g hành tây cắt múi cau",
+      "50 g hành lá cắt khúc",
+      "6 trái xí muội băm",
+      "30 g sốt xí muội (sốt mận lum sốt)",
+      "30 g tương xí muội",
+      "15 g dầu hào",
+      "15 g tương ớt",
+      "15 g sa tế",
+      "30 g đường",
+      "5 g bột ngọt",
+      "5 g Tiêu",
+      "30 g dầu điều",
+      "2 trái ớt băm",
+      "10 g tỏi",
+      "10 g Hành tím",
+      "50 g khoai tây chiên vàng",
+      "Dầu giấm : 100g giấm+ 100g đường +100g đường+1/2 cafe muối +50g dầu ăn,2g tiêu nấu để nguội"
+    ],
+    "ingredients": [
+      "cá điêu hồng",
+      "hành tây",
+      "hành lá",
+      "xí muội",
+      "sốt xí muội",
+      "tương xí muội",
+      "dầu hào",
+      "tương ớt",
+      "sa tế",
+      "đường",
+      "bột ngọt",
+      "tiêu",
+      "dầu điều",
+      "ớt băm",
+      "tỏi",
+      "hành tím",
+      "khoai tây chiên vàng",
+      "dầu giấm : giấm",
+      "đường",
+      "đường",
+      "muối",
+      "dầu ăn",
+      "tiêu nấu để nguội"
+    ],
+    "raw_instructions": "Cá rửa sạch. Trộn các gia vị thành một hỗn hợp. Ướp tha lên cá để tham 2 giờ.\nTrộn hành tây với hành lá vào sốt. Phết dầu lên mặt bóng giấy bạc rồi cho sốt ướp cá vào đặt cá lên rồi gói kín lại. Nướng cá chín là giấy bạc phòng lên. Nướng 180 đến 200 độ trong vòng 20 phút.\nĂn kèm rau trộn dầu giấm và khoai lang tây chiên",
+    "taste_profile": [
+      "Đậm đà",
+      "Cay"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Cá hồi nướng măng tây",
+    "description": "Món cá hồi nướng măng tây mang đến sự kết hợp hoàn hảo giữa vị béo ngậy đặc trưng của cá hồi và độ giòn ngọt thanh mát của măng tây. Từng thớ cá hồi mềm tan, thấm đượm gia vị, quyện cùng hương thơm nồng của tỏi phi và măng tây xào nhanh tay, tạo nên một bữa ăn vừa ngon miệng, vừa bổ dưỡng. Đây chắc chắn là lựa chọn tuyệt vời cho những ai yêu thích ẩm thực healthy mà vẫn muốn thưởng thức hương vị đậm đà, khó quên.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cá hồi phi lê",
+      "măng tây",
+      "tép tỏi",
+      "muối",
+      "tiêu",
+      "hạt nêm",
+      "dầu ăn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Hải sản",
+      "Giàu chất xơ",
+      "Giàu đạm"
+    ],
+    "raw_ingredients": [
+      "400 g Cá hồi phi lê",
+      "400 g Măng tây",
+      "3 tép Tỏi",
+      "Muối",
+      "Tiêu",
+      "Hạt nêm",
+      "Dầu ăn"
+    ],
+    "ingredients": [
+      "cá hồi phi lê",
+      "măng tây",
+      "tép tỏi",
+      "muối",
+      "tiêu",
+      "hạt nêm",
+      "dầu ăn"
+    ],
+    "raw_instructions": "Cá hồi rửa sạch ướp chút muối và tiêu 10 phút. Sau đó bỏ vào lò nướng 180 độ C 20 phút.\nMăng tây cắt bỏ phần già sau đó cắt làm đôi hoặc không cắt tùy theo sở thích.\nBăm tỏi nhỏ cho vào chảo ít dầu ăn phi thơm cho măng tây xào xào nhanh tay nêm chút muối hạt nêm tiêu nêm vừa ăn. Nhớ xào o lửa lớn và măng tây mềm không nên xào quá lâu.",
+    "taste_profile": [
+      "Thanh đạm",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Pasta sốt hải sản cay",
+    "description": "Món Pasta sốt hải sản cay là sự kết hợp hoàn hảo giữa sợi mì Ý dai ngon cùng phần sốt cay nồng, đậm đà từ tương ớt và sốt sa tế. Tùy theo sở thích, bạn có thể thêm các loại topping phong phú như hải sản tươi ngon, thịt heo chiên giòn hay thịt bò xào mềm. Hương vị cay ấm, thơm lừng của món ăn chắc chắn sẽ đánh thức mọi giác quan, mang đến một bữa ăn đầy hứng khởi và hấp dẫn.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "mì ý",
+      "tương ớt",
+      "đường",
+      "sốt sate",
+      "nước lọc",
+      "topping tùy ý"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Gỏi / Nộm / Trộn",
+      "Giàu tinh bột",
+      "Mềm",
+      "Món Âu"
+    ],
+    "raw_ingredients": [
+      "100 g mì Ý",
+      "Sốt cay: 2mc tương ớt, 1/2mcf đường, 1mcf sốt sate , 1mc nước lọc",
+      "Topping tùy ý ( thịt heo chiên, thịt bò xào, hải sản ...)"
+    ],
+    "ingredients": [
+      "mì ý",
+      "tương ớt",
+      "đường",
+      "sốt sate",
+      "nước lọc",
+      "topping tùy ý"
+    ],
+    "raw_instructions": "Mì Ý luộc chín, xả lại với nước lạnh cho mì không bị dính, sau đó để ráo\nMình có sẵn thịt chiên nên cho vào làm topping luôn\nCho tất cả gia vị của phần sốt vào chảo nấu sôi, nêm lại theo khẩu vị và rưới vào phần mì Ý và thịt đã chuẩn bị sẵn, khi ăn trộn đều rất ngon",
+    "taste_profile": [
+      "Đậm đà",
+      "Cay"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Sandwich cá hồi xông khói",
+    "description": "Một chiếc sandwich cá hồi xông khói là lựa chọn hoàn hảo cho bữa sáng nhanh gọn hoặc bữa ăn nhẹ trong ngày. Vị béo ngậy, mặn mà đặc trưng của cá hồi xông khói hòa quyện cùng trứng chiên mềm mại, rau xà lách tươi mát và chút cay nồng từ sốt mù tạt, tất cả gói gọn trong lát bánh mì đen thơm lừng. Món ăn này không chỉ tiện lợi mà còn cung cấp đủ năng lượng, mang đến trải nghiệm vị giác đầy hấp dẫn.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bánh mì đen",
+      "trứng gà",
+      "cá hồi xông khói",
+      "xà lách",
+      "sốt mù tạc",
+      "muối",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Hải sản",
+      "Giàu đạm",
+      "Món Âu"
+    ],
+    "raw_ingredients": [
+      "1 lát bánh mì đen",
+      "1 trứng gà",
+      "50 g cá hồi xông khói",
+      "Xà lách",
+      "Sốt mù tạc",
+      "Muối, tiêu"
+    ],
+    "ingredients": [
+      "bánh mì đen",
+      "trứng gà",
+      "cá hồi xông khói",
+      "xà lách",
+      "sốt mù tạc",
+      "muối",
+      "tiêu"
+    ],
+    "raw_instructions": "Xà lách rửa sạch để ráo nước (có thể cắt nhỏ). Trứng đánh đều với ít muối tiêu, chiên chín. Bánh mì nướng sơ cho nóng rồi cho xà lách + trứng chiên + cá hồi lên trên, phết 1 ít sốt mù tạc lên cá hồi (hoặc lên mặt bánh mì). Xong!!! 😂",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn sáng",
+      "Ăn trưa"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bánh Crepe nhân mặn",
+    "description": "Chiếc bánh crepe mềm mại, vàng ươm ôm trọn phần nhân xúc xích đậm đà, dưa leo giòn mát cùng sự hòa quyện của tương cà, tương ớt và sốt mayonnaise béo ngậy. Món ăn vặt này mang đến trải nghiệm vị giác phong phú, vừa thơm ngon, vừa tiện lợi, rất thích hợp cho những bữa ăn nhanh gọn hay khi bạn muốn đổi vị.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "trứng",
+      "bột mì ngang",
+      "muỗngcanh bột gạo",
+      "sữa tươi",
+      "tí muối",
+      "xúc xích",
+      "dưa leo",
+      "tương cà",
+      "tương ớt",
+      "majonnaise"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Từ sữa / Phô mai",
+      "Giàu tinh bột",
+      "Khó tiêu / Nặng bụng",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "1 trứng",
+      "150 g bột mì ngang",
+      "1 muỗngcanh bột gạo",
+      "200 g sữa tươi",
+      "Tí muối",
+      "Xúc xích",
+      "Dưa leo",
+      "Tương cà",
+      "Tương ớt",
+      "Majonnaise"
+    ],
+    "ingredients": [
+      "trứng",
+      "bột mì ngang",
+      "muỗngcanh bột gạo",
+      "sữa tươi",
+      "tí muối",
+      "xúc xích",
+      "dưa leo",
+      "tương cà",
+      "tương ớt",
+      "majonnaise"
+    ],
+    "raw_instructions": "Trứng quậy với sữa.2 thứ bột trộn đều chung với chút muối.cho sữa vào trộn đều quậy cho mịn cho bột nghỉ 30 phút.chiên xúc xích xắt mỏng chuẩn bị 1 chảo dễ lấy.sau khi bột đã nghỉ quét lớp mỏng dầu cho bột vào tráng có thể đậy nắp cho mau chín.để lửa thấp.xịt tương ớt tương cà sauce dầu trứng rồi cho xúc xích dưa leo lên sau đó gập làm 4 và cho ra dĩa",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn sáng",
+      "Ăn trưa"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Salad ức gà sốt mè rang",
+    "description": "Món Salad ức gà sốt mè rang mang đến sự kết hợp hài hòa giữa vị ngọt thanh của ức gà luộc mềm, rau xà lách tươi mát cùng ngô ngọt và đậu Hà Lan giòn sần sật. Điểm nhấn chính là nước sốt mè rang béo ngậy, thơm lừng, quyện đều vào từng nguyên liệu, tạo nên một hương vị đậm đà khó cưỡng. Thêm chút dâu tây sấy và vị cay nhẹ từ tương ớt, tiêu sẽ làm món ăn thêm phần hấp dẫn, kích thích vị giác và rất phù hợp cho một bữa ăn nhẹ nhàng mà vẫn đủ chất.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "thịt ức gà",
+      "lá to rau xà lách",
+      "ngô ngọt",
+      "đậu hà lan",
+      "dâu tây sấy",
+      "nước sốt mè rang",
+      "tiêu",
+      "tương ớt",
+      "gừng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Rang",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean"
+    ],
+    "raw_ingredients": [
+      "200 g thịt ức gà",
+      "4 lá to Rau xà lách",
+      "Ngô ngọt , đậu hà lan , dâu tây sấy",
+      "Nước sốt mè rang , tiêu, tương ớt, gừng"
+    ],
+    "ingredients": [
+      "thịt ức gà",
+      "lá to rau xà lách",
+      "ngô ngọt",
+      "đậu hà lan",
+      "dâu tây sấy",
+      "nước sốt mè rang",
+      "tiêu",
+      "tương ớt",
+      "gừng"
+    ],
+    "raw_instructions": "Ngô ngọt, đậu hà lan giã đông, rửa sạch và cho vào nồi để luộc sơ (cho xíu muối cho đậm đà)\nỨc gà rửa sạch, cho luộc với chút gừng, chút hạt nêm để gà thơm và đậm vị. Sau đó thái lát\nRau rửa sạch và nhớ ngâm nước muối nhé. Sau đó thái rau cho vừa ăn\nVề phần sốt pha tỷ lệ dầu mè - tiêu - tương ớt: 4-1/2-1/2 (các bạn cũng có thể dùng dầu mè thôi nếu không thích cay và tiêu)\nSắp xếp topping vào tô và thêm hỗn hợp sốt. Trộn đều và chén thôi. Chúc các bạn bữa tối ngon miệng",
+    "taste_profile": [
+      "Đậm đà",
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bánh mì nướng bơ tỏi phô mai chảy",
+    "description": "Món bánh mì nướng bơ tỏi phô mai chảy này sẽ đánh thức mọi giác quan của bạn! Từng lát bánh mì ngũ cốc giòn rụm sau khi nướng, quyện cùng hương thơm nồng nàn của bơ tỏi và lá thơm. Đặc biệt, lớp phô mai mozzarella và parmesan tan chảy béo ngậy, đậm đà sẽ khiến bạn không thể cưỡng lại, là lựa chọn hoàn hảo cho bữa sáng nhanh gọn hay món ăn vặt ấm bụng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "lát bánh mì ngũ cốc",
+      "phô mai mozzarella bào",
+      "phô mai parmesan bột",
+      "mcf tỏi băm",
+      "mcf dầu olive",
+      "mcf bơ mặn nấu chảy",
+      "chút lá thơm hỗn hợp khô"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Từ sữa / Phô mai",
+      "Giòn / Giòn rụm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "4 lát bánh mì ngũ cốc",
+      "4 muỗng cà phê phô mai mozzarella bào",
+      "2 muỗng cà phê phô mai parmesan bột",
+      "1 mcf tỏi băm",
+      "1 mcf dầu olive",
+      "2 mcf bơ mặn nấu chảy",
+      "1 chút lá thơm hỗn hợp khô ( rosemary , thyme , pasley, oregano,…)"
+    ],
+    "ingredients": [
+      "lát bánh mì ngũ cốc",
+      "phô mai mozzarella bào",
+      "phô mai parmesan bột",
+      "mcf tỏi băm",
+      "mcf dầu olive",
+      "mcf bơ mặn nấu chảy",
+      "chút lá thơm hỗn hợp khô"
+    ],
+    "raw_instructions": "Mình mua bánh mì ngũ cốc nguyên ổ xong nhờ tiệm cắt lát mỏng sẵn. Bánh dùng ko hết trong 2 ngày thì cấp đông khi ăn lấy ra nướng lại vẫn ngon.\nQuét bơ tỏi dầu olive lên bánh trước\nRắc phô mai bào rồi phô mai bột.\nLàm nóng lò 200 độ. Nướng 10ph hoặc tới khi bánh xém vàng mặt.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn sáng"
+    ],
+    "occasion_context": [
+      "Ăn vặt",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Bún chay nước lèo",
+    "description": "Một tô bún chay nước lèo nóng hổi, thơm lừng sẽ đánh thức mọi giác quan của bạn. Nước dùng được hầm từ cà chua và nấm hương, xào thơm cùng hành tỏi, mang đến vị ngọt thanh tự nhiên và đậm đà khó cưỡng. Sợi bún gạo lứt dai mềm kết hợp cùng đậu hũ béo ngậy, rau thơm tươi mát tạo nên một bữa ăn vừa bổ dưỡng, vừa ấm lòng, xua tan mọi mệt mỏi.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bún gạo lứt khô",
+      "cà chua",
+      "nấm hương tươi",
+      "bìa đậu hủ trắng",
+      "hành tím",
+      "tép tỏi",
+      "hành lá",
+      "ớt hiểm",
+      "nhúm tiêu xay",
+      "ít rau thơm : kinh giới"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Hầm / Ninh",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "200 gr Bún gạo lứt khô",
+      "3 trái cà chua",
+      "100 gr nấm hương tươi",
+      "1 bìa đậu hủ trắng",
+      "1 củ hành tím",
+      "2 tép tỏi",
+      "2 cây hành lá",
+      "1 trái ớt hiểm",
+      "1 nhúm tiêu xay",
+      "1 ít rau thơm : kinh giới"
+    ],
+    "ingredients": [
+      "bún gạo lứt khô",
+      "cà chua",
+      "nấm hương tươi",
+      "bìa đậu hủ trắng",
+      "hành tím",
+      "tép tỏi",
+      "hành lá",
+      "ớt hiểm",
+      "nhúm tiêu xay",
+      "ít rau thơm : kinh giới"
+    ],
+    "raw_instructions": "Khử thơm hành tím và tỏi băm cho cà chua và nấm vào xào thơm sau đó chế nước sôi vào nấu tiếp, nêm nếm vừa ăn với muối, bột ngọt và ít đường nâu theo khẩu vị\nChị đậu hủ vào nấu sôi lại vài phút là được\nCho bún vào tô, chan nước lèo, thêm hành lá cắt nhỏ và ít ớt hiểm và thưởng thức kèm rau thơm tùy thích (kinh giới, tía tô, húng quế, diếp cá…)",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Mì Quảng chay",
+    "description": "Mì Quảng chay mang đến một trải nghiệm ẩm thực thanh tịnh nhưng không kém phần hấp dẫn. Nước dùng được hầm từ các loại củ quả ngọt tự nhiên, kết hợp cùng nấm và các loại đạm chay xào đậm đà, tạo nên hương vị hài hòa, sâu lắng. Sợi mì Quảng mềm dai quyện trong nước sốt sền sệt, ăn kèm rau sống tươi mát và bánh tráng nướng giòn rụm chắc chắn sẽ làm ấm lòng và thỏa mãn vị giác của bạn.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13
+    ],
+    "preprocessing_ingredient_indices": [
+      10
+    ],
+    "core_ingredients": [
+      "nấm rơm",
+      "nấm bào ngư",
+      "nấm mèo",
+      "bò lát chay",
+      "sườn chay",
+      "sắn",
+      "su su",
+      "cà rốt",
+      "cải trắng",
+      "bắp mỹ",
+      "mì quảng",
+      "cái bánh tráng nướng",
+      "rau sống"
+    ],
+    "preprocessing_ingredients": [
+      "gốc ngò rí"
+    ],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Hầm / Ninh",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Đặc sản Đà Nẵng",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "100 g nấm rơm",
+      "100 g nấm bào ngư",
+      "15 g nấm mèo",
+      "15 g bò lát chay",
+      "2 miếng sườn chay",
+      "1 củ sắn ( củ đậu )",
+      "1 trái su su",
+      "1 củ cà rốt",
+      "1 củ cải trắng",
+      "1 trái bắp mỹ",
+      "10 gốc ngò rí",
+      "1 kg mì quảng",
+      "1 cái bánh tráng nướng",
+      "300 g rau sống"
+    ],
+    "ingredients": [
+      "nấm rơm",
+      "nấm bào ngư",
+      "nấm mèo",
+      "bò lát chay",
+      "sườn chay",
+      "sắn",
+      "su su",
+      "cà rốt",
+      "cải trắng",
+      "bắp mỹ",
+      "gốc ngò rí",
+      "mì quảng",
+      "cái bánh tráng nướng",
+      "rau sống"
+    ],
+    "raw_instructions": "Bắp mỹ lột vỏ, su su, cà rốt, củ cải trắng, củ sắn gọt vỏ, tất cả rửa sạch cắt khúc. Cho vô nồi hầm với 2,5 lít nước với 1 ít rễ ngò. Hầm lửa nhỏ khoảng 30 phút.\nSườn chay, bò lát ngâm nở mềm rồi vắt ráo, sườn chay cắt miếng vừa ăn. Nấm rơm, bào ngư rửa sạch, nấm mèo ngâm nở. Bắc chảo phi thơm 3 muỗng canh dầu với 1 miếng ba rô,cho tất cả nấm,sườn, bò chay vô xào, nêm 1 muỗng canh nước tương, 2 muỗng cà phê hạt nêm chay, 3 muỗng cà phê đường,1/2 muỗng cà phê bột ngọt. Xong đổ chảo vừa xào vô nồi hầm củ, nấu sôi rồi nêm nếm lại cho vừa ăn.\nCho mì quảng vào tô chan nước dùng nóng, thêm ngò,đậu phộng rang, ớt xào. Ăn kèm rau sống và bánh tráng nướng.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Lẩu nấm chay",
+    "description": "Trong tiết trời se lạnh, còn gì tuyệt vời hơn khi cùng gia đình quây quần bên nồi lẩu nấm chay nóng hổi, thơm lừng. Nước dùng được ninh từ cà rốt, ngô ngọt và cải trắng mang đến vị ngọt thanh tự nhiên, kết hợp cùng đa dạng các loại nấm tươi ngon, bò lát chay dai mềm và chả nấm giòn rụm. Món ăn không chỉ ấm bụng mà còn giàu dinh dưỡng, mang lại cảm giác nhẹ nhàng, thanh tịnh cho bữa ăn.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "các loại nấm : kim châm",
+      "hải sản",
+      "đùi gà",
+      "đông cô tươi",
+      "nấm rơm",
+      "cà rốt",
+      "bắp ngô ngọt",
+      "lơ xanh",
+      "lá phù trúc",
+      "cải trắng",
+      "bò lát chay",
+      "nấm hương khô",
+      "mộc nhĩ",
+      "bột chiên giòn",
+      "hạt nêm chay"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Lẩu",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Nóng hổi",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Các loại nấm : kim châm, hải sản, đùi gà , đông cô tươi , nấm rơm",
+      "2 củ Cà rốt, 2 bắp ngô ngọt , 1 cây lơ xanh, 2 lá phù trúc ( váng đậu ), 2 củ cải trắng",
+      "Bò lát chay , nấm hương khô , mộc nhĩ",
+      "Bột chiên giòn , hạt nêm chay"
+    ],
+    "ingredients": [
+      "các loại nấm : kim châm",
+      "hải sản",
+      "đùi gà",
+      "đông cô tươi",
+      "nấm rơm",
+      "cà rốt",
+      "bắp ngô ngọt",
+      "lơ xanh",
+      "lá phù trúc",
+      "cải trắng",
+      "bò lát chay",
+      "nấm hương khô",
+      "mộc nhĩ",
+      "bột chiên giòn",
+      "hạt nêm chay"
+    ],
+    "raw_instructions": "1 củ Cà rốt + 2 củ cải bào vỏ, 1 bắp ngô ngọt bóc vỏ => rửa sạch, cắt khoanh dầy. Cho chung vào nồi. Thêm nước cho đầy rồi ninh trong khoảng 40 phút với lửa vừa.Tip: xin thêm mấy cái lõi ngô, râu ngô của ng bán hàng vào nữa thì ngon ngọt hơn nha 😀\nTrong khi ninh nước dùng thì sơ chế nguyên liệu còn lại. Bò lát chay ngâm mềm, rửa sạch, vắt kiệt nước. Mộc nhĩ,nấm hương ngâm nở, rửa sạch, thái sợi rối (hoặc thái sợi mỏng). Cắt lơ xanh thành miếng vừa ăn. 1 củ cà rốt còn lại tỉa hoa cho đẹp, thái mỏng 1/2 củ để xào, 1/2 củ còn lại để nhúng. Cuống lơ xanh gọt vỏ, tỉa hoa như cà rốt. 1 bắp ngô cắt khoanh. Xếp ra đĩa hoặc rổ\nCác loại nấm cắt bỏ chân, rửa với nước muối loãng cho hết mùi, để ráo. Nấm rơm cắt đôi, nấm đùi gà thái mỏng, nấm đông cô khứa xéo trên mặt. Xếp ra đĩa hoặc rổ\nLấy 1 cây nấm đùi gà (hoặc chục cây nấm hải sản) thái hạt lựu. Cho bột chiên giòn, tý xíu bột nêm chay, hạt tiêu, trộn đều. Khi trộn k cần thêm nước vì nấm sẽ ra nước. Nhà ai có rau thì là thì thái nhỏ cho vào trộn cùng. Chiên vàng đều 2 mặt sẽ được chả nấm (hay mn vẫn gọi là chả mực chay)\nXào bò lát chay cùng cà rốt, cuống lơ xanh, mộc nhĩ, nấm hương\nLá phù trúc (váng đậu) cắt nhỏ, chiên nhanh. Hoặc k cần chiên cũng k sao.\nQuay lại nồi nước dùng, vớt hết phần rau củ đã ninh giừ ra, thêm hạt nêm chay, nước mắm chay vào theo khẩu vị gd. (Tip: có thể cho thêm gói gia vị thuốc bắc cho thêm thơm, bổ. Nhưng vì lần này nấu cho các bạn già của U nên k cho mà để mùi bị thuần tự nhiên)\nNồi nước dùng đã xong, bày ra và cả nhà cùng thưởng thức thôi. Buổi tối mùa thu, trời se lạnh, hợp với lẩu lắm. Bữa này là mừng 20/10 sớm cho mấy cụ U80 - U70, bạn từ thời đi học của U. Nhìn mấy cụ nói cười rôm rả, gọi nhau mày tao, ăn uống ngon miệng mà thích lắm. Chia sẻ niềm vui này với bếp nha ❤️\nNgoài lề tý xíu. Thật ra thử thách Mâm cơm của mẹ hơi khó đối với mình nên mình k tham gia. Trong trí nhớ của mình, khi ngủ dậy, mẹ đã đi làm, mang theo cặp lồng đựng cháy cơm, đạp xe gần 70km để đi dạy học. Mẹ đi từ sớm, chỉ để lại cho 2 chị em mình mồ côi cha từ sớm nồi cơm đang đc ủ trong bếp củi. Tối khuya mẹ về, mẹ lại đèo theo 1 ít đồ để đi bán. Năm 1989, mới 6t, mình đã tự nấu cơm, tự loay hoay đốt củi, sau này là tự nhóm bếp than. Nên ký ức ăn cơm mẹ nấu là k có.\nGiờ đây, mẹ vẫn còn. Hàng ngày mình và con trai vẫn ăn cơm mẹ nấu (mình ăn cơm nhà 1 bữa còn 1 bữa cơm cty). Mẹ nấu ăn k đổi mới, vẫn nấu những món \"chém to kho mặn\" mà mình gọi vui là \"toàn món cổ truyền từ thời bao cấp\". Nên mỗi tuần 1 ngày nghỉ, mình lại vào bếp, nấu cho mẹ những món mới, món ngon học trên Bếp. Thỉnh thoảng mời các bạn của mẹ đến ăn cho vui, như bữa nấu lẩu nấm này. Chúc các bạn bếp có thật nhiều món ngon của mẹ để tham gia cuộc thi ❤️❤️❤️",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn khuya",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Bánh xèo chay",
+    "description": "Bánh xèo chay mang đến trải nghiệm ẩm thực thanh đạm nhưng không kém phần hấp dẫn. Lớp vỏ bánh vàng ươm, giòn rụm bao lấy phần nhân măng trúc, đậu hũ và tàu hũ ky béo nhẹ, kết hợp cùng giá tươi mát. Khi thưởng thức, vị béo của bánh hòa quyện với sự thanh ngọt của rau củ, chấm cùng nước mắm chay chua ngọt đậm đà sẽ đánh thức mọi giác quan, tạo nên một bữa ăn ngon miệng và đầy đủ dinh dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột bánh xèo",
+      "măng trúc",
+      "đậu hũ",
+      "tàu hũ ky chiên giòn lá lớn",
+      "giá",
+      "hành lá",
+      "rau sống : xà lách rau thơm",
+      "nước mắm chay chua ngọt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giòn / Giòn rụm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "200 gr Bột bánh xèo",
+      "450 ml nước",
+      "200 gr Măng trúc",
+      "2 miếng Đậu hũ",
+      "Tàu hũ ky chiên giòn 1 lá lớn",
+      "50 gr Giá",
+      "Hành lá",
+      "Rau sống : xà lách rau thơm",
+      "Nước mắm chay chua ngọt"
+    ],
+    "ingredients": [
+      "bột bánh xèo",
+      "nước",
+      "măng trúc",
+      "đậu hũ",
+      "tàu hũ ky chiên giòn lá lớn",
+      "giá",
+      "hành lá",
+      "rau sống : xà lách rau thơm",
+      "nước mắm chay chua ngọt"
+    ],
+    "raw_instructions": "Măng này loại lớn nên mình sẽ cắt nhỏ miếng vừa ăn, luộc lại để ráo. Pha bột bánh xèo với nước để nghỉ 20 ph.\nPhi thơm hành poro thêm măng vào xào. Nêm ít muối. Thêm tàu hũ ky lá chiên bóp vụn. Đậu hũ chiên xắt miếng vừa ăn.\nNước mắm chay chua ngọt: đường:nước mắm:cốt chanh: nước lọc tỉ lệ 2:2:1:4 thêm tỏi ớt băm là được.\nQuậy bột đều rồi đổ vào chảo. Thêm măng, tàu hũ, giá … bánh giòn rìa thì gấp lại. Ăn kèm rau sống, nước mắm chua ngọt chay.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Gỏi hoa chuối chay",
+    "description": "Gỏi hoa chuối chay là món khai vị thanh mát, đánh thức vị giác với sự kết hợp hài hòa giữa vị chua dịu của chanh, chút ngọt thanh và mặn nhẹ từ nước tương. Từng sợi hoa chuối giòn sần sật quyện cùng cà rốt, cải mầm tươi ngon, điểm xuyết đậu phụ và khoai môn chiên vàng giòn rụm, béo bùi từ đậu phộng và mè rang. Món ăn không chỉ giàu chất xơ, dễ tiêu mà còn mang đến cảm giác nhẹ nhàng, sảng khoái, rất thích hợp cho những bữa ăn thanh đạm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bắp hoa chuối",
+      "cà rốt",
+      "rau cải mầm",
+      "rau mùi",
+      "đậu phụ",
+      "khoai môn",
+      "đậu phộng",
+      "mè rang",
+      "boa rô",
+      "gia vị nước chấm",
+      "nước tương",
+      "đường",
+      "nước cốt chanh"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Healthy / Eat Clean",
+      "Giòn / Giòn rụm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1 bắp hoa chuối",
+      "2 củ cà rốt",
+      "1 rổ rau cải mầm",
+      "1 nắm rau mùi",
+      "4 khuôn đậu",
+      "2 củ khoai môn",
+      "1/2 lon đậu phộng",
+      "1/2 lon mè rang",
+      "1 cây boa rô",
+      "gia vị nước chấm",
+      "3 muỗng nước tương (xì dầu)",
+      "1 muỗng đường",
+      "1 muỗng nước cốt chanh"
+    ],
+    "ingredients": [
+      "bắp hoa chuối",
+      "cà rốt",
+      "rau cải mầm",
+      "rau mùi",
+      "đậu phụ",
+      "khoai môn",
+      "đậu phộng",
+      "mè rang",
+      "boa rô",
+      "gia vị nước chấm",
+      "nước tương",
+      "đường",
+      "nước cốt chanh"
+    ],
+    "raw_instructions": "Bắc chảo lên bếp cho dầu vào cùng với boa rô, xì dầu, đường nấu sền sệt trút ra để nguội rồi vắt nước cốt chanh vào\nHoa chuối lột vỏ già rồi xắt nhỏ đem ngâm nước muối loãng hoặc giấm gạo cũng được cho bớt thâm ngâm chừng 20p rồi vớt ra\nSơ chế rau củ, xắt sợi cà rốt cải mầm bỏ lá sâu héo úa rồi rửa sạch rau mùi cũng vậy, khuôn đậu xắt sợi vừa ăn đem chiền vàng, khoai môn xắt lát như khoai tây chiên đem chiên luôn đậu phộng rang rồi đập dập, mè rang vàng\nDùng 1 cái dĩa to để trộn gỏi đầu tiên bỏ hoa chuối - cà rốt rồi đến cải mầm, khuôn đậu, rau mùi, khoai môn rắc đậu phộng, mè khi ăn thì rưới nước chấm",
+    "taste_profile": [
+      "Thanh đạm",
+      "Chua"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Đậu hũ chiên sả ớt",
+    "description": "Món Đậu hũ chiên sả ớt là sự kết hợp hài hòa giữa vị béo bùi của đậu hũ chiên, vị ngọt tự nhiên của nấm rơm, cùng hương thơm nồng nàn của sả và vị cay xé lưỡi của ớt. Từng miếng đậu hũ và nấm được xào thấm đẫm trong nước sốt đậm đà, cay nhẹ, tạo nên một món ăn chay đầy hấp dẫn, đưa cơm và kích thích vị giác.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "nấm rơm",
+      "tiêu xanh",
+      "nước tương",
+      "hạt nêm chay",
+      "tương ớt",
+      "ba rô",
+      "đậu hủ chiên",
+      "sả xay",
+      "ớt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Xào",
+      "Giàu đạm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "300 g nấm rơm",
+      "50 g tiêu xanh",
+      "Nước tương , hạt nêm chay ,tương ớt, ba rô",
+      "300 g đậu hủ chiên",
+      "20 g sả xay",
+      "5 trái ớt"
+    ],
+    "ingredients": [
+      "nấm rơm",
+      "tiêu xanh",
+      "nước tương",
+      "hạt nêm chay",
+      "tương ớt",
+      "ba rô",
+      "đậu hủ chiên",
+      "sả xay",
+      "ớt"
+    ],
+    "raw_instructions": "Nấm rơm cắt gốc rửa sạch với nước pha muối, nấm lớn thì cắt làm 2,xong ướp 1 muỗng canh nước tương, 1 muỗng canh tương ớt, 1/2 muỗng canh đường, 1 muỗng cà phê hạt nêm, 1/2 tiêu xanh giả.\nBắc chảo lên bếp với xíu dầu ăn phi thơm ba rô cắt nhuyễn rồi cho nấm rơm đã ướp gia vị lên kho lửa nhỏ cho thấm, nêm nếm cho vừa ăn, cho thêm phần tiêu hạt còn lại lên đảo đều rồi tắt bếp.\nĐậu hũ chiên sả ớtBắc chảo với xíu dầu ăn cho sả và ớt băm lên xào thơm, cho lên 3 muỗng canh nước tương, 1 muỗng canh đường, 1 muỗng canh tương ớt, nấu tan rồi cho đậu hũ lên đảo đều cho thấm.",
+    "taste_profile": [
+      "Đậm đà",
+      "Cay"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Nấm đùi gà kho tiêu",
+    "description": "Món Nấm đùi gà kho tiêu này sẽ đánh thức mọi giác quan với hương thơm nồng của tiêu xanh và vị cay nhẹ từ ớt. Từng miếng nấm đùi gà mềm dai thấm đẫm nước sốt kho đậm đà, mặn ngọt hài hòa, tạo nên một trải nghiệm ẩm thực khó quên. Đây chắc chắn là món ăn chay đưa cơm tuyệt vời, vừa ấm bụng lại vừa bổ dưỡng cho bữa trưa hay bữa tối.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "nấm đùi gà baby",
+      "ớt",
+      "dây tiêu xanh",
+      "nước tương",
+      "mật mía",
+      "chút xíu muối tiêu",
+      "dầu ăn",
+      "boa rô hoặc đầu hành /tỏi băm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu đạm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "250 gr nấm đùi gà baby",
+      "2 trái ớt",
+      "2 dây tiêu xanh",
+      "1 muỗng canh nước tương",
+      "1 muỗng cafe mật mía",
+      "1 chút xíu muối tiêu",
+      "1 tsp dầu ăn",
+      "1 tsp boa rô hoặc đầu hành /tỏi băm"
+    ],
+    "ingredients": [
+      "nấm đùi gà baby",
+      "ớt",
+      "dây tiêu xanh",
+      "nước tương",
+      "mật mía",
+      "chút xíu muối tiêu",
+      "dầu ăn",
+      "boa rô hoặc đầu hành /tỏi băm"
+    ],
+    "raw_instructions": "Nấm đùi gà rửa nhanh thấm khô, cắt quân cờ. Tiêu xanh đập dập cho thơm.\nPhi thơm boa rô xào săn, thêm nước tương mật mía muối tiêu ớt đảo đều. Thêm 1/4 chén nước sôi. Đun sôi hạ lửa.\nKho 15 phút với lửa nhỏ là được.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Canh rong biển hạt sen",
+    "description": "Món canh rong biển hạt sen mang đến hương vị thanh đạm, nhẹ nhàng, rất phù hợp cho những bữa ăn cần sự cân bằng. Nước dùng trong veo, ngọt tự nhiên từ thịt nạc vai, đậu xanh và hạt sen, quyện cùng vị biển đặc trưng của rong biển mềm mại. Từng muỗng canh ấm nóng không chỉ dễ ăn, dễ tiêu mà còn giúp ấm bụng, mang lại cảm giác thư thái và bổ dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "thịt nạc vai",
+      "rong biển khô",
+      "đậu xanh",
+      "hạt sen tươi",
+      "hành ngò",
+      "hạt nêm",
+      "nước mắm",
+      "tiêu xay"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Hầm / Ninh",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "100 g thịt nạc vai",
+      "100 g rong biển khô",
+      "10 g đậu xanh",
+      "10 g hạt sen tươi",
+      "10 g hành ngò",
+      "Hạt nêm",
+      "Nước mắm",
+      "Tiêu xay"
+    ],
+    "ingredients": [
+      "thịt nạc vai",
+      "rong biển khô",
+      "đậu xanh",
+      "hạt sen tươi",
+      "hành ngò",
+      "hạt nêm",
+      "nước mắm",
+      "tiêu xay"
+    ],
+    "raw_instructions": "Thịt nạc vai cắt mỏng và băm nhỏ, ướp cùng 1/2 muỗng cà phê hạt nêm, để 15 phút cho thấm. Đậu xanh ngâm mềm trong 3 tiếng. Rong biển ngâm mềm trong 20 phút, sau đó rửa sạch lại và để ráo nước. Hành ngò bỏ gốc, rửa sạch. Hành cắt khúc dài, tước sợi, ngò nhặt lá để trang trí, cho tất cả vào tô nước cho tươi\nĐặt nồi nước lên bếp, cho thịt xay, đậu xanh và hạt sen vào nấu mềm, chờ nước sôi lại thì cho rong biển vào, nêm 1 muỗng cà phê hạt nêm, 1 muỗng canh nước mắm. Khi canh sôi và rong biển mềm thì tắt bếp\nMúc canh ra tô, thêm hành ngò, rắc chút tiêu cho thơm nhé. Món canh thanh mát, bổ dưỡng và rất ngon, bé rất thích ngâm rong biển khô vào nước và thích thú nhìn rong biển nở ra từ từ. Vì bé nấu cùng nên mình hạn chế dầu mỡ khi xào thịt, bạn có thể phi hành và xào thịt cho săn rồi mới cho nước vào cũng được.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Bánh bột lọc nhân đậu xanh",
+    "description": "Bánh bột lọc nhân đậu xanh mang đến trải nghiệm ẩm thực thanh đạm mà vẫn đầy cuốn hút. Lớp vỏ bánh bột năng trong veo, dai dai ôm trọn phần nhân đậu xanh bùi béo, được nêm nếm vừa vặn với chút hành phi thơm lừng. Khi thưởng thức, vị ngọt bùi của đậu xanh hòa quyện cùng độ dai mềm của vỏ bánh, chấm kèm nước mắm chay chua ngọt sẽ đánh thức mọi giác quan, tạo nên một món ăn vặt hoặc bữa phụ nhẹ nhàng nhưng khó quên.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu xanh không vỏ",
+      "bột năng",
+      "hạt nêm chay",
+      "nước tương",
+      "đường",
+      "bột ngọt",
+      "dầu ăn",
+      "hành tím"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Hấp / Luộc",
+      "Giàu tinh bột",
+      "Dai / Sần sật",
+      "Ẩm thực đường phố",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "200 g đậu xanh không vỏ",
+      "300 g bột năng",
+      "Hạt nêm chay , nước tương, đường, bột ngọt, dầu ăn, hành tím .."
+    ],
+    "ingredients": [
+      "đậu xanh không vỏ",
+      "bột năng",
+      "hạt nêm chay",
+      "nước tương",
+      "đường",
+      "bột ngọt",
+      "dầu ăn",
+      "hành tím"
+    ],
+    "raw_instructions": "Đậu xanh vo sạch ngâm nở, rồi xả nước và đổ nước sạch vô nấu đậu chín với xíu muối và khô hẳn. Nghiền nhuyễn đậu. Phi thơm dầu ăn với hành tím cho đậu xanh lên xào, nêm xíu bột ngọt, hạt nêm chay, xíu tiêu. Cho vừa ăn rồi để nguội.\nCho bột vô thau nhựa nhồi với 200 ml nước sôi. Chia bột thành viên nhỏ ấn dẹp rồi cho nhân đậu xanh vô gói kín lại.\nNấu nồi nước sôi cho bánh lên luộc chín. Vớt bánh ra thau nước nguội rửa cho bớt dính rồi đổ ra rổ cho ráo. Phi thơm dầu ăn với hành tím rồi tắt bếp, cho bánh vô trộn đều, cho ít ngò cho thơm.\nPha nước mắm chay: Cho xíu đường vô nồi thắng ra màu nâu, cho 2/3 chén nước ngọt 7up vô nấu với xíu muối, hạt nêm chay, rồi nêm nếm cho vừa ăn. Để mắm nguội rồi cho tỏi ớt băm vô.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Chả giò chay (Ram chay)",
+    "description": "Món chả giò chay này mang đến sự kết hợp hoàn hảo giữa vị đậm đà của nhân đậu phụ, miến và nấm, cùng chút béo ngậy từ lớp vỏ chiên vàng ruộm. Mỗi cuốn chả giò giòn rụm bên ngoài, mềm mại và thơm lừng bên trong, hứa hẹn sẽ làm hài lòng cả những thực khách khó tính nhất. Đây là lựa chọn tuyệt vời để ăn vặt hay bổ sung vào bữa cơm gia đình, mang đậm hương vị truyền thống Việt Nam.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bìa đậu phụ trắng",
+      "miến dong",
+      "tai mộc nhĩ to",
+      "cái nấm hương khô",
+      "nhỏ cà rốt",
+      "giá đỗ",
+      "ít rau mùi ta",
+      "thìa cà phê muối",
+      "thìa cà phê hạt tiêu",
+      "thìa cà phê nước mắm chay",
+      "hạt nêm chay",
+      "bánh đa nem miền bắc"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu đạm",
+      "Giòn / Giòn rụm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "3 bìa Đậu phụ trắng (300g)",
+      "50 g Miến dong",
+      "2 tai Mộc nhĩ to",
+      "10 cái Nấm hương khô",
+      "1 củ nhỏ Cà rốt",
+      "150 g Giá đỗ",
+      "1 ít Rau mùi ta",
+      "1/2 thìa cà phê Muối",
+      "1/2 thìa cà phê Hạt tiêu",
+      "1 thìa cà phê Nước mắm chay",
+      "Hạt nêm chay",
+      "Bánh đa nem miền Bắc"
+    ],
+    "ingredients": [
+      "bìa đậu phụ trắng",
+      "miến dong",
+      "tai mộc nhĩ to",
+      "cái nấm hương khô",
+      "nhỏ cà rốt",
+      "giá đỗ",
+      "ít rau mùi ta",
+      "thìa cà phê muối",
+      "thìa cà phê hạt tiêu",
+      "thìa cà phê nước mắm chay",
+      "hạt nêm chay",
+      "bánh đa nem miền bắc"
+    ],
+    "raw_instructions": "Đậu phụ rửa nhẹ, để ráo, cắt miếng vừa, chiên vàng đều rồi thái hạt lựu nhỏ. Khi chiên, rắc muối vào dầu ăn trước khi cho đậu vào chiên, giúp đậu đậm đà.\nMiến ngâm nước ấm đến khi mềm, cắt ngắn 3–4cm. Mộc nhĩ, nấm hương ngâm nở, rửa sạch, thái nhỏ. Cà rốt thái sợi, giá đỗ rửa sạch, rau mùi thái nhỏ.\nTrộn tất cả nguyên liệu với muối, hạt tiêu, nước mắm chay cho đều.\nTrải bánh đa nem, cho nhân vào, gấp hai mép, cuộn tròn vừa tay.\nĐun nóng dầu, rán sơ nem với lửa vừa đến khi nem hơi vàng, vớt ra để nguội.\nĐể nem nguội hoàn toàn, xếp vào hộp kín, bảo quản ngăn mát tủ lạnh dùng dần trong vài ngày Tết.\nKhi ăn, lấy nem ra rán lại lần 2 đến khi vàng giòn đều, gắp ra giấy thấm dầu. Chấm cùng nước mắm chua ngọt có thêm 1 ít đu đủ xanh dầm thì càng ngon.\nBí quyết: Sau khi rán sơ, để nguội và cho vào hộp kín để bảo quản, khi nào ăn thì rán lại lần 2 để nem luôn giòn.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Mì xào rau củ",
+    "description": "Mì xào rau củ chay là món ăn thanh đạm nhưng vẫn đủ đầy hương vị, mang đến trải nghiệm ẩm thực nhẹ nhàng mà hấp dẫn. Sợi mì dai ngon hòa quyện cùng đủ loại rau củ tươi giòn, nấm thơm lừng và thịt chay đậm đà, tất cả được xào nhanh tay trong chảo nóng. Món ăn không chỉ đẹp mắt với màu sắc tươi tắn mà còn kích thích vị giác với hương thơm của dầu hào, nước tương, tạo nên bữa ăn chay bổ dưỡng và ngon miệng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "gói mì korea",
+      "bìa đậu chiên vàng",
+      "nấm đông cô",
+      "nấm rơm khô",
+      "thịt chỉ chay mua sẵn",
+      "ít rau củ các thứ : carrot",
+      "bông cải",
+      "đậu hòa lan",
+      "ớt sừng",
+      "bắp cải",
+      "cải ngọt",
+      "bắp hạt",
+      "gừng",
+      "ngò",
+      "gia vị nêm chay: dầu hào",
+      "dầu mè",
+      "nước tương",
+      "bột nêm",
+      "đường"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Xào",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1 gói mì Korea",
+      "3 bìa đậu chiên vàng",
+      "1 tô nấm đông cô , nấm rơm khô",
+      "1 chén thịt 3 chỉ chay mua sẵn",
+      "1 ít rau củ các thứ : carrot, bông cải , đậu hòa lan, ớt sừng , bắp cải , cải ngọt , bắp hạt, gừng, ngò",
+      "Gia vị nêm chay: dầu hào, dầu mè, nước tương, bột nêm, đường"
+    ],
+    "ingredients": [
+      "gói mì korea",
+      "bìa đậu chiên vàng",
+      "nấm đông cô",
+      "nấm rơm khô",
+      "thịt chỉ chay mua sẵn",
+      "ít rau củ các thứ : carrot",
+      "bông cải",
+      "đậu hòa lan",
+      "ớt sừng",
+      "bắp cải",
+      "cải ngọt",
+      "bắp hạt",
+      "gừng",
+      "ngò",
+      "gia vị nêm chay: dầu hào",
+      "dầu mè",
+      "nước tương",
+      "bột nêm",
+      "đường"
+    ],
+    "raw_instructions": "Tất cả các rau củ thái sợi chỉ, trụng sơ vớt ra, chỉ ớt sừng và cải ngọt không trụng. Nấm ngâm mềm cắt mỏng, đậu chiên vàng thái mỏng. Mì ngâm mềm, rồi trụng qua nước sôi, vớt để ráo kế rưới vào mì 2 tbsp dầu hào, 1 tbsp nước tương đảo đều. Bắt chảo phi thơm kế cho nấm vào xào.\nTiếp cho thịt ba chỉ vào, kế rau củ đã trụng cho vào xào, sau hết cho ớt sừng. Pha vào chén 2 tbsp dầu hào, 1 tbsp dầu mè, 1 tbsp đường, nước tương, 1/2 tbsp bột nêm hòa đều cho vào chảo rau củ trộn đều, nêm vừa miệng.\nKế cho mì tơi đều vào rau. Sau cuối cùng cho cải ngọt, và đậu cắt mỏng vào\nKhi ăn rắc thêm nè rang ngò. Có thể ăn kèm thêm nước tương pha ớt.",
+    "taste_profile": [
+      "Đậm đà",
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Cà tím nướng mỡ hành",
+    "description": "Món cà tím nướng mỡ hành là sự kết hợp tuyệt vời giữa vị ngọt thanh tự nhiên của cà tím nướng mềm, thơm lừng và hương vị đậm đà, béo ngậy của mỡ hành phi thơm cùng tóp mỡ giòn rụm. Từng miếng cà tím thấm đẫm nước sốt mặn ngọt, cay nhẹ, tạo nên một trải nghiệm vị giác khó quên, cực kỳ đưa cơm và ấm bụng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cà tím",
+      "ớt chuông đỏ",
+      "nhánh hành lá",
+      "tép tỏi",
+      "nhỏ tóp mỡ",
+      "mỡ heo",
+      "nước mắm",
+      "đường",
+      "đậu phộng rang hoặc mè rang"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Nhiều dầu mỡ / Calo cao",
+      "Mềm"
+    ],
+    "raw_ingredients": [
+      "2 quả Cà tím",
+      "1 quả Ớt chuông đỏ",
+      "3 nhánh Hành lá",
+      "2 tép Tỏi",
+      "1 chén nhỏ tóp mỡ",
+      "1 muỗng canh Mỡ heo",
+      "1.5 muỗng canh Nước mắm",
+      "1 muỗng cà phê Đường",
+      "Đậu phộng rang hoặc mè rang (nếu có sẽ ngon hơn)"
+    ],
+    "ingredients": [
+      "cà tím",
+      "ớt chuông đỏ",
+      "nhánh hành lá",
+      "tép tỏi",
+      "nhỏ tóp mỡ",
+      "mỡ heo",
+      "nước mắm",
+      "đường",
+      "đậu phộng rang hoặc mè rang"
+    ],
+    "raw_instructions": "Cà tím rửa sạch, dùng nĩa xăm vào thân cà, cho vào nckd nướng 15 phút 180 độ rồi lật mặt chiên tiếp 15 phút nữa đến khi cà chín mềm, bóc vỏ, cắt dọc.\nHành lá cắt nhỏ, ớt chuông cắt hạt lựu, tỏi băm nhỏ. Pha mỡ hành: Trong 1 nồi nhỏ cho 1 muỗng mỡ heo vào rồi đến tỏi băm. Phi thơm tỏi, cho hành lá, ớt chuông, tóp mỡ vào đảo đều. Thêm nước mắm, đường, đảo đều rồi tắt bếp.\nRưới hỗn hợp mắm hành lên dĩa cà tím. Dọn dùng nóng với cơm.\nBí quyết: Có thể điều chỉnh độ cay bằng cách thêm hoặc bớt ớt chuông.",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Salad ức gà (Eat Clean)",
+    "description": "Món salad ức gà thanh mát này là lựa chọn hoàn hảo cho những ai yêu thích sự nhẹ nhàng nhưng vẫn đủ đầy dinh dưỡng. Từng lát ức gà luộc mềm ngọt kết hợp cùng rau xà lách giòn tươi, mầm linh lăng thanh mát và cà chua bi mọng nước, tất cả được hòa quyện trong sốt dầu dấm chua ngọt hài hòa. Điểm nhấn là chút hành phi thơm lừng, tạo nên một bản giao hưởng vị giác vừa tươi mới, vừa đậm đà, giúp bạn ăn ngon mà không lo nặng bụng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "ức gà lớn",
+      "mầm cỏ linh lăng",
+      "xà lách",
+      "cà chua bi",
+      "hành phi",
+      "sốt dầu dấm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Thanh mát/Giải nhiệt"
+    ],
+    "raw_ingredients": [
+      "1 ức gà lớn",
+      "Mầm cỏ linh lăng 🌱 Rau Mầm Hỗn Hợp Hạt Cỏ Linh Lăng (Alfalfa) & Cỏ Cà Ri (Methi)",
+      "Xà lách (mình dùng ice -berg)",
+      "Cà chua bi",
+      "Hành phi 🌱 Hành Phi Giòn Tự Nhiên (Không Áo Bột)",
+      "Sốt dầu dấm (pha dầu, dấm hoặc chanh , đường, hành phi chua ngọt theo sở thích)"
+    ],
+    "ingredients": [
+      "ức gà lớn",
+      "mầm cỏ linh lăng",
+      "xà lách",
+      "cà chua bi",
+      "hành phi",
+      "sốt dầu dấm"
+    ],
+    "raw_instructions": "Luộc gà cùng ít muối và gừng đập dập trong 30 phút là gà mềm. Món này chỉ tốn thời gian luộc gà, trong thời gian luộc gà thì làm sốt dầu dấm theo khẩu vị của bạn.\nXà lách rửa sạch cắt nhỏ cho lên dĩa cùng mầm linh lăng\nXếp cà chua, gà luộc cắt lát, hành phi, trộn sốt dầu dấm chua ngọt và thưởng thức.",
+    "taste_profile": [
+      "Thanh đạm",
+      "Chua"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Poke Bowl cá hồi",
+    "description": "Poke Bowl cá hồi là sự kết hợp tươi mới giữa cơm hoặc ngũ cốc như quinoa, cá hồi xông khói, bơ, rau mầm, lá thơm, hạt lựu, rong biển, mè rang và sốt tương Nhật. Món ăn có vị thanh mát, giàu đạm và chất xơ, phần cá hồi cùng bơ tạo độ mềm béo vừa phải nhưng tổng thể vẫn nhẹ nhàng, cân bằng và hợp cho một bữa ăn healthy.",
+    "core_ingredient_indices": [
+      0,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cơm hoặc một loại ngũ cốc bạn thích như quinoa",
+      "cá hồi xông khói cá hồi xông khói nguyên tảng - smoked salmon",
+      "mầm cỏ linh lăng rau mầm hỗn hợp hạt cỏ linh lăng & cỏ cà ri",
+      "bơ",
+      "lá tía tô non",
+      "lá bạc hà",
+      "đậu lupin",
+      "hạt lựu chín",
+      "rong biển lá kim",
+      "mè rang thơm",
+      "nước sốt trộn sốt tương nhật cho món poke bowl",
+      "wasabi"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Món Á",
+      "Hải sản",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean"
+    ],
+    "raw_ingredients": [
+      "Cơm hoặc một loại ngũ cốc bạn thích như quinoa , hay lúa mì , lúa mạch…",
+      "Các nguyên liệu khác",
+      "Cá hồi xông khói Cá Hồi Xông Khói Nguyên Tảng - Smoked Salmon",
+      "Mầm cỏ linh lăng 🌱 Rau Mầm Hỗn Hợp Hạt Cỏ Linh Lăng (Alfalfa) & Cỏ Cà Ri (Methi)",
+      "Bơ",
+      "Lá tía tô non",
+      "Lá bạc hà",
+      "Đậu Lupin",
+      "Hạt lựu chín",
+      "Rong biển lá kim",
+      "Mè rang thơm",
+      "Nước sốt trộn Sốt Tương Nhật Cho Món Poke Bowl (Cơm Trộn Rau Củ Thập Cẩm)",
+      "Wasabi"
+    ],
+    "ingredients": [
+      "cơm hoặc một loại ngũ cốc bạn thích như quinoa",
+      "hay lúa mì",
+      "lúa mạch…",
+      "các nguyên liệu khác",
+      "cá hồi xông khói cá hồi xông khói nguyên tảng - smoked salmon",
+      "mầm cỏ linh lăng rau mầm hỗn hợp hạt cỏ linh lăng & cỏ cà ri",
+      "bơ",
+      "lá tía tô non",
+      "lá bạc hà",
+      "đậu lupin",
+      "hạt lựu chín",
+      "rong biển lá kim",
+      "mè rang thơm",
+      "nước sốt trộn sốt tương nhật cho món poke bowl",
+      "wasabi"
+    ],
+    "raw_instructions": "Tía tô thái nhỏ, rửa sạch lá húng lủi và mầm cỏ, xếp lên tô đã có sẵn phần cơm nóng (hoặc quinoa, lúa mạch…)\nBóc vỏ đậu Lupin và tách hạt lựu\nCắt lát trái bơ, thái vuông cá hồi xông khói\nCuối cùng là cắt nhỏ rong biển lá kim, thêm một ít wasabi, rắc mè rang, chan sốt và thưởng thức",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Đậu hũ non sốt nấm",
+    "description": "Món Đậu hũ non sốt nấm là sự kết hợp tinh tế giữa đậu hũ trứng mềm mịn, tempeh bùi bùi và các loại nấm tươi ngon, được xào nhanh tay rồi quyện trong lớp sốt đậm đà, sánh mịn. Từng miếng đậu hũ chiên vàng nhẹ bên ngoài, mềm mượt bên trong, thấm vị umami từ nấm và gia vị, tạo nên món ăn giàu đạm, giàu chất xơ và rất đưa cơm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "nấm sò nâu",
+      "nấm kim châm",
+      "đậu hũ trứng",
+      "tempeh",
+      "bột sư tử",
+      "bột chiên giòn",
+      "hành lá",
+      "hành củ"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Xào",
+      "Giàu đạm",
+      "Giàu chất xơ",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "200 g nấm sò nâu",
+      "200 g nấm kim châm",
+      "2 cây đậu hũ trứng",
+      "200 g tempeh",
+      "1/2 thìa canh bột sư tử , 1 gói bột chiên giòn",
+      "Hành lá , hành củ , gia vị"
+    ],
+    "ingredients": [
+      "nấm sò nâu",
+      "nấm kim châm",
+      "đậu hũ trứng",
+      "tempeh",
+      "bột sư tử",
+      "bột chiên giòn",
+      "hành lá",
+      "hành củ",
+      "gia vị"
+    ],
+    "raw_instructions": "Nấm rửa sạch với muối và dấm, để ráo rồi cắt khúc.\nĐậu hũ trứng cắt khoanh dày chừng 1,5cm rồi cho áo 1 lớp bột chiên mỏng, cho lên chảo chiên vàng.\nTempeh cắt dày 1cm rồi áp chảo.\nPhi thơm củ hành, cho nấm vào xào, khi nấm mềm cho đậu hũ trứng, tempeh ở bước (3) vào, cho 2 thìa cf muối, 1/2 thìa canh đường. Lúc này không dùng đũa đảo và cầm tai nồi xóc đều cho hỗn hợp thấm gia vị. Chế thêm 1 bát con nước.\nNêm gia vị cho vừa miệng rồi pha bột sư tử với chút nước, cho vào nồi nấm, chờ hỗn hợp sôi và hơi sệt lại thì rắc hành lá cắt nhỏ vào.\nCho rat bát và thưởng thức.",
+    "taste_profile": [],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bún gạo lứt trộn ức gà",
+    "description": "Món bún gạo lứt trộn ức gà mang đến một trải nghiệm ẩm thực nhẹ nhàng nhưng đầy đủ dinh dưỡng. Từng sợi bún lứt dai mềm hòa quyện cùng ức gà xào đậm đà gia vị, thêm chút giòn tươi của các loại rau cải. Nước mắm trộn chua ngọt, cay nhẹ sẽ đánh thức mọi giác quan, tạo nên một bữa ăn thanh đạm, healthy mà vẫn vô cùng đưa miệng, lý tưởng cho những ai đang tìm kiếm sự cân bằng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bún lứt",
+      "ức gà",
+      "các loại rau : cải thảo",
+      "rau cải",
+      "hành khô",
+      "hạt nêm",
+      "mắm",
+      "mì chính",
+      "dầu hào",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Healthy / Eat Clean",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "Bún lứt",
+      "Ức gà",
+      "Các loại rau : cải thảo , rau cải .",
+      "Hành khô , hạt nêm, mắm, mì chính, dầu hào, tiêu"
+    ],
+    "ingredients": [
+      "bún lứt",
+      "ức gà",
+      "các loại rau : cải thảo",
+      "rau cải",
+      "hành khô",
+      "hạt nêm",
+      "mắm",
+      "mì chính",
+      "dầu hào",
+      "tiêu"
+    ],
+    "raw_instructions": "Ức gà rửa sạch, thái mỏng dày tùy ý.Ướp: dầu hào, hạt nêm, mì chính, tiêu xay, 1 ít mắm.. nêm tùy sở thích mặn, nhạt.Để tầm 20-30p\nRửa sạch, thái các loại rau muốn ăn kèm\nRửa sạch, luộc bún lứt khoảng 5p, sao cho sợi bún không còn cứng.Sau đó vớt ra để vào nước sôi và cho vài viên đá.Khoảng 5p vớt ra để ráo nước\nXào thịt gà: phi hành thơm ngả vàng sau đó cho thịt vào xào chuyển sang màu vàng chín\nXào rau, nêm nếm gia vị\nLàm nước mắm trộn: mắm, nước sôi, đường, quất(chanh), tỏi, ớt, tiêu\nCho các thành phần đã làm xong vào bát, trộn đều và thưởng thức thành quả",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Phở cuốn chay",
+    "description": "Phở cuốn chay mang đến một trải nghiệm ẩm thực nhẹ nhàng, thanh mát với sự kết hợp hài hòa của lá phở sắn mềm mại, đậu phụ béo ngậy và các loại rau củ giòn tươi như dưa leo, ớt chuông, bắp cải tím. Mỗi cuốn phở được gói ghém khéo léo, khi chấm cùng nước mắm chay chua ngọt sẽ đánh thức mọi giác quan, tạo nên hương vị đậm đà mà vẫn giữ được sự thanh đạm, dễ chịu. Đây là lựa chọn hoàn hảo cho những ai tìm kiếm một món ăn vừa ngon miệng, vừa tốt cho sức khỏe.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "lá phở sắn",
+      "đậu phụ",
+      "dưa leo",
+      "ớt chuông đỏ",
+      "ớt chuông vàng",
+      "bắp cải tím",
+      "bánh tráng rau củ",
+      "nước mắm chay chua ngọt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Cuốn / Gói",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "2 lá Phở sắn",
+      "100 g Đậu phụ",
+      "50 g Dưa leo",
+      "25 g Ớt chuông đỏ",
+      "25 g Ớt chuông vàng",
+      "25 g Bắp cải tím",
+      "2 miếng Bánh tráng rau củ",
+      "1/2 chén Nước mắm chay chua ngọt"
+    ],
+    "ingredients": [
+      "lá phở sắn",
+      "đậu phụ",
+      "dưa leo",
+      "ớt chuông đỏ",
+      "ớt chuông vàng",
+      "bắp cải tím",
+      "bánh tráng rau củ",
+      "nước mắm chay chua ngọt"
+    ],
+    "raw_instructions": "Ngâm 2 lá phở sắn trong nước ấm 5-7 phút cho mềm, vớt ra để ráo.\nĐậu phụ cắt miếng dài, chiên vàng rồi cắt sợi.\nDưa leo, ớt chuông, bắp cải tím rửa sạch, cắt sợi vừa ăn.\nLàm ẩm 2 miếng bánh tráng rau củ cho mềm.\nXếp phở sắn, rau củ, đậu phụ vào bánh tráng rau củ, cuộn chặt tay.\nDùng kèm nước mắm chay.\nBí quyết: Bạn có thể thêm các loại rau củ khác theo sở thích để tăng thêm hương vị.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Chả lụa chay kho tiêu",
+    "description": "Món chả lụa chay kho tiêu mang đến hương vị đậm đà, thơm lừng mùi boa rô phi và cay nhẹ của tiêu xay. Từng miếng chả chay thấm đẫm gia vị mặn ngọt hài hòa, tạo nên một món ăn chay đầy hấp dẫn. Đây là lựa chọn tuyệt vời để ăn cùng cơm nóng, vừa ấm bụng lại vừa đưa cơm cho bữa trưa hay bữa tối.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "chả lụa chay",
+      "boa rô",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu đạm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1/2 kg chả lụa chay",
+      "Boa rô , tiêu và gia vị"
+    ],
+    "ingredients": [
+      "chả lụa chay",
+      "boa rô",
+      "tiêu",
+      "gia vị"
+    ],
+    "raw_instructions": "Chả cắt miếng vừa ăn\nPhi boa rơm thơm rồi cho chả vào đảo đều sau đó cho nước tương, hạt nêm, đường và muối vào nêm vừa ăn. Gần cạn cho hạt tiêu vào đảo đều và tắt bếp.\nMón này ăn kèm cơm nóng.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Đậu hũ bao bố",
+    "description": "Thưởng thức Đậu hũ bao bố, bạn sẽ cảm nhận được sự mềm mại của lớp đậu hũ bên ngoài, ôm trọn phần nhân rau củ và nấm được nêm nếm đậm đà. Món ăn được khìa nhẹ nhàng trong nước sốt mặn ngọt, tạo nên hương vị hài hòa, thơm lừng và rất đưa cơm. Đây là lựa chọn tuyệt vời cho những ai yêu thích ẩm thực chay, vừa thanh đạm lại vừa ấm bụng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu hũ",
+      "củ sắn",
+      "khoai lang",
+      "cà rốt",
+      "nấm mèo",
+      "nấm hương",
+      "bún tàu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Mềm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "4 miếng Đậu hũ",
+      "Củ sắn , khoai lang , cà rốt",
+      "Nấm mèo , nấm hương , bún tàu"
+    ],
+    "ingredients": [
+      "đậu hũ",
+      "củ sắn",
+      "khoai lang",
+      "cà rốt",
+      "nấm mèo",
+      "nấm hương",
+      "bún tàu"
+    ],
+    "raw_instructions": "Sơ chế nguyên liệu: cắt nhuyễn các loại củ, nấm, đậu hũ hủ cắt lát 1 đầu, dùng muỗng múc ruột ra trộn với củ để làm nhân. Ướp nhân với xíu hạt nêm chay, tiêu, hành ba rô băm nhuyễn.\nNhồi nhân vô đậu hũ, trụng sơ cọng hành lá để cột Đậu hũ. Cho Đậu hũ lên chảo ít dầu chiên sơ. Băm hành tỏi cho lên cho thơm. Pha 2 muỗng canh nước tương + muỗng canh đường, 2 muỗng canh nước khuấy tan rồi đổ lên Đậu hũ khìa cho thấm. Thêm xíu tiêu cho thơm.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Cơm chiên lá é chay",
+    "description": "Món cơm chiên lá é chay mang đến hương vị độc đáo và thanh đạm. Từng hạt cơm săn chắc được chiên vàng ươm, thấm đượm mùi thơm nồng đặc trưng của lá é giã nhuyễn. Nấm đùi gà dai ngọt, bổ sung thêm kết cấu và vị umami tự nhiên, tạo nên một món ăn chay đầy đủ hương vị, vừa ngon miệng lại vừa ấm bụng, rất phù hợp cho những bữa ăn chính mà vẫn đảm bảo dinh dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cơm nguội",
+      "lá é trắng",
+      "nấm đùi gà",
+      "hạt nêm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Cơm nguội",
+      "Lá é trắng (hay còn gọi húng quế trắng)",
+      "Nấm đùi gà",
+      "Hạt nêm"
+    ],
+    "ingredients": [
+      "cơm nguội",
+      "lá é trắng",
+      "nấm đùi gà",
+      "hạt nêm"
+    ],
+    "raw_instructions": "Lá é cắt nhỏ, cho vào cối giã nhuyễn.\nNấm đùi gà lấy tay tước thành từng miếng nhỏ.Xào nấm với hạt nêm khoảng 10’, nấm khô lại một chút là được.\nXào lá é nhỏ lửa với dầu ăn và hạt nêm.Cho cơm nguội vào đảo đều, nêm hạt nêm vừa ăn.\nChiên cơm khoảng 5’ thì cho tiếp nấm vào đảo đều thêm vài phút thì tắt bếp",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Canh chua nấm chay",
+    "description": "Món canh chua nấm chay này sẽ đánh thức vị giác của bạn với vị chua thanh dịu từ thơm và nước tắc, hòa quyện cùng vị ngọt tự nhiên của rau củ. Nấm kim châm và đậu hũ non mềm mại, dễ ăn, tạo nên một tổng thể thanh đạm mà vẫn đủ đầy. Đây là lựa chọn hoàn hảo cho những bữa ăn nhẹ nhàng, giúp giải nhiệt và làm ấm bụng, mang lại cảm giác sảng khoái và dễ chịu.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu rồng",
+      "nấm kim châm",
+      "đậu hũ non",
+      "cà chua",
+      "thơm",
+      "ngò gai",
+      "nước tắc",
+      "muối",
+      "đường",
+      "nước mắm chay"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Hấp / Luộc",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Thanh mát/Giải nhiệt"
+    ],
+    "raw_ingredients": [
+      "100 g Đậu rồng ( đỗ khế )",
+      "50 g Nấm kim châm",
+      "1 miếng (150 g) Đậu hũ non",
+      "1 quả (80 g) Cà chua",
+      "50 g Thơm ( dứa )",
+      "5 g Ngò gai",
+      "2 muỗng canh Nước tắc",
+      "500 ml Nước lọc",
+      "1/2 muỗng cà phê Muối",
+      "1/2 muỗng cà phê Đường",
+      "1 muỗng canh Nước mắm chay"
+    ],
+    "ingredients": [
+      "đậu rồng",
+      "nấm kim châm",
+      "đậu hũ non",
+      "cà chua",
+      "thơm",
+      "ngò gai",
+      "nước tắc",
+      "nước lọc",
+      "muối",
+      "đường",
+      "nước mắm chay"
+    ],
+    "raw_instructions": "Đậu rồng rửa sạch, cắt xéo; cà chua bổ múi cau; thơm cắt lát mỏng.\nĐun sôi 500ml nước, cho cà chua và thơm vào nấu 3 phút cho ra vị ngọt.\nThêm đậu rồng, nấm kim châm vào nấu thêm 2 phút.\nNhẹ nhàng cho đậu hũ non vào sau cùng, nêm muối, đường, nước mắm chay.\nTắt bếp, cho nước tắc vào, rắc ngò gai lên trên và thưởng thức.\nBí quyết: Nên cho đậu hũ vào sau cùng để giữ nguyên độ mềm và không bị nát.",
+    "taste_profile": [
+      "Thanh đạm",
+      "Chua"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Giải rượu",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Mướp đắng kho tiêu chay",
+    "description": "Món Mướp đắng kho tiêu chay mang đến hương vị đặc trưng khó quên của khổ qua, được cân bằng khéo léo bởi vị đậm đà từ nước tương, chút ngọt nhẹ của đường và sự ấm nồng, cay the của tiêu và ớt. Từng miếng khổ qua mềm mại thấm đẫm gia vị, tạo nên một món ăn chay đầy lôi cuốn, rất đưa cơm. Đây là lựa chọn tuyệt vời cho những bữa ăn thanh đạm nhưng vẫn đủ đầy hương vị, giúp bạn cảm thấy khỏe khoắn và ngon miệng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "khổ qua",
+      "xì dầu",
+      "hạt nêm chay",
+      "ớt",
+      "tiêu",
+      "hành ngò",
+      "đường"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Healthy / Eat Clean",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "4 trái khổ qua",
+      "3 muỗng xì dầu",
+      "1 muỗng hạt nêm chay",
+      "2 trái ớt, 2 muỗng tiêu",
+      "Hành ngò",
+      "1 muỗng đường"
+    ],
+    "ingredients": [
+      "khổ qua",
+      "xì dầu",
+      "hạt nêm chay",
+      "ớt",
+      "tiêu",
+      "hành ngò",
+      "đường"
+    ],
+    "raw_instructions": "Khổ qua mua về chẻ nhỏ ngâm nc muối pha loãng 15’\nPhi tỏi vàng cho khổ qua vào xào dày giây cho đều, cho nc tưong. Hạt nêm. Đường. Tieu vào xào cho gia vị thấm, đổ nua chén nước sôi vào kho cho chín rồi cho hành ngò vào.\nThành phẩm",
+    "taste_profile": [
+      "Đậm đà",
+      "Đắng"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Chả nấm bào ngư",
+    "description": "Món chả nấm bào ngư hấp dẫn này mang đến hương vị đậm đà, thơm lừng từ nấm và hành boa-rô, kết hợp cùng các loại gia vị được nêm nếm khéo léo. Từng miếng chả mềm mại nhưng vẫn giữ được độ dai sần sật đặc trưng, rất thích hợp để thưởng thức như một món ăn chay thanh đạm, bổ dưỡng mà vẫn vô cùng đưa cơm. Đây chắc chắn sẽ là lựa chọn tuyệt vời cho những bữa ăn lành mạnh hoặc các bữa tiệc chay.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [
+      7
+    ],
+    "core_ingredients": [
+      "nấm bào ngư xám",
+      "bột mì đa dụng",
+      "bột năng",
+      "hành boa-rô",
+      "dầu ăn",
+      "đường",
+      "bột ngọt",
+      "muối",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [
+      "muối"
+    ],
+    "soft_tags": [
+      "Món khô",
+      "Hấp / Luộc",
+      "Giàu chất xơ",
+      "Healthy / Eat Clean",
+      "Dai / Sần sật",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "200 gr nấm bào ngư xám",
+      "100 gr bột mì đa dụng",
+      "60 gr bột năng",
+      "30 gr hành boa-rô",
+      "1 muỗng canh dầu ăn",
+      "1 muỗng canh đường",
+      "2 muỗng cafe bột ngọt",
+      "1 muỗng cafe muối",
+      "1 muỗng cafe tiêu"
+    ],
+    "ingredients": [
+      "nấm bào ngư xám",
+      "bột mì đa dụng",
+      "bột năng",
+      "hành boa-rô",
+      "dầu ăn",
+      "đường",
+      "bột ngọt",
+      "muối",
+      "tiêu"
+    ],
+    "raw_instructions": "Sơ chế nguyên liệu: Nấm bào ngư cắt bỏ chân nấm rồi rửa qua nước muối loãng không ngâm xong rửa lại bằng nước sạch, sau đó bóp nấm nhẹ cho ra bớt nước & xé nấm thành những sợi nhỏ... Hành boa-rô cắt lát\nTrộn gia vị vào nấm & xay mịn: Để nấm vào thố rồi đến các nguyên liệu ở bước 1 vào cùng 100ml nước lọc xong trộn hỗn hợp lên cho thấm đều vị... Cho hỗn hợp vừa trộn vào cối xay của máy xay thịt & tiến hành xay, xay đến khi hỗn hợp nhuyễn mịn là được\nHấp chả: Cho hỗn hợp vừa xay ở bước 2 ra những chén nhỏ rồi đem đi hấp 25 phút là chả chín, sau đó đem chả ra ngoài để nguội xong cho chả vào ngăn mát tủ lạnh để chả dẻo & cứng lại (với nguyên liệu trên làm được 6 chén như hình)\nThành phẩm: Chả chén có màu trắng ngà, vị ngọt ngon & thơm... Đây là món ăn hấp dẫn, nên có trong các món tiệc chay như: làm chả chiên, chả hấp chấm tương ớt, muối tiêu & nhiều món khác nữa",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Mít non kho tộ chay",
+    "description": "Món mít non kho tộ chay mang đến hương vị đậm đà, mặn ngọt hài hòa, thấm đẫm từng thớ mít non mềm mại. Nước sốt sền sệt, óng ánh bao bọc lấy miếng mít, tạo nên một món ăn chay đầy lôi cuốn, đưa cơm và ấm bụng. Đây chắc chắn là lựa chọn tuyệt vời cho những bữa cơm gia đình thanh đạm nhưng vẫn tròn vị.",
+    "core_ingredient_indices": [
+      0,
+      1
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "mít non",
+      "gia vị nêm chay"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu chất xơ",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1 miếng mít non",
+      "Gia vị nêm chay"
+    ],
+    "ingredients": [
+      "mít non",
+      "gia vị nêm chay"
+    ],
+    "raw_instructions": "Mít cắt miếng vừa ăn rửa qua nước pha muối cho trắng rồi rửa lại cho sạch.\nCho mít lên chảo ít dầu chiên vàng,cho chút đường lên cho hơi cháy\nĐổ mít vào tộ,thêm nước tương, hành tím băm, đường, muối, bột ngọt và 1/2 chén nước rim cho mít thấm gia vị",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Gỏi mít non chay",
+    "description": "Món gỏi mít non chay mang đến hương vị thanh đạm nhưng vẫn đậm đà, hấp dẫn. Từng sợi mít non mềm mại hòa quyện cùng đậu khuôn chiên béo ngậy, nấm xào thơm lừng và rau răm tươi mát. Đặc biệt, vị giòn rụm của đậu phộng rang và bánh tráng nướng sẽ làm món ăn thêm phần lôi cuốn, kích thích vị giác. Đây là lựa chọn hoàn hảo cho những bữa ăn nhẹ nhàng mà vẫn đủ chất, đưa cơm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "preprocessing_ingredient_indices": [
+      4
+    ],
+    "core_ingredients": [
+      "mít non",
+      "lát đậu khuôn",
+      "nấm bào ngư",
+      "nấm rơm tươi",
+      "tai nấm mèo",
+      "boaro",
+      "ớt đỏ",
+      "rau răm",
+      "đậu phộng",
+      "dầu ăn",
+      "hạt nêm",
+      "tiêu",
+      "nước tương",
+      "bánh tráng nướng"
+    ],
+    "preprocessing_ingredients": [
+      "tai nấm mèo"
+    ],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Giàu chất xơ",
+      "Giòn / Giòn rụm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1 kg mít non",
+      "2 lát đậu khuôn",
+      "200 gram nấm bào ngư",
+      "100 gram nấm rơm tươi",
+      "3 tai nấm mèo",
+      "Boaro",
+      "Ớt đỏ",
+      "Rau răm",
+      "Đậu phộng",
+      "Dầu ăn",
+      "hạt nêm",
+      "tiêu",
+      "nước tương",
+      "Bánh tráng nướng"
+    ],
+    "ingredients": [
+      "mít non",
+      "lát đậu khuôn",
+      "nấm bào ngư",
+      "nấm rơm tươi",
+      "tai nấm mèo",
+      "boaro",
+      "ớt đỏ",
+      "rau răm",
+      "đậu phộng",
+      "dầu ăn",
+      "hạt nêm",
+      "tiêu",
+      "nước tương",
+      "bánh tráng nướng"
+    ],
+    "raw_instructions": "Mít non luộc chín, để nguội, xắt nhỏ.\nNấm rơm tươi, nấm bào ngư cắt gốc, nấm mèo ngâm với nước ấm, rửa sạch. Đậu khuôn chiên vàng, tất cả đều xắt nhỏ.\nCho chảo lên bếp, tao boaro, hành tím với dầu, múc ra 1 chén riêng, sau đó cho nấm rơm, nấm bào ngư vào xào, sau đó cho đậu khuôn xắt nhỏ vào, nêm hạt nêm, tiêu vừa ăn.\nĐậu phộng rang, bóc vỏ, giã dập.\nCho hỗn hợp nấm đậu xào vào thau mít, thêm nước tương, tiếp theo đến đậu phộng và rau răm, trộn đều vào cho ra dĩa, dùng bánh tráng xúc mít.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Bún chả cá chay",
+    "description": "Thưởng thức tô bún chả cá chay nóng hổi, bạn sẽ cảm nhận ngay vị nước dùng đậm đà, ngọt thanh tự nhiên từ các loại rau củ như bí đỏ, bắp cải và thơm được hầm kỹ. Chả chay và tàu hủ ky chiên vàng óng, dai dai hòa quyện cùng sợi bún mềm mại và măng nứa giòn sần sật, tạo nên một trải nghiệm vị giác phong phú. Đây là món ăn chay thanh đạm, giàu chất xơ nhưng vẫn đủ đầy dinh dưỡng, rất thích hợp để ấm bụng vào bất kỳ thời điểm nào trong ngày.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "chả chay",
+      "cọng tàu hủ ky",
+      "cà chua",
+      "nhỏ thơm",
+      "bí đỏ",
+      "bắp cải",
+      "măng nứa tươi",
+      "bún tươi",
+      "hành lá",
+      "rau sống: xà lách thái nhỏ",
+      "rau thơm",
+      "chanh",
+      "ớt tuỳ ý"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Hầm / Ninh",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Mềm",
+      "Đặc sản Đà Nẵng"
+    ],
+    "raw_ingredients": [
+      "1 miếng chả chay",
+      "1 cọng tàu hủ ky",
+      "1 trái cà chua",
+      "1 miếng nhỏ thơm",
+      "1 miếng bí đỏ",
+      "1 miếng bắp cải",
+      "1 cây măng nứa tươi",
+      "Bún tươi, hành lá , rau sống: xà lách thái nhỏ + rau thơm",
+      "Chanh , ớt tuỳ ý"
+    ],
+    "ingredients": [
+      "chả chay",
+      "cọng tàu hủ ky",
+      "cà chua",
+      "nhỏ thơm",
+      "bí đỏ",
+      "bắp cải",
+      "măng nứa tươi",
+      "bún tươi",
+      "hành lá",
+      "rau sống: xà lách thái nhỏ",
+      "rau thơm",
+      "chanh",
+      "ớt tuỳ ý"
+    ],
+    "raw_instructions": "Măng tươi xé sợi rồi luộc với chút muối, khi luộc nhớ mở nắp nồi để chất độc trong măng bay hơi đi. Luộc 5-10' rồi đổ ra rổ, rửa lại bằng nước lạnh. Các loại rau củ cắt miếng lớn để khi nấu không bị nát, riêng thơm thái lát mỏng. Cho tất cả và nồi, thêm 2 tô nước vào. Thêm 1 muỗng canh hạt nêm nấm, 1 muỗng cafe muối hầm, 1 muỗng cafe đường phèn. Nấu sôi rồi hạ nhỏ lửa, đạy nắp để rau củ ra nước ngọt.\nTrong lúc chờ hầm nước, bạn cắt khúc tàu hủ ky cọng, chả cá miếng tròn đem cắt làm 4 hoặc cứ để cả miếng mà chiên rồi thái lát sau. Chiên vàng cả 2 loại rồi vớt ra.\nSau khoảng 30', bí đỏ và bắp cải đã mềm, bạn nếm lại nước lèo, nếu nhạt thì chỉ thêm muối thôi nhé. Rồi cho tất cả tàu hủ ky và chả chay đã chiên vào nồi. Thêm một ít dầu điều vào cho đẹp.\nKhi ăn cho bún ra tô, chan nước lèo, và cả các loại rau củ + chả chay + tàu hủ ky vào luôn nhé, rắc hành lá lên là xong. Bún dọn kèm rau xà lách thái nhỏ & rau thơm, thêm lát chanh và tương ớt xào vào rồi măm măm luôn!",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Bánh nậm chay",
+    "description": "Món bánh nậm chay này mang đến hương vị thanh đạm, nhẹ nhàng nhưng vẫn đủ sức làm ấm lòng. Lớp vỏ bánh bột gạo mềm mại, tan chảy trong miệng, ôm trọn phần nhân đậm đà từ nấm đùi gà, nấm mèo và cà rốt xào thơm lừng. Đây chắc chắn là lựa chọn tuyệt vời cho những ai yêu thích ẩm thực chay, tìm kiếm một món ăn vừa ngon miệng vừa dễ tiêu.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột bánh",
+      "bột gạo",
+      "muối",
+      "dầu ăn",
+      "nấm đùi gà",
+      "nấm mèo đã ngâm nở",
+      "cà rốt",
+      "đậu hũ xay nhuyễn",
+      "hành lá cắt nhỏ"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Hấp / Luộc",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Bột bánh",
+      "200 g Bột gạo",
+      "460 ml Nước",
+      "1/2 muỗng cà phê Muối",
+      "1 muỗng canh Dầu ăn",
+      "Nhân bánh",
+      "50 g Nấm đùi gà",
+      "20 g Nấm mèo đã ngâm nở (nếu thích)",
+      "30 g Cà rốt",
+      "80 g Đậu hũ xay nhuyễn",
+      "2 muỗng canh hành lá cắt nhỏ",
+      "1 tsp dầu ăn"
+    ],
+    "ingredients": [
+      "bột bánh",
+      "bột gạo",
+      "nước",
+      "muối",
+      "dầu ăn",
+      "nhân bánh",
+      "nấm đùi gà",
+      "nấm mèo đã ngâm nở",
+      "cà rốt",
+      "đậu hũ xay nhuyễn",
+      "hành lá cắt nhỏ",
+      "dầu ăn"
+    ],
+    "raw_instructions": "Trộn bột gạo với 460ml nước, dầu ăn và muối cho tan đều. Bánh chỉ dùng bột gạo thì sẽ mềm. Nếu thích bánh dẻo hơn thì bạn hãy thêm 1 tbsp bột năng. Hoặc dùng gói bột bánh cuốn trộn sẵn cũng ngon.\nLá chuối rửa sạch trụng sơ cho mềm. Hoặc bỏ ngăn đông khi nào gói lấy ra rã đông.\nCà rốt phải bào nhỏ trước thì khi xay mới nhuyễn mịn. Cà rốt tạo màu cam như bánh nậm tôm mặn vậy đó. Đậu hũ này có sẵn nấm và rong biển. Nấm đùi gà rửa sạch thấm khô.\nNấm đùi gà, nấm mèo, cà rốt xay nhuyễn, đậu hũ xay nhuyễn.\nPhi thơm hành lá/poro cho nhân vào xào cho bay hơi bớt nước. Lúc này nêm muối tiêu đường vừa ăn.\nKhuấy bột trên bếp lửa vừa, bột vừa đặc lại khuấy tiếp liên tục 1 phút sau khi tắt bếp.\nTrải bột lên lá chuối, cho nhân vào giữa, gấp lại.\nHấp bánh khoảng 20 phút đến khi bánh chín trong.\nBí quyết: Có thể thêm tiêu hoặc hành phi vào nhân để tăng thêm hương vị.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn sáng"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Bánh lọc trần chay",
+    "description": "Bánh lọc trần chay mang đến trải nghiệm ẩm thực nhẹ nhàng nhưng đầy tinh tế. Lớp vỏ bánh từ bột năng mềm mại, dai nhẹ ôm trọn phần nhân rau củ nấm thanh đạm, ngọt tự nhiên. Món ăn được hấp chín tới, giữ trọn hương vị tươi ngon của nguyên liệu, rất thích hợp cho những ai tìm kiếm sự thanh tịnh và ấm bụng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bột năng",
+      "bột tàn mì",
+      "bắp ngọt",
+      "cà rốt cắt hạt lựu hấp chín",
+      "nấm đông cô ngâm nở",
+      "nấm kim châm",
+      "lá tàu hủ ki chiên giòn bóp nhỏ",
+      "lá chuối"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Hấp / Luộc",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "150 gr bột năng",
+      "10 gr bột tàn mì",
+      "230 ml nước",
+      "50 gr bắp ngọt",
+      "50 gr cà rốt cắt hạt lựu hấp chín",
+      "50 gr nấm đông cô ngâm nở",
+      "50 gr nấm kim châm",
+      "1 lá tàu hủ ki chiên giòn bóp nhỏ",
+      "Lá chuối"
+    ],
+    "ingredients": [
+      "bột năng",
+      "bột tàn mì",
+      "nước",
+      "bắp ngọt",
+      "cà rốt cắt hạt lựu hấp chín",
+      "nấm đông cô ngâm nở",
+      "nấm kim châm",
+      "lá tàu hủ ki chiên giòn bóp nhỏ",
+      "lá chuối"
+    ],
+    "raw_instructions": "Lá chuối rửa sạch trụng sơ nước sôi cho mềm, để ráo. Phi hành tỏi xào rau củ nấm cho chín. Nêm gia vị vừa ăn. Bột quậy với nước và 1 mcf dầu ăn cho nghỉ 10ph.\nDùng chảo đáy dày cho bột vô quậy vừa đặc lại nhấc xuống quậy tiếp cho bột đặc quện lại 1 khối. Quét dầu ăn lên lá chuối, thêm 1 mcf bột dàn đều, 1 mcf nhân gói lại.\nCột 2 cái thành 1 cặp bằng lá chuối tước nhỏ. Hấp 20 ph sau nước sôi.\nBánh nguội hẳn thì gắp ra ăn, dùng kèm nước mắm chay.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn sáng"
+    ],
+    "occasion_context": [
+      "Ăn vặt",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Mỳ xíu chay",
+    "description": "Món mỳ xíu chay này sẽ đánh thức mọi giác quan của bạn với hương vị đậm đà, thơm lừng từ nước dùng được nêm nếm khéo léo. Sợi mỳ vàng dai ngon hòa quyện cùng tàu hủ chiên giòn rụm, béo béo, thêm chút thanh mát của cải thìa và giá. Đây là lựa chọn hoàn hảo cho một bữa ăn chay đầy đủ dinh dưỡng, ấm bụng và vô cùng đưa miệng, khiến bạn muốn húp cạn đến giọt cuối cùng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cục tàu hủ",
+      "cọng cải thìa cắt khúc khoảng",
+      "hành tây nhỏ cắt hạt lựu",
+      "vắt mì vàng cọng nhỏ khô",
+      "nắm giá rửa sạch rồi để ráo",
+      "muối",
+      "đường",
+      "chút bột ngọt",
+      "bột xá xíu",
+      "dầu oliu",
+      "cọng hành lá",
+      "cọng ngò cắt lát chung với nhau để vô chén"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Xào",
+      "Giàu đạm",
+      "Giàu tinh bột",
+      "Giòn / Giòn rụm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1/2 cục (150g) tàu hủ",
+      "2 cọng cải thìa cắt khúc khoảng 3cm",
+      "1/2 củ hành tây nhỏ cắt hạt lựu",
+      "1 vắt mì vàng cọng nhỏ khô",
+      "1/2 nắm giá rửa sạch rồi để ráo",
+      "Muối, đường, chút bột ngọt , 2 muỗng canh bột xá xíu, dầu oliu",
+      "1 cọng hành lá và 3 cọng ngò cắt lát chung với nhau để vô chén"
+    ],
+    "ingredients": [
+      "cục tàu hủ",
+      "cọng cải thìa cắt khúc khoảng",
+      "hành tây nhỏ cắt hạt lựu",
+      "vắt mì vàng cọng nhỏ khô",
+      "nắm giá rửa sạch rồi để ráo",
+      "muối",
+      "đường",
+      "chút bột ngọt",
+      "bột xá xíu",
+      "dầu oliu",
+      "cọng hành lá",
+      "cọng ngò cắt lát chung với nhau để vô chén"
+    ],
+    "raw_instructions": "Cắt 10 lát tàu hủ, nêm bột xá xíu rồi để vào tủ lạnh\nTàu hủ còn lại, cắt cục vuông\nTrong 1 cái nồi, để 1 muỗng canh dầu oliu, đợi dầu nóng, để hành tây cắt hạt lựu vào, xào cho đến khi hành hơi vàng, để cải thìa cắt khúc vào, xào khoảng 5 phút rồi để 200ml nước lọc vào, đợi sôi, nêm muối đường chút bột ngọt cho vừa ăn\nLấy tàu hủ ướp bột xá xíu ra chiên giòn rồi cắt thành từng miếng dài\nTrước khi làm nước lèo, để 1 vắt mì vàng vào 1thao nước lọc nhỏ cho mì mềm, để vào rổ ráo nước\nĐể giá vào tô ăn súp, để mì vàng cọng nhỏ lên trên giá, để tàu hủ chiên lên trên cùng rồi chế nước lèo có tàu hủ luột và cải thìa vào, xong để thêm hành lá và ngò lên trên cùng\nChúc ăn ngon",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Đậu hũ sốt cà chua",
+    "description": "Món đậu hũ sốt cà chua mang đến hương vị dân dã, quen thuộc mà lại cực kỳ đưa cơm. Từng miếng đậu hũ mềm mại thấm đẫm vị chua ngọt hài hòa của cà chua, quyện cùng mùi thơm của hành phi, tạo nên một tổng thể ấm áp, dễ ăn. Đây chắc chắn là lựa chọn tuyệt vời cho bữa cơm gia đình, vừa thanh đạm lại vừa đủ đầy.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "cà chua nhỏ",
+      "bìa đậu trắng",
+      "hành củ",
+      "hành lá"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Xào",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "2 quả cà chua nhỏ",
+      "1 bìa đậu trắng",
+      "Hành củ , hành lá , gia vị"
+    ],
+    "ingredients": [
+      "cà chua nhỏ",
+      "bìa đậu trắng",
+      "hành củ",
+      "hành lá",
+      "gia vị"
+    ],
+    "raw_instructions": "Cà chua cắt ngang quả, phi thơm hành, cho cà chua vào xào với 1 thìa canh mắm, 1 thìa cf đường cho đến khi cà nhừ thì gắp bỏ vỏ cà.\nĐậu trắng bóp nát, cho vào xào cùng với cà chua cho thấm gia vị. Nêm nếm cho vừa miệng.\nRắc hành lá cắt nhuyễn vào rồi tắt bếp. Món này ăn cùng cơm trắng nó ngon làm sao á!",
+    "taste_profile": [
+      "Đậm đà",
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Nấm rơm kho tộ",
+    "description": "Món nấm rơm kho tộ mang đến hương vị đậm đà, mặn ngọt hài hòa, thấm đẫm từng cây nấm mềm mại. Chút cay nồng từ ớt và tiêu sẽ đánh thức vị giác, khiến bữa cơm thêm phần hấp dẫn. Nước sốt sền sệt, óng ánh bám đều vào nấm, hứa hẹn một trải nghiệm ẩm thực ấm bụng và đưa cơm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "nấm rơm",
+      "dầu ăn",
+      "ớt trái",
+      "boa rô",
+      "bột nêm",
+      "mì chính",
+      "tiêu",
+      "ớt bột"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Nấm rơm",
+      "Dầu ăn , ớt trái , boa rô",
+      "Bột nêm , mì chính, tiêu, ớt bột"
+    ],
+    "ingredients": [
+      "nấm rơm",
+      "dầu ăn",
+      "ớt trái",
+      "boa rô",
+      "bột nêm",
+      "mì chính",
+      "tiêu",
+      "ớt bột"
+    ],
+    "raw_instructions": "Nấm cắt đuôi ngâm muối rửa sạch để ráo và cho vào thố.\nCho vào cối đuôi boa rô,ớt trái và tiêu giã nhuyễn.\nƯớp gia vị bột nêm, mì chính muối, đường, ớt bột, hỗn hợp giã nhuyễn trộn đều lên cho vào tí dầu phi đuôi boa rô.\nCho đường vào thố đất nấu chảy thành màu vàng thì cho nấm vào trộn đều, cho thêm tí nước và thả ớt trái vào.\nNêm vừa khẩu vị để lửa nhỏ rim keo lại rồi rắc lá boa rô lên trộn đều tắt lửa",
+    "taste_profile": [
+      "Đậm đà",
+      "Cay"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Miến xào nấm mèo",
+    "description": "Miến xào nấm mèo là món ăn thanh đạm nhưng vẫn đủ sức làm hài lòng vị giác với sợi miến dong dai dai, thấm vị. Hòa quyện cùng rau cải thảo giòn ngọt, mộc nhĩ sần sật và cà rốt tươi mát, món ăn mang đến sự cân bằng hoàn hảo. Hương thơm nhẹ nhàng từ nước tương và hạt nêm quyện vào từng sợi miến, tạo nên một trải nghiệm ẩm thực nhẹ nhàng mà vẫn rất đưa miệng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "miến dong",
+      "rau cải thảo",
+      "cái mộc nhĩ",
+      "cà rốt",
+      "dầu ăn",
+      "nước tương",
+      "hạt nêm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Xào",
+      "Giàu chất xơ",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "50 g Miến dong (hoặc 100gr miến tươi )",
+      "Rau cải thảo",
+      "1 cái Mộc nhĩ",
+      "20 g Cà rốt",
+      "1 muỗng Dầu ăn",
+      "1 muỗng Nước tương",
+      "1 muỗng cà phê Hạt nêm"
+    ],
+    "ingredients": [
+      "miến dong",
+      "rau cải thảo",
+      "cái mộc nhĩ",
+      "cà rốt",
+      "dầu ăn",
+      "nước tương",
+      "hạt nêm"
+    ],
+    "raw_instructions": "Ngâm miến cho mềm, trộn với dầu ăn, nước tương, hạt nêm.\nCho miến đã trộn vào xửng hấp trong 5 phút.\nCải thảo, mộc nhĩ, cà rốt cắt sợi.\nXào rau củ với nước tương cho chín tới.\nMiến hấp xong, trộn đều với rau củ đã xào. Rắc thêm một ít hạt tiêu. Bày ra đĩa",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Canh khổ qua nhồi đậu hũ",
+    "description": "Món canh khổ qua nhồi đậu hũ là sự kết hợp hài hòa giữa vị đắng thanh đặc trưng của khổ qua, nhân thịt bằm và nấm mèo đậm đà, cùng miếng đậu hũ chiên vàng giòn ăn kèm. Nước canh trong veo, ngọt dịu từ thịt hầm, làm mềm đi vị đắng đặc trưng, tạo nên một trải nghiệm ẩm thực ấm áp và đầy đủ dinh dưỡng. Đây là lựa chọn lý tưởng cho bữa cơm gia đình, vừa giải nhiệt vừa bổ dưỡng. Hương vị truyền thống này chắc chắn sẽ làm hài lòng mọi thành viên.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      4,
+      7,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "khổ qua",
+      "thịt bằm",
+      "nấm mèo khô",
+      "đậu hũ chiên",
+      "tỏi băm",
+      "nước mắm",
+      "dầu ăn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Hầm / Ninh",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "150 gr (1 trái rưỡi) Khổ qua",
+      "100 gr Thịt bằm (50gr nhồi khổ qua , 50gr chiên với trứng )",
+      "10 gr Nấm mèo khô",
+      "02 quả Trứng gà",
+      "1/2 miếng ( loại 100gr/ miếng ) đậu hũ chiên",
+      "100 gr Rau muống",
+      "01 trái (khoảng 50gr) Dưa leo baby",
+      "10 gr Tỏi băm",
+      "100 gr Gạo",
+      "Nước mắm",
+      "Dầu ăn"
+    ],
+    "ingredients": [
+      "khổ qua",
+      "thịt bằm",
+      "nấm mèo khô",
+      "trứng gà",
+      "đậu hũ chiên",
+      "rau muống",
+      "dưa leo baby",
+      "tỏi băm",
+      "gạo",
+      "nước mắm",
+      "dầu ăn"
+    ],
+    "raw_instructions": "NẤU CƠM: Vo gạo qua 2-3 lần nước cho sạch, đổ vào nồi. Đong nước vừa đủ (tuỳ theo loại gạo nhà bạn ăn là gì). Bỏ vào nồi, cắm điện, nhấn nút Cook. ***Tips: dùng nước nóng sẽ giúp cơm chín nhanh hơn.\nSƠ CHẾ: Ngâm nấm mèo. Rửa sạch các loại rau và để ráo (rau muống, khổ qua, dưa leo). Khổ qua xẻ đôi moi hết ruột ra. Vớt nấm mèo ra, để ráo. Đậu hũ cắt nhỏ miếng vừa ăn.\nSƠ CHẾ: Ướp thị bằm với tỏi và nước mắm. Chia đôi ra 2 phần. Đập trứng ra đánh đều lên, cho 50gr thịt bằm đã ướp vào và trộn đều. Vớt nấm mèo ra để ráo và trộn đều với 45gr thịt bằm đã ướp còn lại, trộn đều, nhồi vào khổ qua.\nCHẾ BIẾN: <Đậu hũ chiên> làm nóng chảo - cho một ít dầu ăn vào - dầu nóng - bỏ đậu hũ vào chiên - mở lửa vừa phải để đậu hũ không bị cháy\nCHẾ BIẾN: <Canh khổ qua> bật bếp bên cạnh làm nóng nồi - cho một ít dầu ăn vào - bỏ tỏi vào đảo đều cho thơm - cho 5gr thịt bằm và 1 chút nước mắm vào đảo đều cho thơm - đong 2 chén nước nóng đổ vào - đun sôi (trong lúc đợi nước sôi thì quay qua bếp bên kia trở mặt đậu hũ nha) - bỏ khổ qua đã nhồi thịt vào để lửa vừa phải cho tới khi khổ qua đổi màu xanh chuối thì tắt bếp.\nCHẾ BIẾN: <Trứng chiên thịt> đậu hũ chín gắp ra dĩa cho ráo dầu - đổ trứng đã trộn thịt bằm vào chiên - để lửa vừa phải - khi trứng chín đều hết mặt trên thì trở mặt để vàng giòn mặt còn lại - trứng chín lấy ra dĩa.\nCHẾ BIẾN: <Rau muống xào tỏi> chảo nóng - cho tỏi vào đảo đều (dầu chiên trứng vẫn còn nên không cần đổ thêm dầu) - tỏi thơm thì cho ra muống vào đảo đều - nêm thêm ít muối cho vừa ăn (không nên để lâu để giữ độ giòn)\nCơm lúc này cũng đã chín. Cắt dưa leo và bày các món ra dĩa, múc canh ra tô. Vậy là xong 😋",
+    "taste_profile": [
+      "Đậm đà",
+      "Đắng"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Sườn non chiên giòn chay",
+    "description": "Hãy tưởng tượng những miếng sườn non chay vàng ươm, giòn rụm bên ngoài nhưng vẫn giữ được độ bùi béo, mềm mại của khoai từ bên trong. Món ăn đậm đà hương vị, thơm lừng mùi bột chiên, chấm kèm tương ớt hay tương cà thì còn gì bằng. Đây chắc chắn là lựa chọn tuyệt vời cho những bữa ăn chay thêm phần hấp dẫn hoặc làm món ăn vặt đổi vị cho cả gia đình.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "khoai từ",
+      "bột nêm chay",
+      "bột mì ngang",
+      "bột năng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu tinh bột",
+      "Khó tiêu / Nặng bụng",
+      "Giòn / Giòn rụm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Khoai từ",
+      "Bột nêm chay",
+      "Bột mì ngang",
+      "Bột năng"
+    ],
+    "ingredients": [
+      "khoai từ",
+      "bột nêm chay",
+      "bột mì ngang",
+      "bột năng"
+    ],
+    "raw_instructions": "Khoai từ sau khi lột vỏ rửa sạch lấy 2 phần đập nhuyển 1 phần xắt miếng dẹp làm cọng sườn.phần đập ướp chút bột nêm cho vừa ăn sau đó cho cứ 2 muỗng bột mì ngang 1 muỗng bột năng vô nhồi cho đến khi khoai sền sệt ráo ráo sau đó lấy khoai quấn quanh sườn cọng rồi đem chiên cho vàng giòn.vớt ra cho ráo dầu rồi cho tương cà tương ớt lên là mâm mâm thôi",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Kim chi chay",
+    "description": "Món Kim chi chay mang đến trải nghiệm vị giác bùng nổ với sự kết hợp hài hòa giữa vị chua thanh, cay nồng đặc trưng của kim chi. Từng miếng váng đậu mềm mại cùng nấm đùi gà dai ngọt được xào om khéo léo, thấm đẫm gia vị đậm đà. Đây là lựa chọn tuyệt vời cho bữa cơm chay thêm phần hấp dẫn, vừa ấm bụng lại vừa giàu dinh dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "lá váng đậu",
+      "đầu nấm đùi gà to",
+      "thìa canh kim chi chay",
+      "thìa cà phê hạt nêm nấm",
+      "hành khô",
+      "_ hành lá",
+      "thìa dầu ăn"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Xào",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Mềm",
+      "Món Á"
+    ],
+    "raw_ingredients": [
+      "1 lá váng đậu",
+      "3 đầu nấm đùi gà to (có thể thay thế bằng bất kỳ nấm nào cũng được)",
+      "2 thìa canh kim chi chay",
+      "1 thìa cà phê hạt nêm nấm",
+      "1 củ hành khô",
+      "1 _ 2 cây hành lá",
+      "1 thìa dầu ăn"
+    ],
+    "ingredients": [
+      "lá váng đậu",
+      "đầu nấm đùi gà to",
+      "thìa canh kim chi chay",
+      "thìa cà phê hạt nêm nấm",
+      "hành khô",
+      "_ hành lá",
+      "thìa dầu ăn"
+    ],
+    "raw_instructions": "Váng đậu ngâm nở, thái rối. Nấm thái nhỏ. Hành khô băm nhỏ, hành lá cắt khúc 2cm\nLàm nóng chảo, cho 1 thìa dầu ăn phi thơm hành băm. Đổ cùng lúc váng đậu và nấm vào xào. Nêm 1 chút hạt nêm nấm. Xào khoảng 2-3 phút. Cho kim chi vào đảo cùng. Cho 1 chút nước. Đậy nắp, xào om thêm 5 phút cho kim chi mềm, váng đậu ngấm vị.\nNếm lại xem đã vừa chưa, nếu nhạt cho thêm chút hạt nêm nấm. Tắt bếp rắc hành lá đảo đều",
+    "taste_profile": [
+      "Đậm đà",
+      "Chua"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Súp bắp non tóc tiên chay",
+    "description": "Món súp bắp non tóc tiên chay là sự kết hợp tinh tế của vị ngọt thanh tự nhiên từ bắp non, độ mềm mượt của đậu hũ non và chút dai nhẹ đặc trưng của rong tóc tiên. Nước súp sánh nhẹ, ấm nóng, thoang thoảng hương gừng và hành boa-rô, mang đến cảm giác dễ chịu và thanh đạm. Đây là lựa chọn hoàn hảo cho những ai tìm kiếm một món ăn nhẹ nhàng nhưng vẫn đủ đầy hương vị, rất thích hợp để thưởng thức khi trời se lạnh.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "rong tóc tiên",
+      "đậu hủ non",
+      "bắp non",
+      "hành boa-rô",
+      "gừng",
+      "bột năng",
+      "gia vị: hạt nêm chay",
+      "đường",
+      "nước tương"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Súp",
+      "Giàu đạm",
+      "Dễ tiêu",
+      "Giòn / Giòn rụm",
+      "Mềm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1 gr rong tóc tiên",
+      "1 cây đậu hủ non",
+      "10 trái bắp non",
+      "1 cây hành boa-rô",
+      "1 củ gừng",
+      "50 gr bột năng",
+      "Gia vị: hạt nêm chay , đường, nước tương"
+    ],
+    "ingredients": [
+      "rong tóc tiên",
+      "đậu hủ non",
+      "bắp non",
+      "hành boa-rô",
+      "gừng",
+      "bột năng",
+      "gia vị: hạt nêm chay",
+      "đường",
+      "nước tương"
+    ],
+    "raw_instructions": "Nguyên liệu & sơ chế: Bắp non, boa-rô, gừng gọt vỏ rồi đem rửa sạch, để ráo. Sau đó lấy bắp non cắt lát xéo, đậu hủ non cắt khoanh tròn, boa-rô lấy phần đầu trắng cắt mỏng, gừng cắt sợi nhỏ, rong tóc tiên cắt đoạn ngắn rồi ngâm nước trước khi nấu 5 phút\nCho 1,5 lít nước vào nồi rồi nấu sôi. Khi nước sôi thì cho từ từ chén bột năng đã khuấy loãng với 7 muỗng canh nước vào & khuấy đều, nước sánh nhẹ. Rồi để bắp non vào, khi bắp nổi lên thì nêm gia vị: 1,5 m canh hạt nêm + 1/2 m canh đường + 1 m canh nước tương (nêm nếm lại theo vị nhà). Tiếp đến cho đậu hũ non vào, thấy đậu hũ nổi lên thì để rong tóc tiên đã vắt ráo nước vào (nên cho từng ít tóc tiên & dùng đũa khuấy để tóc tiên rời ra). Nồi soup sôi trở lại thì tắt bếp mới cho boa-rô & gừng vào\nThành phẩm: Soup sánh nhẹ, mềm thơm từ đậu hủ, giòn ngọt từ bắp... dùng nóng rất ngon",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Cơm hấp lá sen chay",
+    "description": "Cơm hấp lá sen chay mang đến một trải nghiệm ẩm thực nhẹ nhàng nhưng đầy tinh tế. Từng hạt cơm dẻo thơm quyện cùng vị bùi của hạt sen, ngọt thanh của cà rốt và bí đỏ, cùng chút dai ngon từ sườn và chả chay. Món ăn được gói trọn trong lá sen xanh mướt, khi hấp chín tỏa hương thơm dịu mát, đánh thức mọi giác quan. Đây là lựa chọn lý tưởng cho những ai tìm kiếm một bữa ăn thanh đạm, bổ dưỡng mà vẫn ấm lòng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "hạt sen tươi",
+      "cà rốt",
+      "bí đỏ",
+      "tỏi băm",
+      "sườn chay",
+      "lá sen",
+      "cơm nguội",
+      "gia vị knorr chay",
+      "chả chay",
+      "m dầu hào"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Hấp / Luộc",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "100 gr hạt sen tươi",
+      "1 củ cà rốt",
+      "100 gram bí đỏ",
+      "Tỏi băm",
+      "100 gram Sườn chay",
+      "2 Lá sen",
+      "2 chén cơm nguội",
+      "Gia vị Knorr chay",
+      "100 gr Chả chay",
+      "1 m Dầu hào"
+    ],
+    "ingredients": [
+      "hạt sen tươi",
+      "cà rốt",
+      "bí đỏ",
+      "tỏi băm",
+      "sườn chay",
+      "lá sen",
+      "cơm nguội",
+      "gia vị knorr chay",
+      "chả chay",
+      "m dầu hào"
+    ],
+    "raw_instructions": "Hạt sen đem luộc chín. Cà rốt cắt hạt lựu cùng bí đỏ ; sườn chay ngâm nước cho nở ra cắt hạt lựu, chả chay cắt nhỏ\nCho chút dầu nóng phi vàng hành Po ro, cho sườn chiên vàng cho chút dầu hào, cho tiếp cà rốt, bí đỏ xào chín các nguyen liệu, cho 2 chén cơm vào cùng hạt sen, xào trộn cơm cho thấm cùng 1 m hạt nêm chay 1/2 m bột ngọt. Sau đó cho vào lá sen bọc tròn phần cơm\nCho vào nồi hấp cách thủy hấp 15 phút cho dậy mùi thơm của lá sen, tiếp cho ra dĩa dùng dao lam cắt cho ra cái miệng tỉa ra thành cánh sen đẹp mắt, cho ra dĩa trang tri cùng cánh sen hồng dọn ra ăn cùng nước tương",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Bì cuốn chay",
+    "description": "Món bì cuốn chay thanh đạm nhưng vẫn đầy đủ hương vị, với lớp vỏ bánh tráng mềm mại ôm trọn nhân đậu hũ, sườn chay chiên giòn, khoai lang bùi bùi và rau củ xào thơm lừng. Khi chấm cùng nước tương hột sánh mịn, béo ngậy và rắc thêm chút đậu phộng rang, món ăn sẽ mang đến cảm giác tươi mát, giòn dai và đậm đà, rất thích hợp cho những bữa ăn nhẹ nhàng mà vẫn đủ chất.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu hũ",
+      "khoai lang",
+      "cà rốt",
+      "sắn",
+      "sườn chay",
+      "miến",
+      "rau thơm",
+      "xà lách",
+      "hũ tương hột",
+      "đậu phộng rang",
+      "xấp bánh tráng mỏng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Cuốn / Gói",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Giòn / Giòn rụm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "3 miếng đậu hũ",
+      "1 củ khoai lang",
+      "1 củ cà rốt",
+      "1 củ sắn",
+      "2 miếng sườn chay",
+      "30 g Miến",
+      "300 g Rau thơm , xà lách",
+      "1 hũ Tương hột",
+      "30 g đậu phộng rang",
+      "1 xấp bánh tráng mỏng"
+    ],
+    "ingredients": [
+      "đậu hũ",
+      "khoai lang",
+      "cà rốt",
+      "sắn",
+      "sườn chay",
+      "miến",
+      "rau thơm",
+      "xà lách",
+      "hũ tương hột",
+      "đậu phộng rang",
+      "xấp bánh tráng mỏng"
+    ],
+    "raw_instructions": "Cà rốt, củ sắn cắt sợi, đậu hũ cắt mỏng chiên vàng, sườn chay ngâm nở, xé sợi chiên vàng. Miến chiên giòn. Củ sắn, cà rốt xào chín với xíu hạt nêm chay.\nKhoai lang bào sợi chiên giòn, củ sắn, cà rốt xào vừa chín với xíu hạt nêm chay. Tương đậu nành cho vô cối xay nhuyễn để nấu nước chấm bì cuốn. Cho xíu dầu ăn vào nồi phi thơm củ hành tím băm, cho tương hột vô xào, nêm 1 muỗng canh nước tương, 1 muỗng cà phê hạt nêm chay, 1/2 muỗng cà phê muối, 2 muỗng canh đường. Cho thêm 1 chén Nước Lên nấu sôi rồi nêm nếm cho vừa ăn.\nCho khoai lang chiên, miến chiên, đậu hũ, sườn chay chiên, củ sắn, cà rốt xào vô chung với nhau, cho 10 g thính gạo,1/2 muỗng cà phê muối, 1/3 muỗng cà phê bột ngọt, xíu tiêu vô trộn đều lên.\nRau sống rửa sạch,trỉa bánh tráng mỏng ra mâm,cho 1 ít rau thơm, xà lách, 1 ít bì chay vô cuốn lại. Khi ăn chấm với sốt tương đậu nành, thêm ít đậu phộng rang và ớt sa tế.",
+    "taste_profile": [
+      "Đậm đà",
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Khổ qua rừng kho tiêu",
+    "description": "Món khổ qua rừng kho tiêu mang đến hương vị đặc trưng khó quên, với vị đắng nhẹ nhàng của khổ qua hòa quyện cùng vị đậm đà, mặn ngọt hài hòa từ nước tương và hạt nêm. Điểm nhấn là chút cay nồng ấm áp từ tiêu hạt, tạo nên một tổng thể kích thích vị giác. Món ăn này không chỉ thanh đạm, giàu chất xơ mà còn rất đưa cơm, đặc biệt phù hợp cho những bữa ăn chay ấm cúng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "khổ qua rừng",
+      "hạt nêm chay hoặc hạt nêm thường",
+      "nước tương cũng tương tự hạt nêm",
+      "đường",
+      "tỏi",
+      "tiêu hạt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Khổ qua rừng",
+      "Hạt nêm chay hoặc hạt nêm thường (nếu không ăn chay)",
+      "Nước tương cũng tương tự hạt nêm",
+      "Đường",
+      "Tỏi , tiêu hạt"
+    ],
+    "ingredients": [
+      "khổ qua rừng",
+      "hạt nêm chay hoặc hạt nêm thường",
+      "nước tương cũng tương tự hạt nêm",
+      "đường",
+      "tỏi",
+      "tiêu hạt"
+    ],
+    "raw_instructions": "Cắt đầu đuôi và chẻ đôi, rửa sạch với muối, để ráo nước\nPhi tỏi cho thơm, cho khổ qua vào đảo sơ\nNêm 1,5 hoặc 2 muỗng nước tương tùy khẩu vị, thêm đường, hạt nêm, thêm xíu nước, đảo thêm 1 2 phút thì để lửa nhỏ để khổ qua thấm vị tới khi chín\nCó món ăn chay liền đây ạ",
+    "taste_profile": [
+      "Đậm đà",
+      "Đắng"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Lẩu chao chay",
+    "description": "Nồi lẩu chao chay nóng hổi, nghi ngút khói với hương vị đậm đà, thơm lừng đặc trưng của chao, hòa quyện cùng vị bùi béo của khoai môn chiên vàng. Các loại rau xanh tươi, nấm và đậu hũ mềm mại tạo nên một bữa ăn thanh đạm nhưng vẫn đầy đủ dinh dưỡng. Đây là lựa chọn lý tưởng cho những ai yêu thích ẩm thực chay, muốn tìm một món ăn ấm bụng và đưa cơm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "khoai môn",
+      "sả",
+      "sả non băm nhỏ",
+      "chao bông mai",
+      "hạt nêm chay",
+      "muối",
+      "đường",
+      "ớt bằm",
+      "topping",
+      "rau muống",
+      "nấm tươi",
+      "đậu hũ",
+      "chả chay …",
+      "bún tươi"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Lẩu",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Nóng hổi",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "300 g Khoai môn",
+      "2 cây Sả",
+      "1 muỗng canh Sả non băm nhỏ",
+      "2 miếng Chao bông mai",
+      "Hạt nêm chay , muối",
+      "1 muỗng cà phê Đường",
+      "1 muỗng cà phê Ớt bằm",
+      "Topping",
+      "Rau muống",
+      "Nấm tươi , đậu hũ , chả chay …",
+      "500 gr bún tươi"
+    ],
+    "ingredients": [
+      "khoai môn",
+      "sả",
+      "sả non băm nhỏ",
+      "chao bông mai",
+      "hạt nêm chay",
+      "muối",
+      "đường",
+      "ớt bằm",
+      "topping",
+      "rau muống",
+      "nấm tươi",
+      "đậu hũ",
+      "chả chay …",
+      "bún tươi"
+    ],
+    "raw_instructions": "Khoai môn gọt vỏ, cắt miếng to bằng khoảng 3 ngón tay, chiên vàng.\nSả cây đập dập, sả non băm nhỏ.\nPhi thơm sả băm với ít dầu, cho chao vào xào, thêm nước chao, hạt nêm, đường, xào 5 phút. Đến khi được hỗn hợp sệt và nhuyễn.\nĐổ nước vào nồi, cho khoai môn chiên và sả cây đã đập dập vào nấu sôi.\nThêm ớt bằm, nêm lại vừa ăn, nấu thêm 15 phút cho khoai mềm.\nKhi ăn, dọn lẩu với rau muống, đậu hũ, nấm … và bún tươi\nBí quyết: Có thể thêm các loại nấm khác nhau để tăng thêm hương vị cho lẩu.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn khuya",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Bò kho chay",
+    "description": "Bò kho chay là một lựa chọn tuyệt vời cho những ai yêu thích hương vị đậm đà, ấm nóng mà vẫn muốn giữ sự thanh tịnh. Món ăn là sự kết hợp hài hòa của các loại nấm dai ngon, đậu hũ mềm béo cùng rau củ hầm nhừ, thấm đẫm nước sốt bò kho chay sánh mịn, thơm lừng mùi hoa hồi và gừng. Từng miếng khoai tây, cà rốt mềm tan trong miệng, quyện cùng vị ngọt tự nhiên của rau củ, tạo nên một trải nghiệm ẩm thực đầy đủ và ấm áp, rất thích hợp để thưởng thức cùng bánh mì nóng giòn.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "nấm đông cô",
+      "nấm đùi gà",
+      "nấm hầu thủ",
+      "thịt dê chay",
+      "đậu hũ vuông",
+      "khoai tây",
+      "cà rốt",
+      "củ cải trắng",
+      "khoai lang",
+      "khoai sọ",
+      "xốt bò kho",
+      "sườn non chay",
+      "hoa hồi",
+      "gừng",
+      "bánh mì",
+      "đường phèn",
+      "hạt nêm",
+      "tiêu"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Hầm / Ninh",
+      "Kho/Rim",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Nấm đông cô , nấm đùi gà , nấm hầu thủ , thịt dê chay, đậu hũ vuông, khoai tây, cà rốt, củ cải trắng , khoai lang , khoai sọ (khoai môn)",
+      "Xốt bò kho, sườn non chay , hoa hồi, gừng, bánh mì , đường phèn, hạt nêm, tiêu"
+    ],
+    "ingredients": [
+      "nấm đông cô",
+      "nấm đùi gà",
+      "nấm hầu thủ",
+      "thịt dê chay",
+      "đậu hũ vuông",
+      "khoai tây",
+      "cà rốt",
+      "củ cải trắng",
+      "khoai lang",
+      "khoai sọ",
+      "xốt bò kho",
+      "sườn non chay",
+      "hoa hồi",
+      "gừng",
+      "bánh mì",
+      "đường phèn",
+      "hạt nêm",
+      "tiêu"
+    ],
+    "raw_instructions": "4 tai nấm đông cô* 4 cục nấm đùi gà* 3 cục nấm hầu thủ* Ít dê chay* 5 cục đậu hũ vuôngTất cả đem chiên vàng\n1 củ khoai tây+ 1 củ cà rốt+ 1 củ cải trắng+ 1 củ khoai lang+ 2 củ khoai sọ nhỏ (hoặc 1/4 củ khoai môn)Thái vuông ướp sốt bò kho\n2 miếng sườn non chay (hoặc 5-7 lát bò chay) ngâm nở chiên vàng+ Hoa hồi 15gr đem sao vàng rồi nấu ra nước cốt (1 tô)+ Gừng thái sợi rồi sao vàng cho thơm\nBật bếp, đổ dầu, khử ít gừng rồi cho các loại củ vào xào sơ. Đổ nước cho ngập, hầm rau củ cho mềm.\nĐổ các loại nấm, sườn chay, nấm hầu thủ, thịt dê chay vào.Hầm 1 hồi cho chín rục. Rồi cho nước cốt hoa hồi vào nêm: đường phèn, hạt nêm, tiêu.Rồi tắt bếp, ăn kèm bánh mì.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Salad diêm mạch",
+    "description": "Món salad diêm mạch thanh mát này là sự kết hợp hoàn hảo giữa hạt diêm mạch bùi bùi, rau củ giòn ngọt và các loại rau thơm tươi mát. Vị chua nhẹ của chanh cùng chút mặn mà của gia vị sẽ đánh thức mọi giác quan, mang đến cảm giác sảng khoái và dễ chịu. Đây chắc chắn là lựa chọn tuyệt vời cho những ai tìm kiếm một bữa ăn nhẹ nhàng, giàu dinh dưỡng mà vẫn đầy đủ hương vị.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "diêm mạch",
+      "ớt chuông",
+      "cà rốt",
+      "chanh",
+      "rau mùi ta",
+      "lá húng",
+      "kinh giới"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Giàu chất xơ",
+      "Healthy / Eat Clean",
+      "Giòn / Giòn rụm"
+    ],
+    "raw_ingredients": [
+      "200 g diêm mạch",
+      "1/3 quả ớt chuông",
+      "1/4 củ cà rốt",
+      "1 quả chanh",
+      "Rau mùi ta, lá húng, kinh giới"
+    ],
+    "ingredients": [
+      "diêm mạch",
+      "ớt chuông",
+      "cà rốt",
+      "chanh",
+      "rau mùi ta",
+      "lá húng",
+      "kinh giới"
+    ],
+    "raw_instructions": "Mình dùng diêm mạch đỏ và trắng trộn vào nhau. Diêm mạch vo sạch, cho vào nồi cơm điện nấu theo tỉ lệ 1: 2 (1 cốc diêm mạch, 2 cốc nước). Cho thêm 1 xíu muối và 1 thìa canh dầu rồi nhấn cook.\nDiêm mạch chín xới tơi lên, xúc ra đĩa để nguội. Cà rốt, ớt chuông cắt hạt lựu. Phi thơm củ hành cho cà rốt vào xào với xíu muối cho thấm gia vị. Các loại rau gia vị rửa sạch, cắt nhỏ.\nTrộn diêm mạch với các nguyên liệu (2) cùng với nước cốt 1 quả chanh, xíu muối (thêm đường nếu thích) là xong.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Tempeh áp chảo",
+    "description": "Món Tempeh áp chảo mang đến hương vị đậm đà, thơm lừng từ xì dầu, muối, đường và dầu mè thấm đẫm từng miếng tempeh. Tỏi phi thơm nhẹ nhàng quyện cùng vị béo ngậy tự nhiên, tạo nên một món ăn thanh đạm nhưng vẫn đầy đủ dinh dưỡng. Từng miếng tempeh mềm mại, được áp chảo vàng đều hai mặt, hứa hẹn sẽ là lựa chọn tuyệt vời cho bữa ăn lành mạnh, dễ tiêu mà vẫn cực kỳ đưa cơm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "tempeh",
+      "thìa canh xì dầu",
+      "thìa cafe muối",
+      "thìa canh đường",
+      "thìa canh dầu mè",
+      "tép tỏi"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Mềm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "125 g tempeh",
+      "2 thìa canh xì dầu",
+      "1 thìa cafe muối",
+      "1/3 thìa canh đường",
+      "2 thìa canh dầu mè",
+      "2 tép tỏi (nếu có)"
+    ],
+    "ingredients": [
+      "tempeh",
+      "thìa canh xì dầu",
+      "thìa cafe muối",
+      "thìa canh đường",
+      "thìa canh dầu mè",
+      "tép tỏi"
+    ],
+    "raw_instructions": "Đầu tiên mình ướp tempeh với đường, muối, xì dầu và 1 thìa cafe dầu mè, rồi để tủ lạnh qua đêm (nếu không kịp ướp từ tối hôm trước thì bạn ướp 15 phút rồi để tủ lạnh cũng được)\nSau đó mình cho 1,5 thìa canh dầu mè vào chảo và 2 tép tỏi vào phi thơm\nMình cho tempeh đã ướp vào áp chảo 2 mặt, mỗi mặt khoảng 15-20s rồi tắt bếp là ăn được ạ 🥰",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Bánh xèo gạo lứt chay",
+    "description": "Món bánh xèo gạo lứt chay mang đến trải nghiệm ẩm thực vừa ngon miệng vừa tốt cho sức khỏe. Vỏ bánh giòn rụm, vàng ươm từ gạo lứt và nếp lứt, ôm trọn phần nhân rau củ thanh mát như củ sắn, cà rốt, hành tây và giá. Khi thưởng thức, bạn sẽ cảm nhận được sự hòa quyện của vị thanh đạm từ rau củ, chút đậm đà từ nước chấm tamari, tạo nên một bữa ăn no bụng mà vẫn nhẹ nhàng, đầy đủ dinh dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "gạo lứt đỏ",
+      "nếp lứt trắng",
+      "củ sắn dây",
+      "cà rốt",
+      "hành tây",
+      "giá",
+      "hành lá",
+      "rau ăn bánh xèo: cải bẹ xanh",
+      "xà lách",
+      "rau thơm các loại",
+      "nước tương tamari",
+      "ớt bằm",
+      "nước dùng rau củ"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu chất xơ",
+      "Giòn / Giòn rụm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Gạo lứt đỏ, nếp lứt trắng",
+      "Củ sắn dây , cà rốt, hành tây, giá, hành lá",
+      "Rau ăn bánh xèo: cải bẹ xanh, xà lách, rau thơm các loại",
+      "Nước tương tamari, ớt bằm, nước dùng rau củ"
+    ],
+    "ingredients": [
+      "gạo lứt đỏ",
+      "nếp lứt trắng",
+      "củ sắn dây",
+      "cà rốt",
+      "hành tây",
+      "giá",
+      "hành lá",
+      "rau ăn bánh xèo: cải bẹ xanh",
+      "xà lách",
+      "rau thơm các loại",
+      "nước tương tamari",
+      "ớt bằm",
+      "nước dùng rau củ"
+    ],
+    "raw_instructions": "Gạo lứt và 1 ít nếp lứt ngâm và nước lọc cho vào máy sinh tố xay thành bột (khi xay nhớ cho tí dầu mè) để bột nghỉ 15-30 phút. Hành lá cắt nhỏ trộn với bột\nNhân bánh: Cà rốt, củ sắn, hành tây cắt sợi; xào sơ với 1 ít muối hầm.\nPha nước chấm: Cho nước dùng rau củ pha với nước tương tamari và 1 tí ớt hoặc đường nâu, nước mơ muối và nước tương tamari, ớt\nBắt chảo đổ bột bánh tráng đều rồi cho nhân và ít giá vào, để vàng úp mặt lấy ra",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Đậu hũ kho dứa",
+    "description": "Món Đậu hũ kho dứa mang đến hương vị đậm đà, hài hòa giữa vị ngọt thanh và chua nhẹ tự nhiên từ dứa, quyện cùng đậu hũ chiên mềm béo và các loại nấm dai ngon. Nước kho sánh nhẹ, thấm đẫm từng miếng rau củ, tạo nên một món ăn chay thanh đạm nhưng vẫn đủ sức \"đưa cơm\". Đây là lựa chọn tuyệt vời cho bữa ăn gia đình, vừa ấm bụng lại vừa tốt cho sức khỏe.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu hũ nhỏ chiên sẵn",
+      "thơm",
+      "nấm mèo",
+      "nấm đùi gà",
+      "đậu cô ve",
+      "cà rốt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "300 g đậu hũ nhỏ chiên sẵn",
+      "1/4 trái thơm",
+      "15 g nấm mèo",
+      "100 g nấm đùi gà",
+      "200 g đậu cô ve",
+      "1/2 củ cà rốt"
+    ],
+    "ingredients": [
+      "đậu hũ nhỏ chiên sẵn",
+      "thơm",
+      "nấm mèo",
+      "nấm đùi gà",
+      "đậu cô ve",
+      "cà rốt"
+    ],
+    "raw_instructions": "Sơ chế rau củ quả như hình. Bắc chảo với 2 muỗng canh dầu ăn phi thơm hành ba rô rồi tắt bếp.\nCho nấm, đậu hũ, rau củ vô xóc đều rồi bắc lên bếp kho,đổ lên 1 tô nước sôi kho lửa nhỏ đến khi nước kho rặt lại.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Nấm kim châm chiên giòn",
+    "description": "Món nấm kim châm chiên giòn mang đến trải nghiệm vị giác đầy thú vị với lớp vỏ ngoài vàng ươm, giòn rụm. Bên trong, nấm kim châm vẫn giữ được độ dai nhẹ đặc trưng, hòa quyện cùng vị ngọt thanh của bí đỏ. Món ăn này sẽ càng thêm hấp dẫn khi chấm kèm tương ớt cay nhẹ hoặc sốt mayonnaise béo ngậy, rất thích hợp để nhâm nhi lúc rảnh rỗi.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bí đỏ",
+      "gói nấm kim châm",
+      "bột chiên giòn",
+      "bột năng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu chất xơ",
+      "Nhiều dầu mỡ / Calo cao",
+      "Giòn / Giòn rụm",
+      "Dai / Sần sật"
+    ],
+    "raw_ingredients": [
+      "150 g bí đỏ",
+      "1/2 gói nấm kim châm",
+      "Bột chiên giòn",
+      "Bột năng",
+      "Gia vị"
+    ],
+    "ingredients": [
+      "bí đỏ",
+      "gói nấm kim châm",
+      "bột chiên giòn",
+      "bột năng",
+      "gia vị"
+    ],
+    "raw_instructions": "Bí đỏ cắt lát mỏng. Nấm kim châm bỏ gốc, rửa sạch để ráo\nPha 2mc bột chiên giòn với 2mc bột năng, thêm nước vào sao cho hỗn hợp sền sệt. Nhúng bí đỏ và nấm vào, chiên vàng và để ráo dầu\nRắc thêm ít bột ớt cho đẹp, chấm cùng tương ớt và sốt mayonaise",
+    "taste_profile": [
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Súp nấm tuyết chay",
+    "description": "Một tô súp nấm tuyết chay ấm nóng, thanh đạm sẽ là lựa chọn tuyệt vời cho những ngày muốn ăn nhẹ nhàng. Nước dùng rau củ ngọt tự nhiên hòa quyện cùng vị giòn sần sật của nấm tuyết, chút mềm mại của đậu hũ và măng tây, tạo nên một hương vị hài hòa, dễ chịu. Món súp này không chỉ giúp ấm bụng mà còn rất dễ tiêu, mang lại cảm giác thư thái và bổ dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "măng tây trắng",
+      "nấm tuyết",
+      "đậu hũ mềm",
+      "dầu mè",
+      "nước dùng rau củ",
+      "muối",
+      "tiêu",
+      "bột bắp"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Súp",
+      "Giàu chất xơ",
+      "Giàu đạm",
+      "Healthy / Eat Clean",
+      "Mềm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "100 g Măng tây trắng",
+      "20 g Nấm tuyết",
+      "100 g Đậu hũ mềm",
+      "1 muỗng cà phê Dầu mè",
+      "1000 ml Nước dùng rau củ",
+      "1/2 muỗng cà phê Muối",
+      "1/4 muỗng cà phê Tiêu",
+      "3 muỗng canh bột bắp",
+      "3 muỗng canh nước lọc"
+    ],
+    "ingredients": [
+      "măng tây trắng",
+      "nấm tuyết",
+      "đậu hũ mềm",
+      "dầu mè",
+      "nước dùng rau củ",
+      "muối",
+      "tiêu",
+      "bột bắp",
+      "nước lọc"
+    ],
+    "raw_instructions": "Măng tây trắng loại đóng hộp hoặc tươi, cắt khúc vừa ăn. Nấm tuyết ngâm mềm, cắt nhỏ.\nĐậu hũ mềm cắt khối vuông nhỏ.\nĐun sôi nước dùng rau củ, thêm bột bắp pha nước lọc, cho măng tây và nấm tuyết vào nấu 5 phút.\nThêm đậu hũ, nêm muối và tiêu, nấu thêm 2 phút.\nTắt bếp, cho dầu mè vào sau cùng, khuấy nhẹ.\nMúc ra tô, trang trí rau thơm.\nBí quyết: Có thể thêm một ít rau củ khác vào nước dùng để tăng thêm hương vị.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Mì Quảng trộn chay",
+    "description": "Mì Quảng trộn chay mang đến một trải nghiệm ẩm thực nhẹ nhàng nhưng đầy đủ hương vị. Sợi mì Quảng mềm dai hòa quyện cùng nấm bào ngư sần sật và giá đỗ giòn mát, tất cả được trộn đều trong nước sốt chay thanh đạm, đậm đà gia vị. Thêm chút đậu phộng rang bùi bùi và ngò rí thơm lừng, món ăn này không chỉ dễ tiêu mà còn cung cấp đủ năng lượng cho bữa trưa hay bữa tối.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "mì quảng",
+      "giá",
+      "nấm bào ngư"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Gỏi / Nộm / Trộn",
+      "Giàu chất xơ",
+      "Giàu tinh bột",
+      "Đặc sản Đà Nẵng",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "500 g mì quảng",
+      "100 g giá",
+      "100 g nấm bào ngư"
+    ],
+    "ingredients": [
+      "mì quảng",
+      "giá",
+      "nấm bào ngư"
+    ],
+    "raw_instructions": "Nấm bào ngư rửa sạch, giá rửa sạch. Bắc chảo với xíu dầu ăn phi thơm củ hành tím cho nấm bào ngư lên xào với xíu hạt nêm chay, cho giá lên đảo nhanh.\nGiả tỏi, ớt, cho đường, nước tương, tuong ớt vô. Cho mì quảng vô chảo giá nấm, đổ nước tương vừa pha vô trộn đều, thêm tiêu, đậu phộng rang, ngò rí cho thơm.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Đậu hũ sốt ngũ vị",
+    "description": "Món Đậu hũ sốt ngũ vị này là sự kết hợp tinh tế giữa đậu hũ chiên vàng giòn bên ngoài, mềm mại bên trong, ôm trọn phần nhân thịt ba chỉ băm đậm đà cùng mộc nhĩ sần sật. Nước sốt cà chua ngũ vị hương sánh mịn, bao phủ từng miếng đậu, mang đến hương vị mặn ngọt hài hòa, thơm lừng khó cưỡng. Đây chắc chắn là món ăn đưa cơm, làm ấm lòng cả gia đình trong bữa tối.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu khuôn",
+      "thịt ba chỉ",
+      "nấm mộc nhĩ",
+      "bún gạo khô",
+      "hành lá",
+      "hạt nêm",
+      "ngũ vị hương",
+      "hành khô",
+      "tiêu",
+      "bột ngọt",
+      "muối",
+      "đường",
+      "nước mắm",
+      "- cà chua"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "Đậu khuôn",
+      "Thịt ba chỉ",
+      "Nấm mộc nhĩ",
+      "Bún gạo khô",
+      "Hành lá",
+      "Hạt nêm",
+      "Ngũ vị hương",
+      "Hành khô",
+      "Tiêu",
+      "Bột ngọt",
+      "Muối",
+      "Đường",
+      "Nước mắm",
+      "3-4 quả Cà chua"
+    ],
+    "ingredients": [
+      "đậu khuôn",
+      "thịt ba chỉ",
+      "nấm mộc nhĩ",
+      "bún gạo khô",
+      "hành lá",
+      "hạt nêm",
+      "ngũ vị hương",
+      "hành khô",
+      "tiêu",
+      "bột ngọt",
+      "muối",
+      "đường",
+      "nước mắm",
+      "- cà chua"
+    ],
+    "raw_instructions": "Đậu chiên qua dầu cho vàng đều các mặt, chiên ngập dầu lửa lớn để vỏ ngoài giòn bên trong vẫn mềm để lát lấy ruột ra.Để nguội, cắt đôi miếng đậu, móc hết ruột ra\nRuột đậu cho vào cùng thịt ba chỉ đã băm nhỏ (xay), hành lá, hành khô, nấm mộc nhĩ, sợi bún đã cắt hạt lựu. Nêm thêm hạt nêm, ngũ vị hương, tí xíu muối, tiêu, bột ngọt. Dùng bao tay trộn đều để trong 15p cho ngấm. Nếu k đủ nguyên liệu chỉ cần thịt và đậu cũng ok rồi\nNhồi phần nhân vào vỏ đậu. Chiên sơ qua trên bếp cho định hình khuôn thịt rồi gắp ra\nCà chua xắt hạt lựu, phi thơm hành cho cà chua vào đảo hơi nhừ thì thêm nước mắm, đường, bột ngọt và ít nước lọc. Đun sôi rồi cho đậu vào rim sệt sệt vừa ăn\nChúc các bạn thành công♥️",
+    "taste_profile": [
+      "Đậm đà",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Nấm nướng giấy bạc chay",
+    "description": "Món nấm nướng giấy bạc chay mang đến hương vị nhẹ nhàng nhưng vẫn hấp dẫn. Từng cây nấm bào ngư mềm ngọt được nướng cùng bơ mặn và tiêu, tạo vị béo thơm rõ rệt, dễ ăn và hợp để dùng như món chay đổi vị hoặc món ăn kèm trong bữa cơm.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "nấm bào ngư",
+      "bơ mặn",
+      "nhúm tiêu xay"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Nướng",
+      "Giàu chất xơ",
+      "Mềm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "300 gr nấm bào ngư",
+      "25 gr bơ mặn",
+      "1 nhúm Tiêu xay"
+    ],
+    "ingredients": [
+      "nấm bào ngư",
+      "bơ mặn",
+      "nhúm tiêu xay"
+    ],
+    "raw_instructions": "Nấm làm sạch cắt gốc ngâm dấm loãng 5 phút rồi xả lại để ráo\nCho vào khuôn nhôm cùng bơ cắt lát, rắc ít tiêu rồi gấp lại\nLàm nóng lò trước ở 200°C, cho nấm vào hạ xuống 180°C nướng 10 phút",
+    "taste_profile": [
+      "Thanh đạm",
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": []
+  },
+  {
+    "name": "Chả bắp chiên xù chay",
+    "description": "Chả bắp chiên xù chay mang đến một trải nghiệm vị giác đầy thú vị. Lớp vỏ ngoài giòn rụm, vàng ươm bao bọc lấy phần nhân bắp mỹ và đậu cô ve mềm ngọt tự nhiên bên trong. Món ăn thanh đạm nhưng vẫn béo ngậy nhờ được chiên vàng, rất thích hợp để ăn vặt hoặc dùng kèm cơm trong bữa chính. Hương thơm của ngò rí thoang thoảng càng làm món ăn thêm phần hấp dẫn, đưa miệng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "bắp mỹ",
+      "đậu cô ve",
+      "nắm ngò rí",
+      "bịch bột chiên giòn",
+      "hạt nêm"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Chiên / Rán",
+      "Giàu chất xơ",
+      "Giòn / Giòn rụm",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "1 trái bắp mỹ",
+      "10 trái đậu cô ve",
+      "1 nắm ngò rí",
+      "1/2 bịch bột chiên giòn",
+      "Hạt nêm"
+    ],
+    "ingredients": [
+      "bắp mỹ",
+      "đậu cô ve",
+      "nắm ngò rí",
+      "bịch bột chiên giòn",
+      "hạt nêm"
+    ],
+    "raw_instructions": "Bắp mỹ gọt lấy hạt, đậu cô ve cắt hạt lựu, ngò rí thái nhỏ đem trộn với 1/2 mcf hạt nêm, khuấy bột chiên giòn trộn với hỗn hợp vừa xắt sao cho hơi đặc rồi múc từng muỗng đem chiên với dầu sôi. Bạn có thể biến tấu thêm các loại nguyên liệu khác như cà rốt, táo đỏ, súp lơ trắng, rong biển,... đều rất là ngon.\nChiên đến khi vàng thì vớt ra, dùng chung với nước tương hoặc tương ớt kèm xốt mayonnaise. Mình ăn kèm với cơm, bạn có thể ăn không như một món snack.",
+    "taste_profile": [
+      "Béo ngậy"
+    ],
+    "meal_context": [
+      "Ăn chiều / xế"
+    ],
+    "occasion_context": [
+      "Ăn vặt"
+    ]
+  },
+  {
+    "name": "Canh rong biển đậu hũ trắng",
+    "description": "Canh rong biển đậu hũ trắng là món canh thanh mát, nhẹ nhàng, lý tưởng cho những bữa ăn cần sự cân bằng. Nước dùng ngọt thanh từ thịt xay hòa quyện cùng vị biển đặc trưng của rong biển, đậu hũ trứng mềm mại và những sợi trứng gà tan chảy tạo nên một tổng thể hài hòa. Món canh này không chỉ dễ ăn, dễ tiêu mà còn mang lại cảm giác ấm bụng, dễ chịu, rất phù hợp để thưởng thức cùng cơm nóng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "rong biển khô",
+      "đậu hũ trứng",
+      "cái trứng gà",
+      "thịt xay",
+      "hạt nêm",
+      "muối",
+      "bột ngọt",
+      "đường",
+      "tiêu",
+      "dầu ăn",
+      "dầu mè"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món nước",
+      "Hấp / Luộc",
+      "Giàu đạm",
+      "Dễ tiêu",
+      "Mềm",
+      "Món Việt truyền thống"
+    ],
+    "raw_ingredients": [
+      "10 gam rong biển khô",
+      "1 cây đậu hũ trứng",
+      "1 cái trứng gà",
+      "100 gam thịt xay",
+      "1 tsp hạt nêm",
+      "1/4 tsp muối",
+      "1/4 tsp bột ngọt",
+      "1/4 tsp đường",
+      "1/4 tbsp tiêu",
+      "1 tbsp dầu ăn",
+      "1 tsp dầu mè"
+    ],
+    "ingredients": [
+      "rong biển khô",
+      "đậu hũ trứng",
+      "cái trứng gà",
+      "thịt xay",
+      "hạt nêm",
+      "muối",
+      "bột ngọt",
+      "đường",
+      "tiêu",
+      "dầu ăn",
+      "dầu mè"
+    ],
+    "raw_instructions": "Rong biển rửa qua nước sạch rồi ngâm trong nước ấm 5 phút. Đậu hũ trứng cắt thành những miếng nhỏ. Trứng gà đánh tan.\nBắc nồi lên bếp, cho 1tbsp dầu ăn vô. Khi dầu nóng, ta cho hết thịt băm vô xào. Sau đó, cho khoảng 700ml nước vô nấu. Cho vô nồi canh: 1/4tsp muối + 1tsp hạt nêm. Khi nước canh sôi, ta thả đậu hũ trứng đã xắt miếng vô nấu chung. Cho thêm 1/4tsp đường vô.\nKhi nồi canh sôi bùng lên, ta cho 1/4tsp bột ngọt + 1tsp dầu mè vô rồi tắt bếp. Sau đó, từ từ đổ trứng gà đã đánh tan vào nồi canh theo vòng tròn và khuấy nhẹ. Vớt rong biển đã ngâm ra, cho vô 3 cái chén và múc nước canh còn đang nóng hổi cho vô, rắc lên mỗi chén một ít tiêu rồi mang lên thưởng thức.\nBí quyết: 1. Cách nấu nước canh thật sôi, sau đó tắt bếp rồi mới cho trứng gà vô sẽ giúp cho trứng tạo hình thành những sợi mây thật mềm mại…2. Ngâm rong biển cho mềm, vớt ra chén rồi chan nước canh nóng vô. Nhiệt độ nóng của canh sẽ đủ làm vừa chín rong biển nhưng vẫn giữ được hương vị tinh khôi của rong biển.",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Đậu bắp luộc chấm chao",
+    "description": "Món ăn mang đến sự thanh đạm nhưng không kém phần hấp dẫn với đậu bắp luộc giòn ngọt, chấm cùng chao đậm đà, béo ngậy. Bên cạnh đó, bát canh cải xoăn xanh mướt, thanh mát cùng đậu phộng rang bùi bùi sẽ làm bữa cơm thêm tròn vị. Đây là lựa chọn lý tưởng cho những ai yêu thích hương vị mộc mạc, dễ ăn và tốt cho sức khỏe.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu bắp",
+      "chao",
+      "cải xoăn",
+      "đậu phộng"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Hấp / Luộc",
+      "Giàu chất xơ",
+      "Healthy / Eat Clean",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "300 g đậu bắp",
+      "Chao",
+      "Cải xoăn",
+      "200 g đậu phộng"
+    ],
+    "ingredients": [
+      "đậu bắp",
+      "chao",
+      "cải xoăn",
+      "đậu phộng"
+    ],
+    "raw_instructions": "Đậu bắp rửa sạch, cắt gọn, luộc chín, cho thêm 1 xíu muối vào nước luộc cho đậu xanh và ngon hơn\nNấu nước canh trước, nêm gia vị, đợi nc sôi, cho cải xoăn vào, canh chín nêm hành, tiêu, luu ý không đậy nắp cho cải giữ dc nàu xanh\nĐậu phộng rang muối: cho 1 vài giọt dầu ăn vào chảo, cho đậu phộng lên rang giòn, sau đó cho nước muối vào, đẩo đều cho đến khi nước muối khô lại, rút hết vào đậu. Nước muối gồm muối, đường, bột ngọt. Cho dầu ăn để đậu bóng và vàng đều hơn\nChao, đâm tỏi ớt, cho chao vào và thêm xíu đường, bột ngọt cho dịu vị mặn của chao",
+    "taste_profile": [
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": []
+  },
+  {
+    "name": "Bún xào nghệ chay",
+    "description": "Món bún xào nghệ chay mang đến một bữa ăn đầy màu sắc và hương vị. Sợi bún mềm mại quyện đều trong sắc vàng óng ả của nghệ tươi, cùng với vị đậm đà từ dầu hào và nước tương. Thêm vào đó là độ dai sần sật của sườn chay, nấm mèo và chút giòn nhẹ của đậu cô ve, tạo nên một tổng thể hài hòa, thơm lừng và vô cùng đưa miệng. Đây chắc chắn là lựa chọn tuyệt vời cho những ai yêu thích ẩm thực chay mà vẫn muốn một món ăn no bụng, giàu dinh dưỡng.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "vài củ nghệ tươi",
+      "sườn chay",
+      "nấm mèo",
+      "đậu cô ve",
+      "bún tươi dạng khô",
+      "dầu hào chay",
+      "hạt nêm chay",
+      "nước tương",
+      "ớt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Món khô",
+      "Xào",
+      "Giàu chất xơ",
+      "Giàu tinh bột",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Vài củ nghệ tươi",
+      "Sườn chay",
+      "Nấm mèo",
+      "Đậu cô ve",
+      "Bún tươi dạng khô",
+      "Dầu hào chay",
+      "Hạt nêm chay",
+      "Nước tương",
+      "Ớt"
+    ],
+    "ingredients": [
+      "vài củ nghệ tươi",
+      "sườn chay",
+      "nấm mèo",
+      "đậu cô ve",
+      "bún tươi dạng khô",
+      "dầu hào chay",
+      "hạt nêm chay",
+      "nước tương",
+      "ớt"
+    ],
+    "raw_instructions": "Nghệ rửa sạch, dùng dao/miếng sắt bùi nhùi loại chà nồi (nhớ lấy miếng còn mới & sạch) cạo sơ vỏ, xay bằng máy hoặc băm hoặc giã tay tuỳ thích.\nNấm mèo, sườn chay ngâm mềm cắt sợi, vắt ráo.\nĐậu cô ve tước xơ, thái xéo. Rửa sạch sẵn sàng cất tủ lạnh khi nào ăn là mang ra chế biến rất nhanh.\nCho 3 mc dầu ăn vào chảo, rồi cho nghệ vào xào lửa vừa. Nghệ có mủ & dính nên lửa lớn dễ cháy & dính xuống lòng chảo.\nXào đến khi dầu cũng chuyển qua màu vàng nghệ thì cho nấm, sườn chay vào xào cùng. Nêm 1 mcf hạt nêm chay, 1 mcf dầu hào.\nĐảo đều rồi cho đậu cô ve vào xào cùng, nêm 1 mcf dầu hào, 1 mcf nước tương.\nKhi tất cả đã chín & thấm gia vị thì tắt bếp, thêm bún vào trộn đều.\nLưu ý nếu bún luộc thì phải để thật ráo nước mới đem trộn để thấm gia vị & không bị chảy nước vào bún.\nRắc thêm tiêu xay, ăn kèm nước tương ớt xắt nếu nhạt.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Miến măng chay",
+    "description": "Miến măng chay là món ăn thanh đạm nhưng vẫn đậm đà hương vị, mang đến cảm giác ấm áp và dễ chịu. Sợi miến dai mềm quyện cùng nước dùng ngọt thanh từ nấm và măng, thoang thoảng mùi gừng thơm lừng. Đây là lựa chọn lý tưởng cho những ai muốn thưởng thức một bữa ăn nhẹ nhàng, bổ dưỡng mà vẫn đủ no bụng, đặc biệt thích hợp vào những ngày se lạnh.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "preprocessing_ingredient_indices": [
+      4
+    ],
+    "core_ingredients": [
+      "măng củ tươi",
+      "nước dùng từ nấm hoặc củ sắn",
+      "chân nấm đông cô",
+      "gừng tươi",
+      "muối",
+      "hạt nêm",
+      "rau húng quế",
+      "miến (miến rong hoặc miến đậu xanh"
+    ],
+    "preprocessing_ingredients": [
+      "muối"
+    ],
+    "soft_tags": [
+      "Món nước",
+      "Hầm / Ninh",
+      "Giàu tinh bột",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "Măng củ tươi",
+      "Nước dùng từ nấm hoặc củ sắn ( củ đậu )",
+      "Chân nấm đông cô ( loại đã sơ chế)",
+      "Gừng tươi",
+      "Muối, hạt nêm",
+      "Rau húng quế",
+      "Miến (miến rong hoặc miến đậu xanh"
+    ],
+    "ingredients": [
+      "măng củ tươi",
+      "nước dùng từ nấm hoặc củ sắn",
+      "chân nấm đông cô",
+      "gừng tươi",
+      "muối",
+      "hạt nêm",
+      "rau húng quế",
+      "miến (miến rong hoặc miến đậu xanh"
+    ],
+    "raw_instructions": "Măng củ tươi lột sạch vỏ, Thái thật mỏng rồi luộc hai đến ba lần nước. Khi luộc cho vào một nhúm muối nhỏ, sau mỗi lần luộc xả lại với nước.\nXào măng với một ít boa rô và hạt nêm cho măng thấm gia vị.\nChân nấm đập dập, xé sơ.\nNấu nước dùng: gừng đập dập cho vào nồi nước dùng, cho chân nấm, măng tươi vào nấu khoảng 10 phút. Nêm muối và hạt nêm vừa ăn.\nKhi ăn trụng miến cho vào tô. Sau đó chan nước dùng, rắc rau húng quế vào. Có thể ăn kèm với giá đỗ sống, dấm ớt.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn sáng",
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no",
+      "Ấm bụng"
+    ]
+  },
+  {
+    "name": "Nấm kho rau củ",
+    "description": "Món Nấm kho rau củ mang đến hương vị đậm đà, mặn ngọt hài hòa từ nấm rơm được kho kỹ với nước tương và hắc xì dầu. Từng miếng nấm thấm đẫm gia vị, kết hợp cùng vị ngọt thanh tự nhiên của cà rốt và đậu bắp luộc, tạo nên một bữa ăn chay thanh đạm nhưng vẫn đầy đủ dưỡng chất. Đây là lựa chọn lý tưởng cho những ai tìm kiếm sự nhẹ nhàng, dễ tiêu mà vẫn muốn thưởng thức hương vị truyền thống.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu bắp non",
+      "cà rốt",
+      "nấm rơm khô",
+      "nước cơm",
+      "hành boa rô",
+      "nước tương",
+      "hắc xì dầu",
+      "đường thốt nốt"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu chất xơ",
+      "Healthy / Eat Clean",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "500 gr đậu bắp non",
+      "1 củ cà rốt",
+      "50 gr nấm rơm khô",
+      "1 tbsp nước cơm (nếu có)",
+      "1 tbsp hành boa rô",
+      "2 tbsp nước tương",
+      "1 tbsp hắc xì dầu",
+      "1 tsp đường thốt nốt"
+    ],
+    "ingredients": [
+      "đậu bắp non",
+      "cà rốt",
+      "nấm rơm khô",
+      "nước cơm",
+      "hành boa rô",
+      "nước tương",
+      "hắc xì dầu",
+      "đường thốt nốt"
+    ],
+    "raw_instructions": "Nấm rơm ngâm nở 1 giờ, vắt xả vài lần. Phi thơm boa rô, cho nấm đã cắt miếng vừa ăn vào xào sơ.\nThêm ớt, nước tương, hắc xì dầu, đường, 1 tbsp nước cơm quậy đều kho nhỏ lửa sệt lại\nCà rốt đậu bắp luộc chín chấm kèm.",
+    "taste_profile": [
+      "Đậm đà"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  },
+  {
+    "name": "Đậu hũ kho tương hột",
+    "description": "Món đậu hũ kho tương hột mang hương vị đậm đà, mặn mà đặc trưng của tương hột, hòa quyện cùng chút cay nồng của ớt và thơm lừng của sả, boa rô. Từng miếng đậu hũ chiên thấm đẫm nước sốt sánh mịn, mềm mại, tạo nên một món ăn chay thanh đạm nhưng vẫn vô cùng đưa cơm. Đây là lựa chọn lý tưởng cho những bữa ăn gia đình ấm cúng, đặc biệt khi dùng kèm cơm trắng nóng hổi.",
+    "core_ingredient_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "preprocessing_ingredient_indices": [],
+    "core_ingredients": [
+      "đậu hủ chiên",
+      "tương hột",
+      "đường",
+      "sả",
+      "ớt trái",
+      "boa rô",
+      "dầu ăn",
+      "tương cà"
+    ],
+    "preprocessing_ingredients": [],
+    "soft_tags": [
+      "Nước sền sệt",
+      "Kho/Rim",
+      "Giàu đạm",
+      "Mềm",
+      "Món Việt truyền thống",
+      "Món chay"
+    ],
+    "raw_ingredients": [
+      "400 gr đậu hủ chiên",
+      "4 muỗng canh tương hột",
+      "2 muỗng canh đường",
+      "3 cây sả + ớt trái",
+      "2 cây boa rô",
+      "Dầu ăn",
+      "1 muỗng canh tương cà",
+      "200 ml nước lọc"
+    ],
+    "ingredients": [
+      "đậu hủ chiên",
+      "tương hột",
+      "đường",
+      "sả",
+      "ớt trái",
+      "boa rô",
+      "dầu ăn",
+      "tương cà",
+      "nước lọc"
+    ],
+    "raw_instructions": "Boa rô rửa sạch để ráo và cắt nhỏ.Sả cây và ớt trái rửa sạch để ráo và cắt rồi băm nhỏ.\nCho nồi lên bếp cho ít dầu ăn vào rồi cho boa rô vào phi thơm tiếp tục cho sả bằm và ớt bằm vào đảo đều.Tiếp tục cho 4 muỗng canh tương hột vào trộn đều.\nThêm 1 muỗng canh tương cà,2 muỗng cafe đường trộn đều.Cho tiếp 200ml nước lọc vào nấu sôi.\nSau đó cho đậu hủ chiên vào nấu lửa nhỏ cho đậu hủ thấm nêm nếm lại cho vừa ăn rồi tắt bếp.\nCho đậu hủ kho tương cà ra bàn.Ăn cùng với cơm trắng có thể chấm với rau luộc,dưa leo,rau sống lại còn ngon nha.",
+    "taste_profile": [
+      "Đậm đà",
+      "Thanh đạm"
+    ],
+    "meal_context": [
+      "Ăn trưa",
+      "Ăn tối"
+    ],
+    "occasion_context": [
+      "Ăn no"
+    ]
+  }
+]

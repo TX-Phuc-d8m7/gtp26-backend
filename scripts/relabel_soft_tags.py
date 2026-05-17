@@ -8,6 +8,7 @@ Chạy: python3 scripts/relabel_single.py [--pilot N] [--start N]
 import argparse
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -63,12 +64,41 @@ CATEGORY_LIKE_TAGS = TASTE_TAGS | MEAL_TIME_TAGS | OCCASION_TAGS
 
 SWEET_DISH_KEYWORDS = ["chè", "kẹo", "bánh ngọt", "bánh kem", "kem", "flan", "mousse", "panna cotta", "rau câu", "bingsu", "brownie", "macaron", "tiramisu", "cheesecake", "lava", "waffle"]
 SALTY_DISH_KEYWORDS = ["mắm", "khô", "muối", "kho quẹt", "chao", "muối tiêu", "dưa muối", "cá khô", "mực khô", "ruốc"]
-SOUR_DISH_KEYWORDS = ["chua", "canh chua", "lẩu thái", "gỏi", "nộm", "trộn", "kim chi", "sốt me", "rang me", "om sấu", "mẻ"]
-SOUR_CORE_KEYWORDS = ["me", "sấu", "mẻ", "giấm", "dấm", "măng chua", "kim chi", "dưa muối", "tôm chua"]
-SPICY_DISH_KEYWORDS = ["cay", "mì cay", "lẩu thái", "sa tế", "bún bò huế", "cà ri", "gà rán sốt cay", "sốt cay"]
-SPICY_CORE_KEYWORDS = ["sa tế", "tương ớt", "gochujang", "ớt bột", "dầu ớt", "ớt khô", "ớt hiểm", "gia vị lẩu thái"]
+SOUR_DISH_KEYWORDS = [
+    "chua", "canh chua", "canh nấu dứa", "canh nấu thơm", "nấu dứa",
+    "nấu thơm", "lẩu thái", "gỏi", "nộm", "trộn", "kim chi", "sốt me",
+    "rang me", "om sấu", "mẻ"
+]
+SOUR_CORE_KEYWORDS = [
+    "me", "sấu", "mẻ", "giấm", "dấm", "măng chua", "kim chi",
+    "dưa muối", "tôm chua", "dứa", "thơm", "cà chua", "khế", "tai chua"
+]
+SPICY_DISH_KEYWORDS = [
+    "cay", "mì cay", "ramen cay", "mì ramen cay", "ramen sốt cay",
+    "mì ramen sốt cay", "buldak", "lẩu thái", "sa tế", "bún bò huế",
+    "cà ri", "gà rán sốt cay", "sốt cay"
+]
+SPICY_CORE_KEYWORDS = [
+    "sa tế", "tương ớt", "gochujang", "ớt bột", "dầu ớt", "ớt khô",
+    "ớt hiểm", "gia vị lẩu thái", "sốt cay", "gói mì ramen sốt cay",
+    "ramen sốt cay", "mì ramen sốt cay", "buldak", "gia vị cay",
+    "gói gia vị cay"
+]
 BITTER_CORE_KEYWORDS = ["khổ qua", "mướp đắng", "ngải cứu", "lá đắng"]
-RICH_CORE_KEYWORDS = ["mỡ", "ba chỉ", "da heo", "da gà", "da vịt", "bơ", "phô mai", "cheese", "kem", "whipping cream", "nước cốt dừa", "mayonnaise", "mayo", "sữa đặc", "sữa tươi", "cá hồi"]
+RICH_CORE_KEYWORDS = ["mỡ", "ba chỉ", "da heo", "da gà", "da vịt", "bơ", "phô mai", "pho mai", "phomai", "cheese", "kem", "whipping cream", "nước cốt dừa", "mayonnaise", "mayo", "sữa đặc", "sữa tươi", "cá hồi"]
+PROTEIN_CORE_KEYWORDS = [
+    "thịt", "heo", "lợn", "bò", "gà", "vịt", "ngan", "ếch", "cá", "tôm", "cua",
+    "mực", "bạch tuộc", "ốc", "nghêu", "ngao", "sò", "hến", "lươn", "trứng",
+    "đậu hũ", "đậu hủ", "đậu phụ", "tàu hủ", "đậu nành", "tofu", "chả", "giò",
+    "nem", "lòng", "gan", "tim", "mề"
+]
+SEAFOOD_CORE_KEYWORDS = ["tôm", "tôm tít", "bề bề", "cua", "ghẹ", "cá", "cá cơm", "mực", "bạch tuộc", "ốc", "nghêu", "ngao", "sò", "hến", "vi cá"]
+NOODLE_DISH_KEYWORDS = ["mì quảng", "mỳ quảng", "bún", "phở", "hủ tiếu", "miến", "bánh canh", "mì nước"]
+CRUNCHY_MAIN_NAME_KEYWORDS = ["chiên giòn", "rán giòn", "xào giòn", "giòn", "ram", "chả giò", "bánh xèo"]
+CHEWY_MAIN_INGREDIENT_KEYWORDS = ["gân", "sụn", "mực", "bạch tuộc", "ốc", "lòng", "bao tử", "dạ dày", "da heo", "da bò"]
+GENERIC_CORE_INGREDIENTS = {"nước", "nước lọc", "nước chan", "nước dùng", "gia vị", "gia vị cơ bản"}
+DAIRY_NAME_KEYWORDS = ["phô mai", "sữa chua", "yaourt", "kem", "flan", "panna cotta", "mousse", "bingsu", "cheesecake"]
+DAIRY_INGREDIENT_KEYWORDS = ["sữa tươi", "sữa đặc", "sữa chua", "whipping cream", "cream cheese", "phô mai", "pho mai", "phomai", "bơ lạt", "bơ nhạt"]
 
 TAG_PRIORITY = [
     "Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy",
@@ -91,8 +121,14 @@ TAG_PRIORITY_INDEX = {tag: i for i, tag in enumerate(TAG_PRIORITY)}
 OFFAL_KEYWORDS = ["gan", "lòng", "mề", "óc", "tim", "cật", "dồi", "ruột", "bao tử", "dạ dày", "phèo", "huyết", "tiết", "pín"]
 DANANG_KEYWORDS = ["mì quảng", "mỳ quảng", "bún chả cá", "bún mắm nêm", "bánh tráng cuốn thịt heo", "nem lụi", "mít non trộn", "ốc hút", "gỏi cá nam ô", "tré", "bánh đập", "cao lầu"]
 VIETNAMESE_KEYWORDS = ["phở", "bún", "miến", "hủ tiếu", "cơm", "canh", "kho", "gỏi cuốn", "bánh mì", "xôi", "cháo", "lẩu", "mì quảng", "mỳ quảng"]
-ASIAN_KEYWORDS = ["hàn quốc", "nhật", "thái", "trung quốc", "bibimbap", "teriyaki", "miso", "kim chi", "gochujang", "gyudon", "tonkatsu"]
+ASIAN_KEYWORDS = [
+    "hàn quốc", "nhật", "thái", "trung quốc", "bibimbap", "teriyaki", "miso",
+    "kim chi", "gochujang", "gyudon", "tonkatsu", "omurice", "udon", "indomie",
+    "tokbokki", "topokki", "tteokbokki", "hải nam"
+]
 WESTERN_KEYWORDS = ["pizza", "pasta", "mì ý", "spaghetti", "steak", "burger", "sandwich", "cheesecake", "panna cotta", "mousse"]
+BATTER_OR_DESSERT_NAME_KEYWORDS = ["bánh", "rau câu", "chè", "kem", "flan", "mousse", "kẹo"]
+MIXED_DISH_NAME_KEYWORDS = ["gỏi", "nộm", "salad", "trộn", "bánh tráng trộn"]
 
 # Heuristic dictionary: minh bạch hóa rủi ro ẩn từ nguyên liệu
 INGREDIENT_RISK_TAG_MAP = {
@@ -139,8 +175,100 @@ def remove_tag(tags: list[str], tag: str, logs: list[str] | None = None, reason:
 def has_any(text: str, keywords: list[str]) -> bool:
     return any(kw in text for kw in keywords)
 
+def has_phrase(text: str, keywords: list[str]) -> bool:
+    return any(re.search(rf'(?<!\w){re.escape(kw)}(?!\w)', text) for kw in keywords)
+
+def has_offal_signal(ingredient_text: str) -> bool:
+    sanitized = re.sub(r'\blòng\s+(đỏ|trắng)\b', '', ingredient_text)
+    sanitized = re.sub(r'\b(hạt|quả)\s+óc\s+chó\b', '', sanitized)
+    sanitized = re.sub(r'\bóc\s+chó\b', '', sanitized)
+    return has_phrase(sanitized, OFFAL_KEYWORDS)
+
+def has_seafood_signal(ingredient_text: str) -> bool:
+    if has_phrase(ingredient_text, ["cá cơm"]):
+        return True
+
+    sanitized = re.sub(r'\bnấm\s+sò(?:\s+(?:nâu|trắng|xám|vua))?\b', '', ingredient_text)
+    sanitized = re.sub(r'\bnước\s+dùng\s+cá(\s+khô)?\b', '', sanitized)
+    sanitized = re.sub(r'\bnước\s+mắm\b', '', sanitized)
+    sanitized = re.sub(r'\bcá\s+nhân\b', '', sanitized)
+    sanitized = re.sub(r'\b(con\s+)?cá\s+dẻo\b', '', sanitized)
+    sanitized = re.sub(r'\bbột\s+rau\s+câu\s+con\s+cá\s+dẻo\b', '', sanitized)
+    return has_phrase(sanitized, SEAFOOD_CORE_KEYWORDS)
+
+def clean_core_ingredients(core_ingredients: list[str]) -> list[str]:
+    cleaned = []
+    for ingredient in core_ingredients or []:
+        normalized = " ".join(str(ingredient).strip().lower().split())
+        if not normalized or normalized in GENERIC_CORE_INGREDIENTS:
+            continue
+        cleaned.append(str(ingredient).strip())
+    return dedupe_keep_order(cleaned)
+
+def format_indexed_ingredients(ingredients: list[str]) -> str:
+    if not ingredients:
+        return "(Không có ingredients)"
+    return "\n".join(f"{idx}. {ingredient}" for idx, ingredient in enumerate(ingredients))
+
+def normalize_ingredient_indices(raw_indices, ingredients: list[str], logs: list[str], field_name: str) -> list[int]:
+    valid_indices = []
+    seen = set()
+    ingredient_count = len(ingredients)
+
+    for raw_index in raw_indices or []:
+        try:
+            index = int(raw_index)
+        except (TypeError, ValueError):
+            logs.append(f"Bỏ {field_name} không phải số nguyên: {raw_index!r}")
+            continue
+
+        if index < 0 or index >= ingredient_count:
+            logs.append(f"Bỏ {field_name} ngoài range: {index}")
+            continue
+
+        if index not in seen:
+            seen.add(index)
+            valid_indices.append(index)
+
+    return valid_indices
+
+def ingredients_from_indices(indices: list[int], ingredients: list[str], drop_generic: bool = True) -> list[str]:
+    selected = []
+    for index in indices:
+        ingredient = str(ingredients[index]).strip()
+        normalized = " ".join(ingredient.lower().split())
+        if drop_generic and normalized in GENERIC_CORE_INGREDIENTS:
+            continue
+        selected.append(ingredient)
+    return dedupe_keep_order(selected)
+
 def has_category_signal(text: str, keywords: list[str]) -> bool:
-    return has_any(text, keywords)
+    return has_phrase(text, keywords)
+
+def is_batter_or_dessert_name(name_lower: str) -> bool:
+    return has_phrase(name_lower, BATTER_OR_DESSERT_NAME_KEYWORDS)
+
+def should_ignore_prep_mix_as_method(name_lower: str) -> bool:
+    return is_batter_or_dessert_name(name_lower) and not has_phrase(name_lower, MIXED_DISH_NAME_KEYWORDS)
+
+def method_has_evidence(tag: str, food_name: str, full_text: str) -> bool:
+    name_lower = food_name.lower()
+    checks = {
+        "Lẩu": ["lẩu"],
+        "Cháo": ["cháo"],
+        "Súp": ["súp", "soup"],
+        "Chiên / Rán": ["chiên", "rán", "deep fry", "fry"],
+        "Nướng": ["nướng", "áp chảo", "grill", "bbq"],
+        "Hấp / Luộc": ["hấp", "luộc", "trụng", "chần"],
+        "Xào": ["xào", "đảo chảo"],
+        "Gỏi / Nộm / Trộn": ["gỏi", "nộm", "trộn", "salad"],
+        "Cuốn / Gói": ["cuốn", "gói"],
+        "Kho/Rim": ["kho", "rim", "om"],
+        "Rang": ["rang"],
+        "Hầm / Ninh": ["hầm", "ninh", "nước dùng", "nước hầm", "canh"],
+    }
+    keywords = checks.get(tag, [])
+    return has_phrase(name_lower, keywords) or has_phrase(full_text, keywords)
 
 def is_dessert_like(name_lower: str, tags: list[str]) -> bool:
     return bool({"Tráng miệng", "Bánh ngọt", "Từ sữa / Phô mai"} & set(tags)) or has_category_signal(name_lower, SWEET_DISH_KEYWORDS)
@@ -161,25 +289,41 @@ def is_late_night_like(name_lower: str, tags: list[str]) -> bool:
 def choose_form_tag(food_name: str, full_text: str, current_tags: list[str]) -> str:
     name_lower = food_name.lower()
 
-    if has_any(name_lower, ["mì quảng", "mỳ quảng", "cao lầu", "cà ri", "kho", "rim", "sốt", "sauce", "cháo", "súp", "soup"]):
-        return "Nước sền sệt"
-    if has_any(name_lower, ["canh", "phở", "bún bò", "bún riêu", "bún mắm", "bún chả cá", "hủ tiếu", "miến", "mì nước", "lẩu"]):
-        return "Món nước"
-    if has_any(name_lower, ["cơm", "xôi", "bánh mì", "bánh mỳ", "pizza", "salad", "gỏi", "nộm", "trộn", "cuốn", "nướng", "chiên", "rán", "xào"]):
+    if has_phrase(name_lower, [
+        "trộn", "xào", "cơm", "xôi", "bánh mì", "bánh mỳ", "pizza", "salad",
+        "gỏi", "nộm", "cuốn", "nướng", "chiên", "rán", "rang",
+        "phở khô", "bún đậu", "bún hến", "bún thịt nướng", "bún mắm nêm", "bún trộn", "bún xào"
+    ]):
         return "Món khô"
+    if has_phrase(name_lower, ["mì quảng", "mỳ quảng", "cao lầu", "cà ri", "kho", "rim", "sốt", "sauce", "cháo", "súp", "soup"]):
+        return "Nước sền sệt"
+    if has_phrase(name_lower, ["canh", "phở", "bún", "hủ tiếu", "miến nước", "mì nước", "udon", "lẩu", "bánh canh", "hoành thánh nước"]):
+        return "Món nước"
+    if has_phrase(name_lower, ["bánh", "rau câu", "kẹo", "flan", "mousse"]):
+        return "Món khô"
+
+    if {"Chiên / Rán", "Nướng", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Rang"} & set(current_tags):
+        return "Món khô"
+    if {"Cháo", "Súp"} & set(current_tags):
+        return "Nước sền sệt"
+    if "Lẩu" in current_tags:
+        return "Món nước"
 
     for tag in current_tags:
         if tag in FORM_TAGS:
             return tag
 
-    if has_any(full_text, ["nước dùng", "nước lèo", "chan nước", "nước hầm", "nước lẩu"]):
+    if has_phrase(full_text, ["nước dùng", "nước lèo", "chan nước", "nước hầm", "nước lẩu"]):
         return "Món nước"
-    if has_any(full_text, ["nước sốt", "sốt sệt", "sánh", "sền sệt"]):
+    if has_phrase(full_text, ["nước sốt", "sốt sệt", "sánh", "sền sệt"]):
         return "Nước sền sệt"
+    if has_phrase(full_text, ["chiên", "rán", "xào", "nướng", "trộn", "cuốn", "gói"]):
+        return "Món khô"
     return "Món khô"
 
 def infer_method_tags(food_name: str, full_text: str) -> list[str]:
     name_lower = food_name.lower()
+    ignore_prep_mix = should_ignore_prep_mix_as_method(name_lower)
     checks = [
         ("Lẩu", ["lẩu"]),
         ("Cháo", ["cháo"]),
@@ -197,9 +341,31 @@ def infer_method_tags(food_name: str, full_text: str) -> list[str]:
 
     inferred = []
     for tag, keywords in checks:
-        if has_any(name_lower, keywords) or has_any(full_text, keywords):
+        if tag == "Gỏi / Nộm / Trộn" and ignore_prep_mix:
+            continue
+        if tag == "Cuốn / Gói" and "bánh gói" in name_lower:
+            continue
+        if has_phrase(name_lower, keywords) or has_phrase(full_text, keywords):
             inferred.append(tag)
     return inferred[:2]
+
+def infer_strong_method_from_text(food_name: str, full_text: str) -> str | None:
+    name_lower = food_name.lower()
+    if should_ignore_prep_mix_as_method(name_lower):
+        if has_phrase(full_text, ["hấp bánh", "xửng nước sôi", "cho bánh vào hấp"]):
+            return "Hấp / Luộc"
+        if has_phrase(full_text, ["cho vô nướng", "cho vào nướng", "lò nướng"]):
+            return "Nướng"
+
+    strong_checks = [
+        ("Chiên / Rán", ["chiên vàng", "chiên giòn", "chiên ngập dầu", "dầu nóng", "bột chiên", "rán vàng"]),
+        ("Nướng", ["cho vô nướng", "cho vào nướng", "lò nướng", "nướng ở", "nướng trong"]),
+        ("Hấp / Luộc", ["hấp chín", "đem hấp", "cho vào xửng", "xửng nước sôi", "luộc chín"]),
+    ]
+    for tag, keywords in strong_checks:
+        if has_phrase(full_text, keywords):
+            return tag
+    return None
 
 def ensure_one_form_tag(tags: list[str], food_name: str, full_text: str, logs: list[str]):
     chosen = choose_form_tag(food_name, full_text, tags)
@@ -217,16 +383,57 @@ def ensure_method_tag(tags: list[str], food_name: str, full_text: str, logs: lis
     else:
         add_tag(tags, "Gỏi / Nộm / Trộn" if "salad" in food_name.lower() else "Hấp / Luộc", logs, "fallback phương pháp chế biến")
 
+def correct_primary_method_tag(tags: list[str], food_name: str, raw_instructions: str, logs: list[str]):
+    name_lower = food_name.lower()
+    instructions_lower = (raw_instructions or "").lower()
+    full_text = f"{name_lower} {instructions_lower}"
+
+    preferred = None
+    if "bánh mì nướng kiểu pháp" in name_lower or "french toast" in full_text:
+        preferred = "Chiên / Rán"
+    else:
+        name_priority = [
+            ("Lẩu", ["lẩu"]),
+            ("Cháo", ["cháo"]),
+            ("Súp", ["súp", "soup"]),
+            ("Chiên / Rán", ["chiên", "rán"]),
+            ("Nướng", ["nướng"]),
+            ("Hấp / Luộc", ["hấp", "luộc"]),
+            ("Xào", ["xào"]),
+            ("Gỏi / Nộm / Trộn", [] if should_ignore_prep_mix_as_method(name_lower) else ["gỏi", "nộm", "trộn"]),
+            ("Cuốn / Gói", ["cuốn"]),
+            ("Kho/Rim", ["kho", "rim"]),
+            ("Rang", ["rang"]),
+        ]
+        for tag, keywords in name_priority:
+            if has_phrase(name_lower, keywords):
+                preferred = tag
+                break
+
+    if not preferred:
+        current_methods = [tag for tag in tags if tag in METHOD_TAGS]
+        has_supported_current_method = any(method_has_evidence(tag, food_name, full_text) for tag in current_methods)
+        replaceable_method_noise = not current_methods or all(tag in {"Kho/Rim"} for tag in current_methods)
+        if not has_supported_current_method and replaceable_method_noise:
+            preferred = infer_strong_method_from_text(food_name, full_text)
+
+    for tag in list(tags):
+        if tag in METHOD_TAGS and preferred and tag != preferred and not method_has_evidence(tag, food_name, full_text):
+            remove_tag(tags, tag, logs, "không có bằng chứng phương pháp chế biến chính")
+
+    if preferred:
+        add_tag(tags, preferred, logs, "sửa/bổ sung phương pháp chế biến theo tên món")
+
 def ensure_taste_tag(tags: list[str], full_text: str, logs: list[str]):
     if TASTE_TAGS.intersection(tags):
         return
-    if has_any(full_text, ["khổ qua", "mướp đắng", "ngải cứu"]):
+    if has_phrase(full_text, ["khổ qua", "mướp đắng", "ngải cứu"]):
         add_tag(tags, "Đắng", logs, "bổ sung vị chủ đạo")
-    elif has_any(full_text, ["me", "sấu", "mẻ", "giấm", "dấm", "kim chi", "chua"]):
+    elif has_phrase(full_text, ["me", "sấu", "mẻ", "giấm", "dấm", "kim chi", "chua"]):
         add_tag(tags, "Chua", logs, "bổ sung vị chủ đạo")
-    elif has_any(full_text, ["ớt", "sa tế", "gochujang", "cay"]):
+    elif has_phrase(full_text, ["ớt", "sa tế", "gochujang", "cay"]):
         add_tag(tags, "Cay", logs, "bổ sung vị chủ đạo")
-    elif has_any(full_text, ["chè", "kem", "bánh ngọt", "kẹo", "flan"]):
+    elif has_phrase(full_text, ["chè", "kem", "bánh ngọt", "kẹo", "flan"]):
         add_tag(tags, "Ngọt", logs, "bổ sung vị chủ đạo")
     else:
         add_tag(tags, "Đậm đà", logs, "bổ sung vị chủ đạo mặc định")
@@ -252,6 +459,22 @@ def prune_tags(tags: list[str], max_tags: int = 8) -> list[str]:
             break
     return result
 
+def correct_texture_tags(tags: list[str], name_lower: str, ingred_text: str, logs: list[str]):
+    is_noodle_dish = has_any(name_lower, NOODLE_DISH_KEYWORDS)
+    if is_noodle_dish and "Giòn / Giòn rụm" in tags and not has_any(name_lower, CRUNCHY_MAIN_NAME_KEYWORDS):
+        remove_tag(tags, "Giòn / Giòn rụm", logs, "kết cấu giòn chỉ đến từ topping/đồ ăn kèm")
+    if is_noodle_dish and "Dai / Sần sật" in tags and not has_any(ingred_text, CHEWY_MAIN_INGREDIENT_KEYWORDS):
+        remove_tag(tags, "Dai / Sần sật", logs, "độ dai của sợi mì/bún không phải đặc trưng chính")
+
+def ensure_protein_tag(tags: list[str], name_lower: str, ingred_text: str, logs: list[str]):
+    has_protein = has_phrase(ingred_text, PROTEIN_CORE_KEYWORDS)
+    if "Giàu đạm" in tags:
+        if is_dessert_like(name_lower, tags) or not has_protein:
+            remove_tag(tags, "Giàu đạm", logs, "không thấy nguồn đạm chính rõ ràng")
+        return
+    if has_protein and not is_dessert_like(name_lower, tags):
+        add_tag(tags, "Giàu đạm", logs, "nguyên liệu chính có nguồn đạm rõ")
+
 # =====================================================================
 # SYSTEM PROMPT
 # =====================================================================
@@ -264,22 +487,26 @@ SYSTEM_PROMPT = f"""Bạn là chuyên gia ẩm thực Việt Nam có nhiều nă
     PHẦN 1: QUY TẮC BÓC TÁCH VÀ MÔ TẢ MÓN ĂN
     ═══════════════════════════════════════════════
 
-    [QUY TẮC PHÂN LOẠI NGUYÊN LIỆU (ingredients) - BẮT BUỘC LÀM THEO 4 BƯỚC]
+    [QUY TẮC PHÂN LOẠI NGUYÊN LIỆU - BẮT BUỘC LÀM THEO 4 BƯỚC]
+    Dữ liệu đầu vào có 2 danh sách:
+    - raw_ingredients: nguyên liệu nguyên bản có định lượng/đơn vị, chỉ dùng để hiểu công thức và hiển thị lại.
+    - ingredients: nguyên liệu đã chuẩn hóa sơ bộ, dùng làm nguồn sự thật để tạo core_ingredients/search/filter.
+
     Bạn phải chạy logic thuật toán sau trong đầu để chia nguyên liệu:
 
-    - BƯỚC 1 (Chuẩn hoá Data gốc): Lấy mảng "ingredients" ban đầu ra. Lập tức RÚT GỌN toàn bộ tên nguyên liệu về dạng Root Noun (VD: "bì sữa tươi không đường" -> "sữa tươi không đường", "500g thịt bò xắt lát" -> "thịt bò"). Ta gọi đây là [Mảng Nguyên Liệu Chuẩn].
+    - BƯỚC 1 (Đọc danh sách ingredients có index): Mỗi nguyên liệu trong input đã được đánh số index. Bạn KHÔNG được viết lại, chuẩn hóa lại, dịch nghĩa, hoặc đổi tên nguyên liệu.
 
-    - BƯỚC 2 (Xác định Preprocessing - Chất khử mùi/Ngâm xả): Đọc kỹ "instructions". Tìm các hành động "rửa", "ngâm", "chà xát", "chần", "khử mùi". Rút trích các nguyên liệu đi kèm MÀ SAU ĐÓ BỊ RỬA TRÔI/ĐỔ BỎ (Ví dụ: sữa tươi ngâm gan rồi rửa, chanh để chà cá, muối xát gà, rượu chần thịt). Đưa chúng vào "preprocessing_ingredients". 
+    - BƯỚC 2 (Xác định Preprocessing - Chất khử mùi/Ngâm xả): Đọc kỹ "instructions". Tìm các hành động "rửa", "ngâm", "chà xát", "chần", "khử mùi". Chọn index của các nguyên liệu đi kèm MÀ SAU ĐÓ BỊ RỬA TRÔI/ĐỔ BỎ (Ví dụ: sữa tươi ngâm gan rồi rửa, chanh để chà cá, muối xát gà, rượu chần thịt). Đưa các index đó vào "preprocessing_ingredient_indices".
     🚨 LƯU Ý: Tuyệt đối KHÔNG đưa nguyên liệu thịt/cá/rau (như gan, ếch, bò...) vào mảng này.
 
-    - BƯỚC 3 (Xác định Core - Nguyên liệu cấu thành): Lấy toàn bộ mảng "ingredients" gốc, CỘNG THÊM các gia vị/nguyên liệu được nhắc đến trong "instructions" (nếu có). Sau đó ĐỐI CHIẾU VÀ LOẠI BỎ hoàn toàn những nguyên liệu đã bị phân vào "preprocessing_ingredients" ở Bước 1. 
+    - BƯỚC 3 (Xác định Core - Nguyên liệu cấu thành): Chọn index của các nguyên liệu thực sự cấu thành món ăn từ danh sách "ingredients". Sau đó ĐỐI CHIẾU VÀ LOẠI BỎ những nguyên liệu chỉ dùng ở preprocessing.
         + Nếu một chất (VD: muối, rượu) CHỈ xuất hiện ở hành động sơ chế (Bước 2) -> Xoá nó khỏi Core.
         + TRƯỜNG HỢP ĐA NHIỆM: Nếu một chất (VD: muối) VỪA được dùng để ngâm rửa, VỪA được dùng để tẩm ướp/nấu nước sốt -> Giữ nguyên nó ở Core, VÀ cho phép nó xuất hiện ở cả Preprocessing.        
-    - BƯỚC 4 (Kỷ luật chống ảo giác): Tự kiểm tra lại 2 mảng vừa tạo. TUYỆT ĐỐI CHỈ DÙNG những nguyên liệu thực sự xuất hiện trong văn bản gốc ("ingredients" và "instructions"). KHÔNG ĐƯỢC TỰ SUY DIỄN, không được bịa ra nguyên liệu không có trong bài (Ví dụ: Bài không ghi dầu ăn thì không được tự thêm dầu ăn vào).
+    - BƯỚC 4 (Kỷ luật chống ảo giác): Tự kiểm tra lại 2 mảng index vừa tạo. TUYỆT ĐỐI CHỈ TRẢ VỀ INDEX CÓ TRONG DANH SÁCH ingredients. KHÔNG được tự thêm nguyên liệu từ instructions nếu nguyên liệu đó không có index trong ingredients. KHÔNG trả tên nguyên liệu dạng text.
 
     [QUY TẮC CHUẨN HOÁ QUAN TRỌNG]
-    1. Dữ liệu gốc: Trường "name" giữ nguyên nội dung 100%, trường "ingredients" phải giữ nguyên 100% không thay đổi.
-    2. Chuẩn hoá tên: Tên nguyên liệu phải được đưa về dạng Root Noun (VD: "500g thịt bò xắt lát" -> "thịt bò", "1/2 muỗng muối" -> "muối").
+    1. Dữ liệu gốc: Trường "name" giữ nguyên nội dung 100%, trường "raw_ingredients" và "ingredients" không được tự ý sửa trong output.
+    2. Bạn không được tự chuẩn hóa tên nguyên liệu trong output. Code sẽ tự map index về đúng chuỗi trong "ingredients".
 
     [QUY TẮC VIẾT MÔ TẢ]
     "description": Hãy viết một đoạn văn từ 3-5 câu miêu tả trải nghiệm ăn uống dựa TRÊN CƠ SỞ danh sách nguyên liệu (ingredients) được cung cấp.
@@ -290,7 +517,8 @@ SYSTEM_PROMPT = f"""Bạn là chuyên gia ẩm thực Việt Nam có nhiều nă
 
     [QUY TẮC CỐT LÕI (GROUNDING)]:
     1. Tuyệt đối chỉ suy luận từ "ingredients" được cung cấp. Không tự ý thêm nguyên liệu ngoài danh sách vào mô tả hay dán nhãn.
-    4. BẮT BUỘC VỚI NHÃN "Nội tạng": NẾU trong nguyên liệu (ingredients) CÓ CHỨA các thành phần như gan, lòng, mề, óc, tim, cật, dồi, ruột, bao tử, dạ dày, huyết/tiết (của heo, bò, gà...) thì BẠN BẮT BUỘC PHẢI THÊM TAG "Nội tạng" vào mảng "soft_tags".
+    2. Không biến topping/đồ ăn kèm phụ thành trải nghiệm chính trong description, vì description còn dùng cho tìm kiếm ngữ nghĩa.
+    3. BẮT BUỘC VỚI NHÃN "Nội tạng": NẾU trong nguyên liệu (ingredients) CÓ CHỨA các thành phần như gan, lòng, mề, óc, tim, cật, dồi, ruột, bao tử, dạ dày, huyết/tiết (của heo, bò, gà...) thì BẠN BẮT BUỘC PHẢI THÊM TAG "Nội tạng" vào mảng "soft_tags".
 
     ═══════════════════════════════════════════════
     PHẦN 2: QUY TẮC BẮT BUỘC — ĐỌC KỸ TRƯỚC KHI GÁN NHÃN SOFT_TAGS
@@ -387,15 +615,18 @@ SYSTEM_PROMPT = f"""Bạn là chuyên gia ẩm thực Việt Nam có nhiều nă
     • Nếu món phù hợp nhiều bữa ăn thì có thể gán đủ tất cả các tag bữa ăn đó
 
     [YÊU CẦU ĐẦU RA]
-    Trả về chính xác mảng JSON tuân thủ tuyệt đối cấu trúc Schema đã được định nghĩa.
+    - "core_ingredient_indices": danh sách số nguyên, mỗi số là index trong ingredients.
+    - "preprocessing_ingredient_indices": danh sách số nguyên, mỗi số là index trong ingredients.
+    - KHÔNG trả "core_ingredients" hoặc "preprocessing_ingredients" dạng text. Code sẽ tự tạo hai trường này từ index.
+    Trả về chính xác một JSON object tuân thủ tuyệt đối cấu trúc Schema đã được định nghĩa.
     """
 
 # SCHEMA CHỈ TRẢ VỀ OBJECT CHO 1 MÓN
 ITEM_SCHEMA = {
     "type": "OBJECT",
     "properties": {
-        "core_ingredients": {"type": "ARRAY", "items": {"type": "STRING"}},
-        "preprocessing_ingredients": {"type": "ARRAY", "items": {"type": "STRING"}},
+        "core_ingredient_indices": {"type": "ARRAY", "items": {"type": "INTEGER"}},
+        "preprocessing_ingredient_indices": {"type": "ARRAY", "items": {"type": "INTEGER"}},
         "soft_tags": {
             "type": "ARRAY",
             "items": {"type": "STRING", "enum": VALID_SOFT_TAGS},
@@ -405,7 +636,7 @@ ITEM_SCHEMA = {
         "description": {"type": "STRING"},
         "reasoning": {"type": "STRING", "description": "Giải thích ngắn gọn tại sao chọn các tags này"}
     },
-    "required": ["core_ingredients", "preprocessing_ingredients", "soft_tags", "description", "reasoning"]
+    "required": ["core_ingredient_indices", "preprocessing_ingredient_indices", "soft_tags", "description", "reasoning"]
 }
 
 # =====================================================================
@@ -426,12 +657,18 @@ def post_process_tags(food_name, raw_ingredients_list, raw_instructions, ai_tags
             tags.append(tag)
 
     # --- 1. HARD-MAPPING (Thêm tag bắt buộc) ---
-    has_offal = any(re.search(rf'\b{kw}\b', ingred_text) for kw in OFFAL_KEYWORDS)
+    has_offal = has_offal_signal(ingred_text)
     if has_offal and "Nội tạng" not in tags:
         tags.append("Nội tạng")
         logs.append("Thêm 'Nội tạng'")
     elif not has_offal and "Nội tạng" in tags:
         remove_tag(tags, "Nội tạng")
+
+    has_seafood = has_seafood_signal(ingred_text)
+    if has_seafood and "Hải sản" not in tags:
+        add_tag(tags, "Hải sản", logs, "nguyên liệu chính có hải sản")
+    elif not has_seafood and "Hải sản" in tags:
+        remove_tag(tags, "Hải sản", logs, "không thấy hải sản trong ingredients")
 
     if any(kw in name_lower for kw in DANANG_KEYWORDS) and "Đặc sản Đà Nẵng" not in tags:
         tags.append("Đặc sản Đà Nẵng")
@@ -439,13 +676,13 @@ def post_process_tags(food_name, raw_ingredients_list, raw_instructions, ai_tags
     elif "Đặc sản Đà Nẵng" in tags and not any(kw in name_lower for kw in DANANG_KEYWORDS):
         remove_tag(tags, "Đặc sản Đà Nẵng", logs, "không khớp danh sách đặc sản Đà Nẵng")
 
-    if has_any(name_lower, ASIAN_KEYWORDS):
+    if has_phrase(name_lower, ASIAN_KEYWORDS):
         add_tag(tags, "Món Á", logs, "nhận diện nhóm món Á")
         remove_tag(tags, "Món Việt truyền thống", logs, "món không phải Việt thuần túy")
-    elif has_any(name_lower, WESTERN_KEYWORDS):
+    elif has_phrase(name_lower, WESTERN_KEYWORDS):
         add_tag(tags, "Món Âu", logs, "nhận diện nhóm món Âu")
         remove_tag(tags, "Món Việt truyền thống", logs, "món không phải Việt thuần túy")
-    elif has_any(name_lower, VIETNAMESE_KEYWORDS):
+    elif has_phrase(name_lower, VIETNAMESE_KEYWORDS):
         add_tag(tags, "Món Việt truyền thống", logs, "nhận diện món Việt")
         remove_tag(tags, "Món Á", logs, "không gán Món Á cho món Việt thuần túy")
 
@@ -476,8 +713,7 @@ def post_process_tags(food_name, raw_ingredients_list, raw_instructions, ai_tags
         add_tag(tags, "Ăn trưa", logs, "phù hợp bữa chính")
         add_tag(tags, "Ăn tối", logs, "phù hợp bữa chính")
 
-    if re.search(r'\b(phô mai|sữa chua|kem|yaourt|bơ|flan|panna cotta|mousse|rau câu|bingsu|chè)\b', name_lower) or \
-       re.search(r'\b(sữa tươi|sữa đặc|whipping cream|bơ lạt)\b', ingred_text):
+    if has_phrase(name_lower, DAIRY_NAME_KEYWORDS) or has_phrase(ingred_text, DAIRY_INGREDIENT_KEYWORDS):
         add_tag(tags, "Từ sữa / Phô mai", logs, "có sữa/phô mai/kem")
         add_tag(tags, "Béo ngậy", logs, "có sữa/phô mai/kem")
         if re.search(r'\b(kem|flan|panna cotta|mousse|rau câu|bingsu|chè|bánh|cheesecake)\b', name_lower):
@@ -550,6 +786,10 @@ def post_process_tags(food_name, raw_ingredients_list, raw_instructions, ai_tags
         if not has_category_signal(name_lower, ["bánh mì", "xôi", "phở", "bún", "cháo", "mì", "hủ tiếu"]):
             remove_tag(tags, "Ăn sáng", logs, "không phải món sáng điển hình")
 
+    correct_primary_method_tag(tags, food_name, raw_instructions, logs)
+    correct_texture_tags(tags, name_lower, ingred_text, logs)
+    ensure_protein_tag(tags, name_lower, ingred_text, logs)
+
     ensure_one_form_tag(tags, food_name, full_text, logs)
     ensure_method_tag(tags, food_name, full_text, logs)
     ensure_taste_tag(tags, full_text, logs)
@@ -578,13 +818,19 @@ def print_diff(old_tags: list, new_tags: list):
 # =====================================================================
 async def main():
     parser = argparse.ArgumentParser(description="Tách nguyên liệu, dán nhãn (Chế độ Single)")
+    parser.add_argument("--input", default="raw_foods_input.json", help="File dữ liệu món ăn đầu vào")
+    parser.add_argument("--output", default="raw_foods_enriched_labeled(FINAL).json", help="File lưu kết quả relabel")
     parser.add_argument("--pilot", type=int, default=0, help="Chỉ chạy N món đầu")
     parser.add_argument("--start", type=int, default=0, help="Bắt đầu từ index N")
     parser.add_argument("--delay", type=int, default=3, help="Thời gian chờ giữa các món")
+    parser.add_argument("--sample", type=int, default=0, help="Chạy N món ngẫu nhiên từ toàn bộ input")
+    parser.add_argument("--seed", type=int, default=42, help="Seed cho chế độ sample")
+    parser.add_argument("--force", action="store_true", help="Ghi lại output từ đầu thay vì resume")
+    parser.add_argument("--error-delay", type=int, default=10, help="Thời gian chờ sau mỗi lỗi")
     args = parser.parse_args()
 
-    input_file = "raw_foods_input.json"
-    output_file = "raw_foods_enriched(beta_v2).json"
+    input_file = args.input
+    output_file = args.output
 
     try:
         with open(input_file, "r", encoding="utf-8") as f:
@@ -594,7 +840,9 @@ async def main():
         sys.exit(1)
 
     relabeled = []
-    if os.path.exists(output_file):
+    if args.force and os.path.exists(output_file):
+        print(f"♻️  --force được bật. Ghi lại {output_file} từ đầu.")
+    elif os.path.exists(output_file):
         try:
             with open(output_file, "r", encoding="utf-8") as f:
                 relabeled = json.load(f)
@@ -602,22 +850,30 @@ async def main():
         except json.JSONDecodeError:
             print(f"⚠️ File lỗi định dạng JSON. Bắt đầu lại từ đầu.")
 
-    start_idx = max(args.start, len(relabeled))
-    end_idx = args.pilot if args.pilot > 0 else len(foods)
-    foods_to_process = foods[start_idx:end_idx]
+    if args.sample > 0:
+        sample_size = min(args.sample, len(foods))
+        rng = random.Random(args.seed)
+        foods_to_process = rng.sample(list(enumerate(foods)), sample_size)
+        run_label = f"SAMPLE MODE — {sample_size}/{len(foods)} món, seed={args.seed}"
+    else:
+        start_idx = max(args.start, len(relabeled))
+        end_idx = args.pilot if args.pilot > 0 else len(foods)
+        foods_to_process = list(enumerate(foods[start_idx:end_idx], start_idx))
+        run_label = f"SINGLE MODE — Bắt đầu từ: {start_idx}"
 
     print(f"\n{'='*60}")
-    print(f"🏷️  PIPELINE XỬ LÝ (SINGLE MODE) — Bắt đầu từ: {start_idx}")
+    print(f"🏷️  PIPELINE XỬ LÝ ({run_label})")
     print(f"{'='*60}\n")
 
     if not foods_to_process:
         print("✅ Đã hoàn tất xử lý mọi món ăn. Kết thúc.")
         sys.exit(0)
 
-    for i, item in enumerate(foods_to_process):
-        global_idx = start_idx + i
+    for global_idx, item in foods_to_process:
         food_name = item.get("name", "Không rõ tên")
-        raw_ingreds = item.get("ingredients", [])
+        display_ingredients = item.get("raw_ingredients") or item.get("ingredients", [])
+        normalized_ingredients = item.get("ingredients", [])
+        indexed_ingredients = format_indexed_ingredients(normalized_ingredients)
         raw_instructions = item.get("instructions", "")
         old_tags = item.get("soft_tags", [])
 
@@ -626,7 +882,9 @@ async def main():
         # Prompt build cho 1 món
         prompt_content = f"""
 Tên món: {food_name}
-Nguyên liệu gốc: {", ".join(raw_ingreds)}
+Nguyên liệu nguyên bản có định lượng (raw_ingredients): {", ".join(display_ingredients)}
+Nguyên liệu đã chuẩn hóa sơ bộ dùng cho search/filter (ingredients, chỉ được chọn bằng index):
+{indexed_ingredients}
 Cách làm: {raw_instructions}
 """
         try:
@@ -644,11 +902,31 @@ Cách làm: {raw_instructions}
             res = json.loads(response.text)
             
             # Post processing
-            cleaned_tags, autofix_logs = post_process_tags(food_name, raw_ingreds, raw_instructions, res.get("soft_tags", []))
+            ingredient_index_logs = []
+            core_ingredient_indices = normalize_ingredient_indices(
+                res.get("core_ingredient_indices", []),
+                normalized_ingredients,
+                ingredient_index_logs,
+                "core_ingredient_indices",
+            )
+            preprocessing_ingredient_indices = normalize_ingredient_indices(
+                res.get("preprocessing_ingredient_indices", []),
+                normalized_ingredients,
+                ingredient_index_logs,
+                "preprocessing_ingredient_indices",
+            )
+            core_ingredients = ingredients_from_indices(core_ingredient_indices, normalized_ingredients)
+            preprocessing_ingredients = ingredients_from_indices(
+                preprocessing_ingredient_indices,
+                normalized_ingredients,
+                drop_generic=False,
+            )
+            cleaned_tags, autofix_logs = post_process_tags(food_name, normalized_ingredients, raw_instructions, res.get("soft_tags", []))
 
             # In logs
-            if autofix_logs:
-                print(f"  🔧 Auto-Fix: {'; '.join(autofix_logs)}")
+            all_fix_logs = ingredient_index_logs + autofix_logs
+            if all_fix_logs:
+                print(f"  🔧 Auto-Fix: {'; '.join(all_fix_logs)}")
             print_diff(old_tags, cleaned_tags)
             print(f"  💬 LLM Reasoning: {res.get('reasoning', '')}")
 
@@ -656,12 +934,17 @@ Cách làm: {raw_instructions}
             enriched_item = {
                 "name": food_name,
                 "description": res.get("description", ""),
-                "core_ingredients": res.get("core_ingredients", []),
-                "preprocessing_ingredients": res.get("preprocessing_ingredients", []),
+                "core_ingredient_indices": core_ingredient_indices,
+                "preprocessing_ingredient_indices": preprocessing_ingredient_indices,
+                "core_ingredients": core_ingredients,
+                "preprocessing_ingredients": preprocessing_ingredients,
                 "soft_tags": cleaned_tags,
-                "raw_ingredients": raw_ingreds,
+                "raw_ingredients": display_ingredients,
+                "ingredients": normalized_ingredients,
                 "raw_instructions": raw_instructions
             }
+            if args.sample > 0:
+                enriched_item["source_index"] = global_idx
             relabeled.append(enriched_item)
 
             # Ghi đè file
@@ -672,7 +955,7 @@ Cách làm: {raw_instructions}
 
         except Exception as e:
             print(f"  ❌ Lỗi: {str(e)}")
-            time.sleep(10)
+            time.sleep(args.error_delay)
         
         print("-" * 50)
 

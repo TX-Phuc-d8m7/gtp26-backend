@@ -1,6 +1,6 @@
 import uuid
-from sqlalchemy import Column, String, Text, JSON
-from sqlalchemy.dialects.postgresql import UUID, ARRAY, JSONB
+from sqlalchemy import Column, String, Text
+from sqlalchemy.dialects.postgresql import UUID, ARRAY
 from pgvector.sqlalchemy import HALFVEC
 from database import Base
 
@@ -13,7 +13,12 @@ class Food(Base):
     img_url = Column(String, nullable=True)
     
     core_ingredients = Column(ARRAY(Text), nullable=False, default=[])
+    raw_ingredients = Column(ARRAY(Text), nullable=False, default=[])
+    raw_instructions = Column(Text, nullable=False, default="")
     soft_tags = Column(ARRAY(Text), nullable=False, default=[]) 
+    taste_profile = Column(ARRAY(Text), nullable=False, default=[])
+    meal_context = Column(ARRAY(Text), nullable=False, default=[])
+    occasion_context = Column(ARRAY(Text), nullable=False, default=[])
     
     # gemini-embedding-001 need vector 3072 dimension
     embedding = Column(HALFVEC(3072), nullable=True)

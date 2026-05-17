@@ -937,7 +937,8 @@
       "coca",
       "thit ba roi",
       "da heo",
-      "long heo"
+      "long heo",
+      "chao"
     ],
     "prefer_ingredient": [
       "can tay",
@@ -1184,6 +1185,11 @@
       "me",
       "khe",
       "mang chua",
+      "mang cu tuoi",
+      "mang tuoi",
+      "ca chua",
+      "sot ca",
+      "tuong ca",
       "kim chi",
       "dam",
       "giam",
@@ -1507,6 +1513,7 @@
       "so huyet",
       "so long",
       "ngheu",
+      "tom",
       "tom kho",
       "tep kho",
       "mam tom",
@@ -1521,7 +1528,8 @@
       "xuong bo",
       "nam",
       "mang",
-      "gia"
+      "gia",
+      "be be"
     ],
     "prefer_ingredient": [
       "uc ga",

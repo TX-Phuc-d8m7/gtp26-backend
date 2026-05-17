@@ -80,12 +80,39 @@ async def seed_data():
         # 2. NẠP DỮ LIỆU MÓN ĂN (FOOD) VÀ EMBEDDING
         # ==========================================
 
-        print("📂 Đang kiểm tra và đồng bộ dữ liệu từ foods_enriched.json...")
-        file_path = 'foods_enriched.json'
+        print("📂 Đang kiểm tra và đồng bộ dữ liệu món ăn đã phân category...")
+        BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+        categorized_file_path = os.path.join(
+            BASE_DIR, 
+            "standard-data", 
+            "ingredients-data", 
+            "food-clean-categorized",
+            "raw_foods_enriched_labeled(final_488).categorized.clean.json"
+        )
+        legacy_categorized_file_path = os.path.join(
+            BASE_DIR,
+            "standard-data",
+            "ingredients-data",
+            "raw_foods_enriched_labeled(final_488).categorized.clean.json"
+        )
+        fallback_file_path = os.path.join(
+            BASE_DIR,
+            "standard-data",
+            "ingredients-data",
+            "food-clean-categorized",
+            "raw_foods_enriched_labeled(final_488).categorized.clean.json"
+        )
+        if os.path.exists(categorized_file_path):
+            file_path = categorized_file_path
+        elif os.path.exists(legacy_categorized_file_path):
+            file_path = legacy_categorized_file_path
+        else:
+            file_path = fallback_file_path
 
         if not os.path.exists(file_path):
             print(f"❌ Không tìm thấy file {file_path}")
             return
+        print(f"📄 Food seed source: {file_path}")
         
         with open(file_path, "r", encoding="utf-8") as f:
             foods_data = json.load(f)
@@ -99,27 +126,47 @@ async def seed_data():
         for item in foods_data:
             food_name = item.get("name")
             new_core_ingredients = item.get("core_ingredients", [])
+            new_raw_ingredients = item.get("raw_ingredients", [])
+            new_raw_instructions = item.get("raw_instructions", item.get("instructions", ""))
             new_description = item.get("description", "")
             new_soft_tags = item.get("soft_tags", [])
+            new_taste_profile = item.get("taste_profile", [])
+            new_meal_context = item.get("meal_context", [])
+            new_occasion_context = item.get("occasion_context", [])
 
             if food_name in existing_foods:
                 food = existing_foods[food_name]
                 
-                # Text thay đổi nên cần tạo lại vector
-                is_text_changed = (
+                # Các field dùng trong embedding thay đổi thì cần tạo lại vector.
+                is_embedding_text_changed = (
                     food.core_ingredients != new_core_ingredients or
                     food.description != new_description or
-                    food.soft_tags != new_soft_tags
+                    food.soft_tags != new_soft_tags or
+                    food.taste_profile != new_taste_profile or
+                    food.meal_context != new_meal_context or
+                    food.occasion_context != new_occasion_context
+                )
+
+                # Raw fields chỉ lưu trữ/truy vết, không đưa vào embedding để tránh nhiễu.
+                is_storage_changed = (
+                    is_embedding_text_changed or
+                    food.raw_ingredients != new_raw_ingredients or
+                    food.raw_instructions != new_raw_instructions
                 )
                 
-                if is_text_changed:
+                if is_storage_changed:
                     # Cập nhật mọi dữ liệu mới vào DB
                     food.core_ingredients = new_core_ingredients
+                    food.raw_ingredients = new_raw_ingredients
+                    food.raw_instructions = new_raw_instructions
                     food.description = new_description
                     food.soft_tags = new_soft_tags
+                    food.taste_profile = new_taste_profile
+                    food.meal_context = new_meal_context
+                    food.occasion_context = new_occasion_context
                     
-                    # CHỈ reset vector nếu nội dung text bị thay đổi
-                    if is_text_changed:
+                    # CHỈ reset vector nếu nội dung dùng để embedding bị thay đổi.
+                    if is_embedding_text_changed:
                         food.embedding = None 
                         
                     update_count += 1
@@ -127,8 +174,13 @@ async def seed_data():
                 new_food = Food(
                     name=food_name,
                     core_ingredients=new_core_ingredients,
+                    raw_ingredients=new_raw_ingredients,
+                    raw_instructions=new_raw_instructions,
                     description=new_description,
                     soft_tags=new_soft_tags,
+                    taste_profile=new_taste_profile,
+                    meal_context=new_meal_context,
+                    occasion_context=new_occasion_context,
                     embedding=None
                 )
                 db.add(new_food)
@@ -152,12 +204,18 @@ async def seed_data():
                 # Check None/Null except join list error
                 core_ingreds_str = ", ".join(food.core_ingredients) if food.core_ingredients else "Không có"
                 soft_tags_str = ", ".join(food.soft_tags) if food.soft_tags else "Không có"
+                taste_profile_str = ", ".join(food.taste_profile) if food.taste_profile else "Không có"
+                meal_context_str = ", ".join(food.meal_context) if food.meal_context else "Không có"
+                occasion_context_str = ", ".join(food.occasion_context) if food.occasion_context else "Không có"
 
                 text_to_embed = (
                     f"Món ăn: {food.name}. "
                     f"Mô tả: {food.description} "
                     f"Nguyên liệu chính: {core_ingreds_str}. "
-                    f"Tính chất: {soft_tags_str}."
+                    f"Tính chất: {soft_tags_str}. "
+                    f"Hồ sơ vị: {taste_profile_str}. "
+                    f"Bữa ăn phù hợp: {meal_context_str}. "
+                    f"Ngữ cảnh sử dụng: {occasion_context_str}."
                 )
 
                 # Chạy gọi API đồng bộ trong thread để không block Event Loop của Asyncio

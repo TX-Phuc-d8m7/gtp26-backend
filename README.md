@@ -84,7 +84,12 @@ Lưu thông tin món ăn:
 - `description`: mô tả món.
 - `img_url`: ảnh món, hiện optional.
 - `core_ingredients`: nguyên liệu thực sự cấu thành món.
+- `raw_ingredients`: nguyên liệu gốc có định lượng/ghi chú từ dữ liệu crawl.
+- `raw_instructions`: hướng dẫn nấu gốc từ dữ liệu crawl.
 - `soft_tags`: nhãn mô tả món ăn.
+- `taste_profile`: nhóm vị chủ đạo.
+- `meal_context`: bữa/thời điểm ăn phù hợp.
+- `occasion_context`: ngữ cảnh sử dụng món.
 - `embedding`: vector 3072 chiều từ Gemini embedding.
 
 ### Bảng `tags`
