@@ -7,6 +7,10 @@ from models import Food, Tag
 from database import AsyncSessionLocal
 from google import genai
 from google.genai import types
+from services.ingredient_key_service import (
+    generate_core_ingredient_keys,
+    load_enabled_alias_override_rules,
+)
 
 PROJECT_ID = os.getenv("PROJECT_ID")
 client = genai.Client(vertexai=True, project=PROJECT_ID, location="us-central1")
@@ -119,6 +123,7 @@ async def seed_data():
         
         existing_foods_result = await db.execute(select(Food))
         existing_foods = {food.name: food for food in existing_foods_result.scalars().all()}
+        alias_override_rules = await load_enabled_alias_override_rules(db)
 
         new_count = 0
         update_count = 0
@@ -128,6 +133,10 @@ async def seed_data():
             new_core_ingredients = item.get("core_ingredients", [])
             new_raw_ingredients = item.get("raw_ingredients", [])
             new_raw_instructions = item.get("raw_instructions", item.get("instructions", ""))
+            new_core_ingredient_keys = generate_core_ingredient_keys(
+                new_core_ingredients,
+                extra_rules=alias_override_rules,
+            )
             new_description = item.get("description", "")
             new_soft_tags = item.get("soft_tags", [])
             new_taste_profile = item.get("taste_profile", [])
@@ -151,7 +160,8 @@ async def seed_data():
                 is_storage_changed = (
                     is_embedding_text_changed or
                     food.raw_ingredients != new_raw_ingredients or
-                    food.raw_instructions != new_raw_instructions
+                    food.raw_instructions != new_raw_instructions or
+                    food.core_ingredient_keys != new_core_ingredient_keys
                 )
                 
                 if is_storage_changed:
@@ -159,6 +169,7 @@ async def seed_data():
                     food.core_ingredients = new_core_ingredients
                     food.raw_ingredients = new_raw_ingredients
                     food.raw_instructions = new_raw_instructions
+                    food.core_ingredient_keys = new_core_ingredient_keys
                     food.description = new_description
                     food.soft_tags = new_soft_tags
                     food.taste_profile = new_taste_profile
@@ -176,6 +187,7 @@ async def seed_data():
                     core_ingredients=new_core_ingredients,
                     raw_ingredients=new_raw_ingredients,
                     raw_instructions=new_raw_instructions,
+                    core_ingredient_keys=new_core_ingredient_keys,
                     description=new_description,
                     soft_tags=new_soft_tags,
                     taste_profile=new_taste_profile,

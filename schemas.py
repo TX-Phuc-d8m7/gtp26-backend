@@ -25,9 +25,43 @@ class FoodResult(BaseModel):
     meal_context: List[str] = Field(default_factory=list)
     occasion_context: List[str] = Field(default_factory=list)
     matchScore: float             # Nên để kiểu float cho số điểm Vector thay vì str
+    reason: Optional[str] = None  # Giải thích ngắn vì sao món được gợi ý
 
 class SearchResponse(BaseModel):
     query: str
     ai_insight: AIInsight
     results: List[FoodResult]
     ai_response: Optional[str] = None  # Lời tư vấn tự nhiên từ Post-processing Agent
+
+
+class IngredientAliasOverrideCreate(BaseModel):
+    alias: str
+    canonical_key: str
+    group_keys: List[str] = Field(default_factory=list)
+    enabled: bool = True
+    notes: str = ""
+
+
+class IngredientAliasOverrideUpdate(BaseModel):
+    alias: Optional[str] = None
+    canonical_key: Optional[str] = None
+    group_keys: Optional[List[str]] = None
+    enabled: Optional[bool] = None
+    notes: Optional[str] = None
+
+
+class IngredientAliasOverrideResult(BaseModel):
+    id: uuid.UUID
+    alias: str
+    alias_key: str
+    canonical_key: str
+    group_keys: List[str] = Field(default_factory=list)
+    enabled: bool
+    notes: str = ""
+
+    model_config = {"from_attributes": True}
+
+
+class RebuildFoodKeysResponse(BaseModel):
+    foods_count: int
+    updated_count: int

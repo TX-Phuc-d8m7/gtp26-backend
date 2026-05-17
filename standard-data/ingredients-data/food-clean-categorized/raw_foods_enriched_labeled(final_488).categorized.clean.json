@@ -1244,7 +1244,7 @@
       "gừng nhỏ",
       "hành tím",
       "rượu trắng",
-      "bún tươi sợi nhỏ",
+      "bún tươi",
       "đậu phộng",
       "dưa leo",
       "chanh",
@@ -1291,7 +1291,7 @@
       "gừng nhỏ",
       "hành tím",
       "rượu trắng",
-      "bún tươi sợi nhỏ",
+      "bún tươi",
       "đậu phộng",
       "dưa leo",
       "chanh",
@@ -1794,7 +1794,7 @@
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
-      "kí bún lá tươi",
+      "bún tươi",
       "đậu phụ",
       "lòng heo : tim heo",
       "gan heo",
@@ -1822,7 +1822,7 @@
       "Dai / Sần sật"
     ],
     "raw_ingredients": [
-      "1 kí Bún lá tươi",
+      "1 kí Bún tươi",
       "8 miếng Đậu phụ",
       "800 g Lòng heo : tim heo , gan heo , phèo, bao tử , dồi huyết đã luộc",
       "200 gr thịt ba rọi heo luộc",
@@ -1838,7 +1838,7 @@
       "1 quả Ớt tươi"
     ],
     "ingredients": [
-      "kí bún lá tươi",
+      "bún tươi",
       "đậu phụ",
       "lòng heo : tim heo",
       "gan heo",
@@ -1994,7 +1994,8 @@
       9,
       10,
       11,
-      12
+      12,
+      13
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
@@ -2285,10 +2286,10 @@
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
-      "_70 bún khô",
-      "_6 con bề bề bóc nõn",
-      "nhánh hành khô",
-      "nhúm rau ngót"
+      "bún khô",
+      "bề bề bóc nõn",
+      "hành khô",
+      "rau ngót"
     ],
     "preprocessing_ingredients": [],
     "soft_tags": [
@@ -2299,18 +2300,16 @@
       "Món Việt truyền thống"
     ],
     "raw_ingredients": [
-      "50 _70 gram bún khô",
-      "5 _6 con bề bề bóc nõn",
+      "50 - 70 gram bún khô",
+      "5 - 6 con bề bề bóc nõn",
       "1 nhánh hành khô",
-      "1 nhúm rau ngót",
-      "Gia vị cơ bản"
+      "1 nhúm rau ngót"
     ],
     "ingredients": [
-      "_70 bún khô",
-      "_6 con bề bề bóc nõn",
-      "nhánh hành khô",
-      "nhúm rau ngót",
-      "gia vị cơ bản"
+      "bún khô",
+      "bề bề bóc nõn",
+      "hành khô",
+      "rau ngót"
     ],
     "raw_instructions": "Bề bề có thể cho tùy ý, tùy sức ăn không giới hạn.\nHành khô băm nhỏ hoặc thái lát tùy thích. Thêm 1 xíu dầu ăn láng mặt nồi, phi thơm hành khô, cho bề bề bóc nõn vào rim qua với xíu mắm. Bún khô ngâm nước cho mềm\nBề hơi săn lại cho rau vào đảo cùng, lưu ý đảo rau chú ý không nát bề bề mất ngon. (có thể bỏ bề bề ra, xào rau riêng cũng được). Đổ 1 bát nước vào nồi rau xào bề bề. (có nước dùng xương càng ngon). Cách 2: cho nước sôi, thả rau vào đun gần chín, thả bề bề\nNêm lại cho vừa miệng bằng bột canh, bột nêm. Cho bún vào nồi nước đun chín bún là được.",
     "taste_profile": [
@@ -2481,10 +2480,10 @@
     ],
     "core_ingredients": [
       "thịt bò",
-      "- xương bò",
+      "xương bò",
       "sườn bò",
-      "l nước lạnh",
-      "gia vị phở: đinh hương",
+      "nước lạnh",
+      "đinh hương",
       "hoa hồi",
       "thảo quả",
       "hạt mùi",
@@ -2501,8 +2500,8 @@
       "muối",
       "bột canh",
       "nước mắm",
-      "bánh phở cắt sợi nhỏ vừa",
-      "hành tây cắt múi cau",
+      "bánh phở",
+      "hành tây",
       "hành lá",
       "rau răm",
       "rau thơm",
@@ -2516,11 +2515,11 @@
       "mỡ heo",
       "bột khoai tây",
       "bột bắp",
-      "- bột nở",
+      "bột nở",
       "nước đá lạnh",
       "rượu trắng",
       "dầu ăn",
-      "gia vị:nước mắm",
+      "nước mắm",
       "bột tỏi",
       "tiêu hạt",
       "tiêu đập nhỏ"
@@ -2541,7 +2540,7 @@
     ],
     "raw_ingredients": [
       "1 kg thịt bò ( thịt thăn bò bằm hoặc vụn làm phần thịt tái;thịt gân bò; thịt bắp bò hoặc gầu bò; thịt nạm bò)",
-      "1.5-2 kg xương bò( xương cổ, xương có tuỷ , xương ống , xương sống lưng)",
+      "1.5 - 2 kg xương bò( xương cổ, xương có tuỷ , xương ống , xương sống lưng)",
       "700 g sườn bò (ko bắt buộc)",
       "3.5 l nước lạnh",
       "Gia vị phở: đinh hương , hoa hồi , thảo quả , hạt mùi ,quế cây,rễ ngò,rễ hành,hành tây,gừng, hành tím",
@@ -2557,7 +2556,7 @@
       "200 g mỡ heo (chọn phần mở gáy),rửa sạch( xay chung với bò)",
       "50 g bột khoai tây",
       "2 tbsp bột bắp",
-      "1/2-1 tsp bột nở",
+      "1/2 - 1 tsp bột nở",
       "100 ml nước đá lạnh",
       "1 tbsp rượu trắng",
       "20 ml dầu ăn",
@@ -2565,10 +2564,10 @@
     ],
     "ingredients": [
       "thịt bò",
-      "- xương bò",
+      "xương bò",
       "sườn bò",
-      "l nước lạnh",
-      "gia vị phở: đinh hương",
+      "nước lạnh",
+      "đinh hương",
       "hoa hồi",
       "thảo quả",
       "hạt mùi",
@@ -2588,8 +2587,8 @@
       "nước mắm",
       "rượu vodka hoặc rượu trắng khoảng -độ để khử mùi bò",
       "giấm ăn",
-      "bánh phở cắt sợi nhỏ vừa",
-      "hành tây cắt múi cau",
+      "bánh phở",
+      "hành tây",
       "hành lá",
       "rau răm",
       "rau thơm",
@@ -2601,14 +2600,13 @@
       "thăn bò",
       "gân bò",
       "mỡ heo",
-      "rửa sạch",
       "bột khoai tây",
       "bột bắp",
-      "- bột nở",
+      "bột nở",
       "nước đá lạnh",
       "rượu trắng",
       "dầu ăn",
-      "gia vị:nước mắm",
+      "nước mắm",
       "bột tỏi",
       "hạt nêm",
       "tiêu hạt",
@@ -5187,7 +5185,7 @@
     ]
   },
   {
-    "name": "Mì xào trứng",
+    "name": "Mì bò xào trứng",
     "description": "Món mì xào trứng bò thơm lừng, hấp dẫn với sợi mì dai ngon quyện cùng thịt bò phi lê mềm ngọt, đậm đà gia vị. Hành tây xào vừa tới tạo độ giòn nhẹ, cùng hành ngò tươi xanh làm dậy mùi món ăn. Đây là lựa chọn tuyệt vời cho bữa trưa hay bữa tối nhanh gọn mà vẫn đủ chất, đưa cơm vô cùng.",
     "core_ingredient_indices": [
       0,
@@ -6969,7 +6967,7 @@
       "dầu ăn",
       "nước dùng xương",
       "rau sống",
-      "giá trụng",
+      "giá",
       "sa tế",
       "ớt"
     ],
@@ -6999,7 +6997,7 @@
       "Dầu ăn",
       "Nước dùng xương",
       "Rau sống",
-      "Giá trụng",
+      "Giá",
       "Sa tế",
       "Ớt"
     ],
@@ -7020,7 +7018,7 @@
       "dầu ăn",
       "nước dùng xương",
       "rau sống",
-      "giá trụng",
+      "giá",
       "sa tế",
       "ớt"
     ],
@@ -9106,18 +9104,18 @@
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
-      "cân hến",
-      "cân bún",
-      "nắm rau răm",
+      "hến",
+      "bún",
+      "rau răm",
       "sả",
       "hành",
       "tỏi",
-      "thìa mắm",
-      "thìa xì dầu",
+      "mắm",
+      "xì dầu",
       "mì chính",
       "tiêu",
-      "- ớt",
-      "-nhánh hành lá"
+      "ớt",
+      "hành lá"
     ],
     "preprocessing_ingredients": [],
     "soft_tags": [
@@ -9144,18 +9142,18 @@
       "1-2 nhánh hành lá"
     ],
     "ingredients": [
-      "cân hến",
-      "cân bún",
-      "nắm rau răm",
+      "hến",
+      "bún",
+      "rau răm",
       "sả",
       "hành",
       "tỏi",
-      "thìa mắm",
-      "thìa xì dầu",
+      "mắm",
+      "xì dầu",
       "mì chính",
       "tiêu",
-      "- ớt",
-      "-nhánh hành lá"
+      "ớt",
+      "hành lá"
     ],
     "raw_instructions": "Đầu tiên mình rửa hến, rau rồi sả này kia. Hến cho vào luộc chín lấy nước. Bóc bỏ vỏ. Rau răm thái nhỏ. Hành tỏi thái và băm nhỏ. Hành lá thì rửa rồi thái nhỏ. Sả thì đập dập năm nhỏ (nếu dùng xả). Bún mọi người có thể để nguyên hoặc cắt ra nhé. ớt cũng thái nhỏ luôn\nBây giờ cho hành và tỏi vào phi nên cho thơm. Cho hến vào cùng. Cho một thìa canh nước hến vừa luộc vào. Cho mắm, tiêu, xì dầu, rau răm, xả, ớt vào luôn. Đảo tầm 5-10’ thì cho bún vào. Cho thêm 1-2 thìa canh nước luộc hến vào đảo đều tay. Xong mọi người xem có thiếu nước thì cho thêm vào để bún mềm và ngấm nhé. Khi nào thấy bún chín mềm ok rồi thì ăn thử nếu mà nhạt thì cho thêm mắm. Nhưng mà đừng cho nhièu quá nó không ngon ấy. Ok chúc mọi người thành công 👍🏼😘😘",
     "taste_profile": [
@@ -9287,13 +9285,15 @@
       12,
       13,
       14,
-      15
+      15,
+      16
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
       "gói gia vị ajiquick bún bò huế",
-      "gói bún khô",
-      "khoanh giò heo hoặc cái đuôi heo",
+      "bún khô",
+      "giò heo",
+      "đuôi heo",
       "bò tái",
       "bò bắp",
       "sả cây",
@@ -9326,8 +9326,9 @@
     ],
     "ingredients": [
       "gói gia vị ajiquick bún bò huế",
-      "gói bún khô",
-      "khoanh giò heo hoặc cái đuôi heo",
+      "bún khô",
+      "giò heo",
+      "đuôi heo",
       "bò tái",
       "bò bắp",
       "sả cây",
@@ -10947,14 +10948,16 @@
       0,
       1,
       2,
-      3
+      3,
+      4
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
       "mực trứng hấp",
       "tỏi",
       "ớt",
-      "đường"
+      "đường",
+      "nước mắm"
     ],
     "preprocessing_ingredients": [],
     "soft_tags": [
@@ -10968,13 +10971,15 @@
     ],
     "raw_ingredients": [
       "500 gr mực trứng hấp",
-      "Tỏi , ớt, đường (mình dùng si ruýp đường thốt nốt)"
+      "Tỏi , ớt, đường (mình dùng si ruýp đường thốt nốt)",
+      "Nước mắm"
     ],
     "ingredients": [
       "mực trứng hấp",
       "tỏi",
       "ớt",
-      "đường"
+      "đường",
+      "nước mắm"
     ],
     "raw_instructions": "Làm nước mắm : 1,5 thìa nước mắm, 1 củ tỏi, 1 quả ớt (bỏ qua nếu nhà có bé không ăn được ớt), 20ml nước, 1 thìa si ruýp đường hoặc 2 thìa cf đường. Trộn đều hh này.\nChiên mực vàng sơ, sau đó đổ hh nước mắm vào rim khoảng 10p cho đến khi sệt sệt kẹo vào mực là được.\nVậy là xong rồi, rất đơn giản ạ. Mọi người có thể tăng giảm gia vị tùy theo khẩu vị gia đình nhé.",
     "taste_profile": [
@@ -19578,7 +19583,8 @@
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
       "gà ta",
-      "bột ớt"
+      "bột ớt",
+      "muối ớt"
     ],
     "preprocessing_ingredients": [],
     "soft_tags": [
@@ -19590,12 +19596,12 @@
     "raw_ingredients": [
       "1 con gà ta 1,5kg",
       "2 mc bột ớt",
-      "Gia vị"
+      "Muối ớt"
     ],
     "ingredients": [
       "gà ta",
       "bột ớt",
-      "gia vị"
+      "muối ớt"
     ],
     "raw_instructions": "Gà làm sạch, chà muối giấm và rửa lại nhiều lần rồi ướp gà với 1mc dầu hào, 4mc nước tương, 2mc tương ớt, 1mcf dầu mè, 1mcf dầu ớt sa tế, xoa đều bên trong và bên ngoài, chú trọng xoa đều phần da để gà lên màu đẹp, ướp ít nhất 1 tiếng hoặc để qua đêm cho gà thấm gia vị, sau đó đặt gà vào nồi chiên không dầu, dùng tay đẩy mạnh xuống để tạo hình như ảnh\nBật 160° 30 phút cho gà chín, lật mặt bật thêm 160° 20 phút, có thể tăng nhiệt phần da lên 180° 10 phút cho da vàng xém tạo màu hấp dẫn hơn\nDùng kẹp lấy gà ra, rắc bột ớt đều lên phần da gà",
     "taste_profile": [
@@ -21889,7 +21895,8 @@
       9,
       10,
       11,
-      12
+      12,
+      13
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
@@ -24084,7 +24091,8 @@
       9,
       10,
       11,
-      12
+      12,
+      13
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
@@ -24099,7 +24107,8 @@
       "ruốc",
       "tương cà",
       "mayonaise",
-      "mỡ hành"
+      "mỡ hành",
+      "muối ớt"
     ],
     "preprocessing_ingredients": [],
     "soft_tags": [
@@ -24120,7 +24129,8 @@
       "Trứng luộc",
       "Ruốc (chắn chắn phải có!)",
       "Tương ớt, tương cà , mayonaise rưới lên bề mặt",
-      "Mỡ hành"
+      "Mỡ hành",
+      "Muối ớt"
     ],
     "ingredients": [
       "chiếc bánh mì cỡ vừa vừa",
@@ -24135,7 +24145,8 @@
       "tương ớt",
       "tương cà",
       "mayonaise",
-      "mỡ hành"
+      "mỡ hành",
+      "muối ớt"
     ],
     "raw_instructions": "Cán dẹp bánh mì. Đừng cán mỏng quá ạ\nCho các nguyên liệu làm sốt vào nấu chảy và hoà quyện. Rồi quết hỗn hợp sốt lên mặt bánh mì. Nướng hoặc áp chảo cho bánh mì giòn\nLàm mỡ hành\nCắt miếng bánh mì vừa ăn ra đĩa. Rắc ruốc, rưới mỡ hành, xúc xích, trứng lên đều mặt bánh. Rồi rưới tương ớt, tương cà, mayo lên là xong. Ăn siu cuốn ạ 😜",
     "taste_profile": [
@@ -25891,21 +25902,21 @@
     ],
     "preprocessing_ingredient_indices": [],
     "core_ingredients": [
-      "🍲 nước dùng",
+      "nước dùng",
       "bắp",
       "cải trắng nhỏ",
-      "tai nấm đông cô to",
+      "nấm đông cô to",
       "nắm rau xanh",
-      "quả bột nêm rau củ",
+      "bột nêm rau củ",
       "tiêu xay",
       "hành lá trang trí",
-      "🥣 nước chấm chua ngọt",
+      "nước chấm chua ngọt",
       "dấm gạo",
       "nước tương",
-      "mật ong tỉ lệ ::",
+      "mật ong",
       "ớt cắt lát nhỏ",
-      "tương ớt nếu thích",
-      "🥟 sủi cảo mua sẵn hoặc tự gói"
+      "tương ớt",
+      "sủi cảo"
     ],
     "preprocessing_ingredients": [],
     "soft_tags": [
@@ -25917,36 +25928,36 @@
       "Món Á"
     ],
     "raw_ingredients": [
-      "🍲 Nước dùng",
+      "Nước dùng",
       "1 trái bắp",
       "1 củ cải trắng nhỏ",
-      "2 tai nấm đông cô to",
+      "2 nấm đông cô to",
       "2 nắm rau xanh (mình dùng cải kale )",
-      "quả Bột nêm rau củ",
+      "Bột nêm rau củ",
       "Tiêu xay",
       "Hành lá trang trí",
-      "🥣 Nước chấm chua ngọt",
+      "Nước chấm chua ngọt",
       "Dấm gạo , nước tương, mật ong tỉ lệ 1:1:1",
       "Ớt cắt lát nhỏ",
       "Tương ớt nếu thích",
-      "🥟 Sủi cảo mua sẵn hoặc tự gói (cách làm trong bài trước từ A đến Á)"
+      "Sủi cảo mua sẵn hoặc tự gói (cách làm trong bài trước từ A đến Á)"
     ],
     "ingredients": [
-      "🍲 nước dùng",
+      "nước dùng",
       "bắp",
       "cải trắng nhỏ",
-      "tai nấm đông cô to",
+      "nấm đông cô to",
       "nắm rau xanh",
-      "quả bột nêm rau củ",
+      "bột nêm rau củ",
       "tiêu xay",
       "hành lá trang trí",
-      "🥣 nước chấm chua ngọt",
+      "nước chấm chua ngọt",
       "dấm gạo",
       "nước tương",
-      "mật ong tỉ lệ ::",
+      "mật ong",
       "ớt cắt lát nhỏ",
-      "tương ớt nếu thích",
-      "🥟 sủi cảo mua sẵn hoặc tự gói"
+      "tương ớt",
+      "sủi cảo"
     ],
     "raw_instructions": "Sủi cảo mua sẵn hoặc tự làm như bài trước rất dễ chỉ mất 1 tiếng là có mớ sủi cảo chất lượng đúng chuẩn Trung Hoa anh hùng\nNấu nước dùng từ các loại rau củ trừ rau xanh, nấu trong 30 phút rồi cho bột nêm rau củ vào nếm vừa ăn, mình nấu với bắp nên nước khá ngọt không cần thêm đường luôn 🌽\nSau khi luộc tầm 20 phút thì bắc một nồi khác luộc sủi cảo, nước sôi cho chút muối rồi cho cảo vào luộc 10 phút, cảo nổi lên vớt ra cho vào tô\nCho rau vào nồi đã luộc cảo trụng cho chín rồi vớt ra cho vào tô luôn\nLúc này thì nước dùng đã nêm nếm xong vừa ăn tắt bếp chan nước dùng và rau củ vào tô cảo, rắc hành lá dùng nóng. Chấm cảo với nước tương chua ngọt và tương ớt cay cay nghe nhạc “Người đến từ Triều Châu” 🎵",
     "taste_profile": [

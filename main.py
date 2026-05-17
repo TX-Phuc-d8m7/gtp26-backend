@@ -8,6 +8,7 @@ from database import engine, Base, get_db
 from schemas import SearchResponse
 from services.food_service import search_food
 from services.seed_service import seed_data
+from routers.admin_alias_overrides import router as admin_alias_overrides_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -21,6 +22,8 @@ async def lifespan(app: FastAPI):
         await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS occasion_context TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
         await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS raw_ingredients TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
         await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS raw_instructions TEXT NOT NULL DEFAULT ''"))
+        await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS core_ingredient_keys TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_foods_core_ingredient_keys_gin ON foods USING GIN (core_ingredient_keys)"))
     
     # Chạy data seeder
     await seed_data()
@@ -29,6 +32,7 @@ async def lifespan(app: FastAPI):
     await engine.dispose()
 
 app = FastAPI(lifespan=lifespan, title="Food AI API")
+app.include_router(admin_alias_overrides_router)
 
 app.add_middleware(
     CORSMiddleware,
