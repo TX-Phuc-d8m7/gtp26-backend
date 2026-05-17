@@ -9,6 +9,8 @@ Backend này là API gợi ý món ăn theo câu hỏi tự nhiên của ngườ
 - PostgreSQL + pgvector: lưu món ăn, tag y tế và embedding vector.
 - Gemini 2.5 Flash: phân tích ý định người dùng và sinh lời tư vấn.
 - Gemini embedding: tạo vector cho món ăn và query tìm kiếm.
+- Ingredient key alias system: chuẩn hóa nguyên liệu thành `base:*`, `canon:*`, `group:*` để filter chính xác hơn.
+- Hybrid retrieval/rerank nội bộ: kết hợp SQL filter, ingredient priority, category context, cosine similarity và rule-based scoring.
 - Python scripts: relabel món ăn, chuẩn hóa nguyên liệu, sinh rule gợi ý.
 
 ## Cách chạy backend
@@ -30,6 +32,16 @@ Endpoint chính:
 GET /foods/search?q=<câu hỏi người dùng>
 ```
 
+Endpoint admin hiện có:
+
+```text
+GET    /admin/ingredient-alias-overrides
+POST   /admin/ingredient-alias-overrides
+PATCH  /admin/ingredient-alias-overrides/{id}
+DELETE /admin/ingredient-alias-overrides/{id}
+POST   /admin/ingredient-alias-overrides/rebuild-food-keys
+```
+
 Ví dụ:
 
 ```text
@@ -44,21 +56,25 @@ backend/
 ├── database.py
 ├── models.py
 ├── schemas.py
+├── routers/
+│   └── admin_alias_overrides.py
 ├── services/
-│   ├── seed_service.py
-│   └── food_service.py
+│   ├── food_service.py
+│   ├── ingredient_key_service.py
+│   └── seed_service.py
 ├── scripts/
+│   ├── generate_ingredient_key_preview.py
 │   ├── relabel_soft_tags.py
+│   ├── split_food_categories.py
 │   ├── generate_disease_rules_langchain.py
 │   └── build_ingredient_guardrail_pipeline.py
 ├── standard-data/
-│   └── tags_data.json
-├── llm/generated-rules/
-│   └── tags_data.generated.json
-├── foods_enriched.json
-├── foods_enriched_v2.json
-├── raw_foods_input.json
-└── medical_advice_rules.json
+│   ├── tags_data.json
+│   ├── alias-rules/
+│   ├── generated-rules/medical-advice-rules/
+│   └── ingredients-data/food-clean-categorized/
+└── docs/
+    └── backend_api_todo.md
 ```
 
 ## Luồng khởi động
@@ -86,6 +102,7 @@ Lưu thông tin món ăn:
 - `core_ingredients`: nguyên liệu thực sự cấu thành món.
 - `raw_ingredients`: nguyên liệu gốc có định lượng/ghi chú từ dữ liệu crawl.
 - `raw_instructions`: hướng dẫn nấu gốc từ dữ liệu crawl.
+- `core_ingredient_keys`: key nguyên liệu dạng `base:*`, `canon:*`, `group:*` dùng cho lọc SQL.
 - `soft_tags`: nhãn mô tả món ăn.
 - `taste_profile`: nhóm vị chủ đạo.
 - `meal_context`: bữa/thời điểm ăn phù hợp.
@@ -103,6 +120,19 @@ Lưu rule y tế theo bệnh lý/dị ứng:
 - `exclude_ingredient`: nguyên liệu cần tránh.
 - `prefer_ingredient`: nguyên liệu nên ưu tiên.
 
+### Bảng `ingredient_alias_overrides`
+
+Lưu alias nguyên liệu do Admin bổ sung:
+
+- `alias`: tên nguyên liệu admin nhập, ví dụ `thịt bò Úc`.
+- `alias_key`: key không dấu để chống trùng.
+- `canonical_key`: canon đích, ví dụ `canon:thit_bo`.
+- `group_keys`: nhóm rộng hơn, ví dụ `group:thit_bo`, `group:thit_do`.
+- `enabled`: bật/tắt override.
+- `notes`: ghi chú review.
+
+Các override này được dùng cùng baseline alias rules để sinh lại `core_ingredient_keys`.
+
 ## Luồng seed dữ liệu
 
 File chính: `services/seed_service.py`.
@@ -111,12 +141,14 @@ Khi backend khởi động, `seed_data()` thực hiện:
 
 1. Đọc `standard-data/tags_data.json`.
 2. Đồng bộ rule y tế vào bảng `tags`.
-3. Đọc `foods_enriched.json`.
+3. Đọc file clean categorized:
+   `standard-data/ingredients-data/food-clean-categorized/raw_foods_enriched_labeled(final_488).categorized.clean.json`.
 4. Đồng bộ món ăn vào bảng `foods`.
-5. Nếu món mới hoặc nội dung món thay đổi, reset `embedding = None`.
-6. Với món chưa có embedding, gọi Gemini `gemini-embedding-001` để tạo vector.
+5. Sinh `core_ingredient_keys` bằng `services/ingredient_key_service.py`.
+6. Nếu field dùng cho embedding thay đổi, reset `embedding = None`.
+7. Với món chưa có embedding, gọi Gemini `gemini-embedding-001` để tạo vector.
 
-Lưu ý hiện tại: production seed vẫn đọc `foods_enriched.json`, chưa tự động đọc `foods_enriched_v2.json` hoặc output relabel beta.
+Lưu ý: `raw_ingredients`, `raw_instructions`, và `core_ingredient_keys` là field lưu trữ/filter; thay đổi các field này không cần reset embedding nếu phần text dùng để embedding không đổi.
 
 ## Luồng tìm kiếm món ăn
 
@@ -169,12 +201,14 @@ Logic hiện tại đã tách dị ứng khỏi soft tag:
 
 ### 3. Tạo enriched query
 
-`search_food()` ghép câu hỏi gốc với các tín hiệu ưu tiên:
+`search_food()` ghép câu hỏi gốc với các tín hiệu ưu tiên theo cùng cấu trúc embedding của món ăn:
 
 - tên món người dùng muốn.
-- soft tag người dùng thích.
-- soft tag y tế nên ưu tiên.
 - nguyên liệu người dùng/y tế nên ưu tiên.
+- soft tag người dùng/y tế nên ưu tiên.
+- `taste_profile`.
+- `meal_context`.
+- `occasion_context`.
 
 Sau đó gọi Gemini embedding với task type `RETRIEVAL_QUERY`.
 
@@ -182,17 +216,23 @@ Sau đó gọi Gemini embedding với task type `RETRIEVAL_QUERY`.
 
 Hệ thống lọc món trước khi tính vector:
 
-- Loại món có nguyên liệu thuộc `final_exclude_ings`.
+- Convert `final_exclude_ings` sang `exclude_ingredient_keys`.
+- Loại món bằng SQL array overlap trên `Food.core_ingredient_keys`.
 - Loại món có tên nằm trong `exclude_dishes`.
-- Lọc thêm bằng Python theo cơ chế không dấu để xử lý rule dạng `tom`, `ca hoi` khớp với `tôm`, `cá hồi`.
+- Lọc thêm bằng Python bằng cùng logic `core_ingredient_keys` để bảo vệ dữ liệu cũ/chưa rebuild đủ key.
 
 Hard Filter nên được xem là lớp an toàn chính.
 
-### 5. Soft tag guardrail
+### 5. Context filter và ingredient priority
 
-Sau hard filter, hệ thống tiếp tục loại món nếu `soft_tags` của món giao với tag cấm.
+Sau hard filter:
 
-Lưu ý: đây là lớp phụ. Không nên để soft tag quyết định toàn bộ an toàn y tế, vì soft tag có thể sai hoặc quá rộng.
+- `meal_context` và `occasion_context` của user được lọc thích nghi.
+- Nguyên liệu user thích được chuyển thành nhóm ưu tiên nếu không xung đột bệnh lý.
+- Nếu có món an toàn khớp nguyên liệu user muốn, các món này được xếp trước.
+- Nếu chưa đủ top 5, hệ thống bổ sung món thay thế an toàn hơn.
+
+Soft/category tag không còn là hard filter rộng mặc định. Chúng chủ yếu dùng cho cộng/trừ điểm và giải thích.
 
 ### 6. Vector Search
 
@@ -201,11 +241,17 @@ Hệ thống tính cosine similarity giữa:
 - vector của query người dùng.
 - vector của từng món ăn còn lại.
 
-Sau đó sort giảm dần và lấy top 5 món.
+Sau đó cộng/trừ điểm bằng tag/category:
+
+- user preference bonus.
+- medical prefer bonus.
+- user/medical avoid penalty.
+
+Kết quả top 5 trả kèm `reason` cho từng món để UI hiển thị "Tại sao lại gợi ý?".
 
 ### 7. Dynamic Rule Injection
 
-Sau khi đã có top 5 món an toàn, `post_processing_agent()` đọc `medical_advice_rules.json`.
+Sau khi đã có top 5 món đã qua lọc và xếp hạng, `post_processing_agent()` đọc `medical_advice_rules.json`.
 
 Vai trò của file này:
 
@@ -213,7 +259,12 @@ Vai trò của file này:
 - Chỉ dùng để bơm lời khuyên cách ăn vào prompt.
 - Ví dụ: nếu người dùng cao huyết áp và món top 5 có `Món nước`, hệ thống nhắc không nên húp nước lèo vì nhiều muối.
 
-Đây là hướng đúng: món đã qua Hard Filter trước, lời khuyên chỉ bổ sung cách ăn an toàn hơn.
+Prompt post-processing hiện được siết để:
+
+- Không gọi top 5 là an toàn tuyệt đối.
+- Không nhắc món ngoài danh sách kết quả.
+- Dùng ngôn ngữ thận trọng với món đúng sở thích nhưng có rủi ro.
+- Chỉ dùng `medical_advice_rules.json` làm nguồn lời khuyên sức khỏe.
 
 ## Logic dán nhãn món ăn
 
@@ -240,77 +291,11 @@ Các rule quan trọng hiện tại:
 - Mỗi món phải có tối thiểu các nhóm mô tả chính: vị, dạng món, phương pháp chế biến.
 - Output `soft_tags` được cắt còn tối đa 8 tag quan trọng nhất.
 
-## Vấn đề hiện tại
+## Vấn đề đã xử lý trong phiên bản hiện tại
 
-### 1. Soft tag đang gánh quá nhiều vai trò
+### 1. Tách category khỏi `soft_tags`
 
-Hiện `soft_tags` chứa lẫn:
-
-- vị giác: `Ngọt`, `Mặn`, `Chua`, `Cay`, `Đắng`, `Béo ngậy`
-- dạng món: `Món nước`, `Món khô`, `Nước sền sệt`
-- phương pháp: `Nướng`, `Xào`, `Chiên / Rán`
-- bữa ăn: `Ăn sáng`, `Ăn trưa`, `Ăn tối`, `Ăn khuya`
-- dịp ăn: `Ăn vặt`, `Mồi nhậu`, `Tráng miệng`
-- dinh dưỡng: `Giàu đạm`, `Giàu tinh bột`, `Nội tạng`
-- vùng miền/danh mục: `Đặc sản Đà Nẵng`, `Món Á`, `Món Âu`
-
-Điều này làm soft tag bị loãng và dễ gây sai trong filter y tế.
-
-### 2. LLM dễ dán nhãn theo keyword nguyên liệu
-
-Một lỗi đã thấy trong dữ liệu cũ:
-
-- Có `đường` thì bị gán `Ngọt`.
-- Có `muối`, `nước mắm`, `hạt nêm` thì bị gán `Mặn`.
-- Có `ớt`, `tiêu` thì bị gán `Cay`.
-- Có `chanh`, `giấm` thì bị gán `Chua`.
-
-Trong khi các nguyên liệu này nhiều khi chỉ là gia vị cân bằng, không phải vị chủ đạo.
-
-### 3. Rule y tế không nên phụ thuộc quá nhiều vào soft tag
-
-Với bệnh lý/dị ứng, soft tag chỉ là tín hiệu phụ.
-
-Hard Filter nên dựa nhiều hơn vào:
-
-- `core_ingredients`
-- `exclude_ingredient`
-- matching không dấu
-- nhóm dị ứng cụ thể
-
-Ví dụ:
-
-- Dị ứng giáp xác nên chặn `tôm`, `cua`, `ghẹ`, `bề bề`.
-- Không nên chặn toàn bộ tag `Hải sản`, vì sẽ loại nhầm cá.
-
-### 4. `tags_data.generated.json` chưa được đưa vào production
-
-File `llm/generated-rules/tags_data.generated.json` đã sinh rule từ danh sách nguyên liệu thật, nhưng backend seed hiện vẫn đọc `standard-data/tags_data.json`.
-
-Cần có bước review/merge có kiểm soát trước khi dùng generated rules làm nguồn chính.
-
-### 5. Dữ liệu production còn chưa thống nhất
-
-Hiện có nhiều file dữ liệu:
-
-- `foods_enriched.json`
-- `foods_enriched_v2.json`
-- `standard-data/ingredients-data/raw_foods_enriched(beta_v2).json`
-- `raw_foods_input.json`
-
-Cần thống nhất file nào là nguồn chính cho seed production.
-
-### 6. Category chưa được tách khỏi soft tag
-
-Một số tag nên được tách thành field riêng để phục vụ tìm kiếm tốt hơn:
-
-- `taste_profile`: `Đậm đà`, `Thanh đạm`, `Chua`, `Cay`, `Mặn`, `Ngọt`, `Đắng`, `Béo ngậy`
-- `meal_context`: `Ăn sáng`, `Ăn trưa`, `Ăn tối`, `Ăn chiều / xế`, `Ăn khuya`
-- `occasion_context`: `Ăn no`, `Ăn vặt`, `Mồi nhậu`, `Tráng miệng`, `Giải rượu`, `Giải cảm`, `Ấm bụng`
-
-## Hướng thiết kế đề xuất
-
-Tách dữ liệu món ăn thành nhiều nhóm rõ vai trò:
+Trước đây `soft_tags` gánh quá nhiều vai trò: vị giác, dạng món, bữa ăn, dịp ăn, dinh dưỡng và vùng miền. Phiên bản hiện tại đã tách thành:
 
 ```json
 {
@@ -325,99 +310,53 @@ Tách dữ liệu món ăn thành nhiều nhóm rõ vai trò:
 
 Vai trò từng field:
 
-- `core_ingredients`: dùng cho Hard Filter y tế.
+- `core_ingredients`: hiển thị và đưa vào embedding.
+- `core_ingredient_keys`: dùng cho Hard Filter y tế.
 - `soft_tags`: mô tả bản chất món ăn tương đối ổn định.
 - `taste_profile`: phục vụ tìm theo khẩu vị.
 - `meal_context`: phục vụ tìm theo thời điểm ăn.
 - `occasion_context`: phục vụ tìm theo ngữ cảnh ăn.
 - `medical_advice_rules`: chỉ tư vấn cách ăn sau khi món đã qua lọc.
 
+### 2. Chuẩn hóa nguyên liệu bằng alias/key
+
+Vấn đề cũ: matching nguyên liệu không dấu dễ miss biến thể hoặc dính false positive.
+
+Hướng xử lý hiện tại:
+
+- `services/ingredient_key_service.py` sinh `core_ingredient_keys`.
+- `scripts/generate_ingredient_key_preview.py` giữ baseline alias rules đã review.
+- `ingredient_alias_overrides` cho phép Admin bổ sung alias mới không cần deploy lại.
+- Search filter dùng SQL overlap trên `Food.core_ingredient_keys`.
+
+### 3. Explainability cho UI
+
+Backend hiện trả thêm:
+
+- `food.reason`: giải thích vì sao từng món được gợi ý.
+- `ai_response`: lời tư vấn tổng quan có Dynamic Rule Injection.
+
+Prompt post-processing đã được siết:
+
+- Không gọi top 5 là an toàn tuyệt đối.
+- Không bịa món ngoài danh sách.
+- Dùng ngôn ngữ thận trọng với món đúng sở thích nhưng có rủi ro.
+
 ## Công việc cần làm tiếp theo
 
-### Bước 1: Relabel lại toàn bộ món ăn
+Roadmap chi tiết nằm ở:
 
-Chạy lại relabel bằng logic mới:
+- `docs/backend_api_todo.md`
 
-```bash
-source venv/bin/activate
-python scripts/relabel_soft_tags.py --delay 3
-```
+Ưu tiên gần nhất:
 
-Mục tiêu:
+1. Thêm `disclaimer` vào `SearchResponse`.
+2. Thêm query log/excluded summary để debug vì sao món bị loại/cảnh báo.
+3. Thêm User Health Profile để search dùng hồ sơ sức khỏe đã lưu.
+4. Thêm Chat History và Favorite Foods.
+5. Thêm Admin Food CRUD + Trigger Embedding.
 
-- Làm sạch các tag sai như `Ngọt`, `Mặn`, `Cay`, `Chua`, `Béo ngậy`.
-- Giảm số lượng tag quá nhiều trên một món.
-- Chuẩn hóa `core_ingredients` để Hard Filter chính xác hơn.
-
-### Bước 2: Review dữ liệu sau relabel
-
-Cần kiểm các nhóm dễ sai:
-
-- món bị gắn `Ngọt`
-- món bị gắn `Mặn`
-- món bị gắn `Cay`
-- món bị gắn `Chua`
-- món bị gắn `Béo ngậy`
-- món bị gắn `Ăn khuya`
-- món bị gắn `Mồi nhậu`
-- món bị gắn `Tráng miệng`
-- món có nhiều hơn 8 tag
-- món thiếu dạng món hoặc phương pháp chế biến
-
-### Bước 3: Thêm category vào output relabel
-
-Sau khi `soft_tags` ổn, mở rộng output script thành:
-
-```json
-{
-  "soft_tags": [],
-  "taste_profile": [],
-  "meal_context": [],
-  "occasion_context": []
-}
-```
-
-Ở giai đoạn này chưa cần migrate DB ngay. Chỉ cần sinh file dữ liệu mới để review.
-
-### Bước 4: Review category
-
-Kiểm tra riêng:
-
-- `taste_profile` có phản ánh vị chủ đạo không.
-- `meal_context` có phù hợp thời điểm ăn không.
-- `occasion_context` có đúng ngữ cảnh không.
-- Có tag nào đang bị duplicate giữa `soft_tags` và category không.
-
-### Bước 5: Merge rule y tế generated
-
-So sánh:
-
-- `standard-data/tags_data.json`
-- `llm/generated-rules/tags_data.generated.json`
-
-Sau đó merge có kiểm soát:
-
-- Với `ALLERGY`: ưu tiên `exclude_ingredient`, hạn chế `exclude_soft_tag`.
-- Với `DISEASE`: dùng cả `exclude_ingredient` và một số `exclude_soft_tag` có ý nghĩa rộng.
-- Tránh chặn quá rộng làm mất món phù hợp.
-
-### Bước 6: Migrate backend dùng category
-
-Cập nhật:
-
-- `models.py`
-- `schemas.py`
-- `seed_service.py`
-- `food_service.py`
-- API response
-
-Sau migrate, search nên dùng:
-
-- Hard Filter: `core_ingredients` + `exclude_ingredient`.
-- Ranking: vector similarity + `taste_profile` + `meal_context` + `occasion_context`.
-- Advice: `medical_advice_rules.json`.
-
-### Bước 7: Xây bộ test truy vấn
+## Bộ test truy vấn nên duy trì
 
 Cần có một tập câu hỏi mẫu để regression test:
 
@@ -449,10 +388,14 @@ Mỗi query nên kiểm:
 
 - Backend FastAPI đã chạy được.
 - Seed dữ liệu và embedding đang hoạt động.
-- Search hiện dùng LLM intent extraction, hard filter, vector search và post-processing advice.
+- Search hiện dùng LLM intent extraction, key-based hard filter, context filter, ingredient priority, vector search, tag/category rerank và post-processing advice.
 - Logic relabel đã được siết lại để giảm lỗi gán nhãn theo keyword nguyên liệu.
-- Hard Filter đã bổ sung matching nguyên liệu không dấu.
+- Hard Filter đã chuyển từ matching nguyên liệu không dấu sang `core_ingredient_keys`.
+- DB đã có `raw_ingredients`, `raw_instructions`, `taste_profile`, `meal_context`, `occasion_context`, `core_ingredient_keys`.
+- Backend đã có Admin API tối thiểu cho `ingredient_alias_overrides`.
+- API search đã trả `food.reason` cho UI giải thích từng món.
 - Tên bệnh trong `food_service.py` đã được chuẩn hóa để khớp `standard-data/tags_data.json`.
-- Chưa migrate DB sang category mới.
+- DB đã migrate sang category mới theo pattern startup hiện tại.
 - Chưa merge `tags_data.generated.json` vào nguồn rule production.
-- Chưa có bộ test regression cho chất lượng gợi ý.
+- Chưa có bộ test regression tự động cho chất lượng gợi ý.
+- Chưa có User Profile, Chat History, Favorites, Admin Food CRUD, Disclaimer và Query Log đầy đủ.
