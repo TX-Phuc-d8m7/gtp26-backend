@@ -39,7 +39,12 @@ def add_issue(issues, item, severity, code, message):
     })
 
 
-def expected_method_from_name(name_lower):
+def expected_method_from_name(name_lower, full_text):
+    if "bánh gói" in name_lower:
+        return None
+    if "bánh mì nướng kiểu pháp" in name_lower or "french toast" in full_text:
+        return "Chiên / Rán"
+
     checks = [
         ("Lẩu", ["lẩu"]),
         ("Cháo", ["cháo"]),
@@ -88,7 +93,7 @@ def audit_item(item):
     if form_tags and expected_form not in form_tags:
         add_issue(issues, item, "P1", "suspicious_form", f"Dạng món có vẻ lệch: hiện {form_tags}, rule gợi ý {expected_form}")
 
-    expected_method = expected_method_from_name(name_lower)
+    expected_method = expected_method_from_name(name_lower, full_text)
     if expected_method and expected_method not in tag_set:
         add_issue(issues, item, "P1", "method_name_mismatch", f"Tên món gợi ý '{expected_method}' nhưng tag hiện tại không có")
 

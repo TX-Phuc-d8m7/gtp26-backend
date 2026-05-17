@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from pydantic import Field
 from typing import List, Optional
 import uuid
 
@@ -20,6 +21,9 @@ class FoodResult(BaseModel):
     img_url: Optional[str] = None # Bổ sung thêm theo ERD
     core_ingredients: List[str]   # Đổi tên từ ingredients
     soft_tags: List[str]          # Gộp chung các filter lại theo ERD
+    taste_profile: List[str] = Field(default_factory=list)
+    meal_context: List[str] = Field(default_factory=list)
+    occasion_context: List[str] = Field(default_factory=list)
     matchScore: float             # Nên để kiểu float cho số điểm Vector thay vì str
 
 class SearchResponse(BaseModel):

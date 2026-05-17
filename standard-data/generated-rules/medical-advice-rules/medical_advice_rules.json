@@ -431,6 +431,11 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Đậm đà",
         "warning_text": "Món đậm đà thường có nhiều nước mắm, hạt nêm hoặc sốt mặn. Hãy yêu cầu giảm gia vị từ đầu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Kho/Rim",
+        "warning_text": "Món kho/rim thường ngấm rất nhiều gia vị mặn. Tuyệt đối hạn chế chan phần nước sốt/nước kho vào cơm, chỉ nên gắp phần cái và ăn kèm nhiều rau luộc để cân bằng lượng natri."
       }
     ]
   },
