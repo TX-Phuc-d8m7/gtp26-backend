@@ -2,6 +2,7 @@ import asyncio
 import json
 import os
 import re
+import uuid
 
 import numpy as np
 from google import genai
@@ -15,13 +16,14 @@ from services.ingredient_key_service import (
     has_any_ingredient_key,
     load_enabled_alias_override_rules,
 )
+from services.query_log_service import create_query_log
 
 # =====================================================================
 # CẤU HÌNH KHỞI TẠO
 # =====================================================================
 PROJECT_ID = os.getenv("PROJECT_ID")
 client = genai.Client(vertexai=True, project=PROJECT_ID, location="us-central1")
-
+SEARCH_DISCLAIMER = "Hệ thống đã sàng lọc nguyên liệu theo điều kiện sức khỏe cá nhân nhưng không thay thế tư vấn từ bác sĩ/chuyên gia y tế. Vui lòng kiểm tra lại thành phần thực tế trước khi gọi món."
 
 # =====================================================================
 # 1. AGENT & LUỒNG XỬ LÝ XUNG ĐỘT 
@@ -773,7 +775,7 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, hãy tư vấn người dùng m�
 # 4. HÀM TÌM KIẾM CHÍNH (Được gọi từ API)
 # =====================================================================
 
-async def search_food(query: str, db: AsyncSession) -> SearchResponse:
+async def search_food(query: str, db: AsyncSession, thread_id: uuid.UUID | None = None) -> SearchResponse:
     """
     Luồng chạy chính để tìm kiếm món ăn:
     1. Trích xuất ý định (Supervisor Agent).
@@ -796,7 +798,12 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
     
     # Xử lý fallback nếu LLM báo lỗi
     if not payload:
-        return SearchResponse(query=query, ai_insight=AIInsight(exclude=[], include=[], prefer=[]), results=[])
+        return SearchResponse(
+            query=query,
+            ai_insight=AIInsight(exclude=[], include=[], prefer=[]),
+            results=[],
+            disclaimer=SEARCH_DISCLAIMER,
+        )
     
     # Bóc tách biến từ Payload
     user_exclude_dishes = payload["user_exclude_dishes"]
@@ -885,6 +892,8 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
 
     db_result = await db.execute(stmt)
     filtered_foods = db_result.scalars().all() # Tập món ăn sạch (Candidate)
+    candidate_count = len(filtered_foods)
+    python_removed_count = 0
 
     # Lọc mềm bằng Python cho dữ liệu cũ/chưa rebuild đủ core_ingredient_keys.
     if exclude_ingredient_keys:
@@ -893,13 +902,15 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
             food for food in filtered_foods
             if not _food_has_any_ingredient_key(food, exclude_ingredient_keys)
         ]
+        python_removed_count = before_python_filter - len(filtered_foods)
         print(
             f"🛡️ [PYTHON INGREDIENT FILTER] Loại thêm "
-            f"{before_python_filter - len(filtered_foods)} món bằng core_ingredient_keys: "
+            f"{python_removed_count} món bằng core_ingredient_keys: "
             f"{exclude_ingredient_keys}"
         )
 
     # Lọc ngữ cảnh (Context filter) 
+    context_before_count = len(filtered_foods)
     filtered_foods = apply_adaptive_context_include_filter(
         foods=filtered_foods,
         target_contexts=grouped_user_include_tags["meal_context"],
@@ -924,6 +935,7 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
         field_name="occasion_context",
         label="occasion_context",
     )
+    context_after_count = len(filtered_foods)
 
     ingredient_priority_food_ids = collect_ingredient_priority_food_ids(
         foods=filtered_foods,
@@ -957,15 +969,19 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
 
     print(f"🔢 [BƯỚC 4 - COSINE + TAG RERANK] Tính điểm từng món:")
     scored = []
+    missing_embedding_count = 0
+    zero_vector_count = 0
     
     for food in filtered_foods:
         if not food.embedding:
+            missing_embedding_count += 1
             print(f"  ⚠️  {food.name}: BỎ QUA (không có embedding)")
             continue
 
         food_arr = np.array(food.embedding.to_list(), dtype=np.float32)
         food_norm = np.linalg.norm(food_arr)
         if food_norm == 0 or query_norm == 0:
+            zero_vector_count += 1
             print(f"  ⚠️  {food.name}: BỎ QUA (vector = 0)")
             continue
         
@@ -997,6 +1013,8 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
                 f"       prefer={score_details['matched_prefer_tags']} "
                 f"avoid={score_details['matched_avoid_tags']}"
             )
+
+    scored_count = len(scored)
 
     # Sắp xếp giảm dần theo điểm đã rerank, lấy top 5
     if ingredient_priority_food_ids:
@@ -1041,6 +1059,7 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
             matchScore=match_score,
             reason=reason,
         ))
+    returned_count = len(results_list)
 
     # --- Bước 7: Post-processing Agent (Dynamic Rule Injection) ---
     ai_response_text = await asyncio.to_thread(
@@ -1051,15 +1070,69 @@ async def search_food(query: str, db: AsyncSession) -> SearchResponse:
         retrieval_notes,
     )
 
+    ai_insight = AIInsight(
+        exclude=medical_e_tags + final_e_ings,
+        include=symptoms, # Trả về list bệnh lý để UI dễ hiển thị Warning
+        prefer=medical_p_tags + final_p_ings + medical_p_ings,
+        warning_message=warning_message
+    )
+    excluded_summary = {
+        "hard_filter": {
+            "exclude_ingredient_keys": exclude_ingredient_keys,
+            "user_exclude_dishes": user_exclude_dishes,
+            "candidate_count_after_sql": candidate_count,
+            "python_removed_count": python_removed_count,
+            "remaining_count_after_python": context_before_count,
+        },
+        "context_filter": {
+            "include_meal_context": grouped_user_include_tags["meal_context"],
+            "include_occasion_context": grouped_user_include_tags["occasion_context"],
+            "exclude_meal_context": grouped_user_exclude_tags["meal_context"],
+            "exclude_occasion_context": grouped_user_exclude_tags["occasion_context"],
+            "before_count": context_before_count,
+            "after_count": context_after_count,
+        },
+        "ingredient_priority": {
+            "include_ingredient_keys": include_ingredient_keys,
+            "matched_count": len(ingredient_priority_food_ids),
+        },
+        "embedding": {
+            "missing_embedding_count": missing_embedding_count,
+            "zero_vector_count": zero_vector_count,
+            "scored_count": scored_count,
+        },
+    }
+    query_log_id = None
+    try:
+        query_log = await create_query_log(
+            db,
+            query=query,
+            ai_insight=ai_insight,
+            final_exclude_ings=final_e_ings,
+            exclude_ingredient_keys=exclude_ingredient_keys,
+            user_include_tags=user_include_tags,
+            user_exclude_tags=user_exclude_tags,
+            candidate_count=candidate_count,
+            filtered_count=context_after_count,
+            scored_count=scored_count,
+            returned_count=returned_count,
+            excluded_summary=excluded_summary,
+            retrieval_notes=retrieval_notes,
+            top_results=results_list,
+            warning_message=warning_message,
+            thread_id=thread_id,
+        )
+        query_log_id = query_log.id
+    except Exception as e:
+        print(f"[QUERY LOG] Không thể lưu query log: {e}")
+        await db.rollback()
+
     # --- Trả về phản hồi cuối cùng ---
     return SearchResponse(
         query=query,
-        ai_insight=AIInsight(
-            exclude=medical_e_tags + final_e_ings,
-            include=symptoms, # Trả về list bệnh lý để UI dễ hiển thị Warning
-            prefer=medical_p_tags + final_p_ings + medical_p_ings,
-            warning_message=warning_message
-        ),
+        ai_insight=ai_insight,
         results=results_list,
+        disclaimer=SEARCH_DISCLAIMER,
+        query_log_id=query_log_id,
         ai_response=ai_response_text or None
     )

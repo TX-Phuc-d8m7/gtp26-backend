@@ -1,4 +1,6 @@
 from contextlib import asynccontextmanager
+import uuid
+
 from fastapi import FastAPI, Depends, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
@@ -9,6 +11,7 @@ from schemas import SearchResponse
 from services.food_service import search_food
 from services.seed_service import seed_data
 from routers.admin_alias_overrides import router as admin_alias_overrides_router
+from routers.query_logs import router as query_logs_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -24,6 +27,10 @@ async def lifespan(app: FastAPI):
         await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS raw_instructions TEXT NOT NULL DEFAULT ''"))
         await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS core_ingredient_keys TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
         await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_foods_core_ingredient_keys_gin ON foods USING GIN (core_ingredient_keys)"))
+        await conn.execute(text("ALTER TABLE query_logs ADD COLUMN IF NOT EXISTS thread_id UUID"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_query_logs_created_at ON query_logs (created_at)"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_query_logs_user_id ON query_logs (user_id)"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_query_logs_thread_id ON query_logs (thread_id)"))
     
     # Chạy data seeder
     await seed_data()
@@ -33,6 +40,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan, title="Food AI API")
 app.include_router(admin_alias_overrides_router)
+app.include_router(query_logs_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -43,7 +51,11 @@ app.add_middleware(
 )
 
 @app.get("/foods/search", response_model=SearchResponse)
-async def search_endpoint(q: str = Query(None), db: AsyncSession = Depends(get_db)):
+async def search_endpoint(
+    q: str = Query(None),
+    thread_id: uuid.UUID | None = Query(default=None),
+    db: AsyncSession = Depends(get_db),
+):
     if not q:
         raise HTTPException(status_code=400, detail="Vui lòng nhập câu hỏi tìm kiếm.")
-    return await search_food(q, db)
+    return await search_food(q, db, thread_id=thread_id)
