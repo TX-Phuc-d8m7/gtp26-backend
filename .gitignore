@@ -38,14 +38,24 @@ lerna-debug.log*
 # dotenv environment variable files
 .venv
 .env
+.env.*
+!.env.example
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
 
+# Local agent/worktree state
+.claude/
+
 # temp directory
 .temp
 .tmp
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.turbo/
 
 # Runtime data
 pids
@@ -61,6 +71,19 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.coverage
+htmlcov/
+
+# Secrets / credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*service-account*.json
+*service_account*.json
+client_secret*.json
+token*.json
 
 # Jupyter Notebook checkpoints (nếu bạn có dùng để test AI)
 .ipynb_checkpoints

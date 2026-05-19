@@ -308,9 +308,6 @@
       "kem danh bong",
       "kem vani",
       "sot kem",
-      "mayonnaise",
-      "sot mayonaise",
-      "sot mayonnaise",
       "mascarpone",
       "fromage",
       "banh flan",
@@ -363,8 +360,6 @@
       "sua dac",
       "sua chua",
       "whipping cream",
-      "mayonnaise",
-      "sot mayonaise",
       "cream cheese",
       "mascarpone",
       "fromage",
@@ -827,6 +822,7 @@
     "name": "Dị ứng mắm lên men",
     "tag_type": "ALLERGY",
     "exclude_soft_tag": [
+      "Mặn",
       "Đậm đà"
     ],
     "prefer_soft_tag": [
@@ -888,7 +884,6 @@
       "Thanh mát/Giải nhiệt"
     ],
     "exclude_ingredient": [
-      "duong",
       "duong phen",
       "mat ong",
       "sua dac",
@@ -955,13 +950,6 @@
       "Thanh mát/Giải nhiệt"
     ],
     "exclude_ingredient": [
-      "muoi",
-      "bot ngot",
-      "mi chinh",
-      "hat nem",
-      "bot canh",
-      "nuoc mam",
-      "mam",
       "mam tom",
       "mam nem",
       "mam ruoc",
@@ -978,7 +966,6 @@
       "dua chua",
       "ca phao",
       "kim chi",
-      "dau hao",
       "ruou trang",
       "bia",
       "ca phe",
@@ -1037,13 +1024,6 @@
       "Giàu chất xơ"
     ],
     "exclude_ingredient": [
-      "muoi",
-      "hat nem",
-      "bot canh",
-      "nuoc mam",
-      "nuoc tuong",
-      "dau hao",
-      "mam",
       "mam tom",
       "mam nem",
       "mam ruoc",
@@ -1136,16 +1116,11 @@
       "Ấm bụng"
     ],
     "exclude_ingredient": [
-      "chanh",
       "ot",
-      "tieu",
       "ca chua",
       "sa",
       "hanh tay",
-      "toi",
       "me",
-      "dam",
-      "giam",
       "kim chi",
       "thit ba chi",
       "thit ba roi",
@@ -1224,13 +1199,10 @@
     ],
     "exclude_ingredient": [
       "ot",
-      "tieu",
       "sa",
       "rieng",
       "sa te",
       "wasabi",
-      "toi",
-      "chanh",
       "me",
       "khe",
       "mang chua",
@@ -1240,8 +1212,6 @@
       "sot ca",
       "tuong ca",
       "kim chi",
-      "dam",
-      "giam",
       "xoai xanh",
       "mam tom",
       "mam ruoc",
@@ -1309,7 +1279,6 @@
       "Cháo"
     ],
     "exclude_ingredient": [
-      "muoi",
       "mo heo",
       "da heo",
       "top mo",
@@ -1321,18 +1290,11 @@
       "pate",
       "bo man",
       "pho mai",
-      "mam",
       "mam tom",
       "mam ruoc",
       "mam nem",
       "muoi tom",
       "muoi ot",
-      "hat nem",
-      "bot nem",
-      "bot canh",
-      "mi chinh",
-      "bot ngot",
-      "duong",
       "sua dac",
       "ruou trang",
       "ruou vang",
@@ -1403,7 +1365,6 @@
       "khe",
       "la lot",
       "ot",
-      "tieu",
       "sa te",
       "do chua",
       "ca phe",
@@ -1413,7 +1374,6 @@
       "lap xuong",
       "pho mai",
       "thit bo",
-      "giam",
       "trung vit lon",
       "mam tom"
     ],
@@ -1639,7 +1599,6 @@
       "kem",
       "sot mayonnaise",
       "ot",
-      "tieu",
       "sa te",
       "mang",
       "mam tom",
@@ -1838,7 +1797,7 @@
   },
   {
     "name": "Béo phì",
-    "tag_type": "SYMPTON",
+    "tag_type": "DISEASE",
     "exclude_soft_tag": [
       "Nhiều dầu mỡ / Calo cao",
       "Béo ngậy",
@@ -1863,7 +1822,6 @@
       "Xào"
     ],
     "exclude_ingredient": [
-      "duong",
       "mo heo",
       "sua dac",
       "thit ba chi",
