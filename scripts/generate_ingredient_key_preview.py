@@ -333,6 +333,7 @@ ALIAS_RULES: list[dict] = [
             "chả cá nha trang",
             "cá viên",
             "đầu cá bớp",
+            "vi cá",
         ],
         ["group:ca_co_vay", "group:hai_san"],
         notes="Không map alias 'cá' trần để tránh nhầm với cà chua/cà rốt.",
@@ -522,13 +523,29 @@ ALIAS_RULES: list[dict] = [
         ["group:mam_len_men", "group:gia_vi_man_natri_cao", "group:hai_san"],
     ),
     make_rule(
+        "canon:mam_tom",
+        ["mắm tôm"],
+        ["group:mam_len_men", "group:gia_vi_man_natri_cao", "group:hai_san"],
+    ),
+    make_rule(
+        "canon:mam_nem",
+        ["mắm nêm"],
+        ["group:mam_len_men", "group:gia_vi_man_natri_cao", "group:hai_san"],
+    ),
+    make_rule(
+        "canon:mam_tep",
+        ["mắm tép"],
+        ["group:mam_len_men", "group:gia_vi_man_natri_cao", "group:hai_san"],
+    ),
+    make_rule(
+        "canon:mam_ca",
+        ["mắm cá"],
+        ["group:mam_len_men", "group:gia_vi_man_natri_cao", "group:hai_san"],
+    ),
+    make_rule(
         "canon:mam_len_men",
         [
             "mắm",
-            "mắm tôm",
-            "mắm nêm",
-            "mắm tép",
-            "mắm cá",
             "mắm ngon",
             "nước mắm",
             "nước mắm phú quốc",
@@ -542,23 +559,43 @@ ALIAS_RULES: list[dict] = [
         "canon:gia_vi_man",
         [
             "muối",
-            "muối ớt",
-            "muối tôm",
             "bột canh",
-            "hạt nêm",
-            "hạt nêm chay",
-            "hạt nêm hải sản",
-            "bột ngọt",
-            "mì chính",
             "chao",
             "kim chi",
             "dưa chua",
             "cà pháo",
-            "dầu hào",
             "xì dầu",
             "nước tương",
             "hắc xì dầu",
         ],
+        ["group:gia_vi_man_natri_cao"],
+    ),
+    make_rule(
+        "canon:muoi_tom",
+        ["muối tôm", "muối tôm tây ninh", "muối tôm hành phi"],
+        ["group:gia_vi_man_natri_cao"],
+    ),
+    make_rule(
+        "canon:muoi_ot",
+        ["muối ớt"],
+        ["group:gia_vi_man_natri_cao", "group:cay_kich_ung"],
+    ),
+    make_rule(
+        "canon:msg_phu_gia",
+        [
+            "bột ngọt",
+            "mì chính",
+            "hạt nêm",
+            "hạt nêm chay",
+            "hạt nêm hải sản",
+            "bột nêm",
+            "bột nêm chay",
+        ],
+        ["group:msg_phu_gia"],
+    ),
+    make_rule(
+        "canon:dau_hao",
+        ["dầu hào", "dầu hào chay"],
         ["group:gia_vi_man_natri_cao"],
     ),
     make_rule(
@@ -592,7 +629,12 @@ ALIAS_RULES: list[dict] = [
             "mascarpone",
             "fromage",
             "sốt kem",
+            "sốt caesar",
+            "kem",
             "kem tươi",
+            "kem vani",
+            "kem đánh bông",
+            "kem trứng",
         ],
         ["group:sua_va_che_pham_tu_sua"],
     ),
@@ -620,6 +662,11 @@ ALIAS_RULES: list[dict] = [
             "lòng đỏ trứng",
             "lòng trắng trứng",
             "chả trứng",
+            "mayonnaise",
+            "mayonaise",
+            "sốt mayonnaise",
+            "sốt mayonaise",
+            "bánh flan"
         ],
         ["group:trung"],
     ),
@@ -827,6 +874,8 @@ ALIAS_RULES: list[dict] = [
             "lá hoành thánh",
             "sủi cảo",
             "bánh tortilla",
+            "bột chiên giòn",
+            "ngũ cốc"
         ],
         ["group:tinh_bot"],
         notes="Nhóm tinh bột có nguồn gốc chính từ bột mì/lúa mì.",
@@ -944,12 +993,18 @@ ALIAS_RULES: list[dict] = [
             "sa tế",
             "wasabi",
             "mù tạt",
-            "tiêu",
-            "tiêu xanh",
-            "tiêu xay",
-            "hạt tiêu",
         ],
         ["group:cay_kich_ung"],
+    ),
+    make_rule(
+        "canon:sa_te_tom",
+        ["sa tế tôm", "sa tế tôm tự làm"],
+        ["group:gia_vi_man_natri_cao"],
+    ),
+    make_rule(
+        "canon:tieu_gia_vi",
+        ["tiêu", "tiêu xanh", "tiêu xay", "hạt tiêu"],
+        ["group:gia_vi_thom"],
     ),
     make_rule(
         "canon:chua_kich_ung",
@@ -970,6 +1025,7 @@ ALIAS_RULES: list[dict] = [
             "cà chua bi",
             "sốt cà chua",
             "tương cà",
+            "ketchup"
         ],
         ["group:chua_kich_ung"],
         notes="Me chua tách khỏi mè/vừng bằng accent-sensitive matching.",
@@ -1056,7 +1112,7 @@ ALIAS_RULES: list[dict] = [
     ),
     make_rule(
         "canon:duong_cao",
-        ["đường", "đường phèn", "caramel", "sữa đặc", "mật ong"],
+        ["đường phèn", "caramel", "sữa đặc", "mật ong"],
         ["group:duong_cao"],
     ),
 ]
@@ -1075,9 +1131,23 @@ def alias_matches(ingredient: str, base_key: str, rule: dict) -> bool:
     for alias in rule["aliases"]:
         alias_key = normalize_base_key(alias)
         alias_text = normalize_text_keep_accents(alias)
+        if rule["canonical_key"] == "canon:ngheu_so_hau":
+            if alias_text == "bào ngư" and phrase_in_text_or_key(ingredient_text, base_key, "nấm bào ngư"):
+                continue
+        if rule["canonical_key"] == "canon:sua":
+            if phrase_in_text_or_key(ingredient_text, base_key, "sữa đậu nành"):
+                continue
         if rule["canonical_key"] == "canon:trung":
+            if alias_text == "trứng" and phrase_in_text_or_key(ingredient_text, base_key, "mực trứng"):
+                continue
             if alias_text == "trứng" and not (
                 phrase_in_spaced_text(ingredient_text, alias_text) or base_key == alias_key
+            ):
+                continue
+        if rule["canonical_key"] == "canon:me_vung":
+            if any(
+                phrase_in_spaced_text(ingredient_text, blocked)
+                for blocked in ["sốt me", "nước sốt me", "mắm me"]
             ):
                 continue
         if rule["canonical_key"] == "canon:noitang":
@@ -1098,12 +1168,15 @@ def alias_matches(ingredient: str, base_key: str, rule: dict) -> bool:
                 if phrase_in_key(base_key, "hanh_tim"):
                     continue
         if rule["canonical_key"] == "canon:chua_kich_ung":
+            if alias_text in {"me vắt", "me chín", "sốt me", "cốt me", "nước cốt me"}:
+                if any(
+                    phrase_in_spaced_text(ingredient_text, sesame_phrase)
+                    for sesame_phrase in ["mè", "vừng", "sốt mè", "nước sốt mè"]
+                ):
+                    continue
             if alias_text in {"dấm", "giấm"} and not (
                 phrase_in_spaced_text(ingredient_text, alias_text) or base_key == alias_key
             ):
-                continue
-        if rule["canonical_key"] == "canon:mam_len_men":
-            if phrase_in_spaced_text(ingredient_text, "mắm ruốc"):
                 continue
         if rule["canonical_key"] in CHICKEN_CANONICAL_KEYS:
             if ingredient_text.startswith("trứng gà"):

@@ -5362,7 +5362,9 @@
       "Giàu tinh bột",
       "Nóng hổi",
       "Dai / Sần sật",
-      "Ẩm thực đường phố"
+      "Ẩm thực đường phố",
+      "Thực phẩm chế biến sẵn",
+      "Nhiều dầu mỡ / Calo cao"
     ],
     "raw_ingredients": [
       "3 gói mì ramen sốt cay",
@@ -5378,6 +5380,7 @@
     ],
     "raw_instructions": "Cải cắt nhỏ vì cải bên này dày mình và khá to. Cắt nhỏ khiến nấu nhanh chín và thấm gia vị.Hành cắt múi cau\nỨc gà cắt sợi chỉ, ướp với 1 gói gia vị trong mì ramen\nMì mình dùng loại cay của buldak rất ngon. Nhưng hơi cay nếu như ai không ăn được cay.\nLuộc mì với vừa phải nước trong 10p. Khi mì chín cũng là lúc nước luộc mì gần cạn. Không nên cho cạn quá, sẽ làm sợ mì khô mà lúc cho gói ướp sẽ không được tơi sợi mì\nPhi hành tím trước cho vàng\nCho phần ức gà đã ướp và đảo đều cho săn\nCho rau cải vào xào tiếp.\nCho phần mì đã luộc vào chảo, cho thêm hết các gói gia vị sẵn trong bịch mì vào, rồi đảo đều, tắt bếp.\nĐổ mì ra đĩa và thưởng thức.",
     "taste_profile": [
+      "Mặn",
       "Cay"
     ],
     "meal_context": [
