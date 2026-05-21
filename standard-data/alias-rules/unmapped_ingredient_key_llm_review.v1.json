@@ -939,7 +939,7 @@
             "Cao huyết áp",
             "Dị ứng động vật giáp xác",
             "Gan nhiễm mỡ / Men gan cao",
-            "Nhiệt miệng/Loét miệng",
+            "Nhiệt miệng / Loét miệng",
             "Phụ nữ mang thai",
             "Tim mạch",
             "Tiêu chảy",
@@ -1995,7 +1995,7 @@
         ],
         "tags_data_usage": {
           "exclude_in": [
-            "Nhiệt miệng/Loét miệng",
+            "Nhiệt miệng / Loét miệng",
             "Trào ngược dạ dày thực quản (GERD)",
             "Viêm loét dạ dày"
           ],
@@ -6975,7 +6975,7 @@
         ],
         "tags_data_usage": {
           "exclude_in": [
-            "Nhiệt miệng/Loét miệng"
+            "Nhiệt miệng / Loét miệng"
           ],
           "prefer_in": [
             "Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)",
@@ -9952,7 +9952,7 @@
           "prefer_in": [
             "Dị ứng lúa mì",
             "Gout",
-            "Nhiệt miệng/Loét miệng",
+            "Nhiệt miệng / Loét miệng",
             "Tiêu chảy",
             "Trào ngược dạ dày thực quản (GERD)",
             "Viêm loét dạ dày"

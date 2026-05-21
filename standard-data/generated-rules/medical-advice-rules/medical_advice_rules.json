@@ -531,6 +531,11 @@
   },
   "Tim mạch": {
     "general_advice": "Ưu tiên rau, ngũ cốc nguyên hạt, đạm nạc, cá phù hợp, ít muối, ít đường, hạn chế mỡ động vật, đồ chiên và thực phẩm chế biến sẵn.",
+    "lifestyle_tips": [
+      "Không hút thuốc lá — đây là yếu tố nguy cơ tim mạch lớn nhất có thể kiểm soát được; nicotine làm co mạch và tăng nguy cơ đông máu.",
+      "Hạn chế rượu bia ở mức tối thiểu hoặc không uống: ngay cả lượng nhỏ cũng làm tăng nhịp tim và huyết áp; không có mức 'an toàn' tuyệt đối khi đã có bệnh tim mạch được chẩn đoán.",
+      "Kiểm soát căng thẳng và ngủ đủ giấc: stress mạn tính làm tăng cortisol, gây viêm và co mạch — hai yếu tố thúc đẩy tiến triển bệnh tim mạch."
+    ],
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
@@ -556,6 +561,11 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Nội tạng",
         "warning_text": "Nội tạng thường nhiều cholesterol. Nếu có bệnh tim mạch/rối loạn mỡ máu, nên tránh hoặc dùng rất ít theo hướng dẫn bác sĩ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Món nhậu thường đi kèm rượu bia — tuyệt đối không uống rượu bia khi có bệnh tim mạch vì alcohol làm tăng nhịp tim, huyết áp và nguy cơ loạn nhịp. Nếu muốn ăn món này, hãy uống nước lọc thay rượu bia."
       }
     ]
   },
@@ -620,7 +630,12 @@
     ]
   },
   "Gout": {
-    "general_advice": "Hạn chế nội tạng, thịt đỏ, hải sản nhiều purin, nước hầm đậm, rượu bia và đồ uống/ngọt nhiều đường; uống đủ nước và kiểm soát khẩu phần đạm.",
+    "general_advice": "Hạn chế nội tạng, thịt đỏ, hải sản nhiều purin, nước hầm đậm, rượu bia và đồ uống/ngọt nhiều đường; kiểm soát khẩu phần đạm và ưu tiên rau xanh.",
+    "lifestyle_tips": [
+      "Uống đủ 2 lít nước mỗi ngày — đây là cách hiệu quả nhất giúp thận đào thải uric acid, đặc biệt quan trọng trong và sau cơn gout cấp.",
+      "Tuyệt đối không uống rượu bia: alcohol ức chế thận đào thải uric acid và làm nồng độ uric acid tăng vọt; bia còn cung cấp thêm purin từ men bia.",
+      "Không nhịn đói: nhịn ăn làm nồng độ uric acid trong máu tăng nhanh và có thể kích hoạt hoặc kéo dài cơn gout cấp."
+    ],
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
@@ -646,6 +661,11 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Mồi nhậu",
         "warning_text": "Bia rượu làm tăng nguy cơ cơn gout. Nếu món mang tính nhậu, nên uống nước lọc và tránh rượu bia."
+      },
+      {
+        "trigger_type": "ingredient",
+        "trigger_value": "chao",
+        "warning_text": "Chao là thực phẩm đậu nành lên men và thường mặn; với gout nên dùng rất ít nước chấm chao, không chấm đậm và ưu tiên phần rau luộc."
       }
     ]
   },
@@ -679,7 +699,7 @@
       }
     ]
   },
-  "Nhiệt miệng/Loét miệng": {
+  "Nhiệt miệng / Loét miệng": {
     "general_advice": "Ưu tiên món mềm, nguội vừa, ít cay/chua/mặn, dễ nhai nuốt; tránh món giòn cứng, quá nóng hoặc gia vị mạnh làm xót vết loét.",
     "conditional_warnings": [
       {

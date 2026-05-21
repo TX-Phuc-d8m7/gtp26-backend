@@ -11,8 +11,9 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import QueryLog, User
-from app.schemas import QueryLogListResponse, QueryLogResult
+from app.modules.query_logs.models import QueryLog
+from app.modules.users.models import User
+from app.modules.query_logs.schemas import QueryLogListResponse, QueryLogResult
 from app.modules.auth.service import get_current_admin_user
 
 router = APIRouter(prefix="/admin/query-logs", tags=["Admin Query Logs"])

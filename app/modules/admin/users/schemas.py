@@ -1,6 +1,28 @@
-"""Admin user DTOs."""
+from __future__ import annotations
 
-from app.schemas import AdminUserListResponse, AdminUserUpdate, UserResult
+import uuid
+from datetime import datetime
+from typing import Any, Dict, List, Literal, Optional
 
-__all__ = ["AdminUserListResponse", "AdminUserUpdate", "UserResult"]
+from pydantic import BaseModel, EmailStr, Field
 
+
+from app.modules.users.schemas import UserResult
+
+
+class AdminUserUpdate(BaseModel):
+    role: Optional[Literal["user", "admin"]] = Field(default=None, description="Cập nhật role")
+    is_active: Optional[bool] = Field(default=None, description="Khoá / mở khoá tài khoản")
+    full_name: Optional[str] = None
+
+
+class AdminUserListResponse(BaseModel):
+    total: int
+    limit: int
+    offset: int
+    items: List["UserResult"]
+
+
+# ---------------------------------------------------------------------------
+# Admin — Import schemas
+# ---------------------------------------------------------------------------

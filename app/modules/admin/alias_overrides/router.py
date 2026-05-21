@@ -9,8 +9,9 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import Food, IngredientAliasOverride
-from app.schemas import (
+from app.modules.admin.alias_overrides.models import IngredientAliasOverride
+from app.modules.foods.models import Food
+from app.modules.admin.alias_overrides.schemas import (
     IngredientAliasOverrideCreate,
     IngredientAliasOverrideResult,
     IngredientAliasOverrideUpdate,

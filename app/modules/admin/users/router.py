@@ -9,8 +9,9 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import User
-from app.schemas import AdminUserListResponse, AdminUserUpdate, UserResult
+from app.modules.users.models import User
+from app.modules.admin.users.schemas import AdminUserListResponse, AdminUserUpdate
+from app.modules.users.schemas import UserResult
 from app.modules.admin.users.service import get_user, list_users, update_user
 from app.modules.auth.service import get_current_admin_user
 

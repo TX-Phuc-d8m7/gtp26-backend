@@ -2,14 +2,30 @@
 
 from __future__ import annotations
 
+import time
 import uuid
 from datetime import datetime, timezone
-from typing import List, Optional, Tuple
+from typing import Any, List, Optional, Tuple
 
 from sqlalchemy import delete, exists, func, or_, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import ChatMessage, ChatThread
+from app.modules.chat.handlers import (
+    handle_food_info,
+    handle_food_safety_check,
+    handle_follow_up,
+    handle_location_search,
+    handle_new_search,
+)
+from app.modules.chat.handlers.common import (
+    IntentHandlerResult,
+    build_structured_result,
+    build_empty_search_response,
+    extract_target_reference,
+    food_names_from_results,
+)
+from app.modules.chat.intent_classifier import classify_intent
+from app.modules.chat.models import ChatMessage, ChatThread
 
 # ---------------------------------------------------------------------------
 # Cấu hình multi-turn context
@@ -22,7 +38,7 @@ CONTEXT_WINDOW = 6
 # Assistant messages thường dài → cắt bớt
 CONTEXT_USER_MSG_MAX_LEN = 300
 CONTEXT_ASSISTANT_MSG_MAX_LEN = 200
-from app.schemas import (
+from app.modules.chat.schemas import (
     ChatMessageListResponse,
     ChatMessageResult,
     ChatSendMessageResponse,
@@ -71,6 +87,8 @@ def _message_to_result(msg: ChatMessage) -> ChatMessageResult:
         content=msg.content,
         query_log_id=msg.query_log_id,
         food_results=msg.food_results,
+        structured_result=msg.structured_result,
+        feedback=msg.feedback,
         created_at=msg.created_at,
     )
 
@@ -300,13 +318,15 @@ async def send_message(
     user_id: uuid.UUID,
     query: str,
     skip_profile: bool,
+    lat: float | None,
+    lng: float | None,
     db: AsyncSession,
 ) -> Optional[ChatSendMessageResponse]:
     """
     Luồng chính khi user gửi tin nhắn trong chatbot:
     1. Kiểm tra thread thuộc user.
     2. Lưu user message.
-    3. Uỷ quyền cho _run_search_and_save: build context → augment profile → search → save assistant msg.
+    3. Uỷ quyền cho dispatcher intent: classify → route handler → save assistant msg.
     4. Auto-gen title từ câu hỏi đầu tiên nếu thread chưa có title.
 
     Trả None nếu thread không tồn tại hoặc không thuộc user.
@@ -321,6 +341,13 @@ async def send_message(
         thread_id=thread_id,
         role="user",
         content=query.strip(),
+        structured_result=build_structured_result(
+            "user_context",
+            {
+                "lat": lat,
+                "lng": lng,
+            },
+        ) if lat is not None or lng is not None else None,
     )
     db.add(user_msg)
     await db.flush()
@@ -331,7 +358,24 @@ async def send_message(
         await db.flush()
 
     # 4. Search + lưu assistant message (logic dùng chung với regenerate & edit)
-    return await _run_search_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    return await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
+
+
+async def _load_recent_messages(
+    thread_id: uuid.UUID,
+    exclude_msg_id: uuid.UUID,
+    db: AsyncSession,
+    limit: int = CONTEXT_WINDOW,
+) -> list[ChatMessage]:
+    return (await db.execute(
+        select(ChatMessage)
+        .where(
+            ChatMessage.thread_id == thread_id,
+            ChatMessage.id != exclude_msg_id,
+        )
+        .order_by(ChatMessage.created_at.desc())
+        .limit(limit)
+    )).scalars().all()
 
 
 async def _build_conversation_context(
@@ -353,15 +397,12 @@ async def _build_conversation_context(
 
     Trả chuỗi rỗng nếu thread chưa có lịch sử (tin nhắn đầu tiên).
     """
-    msgs = (await db.execute(
-        select(ChatMessage)
-        .where(
-            ChatMessage.thread_id == thread_id,
-            ChatMessage.id != exclude_msg_id,
-        )
-        .order_by(ChatMessage.created_at.desc())
-        .limit(limit)
-    )).scalars().all()
+    msgs = await _load_recent_messages(
+        thread_id=thread_id,
+        exclude_msg_id=exclude_msg_id,
+        db=db,
+        limit=limit,
+    )
 
     if not msgs:
         return ""
@@ -394,26 +435,194 @@ def _build_fallback_content(search_result) -> str:
     return f"Dựa trên yêu cầu của bạn, tôi gợi ý: {names}."
 
 
-def _serialize_food_results(search_result) -> Optional[list]:
-    """Serialize danh sách FoodResult thành list dict để lưu JSONB."""
-    if not search_result.results:
-        return None
-    return [
-        {
-            "id": str(r.id),
-            "name": r.name,
-            "description": r.description,
-            "img_url": r.img_url,
-            "core_ingredients": r.core_ingredients,
-            "soft_tags": r.soft_tags,
-            "taste_profile": r.taste_profile,
-            "meal_context": r.meal_context,
-            "occasion_context": r.occasion_context,
-            "matchScore": r.matchScore,
-            "reason": r.reason,
-        }
-        for r in search_result.results
-    ]
+def _extract_coordinates_from_structured_result(structured_result: dict[str, Any] | None) -> tuple[float | None, float | None]:
+    if not structured_result:
+        return None, None
+    if structured_result.get("kind") != "user_context":
+        return None, None
+    data = structured_result.get("data") or {}
+    lat = data.get("lat")
+    lng = data.get("lng")
+    return lat, lng
+
+
+async def _get_last_assistant_with_food_results(
+    thread_id: uuid.UUID,
+    exclude_msg_id: uuid.UUID,
+    db: AsyncSession,
+) -> ChatMessage | None:
+    return (await db.execute(
+        select(ChatMessage)
+        .where(
+            ChatMessage.thread_id == thread_id,
+            ChatMessage.id != exclude_msg_id,
+            ChatMessage.role == "assistant",
+            ChatMessage.food_results.is_not(None),
+        )
+        .order_by(ChatMessage.created_at.desc())
+        .limit(1)
+    )).scalar_one_or_none()
+
+
+def _map_structured_kind_to_intent(kind: str | None) -> str | None:
+    if kind == "food_search":
+        return "new_search"
+    if kind in {
+        "follow_up",
+        "food_info",
+        "food_safety_check",
+        "location_search",
+        "greeting",
+        "off_topic",
+    }:
+        return kind
+    return None
+
+
+async def _dispatch_user_intent(
+    *,
+    thread_id: uuid.UUID,
+    user_id: uuid.UUID,
+    user_msg: ChatMessage,
+    skip_profile: bool,
+    db: AsyncSession,
+) -> IntentHandlerResult:
+    from app.modules.users.service import get_profile
+
+    t0 = time.perf_counter()
+
+    # --- DB lookups (song song với nhau) ---
+    recent_messages = await _load_recent_messages(
+        thread_id=thread_id,
+        exclude_msg_id=user_msg.id,
+        db=db,
+        limit=CONTEXT_WINDOW,
+    )
+    last_user_message = next((msg for msg in recent_messages if msg.role == "user"), None)
+    last_assistant_message = next((msg for msg in recent_messages if msg.role == "assistant"), None)
+    last_food_message = await _get_last_assistant_with_food_results(
+        thread_id=thread_id,
+        exclude_msg_id=user_msg.id,
+        db=db,
+    )
+    t_db = time.perf_counter()
+    print(f"⏱️ [DISPATCH] DB lookups: {(t_db - t0)*1000:.0f}ms")
+
+    last_food_results = (last_food_message.food_results if last_food_message else None) or []
+    last_intent = _map_structured_kind_to_intent(
+        (last_assistant_message.structured_result or {}).get("kind") if last_assistant_message else None
+    )
+
+    # --- LLM #1: Intent Classifier ---
+    t_intent_start = time.perf_counter()
+    intent_result = await classify_intent(
+        current_query=user_msg.content,
+        last_user_message=last_user_message.content if last_user_message else "",
+        last_assistant_message=last_assistant_message.content if last_assistant_message else "",
+        last_assistant_has_food_results=bool(last_food_results),
+        last_food_names=food_names_from_results(last_food_results, limit=5),
+        last_intent=last_intent,
+    )
+    t_intent_end = time.perf_counter()
+    extracted = intent_result.get("extracted") or {}
+    intent = intent_result.get("intent") or "new_search"
+    print(f"⏱️ [DISPATCH] classify_intent: {(t_intent_end - t_intent_start)*1000:.0f}ms → intent={intent}")
+
+    profile = None
+    if not skip_profile:
+        profile = await get_profile(user_id, db)
+
+    history_context = await _build_conversation_context(thread_id, user_msg.id, db)
+    raw_query = user_msg.content
+    query_with_context = (
+        f"{history_context}\n\n[Câu hỏi hiện tại]\n{raw_query}"
+        if history_context else raw_query
+    )
+    stored_lat, stored_lng = _extract_coordinates_from_structured_result(user_msg.structured_result)
+
+    # --- Route theo intent ---
+    t_handler_start = time.perf_counter()
+
+    if intent == "follow_up" and last_food_results:
+        result = await handle_follow_up(
+            raw_query=raw_query,
+            last_food_results=last_food_results,
+            extracted_food_name=extracted.get("food_name"),
+        )
+        print(f"⏱️ [DISPATCH] handle_follow_up: {(time.perf_counter() - t_handler_start)*1000:.0f}ms")
+        return result
+
+    if intent == "food_info":
+        result = await handle_food_info(
+            raw_query=raw_query,
+            db=db,
+            last_food_results=last_food_results,
+            food_name=extracted.get("food_name"),
+            target_reference=extracted.get("target_reference") or extract_target_reference(raw_query),
+        )
+        print(f"⏱️ [DISPATCH] handle_food_info: {(time.perf_counter() - t_handler_start)*1000:.0f}ms")
+        return result
+
+    if intent == "food_safety_check":
+        result = await handle_food_safety_check(
+            raw_query=raw_query,
+            db=db,
+            profile=profile,
+            last_food_results=last_food_results,
+            food_name=extracted.get("food_name"),
+            target_reference=extracted.get("target_reference") or extract_target_reference(raw_query),
+            health_topic=extracted.get("health_topic"),
+        )
+        print(f"⏱️ [DISPATCH] handle_food_safety_check: {(time.perf_counter() - t_handler_start)*1000:.0f}ms")
+        return result
+
+    if intent == "location_search":
+        result = await handle_location_search(
+            raw_query=raw_query,
+            db=db,
+            last_food_results=last_food_results,
+            food_name=extracted.get("food_name"),
+            target_reference=extracted.get("target_reference") or extract_target_reference(raw_query),
+            dish_query=extracted.get("dish_query"),
+            location_query=extracted.get("location_query"),
+            lat=stored_lat,
+            lng=stored_lng,
+        )
+        print(f"⏱️ [DISPATCH] handle_location_search: {(time.perf_counter() - t_handler_start)*1000:.0f}ms")
+        return result
+
+    if intent == "greeting":
+        print(f"⏱️ [DISPATCH] greeting (no LLM): {(time.perf_counter() - t_handler_start)*1000:.0f}ms")
+        return IntentHandlerResult(
+            intent="greeting",
+            content=(
+                "Chào bạn, mình sẵn sàng lên món và lọc theo khẩu vị hoặc hồ sơ sức khỏe cho bạn. "
+                "Bạn đang muốn ăn món nước, món khô hay có tiêu chí cụ thể nào cho bữa này không?"
+            ),
+            structured_result=build_structured_result("greeting", {"status": "handled"}),
+        )
+
+    if intent == "off_topic":
+        print(f"⏱️ [DISPATCH] off_topic (no LLM): {(time.perf_counter() - t_handler_start)*1000:.0f}ms")
+        return IntentHandlerResult(
+            intent="off_topic",
+            content=(
+                "Mình hiện tập trung vào tư vấn món ăn, kiểm tra an toàn thực phẩm và tìm quán phù hợp trong hệ thống này. "
+                "Nếu bạn muốn, mình có thể giúp quay lại việc chọn món hoặc tìm địa điểm ăn uống."
+            ),
+            structured_result=build_structured_result("off_topic", {"status": "handled"}),
+        )
+
+    # --- Default: new_search (LLM pipeline nặng nhất) ---
+    result = await handle_new_search(
+        raw_query=raw_query,
+        query_with_context=query_with_context,
+        db=db,
+        profile=profile,
+        thread_id=thread_id,
+    )
+    print(f"⏱️ [DISPATCH] handle_new_search: {(time.perf_counter() - t_handler_start)*1000:.0f}ms")
+    return result
 
 
 async def _get_thread_for_user(
@@ -431,7 +640,7 @@ async def _get_thread_for_user(
     )).scalar_one_or_none()
 
 
-async def _run_search_and_save(
+async def _run_dispatch_and_save(
     thread_id: uuid.UUID,
     user_id: uuid.UUID,
     user_msg: ChatMessage,
@@ -440,40 +649,43 @@ async def _run_search_and_save(
 ) -> "ChatSendMessageResponse":
     """
     Dùng chung cho send_message, regenerate_message, edit_and_resend:
-    - Build conversation context từ lịch sử thread (không tính user_msg hiện tại)
-    - Augment với health profile
-    - Gọi search_food
-    - Tạo và lưu assistant message
+    - Phân loại intent từ context gần nhất
+    - Dispatch sang handler tương ứng
+    - Lưu assistant message với payload có cấu trúc
     - Cập nhật updated_at của thread
     - Trả ChatSendMessageResponse
     """
-    from app.modules.search.service import search_food
-    from app.modules.users.service import augment_query_with_profile, get_profile
+    t_total_start = time.perf_counter()
+    print(f"\n{'='*60}")
+    print(f"⏱️ [TIMING] send_message bắt đầu | query={user_msg.content[:60]!r}")
 
-    # Build context từ lịch sử
-    history_context = await _build_conversation_context(thread_id, user_msg.id, db)
-    raw_query = user_msg.content
-    query_with_context = (
-        f"{history_context}\n\n[Câu hỏi hiện tại]\n{raw_query}"
-        if history_context else raw_query
+    handler_result = await _dispatch_user_intent(
+        thread_id=thread_id,
+        user_id=user_id,
+        user_msg=user_msg,
+        skip_profile=skip_profile,
+        db=db,
     )
+    t_dispatch_done = time.perf_counter()
+    print(f"⏱️ [TIMING] _dispatch_user_intent DONE: {(t_dispatch_done - t_total_start)*1000:.0f}ms")
 
-    # Augment health profile
-    effective_query = query_with_context
-    if not skip_profile:
-        profile = await get_profile(user_id, db)
-        effective_query = augment_query_with_profile(query_with_context, profile)
-
-    # Gọi AI search
-    search_result = await search_food(effective_query, db, thread_id=thread_id)
+    if handler_result.search_result is None:
+        handler_result.search_result = build_empty_search_response(
+            query=user_msg.content,
+            ai_response=handler_result.content,
+            retrieval_note=(
+                "Intent này không sinh danh sách món mới; search_result rỗng được giữ lại để tương thích frontend."
+            ),
+        )
 
     # Tạo assistant message
     assistant_msg = ChatMessage(
         thread_id=thread_id,
         role="assistant",
-        content=search_result.ai_response or _build_fallback_content(search_result),
-        query_log_id=search_result.query_log_id,
-        food_results=_serialize_food_results(search_result),
+        content=handler_result.content,
+        query_log_id=handler_result.query_log_id,
+        food_results=handler_result.food_results,
+        structured_result=handler_result.structured_result,
     )
     db.add(assistant_msg)
 
@@ -487,11 +699,17 @@ async def _run_search_and_save(
     await db.commit()
     await db.refresh(user_msg)
     await db.refresh(assistant_msg)
+    t_total_end = time.perf_counter()
+    print(f"⏱️ [TIMING] DB save: {(t_total_end - t_dispatch_done)*1000:.0f}ms")
+    print(f"⏱️ [TIMING] *** TOTAL end-to-end: {(t_total_end - t_total_start)*1000:.0f}ms ***")
+    print(f"{'='*60}\n")
 
     return ChatSendMessageResponse(
         user_message=_message_to_result(user_msg),
         assistant_message=_message_to_result(assistant_msg),
-        search_result=search_result,
+        intent=handler_result.intent,
+        search_result=handler_result.search_result,
+        place_result=handler_result.place_result,
     )
 
 
@@ -544,7 +762,7 @@ async def regenerate_message(
     await db.delete(asst_msg)
     await db.flush()
 
-    return await _run_search_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    return await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
 
 
 # ---------------------------------------------------------------------------
@@ -629,6 +847,14 @@ async def edit_and_resend(
 
     # Cập nhật nội dung user message
     user_msg.content = data.query.strip()
+    if data.lat is not None or data.lng is not None:
+        user_msg.structured_result = build_structured_result(
+            "user_context",
+            {
+                "lat": data.lat,
+                "lng": data.lng,
+            },
+        )
     await db.flush()
 
-    return await _run_search_and_save(thread_id, user_id, user_msg, data.skip_profile, db)
+    return await _run_dispatch_and_save(thread_id, user_id, user_msg, data.skip_profile, db)

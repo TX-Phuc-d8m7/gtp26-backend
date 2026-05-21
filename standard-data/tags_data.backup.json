@@ -406,7 +406,7 @@
         ]
     },
     {
-        "name": "Nhiệt miệng/Loét miệng",
+        "name": "Nhiệt miệng / Loét miệng",
         "tag_type": "SYMPTON",
         "exclude_soft_tag": [ "Mặn", "Cay", "Giòn / Giòn rụm", "Chua", "Chiên / Rán" ],
         "prefer_soft_tag": [ "Món nước", "Cháo", "Súp", "Thanh mát/Giải nhiệt" ],

@@ -6,13 +6,14 @@ import json
 from pathlib import Path
 from typing import Optional
 
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
 from app.db.session import AsyncSessionLocal
 from app.integrations.vertex_ai import build_food_embed_text, generate_embedding_for_text
-from app.models import Food, Tag
+from app.modules.favorites.models import FavoriteFood
+from app.modules.foods.models import Food, Tag
 from app.modules.ingredients.service import (
     generate_core_ingredient_keys,
     load_enabled_alias_override_rules,
@@ -98,7 +99,11 @@ async def sync_tags(db: AsyncSession) -> tuple[int, int]:
     return new_count, update_count
 
 
-async def sync_foods(db: AsyncSession) -> tuple[int, int, int]:
+async def sync_foods(
+    db: AsyncSession,
+    *,
+    delete_stale_foods_enabled: bool = False,
+) -> tuple[int, int, int, int]:
     print("📂 Đang kiểm tra và đồng bộ dữ liệu món ăn đã phân category...")
     file_path = _food_seed_path()
 
@@ -113,10 +118,16 @@ async def sync_foods(db: AsyncSession) -> tuple[int, int, int]:
     existing_foods_result = await db.execute(select(Food))
     existing_foods = {food.name: food for food in existing_foods_result.scalars().all()}
     alias_override_rules = await load_enabled_alias_override_rules(db)
+    source_food_names = {
+        item.get("name")
+        for item in foods_data
+        if item.get("name")
+    }
 
     new_count = 0
     update_count = 0
     reset_embedding_count = 0
+    deleted_count = 0
 
     for item in foods_data:
         food_name = item.get("name")
@@ -188,13 +199,42 @@ async def sync_foods(db: AsyncSession) -> tuple[int, int, int]:
             new_count += 1
             reset_embedding_count += 1
 
+    if delete_stale_foods_enabled and source_food_names:
+        stale_foods = [
+            food
+            for food_name, food in existing_foods.items()
+            if food_name not in source_food_names
+        ]
+        stale_food_ids = [food.id for food in stale_foods]
+        if stale_food_ids:
+            await db.execute(
+                delete(FavoriteFood).where(FavoriteFood.food_id.in_(stale_food_ids))
+            )
+            for food in stale_foods:
+                await db.delete(food)
+            deleted_count = len(stale_foods)
+    elif delete_stale_foods_enabled:
+        print("⚠️ Bỏ qua xoá stale foods vì file seed không có món hợp lệ nào.")
+    else:
+        stale_count = sum(
+            1
+            for food_name in existing_foods
+            if food_name not in source_food_names
+        )
+        if stale_count:
+            print(
+                f"ℹ️ Phát hiện {stale_count} món có trong DB nhưng không còn trong file seed; "
+                "không xoá vì SYNC_FOODS_DELETE_STALE_ON_STARTUP=false."
+            )
+
     await db.commit()
     print(
         "✅ Hoàn tất đồng bộ món ăn: "
         f"Thêm mới {new_count} món, Cập nhật {update_count} món, "
+        f"Xoá stale {deleted_count} món, "
         f"Cần tạo lại embedding {reset_embedding_count} món."
     )
-    return new_count, update_count, reset_embedding_count
+    return new_count, update_count, deleted_count, reset_embedding_count
 
 
 async def backfill_missing_embeddings(
@@ -242,6 +282,7 @@ async def seed_data(
     *,
     sync_tags_enabled: bool = True,
     sync_foods_enabled: bool = True,
+    delete_stale_foods_enabled: bool = False,
     run_embedding_enabled: bool = False,
     embedding_limit: Optional[int] = None,
     embedding_sleep_seconds: float = 3,
@@ -253,7 +294,10 @@ async def seed_data(
             print("⏭️ Bỏ qua sync tags.")
 
         if sync_foods_enabled:
-            await sync_foods(db)
+            await sync_foods(
+                db,
+                delete_stale_foods_enabled=delete_stale_foods_enabled,
+            )
         else:
             print("⏭️ Bỏ qua sync foods.")
 
@@ -271,6 +315,11 @@ def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sync seed data and optionally backfill embeddings.")
     parser.add_argument("--tags", action="store_true", help="Sync tags_data.json")
     parser.add_argument("--foods", action="store_true", help="Sync food JSON data")
+    parser.add_argument(
+        "--delete-stale-foods",
+        action="store_true",
+        help="Delete foods from DB when they no longer exist in the food JSON seed file",
+    )
     parser.add_argument("--embeddings", action="store_true", help="Backfill missing food embeddings")
     parser.add_argument("--all", action="store_true", help="Sync tags, sync foods, and backfill embeddings")
     parser.add_argument("--embedding-limit", type=int, default=settings.embedding_backfill_limit or None)
@@ -285,6 +334,7 @@ if __name__ == "__main__":
         seed_data(
             sync_tags_enabled=args.all or args.tags or no_specific_task,
             sync_foods_enabled=args.all or args.foods or no_specific_task,
+            delete_stale_foods_enabled=args.delete_stale_foods,
             run_embedding_enabled=args.all or args.embeddings,
             embedding_limit=args.embedding_limit,
             embedding_sleep_seconds=args.embedding_sleep,

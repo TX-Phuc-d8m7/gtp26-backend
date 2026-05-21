@@ -7,8 +7,8 @@ from typing import Any
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import QueryLog
-from app.schemas import AIInsight, FoodResult
+from app.modules.query_logs.models import QueryLog
+from app.modules.search.schemas import AIInsight, FoodResult
 
 
 def _serialize_food_result(food: FoodResult) -> dict[str, Any]:

@@ -9,8 +9,8 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import User
-from app.schemas import (
+from app.modules.users.models import User
+from app.modules.chat.schemas import (
     ChatMessageListResponse,
     ChatMessageResult,
     ChatSendMessageRequest,
@@ -235,6 +235,8 @@ async def send_message_endpoint(
         user_id=current_user.id,
         query=payload.query,
         skip_profile=payload.skip_profile,
+        lat=payload.lat,
+        lng=payload.lng,
         db=db,
     )
     if result is None:

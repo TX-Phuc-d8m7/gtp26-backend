@@ -10,8 +10,9 @@ import uuid
 import numpy as np
 from google import genai
 from google.genai import types
-from app.models import Food, Tag
-from app.schemas import AIInsight, FoodResult, SearchResponse
+from app.core.config import settings
+from app.modules.foods.models import Food, Tag
+from app.modules.search.schemas import AIInsight, FoodResult, SearchResponse
 from sqlalchemy import not_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.modules.ingredients.service import (
@@ -21,6 +22,7 @@ from app.modules.ingredients.service import (
 )
 from app.modules.search.safety import detect_allergy_text_matches
 from app.modules.query_logs.service import create_query_log
+from app.modules.users.models import UserHealthProfile
 from app.shared.paths import STANDARD_DATA_DIR
 
 # =====================================================================
@@ -28,6 +30,9 @@ from app.shared.paths import STANDARD_DATA_DIR
 # =====================================================================
 PROJECT_ID = os.getenv("PROJECT_ID")
 client = genai.Client(vertexai=True, project=PROJECT_ID, location="us-central1")
+def get_gemini_text_model() -> str:
+    return os.getenv("GEMINI_TEXT_MODEL", settings.gemini_text_model)
+
 SEARCH_DISCLAIMER = "Hệ thống đã sàng lọc nguyên liệu theo điều kiện sức khỏe cá nhân nhưng không thay thế tư vấn từ bác sĩ/chuyên gia y tế. Vui lòng kiểm tra lại thành phần thực tế trước khi gọi món."
 SUPERVISOR_TIMEOUT_SECONDS = 10
 EMBEDDING_TIMEOUT_SECONDS = 10
@@ -54,6 +59,27 @@ FALLBACK_STOPWORDS = {
     "thit", "ca", "rau", "com", "bun",
 }
 TRACE_LIMIT = 30
+# Giới hạn số món bị loại bởi SQL hard filter được lưu vào retrieval trace.
+SQL_HARD_FILTER_TRACE_LIMIT = 20
+
+def _env_bool(name: str, default: bool = False) -> bool:
+    value = os.getenv(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+def _env_int(name: str, default: int) -> int:
+    try:
+        return int(os.getenv(name, str(default)))
+    except (TypeError, ValueError):
+        return default
+
+# Mặc định giữ console gọn để dễ đọc intent LLM; bật true khi cần debug sâu pipeline search.
+SEARCH_VERBOSE_LOGS = _env_bool("SEARCH_VERBOSE_LOGS", False)
+# Số candidate tối đa được in khi SEARCH_VERBOSE_LOGS=true.
+SEARCH_CANDIDATE_LOG_LIMIT = _env_int("SEARCH_CANDIDATE_LOG_LIMIT", 20)
+# Số dòng scoring/rerank tối đa được in khi SEARCH_VERBOSE_LOGS=true.
+SEARCH_SCORE_LOG_LIMIT = _env_int("SEARCH_SCORE_LOG_LIMIT", 20)
 
 # =====================================================================
 # 1. AGENT & LUỒNG XỬ LÝ XUNG ĐỘT 
@@ -63,7 +89,7 @@ TRACE_LIMIT = 30
 valid_health_tags = [
     "Vết thương hở / Mới phẫu thuật", "Đang cho con bú", "Phụ nữ mang thai",
     "Gan nhiễm mỡ / Men gan cao", "Béo phì", "Đầy bụng / Khó tiêu",
-    "Nhiệt miệng/Loét miệng", "Tiêu chảy", "Gout",
+    "Nhiệt miệng / Loét miệng", "Tiêu chảy", "Gout",
     "Bệnh lý hô hấp trên (Ho/Viêm họng/Cảm/Amidan)", "Táo bón",
     "Tim mạch", "Trào ngược dạ dày thực quản (GERD)", "Viêm loét dạ dày",
     "Suy thận", "Cao huyết áp", "Tiểu đường",
@@ -113,15 +139,20 @@ MEDICAL_PREFER_TAG_BONUS = 0.014
 
 USER_AVOID_TAG_PENALTY = 0.035
 MEDICAL_AVOID_TAG_PENALTY = 0.045
+MEDICAL_CAUTION_INGREDIENT_KEY_PENALTY = 0.045
 
 MAX_MEDICAL_TAG_BONUS = 0.06
 MAX_USER_CONTEXT_BONUS = 0.07
 MAX_USER_SOFT_TASTE_BONUS = 0.03
 MAX_TAG_BONUS = 0.12
 MAX_TAG_PENALTY = 0.16
+MAX_MEDICAL_CAUTION_INGREDIENT_KEY_PENALTY = 0.09
 
 MIN_CONTEXT_FILTER_CANDIDATES = 5
 PRIMARY_MEAL_ROLES = {"one_dish_meal", "main_dish"}
+# Các ingredient include được phép thu hẹp candidate như hard filter thích nghi.
+# Hiện chỉ bật cho intent "món cá" để tránh làm cứng các nguyên liệu mơ hồ như cà chua.
+ADAPTIVE_INGREDIENT_INCLUDE_KEYS = {"canon:ca", "group:ca_co_vay"}
 MEAL_ROLE_ADJUSTMENTS = {
     "one_dish_meal": 0.08,
     "main_dish": 0.05,
@@ -146,6 +177,12 @@ PREFERENCE_CONFLICT_PAIRS = [
     ("Tráng miệng", "Ăn no"),
 ]
 
+MEDICAL_CAUTION_INGREDIENT_KEY_RULES = {
+    "Gout": {
+        "group:purine_vua": "chao/đậu nành lên men",
+    },
+}
+
 TAG_ALIAS_MAP = {
     "hap/luoc": "Hấp / Luộc",
     "hap / luoc": "Hấp / Luộc",
@@ -160,6 +197,92 @@ TAG_ALIAS_MAP = {
     "giau chat so": "Giàu chất xơ",
     "sua / pho mai": "Từ sữa / Phô mai",
 }
+
+USER_INGREDIENT_CATEGORY_TAG_MAP = {
+    "hai san": ["Hải sản"],
+    "do bien": ["Hải sản"],
+    "tom cua": ["Hải sản"],
+    "do ngot": ["Ngọt"],
+    "mon ngot": ["Ngọt"],
+    "che": ["Ngọt", "Tráng miệng"],
+    "tra sua": ["Ngọt", "Từ sữa / Phô mai"],
+    "banh ngot": ["Bánh ngọt", "Ngọt"],
+    "tinh bot": ["Giàu tinh bột"],
+    "do chien": ["Chiên / Rán"],
+    "chien ran": ["Chiên / Rán"],
+    "do ran": ["Chiên / Rán"],
+    "do dau mo": ["Nhiều dầu mỡ / Calo cao"],
+    "nhieu dau mo": ["Nhiều dầu mỡ / Calo cao"],
+    "do beo": ["Béo ngậy"],
+    "beo ngay": ["Béo ngậy"],
+    "do tu sua": ["Từ sữa / Phô mai"],
+    "san pham tu sua": ["Từ sữa / Phô mai"],
+    "pho mai": ["Từ sữa / Phô mai"],
+    "do co trung": ["Bánh ngọt"],
+    "do cay": ["Cay"],
+    "cay": ["Cay"],
+    "do chua": ["Chua"],
+    "chua": ["Chua"],
+    "do man": ["Mặn"],
+    "man": ["Mặn"],
+    "dam da": ["Đậm đà"],
+    "dam vi": ["Đậm đà"],
+    "noi tang": ["Nội tạng"],
+    "do song": ["Sống/Chín tái"],
+    "tai": ["Sống/Chín tái"],
+    "song tai": ["Sống/Chín tái"],
+    "goi": ["Gỏi / Nộm / Trộn"],
+    "nom": ["Gỏi / Nộm / Trộn"],
+    "tron": ["Gỏi / Nộm / Trộn"],
+    "lau": ["Lẩu"],
+    "do nuong": ["Nướng"],
+    "nuong": ["Nướng"],
+    "xao": ["Xào"],
+    "do an nhanh": ["Thức ăn nhanh"],
+    "fast food": ["Thức ăn nhanh"],
+    "do che bien san": ["Thực phẩm chế biến sẵn"],
+    "thuc pham che bien san": ["Thực phẩm chế biến sẵn"],
+    "do lanh": ["Món lạnh"],
+    "mon lanh": ["Món lạnh"],
+    "do gion": ["Giòn / Giòn rụm"],
+    "gion": ["Giòn / Giòn rụm"],
+    "dai": ["Dai / Sần sật"],
+    "kho tieu": ["Khó tiêu / Nặng bụng"],
+    "nong": ["Nóng hổi"],
+    "nong hoi": ["Nóng hổi"],
+}
+
+USER_FOOD_BASE_PHRASES = {
+    "mi quang": "mì quảng",
+    "my quang": "mì quảng",
+    "cao lau": "cao lầu",
+    "banh canh": "bánh canh",
+    "hu tieu": "hủ tiếu",
+    "banh mi": "bánh mì",
+    "banh xeo": "bánh xèo",
+    "banh cuon": "bánh cuốn",
+    "banh nam": "bánh nậm",
+    "banh goi": "bánh gói",
+    "banh bot loc": "bánh bột lọc",
+    "banh beo": "bánh bèo",
+    "bun": "bún",
+    "com": "cơm",
+    "pho": "phở",
+    "mien": "miến",
+    "mi": "mì",
+    "my": "mì",
+    "lau": "lẩu",
+    "nuong": "nướng",
+    "chao": "cháo",
+    "sup": "súp",
+    "xoi": "xôi",
+    "goi": "gỏi",
+    "nom": "gỏi",
+    "cuon": "cuốn",
+    "salad": "salad",
+}
+
+USER_FOOD_BASE_PROMPT_LIST = ", ".join(dict.fromkeys(USER_FOOD_BASE_PHRASES.values()))
 
 
 # =====================================================================
@@ -234,6 +357,7 @@ def init_retrieval_trace() -> dict:
         "allergy_text_filtered_out": [],
         "context_filtered_out": [],
         "dish_name_filtered_out": [],
+        "ingredient_include_filtered_out": [],
         "embedding_skipped": [],
         "score_breakdown": [],
         "returned": [],
@@ -263,6 +387,26 @@ def matched_keys(food_keys: list[str], target_keys: list[str]) -> list[str]:
     target_set = set(target_keys or [])
     return sorted(key for key in (food_keys or []) if key in target_set)
 
+def collect_medical_caution_ingredient_key_matches(
+    food: Food,
+    symptoms: list[str],
+) -> list[dict]:
+    """Tìm ingredient-key cần cảnh báo/penalty mềm theo bệnh lý, không loại cứng."""
+    food_keys = set(food.core_ingredient_keys or [])
+    matches = []
+    seen_keys = set()
+    for symptom in symptoms or []:
+        for key, label in MEDICAL_CAUTION_INGREDIENT_KEY_RULES.get(symptom, {}).items():
+            if key not in food_keys or key in seen_keys:
+                continue
+            seen_keys.add(key)
+            matches.append({
+                "symptom": symptom,
+                "key": key,
+                "label": label,
+            })
+    return matches
+
 def log_retrieval_trace_for_debug(trace: dict, *, enabled: bool) -> None:
     """Print retrieval trace to backend logs without exposing exclusions in API response."""
     if not enabled or not trace:
@@ -273,6 +417,7 @@ def log_retrieval_trace_for_debug(trace: dict, *, enabled: bool) -> None:
         "allergy_text_filtered_out",
         "context_filtered_out",
         "dish_name_filtered_out",
+        "ingredient_include_filtered_out",
         "embedding_skipped",
     ]
     print("\n" + "=" * 70)
@@ -331,6 +476,8 @@ def build_score_trace_item(
         "ingredient_priority_match": ingredient_priority_match,
         "matched_prefer_tags": score_details.get("matched_prefer_tags", []),
         "matched_avoid_tags": score_details.get("matched_avoid_tags", []),
+        "medical_caution_penalty": score_details.get("medical_caution_penalty", 0),
+        "medical_caution_matches": score_details.get("medical_caution_matches", []),
         "explicit_preference_conflicts": score_details.get("explicit_preference_conflicts", []),
     }
     if score_details.get("lexical_signal_breakdown"):
@@ -421,7 +568,12 @@ def infer_serving_role(food: Food) -> str:
 
     if (
         _has_any_phrase(name_text, side_vegetable_keywords)
-        or ("Gỏi / Nộm / Trộn" in soft_tags and "Ăn no" not in occasion_context)
+        or (
+            "Gỏi / Nộm / Trộn" in soft_tags
+            and "Ăn no" not in occasion_context
+            # Gỏi có nguyên liệu chính (cá, tôm, thịt...) là main_dish, không phải side_vegetable
+            and not _has_any_phrase(name_text, main_dish_keywords)
+        )
     ):
         return "side_vegetable"
 
@@ -599,6 +751,121 @@ def collect_ingredient_priority_food_ids(
     )
     return {food.id for food in matched_foods}
 
+def apply_adaptive_ingredient_include_filter_with_trace(
+    foods: list[Food],
+    include_keys: list[str],
+    requested_ingredients: list[str],
+    require_primary_role: bool,
+    trace: dict,
+) -> tuple[list[Food], bool, int, str]:
+    """
+    Thu hẹp candidate theo nguyên liệu user muốn sau các lớp safety filter.
+
+    Đây là hard filter thích nghi, hiện chỉ bật cho key cá đã được resolve rõ
+    ràng. Nếu không còn món nào khớp sau lọc sức khỏe, bỏ qua để còn trả món
+    thay thế an toàn hơn.
+    """
+    active_keys = [
+        key for key in include_keys or []
+        if key in ADAPTIVE_INGREDIENT_INCLUDE_KEYS
+    ]
+    if not foods or not active_keys:
+        return foods, False, 0, "none"
+
+    matched_foods = [
+        food for food in foods
+        if _food_has_any_ingredient_key(food, active_keys)
+    ]
+    if not matched_foods:
+        print(
+            f"🐟 [INGREDIENT INCLUDE FILTER] Bỏ qua lọc ingredient keys {active_keys} "
+            "vì không còn món nào khớp sau lớp lọc an toàn."
+        )
+        return foods, False, 0, "none"
+
+    selected_foods = matched_foods
+    scope = "any_role"
+    if require_primary_role:
+        primary_foods = [
+            food for food in matched_foods
+            if infer_serving_role(food) in PRIMARY_MEAL_ROLES
+        ]
+        if primary_foods:
+            selected_foods = primary_foods
+            scope = "primary_role"
+
+    selected_ids = {food.id for food in selected_foods}
+    for food in foods:
+        if food.id in selected_ids:
+            continue
+        append_trace_item(trace, "ingredient_include_filtered_out", {
+            **food_trace_snapshot(food),
+            "stage": "ingredient_include_filter",
+            "reason": "missing_requested_ingredient_key",
+            "requested_ingredients": requested_ingredients,
+            "required_keys": active_keys,
+            "core_ingredient_keys": food.core_ingredient_keys or [],
+            "scope": scope,
+        })
+
+    scope_label = "món chính" if scope == "primary_role" else "mọi vai trò món"
+    print(
+        f"🐟 [INGREDIENT INCLUDE FILTER] Giữ {len(selected_foods)}/{len(foods)} món "
+        f"khớp ingredient keys user muốn ({scope_label}): {active_keys}"
+    )
+    return selected_foods, True, len(selected_foods), scope
+
+def food_name_matches_any_dish_base(food: Food, requested_dishes: list[str]) -> bool:
+    """Kiểm tra tên món có thuộc nhóm món user yêu cầu, ví dụ bún/cơm/phở."""
+    normalized_name = _normalize_search_text(food.name)
+    return any(_phrase_in_text(normalized_name, dish) for dish in requested_dishes or [])
+
+def apply_adaptive_dish_name_include_filter_with_trace(
+    foods: list[Food],
+    requested_dishes: list[str],
+    trace: dict,
+) -> tuple[list[Food], bool, int]:
+    """
+    Lọc ưu tiên theo nhóm tên món sau safety filter và trước semantic search.
+
+    Chỉ bỏ qua hard-filter khi không có món nào khớp, để hệ thống còn cơ hội
+    trả lựa chọn thay thế thay vì rỗng hoàn toàn.
+    """
+    normalized_requested = []
+    for dish in requested_dishes or []:
+        canonical = _normalize_search_text(dish)
+        if canonical and canonical not in normalized_requested:
+            normalized_requested.append(canonical)
+    if not foods or not normalized_requested:
+        return foods, False, 0
+
+    matched_foods = [
+        food for food in foods
+        if food_name_matches_any_dish_base(food, normalized_requested)
+    ]
+    if matched_foods:
+        matched_ids = {food.id for food in matched_foods}
+        for food in foods:
+            if food.id in matched_ids:
+                continue
+            append_trace_item(trace, "dish_name_filtered_out", {
+                **food_trace_snapshot(food),
+                "stage": "dish_name_filter",
+                "reason": "missing_requested_dish_base",
+                "requested_dishes": requested_dishes,
+            })
+        print(
+            f"🍜 [DISH NAME FILTER] Giữ {len(matched_foods)}/{len(foods)} món "
+            f"khớp nhóm món user muốn: {requested_dishes}"
+        )
+        return matched_foods, True, len(matched_foods)
+
+    print(
+        f"🍜 [DISH NAME FILTER] Bỏ qua lọc nhóm món {requested_dishes} "
+        "vì không còn món nào khớp sau lớp lọc an toàn."
+    )
+    return foods, False, len(matched_foods)
+
 def canonicalize_soft_tag(tag: str) -> str | None:
     """
     Chuẩn hóa toàn bộ biến thể soft_tag về danh mục chuẩn.
@@ -625,6 +892,30 @@ def canonicalize_soft_tags(tags: list[str]) -> list[str]:
             seen.add(canonical)
             result.append(canonical)
     return result
+
+def infer_soft_tags_from_user_ingredient_phrase(value: str) -> list[str]:
+    """
+    Nhận diện các cụm sở thích bị supervisor đưa vào include_ingredients
+    nhưng thực chất là nhóm món/tính chất, ví dụ "hải sản", "đồ ngọt".
+    """
+    normalized = _normalize_search_text(value)
+    if not normalized:
+        return []
+
+    matched_tags: list[str] = []
+    for phrase, tags in USER_INGREDIENT_CATEGORY_TAG_MAP.items():
+        if normalized == phrase or _phrase_in_text(normalized, phrase):
+            for tag in canonicalize_soft_tags(tags):
+                if tag not in matched_tags:
+                    matched_tags.append(tag)
+    return matched_tags
+
+def extend_soft_tags_from_user_ingredients(ingredients: set[str]) -> set[str]:
+    """Chuyển các ingredient dạng category an toàn thành soft tag để rerank đúng hơn."""
+    tags: set[str] = set()
+    for ingredient in ingredients or []:
+        tags.update(infer_soft_tags_from_user_ingredient_phrase(ingredient))
+    return tags
 
 def split_food_category_tags(tags: list[str]) -> dict[str, list[str]]:
     """
@@ -819,6 +1110,46 @@ def apply_adaptive_context_exclude_filter_with_trace(
     )
     return foods
 
+def apply_medical_soft_tag_hard_filter_with_trace(
+    foods: list[Food],
+    excluded_tags: list[str],
+    trace: dict,
+) -> tuple[list[Food], int]:
+    """
+    Loại cứng món có soft tag trùng rule y khoa cần tránh.
+
+    Các tag này đến từ tags_data theo bệnh lý/triệu chứng (không phải sở thích).
+    Nếu để chúng chỉ là penalty, semantic rerank có thể kéo món nguy cơ cao
+    như hải sản cho Gout quay lại top kết quả.
+    """
+    canonical_excluded_tags = canonicalize_soft_tags(excluded_tags)
+    if not foods or not canonical_excluded_tags:
+        return foods, 0
+
+    kept_foods = []
+    removed_count = 0
+    for food in foods:
+        matched_tags = matched_canonical_tags(
+            get_food_scoring_tags(food),
+            canonical_excluded_tags,
+        )
+        if matched_tags:
+            removed_count += 1
+            append_trace_item(trace, "hard_filtered_out", {
+                **food_trace_snapshot(food),
+                "stage": "medical_soft_tag_filter",
+                "reason": "medical_soft_tag_overlap",
+                "matched_tags": matched_tags,
+            })
+            continue
+        kept_foods.append(food)
+
+    print(
+        f"🛡️ [MEDICAL SOFT TAG FILTER] Loại {removed_count}/{len(foods)} món "
+        f"có tag y khoa cần tránh: {canonical_excluded_tags}"
+    )
+    return kept_foods, removed_count
+
 def calculate_tag_adjusted_similarity(
     food: Food,
     base_similarity: float,
@@ -971,6 +1302,17 @@ def build_food_reason(
             "nên xem là lựa chọn cần điều chỉnh theo khuyến nghị sức khỏe."
         )
 
+    medical_caution_matches = score_details.get("medical_caution_matches", []) or []
+    if medical_caution_matches:
+        caution_labels = _join_reason_items(
+            [match.get("label") for match in medical_caution_matches],
+            limit=2,
+        )
+        return (
+            f"{opening} Tuy nhiên món có thành phần cần dùng vừa phải "
+            f"({caution_labels}), nên kiểm soát khẩu phần/nước chấm theo khuyến nghị sức khỏe."
+        )
+
     return opening
 
 def canonicalize_health_tag(tag: str) -> str:
@@ -1012,6 +1354,8 @@ def _fallback_intent_from_query(user_input: str) -> dict:
         (["bữa chính", "bua chinh"], "Ăn no"),
         (["ăn vặt", "an vat"], "Ăn vặt"),
         (["tráng miệng", "trang mieng"], "Tráng miệng"),
+        (["món nước", "mon nuoc", "đồ nước", "do nuoc"], "Món nước"),
+        (["nóng hổi", "nong hoi", "nóng nóng", "nong nong", "ấm nóng", "am nong"], "Nóng hổi"),
     ]
 
     for phrases, tag in health_phrase_map:
@@ -1277,16 +1621,27 @@ def supervisor_agent(user_input: str):
     [DANH SÁCH TÍNH CHẤT (SOFT TAGS) HỢP LỆ]
     {valid_soft_tags}
 
+    [DANH SÁCH NHÓM MÓN NỀN CÓ THỂ ĐƯA VÀO include_dishes/exclude_dishes]
+    {USER_FOOD_BASE_PROMPT_LIST}
+
     [QUY TẮC PHÂN LOẠI]
     1. health_constraints: Chỉ chọn từ danh sách trên. Map các từ đồng nghĩa (VD: đau dạ dày -> Viêm loét dạ dày).
-    2. include_dishes: Tên các món ăn hoàn chỉnh người dùng muốn (VD: phở bò, lẩu thái, pizza).
-    3. exclude_dishes: Tên các món ăn hoàn chỉnh KHÔNG muốn ăn.
+    2. include_dishes: Tên món ăn cụ thể hoặc nhóm món nền người dùng muốn.
+       - Nếu user nói tên món cụ thể, GIỮ NGUYÊN tên món cụ thể và ưu tiên tên đó.
+       - Ví dụ: "bún bò" -> "bún bò"; "bún riêu" -> "bún riêu"; "cơm gà" -> "cơm gà"; "mì quảng chay" -> "mì quảng chay".
+       - Chỉ dùng nhóm món nền trong danh sách trên khi user thật sự nói nhu cầu dạng rộng như "muốn ăn bún", "tìm món cơm", "ăn phở", "thèm lẩu".
+    3. exclude_dishes: Tên món ăn hoàn chỉnh hoặc nhóm món nền người dùng KHÔNG muốn ăn.
+       - Nếu user phủ định/né/tránh tên món cụ thể, GIỮ NGUYÊN tên món cụ thể trong exclude_dishes.
+       - Nếu user phủ định/né/tránh nhóm món nền, đưa nhóm nền đó vào exclude_dishes.
+       - Ví dụ: "không ăn bún bò" -> "bún bò"; "không ăn bún" -> "bún"; "né phở", "ngoại trừ bánh mì", "không muốn cơm" -> exclude_dishes tương ứng.
+       - Nếu cùng một món/nhóm món vừa xuất hiện ở ý muốn và ý không muốn, ưu tiên ý không muốn.
     4. exclude_ingredients: Danh sách các nguyên liệu người dùng KHÔNG MUỐN.
     5. include_ingredients: Danh sách các nguyên liệu người dùng CẢM THẤY THÍCH.
+       - Không đưa các nhóm món nền như bún/cơm/phở/mì vào include_ingredients hoặc exclude_ingredients; hãy dùng include_dishes/exclude_dishes.
     6. include_soft_tags: Tính chất, hương vị, bữa ăn hoặc ngữ cảnh người dùng MUỐN. BẮT BUỘC map vào danh sách hợp lệ.
        - Thời điểm/bữa ăn user nói rõ: "sáng mai", "bữa sáng" -> "Ăn sáng"; "trưa" -> "Ăn trưa"; "tối nay" -> "Ăn tối"; "xế/chiều" -> "Ăn chiều / xế"; "khuya/đêm" -> "Ăn khuya".
        - Ngữ cảnh user nói rõ: "vừa no/no bụng" -> "Ăn no"; "ăn vặt" -> "Ăn vặt"; "tráng miệng" -> "Tráng miệng"; "ấm bụng" -> "Ấm bụng"; "mồi nhậu/nhậu" -> "Mồi nhậu".
-       - Tính chất user nói rõ: "đồ nước" -> "Món nước", "thanh mát" -> "Thanh mát/Giải nhiệt".
+       - Tính chất user nói rõ: "món nước", "đồ nước" -> "Món nước"; "nóng nóng", "nóng hổi", "ấm nóng" -> "Nóng hổi"; "thanh mát" -> "Thanh mát/Giải nhiệt".
     7. exclude_soft_tags: Tính chất, hương vị người dùng KHÔNG MUỐN (VD: "không dầu mỡ" -> "Chiên / Rán" hoặc "Béo ngậy"). BẮT BUỘC map vào danh sách.
     8. include_soft_tags / exclude_soft_tags chỉ dùng cho sở thích ăn uống được user nói rõ. Không được tự suy diễn tag nên tránh/nên ưu tiên từ bệnh lý. Nếu user nói bệnh lý như đau dạ dày, cao huyết áp, gout..., chỉ điền vào health_constraints. Medical rules ở backend sẽ tự sinh prefer/exclude tags.
     """
@@ -1321,7 +1676,7 @@ def supervisor_agent(user_input: str):
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=get_gemini_text_model(),
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
                 temperature=0.2,
@@ -1335,27 +1690,63 @@ def supervisor_agent(user_input: str):
         print(f"Lỗi Gemini: {e}")
         return {"error": str(e)}
 
-async def resolve_food_conflicts(user_input: str, db: AsyncSession):
+async def resolve_food_conflicts(
+    user_input: str,
+    db: AsyncSession,
+    profile: UserHealthProfile | None = None,
+):
     """
     Kết hợp kết quả từ Agent và Database để giải quyết xung đột
     giữa Sở thích (những gì User muốn) và Sức khỏe (những gì y khoa cấm/khuyên).
+
+    Profile (nếu có) được merge trực tiếp vào kết quả supervisor — không qua LLM parse:
+      - health_conditions + allergies → symptoms
+      - preferred_ingredients         → user_likes_ings
+      - taste_profile + dish_preferences → user_include_tags
     """
     extracted_data, supervisor_runtime = await run_supervisor_with_timeout(user_input)
 
-    # Lấy thông tin trích xuất
+    # Lấy thông tin trích xuất từ supervisor
     symptoms = [canonicalize_health_tag(tag) for tag in extracted_data.get("health_constraints", [])]
     user_include_dishes = extracted_data.get("include_dishes", [])
     user_exclude_dishes = extracted_data.get("exclude_dishes", [])
 
     user_likes_ings = set(extracted_data.get("include_ingredients", []))
     user_dislikes_ings = set(extracted_data.get("exclude_ingredients", []))
+    excluded_dish_keys = [_normalize_search_text(dish) for dish in user_exclude_dishes]
+    user_include_dishes = [
+        dish for dish in user_include_dishes
+        if not any(
+            excluded_key and _phrase_in_text(_normalize_search_text(dish), excluded_key)
+            for excluded_key in excluded_dish_keys
+        )
+    ]
 
     user_include_tags = set(extracted_data.get("include_soft_tags", []))
     user_exclude_tags = set(extracted_data.get("exclude_soft_tags", []))
 
+    # Merge trực tiếp từ user profile (deterministic, không qua LLM)
+    if profile is not None:
+        # health_conditions + allergies → gộp vào symptoms, canonicalize để match valid_health_tags
+        profile_health_tags = [
+            canonicalize_health_tag(tag)
+            for tag in (profile.health_conditions or []) + (profile.allergies or [])
+        ]
+        symptoms = list(dict.fromkeys(symptoms + profile_health_tags))
+
+        # preferred_ingredients → gộp vào user_likes_ings
+        user_likes_ings.update(profile.preferred_ingredients or [])
+
+        # taste_profile + dish_preferences → canonicalize rồi gộp vào user_include_tags
+        profile_soft_tags = canonicalize_soft_tags(
+            (profile.taste_profile or []) + (profile.dish_preferences or [])
+        )
+        user_include_tags.update(profile_soft_tags)
+
     # Khởi tạo tập hợp y khoa
     allergy_constraints = set()
     disease_constraints = set()
+    allergy_exclude_tags = set()
     medical_exclude_tags = set()
     medical_prefer_tags = set()
     allergy_exclude_ings = set()
@@ -1375,6 +1766,7 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
             if tag.tag_type == "ALLERGY":
                 allergy_constraints.add(tag.name)
                 allergy_exclude_ings.update(tag.exclude_ingredient)
+                allergy_exclude_tags.update(canonicalize_soft_tags(tag.exclude_soft_tag))
             else:
                 disease_constraints.add(tag.name)
                 disease_exclude_ings.update(tag.exclude_ingredient)
@@ -1386,6 +1778,7 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
     # Chuẩn hoá tags
     user_include_tags = set(canonicalize_soft_tags(list(user_include_tags)))
     user_exclude_tags = set(canonicalize_soft_tags(list(user_exclude_tags)))
+    safety_exclude_tags = medical_exclude_tags.union(allergy_exclude_tags)
 
     # Logic kiểm tra thông báo cảnh báo (warning) cho nguyên liệu
     alias_override_rules = await load_enabled_alias_override_rules(db)
@@ -1395,18 +1788,27 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
     )
 
     conflicting_ings = set()
+    conflicting_category_tags = set()
     safe_user_include_ings = set()
     for ing in user_likes_ings:
+        inferred_tags = set(infer_soft_tags_from_user_ingredient_phrase(ing))
+        matched_excluded_tags = inferred_tags.intersection(safety_exclude_tags)
+        if matched_excluded_tags:
+            conflicting_category_tags.update(matched_excluded_tags)
+            continue
+
         user_ing_keys = set(generate_filter_keys([ing], extra_rules=alias_override_rules))
         if user_ing_keys.intersection(medical_exclude_keys):
             conflicting_ings.add(ing.lower())
         else:
             safe_user_include_ings.add(ing.lower())
 
+    user_include_tags.update(extend_soft_tags_from_user_ingredients(safe_user_include_ings))
+
 
     # 2. Logic cho tính chất (Soft tags)
     user_tags_map = {_normalize_tag_key(tag): tag for tag in user_include_tags}
-    medical_tags_map = {_normalize_tag_key(tag): tag for tag in medical_exclude_tags}
+    medical_tags_map = {_normalize_tag_key(tag): tag for tag in safety_exclude_tags}
     
     # Phép giao (Intersection) để lấy lỗi
     conflicting_tag_keys = set(user_tags_map.keys()).intersection(set(medical_tags_map.keys()))
@@ -1416,7 +1818,7 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
     safe_tag_keys = set(user_tags_map.keys()) - set(medical_tags_map.keys())
     safe_user_include_tags = {user_tags_map[k] for k in safe_tag_keys}
     
-    all_conflicts = list(conflicting_ings) + list(conflicting_tags)
+    all_conflicts = list(conflicting_ings) + list(conflicting_tags) + list(conflicting_category_tags)
 
     print(f"\n[PROCESSING] All Conflicts: {all_conflicts}")
 
@@ -1433,6 +1835,7 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
         "allergy_constraints": list(allergy_constraints),
         "disease_constraints": list(disease_constraints),
         "allergy_exclude_ings": list(allergy_exclude_ings),
+        "allergy_exclude_tags": list(allergy_exclude_tags),
         "disease_exclude_ings": list(disease_exclude_ings),
         "medical_exclude_tags": list(medical_exclude_tags),
         "medical_prefer_tags": list(medical_prefer_tags),
@@ -1509,6 +1912,10 @@ def post_processing_agent(
 
         general_advices.append(f"({symptom}) {rule['general_advice']}")
 
+        # Lifestyle tips: khuyến cáo lối sống luôn inject, không phụ thuộc vào món ăn
+        for tip in rule.get("lifestyle_tips", []):
+            general_advices.append(tip)
+
         # Kiểm tra điều kiện trigger cảnh báo
         for cond in rule.get("conditional_warnings", []):
             trigger_type = cond["trigger_type"]
@@ -1573,7 +1980,7 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, hãy tư vấn người dùng m�
     # --- Bước 6: Gọi LLM ---
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=get_gemini_text_model(),
             config=types.GenerateContentConfig(
                 system_instruction=system_prompt,
                 temperature=0.2,
@@ -1590,10 +1997,152 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, hãy tư vấn người dùng m�
 # 4. HÀM TÌM KIẾM CHÍNH (Được gọi từ API)
 # =====================================================================
 
+# ---------------------------------------------------------------------------
+# Helpers: deduplication kết quả
+# ---------------------------------------------------------------------------
+
+def _deduplicate_results(scored_list: list, top_k: int) -> list:
+    """
+    Loại trùng lặp trong danh sách đã xếp hạng trước khi cắt top_k.
+
+    Chiến lược:
+    - Chuẩn hóa tên món: lowercase, bỏ khoảng trắng thừa, cắt bỏ phần trong ngoặc "(...)".
+    - Giới hạn tối đa 2 biến thể cùng base name (ví dụ: "Mì Quảng chay" và
+      "Mì Quảng trộn chay" đều pass, nhưng thêm "Mì Quảng Chay" thứ 3 thì bị bỏ).
+    - Dừng khi đủ top_k món unique.
+
+    Lý do giới hạn 2 thay vì 1: cho phép 1 biến thể nước + 1 biến thể khô của
+    cùng món (ví dụ: Mì Quảng thường + Mì Quảng trộn) để tăng tính đa dạng
+    mà không bị trùng lặp hoàn toàn.
+    """
+    seen: dict[str, int] = {}
+    unique = []
+    for item in scored_list:
+        food = item[0]
+        name_key = food.name.strip().lower()
+        # Lấy base name: bỏ phần "(..." ở cuối (vd: "Mì Quảng (chay)" → "mì quảng")
+        base = name_key.split("(")[0].strip()
+        count = seen.get(base, 0)
+        if count < 2:
+            seen[base] = count + 1
+            unique.append(item)
+        if len(unique) >= top_k:
+            break
+    return unique
+
+
+# ---------------------------------------------------------------------------
+# Helpers: xử lý kết quả rỗng
+# ---------------------------------------------------------------------------
+
+def _build_no_result_retrieval_note(
+    symptoms: list[str],
+    safety_e_tags: list[str],
+    final_e_ings: list[str],
+    candidate_count: int,
+    context_before_count: int,
+    context_after_count: int,
+    scored_count: int,
+) -> str:
+    """Tạo ghi chú kỹ thuật ngắn về lý do kết quả rỗng, dùng trong retrieval_notes."""
+    reasons = []
+    if candidate_count == 0:
+        reasons.append("Không có món nào vượt qua bộ lọc nguyên liệu cứng")
+    elif context_after_count == 0 and context_before_count > 0:
+        reasons.append(
+            f"Sau lọc nguyên liệu còn {context_before_count} món nhưng "
+            "bị loại toàn bộ bởi bộ lọc ngữ cảnh bữa ăn"
+        )
+    elif scored_count == 0 and context_after_count > 0:
+        reasons.append(
+            f"{context_after_count} món còn lại thiếu embedding, "
+            "không thể xếp hạng ngữ nghĩa"
+        )
+    else:
+        reasons.append("Không có món nào đạt điểm sau tất cả bộ lọc")
+
+    if safety_e_tags:
+        reasons.append(f"Tính chất bị loại: {', '.join(safety_e_tags[:5])}")
+    if final_e_ings:
+        reasons.append(f"Nguyên liệu cấm: {', '.join(final_e_ings[:5])}")
+
+    return "Kết quả rỗng — " + "; ".join(reasons) + "."
+
+
+def _build_no_result_ai_response(
+    symptoms: list[str],
+    safety_e_tags: list[str],
+    final_e_ings: list[str],
+    candidate_count: int,
+    context_before_count: int,
+    context_after_count: int,
+    scored_count: int,
+) -> str:
+    """
+    Tạo phản hồi tự nhiên (tiếng Việt) giải thích tại sao không gợi ý được món nào.
+    Dùng thay thế cho post_processing_agent khi kết quả rỗng, tránh LLM hallucinate.
+    """
+    parts: list[str] = []
+
+    # Ngữ cảnh sức khỏe
+    if symptoms:
+        cond_text = ", ".join(symptoms)
+        parts.append(
+            f"Mình đã ghi nhận tình trạng sức khỏe của bạn ({cond_text}) "
+            "và áp dụng đầy đủ bộ lọc an toàn tương ứng."
+        )
+
+    # Giải thích theo giai đoạn bị rỗng
+    if candidate_count == 0:
+        parts.append(
+            "Rất tiếc, sau khi loại trừ các nguyên liệu không phù hợp, "
+            "không còn món nào trong cơ sở dữ liệu vượt qua bộ lọc thành phần."
+        )
+    elif context_after_count == 0 and context_before_count > 0:
+        parts.append(
+            f"Sau bộ lọc nguyên liệu, còn {context_before_count} món an toàn, "
+            "nhưng không có món nào phù hợp với bữa ăn hoặc ngữ cảnh bạn yêu cầu. "
+            "Bạn có thể thử bỏ yêu cầu về bữa ăn cụ thể để mở rộng kết quả."
+        )
+    elif scored_count == 0 and context_after_count > 0:
+        parts.append(
+            f"Còn {context_after_count} món an toàn nhưng hiện chưa có dữ liệu "
+            "phân tích ngữ nghĩa, không thể xếp hạng và gợi ý chính xác lúc này. "
+            "Vui lòng thử lại sau hoặc liên hệ hỗ trợ."
+        )
+    else:
+        parts.append(
+            "Rất tiếc, sau khi áp dụng tất cả bộ lọc sức khỏe và ngữ cảnh, "
+            "hệ thống không tìm được món ăn phù hợp với yêu cầu hiện tại của bạn."
+        )
+
+    # Chi tiết bộ lọc
+    if safety_e_tags:
+        tags_text = ", ".join(safety_e_tags[:6])
+        parts.append(
+            f"Các tính chất sau đã bị loại để đảm bảo an toàn: {tags_text}."
+        )
+    if final_e_ings:
+        ings_text = ", ".join(final_e_ings[:5])
+        parts.append(f"Nguyên liệu cần tránh đã được lọc: {ings_text}.")
+
+    # Hướng dẫn tiếp theo
+    parts.append(
+        "Bạn có thể thử lại với yêu cầu đơn giản hơn (ví dụ: bỏ bớt điều kiện về "
+        "bữa ăn, loại nguyên liệu, hoặc địa điểm), hoặc cho mình biết thêm sở thích "
+        "để tìm kiếm tốt hơn. Mọi gợi ý không thay thế tư vấn của bác sĩ hoặc "
+        "chuyên gia dinh dưỡng."
+    )
+
+    return " ".join(parts)
+
+
 async def search_food(
     query: str,
     db: AsyncSession,
+    profile: UserHealthProfile | None = None,
     thread_id: uuid.UUID | None = None,
+    top_k: int = 5,
     debug: bool = False,
 ) -> SearchResponse:
     """
@@ -1604,11 +2153,12 @@ async def search_food(
     4. Rerank kết quả bằng Vector Similarity + Tag Scoring.
     5. Post-Processing tạo phản hồi tư vấn tự nhiên.
     """
+    _t_search_start = time.perf_counter()
     llm_runtime = _new_llm_runtime_state()
     retrieval_trace = init_retrieval_trace()
 
     # --- Bước 1: Chạy luồng bảo vệ và xử lý xung đột ---
-    payload = await resolve_food_conflicts(query, db)
+    payload = await resolve_food_conflicts(query, db, profile=profile)
     if payload and payload.get("llm_runtime"):
         payload_runtime = payload["llm_runtime"]
         llm_runtime["supervisor_status"] = payload_runtime.get("supervisor_status", "ok")
@@ -1645,10 +2195,12 @@ async def search_food(
     final_p_ings = payload["final_include_ings"]
     allergy_constraints = payload.get("allergy_constraints", [])
     allergy_e_ings = payload.get("allergy_exclude_ings", [])
+    allergy_e_tags = payload.get("allergy_exclude_tags", [])
     disease_e_ings = payload.get("disease_exclude_ings", [])
     medical_e_tags = payload["medical_exclude_tags"]
     medical_p_tags = payload["medical_prefer_tags"]
     medical_p_ings = payload.get("medical_prefer_ings", [])
+    safety_e_tags = list(dict.fromkeys(medical_e_tags + allergy_e_tags))
 
     user_include_tags = payload["user_include_tags"]
     user_exclude_tags = payload["user_exclude_tags"]
@@ -1753,7 +2305,7 @@ async def search_food(
                 "reason": "ingredient_key_overlap",
                 "matched_keys": matched_keys(food.core_ingredient_keys or [], exclude_ingredient_keys),
                 "core_ingredient_keys": food.core_ingredient_keys or [],
-            })
+            }, limit=SQL_HARD_FILTER_TRACE_LIMIT)
         stmt = stmt.where(not_(Food.core_ingredient_keys.overlap(exclude_ingredient_keys)))
 
     if user_exclude_dishes:
@@ -1775,6 +2327,7 @@ async def search_food(
     candidate_count = len(filtered_foods)
     python_removed_count = 0
     allergy_text_removed_count = 0
+    medical_soft_tag_removed_count = 0
     allergy_key_miss_examples: list[dict] = []
 
     # Lọc mềm bằng Python cho dữ liệu cũ/chưa rebuild đủ core_ingredient_keys.
@@ -1850,7 +2403,7 @@ async def search_food(
                     f"{food.name} text-match={matched_pairs[:3]} "
                     f"nhưng core_ingredient_keys không giao allergy keys."
                 )
-            else:
+            elif SEARCH_VERBOSE_LOGS:
                 print(
                     "🛡️ [ALLERGY TEXT FILTER] "
                     f"Loại {food.name} vì match={matched_pairs[:3]}"
@@ -1862,6 +2415,12 @@ async def search_food(
             f"{allergy_text_removed_count}/{before_allergy_text_filter} món "
             "bằng text fallback trên core_ingredients."
         )
+
+    filtered_foods, medical_soft_tag_removed_count = apply_medical_soft_tag_hard_filter_with_trace(
+        foods=filtered_foods,
+        excluded_tags=medical_e_tags,
+        trace=retrieval_trace,
+    )
 
     # Lọc ngữ cảnh (Context filter) 
     context_before_count = len(filtered_foods)
@@ -1895,6 +2454,43 @@ async def search_food(
     )
     context_after_count = len(filtered_foods)
 
+    filtered_foods, dish_name_filter_applied, _dish_name_match_count = (
+        apply_adaptive_dish_name_include_filter_with_trace(
+            foods=filtered_foods,
+            requested_dishes=user_include_dishes,
+            trace=retrieval_trace,
+        )
+    )
+    if user_include_dishes:
+        requested_dishes_text = ", ".join(user_include_dishes)
+        if dish_name_filter_applied:
+            retrieval_notes.append(
+                f"Hệ thống đã ưu tiên lọc theo nhóm tên món người dùng muốn "
+                f"({requested_dishes_text}) trước khi semantic search."
+            )
+        else:
+            retrieval_notes.append(
+                f"Không tìm thấy món khớp nhóm tên món người dùng muốn "
+                f"({requested_dishes_text}) sau lớp lọc an toàn; hệ thống trả lựa chọn thay thế."
+            )
+
+    filtered_foods, ingredient_include_filter_applied, _ingredient_include_match_count, ingredient_include_scope = (
+        apply_adaptive_ingredient_include_filter_with_trace(
+            foods=filtered_foods,
+            include_keys=include_ingredient_keys,
+            requested_ingredients=final_p_ings,
+            require_primary_role=primary_ingredient_priority_only,
+            trace=retrieval_trace,
+        )
+    )
+    if ingredient_include_filter_applied and final_p_ings:
+        requested_ingredients_text = ", ".join(final_p_ings)
+        primary_label = " trong vai trò món chính" if ingredient_include_scope == "primary_role" else ""
+        retrieval_notes.append(
+            f"Hệ thống đã ưu tiên lọc theo nguyên liệu người dùng muốn{primary_label} "
+            f"({requested_ingredients_text}) trước khi semantic search."
+        )
+
     include_ingredient_match_count = sum(
         1 for food in filtered_foods
         if include_ingredient_keys and _food_has_any_ingredient_key(food, include_ingredient_keys)
@@ -1905,7 +2501,7 @@ async def search_food(
         main_meal_request=main_meal_request,
         require_primary_role=primary_ingredient_priority_only,
     )
-    if include_ingredient_keys and final_p_ings:
+    if include_ingredient_keys and final_p_ings and not ingredient_include_filter_applied:
         requested_ingredients_text = ", ".join(final_p_ings)
         if ingredient_priority_food_ids:
             primary_label = " trong vai trò món chính" if primary_ingredient_priority_only else ""
@@ -1930,11 +2526,21 @@ async def search_food(
             retrieval_notes.append(no_match_message)
             warning_message = f"{warning_message} {no_match_message}" if warning_message else no_match_message
 
-    print(f"\n{'='*60}")
-    print(f"📦 [BƯỚC 3 - FILTERED CANDIDATES] Còn lại {len(filtered_foods)} món sau khi lọc nguyên liệu/ngữ cảnh:")
-    for i, food in enumerate(filtered_foods, 1):
-        print(f"  {i:>3}. {food.name}")
-    print(f"{'='*60}\n")
+    print(
+        f"📦 [BƯỚC 3 - FILTERED CANDIDATES] Còn lại {len(filtered_foods)} món "
+        "sau khi lọc nguyên liệu/ngữ cảnh."
+    )
+    if SEARCH_VERBOSE_LOGS:
+        print(f"\n{'='*60}")
+        print(
+            f"📦 [BƯỚC 3 - FILTERED CANDIDATES] Hiển thị tối đa "
+            f"{SEARCH_CANDIDATE_LOG_LIMIT}/{len(filtered_foods)} món:"
+        )
+        for i, food in enumerate(filtered_foods[:SEARCH_CANDIDATE_LOG_LIMIT], 1):
+            print(f"  {i:>3}. {food.name}")
+        if len(filtered_foods) > SEARCH_CANDIDATE_LOG_LIMIT:
+            print(f"  ... ẩn {len(filtered_foods) - SEARCH_CANDIDATE_LOG_LIMIT} món còn lại")
+        print(f"{'='*60}\n")
 
     # --- Bước 4: In-memory Semantic Search hoặc Lexical Fallback trên tập đã lọc ---
     query_arr = np.array(query_vector, dtype=np.float32) if query_vector is not None else None
@@ -1948,10 +2554,13 @@ async def search_food(
     ) if retrieval_mode == "lexical_fallback" else None
 
     step_label = "COSINE + TAG RERANK" if retrieval_mode == "semantic" else "LEXICAL FALLBACK + TAG RERANK"
-    print(f"🔢 [BƯỚC 4 - {step_label}] Tính điểm từng món:")
+    print(f"🔢 [BƯỚC 4 - {step_label}] Tính điểm {len(filtered_foods)} món.")
+    if SEARCH_VERBOSE_LOGS:
+        print(f"🔢 [BƯỚC 4 - SCORE DETAIL] Hiển thị tối đa {SEARCH_SCORE_LOG_LIMIT} món.")
     scored = []
     missing_embedding_count = 0
     zero_vector_count = 0
+    score_log_count = 0
     
     for food in filtered_foods:
         lexical_details = {}
@@ -1963,7 +2572,9 @@ async def search_food(
                     "stage": "semantic_scoring",
                     "reason": "missing_embedding",
                 })
-                print(f"  ⚠️  {food.name}: BỎ QUA (không có embedding)")
+                if SEARCH_VERBOSE_LOGS and score_log_count < SEARCH_SCORE_LOG_LIMIT:
+                    print(f"  ⚠️  {food.name}: BỎ QUA (không có embedding)")
+                    score_log_count += 1
                 continue
 
             food_arr = np.array(food.embedding.to_list(), dtype=np.float32)
@@ -1975,7 +2586,9 @@ async def search_food(
                     "stage": "semantic_scoring",
                     "reason": "zero_vector",
                 })
-                print(f"  ⚠️  {food.name}: BỎ QUA (vector = 0)")
+                if SEARCH_VERBOSE_LOGS and score_log_count < SEARCH_SCORE_LOG_LIMIT:
+                    print(f"  ⚠️  {food.name}: BỎ QUA (vector = 0)")
+                    score_log_count += 1
                 continue
 
             # Cosine similarity = dot(a, b) / (||a|| * ||b||)
@@ -1993,7 +2606,7 @@ async def search_food(
             user_prefer_tags=user_include_tags,
             medical_prefer_tags=medical_p_tags,
             user_avoid_tags=user_exclude_tags,
-            medical_avoid_tags=medical_e_tags,
+            medical_avoid_tags=safety_e_tags,
         )
         score_details["retrieval_mode"] = retrieval_mode
         if lexical_details:
@@ -2009,9 +2622,20 @@ async def search_food(
             0.0,
             min(1.0, tag_adjusted_similarity + meal_role_adjustment),
         )
+        medical_caution_matches = collect_medical_caution_ingredient_key_matches(
+            food=food,
+            symptoms=symptoms,
+        )
+        medical_caution_penalty = min(
+            MAX_MEDICAL_CAUTION_INGREDIENT_KEY_PENALTY,
+            len(medical_caution_matches) * MEDICAL_CAUTION_INGREDIENT_KEY_PENALTY,
+        )
+        adjusted_similarity = max(0.0, adjusted_similarity - medical_caution_penalty)
         score_details.update({
             "serving_role": serving_role,
             "meal_role_adjustment": meal_role_adjustment,
+            "medical_caution_penalty": medical_caution_penalty,
+            "medical_caution_matches": medical_caution_matches,
             "main_meal_request": main_meal_request,
             "explicit_side_or_snack_request": explicit_side_or_snack_request,
         })
@@ -2019,38 +2643,125 @@ async def search_food(
         scored.append((food, adjusted_similarity, score_details, ingredient_priority_match))
         
         # In log chấm điểm
-        priority_label = " [ưu tiên nguyên liệu]" if ingredient_priority_match else ""
-        base_label = "base" if retrieval_mode == "semantic" else "lexical"
-        print(
-            f"  📊 {food.name}{priority_label} [{serving_role}]: {base_label} {similarity*100:.2f}% "
-            f"+{score_details['tag_bonus']*100:.1f} "
-            f"-{score_details['tag_penalty']*100:.1f} "
-            f"{meal_role_adjustment*100:+.1f} role "
-            f"=> {adjusted_similarity*100:.2f}%"
-        )
-        if score_details["matched_prefer_tags"] or score_details["matched_avoid_tags"]:
+        should_log_score = SEARCH_VERBOSE_LOGS and score_log_count < SEARCH_SCORE_LOG_LIMIT
+        if should_log_score:
+            score_log_count += 1
+            priority_label = " [ưu tiên nguyên liệu]" if ingredient_priority_match else ""
+            base_label = "base" if retrieval_mode == "semantic" else "lexical"
             print(
-                f"       prefer={score_details['matched_prefer_tags']} "
-                f"avoid={score_details['matched_avoid_tags']}"
+                f"  📊 {food.name}{priority_label} [{serving_role}]: {base_label} {similarity*100:.2f}% "
+                f"+{score_details['tag_bonus']*100:.1f} "
+                f"-{score_details['tag_penalty']*100:.1f} "
+                f"{meal_role_adjustment*100:+.1f} role "
+                f"-{medical_caution_penalty*100:.1f} caution "
+                f"=> {adjusted_similarity*100:.2f}%"
             )
-        if lexical_details:
-            print(
-                "       lexical="
-                f"name:{lexical_details['name_score']:.2f} "
-                f"ing:{lexical_details['ingredient_score']:.2f} "
-                f"meal:{lexical_details['meal_context_score']:.2f} "
-                f"tag:{lexical_details['soft_tag_score']:.2f} "
-                f"res:{lexical_details['residual_score']:.2f}"
-            )
+            if score_details["matched_prefer_tags"] or score_details["matched_avoid_tags"]:
+                print(
+                    f"       prefer={score_details['matched_prefer_tags']} "
+                    f"avoid={score_details['matched_avoid_tags']}"
+                )
+            if lexical_details:
+                print(
+                    "       lexical="
+                    f"name:{lexical_details['name_score']:.2f} "
+                    f"ing:{lexical_details['ingredient_score']:.2f} "
+                    f"meal:{lexical_details['meal_context_score']:.2f} "
+                    f"tag:{lexical_details['soft_tag_score']:.2f} "
+                    f"res:{lexical_details['residual_score']:.2f}"
+                )
 
     scored_count = len(scored)
 
-    # Sắp xếp giảm dần theo điểm đã rerank, lấy top 5
+    # Sắp xếp giảm dần theo điểm đã rerank, lấy top_k (có deduplication)
     if ingredient_priority_food_ids:
         scored.sort(key=lambda x: (x[3], x[1]), reverse=True)
     else:
         scored.sort(key=lambda x: x[1], reverse=True)
-    top5 = scored[:5]
+    top5 = _deduplicate_results(scored, top_k)
+
+    # --- Kết quả rỗng: giải thích lý do và trả về sớm ---
+    if not top5:
+        print("⚠️  [ZERO RESULT] Không có món nào sau tất cả bộ lọc — trả phản hồi giải thích.")
+        no_result_note = _build_no_result_retrieval_note(
+            symptoms=symptoms,
+            safety_e_tags=safety_e_tags,
+            final_e_ings=final_e_ings,
+            candidate_count=candidate_count,
+            context_before_count=context_before_count,
+            context_after_count=context_after_count,
+            scored_count=scored_count,
+        )
+        retrieval_notes.append(no_result_note)
+        no_result_response = _build_no_result_ai_response(
+            symptoms=symptoms,
+            safety_e_tags=safety_e_tags,
+            final_e_ings=final_e_ings,
+            candidate_count=candidate_count,
+            context_before_count=context_before_count,
+            context_after_count=context_after_count,
+            scored_count=scored_count,
+        )
+        ai_insight_zero = AIInsight(
+            exclude=safety_e_tags + final_e_ings,
+            include=symptoms,
+            prefer=user_include_tags + medical_p_tags + final_p_ings + medical_p_ings,
+            warning_message=warning_message,
+        )
+        query_log_id_zero = None
+        try:
+            query_log_zero = await create_query_log(
+                db,
+                query=query,
+                ai_insight=ai_insight_zero,
+                final_exclude_ings=final_e_ings,
+                exclude_ingredient_keys=exclude_ingredient_keys,
+                user_include_tags=user_include_tags,
+                user_exclude_tags=user_exclude_tags,
+                candidate_count=candidate_count,
+                filtered_count=context_after_count,
+                scored_count=scored_count,
+                returned_count=0,
+                excluded_summary={
+                    "hard_filter": {
+                        "exclude_ingredient_keys": exclude_ingredient_keys,
+                        "candidate_count_after_sql": candidate_count,
+                        "python_removed_count": python_removed_count,
+                        "allergy_text_removed_count": allergy_text_removed_count,
+                        "medical_soft_tag_removed_count": medical_soft_tag_removed_count,
+                        "remaining_count_after_python": context_before_count,
+                    },
+                    "context_filter": {
+                        "before_count": context_before_count,
+                        "after_count": context_after_count,
+                    },
+                    "embedding": {
+                        "scored_count": scored_count,
+                        "missing_embedding_count": missing_embedding_count,
+                        "zero_vector_count": zero_vector_count,
+                    },
+                    "zero_result": True,
+                    "llm_runtime": llm_runtime,
+                    "retrieval_trace": retrieval_trace,
+                },
+                retrieval_notes=retrieval_notes,
+                top_results=[],
+                warning_message=warning_message,
+                thread_id=thread_id,
+            )
+            query_log_id_zero = query_log_zero.id
+        except Exception as e:
+            print(f"[QUERY LOG] Không thể lưu query log (zero-result): {e}")
+            await db.rollback()
+        return SearchResponse(
+            query=query,
+            ai_insight=ai_insight_zero,
+            results=[],
+            disclaimer=SEARCH_DISCLAIMER,
+            query_log_id=query_log_id_zero,
+            ai_response=no_result_response,
+        )
+
     preference_conflict_notes, preference_conflicts_by_food_id, preference_conflict_summaries = build_explicit_preference_conflict_notes(
         user_include_tags=user_include_tags,
         medical_prefer_tags=medical_p_tags,
@@ -2077,7 +2788,7 @@ async def search_food(
         )
 
     print(f"\n{'='*60}")
-    print(f"🏆 [BƯỚC 5 - KẾT QUẢ CUỐI] Top {len(top5)} món phù hợp nhất:")
+    print(f"🏆 [BƯỚC 5 - KẾT QUẢ CUỐI] Top {len(top5)}/{top_k} món phù hợp nhất:")
     for rank, (food, adjusted_similarity, score_details, ingredient_priority_match) in enumerate(top5, 1):
         priority_label = " [ưu tiên nguyên liệu]" if ingredient_priority_match else ""
         print(
@@ -2135,21 +2846,23 @@ async def search_food(
         llm_runtime["fallbacks_used"].append("post_processing")
 
     ai_insight = AIInsight(
-        exclude=medical_e_tags + final_e_ings,
+        exclude=safety_e_tags + final_e_ings,
         include=symptoms, # Trả về list bệnh lý để UI dễ hiển thị Warning
-        prefer=medical_p_tags + final_p_ings + medical_p_ings,
+        prefer=user_include_tags + medical_p_tags + final_p_ings + medical_p_ings,
         warning_message=warning_message
     )
     excluded_summary = {
         "hard_filter": {
             "exclude_ingredient_keys": exclude_ingredient_keys,
             "allergy_constraints": allergy_constraints,
+            "allergy_exclude_tags": allergy_e_tags,
             "allergy_exclude_ingredient_keys": allergy_exclude_ingredient_keys,
             "disease_exclude_ingredient_keys": disease_exclude_ingredient_keys,
             "user_exclude_dishes": user_exclude_dishes,
             "candidate_count_after_sql": candidate_count,
             "python_removed_count": python_removed_count,
             "allergy_text_removed_count": allergy_text_removed_count,
+            "medical_soft_tag_removed_count": medical_soft_tag_removed_count,
             "allergy_key_miss_examples": allergy_key_miss_examples,
             "remaining_count_after_python": context_before_count,
         },
@@ -2216,6 +2929,22 @@ async def search_food(
         await db.rollback()
 
     log_retrieval_trace_for_debug(retrieval_trace, enabled=debug)
+
+    # --- Timing summary cho search_food ---
+    _t_search_total = round((time.perf_counter() - _t_search_start) * 1000)
+    _stage = llm_runtime.get("stage_latency_ms", {})
+    _supervisor_ms  = _stage.get("supervisor", 0)
+    _embedding_ms   = _stage.get("embedding", 0)
+    _postproc_ms    = _stage.get("post_processing", 0)
+    _other_ms       = _t_search_total - _supervisor_ms - _embedding_ms - _postproc_ms
+    print(
+        f"⏱️ [SEARCH TIMING] "
+        f"supervisor={_supervisor_ms}ms | "
+        f"embedding={_embedding_ms}ms | "
+        f"post_processing={_postproc_ms}ms | "
+        f"other(DB+scoring)={_other_ms}ms | "
+        f"TOTAL={_t_search_total}ms"
+    )
 
     # --- Trả về phản hồi cuối cùng ---
     return SearchResponse(

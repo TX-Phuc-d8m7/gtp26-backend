@@ -1,4 +1,4 @@
-"""User Health Profile service: CRUD và tích hợp vào search query."""
+"""User Health Profile service: CRUD cho UserHealthProfile."""
 
 from __future__ import annotations
 
@@ -8,13 +8,40 @@ from typing import Optional
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import UserHealthProfile
-from app.schemas import UserHealthProfileCreate, UserHealthProfileUpdate
+from app.modules.users.models import User, UserHealthProfile
+from app.modules.users.schemas import (
+    UserAccountUpdate,
+    UserHealthProfileCreate,
+    UserHealthProfileUpdate,
+)
 
 
 # ---------------------------------------------------------------------------
 # CRUD helpers
 # ---------------------------------------------------------------------------
+
+async def update_account(
+    user: User,
+    data: UserAccountUpdate,
+    db: AsyncSession,
+) -> User:
+    if data.email is not None:
+        user.email = str(data.email)
+    if data.full_name is not None:
+        cleaned_name = data.full_name.strip()
+        user.full_name = cleaned_name or None
+
+    await db.commit()
+    await db.refresh(user)
+    return user
+
+
+async def deactivate_account(user: User, db: AsyncSession) -> User:
+    user.is_active = False
+    await db.commit()
+    await db.refresh(user)
+    return user
+
 
 async def get_profile(user_id: uuid.UUID, db: AsyncSession) -> Optional[UserHealthProfile]:
     """Lấy profile của user. Trả None nếu chưa tạo."""
@@ -29,10 +56,7 @@ async def upsert_profile(
     data: UserHealthProfileCreate,
     db: AsyncSession,
 ) -> UserHealthProfile:
-    """
-    Tạo hoặc thay thế toàn bộ profile (PUT semantics).
-    Nếu đã có profile thì ghi đè tất cả field.
-    """
+    """Tạo hoặc thay thế toàn bộ profile (PUT semantics)."""
     profile = await get_profile(user_id, db)
 
     if profile is None:
@@ -41,11 +65,9 @@ async def upsert_profile(
 
     profile.health_conditions = data.health_conditions or []
     profile.allergies = data.allergies or []
-    profile.diet_preferences = data.diet_preferences or []
-    profile.nutrition_goals = data.nutrition_goals or []
-    profile.disliked_ingredients = data.disliked_ingredients or []
     profile.preferred_ingredients = data.preferred_ingredients or []
-    profile.notes = data.notes or ""
+    profile.taste_profile = data.taste_profile or []
+    profile.dish_preferences = data.dish_preferences or []
 
     await db.commit()
     await db.refresh(profile)
@@ -57,10 +79,7 @@ async def patch_profile(
     data: UserHealthProfileUpdate,
     db: AsyncSession,
 ) -> Optional[UserHealthProfile]:
-    """
-    Cập nhật một phần profile (PATCH semantics).
-    Trả None nếu profile chưa tồn tại.
-    """
+    """Cập nhật một phần profile (PATCH semantics). Trả None nếu chưa tồn tại."""
     profile = await get_profile(user_id, db)
     if profile is None:
         return None
@@ -69,16 +88,12 @@ async def patch_profile(
         profile.health_conditions = data.health_conditions
     if data.allergies is not None:
         profile.allergies = data.allergies
-    if data.diet_preferences is not None:
-        profile.diet_preferences = data.diet_preferences
-    if data.nutrition_goals is not None:
-        profile.nutrition_goals = data.nutrition_goals
-    if data.disliked_ingredients is not None:
-        profile.disliked_ingredients = data.disliked_ingredients
     if data.preferred_ingredients is not None:
         profile.preferred_ingredients = data.preferred_ingredients
-    if data.notes is not None:
-        profile.notes = data.notes
+    if data.taste_profile is not None:
+        profile.taste_profile = data.taste_profile
+    if data.dish_preferences is not None:
+        profile.dish_preferences = data.dish_preferences
 
     await db.commit()
     await db.refresh(profile)
@@ -93,73 +108,3 @@ async def delete_profile(user_id: uuid.UUID, db: AsyncSession) -> bool:
     await db.delete(profile)
     await db.commit()
     return True
-
-
-# ---------------------------------------------------------------------------
-# Search integration: chuyển profile → context string cho LLM
-# ---------------------------------------------------------------------------
-
-def build_profile_query_context(profile: UserHealthProfile) -> str:
-    """
-    Chuyển health profile thành đoạn văn bản ngắn để gắn vào đầu search query.
-
-    LLM supervisor_agent sẽ đọc đoạn này và trích xuất constraint tự động —
-    không cần thay đổi bất kỳ logic nào trong food_service.py.
-
-    Ví dụ output:
-        "Thông tin sức khỏe của tôi: tôi bị Cao huyết áp, Tiểu đường.
-         Tôi bị dị ứng Dị ứng tôm cua.
-         Tôi không muốn ăn: nội tạng, mỡ động vật.
-         Tôi thích ăn: ức gà, rau xanh.
-         Chế độ ăn: Ít muối, Eat Clean.
-         Ghi chú thêm: Không ăn cay."
-    """
-    parts: list[str] = []
-
-    if profile.health_conditions:
-        joined = ", ".join(profile.health_conditions)
-        parts.append(f"tôi bị {joined}")
-
-    if profile.allergies:
-        joined = ", ".join(profile.allergies)
-        parts.append(f"tôi bị dị ứng: {joined}")
-
-    if profile.diet_preferences:
-        joined = ", ".join(profile.diet_preferences)
-        parts.append(f"chế độ ăn của tôi: {joined}")
-
-    if profile.nutrition_goals:
-        joined = ", ".join(profile.nutrition_goals)
-        parts.append(f"mục tiêu dinh dưỡng: {joined}")
-
-    if profile.disliked_ingredients:
-        joined = ", ".join(profile.disliked_ingredients)
-        parts.append(f"tôi không muốn ăn: {joined}")
-
-    if profile.preferred_ingredients:
-        joined = ", ".join(profile.preferred_ingredients)
-        parts.append(f"tôi thích ăn: {joined}")
-
-    if profile.notes and profile.notes.strip():
-        parts.append(f"lưu ý thêm: {profile.notes.strip()}")
-
-    if not parts:
-        return ""
-
-    context = "Thông tin sức khỏe của tôi: " + "; ".join(parts) + ". "
-    return context
-
-
-def augment_query_with_profile(query: str, profile: Optional[UserHealthProfile]) -> str:
-    """
-    Gắn profile context vào đầu query nếu profile tồn tại và có nội dung.
-    Query gốc được giữ nguyên ở cuối.
-    """
-    if profile is None:
-        return query
-
-    context = build_profile_query_context(profile)
-    if not context:
-        return query
-
-    return context + query

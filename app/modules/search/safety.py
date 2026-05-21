@@ -7,10 +7,13 @@ using accented Vietnamese phrase matching over core ingredients.
 
 from __future__ import annotations
 
+import json
 import re
 import unicodedata
+from pathlib import Path
 from typing import Any, Iterable
 
+TAGS_DATA_PATH = Path(__file__).resolve().parents[3] / "standard-data" / "tags_data.json"
 
 ALLERGEN_TEXT_PATTERNS: dict[str, list[str]] = {
     "Dị ứng động vật giáp xác": [
@@ -29,7 +32,7 @@ ALLERGEN_TEXT_PATTERNS: dict[str, list[str]] = {
         "cá trích", "nước mắm", "mắm nêm",
     ],
     "Dị ứng đậu phộng": [
-        "đậu phộng", "đậu phụng", "lạc", "bơ đậu phộng", "sa tế",
+        "đậu phộng", "đậu phụng", "lạc", "bơ đậu phộng",
     ],
     "Dị ứng hạt cây": [
         "hạt điều", "hạt hồ đào", "hạt dẻ", "hạt thông", "óc chó",
@@ -110,14 +113,15 @@ ALLERGEN_TEXT_EXCLUSION_PATTERNS: dict[tuple[str, str], list[str]] = {
     ("Dị ứng trứng", "trứng"): [
         "mực trứng",
     ],
-    ("Dị ứng đậu phộng", "sa tế"): [
-        "sa tế tôm",
-    ],
+
 }
 
 COLLISION_PRONE_UNACCENTED_WORDS = {
     "bo", "bot", "ca", "dau", "gia", "kem", "me", "mi", "sot", "sua", "ot", "gao",
 }
+
+_TAGS_DATA_ALLERGEN_PATTERNS_CACHE: dict[str, list[str]] | None = None
+_TAGS_DATA_ALLERGEN_PATTERNS_SIGNATURE: tuple[int, int] | None = None
 
 
 def normalize_vietnamese_text(value: str) -> str:
@@ -127,13 +131,41 @@ def normalize_vietnamese_text(value: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def phrase_in_text(text_value: str, phrase: str) -> bool:
-    """Match a phrase as independent normalized tokens."""
-    normalized_text = f" {normalize_vietnamese_text(text_value)} "
-    normalized_phrase = normalize_vietnamese_text(phrase)
+def normalize_vietnamese_ascii(value: str) -> str:
+    """Normalize text and remove Vietnamese accents for no-accent rule phrases."""
+    text = unicodedata.normalize("NFD", str(value or ""))
+    text = "".join(ch for ch in text if unicodedata.category(ch) != "Mn")
+    text = text.replace("đ", "d").replace("Đ", "D")
+    text = text.lower()
+    text = re.sub(r"[_/(){}\[\],.;:!?+*='\"`~|\\<>-]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def has_vietnamese_diacritic(value: str) -> bool:
+    return normalize_vietnamese_ascii(value) != normalize_vietnamese_text(value)
+
+
+def phrase_in_normalized_text(normalized_text: str, normalized_phrase: str) -> bool:
     if not normalized_phrase:
         return False
-    return f" {normalized_phrase} " in normalized_text
+    return f" {normalized_phrase} " in f" {normalized_text} "
+
+
+def phrase_in_text(text_value: str, phrase: str) -> bool:
+    """Match a phrase as independent normalized tokens."""
+    normalized_phrase = normalize_vietnamese_text(phrase)
+    if phrase_in_normalized_text(normalize_vietnamese_text(text_value), normalized_phrase):
+        return True
+
+    # tags_data.json stores many ingredients without accents (e.g. "tom", "so huyet").
+    # Only use accent-insensitive matching for no-accent phrases to avoid collisions
+    # such as curated "mè" accidentally matching tamarind "me".
+    if not has_vietnamese_diacritic(phrase):
+        return phrase_in_normalized_text(
+            normalize_vietnamese_ascii(text_value),
+            normalize_vietnamese_ascii(phrase),
+        )
+    return False
 
 
 def get_field_value(food: Any, field_name: str) -> Any:
@@ -166,7 +198,7 @@ def build_allergy_text_items(food: Any) -> list[str]:
 
 def canonical_allergy_name(name: str) -> str:
     raw = (name or "").strip()
-    if raw in ALLERGEN_TEXT_PATTERNS:
+    if raw in get_allergen_text_patterns():
         return raw
     normalized = normalize_vietnamese_text(raw)
     return ALLERGY_TAG_ALIASES.get(normalized, raw)
@@ -184,18 +216,88 @@ def should_include_exclude_phrase(phrase: str) -> bool:
     return True
 
 
+def load_tags_data_allergen_patterns() -> dict[str, list[str]]:
+    """Load allergy exclude_ingredient phrases and refresh when tags_data.json changes."""
+    global _TAGS_DATA_ALLERGEN_PATTERNS_CACHE, _TAGS_DATA_ALLERGEN_PATTERNS_SIGNATURE
+
+    grouped: dict[str, list[str]] = {}
+    if not TAGS_DATA_PATH.exists():
+        _TAGS_DATA_ALLERGEN_PATTERNS_CACHE = grouped
+        _TAGS_DATA_ALLERGEN_PATTERNS_SIGNATURE = None
+        return grouped
+
+    try:
+        stat = TAGS_DATA_PATH.stat()
+        current_signature = (stat.st_mtime_ns, stat.st_size)
+    except OSError:
+        _TAGS_DATA_ALLERGEN_PATTERNS_CACHE = grouped
+        _TAGS_DATA_ALLERGEN_PATTERNS_SIGNATURE = None
+        return grouped
+
+    if (
+        _TAGS_DATA_ALLERGEN_PATTERNS_CACHE is not None
+        and _TAGS_DATA_ALLERGEN_PATTERNS_SIGNATURE == current_signature
+    ):
+        return _TAGS_DATA_ALLERGEN_PATTERNS_CACHE
+
+    try:
+        tags_data = json.loads(TAGS_DATA_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return _TAGS_DATA_ALLERGEN_PATTERNS_CACHE or grouped
+
+    for item in tags_data:
+        if item.get("tag_type") != "ALLERGY":
+            continue
+        allergy_name = item.get("name")
+        if not allergy_name:
+            continue
+
+        patterns = []
+        for phrase in item.get("exclude_ingredient") or []:
+            if isinstance(phrase, str) and should_include_exclude_phrase(phrase):
+                patterns.append(phrase)
+        grouped[allergy_name] = patterns
+
+    _TAGS_DATA_ALLERGEN_PATTERNS_CACHE = grouped
+    _TAGS_DATA_ALLERGEN_PATTERNS_SIGNATURE = current_signature
+    return grouped
+
+
+def get_allergen_text_patterns() -> dict[str, list[str]]:
+    """Return curated allergy text patterns merged with tags_data exclude_ingredient."""
+    merged = {name: list(patterns) for name, patterns in ALLERGEN_TEXT_PATTERNS.items()}
+
+    for allergy_name, patterns in load_tags_data_allergen_patterns().items():
+        merged.setdefault(allergy_name, [])
+        merged[allergy_name].extend(patterns)
+
+    deduped_by_allergy: dict[str, list[str]] = {}
+    for allergy_name, patterns in merged.items():
+        seen = set()
+        deduped = []
+        for pattern in patterns:
+            normalized = normalize_vietnamese_ascii(pattern)
+            if normalized and normalized not in seen:
+                seen.add(normalized)
+                deduped.append(pattern)
+        deduped_by_allergy[allergy_name] = deduped
+
+    return deduped_by_allergy
+
+
 def patterns_for_allergy_constraints(
     allergy_constraints: Iterable[str],
     allergy_exclude_ingredients: Iterable[str] | None = None,
 ) -> dict[str, list[str]]:
     """Return curated patterns plus low-risk rule phrases for each allergy."""
+    all_patterns = get_allergen_text_patterns()
     canonical_constraints = [
         canonical_allergy_name(allergy) for allergy in (allergy_constraints or [])
     ]
     exclude_patterns = []
     if (
         len(canonical_constraints) == 1
-        and canonical_constraints[0] not in ALLERGEN_TEXT_PATTERNS
+        and canonical_constraints[0] not in all_patterns
     ):
         exclude_patterns = [
             phrase for phrase in (allergy_exclude_ingredients or [])
@@ -203,7 +305,7 @@ def patterns_for_allergy_constraints(
         ]
     grouped: dict[str, list[str]] = {}
     for canonical in canonical_constraints:
-        patterns = list(ALLERGEN_TEXT_PATTERNS.get(canonical, []))
+        patterns = list(all_patterns.get(canonical, []))
         patterns.extend(exclude_patterns)
 
         seen = set()
@@ -218,7 +320,17 @@ def patterns_for_allergy_constraints(
 
 
 def phrase_is_excluded(text_value: str, allergy: str, phrase: str) -> bool:
-    exclusions = ALLERGEN_TEXT_EXCLUSION_PATTERNS.get((allergy, normalize_vietnamese_text(phrase)), [])
+    normalized_phrase = normalize_vietnamese_text(phrase)
+    ascii_phrase = normalize_vietnamese_ascii(phrase)
+    exclusions: list[str] = []
+    for (pattern_allergy, pattern_phrase), pattern_exclusions in ALLERGEN_TEXT_EXCLUSION_PATTERNS.items():
+        if pattern_allergy != allergy:
+            continue
+        if (
+            normalize_vietnamese_text(pattern_phrase) == normalized_phrase
+            or normalize_vietnamese_ascii(pattern_phrase) == ascii_phrase
+        ):
+            exclusions.extend(pattern_exclusions)
     return any(phrase_in_text(text_value, exclusion) for exclusion in exclusions)
 
 
