@@ -13,6 +13,8 @@ from app.modules.users.models import User
 from app.modules.chat.schemas import (
     ChatMessageListResponse,
     ChatMessageResult,
+    GuestChatSendMessageRequest,
+    GuestChatSendMessageResponse,
     ChatSendMessageRequest,
     ChatSendMessageResponse,
     ChatThreadCreate,
@@ -22,7 +24,7 @@ from app.modules.chat.schemas import (
     MessageEditRequest,
     MessageFeedbackRequest,
 )
-from app.modules.auth.service import get_current_user
+from app.modules.auth.service import get_current_user, get_current_user_optional
 from app.modules.chat.service import (
     create_thread,
     delete_thread,
@@ -31,6 +33,7 @@ from app.modules.chat.service import (
     list_messages,
     list_threads,
     regenerate_message,
+    send_guest_message,
     send_message,
     set_message_feedback,
     update_thread,
@@ -245,6 +248,36 @@ async def send_message_endpoint(
             detail="Không tìm thấy hội thoại.",
         )
     return result
+
+
+@router.post(
+    "/guest/messages",
+    response_model=GuestChatSendMessageResponse,
+    summary="Public guest chat dùng chung intent dispatcher",
+)
+async def send_guest_message_endpoint(
+    payload: GuestChatSendMessageRequest,
+    current_user: Optional[User] = Depends(get_current_user_optional),
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Public guest chat endpoint:
+    - Không cần đăng nhập
+    - Không lưu thread/message vào DB
+    - Dùng cùng intent dispatcher với luồng chat chính
+
+    Nếu request có access token hợp lệ và `skip_profile=false`, hệ thống vẫn có thể
+    tận dụng hồ sơ sức khỏe của user cho các intent cần thiết.
+    """
+    return await send_guest_message(
+        query=payload.query,
+        skip_profile=payload.skip_profile,
+        lat=payload.lat,
+        lng=payload.lng,
+        history=payload.history,
+        current_user_id=current_user.id if current_user else None,
+        db=db,
+    )
 
 
 # ---------------------------------------------------------------------------

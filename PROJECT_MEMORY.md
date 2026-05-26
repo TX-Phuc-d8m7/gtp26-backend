@@ -1,6 +1,6 @@
 # PROJECT MEMORY - Food Recommendation Backend
 
-Last updated: 2026-05-21
+Last updated: 2026-05-24
 
 This file is working memory for future engineers/AI agents. It records the current backend shape, what is reliable, what is intentionally MVP, and what should not be assumed.
 
@@ -17,6 +17,7 @@ Current public search endpoint:
 
 - `GET /foods/search?q=...`
 - Handler: `app.modules.search.service.search_food`
+- `app.modules.search.service` is now the orchestration/facade layer; detailed search behavior is split across dedicated search engine modules.
 
 Current runtime food seed:
 
@@ -252,30 +253,42 @@ Important recent behavior:
 
 ## 11. Search Flow
 
-Main file:
+Public facade:
 
 - `app/modules/search/service.py`
 
+Search engine module ownership:
+
+- `service.py`: orchestrates `search_food()` and preserves existing imports for router/chat/scripts.
+- `repository.py`: DB queries only.
+- `common.py`: shared constants, Gemini client/model config, tag/normalization helpers.
+- `intent.py`: supervisor LLM, fallback intent extraction, health constraint extraction.
+- `safety.py`: allergy text matching plus medical/allergy constraint resolution.
+- `filtering.py`: adaptive hard filters for context, dish name, and ingredient include.
+- `retrieval.py`: Gemini query embedding and lexical fallback scoring.
+- `ranking.py`: serving role inference, tag scoring, rerank, dedupe, preference conflict notes.
+- `explanation.py`: deterministic food reasons, no-result response, post-processing LLM.
+- `tracing.py`: retrieval trace helpers and query-log debug payload pieces.
+
+Dependency direction:
+
+- API/chat/scripts call `search.service.search_food`.
+- `service.py` calls the specialized modules and `repository.py`.
+- Specialized modules may import `common.py`, but should not import `service.py`.
+- `repository.py` should not contain scoring/filter business logic.
+
 Current flow:
 
-1. Supervisor LLM extracts health constraints, user include/exclude dishes, ingredients, tags, and contexts.
-2. `resolve_food_conflicts()` loads matching `Tag` rows and merges user preferences with medical rules.
-3. Allergy constraints and disease constraints are separated.
-4. Ingredient exclusions are converted to filter keys.
-5. SQL hard filter removes foods whose `core_ingredient_keys` overlap excluded keys.
-6. User-excluded dish names are removed.
-7. Python hard filter re-checks ingredient key overlap for older/incomplete rows.
-8. Allergy text fallback catches hidden ingredients that key coverage missed.
-9. Disease `exclude_soft_tag` is applied as a hard medical soft-tag filter.
-10. Context include/exclude filters apply adaptively to `meal_context` and `occasion_context`.
-11. Dish-name include filter applies for broad requested food bases such as bún/cơm/phở/mì.
-12. Ingredient include adaptive filter currently supports fish intent.
-13. Query embedding is generated.
-14. In-memory semantic scoring computes cosine similarity.
-15. Rerank adds bonuses/penalties for user tags, medical tags, meal role, ingredient priority, and caution ingredient keys.
-16. Results are deduplicated before returning top K.
-17. Each result gets deterministic `reason`.
-18. `post_processing_agent()` writes a cautious final explanation using only returned dishes.
+1. `service.search_food()` initializes LLM runtime state and retrieval trace.
+2. `safety.resolve_food_conflicts()` calls `intent.run_supervisor_with_timeout()` to extract health constraints, include/exclude dishes, ingredients, tags, and contexts.
+3. `safety.resolve_food_conflicts()` loads matching `Tag` rows through `repository.py` and merges user preferences/profile with medical rules.
+4. `service.py` converts ingredient exclusions to alias keys and asks `repository.py` for SQL-filtered candidates.
+5. `safety.py` and `filtering.py` apply Python hard filter, allergy text fallback, medical soft-tag hard filter, context filters, dish-name include filter, and ingredient include adaptive filter.
+6. `retrieval.py` generates query embedding; if embedding fails, lexical fallback signals are used.
+7. `service.py` computes in-memory semantic/lexical scores and delegates tag/meal-role adjustments to `ranking.py`.
+8. `ranking.py` deduplicates top K and records preference conflicts when useful.
+9. `explanation.py` builds deterministic per-food `reason` and final cautious `ai_response` using `medical_advice_rules.json`.
+10. `tracing.py` builds trace items for debug/query log; API response shape remains unchanged.
 
 ## 12. Medical Rule Behavior
 
@@ -368,7 +381,7 @@ python -m uvicorn app.main:app --reload
 Compile core files:
 
 ```bash
-python3 -m py_compile app/core/config.py app/db/init_db.py app/db/seed.py app/modules/search/service.py
+python3 -m py_compile $(find app/modules/search app/modules/chat scripts -type f -name '*.py')
 ```
 
 Generate ingredient key preview:

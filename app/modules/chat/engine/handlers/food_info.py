@@ -2,12 +2,9 @@ from __future__ import annotations
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.modules.chat.handlers.common import (
-    IntentHandlerResult,
-    build_structured_result,
-    normalize_text,
-    resolve_food_candidate,
-)
+from app.modules.chat.engine.food_reference import normalize_text, resolve_food_candidate
+from app.modules.chat.engine.handlers.base import IntentHandlerResult
+from app.modules.chat.engine.response_factory import build_structured_result
 
 
 def _is_nutrition_estimate_question(query: str) -> bool:
@@ -79,4 +76,3 @@ async def handle_food_info(
             },
         ),
     )
-

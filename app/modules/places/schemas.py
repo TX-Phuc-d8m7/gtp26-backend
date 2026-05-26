@@ -34,4 +34,8 @@ class FoodPlaceSearchResponse(BaseModel):
     radius_m: Optional[int] = None
     cache_hit: bool = False
     results: List[FoodPlaceResult] = Field(default_factory=list)
-    provider: str = "google_places_text_search"
+    strict_results: List[FoodPlaceResult] = Field(default_factory=list)
+    fallback_results: List[FoodPlaceResult] = Field(default_factory=list)
+    used_fallback_results: bool = False
+    result_label: str = "Khớp đúng món"
+    provider: str = "places_search"

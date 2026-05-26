@@ -3,21 +3,19 @@ from __future__ import annotations
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.modules.chat.handlers.common import (
-    IntentHandlerResult,
-    build_structured_result,
-    resolve_food_candidate,
-)
+from app.modules.chat.engine.food_reference import resolve_food_candidate
+from app.modules.chat.engine.handlers.base import IntentHandlerResult
+from app.modules.chat.engine.response_factory import build_structured_result
 from app.modules.foods.models import Tag
-from app.modules.search.safety import detect_allergy_text_matches
-from app.modules.search.service import (
+from app.modules.search.common import (
     MEDICAL_ADVICE_ALIAS_MAP,
-    MEDICAL_ADVICE_RULES,
     canonicalize_health_tag,
     canonicalize_soft_tags,
     get_food_scoring_tags,
     matched_canonical_tags,
 )
+from app.modules.search.explanation import MEDICAL_ADVICE_RULES
+from app.modules.search.safety import detect_allergy_text_matches
 from app.modules.users.models import UserHealthProfile
 
 
@@ -199,4 +197,3 @@ async def handle_food_safety_check(
             },
         ),
     )
-

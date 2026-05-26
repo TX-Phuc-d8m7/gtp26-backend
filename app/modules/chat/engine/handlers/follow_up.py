@@ -1,12 +1,13 @@
 from __future__ import annotations
 
+import re
 from typing import Any
 
-from app.modules.chat.handlers.common import (
-    IntentHandlerResult,
+from app.modules.chat.engine.food_reference import normalize_text
+from app.modules.chat.engine.handlers.base import IntentHandlerResult
+from app.modules.chat.engine.response_factory import (
     build_search_response_from_food_results,
     build_structured_result,
-    normalize_text,
 )
 
 
@@ -25,6 +26,7 @@ PREFER_TAG_KEYWORDS = [
 ]
 EXCLUDE_NAME_TOKENS = ["bun", "pho", "mi", "my", "lau", "goi", "salad"]
 NEGATION_HINTS = ["khong", "bo", "loai", "tru", "ne", "so", "khong thich"]
+INCLUDE_HINTS = ["co", "muon an", "thich", "uu tien", "chon", "tim", "can", "dang them"]
 
 
 def _should_exclude_phrase(query_norm: str, phrase_norm: str) -> bool:
@@ -41,15 +43,34 @@ def _should_exclude_phrase(query_norm: str, phrase_norm: str) -> bool:
     )
 
 
+def _contains_phrase(text_norm: str, phrase_norm: str) -> bool:
+    if not text_norm or not phrase_norm:
+        return False
+    pattern = rf"(^|\s){re.escape(phrase_norm)}(\s|$)"
+    return re.search(pattern, text_norm) is not None
+
+
+def _should_include_phrase(query_norm: str, phrase_norm: str) -> bool:
+    if not phrase_norm or not _contains_phrase(query_norm, phrase_norm):
+        return False
+    if any(hint in query_norm for hint in NEGATION_HINTS):
+        return False
+    return any(
+        _contains_phrase(query_norm, hint) or f"{hint} {phrase_norm}" in query_norm
+        for hint in INCLUDE_HINTS
+    )
+
+
 def _apply_follow_up_filters(
     query: str,
     food_results: list[dict[str, Any]],
     target_food_name: str | None = None,
-) -> tuple[list[dict[str, Any]], list[str], list[str], list[str]]:
+) -> tuple[list[dict[str, Any]], list[str], list[str], list[str], list[str]]:
     query_norm = normalize_text(query)
     excluded_tags: list[str] = []
     preferred_tags: list[str] = []
     excluded_name_tokens: list[str] = []
+    included_name_tokens: list[str] = []
 
     for tag, phrases in EXCLUDE_TAG_KEYWORDS:
         if any(_should_exclude_phrase(query_norm, phrase) for phrase in phrases):
@@ -60,7 +81,11 @@ def _apply_follow_up_filters(
             preferred_tags.append(tag)
 
     if target_food_name:
-        excluded_name_tokens.append(normalize_text(target_food_name))
+        target_food_name_norm = normalize_text(target_food_name)
+        if _should_exclude_phrase(query_norm, target_food_name_norm):
+            excluded_name_tokens.append(target_food_name_norm)
+        elif _should_include_phrase(query_norm, target_food_name_norm):
+            included_name_tokens.append(target_food_name_norm)
 
     if any(hint in query_norm for hint in NEGATION_HINTS):
         for token in EXCLUDE_NAME_TOKENS:
@@ -70,13 +95,23 @@ def _apply_follow_up_filters(
     scored: list[tuple[float, dict[str, Any]]] = []
     for item in food_results:
         item_name_norm = normalize_text(str(item.get("name") or ""))
+        ingredient_text_norm = " ".join(
+            normalize_text(str(ingredient or ""))
+            for ingredient in (item.get("core_ingredients") or [])
+        ).strip()
+        searchable_text = " ".join(part for part in [item_name_norm, ingredient_text_norm] if part).strip()
         all_tags = [
             *(item.get("soft_tags") or []),
             *(item.get("taste_profile") or []),
             *(item.get("meal_context") or []),
             *(item.get("occasion_context") or []),
         ]
-        if any(token and token in item_name_norm for token in excluded_name_tokens):
+        if any(token and _contains_phrase(searchable_text, token) for token in excluded_name_tokens):
+            continue
+        if included_name_tokens and not any(
+            token and _contains_phrase(searchable_text, token)
+            for token in included_name_tokens
+        ):
             continue
         if any(tag in all_tags for tag in excluded_tags):
             continue
@@ -85,12 +120,15 @@ def _apply_follow_up_filters(
         for tag in preferred_tags:
             if tag in all_tags:
                 score += 6.0
+        for token in included_name_tokens:
+            if token and _contains_phrase(searchable_text, token):
+                score += 6.0
         updated = dict(item)
         updated["matchScore"] = min(100.0, score)
         scored.append((score, updated))
 
     scored.sort(key=lambda value: value[0], reverse=True)
-    return [item for _, item in scored], excluded_tags, preferred_tags, excluded_name_tokens
+    return [item for _, item in scored], excluded_tags, preferred_tags, excluded_name_tokens, included_name_tokens
 
 
 def _build_follow_up_content(
@@ -99,10 +137,13 @@ def _build_follow_up_content(
     excluded_tags: list[str],
     preferred_tags: list[str],
     excluded_name_tokens: list[str],
+    included_name_tokens: list[str],
 ) -> str:
     changes: list[str] = []
     if excluded_name_tokens:
         changes.append(f"đã loại các món khớp '{', '.join(excluded_name_tokens[:3])}'")
+    if included_name_tokens:
+        changes.append(f"đã giữ lại các món khớp '{', '.join(included_name_tokens[:3])}'")
     if excluded_tags:
         changes.append(f"đã bỏ các món có đặc điểm {', '.join(excluded_tags[:3])}")
     if preferred_tags:
@@ -130,7 +171,7 @@ async def handle_follow_up(
     last_food_results: list[dict[str, Any]],
     extracted_food_name: str | None = None,
 ) -> IntentHandlerResult:
-    filtered, excluded_tags, preferred_tags, excluded_name_tokens = _apply_follow_up_filters(
+    filtered, excluded_tags, preferred_tags, excluded_name_tokens, included_name_tokens = _apply_follow_up_filters(
         raw_query,
         last_food_results,
         target_food_name=extracted_food_name,
@@ -140,6 +181,7 @@ async def handle_follow_up(
         excluded_tags=excluded_tags,
         preferred_tags=preferred_tags,
         excluded_name_tokens=excluded_name_tokens,
+        included_name_tokens=included_name_tokens,
     )
     search_result = build_search_response_from_food_results(
         query=raw_query,
@@ -160,6 +202,7 @@ async def handle_follow_up(
                 "excluded_tags": excluded_tags,
                 "preferred_tags": preferred_tags,
                 "excluded_name_tokens": excluded_name_tokens,
+                "included_name_tokens": included_name_tokens,
             },
         ),
     )

@@ -81,6 +81,32 @@ backend/
 
 Các file gốc `main.py`, `models.py`, `schemas.py`, `database.py` ở root chủ yếu là compatibility layer sau refactor. Code mới nên import từ `app.modules.<domain>`.
 
+### Search Engine Module
+
+`app/modules/search` đã được tách thành các lớp nhỏ theo trách nhiệm:
+
+```text
+app/modules/search/
+├── service.py      # orchestration search_food(), facade tương thích
+├── repository.py   # query DB thuần cho search
+├── common.py       # constants, Gemini client, normalize/tag helpers
+├── intent.py       # supervisor LLM + fallback intent
+├── safety.py       # allergy text safety + resolve medical/allergy constraints
+├── filtering.py    # hard/adaptive filters trên candidate foods
+├── retrieval.py    # embedding query + lexical fallback scoring
+├── ranking.py      # tag scoring, meal role, rerank, dedupe
+├── explanation.py  # food reason, no-result response, post-processing LLM
+└── tracing.py      # retrieval trace/query-log debug helpers
+```
+
+Quan hệ chính:
+
+- `router.py`, chat và scripts chỉ gọi public facade `search.service.search_food`.
+- `service.py` điều phối toàn bộ pipeline, nhưng không chứa truy vấn SQL trực tiếp.
+- `repository.py` chỉ truy vấn DB, không chứa scoring/filter business logic.
+- `common.py` là nơi chia sẻ constants/helper nền để tránh vòng import giữa các module search.
+- `safety.py`, `filtering.py`, `retrieval.py`, `ranking.py`, `explanation.py`, `tracing.py` xử lý từng đoạn pipeline chuyên biệt.
+
 ## Biến Môi Trường Quan Trọng
 
 ```env
@@ -294,19 +320,14 @@ standard-data/alias-rules/ingredient_key_preview.v1.json
 
 ## Luồng Search Hiện Tại
 
-1. `resolve_food_conflicts()` gọi supervisor LLM để trích xuất bệnh lý, dị ứng, món muốn/không muốn, nguyên liệu muốn/không muốn, tag/ngữ cảnh.
-2. Rule từ bảng `tags` được merge với sở thích người dùng.
-3. Nguyên liệu cần chặn được chuyển thành `exclude_ingredient_keys` bằng alias system.
-4. SQL hard filter loại món có `Food.core_ingredient_keys.overlap(exclude_ingredient_keys)`.
-5. Allergy text fallback bắt nguyên liệu ẩn nếu key chưa phủ đủ.
-6. Disease `exclude_soft_tag` được dùng như hard filter y tế.
-7. Context filter thích nghi xử lý `meal_context` và `occasion_context`.
-8. Dish-name include filter ưu tiên nhóm món user muốn như bún, cơm, phở, mì quảng.
-9. Ingredient include filter hiện có hard/adaptive path cho intent cá: `cá` có dấu -> `canon:ca`; không map `ca` trần để tránh nhầm `cà`.
-10. Semantic scoring dùng Gemini embedding + cosine similarity.
-11. Rerank cộng/trừ điểm theo user tag, medical tag, meal role, ingredient priority và caution ingredient keys.
-12. Top results được deduplicate và sinh `reason`.
-13. `post_processing_agent()` inject `medical_advice_rules.json` để viết lời tư vấn thận trọng, không bịa món ngoài top results.
+1. `search.service.search_food()` nhận query từ API/chat và khởi tạo runtime/trace.
+2. `search.safety.resolve_food_conflicts()` gọi `search.intent` để trích xuất intent/constraint, sau đó merge rule từ bảng `tags` với profile/sở thích người dùng.
+3. `search.service` dùng alias system để sinh `exclude_ingredient_keys` và gọi `search.repository` lấy candidate foods đã qua SQL hard filter.
+4. `search.safety` và `search.filtering` tiếp tục lọc allergy text fallback, medical soft-tag hard filter, context filter, dish-name filter và ingredient include filter.
+5. `search.retrieval` tạo Gemini embedding cho query; nếu lỗi/timeout thì dùng lexical fallback signals.
+6. `search.service` tính base semantic/lexical score, rồi `search.ranking` cộng/trừ điểm theo user tag, medical tag, meal role, ingredient priority và caution ingredient keys.
+7. `search.explanation` sinh `reason` cho từng món và gọi post-processing LLM để viết lời tư vấn thận trọng.
+8. `search.tracing` xây dựng retrieval trace/debug payload để `search.service` ghi vào `query_logs`, còn API response vẫn giữ schema hiện tại.
 
 ## Các Điểm Chưa Có / MVP
 
@@ -323,7 +344,7 @@ standard-data/alias-rules/ingredient_key_preview.v1.json
 Compile nhanh:
 
 ```bash
-python3 -m py_compile app/core/config.py app/db/init_db.py app/db/seed.py app/modules/search/service.py
+python3 -m py_compile $(find app/modules/search app/modules/chat scripts -type f -name '*.py')
 ```
 
 Generate ingredient alias preview:

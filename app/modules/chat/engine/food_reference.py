@@ -1,29 +1,19 @@
+"""Helper resolve món ăn được nhắc tới trong hội thoại chat."""
+
 from __future__ import annotations
 
 import re
 import uuid
-from dataclasses import dataclass
-from typing import Any, Optional
+from typing import Any
 
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.modules.foods.models import Food
-from app.modules.search.schemas import AIInsight, FoodResult, SearchResponse
-
-
-@dataclass
-class IntentHandlerResult:
-    intent: str
-    content: str
-    query_log_id: uuid.UUID | None = None
-    search_result: SearchResponse | None = None
-    place_result: Any | None = None
-    food_results: list[dict[str, Any]] | None = None
-    structured_result: dict[str, Any] | None = None
 
 
 def strip_accents(text: str) -> str:
+    """Bỏ dấu tiếng Việt để match query ngắn trong chat."""
     accents = {
         "àáạảãâầấậẩẫăằắặẳẵ": "a",
         "èéẹẻẽêềếệểễ": "e",
@@ -41,61 +31,14 @@ def strip_accents(text: str) -> str:
 
 
 def normalize_text(text: str) -> str:
+    """Normalize text về lowercase không dấu để so khớp tham chiếu món."""
     normalized = strip_accents(text or "").lower()
     normalized = re.sub(r"[^a-z0-9\s/_-]", " ", normalized)
     return re.sub(r"\s+", " ", normalized).strip()
 
 
-def serialize_food_results(search_result: SearchResponse | None) -> list[dict[str, Any]] | None:
-    if not search_result or not search_result.results:
-        return None
-    return [
-        {
-            "id": str(item.id),
-            "name": item.name,
-            "description": item.description,
-            "img_url": item.img_url,
-            "core_ingredients": item.core_ingredients,
-            "soft_tags": item.soft_tags,
-            "taste_profile": item.taste_profile,
-            "meal_context": item.meal_context,
-            "occasion_context": item.occasion_context,
-            "matchScore": item.matchScore,
-            "reason": item.reason,
-        }
-        for item in search_result.results
-    ]
-
-
-def build_structured_result(kind: str, data: dict[str, Any]) -> dict[str, Any]:
-    return {
-        "kind": kind,
-        "data": data,
-    }
-
-
-def coerce_food_result_items(items: list[dict[str, Any]] | None) -> list[FoodResult]:
-    results: list[FoodResult] = []
-    for item in items or []:
-        try:
-            results.append(FoodResult(**item))
-        except Exception:
-            continue
-    return results
-
-
-def food_names_from_results(items: list[dict[str, Any]] | None, limit: int = 5) -> list[str]:
-    names: list[str] = []
-    for item in items or []:
-        name = str(item.get("name") or "").strip()
-        if name and name not in names:
-            names.append(name)
-        if len(names) >= limit:
-            break
-    return names
-
-
 def extract_target_reference(query: str) -> str | None:
+    """Rút tham chiếu kiểu top 1/món đầu/món này từ query."""
     query_norm = normalize_text(query)
     patterns = [
         (r"\btop\s*([1-5])\b", "top_{n}"),
@@ -118,6 +61,7 @@ def find_food_result_by_reference(
     food_results: list[dict[str, Any]] | None,
     target_reference: str | None,
 ) -> dict[str, Any] | None:
+    """Tìm item trong food_results theo tham chiếu top_n."""
     if not food_results:
         return None
     if not target_reference:
@@ -140,6 +84,7 @@ async def resolve_food_candidate(
     target_reference: str | None = None,
     last_food_results: list[dict[str, Any]] | None = None,
 ) -> tuple[Food | None, dict[str, Any] | None, str | None]:
+    """Resolve món từ tên trực tiếp hoặc tham chiếu trong kết quả gần nhất."""
     referenced = find_food_result_by_reference(last_food_results, target_reference)
     if referenced:
         food_id = referenced.get("id")
@@ -186,44 +131,3 @@ async def resolve_food_candidate(
                 return food, item, item_name
 
     return None, referenced, candidate_name or None
-
-
-def build_search_response_from_food_results(
-    *,
-    query: str,
-    food_results: list[dict[str, Any]],
-    ai_response: str,
-    retrieval_note: str | None = None,
-) -> SearchResponse:
-    return SearchResponse(
-        query=query,
-        ai_insight=AIInsight(exclude=[], include=[], prefer=[]),
-        results=coerce_food_result_items(food_results),
-        disclaimer=(
-            "Hệ thống đã sàng lọc nguyên liệu theo điều kiện sức khỏe cá nhân nhưng "
-            "không thay thế tư vấn từ bác sĩ/chuyên gia y tế. Vui lòng kiểm tra lại "
-            "thành phần thực tế trước khi gọi món."
-        ),
-        retrieval_note=retrieval_note,
-        ai_response=ai_response,
-    )
-
-
-def build_empty_search_response(
-    *,
-    query: str,
-    ai_response: str,
-    retrieval_note: str | None = None,
-) -> SearchResponse:
-    return SearchResponse(
-        query=query,
-        ai_insight=AIInsight(exclude=[], include=[], prefer=[]),
-        results=[],
-        disclaimer=(
-            "Hệ thống đã sàng lọc nguyên liệu theo điều kiện sức khỏe cá nhân nhưng "
-            "không thay thế tư vấn từ bác sĩ/chuyên gia y tế. Vui lòng kiểm tra lại "
-            "thành phần thực tế trước khi gọi món."
-        ),
-        retrieval_note=retrieval_note,
-        ai_response=ai_response,
-    )

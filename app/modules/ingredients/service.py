@@ -196,8 +196,13 @@ def generate_filter_keys(
     """
     filter_keys: list[str] = []
     for ingredient in ingredients or []:
+        raw_ingredient = (ingredient or "").strip()
+        if raw_ingredient.startswith(("base:", "canon:", "group:")):
+            filter_keys.append(raw_ingredient)
+            continue
+
         matches = _matched_filter_candidates(
-            ingredient,
+            raw_ingredient,
             extra_rules=extra_rules,
         )
         if matches:
@@ -220,7 +225,7 @@ def generate_filter_keys(
             else:
                 filter_keys.extend(safe_group_keys)
         else:
-            base_key = normalize_base_key(ingredient)
+            base_key = normalize_base_key(raw_ingredient)
             if base_key:
                 filter_keys.append(f"base:{base_key}")
 

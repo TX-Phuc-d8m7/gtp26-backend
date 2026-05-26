@@ -185,6 +185,7 @@ ALIAS_RULES: list[dict] = [
             "thịt bò băm",
             "thịt bò cắt mỏng",
             "thịt bò phile",
+            "bò khô",
         ],
         ["group:thit_bo", "group:thit_do"],
         notes="Không map alias 'bò' trần để tránh nhầm với bơ.",

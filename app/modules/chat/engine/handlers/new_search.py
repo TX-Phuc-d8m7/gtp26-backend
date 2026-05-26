@@ -4,11 +4,8 @@ import uuid
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.modules.chat.handlers.common import (
-    IntentHandlerResult,
-    build_structured_result,
-    serialize_food_results,
-)
+from app.modules.chat.engine.handlers.base import IntentHandlerResult
+from app.modules.chat.engine.response_factory import build_structured_result, serialize_food_results
 from app.modules.search.service import search_food
 from app.modules.users.models import UserHealthProfile
 
@@ -48,4 +45,3 @@ async def handle_new_search(
             },
         ),
     )
-
