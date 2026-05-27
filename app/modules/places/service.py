@@ -58,34 +58,8 @@ DEFAULT_LOCATION_TEXT = "Đà Nẵng"
 DEFAULT_RADIUS_M = 3000
 DEFAULT_SERPAPI_LANGUAGE = "vi"
 DEFAULT_SERPAPI_COUNTRY = "vn"
-GENERIC_DISH_TOKENS = {
-    "am",
-    "an",
-    "ban",
-    "bun",
-    "cafe",
-    "chao",
-    "com",
-    "cua",
-    "ga",
-    "ha",
-    "hang",
-    "heo",
-    "kho",
-    "lau",
-    "mi",
-    "mien",
-    "mon",
-    "nha",
-    "nuoc",
-    "pho",
-    "pizza",
-    "quan",
-    "restaurant",
-    "sup",
-    "thit",
-}
-
+RADIUS_STEPS_M = [3000, 6000, 9000]
+MIN_STRICT_RESULTS = 3
 
 def normalize_dish_key(value: str) -> str:
     text = unicodedata.normalize("NFD", value.strip().lower())
@@ -100,10 +74,28 @@ def normalize_ascii_text(value: str) -> str:
     return text.replace("Đ", "D").replace("đ", "d")
 
 
+_VN_CITY_SERPAPI_MAP = {
+    "da nang": "Da Nang, Da Nang, Vietnam",
+    "ho chi minh": "Ho Chi Minh City, Ho Chi Minh City, Vietnam",
+    "tp hcm": "Ho Chi Minh City, Ho Chi Minh City, Vietnam",
+    "sai gon": "Ho Chi Minh City, Ho Chi Minh City, Vietnam",
+    "ha noi": "Hanoi, Hanoi, Vietnam",
+    "hanoi": "Hanoi, Hanoi, Vietnam",
+    "hue": "Hue, Thua Thien Hue, Vietnam",
+    "hoi an": "Hoi An, Quang Nam, Vietnam",
+    "nha trang": "Nha Trang, Khanh Hoa, Vietnam",
+    "can tho": "Can Tho, Can Tho, Vietnam",
+    "hai phong": "Hai Phong, Hai Phong, Vietnam",
+}
+
+
 def normalize_serpapi_location_text(location_text: str) -> str:
     normalized = normalize_ascii_text(location_text).strip()
     if not normalized:
-        return "Da Nang, Vietnam"
+        return "Da Nang, Da Nang, Vietnam"
+    lookup_key = re.sub(r"[^a-z0-9]+", " ", normalized.lower()).strip()
+    if lookup_key in _VN_CITY_SERPAPI_MAP:
+        return _VN_CITY_SERPAPI_MAP[lookup_key]
     lowered = normalized.lower()
     if "vietnam" not in lowered and "viet nam" not in lowered:
         normalized = f"{normalized}, Vietnam"
@@ -124,7 +116,7 @@ def extract_distinctive_dish_tokens(dish: str) -> list[str]:
     distinctive_tokens: list[str] = []
     seen: set[str] = set()
     for token in tokenize_search_text(dish):
-        if len(token) <= 1 or token in GENERIC_DISH_TOKENS or token in seen:
+        if len(token) <= 1 or token in seen:
             continue
         distinctive_tokens.append(token)
         seen.add(token)
@@ -171,7 +163,7 @@ def is_place_relevant_for_dish(place: dict[str, Any], dish: str) -> bool:
         return True
     if len(distinctive_tokens) == 1:
         return matched_count == 1
-    return matched_count / len(distinctive_tokens) >= 0.75
+    return matched_count / len(distinctive_tokens) >= 0.5
 
 
 def compute_place_fallback_score(place: dict[str, Any], dish: str) -> float:
@@ -234,9 +226,7 @@ def build_food_place_query(
 ) -> str:
     dish = dish.strip()
     location_text = location_text.strip() or DEFAULT_LOCATION_TEXT
-    if has_coordinates:
-        return f"\"{dish}\" quán ăn"
-    return f"\"{dish}\" quán ăn ở {location_text}"
+    return dish
 
 
 def calculate_distance_meters(
@@ -260,6 +250,22 @@ def calculate_distance_meters(
     )
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return round(earth_radius_m * c)
+
+
+def _place_within_radius(
+    place: dict[str, Any],
+    origin_lat: float,
+    origin_lng: float,
+    radius_m: int,
+) -> bool:
+    """Trả về True nếu quán nằm trong bán kính radius_m, hoặc không có tọa độ."""
+    gps = place.get("gps_coordinates") or {}
+    dist = calculate_distance_meters(
+        origin_lat, origin_lng,
+        gps.get("latitude"),
+        gps.get("longitude"),
+    )
+    return dist is None or dist <= radius_m
 
 
 def _active_places_provider() -> str:
@@ -408,21 +414,36 @@ def _build_serpapi_params(
     longitude: float | None,
     radius_m: int,
 ) -> dict[str, Any]:
+    # --- google_local engine ---
     base_params: dict[str, Any] = {
         "api_key": settings.serpapi_api_key,
-        "engine": "google",
+        "engine": "google_local",
         "hl": DEFAULT_SERPAPI_LANGUAGE,
-        "google_domain": "google.com",
         "q": query,
         "gl": DEFAULT_SERPAPI_COUNTRY,
         "no_cache": "false",
         "output": "json",
     }
     base_params["location"] = normalize_serpapi_location_text(location_text)
-
     if latitude is not None and longitude is not None:
-        base_params["q"] = f"{query} gần đây"
+        base_params["ll"] = f"@{latitude},{longitude},14z"
 
+    # --- google engine (commented out) ---
+    # base_params: dict[str, Any] = {
+    #     "api_key": settings.serpapi_api_key,
+    #     "engine": "google",
+    #     "hl": DEFAULT_SERPAPI_LANGUAGE,
+    #     "google_domain": "google.com.vn",
+    #     "q": query,
+    #     "gl": DEFAULT_SERPAPI_COUNTRY,
+    #     "no_cache": "false",
+    #     "output": "json",
+    # }
+    # base_params["location"] = normalize_serpapi_location_text(location_text)
+    # if latitude is not None and longitude is not None:
+    #     pass  # coordinates sent via location param; keep query as dish name only
+
+    print(f"[SERPAPI PARAMS] engine={base_params['engine']!r} q={base_params['q']!r} location={base_params.get('location') or base_params.get('ll')!r}")
     return base_params
 
 
@@ -733,27 +754,21 @@ async def _search_with_google_places(
         radius_m=radius_m,
     )
     places = payload.get("places") or []
-    filtered_places = [
-        place
-        for place in places
-        if is_place_payload_dict(place) and is_place_relevant_for_dish(place, dish)
-    ]
+    valid_places = [place for place in places if is_place_payload_dict(place)]
+
+    # Google Places đã semantic-search theo tên món — tin trực tiếp kết quả API,
+    # không lọc lại theo tên quán vì đa số quán đặt tên riêng, không chứa tên món.
     strict_results = [
         result
         for result in (
             _map_google_place(place, origin_lat=latitude, origin_lng=longitude)
-            for place in filtered_places
+            for place in valid_places
         )
         if result.place_id and result.name
     ]
-    fallback_source_places = [
-        place for place in places if is_place_payload_dict(place)
-    ]
-    fallback_places = select_fallback_places(
-        fallback_source_places,
-        dish,
-        limit=limit,
-    )
+
+    # Fallback dùng khi strict trống: score theo token tên quán/địa chỉ.
+    fallback_places = select_fallback_places(valid_places, dish, limit=limit)
     fallback_results = [
         result
         for result in (
@@ -812,7 +827,34 @@ async def _search_with_serpapi(
         longitude=longitude,
         radius_m=radius_m,
     )
-    places = payload.get("local_results") or []
+    # --- google_local engine: local_results là list trực tiếp ---
+    local_results_raw = payload.get("local_results") or []
+    places = local_results_raw if isinstance(local_results_raw, list) else []
+
+    # --- google engine (commented out): local_results là dict với key 'places' ---
+    # local_results_raw = payload.get("local_results") or {}
+    # places = (local_results_raw.get("places") or []) if isinstance(local_results_raw, dict) else (local_results_raw or [])
+
+    print(f"[SERPAPI DEBUG] query={query!r}")
+    print(f"[SERPAPI DEBUG] local_results type={type(local_results_raw).__name__}, places count={len(places)}")
+    for i, p in enumerate(places):
+        print(f"[SERPAPI DEBUG] place[{i}] title={p.get('title')!r} relevant={is_place_relevant_for_dish(p, dish)}")
+
+    # --- Progressive radius filter ---
+    effective_radius = radius_m
+    if latitude is not None and longitude is not None:
+        start_steps = [r for r in RADIUS_STEPS_M if r >= radius_m] or [RADIUS_STEPS_M[-1]]
+        for step_radius in start_steps:
+            candidates = [
+                p for p in places
+                if is_place_payload_dict(p) and _place_within_radius(p, latitude, longitude, step_radius)
+            ]
+            strict_count = sum(1 for p in candidates if is_place_relevant_for_dish(p, dish))
+            print(f"[SERPAPI DEBUG] radius={step_radius}m → {len(candidates)} quán, {strict_count} khớp món")
+            if strict_count >= MIN_STRICT_RESULTS or step_radius == start_steps[-1]:
+                places = candidates
+                effective_radius = step_radius
+                break
     filtered_places = [
         place
         for place in places
@@ -853,7 +895,7 @@ async def _search_with_serpapi(
         location_text=location_text,
         latitude=latitude,
         longitude=longitude,
-        radius_m=radius_m,
+        radius_m=effective_radius,
         cache_hit=False,
         results=primary_results,
         strict_results=strict_sorted,
@@ -883,8 +925,9 @@ async def search_food_places(
     provider = _active_places_provider()
 
     if provider == "serpapi":
+        _serpapi_fallback: FoodPlaceSearchResponse | None = None
         try:
-            return await _search_with_serpapi(
+            serpapi_response = await _search_with_serpapi(
                 query=query,
                 dish=dish,
                 location_text=normalized_location_text,
@@ -893,10 +936,33 @@ async def search_food_places(
                 longitude=longitude,
                 radius_m=radius_m,
             )
+            if serpapi_response.results:
+                return serpapi_response
+            _serpapi_fallback = serpapi_response
+            if not settings.google_maps_api_key:
+                return serpapi_response
+            print("⏩ SerpApi trả về 0 kết quả, fallback sang Google Places.")
         except HTTPException as exc:
             if not settings.google_maps_api_key:
                 raise
             print(f"⚠️ SerpApi places search failed, fallback to Google Places: {exc.detail}")
+
+        try:
+            return await _search_with_google_places(
+                query=query,
+                dish=dish,
+                location_text=normalized_location_text,
+                limit=limit,
+                db=db,
+                latitude=latitude,
+                longitude=longitude,
+                radius_m=radius_m,
+            )
+        except HTTPException as google_exc:
+            print(f"⚠️ Google Places fallback thất bại: {google_exc.detail}")
+            if _serpapi_fallback is not None:
+                return _serpapi_fallback
+            raise
 
     return await _search_with_google_places(
         query=query,
