@@ -9,13 +9,14 @@ import numpy as np
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import FavoriteFood, Food
-from app.schemas import (
+from app.modules.favorites.models import FavoriteFood
+from app.modules.foods.models import Food
+from app.modules.favorites.schemas import (
     FavoriteFoodResult,
     FavoriteFoodUpdate,
     FavoriteRecommendationResult,
-    FoodDetail,
 )
+from app.modules.foods.schemas import FoodDetail
 
 
 # ---------------------------------------------------------------------------

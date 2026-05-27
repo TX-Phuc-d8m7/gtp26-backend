@@ -30,9 +30,16 @@ class Settings:
     run_seed_on_startup: bool = _env_bool("RUN_SEED_ON_STARTUP", False)
     sync_tags_on_startup: bool = _env_bool("SYNC_TAGS_ON_STARTUP", False)
     sync_foods_on_startup: bool = _env_bool("SYNC_FOODS_ON_STARTUP", False)
+    sync_foods_delete_stale_on_startup: bool = _env_bool("SYNC_FOODS_DELETE_STALE_ON_STARTUP", False)
     run_embedding_on_startup: bool = _env_bool("RUN_EMBEDDING_ON_STARTUP", False)
     embedding_backfill_limit: int = int(os.getenv("EMBEDDING_BACKFILL_LIMIT", "0"))
     embedding_backfill_sleep_seconds: float = float(os.getenv("EMBEDDING_BACKFILL_SLEEP_SECONDS", "3"))
+    google_maps_api_key: str = os.getenv("GOOGLE_MAPS_API_KEY", "")
+    serpapi_api_key: str = os.getenv("SERPAPI_API_KEY", "")
+    places_cache_ttl_days: int = int(os.getenv("PLACES_CACHE_TTL_DAYS", "7"))
+    refresh_token_expire_days: int = int(os.getenv("REFRESH_TOKEN_EXPIRE_DAYS", "30"))
+    password_reset_token_expire_minutes: int = int(os.getenv("PASSWORD_RESET_TOKEN_EXPIRE_MINUTES", "30"))
+    gemini_text_model: str = os.getenv("GEMINI_TEXT_MODEL", "gemini-2.5-flash-lite")
 
     @property
     def database_url(self) -> str:

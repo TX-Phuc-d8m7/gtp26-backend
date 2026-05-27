@@ -9,8 +9,8 @@ from sqlalchemy import Text, func, or_, select
 from sqlalchemy.dialects.postgresql import array as pg_array
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import Food
-from app.schemas import (
+from app.modules.foods.models import Food
+from app.modules.admin.foods.schemas import (
     AdminFoodCreate,
     AdminFoodResult,
     AdminFoodUpdate,
@@ -391,7 +391,7 @@ async def import_foods_preview(
     """
     Dry-run import: validate và kiểm tra trùng lặp, chưa lưu vào DB.
     """
-    from app.schemas import FoodImportItem
+    from app.modules.admin.foods.schemas import FoodImportItem
     from pydantic import ValidationError
 
     # Lấy tên đã có trong DB
@@ -431,7 +431,7 @@ async def import_foods_apply(
     Áp dụng import: lưu các món hợp lệ vào DB.
     Bỏ qua món đã trùng tên.
     """
-    from app.schemas import FoodImportItem
+    from app.modules.admin.foods.schemas import FoodImportItem
 
     existing_names = set(
         (await db.execute(select(Food.name))).scalars().all()

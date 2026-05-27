@@ -2,15 +2,9 @@
   {
     "name": "Dị ứng động vật giáp xác",
     "tag_type": "ALLERGY",
-    "exclude_soft_tag": [
-      "Hải sản"
-    ],
+    "exclude_soft_tag": [],
     "prefer_soft_tag": [
-      "Món chay",
-      "Healthy / Eat Clean",
-      "Giàu chất xơ",
-      "Giàu đạm",
-      "Dễ tiêu"
+      "Giàu đạm"
     ],
     "exclude_ingredient": [
       "tom",
@@ -49,59 +43,49 @@
       "muoi tom hanh phi",
       "sa te tom tu lam",
       "hat nem hai san",
-      "gia vi lau thai",
-      "oc",
-      "so diep",
-      "oc huong",
-      "oc buou",
-      "oc len",
-      "oc mong tay",
-      "oc bulot",
-      "oc giac",
-      "oc heo",
-      "oc nhay",
-      "ngheu",
-      "ngheu hoa",
-      "ngheu trang",
-      "chip chip",
-      "so huyet",
-      "so long",
-      "so lua",
-      "vem",
-      "vem xanh",
-      "tu hai",
-      "hau sua",
-      "bao ngu",
-      "muc",
-      "bach tuoc",
-      "muc ong",
-      "muc baby",
-      "muc nang",
-      "muc trung",
-      "rang muc",
-      "ruoc",
-      "mam",
-      "ruoc ga/ heo"
+      "gia vi lau thai"
     ],
     "prefer_ingredient": [
-      "thit heo",
-      "thit bo",
-      "thit ga",
-      "trung ga",
-      "dau hu",
-      "nam",
-      "gao",
-      "bun",
-      "cai",
-      "ca rot"
+      "thịt bò", 
+      "thịt heo", 
+      "thịt gà", 
+      "trứng", 
+      "đậu hũ", 
+      "nấm",
+      "ca basa",
+      "ca bop",
+      "ca chem",
+      "ca com kho",
+      "ca dia den",
+      "ca dieu hong",
+      "ca duoi",
+      "ca gio",
+      "ca hanh",
+      "ca hoi",
+      "ca hoi xong khoi",
+      "ca loc",
+      "ca mu",
+      "ca nuc",
+      "ca ngu",
+      "ca ngu bao",
+      "ca phi le",
+      "ca phoi",
+      "ca ro dong",
+      "ca ro phi",
+      "ca thu",
+      "ca thu nhat",
+      "ca trap",
+      "ca tre",
+      "ca trich",
+      "cha ca",
+      "cha ca nha trang",
+      "dau ca bop"
     ]
   },
   {
     "name": "Dị ứng động vật thân mềm",
     "tag_type": "ALLERGY",
-    "exclude_soft_tag": [
-      "Hải sản"
-    ],
+    "exclude_soft_tag": [],
     "prefer_soft_tag": [
       "Giàu đạm"
     ],
@@ -137,12 +121,42 @@
       "ngheu hoa",
       "ngheu trang",
       "ruot hau",
-      "dau hao"
+      "dau hao",
+      "muc baby",
+      "vem"
     ],
     "prefer_ingredient": [
+      "ca basa",
+      "ca bop",
+      "ca chem",
+      "ca com kho",
+      "ca dia den",
+      "ca dieu hong",
+      "ca duoi",
+      "ca gio",
+      "ca hanh",
+      "ca hoi",
+      "ca hoi xong khoi",
+      "ca loc",
+      "ca mu",
+      "ca nuc",
+      "ca ngu",
+      "ca ngu bao",
+      "ca ngu dong hop",
+      "ca phao",
+      "ca phi le",
+      "ca phoi",
+      "ca ro dong",
+      "ca ro phi",
+      "ca thu",
+      "ca thu nhat",
+      "ca trap",
+      "ca tre",
+      "ca trich",
+      "dau ca bop",
       "thit heo",
       "thit bo",
-      "ga",
+      "thit ga",
       "trung",
       "dau hu"
     ]
@@ -150,9 +164,7 @@
   {
     "name": "Dị ứng cá có vây",
     "tag_type": "ALLERGY",
-    "exclude_soft_tag": [
-      "Hải sản"
-    ],
+    "exclude_soft_tag": [],
     "prefer_soft_tag": [
       "Giàu đạm"
     ],
@@ -194,25 +206,74 @@
       "mam co linh lang",
       "mam ngon",
       "mam nem",
-      "mam ruoc",
-      "mam tep",
-      "mam tom",
       "nuoc mam",
-      "nuoc mam phu quoc",
-      "nuoc mam tom"
+      "nuoc mam phu quoc"
     ],
     "prefer_ingredient": [
+      "tom",
+      "tom su",
+      "tom dat",
+      "tom kho",
+      "tep kho",
+      "tom cang xanh",
+      "tom the",
+      "tom hum dat",
+      "tom chua",
+      "tom lon",
+      "tom lot vo",
+      "tom mu ni",
+      "non tom bien",
+      "ram tom dat",
       "cua",
-      "dau hu",
+      "cua dong",
+      "cua bien",
+      "cua gach",
+      "cua huynh de",
+      "cua thit",
+      "thit cua bien",
       "ghe",
-      "muc",
-      "nam",
-      "ngheu",
+      "be be",
+      "be be boc non",
+      "cang tom hum",
+      "chao tom",
+      "cha cua",
+      "thanh cua",
       "oc",
+      "so diep",
+      "hau sua",
+      "ngheu",
+      "chip chip",
+      "so long",
+      "so huyet",
+      "oc huong",
+      "bach tuoc",
+      "muc",
+      "muc ong",
+      "muc nang",
+      "muc trung",
+      "rang muc",
+      "oc buou",
+      "oc mong tay",
+      "oc len",
+      "so lua",
+      "vem xanh",
+      "bao ngu",
+      "oc giac",
+      "oc heo",
+      "oc nhay",
+      "oc bulot",
+      "tu hai",
+      "hen",
+      "so deo",
+      "ngheu hoa",
+      "ngheu trang",
+      "ruot hau",
+      "dau hao",
+      "muc baby",
+      "vem",
       "thit bo",
       "thit ga",
       "thit heo",
-      "tom",
       "trung"
     ]
   },
@@ -222,20 +283,13 @@
     "exclude_soft_tag": [
       "Gỏi / Nộm / Trộn"
     ],
-    "prefer_soft_tag": [
-      "Hấp / Luộc",
-      "Xào",
-      "Kho/Rim",
-      "Thanh đạm"
-    ],
+    "prefer_soft_tag": [],
     "exclude_ingredient": [
       "dau phong",
       "dau phung",
       "lac",
       "dau phong rang",
-      "bo dau phong",
-      "sa te",
-      "mam nem"
+      "bo dau phong"
     ],
     "prefer_ingredient": []
   },
@@ -266,33 +320,19 @@
     "name": "Dị ứng sữa bò",
     "tag_type": "ALLERGY",
     "exclude_soft_tag": [
-      "Từ sữa / Phô mai",
-      "Béo ngậy",
-      "Bánh ngọt",
-      "Nhiều dầu mỡ / Calo cao"
+      "Từ sữa / Phô mai"
     ],
-    "prefer_soft_tag": [
-      "Thanh đạm",
-      "Món chay",
-      "Healthy / Eat Clean",
-      "Hấp / Luộc",
-      "Giàu chất xơ",
-      "Dễ tiêu"
-    ],
+    "prefer_soft_tag": [],
     "exclude_ingredient": [
-      "sua",
-      "sua dac",
+      "sữa",
       "sua khong duong",
       "sua chua",
       "sua chua khong duong",
       "sua bot",
       "sua cong thuc",
       "sua beo",
-      "sua an lien",
-      "bo",
       "bo lat",
       "bo man",
-      "bo thuc vat",
       "pho mai",
       "pho mai mozzarella",
       "pho mai parmesan",
@@ -310,33 +350,10 @@
       "sot kem",
       "mascarpone",
       "fromage",
-      "banh flan",
-      "caramel",
-      "chocolate",
-      "socola",
-      "pate",
-      "xuc xich",
-      "xuc xich pho mai",
       "bot pho mai",
-      "banh gao pho mai",
-      "baking powder",
-      "bot banh ran",
-      "bot banh xeo",
-      "trung muoi"
+      "banh gao pho mai"
     ],
-    "prefer_ingredient": [
-      "sua dau nanh",
-      "sua dau nanh khong duong",
-      "nuoc cot dua",
-      "nuoc dua",
-      "dau nanh",
-      "bot gao",
-      "bot nang",
-      "dau hu",
-      "dau hu non",
-      "tau hu",
-      "tau hu non"
-    ]
+    "prefer_ingredient": []
   },
   {
     "name": "Bất dung nạp Lactose",
@@ -656,18 +673,9 @@
     "exclude_soft_tag": [
       "Bánh ngọt",
       "Thực phẩm chế biến sẵn",
-      "Chiên / Rán",
       "Từ sữa / Phô mai"
     ],
-    "prefer_soft_tag": [
-      "Món chay",
-      "Giàu đạm",
-      "Hấp / Luộc",
-      "Kho/Rim",
-      "Xào",
-      "Lẩu",
-      "Súp"
-    ],
+    "prefer_soft_tag": [],
     "exclude_ingredient": [
       "trung",
       "trung ga",
@@ -685,29 +693,26 @@
       "sot mayonnaise",
       "mi trung",
       "banh flan",
-      "kem",
       "sot kem",
-      "banh mi sandwich",
-      "banh sandwich",
       "banh lady finger",
       "long do trung ga",
       "trung ga boc vo",
       "trung ga ta",
-      "pate",
-      "xuc xich",
-      "lap xuong",
-      "bot xu",
-      "sot"
+      "bot tram trung"
     ],
     "prefer_ingredient": [
       "thit bo",
       "thit heo",
       "thit ga",
+      "ca loc",
+      "ca thu",
+      "ca ngu",
       "tom",
-      "dau hu",
+      "tau hu",
       "nam",
       "gao",
-      "bun"
+      "bun",
+      "rau"
     ]
   },
   {
@@ -902,7 +907,9 @@
       "xuc xich",
       "pate",
       "mayonnaise",
-      "kem"
+      "kem",
+      "bột năng",
+      "bột sắn"
     ],
     "prefer_ingredient": [
       "uc ga",
@@ -1178,13 +1185,20 @@
     "exclude_soft_tag": [
       "Cay",
       "Chua",
-      "Khó tiêu / Nặng bụng",
       "Nhiều dầu mỡ / Calo cao",
       "Chiên / Rán",
       "Sống/Chín tái",
-      "Đậm đà",
+      "Thực phẩm chế biến sẵn",
+      "Béo ngậy",
+      "Khó tiêu / Nặng bụng",
+      "Giòn / Giòn rụm",
       "Gỏi / Nộm / Trộn",
-      "Thực phẩm chế biến sẵn"
+      "Món lạnh",
+      "Thức ăn nhanh",
+      "Bánh ngọt",
+      "Món khô",
+      "Đậm đà",
+      "Nướng"
     ],
     "prefer_soft_tag": [
       "Dễ tiêu",
@@ -1192,62 +1206,34 @@
       "Hấp / Luộc",
       "Súp",
       "Cháo",
-      "Món nước",
       "Thanh đạm",
       "Ấm bụng",
-      "Hầm / Ninh"
+      "Hầm / Ninh",
+      "Món nước"
     ],
     "exclude_ingredient": [
-      "ot",
-      "sa",
-      "rieng",
-      "sa te",
-      "wasabi",
-      "me",
-      "khe",
-      "mang chua",
-      "mang cu tuoi",
-      "mang tuoi",
-      "ca chua",
-      "sot ca",
-      "tuong ca",
-      "kim chi",
-      "xoai xanh",
-      "mam tom",
-      "mam ruoc",
-      "mo heo",
-      "xuc xich",
-      "lap xuong",
-      "thit ba chi",
-      "thit ba roi",
-      "pate",
-      "ca phe",
-      "bia",
-      "ruou trang",
-      "ruou vang",
-      "coca"
+      "khoai lang",
+      "tiêu",
+      "ớt",
+      "dầu phụng",
+      "măng củ tươi",
+      "mắm tôm",
+      "tỏi",
+      "sả"
     ],
     "prefer_ingredient": [
-      "khoai tay",
-      "ca rot",
-      "bi do",
-      "khoai lang",
-      "khoai so",
+      "khoai tay", 
+      "ca rot", 
+      "bi do", 
       "uc ga",
-      "thit nac",
-      "ca loc",
-      "tom",
-      "dau hu",
+      "thit heo nac", 
+      "ca loc", 
+      "dau hu", 
       "gao",
-      "mien",
-      "bun",
-      "hat sen",
-      "tao do",
-      "trung",
-      "sua",
-      "bong cai xanh",
-      "bong cai trang",
-      "gao nep"
+      "mien", 
+      "bun", 
+      "hat sen", 
+      "trung"
     ]
   },
   {
@@ -1263,7 +1249,8 @@
       "Kho/Rim",
       "Thức ăn nhanh",
       "Khó tiêu / Nặng bụng",
-      "Món lạnh"
+      "Món lạnh",
+      "Mồi nhậu"
     ],
     "prefer_soft_tag": [
       "Thanh đạm",
@@ -1273,8 +1260,6 @@
       "Giàu vitamin",
       "Thanh mát/Giải nhiệt",
       "Dễ tiêu",
-      "Xào",
-      "Gỏi / Nộm / Trộn",
       "Súp",
       "Cháo"
     ],
@@ -1535,9 +1520,9 @@
       "bia",
       "nuoc ham xuong",
       "xuong bo",
-      "nam",
+      "nấm",
       "mang",
-      "gia",
+      "giá đỗ",
       "be be"
     ],
     "prefer_ingredient": [
@@ -1646,7 +1631,7 @@
     ]
   },
   {
-    "name": "Nhiệt miệng/Loét miệng",
+    "name": "Nhiệt miệng / Loét miệng",
     "tag_type": "SYMPTON",
     "exclude_soft_tag": [
       "Cay",
@@ -1808,7 +1793,8 @@
       "Nội tạng",
       "Thực phẩm chế biến sẵn",
       "Khó tiêu / Nặng bụng",
-      "Từ sữa / Phô mai"
+      "Từ sữa / Phô mai",
+      "Xào"
     ],
     "prefer_soft_tag": [
       "Healthy / Eat Clean",
@@ -1818,8 +1804,7 @@
       "Dễ tiêu",
       "Thanh mát/Giải nhiệt",
       "Gỏi / Nộm / Trộn",
-      "Giàu đạm",
-      "Xào"
+      "Giàu đạm"
     ],
     "exclude_ingredient": [
       "mo heo",

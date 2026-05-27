@@ -8,8 +8,9 @@ from typing import List, Optional, Tuple
 from sqlalchemy import func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import User
-from app.schemas import AdminUserUpdate, UserResult
+from app.modules.users.models import User
+from app.modules.admin.users.schemas import AdminUserUpdate
+from app.modules.users.schemas import UserResult
 
 
 def _to_result(user: User) -> UserResult:
