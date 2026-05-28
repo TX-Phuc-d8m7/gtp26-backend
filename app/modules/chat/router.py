@@ -21,6 +21,8 @@ from app.modules.chat.schemas import (
     ChatThreadListResponse,
     ChatThreadResult,
     ChatThreadUpdate,
+    FoodRecommendationFeedbackRequest,
+    FoodRecommendationFeedbackResult,
     MessageEditRequest,
     MessageFeedbackRequest,
 )
@@ -35,6 +37,7 @@ from app.modules.chat.service import (
     regenerate_message,
     send_guest_message,
     send_message,
+    set_food_recommendation_feedback,
     set_message_feedback,
     update_thread,
 )
@@ -356,6 +359,48 @@ async def message_feedback_endpoint(
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Không tìm thấy tin nhắn hoặc tin nhắn không phải từ AI.",
+        )
+    return result
+
+
+@router.post(
+    "/threads/{thread_id}/messages/{message_id}/food-feedback",
+    response_model=FoodRecommendationFeedbackResult,
+    summary="Đánh giá từng món trong câu trả lời AI",
+)
+async def food_recommendation_feedback_endpoint(
+    thread_id: uuid.UUID,
+    message_id: uuid.UUID,
+    payload: FoodRecommendationFeedbackRequest,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Tạo hoặc cập nhật feedback cho một món cụ thể trong `food_results`.
+
+    Mỗi user chỉ có một feedback cuối cùng cho một cặp
+    `assistant_message_id + food_id`.
+    """
+    try:
+        result = await set_food_recommendation_feedback(
+            thread_id=thread_id,
+            message_id=message_id,
+            user_id=current_user.id,
+            data=payload,
+            db=db,
+        )
+    except ValueError as exc:
+        if str(exc) == "FOOD_NOT_IN_ASSISTANT_MESSAGE":
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Món ăn này không nằm trong danh sách gợi ý của câu trả lời AI.",
+            ) from exc
+        raise
+
+    if result is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Không tìm thấy hội thoại hoặc tin nhắn AI.",
         )
     return result
 

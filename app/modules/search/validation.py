@@ -21,11 +21,13 @@ import time
 from google.genai import types
 
 from app.modules.search.common import (
+    MEDICAL_ADVICE_ALIAS_MAP,
     POST_PROCESSING_TIMEOUT_SECONDS,
     client,
     get_gemini_text_model,
 )
 from app.modules.search.schemas import FoodResult
+from app.shared.paths import STANDARD_DATA_DIR
 
 # Dùng cùng timeout với post_processing để validation có đủ thời gian kiểm tra.
 VALIDATION_TIMEOUT_SECONDS = POST_PROCESSING_TIMEOUT_SECONDS
@@ -37,6 +39,84 @@ MIN_VALID_RESULTS = 1
 _VERDICT_PASS = "PASS"
 _VERDICT_WARN = "WARN"
 _VERDICT_REJECT = "REJECT"
+
+_ADVICE_RULES_PATH = STANDARD_DATA_DIR / "generated-rules" / "medical-advice-rules" / "medical_advice_rules.json"
+with _ADVICE_RULES_PATH.open("r", encoding="utf-8") as _f:
+    MEDICAL_ADVICE_RULES: dict = json.load(_f)
+
+
+def _get_medical_advice_rule(symptom: str) -> dict | None:
+    """Lấy advice rule theo tên bệnh/alias nếu có."""
+    return MEDICAL_ADVICE_RULES.get(symptom) or MEDICAL_ADVICE_RULES.get(
+        MEDICAL_ADVICE_ALIAS_MAP.get(symptom, "")
+    )
+
+
+def _collect_food_soft_tag_warning_hints(
+    symptoms: list[str],
+    food: FoodResult,
+) -> list[dict[str, str]]:
+    """
+    Tìm các cảnh báo y khoa khớp trực tiếp với nhóm tag mềm của món.
+
+    Trong hệ thống này, soft tag được hiểu rộng gồm:
+    - food.soft_tags
+    - food.taste_profile
+    - food.meal_context
+    - food.occasion_context
+    """
+    food_soft_tags = set(
+        list(food.soft_tags or [])
+        + list(food.taste_profile or [])
+        + list(food.meal_context or [])
+        + list(food.occasion_context or [])
+    )
+    warning_hints: list[dict[str, str]] = []
+
+    for symptom in symptoms:
+        rule = _get_medical_advice_rule(symptom)
+        if not rule:
+            continue
+
+        for cond in rule.get("conditional_warnings", []):
+            if cond.get("trigger_type") != "soft_tag":
+                continue
+
+            trigger_value = cond.get("trigger_value")
+            warning_text = cond.get("warning_text")
+            if trigger_value in food_soft_tags and warning_text:
+                warning_hints.append({
+                    "symptom": symptom,
+                    "matched_soft_tag": trigger_value,
+                    "warning_text": warning_text,
+                })
+
+    return warning_hints[:2]
+
+
+def _reason_with_required_warning(
+    reason: str | None,
+    warning_hints: list[dict[str, str]],
+) -> str | None:
+    """
+    Đảm bảo reason cuối cùng chứa đúng warning_text từ medical advice rule.
+
+    LLM vẫn được viết phần điểm mạnh/cảnh báo tự nhiên, nhưng warning theo rule
+    được gắn deterministic để UI hiển thị nhất quán, không bị paraphrase mất ý.
+    """
+    clean_reason = (reason or "").strip()
+    warning_text = (warning_hints[0].get("warning_text") if warning_hints else None) or ""
+    warning_text = warning_text.strip()
+    if not warning_text:
+        return clean_reason or None
+
+    if warning_text in clean_reason:
+        return clean_reason
+
+    if not clean_reason:
+        return warning_text
+
+    return f"{clean_reason} {warning_text}"
 
 
 def _build_validation_prompt(
@@ -60,13 +140,15 @@ def _build_validation_prompt(
 
     foods_summary = []
     for food in foods:
-        all_tags = list(food.soft_tags) + list(food.taste_profile)
+        medical_warning_hints = _collect_food_soft_tag_warning_hints(symptoms, food)
         foods_summary.append({
             "name": food.name,
-            "soft_tags": all_tags,
+            "soft_tags": food.soft_tags,
+            "taste_profile": food.taste_profile,
             "core_ingredients": food.core_ingredients,
             "description_excerpt": (food.description or "")[:200],
             "current_reason": food.reason,
+            "medical_warning_hints": medical_warning_hints,
         })
     foods_text = json.dumps(foods_summary, ensure_ascii=False, indent=2)
 
@@ -105,6 +187,7 @@ PASS — khi:
 - Cấu trúc reason: [điểm mạnh chính của món] + [cảnh báo hoặc lưu ý sức khỏe nếu có].
 - Nếu không có cảnh báo: chỉ nêu điểm mạnh phù hợp với tình trạng sức khỏe/sở thích.
 - Nếu có cảnh báo: nêu bối cảnh thực tế ngắn gọn và hành động cụ thể, VD: "nước dùng nhiều purin — nên chan ít".
+- Nếu món có `medical_warning_hints`, reason BẮT BUỘC phải nhắc ít nhất một warning phù hợp trong đó bằng lời tự nhiên.
 - Không lặp lại y hệt cùng một cảnh báo cho nhiều món; hãy điều chỉnh cảnh báo theo đặc điểm riêng của từng món.
 - Được dùng lại ý từ reason hiện có của món nếu ý đó đúng, cụ thể và không mang tính kỹ thuật.
 - Với PASS: reason nêu vì sao món phù hợp với tình trạng sức khỏe, dựa vào nguyên liệu/cách chế biến/dạng món.
@@ -116,6 +199,7 @@ PASS — khi:
 def _parse_validation_result(
     raw: dict,
     original_foods: list[FoodResult],
+    symptoms: list[str],
 ) -> tuple[list[FoodResult], list[dict]]:
     """
     Parse kết quả JSON từ validation agent.
@@ -144,7 +228,8 @@ def _parse_validation_result(
 
     for food in original_foods:
         verdict = verdict_map.get(food.name, _VERDICT_PASS)
-        reason = reason_map.get(food.name)
+        warning_hints = _collect_food_soft_tag_warning_hints(symptoms, food)
+        reason = _reason_with_required_warning(reason_map.get(food.name), warning_hints)
         if verdict == _VERDICT_REJECT:
             rejected_foods_info.append({
                 "name": food.name,
@@ -264,7 +349,11 @@ async def run_final_validation_with_timeout(
         if not raw:
             return _fallback("validation returned empty response")
 
-        approved_foods, rejected_foods_info = _parse_validation_result(raw, top_foods)
+        approved_foods, rejected_foods_info = _parse_validation_result(
+            raw,
+            top_foods,
+            symptoms,
+        )
 
         if len(approved_foods) < MIN_VALID_RESULTS:
             print(

@@ -5,16 +5,19 @@ from collections import Counter
 from datetime import datetime, time, timezone
 from typing import Any
 
-from sqlalchemy import func, select
+from sqlalchemy import desc, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.modules.admin.analytics.schemas import (
     AdminAIFeedbackItem,
     AdminDashboardStatsResponse,
     AdminFeedbackSummary,
+    AdminFoodRecommendationFeedbackItem,
+    AdminFoodRecommendationFeedbackListResponse,
+    AdminFoodRecommendationFeedbackSummary,
     AdminTopItem,
 )
-from app.modules.chat.models import ChatMessage, ChatThread
+from app.modules.chat.models import ChatMessage, ChatThread, FoodRecommendationFeedback
 from app.modules.foods.models import Food, Tag
 from app.modules.query_logs.models import QueryLog
 from app.modules.users.models import User, UserHealthProfile
@@ -53,6 +56,51 @@ def _to_top_items(counter: Counter[str], *, limit: int) -> list[AdminTopItem]:
         AdminTopItem(name=name, count=count)
         for name, count in counter.most_common(limit)
     ]
+
+
+async def _get_food_recommendation_feedback_summary(
+    db: AsyncSession,
+) -> AdminFoodRecommendationFeedbackSummary:
+    total = (
+        await db.scalar(select(func.count()).select_from(FoodRecommendationFeedback))
+        or 0
+    )
+    likes = (
+        await db.scalar(
+            select(func.count())
+            .select_from(FoodRecommendationFeedback)
+            .where(FoodRecommendationFeedback.verdict == "like")
+        )
+        or 0
+    )
+    neutrals = (
+        await db.scalar(
+            select(func.count())
+            .select_from(FoodRecommendationFeedback)
+            .where(FoodRecommendationFeedback.verdict == "neutral")
+        )
+        or 0
+    )
+    dislikes = (
+        await db.scalar(
+            select(func.count())
+            .select_from(FoodRecommendationFeedback)
+            .where(FoodRecommendationFeedback.verdict == "dislike")
+        )
+        or 0
+    )
+    average_rating = await db.scalar(
+        select(func.avg(FoodRecommendationFeedback.rating)).where(
+            FoodRecommendationFeedback.rating.is_not(None)
+        )
+    )
+    return AdminFoodRecommendationFeedbackSummary(
+        total=total,
+        likes=likes,
+        neutrals=neutrals,
+        dislikes=dislikes,
+        average_rating=float(average_rating) if average_rating is not None else None,
+    )
 
 
 async def get_dashboard_stats(db: AsyncSession, *, top_limit: int = 10) -> AdminDashboardStatsResponse:
@@ -126,6 +174,7 @@ async def get_dashboard_stats(db: AsyncSession, *, top_limit: int = 10) -> Admin
             likes=likes,
             dislikes=dislikes,
         ),
+        food_recommendation_feedback=await _get_food_recommendation_feedback_summary(db),
         top_health_conditions=_to_top_items(health_counter, limit=top_limit),
         top_recommended_foods=_to_top_items(recommended_counter, limit=top_limit),
     )
@@ -180,3 +229,90 @@ async def list_ai_feedback(
             )
         )
     return total, items
+
+
+async def list_food_recommendation_feedback(
+    db: AsyncSession,
+    *,
+    verdict: str | None,
+    limit: int,
+    offset: int,
+    top_limit: int = 8,
+) -> AdminFoodRecommendationFeedbackListResponse:
+    base_filters = []
+    if verdict:
+        base_filters.append(FoodRecommendationFeedback.verdict == verdict)
+
+    total = (
+        await db.scalar(
+            select(func.count())
+            .select_from(FoodRecommendationFeedback)
+            .where(*base_filters)
+        )
+        or 0
+    )
+
+    stmt = (
+        select(FoodRecommendationFeedback, ChatThread, User, ChatMessage, QueryLog, Food)
+        .join(ChatThread, ChatThread.id == FoodRecommendationFeedback.thread_id)
+        .join(User, User.id == FoodRecommendationFeedback.user_id, isouter=True)
+        .join(ChatMessage, ChatMessage.id == FoodRecommendationFeedback.assistant_message_id)
+        .join(QueryLog, QueryLog.id == ChatMessage.query_log_id, isouter=True)
+        .join(Food, Food.id == FoodRecommendationFeedback.food_id, isouter=True)
+        .where(*base_filters)
+        .order_by(FoodRecommendationFeedback.created_at.desc())
+        .limit(limit)
+        .offset(offset)
+    )
+    rows = await db.execute(stmt)
+
+    items: list[AdminFoodRecommendationFeedbackItem] = []
+    for feedback, thread, user, message, query_log, food in rows.all():
+        items.append(
+            AdminFoodRecommendationFeedbackItem(
+                id=feedback.id,
+                thread_id=feedback.thread_id,
+                assistant_message_id=feedback.assistant_message_id,
+                food_id=feedback.food_id,
+                food_name=food.name if food else None,
+                verdict=feedback.verdict,
+                rating=feedback.rating,
+                reasons=feedback.reasons or [],
+                comment=feedback.comment,
+                tried=feedback.tried,
+                created_at=feedback.created_at,
+                updated_at=feedback.updated_at,
+                user_id=user.id if user else None,
+                user_email=user.email if user else None,
+                thread_title=thread.title if thread else None,
+                query=query_log.query if query_log else None,
+            )
+        )
+
+    disliked_rows = await db.execute(
+        select(Food.name, func.count(FoodRecommendationFeedback.id).label("count"))
+        .join(Food, Food.id == FoodRecommendationFeedback.food_id)
+        .where(FoodRecommendationFeedback.verdict == "dislike")
+        .group_by(Food.name)
+        .order_by(desc("count"))
+        .limit(top_limit)
+    )
+    top_disliked_foods = [
+        AdminTopItem(name=name, count=count)
+        for name, count in disliked_rows.all()
+    ]
+
+    reason_counter: Counter[str] = Counter()
+    reason_rows = await db.execute(select(FoodRecommendationFeedback.reasons).where(*base_filters))
+    for (reasons,) in reason_rows.all():
+        reason_counter.update(reason for reason in (reasons or []) if reason)
+
+    return AdminFoodRecommendationFeedbackListResponse(
+        total=total,
+        limit=limit,
+        offset=offset,
+        summary=await _get_food_recommendation_feedback_summary(db),
+        top_disliked_foods=top_disliked_foods,
+        top_reasons=_to_top_items(reason_counter, limit=top_limit),
+        items=items,
+    )

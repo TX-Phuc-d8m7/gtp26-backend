@@ -46,3 +46,33 @@ class ChatMessage(Base):
     # Phản hồi của user với tin nhắn AI: "like" | "dislike" | None
     feedback = Column(String, nullable=True)
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class FoodRecommendationFeedback(Base):
+    __tablename__ = "food_recommendation_feedbacks"
+    __table_args__ = (
+        UniqueConstraint(
+            "user_id",
+            "assistant_message_id",
+            "food_id",
+            name="uq_food_recommendation_feedback_user_message_food",
+        ),
+    )
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    thread_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    assistant_message_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    food_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    verdict = Column(String, nullable=False)
+    rating = Column(Integer, nullable=True)
+    reasons = Column(ARRAY(Text), nullable=False, default=[])
+    comment = Column(Text, nullable=True)
+    tried = Column(Boolean, nullable=False, default=False)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    updated_at = Column(
+        DateTime(timezone=True),
+        nullable=False,
+        server_default=func.now(),
+        onupdate=func.now(),
+    )

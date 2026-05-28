@@ -44,6 +44,32 @@ class ChatThreadListResponse(BaseModel):
     items: List[ChatThreadResult]
 
 
+class FoodRecommendationFeedbackResult(BaseModel):
+    id: uuid.UUID
+    user_id: uuid.UUID
+    thread_id: uuid.UUID
+    assistant_message_id: uuid.UUID
+    food_id: uuid.UUID
+    verdict: Literal["like", "neutral", "dislike"]
+    rating: Optional[int] = None
+    reasons: List[str] = Field(default_factory=list)
+    comment: Optional[str] = None
+    tried: bool
+    created_at: datetime
+    updated_at: datetime
+
+    model_config = {"from_attributes": True}
+
+
+class FoodRecommendationFeedbackRequest(BaseModel):
+    food_id: uuid.UUID
+    verdict: Literal["like", "neutral", "dislike"]
+    rating: Optional[int] = Field(default=None, ge=1, le=5)
+    reasons: List[str] = Field(default_factory=list)
+    comment: Optional[str] = Field(default=None, max_length=1000)
+    tried: bool = False
+
+
 class ChatMessageResult(BaseModel):
     id: uuid.UUID
     thread_id: uuid.UUID
@@ -53,6 +79,7 @@ class ChatMessageResult(BaseModel):
     food_results: Optional[List[Dict[str, Any]]] = None
     structured_result: Optional[Dict[str, Any]] = None
     feedback: Optional[str] = None  # "like" | "dislike" | None
+    food_recommendation_feedbacks: List[FoodRecommendationFeedbackResult] = Field(default_factory=list)
     created_at: datetime
 
     model_config = {"from_attributes": True}

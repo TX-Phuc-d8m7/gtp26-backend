@@ -859,6 +859,22 @@ async def search_food(
     if post_processing_runtime.get("status") == "fallback":
         llm_runtime["fallbacks_used"].append("post_processing")
 
+    # --- Áp dụng LLM food_reasons từ post_processing (có điều kiện) ---
+    # Case A: không symptoms → apply
+    # Case B: symptoms + validation OK → KHÔNG apply (validation đã viết reason)
+    # Case C: symptoms + validation fallback → apply (có medical warnings)
+    _should_apply_post_reasons = (not symptoms) or (not validation_applied)
+    if _should_apply_post_reasons and _food_reasons_map:
+        updated_results: list[FoodResult] = []
+        for food_result in results_list:
+            post_reason = _food_reasons_map.get(food_result.name.lower())
+            if post_reason:
+                updated_results.append(food_result.model_copy(update={"reason": post_reason}))
+            else:
+                updated_results.append(food_result)  # giữ deterministic reason làm fallback
+        results_list = updated_results
+        print(f"[POST-PROCESSING] Đã apply LLM reasons cho {sum(1 for r in results_list if r.reason)} / {len(results_list)} món.")
+
     ai_insight = AIInsight(
         exclude=safety_e_tags + final_e_ings,
         include=symptoms, # Trả về list bệnh lý để UI dễ hiển thị Warning

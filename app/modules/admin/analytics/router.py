@@ -11,8 +11,13 @@ from app.db.session import get_db
 from app.modules.admin.analytics.schemas import (
     AdminAIFeedbackListResponse,
     AdminDashboardStatsResponse,
+    AdminFoodRecommendationFeedbackListResponse,
 )
-from app.modules.admin.analytics.service import get_dashboard_stats, list_ai_feedback
+from app.modules.admin.analytics.service import (
+    get_dashboard_stats,
+    list_ai_feedback,
+    list_food_recommendation_feedback,
+)
 from app.modules.auth.service import get_current_admin_user
 from app.modules.users.models import User
 
@@ -56,4 +61,24 @@ async def admin_ai_feedback(
         limit=limit,
         offset=offset,
         items=items,
+    )
+
+
+@router.get(
+    "/food-feedback",
+    response_model=AdminFoodRecommendationFeedbackListResponse,
+    summary="Danh sách feedback từng món gợi ý",
+)
+async def admin_food_recommendation_feedback(
+    verdict: Optional[Literal["like", "neutral", "dislike"]] = Query(default=None),
+    limit: int = Query(default=20, ge=1, le=100),
+    offset: int = Query(default=0, ge=0),
+    _: User = Depends(get_current_admin_user),
+    db: AsyncSession = Depends(get_db),
+):
+    return await list_food_recommendation_feedback(
+        db,
+        verdict=verdict,
+        limit=limit,
+        offset=offset,
     )

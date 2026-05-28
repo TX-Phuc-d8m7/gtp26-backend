@@ -161,13 +161,44 @@ def build_fallback_ai_response_with_notes(
 def _parse_post_processing_result(
     raw: dict,
 ) -> tuple[str, dict[str, str]]:
-    """Parse kết quả JSON từ post_processing_agent thành ai_response.
+    """Parse kết quả JSON từ post_processing_agent thành (ai_response, food_reasons_map).
 
-    `food_reasons_map` được giữ rỗng để tương thích chữ ký hàm cũ. Post-processing
-    không còn ghi reason từng card; với truy vấn sức khỏe, phần này thuộc validation.
+    food_reasons_map: dict keyed by lowercase tên món → LLM reason.
+    Dùng lowercase để so sánh không phân biệt chữ hoa/thường khi apply về FoodResult.
     """
     ai_response = (raw.get("ai_response") or "").strip()
-    return ai_response, {}
+    food_reasons_map: dict[str, str] = {}
+    for item in raw.get("food_reasons") or []:
+        name = (item.get("name") or "").strip()
+        reason = (item.get("reason") or "").strip()
+        if name and reason:
+            food_reasons_map[name.lower()] = reason
+    return ai_response, food_reasons_map
+
+
+def _get_per_food_medical_warnings(
+    food_soft_tags: list[str],
+    food_ingredients: list[str],
+    symptoms: list[str],
+) -> list[str]:
+    """Trả về cảnh báo y tế liên quan đến soft_tags/ingredients của một món cụ thể."""
+    warnings: list[str] = []
+    for symptom in symptoms:
+        rule = MEDICAL_ADVICE_RULES.get(symptom) or MEDICAL_ADVICE_RULES.get(
+            MEDICAL_ADVICE_ALIAS_MAP.get(symptom, "")
+        )
+        if not rule:
+            continue
+        for cond in rule.get("conditional_warnings", []):
+            trigger_type = cond["trigger_type"]
+            trigger_value = cond["trigger_value"]
+            matched = (
+                (trigger_type == "soft_tag" and trigger_value in food_soft_tags)
+                or (trigger_type == "ingredient" and trigger_value in food_ingredients)
+            )
+            if matched and cond["warning_text"] not in warnings:
+                warnings.append(cond["warning_text"])
+    return warnings
 
 
 async def run_post_processing_with_timeout(
@@ -180,7 +211,7 @@ async def run_post_processing_with_timeout(
 
     Returns:
         (ai_response_text, food_reasons_map, runtime)
-        food_reasons_map luôn rỗng; post-processing chỉ sinh ai_response tổng quan.
+        food_reasons_map: dict[lowercase_name → llm_reason]; rỗng nếu LLM lỗi/timeout.
     """
     started_at = time.perf_counter()
     runtime = {"status": "ok", "latency_ms": 0, "error_message": None}
@@ -241,11 +272,19 @@ def post_processing_agent(
     foods_summary = []
 
     for food in top5_foods:
-        all_tags.update(food.soft_tags)
-        all_tags.update(food.taste_profile)
-        all_tags.update(food.meal_context)
-        all_tags.update(food.occasion_context)
+        food_all_tags = (
+            list(food.soft_tags)
+            + list(food.taste_profile)
+            + list(food.meal_context)
+            + list(food.occasion_context)
+        )
+        all_tags.update(food_all_tags)
         all_ingredients.update(food.core_ingredients)
+        per_food_warnings = _get_per_food_medical_warnings(
+            food_soft_tags=food_all_tags,
+            food_ingredients=list(food.core_ingredients),
+            symptoms=user_symptoms,
+        )
         foods_summary.append({
             "name": food.name,
             "reason": food.reason,
@@ -254,6 +293,7 @@ def post_processing_agent(
             "taste_profile": food.taste_profile,
             "meal_context": food.meal_context,
             "occasion_context": food.occasion_context,
+            "medical_warnings_for_this_food": per_food_warnings,
         })
 
     print(f"\n[POST-PROCESSING] All tags from top5: {all_tags}")
@@ -336,14 +376,34 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, trả về JSON gồm 2 phần: 
 - Nếu top món có cả lựa chọn khô/healthy và món nước, hãy trình bày kiểu: "ưu tiên A/B; nếu thèm món nước như C/D thì lưu ý ...".
 - Không chỉ nhắc duy nhất món #1 hoặc 1-2 món đầu; top 5 đều là kết quả trả về nên cần được đề cập trong ai_response, trừ khi danh sách có ít hơn 5 món.
 
+[QUY TẮC CHO TRƯỜNG "food_reasons" — lý do từng món]
+- Viết lý do tự nhiên (25-55 chữ) cho TỪNG món trong danh sách top, dùng tiếng Việt.
+- Giải thích tại sao món phù hợp với câu hỏi của người dùng — không chỉ liệt kê tên tag kỹ thuật.
+- Nếu "medical_warnings_for_this_food" của món đó không rỗng: lồng cảnh báo vào lý do một cách tự nhiên, không tách rời.
+  VD: "Bún bò đậm đà, giàu đạm — phù hợp bữa trưa; nên ăn phần cái, hạn chế húp nước dùng nếu đang kiêng muối."
+- Nếu "medical_warnings_for_this_food" rỗng: chỉ nêu tại sao món phù hợp, không thêm cảnh báo không có căn cứ.
+- Không nhắc điểm số, matchScore, tên tag kỹ thuật (ví dụ: "soft_tag", "meal_context").
+- Tên món trong food_reasons phải khớp chính xác với tên món trong danh sách top.
+
 """
 
     response_schema = {
         "type": "OBJECT",
         "properties": {
             "ai_response": {"type": "STRING"},
+            "food_reasons": {
+                "type": "ARRAY",
+                "items": {
+                    "type": "OBJECT",
+                    "properties": {
+                        "name":   {"type": "STRING"},
+                        "reason": {"type": "STRING"},
+                    },
+                    "required": ["name", "reason"],
+                },
+            },
         },
-        "required": ["ai_response"],
+        "required": ["ai_response", "food_reasons"],
     }
 
     # --- Bước 6: Gọi LLM ---

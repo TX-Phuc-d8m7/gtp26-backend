@@ -46,6 +46,10 @@ async def init_db() -> None:
         await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_chat_messages_thread_id ON chat_messages (thread_id)"))
         await conn.execute(text("ALTER TABLE chat_messages ADD COLUMN IF NOT EXISTS feedback VARCHAR"))
         await conn.execute(text("ALTER TABLE chat_messages ADD COLUMN IF NOT EXISTS structured_result JSONB"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_food_recommendation_feedbacks_user_id ON food_recommendation_feedbacks (user_id)"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_food_recommendation_feedbacks_thread_id ON food_recommendation_feedbacks (thread_id)"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_food_recommendation_feedbacks_assistant_message_id ON food_recommendation_feedbacks (assistant_message_id)"))
+        await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_food_recommendation_feedbacks_food_id ON food_recommendation_feedbacks (food_id)"))
 
     if settings.run_seed_on_startup:
         await seed_data(

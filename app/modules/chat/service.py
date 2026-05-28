@@ -19,6 +19,8 @@ from app.modules.chat.models import ChatMessage, ChatThread
 from app.modules.chat.schemas import (
     ChatMessageListResponse,
     ChatMessageResult,
+    FoodRecommendationFeedbackRequest,
+    FoodRecommendationFeedbackResult,
     GuestChatHistoryItem,
     GuestChatMessageResult,
     GuestChatSendMessageResponse,
@@ -60,7 +62,27 @@ def _thread_to_result(thread: ChatThread, message_count: int = 0, last_message_a
     )
 
 
-def _message_to_result(msg: ChatMessage) -> ChatMessageResult:
+def _food_recommendation_feedback_to_result(feedback) -> FoodRecommendationFeedbackResult:
+    return FoodRecommendationFeedbackResult(
+        id=feedback.id,
+        user_id=feedback.user_id,
+        thread_id=feedback.thread_id,
+        assistant_message_id=feedback.assistant_message_id,
+        food_id=feedback.food_id,
+        verdict=feedback.verdict,
+        rating=feedback.rating,
+        reasons=feedback.reasons or [],
+        comment=feedback.comment,
+        tried=feedback.tried,
+        created_at=feedback.created_at,
+        updated_at=feedback.updated_at,
+    )
+
+
+def _message_to_result(
+    msg: ChatMessage,
+    food_recommendation_feedbacks: list[FoodRecommendationFeedbackResult] | None = None,
+) -> ChatMessageResult:
     return ChatMessageResult(
         id=msg.id,
         thread_id=msg.thread_id,
@@ -70,6 +92,7 @@ def _message_to_result(msg: ChatMessage) -> ChatMessageResult:
         food_results=msg.food_results,
         structured_result=msg.structured_result,
         feedback=msg.feedback,
+        food_recommendation_feedbacks=food_recommendation_feedbacks or [],
         created_at=msg.created_at,
     )
 
@@ -81,6 +104,17 @@ def _guest_message_to_result(msg: ConversationContextMessage) -> GuestChatMessag
         food_results=msg.food_results,
         structured_result=msg.structured_result,
     )
+
+
+def _message_contains_food_result(msg: ChatMessage, food_id: uuid.UUID) -> bool:
+    """Kiểm tra món được feedback có nằm trong danh sách gợi ý của message không."""
+    food_id_text = str(food_id)
+    for item in msg.food_results or []:
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("id") or "") == food_id_text:
+            return True
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -224,7 +258,22 @@ async def list_messages(
         limit=limit,
         offset=offset,
     )
-    return total, [_message_to_result(m) for m in messages]
+    assistant_message_ids = [m.id for m in messages if m.role == "assistant"]
+    feedback_rows = await chat_repo.list_food_recommendation_feedbacks(
+        db,
+        user_id=user_id,
+        message_ids=assistant_message_ids,
+    )
+    feedbacks_by_message: dict[uuid.UUID, list[FoodRecommendationFeedbackResult]] = {}
+    for feedback in feedback_rows:
+        feedbacks_by_message.setdefault(feedback.assistant_message_id, []).append(
+            _food_recommendation_feedback_to_result(feedback)
+        )
+
+    return total, [
+        _message_to_result(m, feedbacks_by_message.get(m.id))
+        for m in messages
+    ]
 
 
 # ---------------------------------------------------------------------------
@@ -511,6 +560,77 @@ async def set_message_feedback(
     await db.commit()
     await db.refresh(msg)
     return _message_to_result(msg)
+
+
+# ---------------------------------------------------------------------------
+# Food Recommendation Feedback — đánh giá từng món gợi ý
+# ---------------------------------------------------------------------------
+
+async def set_food_recommendation_feedback(
+    thread_id: uuid.UUID,
+    message_id: uuid.UUID,
+    user_id: uuid.UUID,
+    data: FoodRecommendationFeedbackRequest,
+    db: AsyncSession,
+) -> Optional[FoodRecommendationFeedbackResult]:
+    """
+    Tạo hoặc cập nhật feedback của user cho một món trong assistant message.
+    Trả None nếu thread/message không thuộc user. Raise ValueError nếu food_id
+    không nằm trong food_results của assistant message.
+    """
+    if not await _get_thread_for_user(thread_id, user_id, db):
+        return None
+
+    msg = await chat_repo.get_assistant_message(
+        db,
+        thread_id=thread_id,
+        message_id=message_id,
+    )
+    if msg is None:
+        return None
+
+    if not _message_contains_food_result(msg, data.food_id):
+        raise ValueError("FOOD_NOT_IN_ASSISTANT_MESSAGE")
+
+    normalized_reasons = [
+        reason.strip()
+        for reason in data.reasons
+        if reason.strip()
+    ]
+    normalized_comment = data.comment.strip() if data.comment and data.comment.strip() else None
+
+    feedback = await chat_repo.get_food_recommendation_feedback(
+        db,
+        user_id=user_id,
+        assistant_message_id=message_id,
+        food_id=data.food_id,
+    )
+    if feedback is None:
+        feedback = await chat_repo.create_food_recommendation_feedback(
+            db,
+            user_id=user_id,
+            thread_id=thread_id,
+            assistant_message_id=message_id,
+            food_id=data.food_id,
+            verdict=data.verdict,
+            rating=data.rating,
+            reasons=normalized_reasons,
+            comment=normalized_comment,
+            tried=data.tried,
+        )
+    else:
+        chat_repo.apply_food_recommendation_feedback_updates(
+            feedback,
+            verdict=data.verdict,
+            rating=data.rating,
+            reasons=normalized_reasons,
+            comment=normalized_comment,
+            tried=data.tried,
+        )
+
+    await db.commit()
+    await db.refresh(feedback)
+    return _food_recommendation_feedback_to_result(feedback)
 
 
 # ---------------------------------------------------------------------------

@@ -5,7 +5,7 @@ Model definitions live in their owning modules. Prefer importing from
 """
 
 from app.modules.admin.alias_overrides.models import IngredientAliasOverride
-from app.modules.chat.models import ChatMessage, ChatThread
+from app.modules.chat.models import ChatMessage, ChatThread, FoodRecommendationFeedback
 from app.modules.favorites.models import FavoriteFood
 from app.modules.foods.models import Food, Tag
 from app.modules.places.models import PlaceSearchCache
@@ -16,6 +16,7 @@ __all__ = [
     "ChatMessage",
     "ChatThread",
     "FavoriteFood",
+    "FoodRecommendationFeedback",
     "Food",
     "IngredientAliasOverride",
     "PlaceSearchCache",

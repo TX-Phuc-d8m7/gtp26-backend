@@ -14,7 +14,7 @@ from typing import Any
 from sqlalchemy import delete, func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.modules.chat.models import ChatMessage, ChatThread
+from app.modules.chat.models import ChatMessage, ChatThread, FoodRecommendationFeedback
 
 
 @dataclass(frozen=True)
@@ -348,6 +348,90 @@ def update_message_content_and_context(
 def set_message_feedback(message: ChatMessage, feedback: str | None) -> None:
     """Cập nhật feedback trên assistant message đã load."""
     message.feedback = feedback
+
+
+async def list_food_recommendation_feedbacks(
+    db: AsyncSession,
+    *,
+    user_id: uuid.UUID,
+    message_ids: list[uuid.UUID],
+) -> list[FoodRecommendationFeedback]:
+    """Lấy food-level feedback của user cho một nhóm assistant message."""
+    if not message_ids:
+        return []
+
+    return list((await db.execute(
+        select(FoodRecommendationFeedback)
+        .where(
+            FoodRecommendationFeedback.user_id == user_id,
+            FoodRecommendationFeedback.assistant_message_id.in_(message_ids),
+        )
+    )).scalars().all())
+
+
+async def get_food_recommendation_feedback(
+    db: AsyncSession,
+    *,
+    user_id: uuid.UUID,
+    assistant_message_id: uuid.UUID,
+    food_id: uuid.UUID,
+) -> FoodRecommendationFeedback | None:
+    """Lấy feedback duy nhất của user cho một món trong một assistant message."""
+    return (await db.execute(
+        select(FoodRecommendationFeedback).where(
+            FoodRecommendationFeedback.user_id == user_id,
+            FoodRecommendationFeedback.assistant_message_id == assistant_message_id,
+            FoodRecommendationFeedback.food_id == food_id,
+        )
+    )).scalar_one_or_none()
+
+
+async def create_food_recommendation_feedback(
+    db: AsyncSession,
+    *,
+    user_id: uuid.UUID,
+    thread_id: uuid.UUID,
+    assistant_message_id: uuid.UUID,
+    food_id: uuid.UUID,
+    verdict: str,
+    rating: int | None,
+    reasons: list[str],
+    comment: str | None,
+    tried: bool,
+) -> FoodRecommendationFeedback:
+    """Tạo food-level feedback nhưng chưa commit."""
+    feedback = FoodRecommendationFeedback(
+        user_id=user_id,
+        thread_id=thread_id,
+        assistant_message_id=assistant_message_id,
+        food_id=food_id,
+        verdict=verdict,
+        rating=rating,
+        reasons=reasons,
+        comment=comment,
+        tried=tried,
+    )
+    db.add(feedback)
+    await db.flush()
+    return feedback
+
+
+def apply_food_recommendation_feedback_updates(
+    feedback: FoodRecommendationFeedback,
+    *,
+    verdict: str,
+    rating: int | None,
+    reasons: list[str],
+    comment: str | None,
+    tried: bool,
+) -> None:
+    """Cập nhật food-level feedback trên model đã load."""
+    feedback.verdict = verdict
+    feedback.rating = rating
+    feedback.reasons = reasons
+    feedback.comment = comment
+    feedback.tried = tried
+    feedback.updated_at = func.now()
 
 
 async def touch_thread_updated_at(db: AsyncSession, *, thread_id: uuid.UUID) -> None:
