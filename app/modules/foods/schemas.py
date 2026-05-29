@@ -20,6 +20,8 @@ class FoodListItem(BaseModel):
     occasion_context: List[str]
     # Nhóm nguyên liệu chính hiển thị trên UI (ví dụ: "Hải sản", "Thịt bò")
     primary_category: Optional[str] = None
+    # Ngữ cảnh phục vụ — dùng để ẩn/hiện nút "Quán gần đây" ở frontend
+    dining_context: Optional[str] = None  # "restaurant" | "home_cooked" | "both"
 
     model_config = {"from_attributes": True}
 
@@ -60,6 +62,8 @@ class FoodDetailResponse(BaseModel):
     is_favorite: Optional[bool] = None
     user_rating: Optional[int] = None
     user_notes: Optional[str] = None
+    # Ngữ cảnh phục vụ — dùng để ẩn/hiện nút "Quán gần đây" ở frontend
+    dining_context: Optional[str] = None  # "restaurant" | "home_cooked" | "both"
 
     model_config = {"from_attributes": True}
 

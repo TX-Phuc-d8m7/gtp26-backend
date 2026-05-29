@@ -17,7 +17,7 @@
 ## Chi tiết
 
 ### #330 Tokbokki phô mai
-- Tags: Đậm đà, Nước sền sệt, Kho/Rim, Cay, Béo ngậy, Từ sữa / Phô mai, Dai / Sần sật, Ẩm thực đường phố
+- Tags: Đậm đà, Nước sền sệt, Kho / Rim, Cay, Béo ngậy, Từ sữa / Phô mai, Dai / Sần sật, Ẩm thực đường phố
 - P1 `missing_seafood`: Có nguyên liệu hải sản nhưng thiếu tag 'Hải sản'
 
 ### #91 Cháo lươn Nghệ An
@@ -34,7 +34,7 @@
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['dầu ăn']
 
 ### #195 Đậu hũ nhồi thịt sốt cà
-- Tags: Đậm đà, Nước sền sệt, Kho/Rim, Giàu đạm, Mềm, Món Việt truyền thống, Ăn no, Ấm bụng
+- Tags: Đậm đà, Nước sền sệt, Kho / Rim, Giàu đạm, Mềm, Món Việt truyền thống, Ăn no, Ấm bụng
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['dầu ăn']
 
 ### #44 Miến xào hải sản

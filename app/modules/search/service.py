@@ -789,6 +789,7 @@ async def search_food(
             occasion_context=food.occasion_context,
             matchScore=match_score,
             reason=reason,
+            dining_context=food.dining_context,
         ))
     returned_count = len(results_list)
     for rank, result in enumerate(results_list, 1):

@@ -19,6 +19,7 @@ class AdminFoodCreate(BaseModel):
     taste_profile: List[str] = Field(default_factory=list)
     meal_context: List[str] = Field(default_factory=list)
     occasion_context: List[str] = Field(default_factory=list)
+    dining_context: Optional[str] = "both"  # "restaurant" | "home_cooked" | "both"
 
 
 class AdminFoodUpdate(BaseModel):
@@ -33,6 +34,7 @@ class AdminFoodUpdate(BaseModel):
     taste_profile: Optional[List[str]] = None
     meal_context: Optional[List[str]] = None
     occasion_context: Optional[List[str]] = None
+    dining_context: Optional[str] = None  # "restaurant" | "home_cooked" | "both"
 
 
 class AdminFoodResult(BaseModel):
@@ -50,6 +52,7 @@ class AdminFoodResult(BaseModel):
     meal_context: List[str]
     occasion_context: List[str]
     has_embedding: bool = False  # True nếu vector embedding đã được sinh
+    dining_context: Optional[str] = None  # "restaurant" | "home_cooked" | "both"
 
     model_config = {"from_attributes": True}
 

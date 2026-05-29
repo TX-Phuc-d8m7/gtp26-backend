@@ -14,7 +14,7 @@ from app.modules.chat.engine.response_factory import (
 EXCLUDE_TAG_KEYWORDS = [
     ("Món nước", ["do nuoc", "mon nuoc"]),
     ("Gỏi / Nộm / Trộn", ["do goi", "mon goi", "goi"]),
-    ("Sống/Chín tái", ["do song", "song tai", "chin tai"]),
+    ("Sống / Chín tái", ["do song", "song tai", "chin tai"]),
     ("Chiên / Rán", ["do chien", "chien ran", "chien"]),
     ("Món khô", ["mon kho", "do kho"]),
 ]

@@ -395,7 +395,7 @@
     "soft_tags": [
       "Món khô",
       "Hấp / Luộc",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Mềm"
     ],
     "raw_ingredients": [
@@ -852,7 +852,7 @@
       "Hấp / Luộc",
       "Từ sữa / Phô mai",
       "Giàu tinh bột",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh"
     ],
     "raw_ingredients": [
@@ -928,7 +928,7 @@
       "Món khô",
       "Hấp / Luộc",
       "Từ sữa / Phô mai",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Giòn / Giòn rụm",
       "Món Việt truyền thống"
     ],
@@ -1083,7 +1083,7 @@
     "soft_tags": [
       "Từ sữa / Phô mai",
       "Nhiều dầu mỡ / Calo cao",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh"
     ],
     "raw_ingredients": [
@@ -1154,7 +1154,7 @@
     "soft_tags": [
       "Món khô",
       "Từ sữa / Phô mai",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Mềm"
     ],
     "raw_ingredients": [
@@ -1918,7 +1918,7 @@
       "Cuốn / Gói",
       "Giàu chất xơ",
       "Giòn / Giòn rụm",
-      "Thanh mát/Giải nhiệt"
+      "Thanh mát / Giải nhiệt"
     ],
     "raw_ingredients": [
       "Bắp cải tím",
@@ -2438,7 +2438,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Từ sữa / Phô mai",
       "Giàu tinh bột",
       "Dai / Sần sật"
@@ -2754,7 +2754,7 @@
       "Món nước",
       "Hấp / Luộc",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh",
       "Món Á"
     ],
@@ -2802,7 +2802,7 @@
       "occasion_context_source": "llm",
       "needs_review": false,
       "notes": [
-        "llm: Mì lạnh là món chính có tinh bột và đạm, cung cấp dinh dưỡng đầy đủ nên là 'Ăn no'. 'Thanh mát/Giải nhiệt' là đặc tính nhưng không phải context chính. Bỏ 'Tráng miệng' và 'Ấm bụng' vì món lạnh."
+        "llm: Mì lạnh là món chính có tinh bột và đạm, cung cấp dinh dưỡng đầy đủ nên là 'Ăn no'. 'Thanh mát / Giải nhiệt' là đặc tính nhưng không phải context chính. Bỏ 'Tráng miệng' và 'Ấm bụng' vì món lạnh."
       ]
     }
   },
@@ -3392,7 +3392,7 @@
       "Gỏi / Nộm / Trộn",
       "Hải sản",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt"
+      "Thanh mát / Giải nhiệt"
     ],
     "raw_ingredients": [
       "Đu đủ",
@@ -4004,7 +4004,7 @@
     ],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Mềm",
       "Món Á",
@@ -4853,7 +4853,7 @@
     ],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Món Á"
     ],
@@ -6052,7 +6052,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Món khô",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Giàu tinh bột",
       "Mềm",

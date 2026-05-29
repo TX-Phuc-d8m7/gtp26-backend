@@ -32,6 +32,7 @@ class FoodResult(BaseModel):
     occasion_context: List[str] = Field(default_factory=list)
     matchScore: float             # Nên để kiểu float cho số điểm Vector thay vì str
     reason: Optional[str] = None  # Giải thích ngắn vì sao món được gợi ý
+    dining_context: Optional[str] = None  # "restaurant" | "home_cooked" | "both"
 
 
 class SearchResponse(BaseModel):

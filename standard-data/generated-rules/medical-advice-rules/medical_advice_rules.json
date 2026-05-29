@@ -509,7 +509,7 @@
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Kho/Rim",
+        "trigger_value": "Kho / Rim",
         "warning_text": "Món kho/rim thường ngấm rất nhiều gia vị mặn. Tuyệt đối hạn chế chan phần nước sốt/nước kho vào cơm, chỉ nên gắp phần cái và ăn kèm nhiều rau luộc để cân bằng lượng natri."
       },
       {
@@ -614,7 +614,7 @@
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Thịt/cá sống hoặc tái có thể làm dạ dày đang viêm khó chịu hơn. Nên chọn món chín kỹ."
       },
       {
@@ -709,7 +709,7 @@
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Kho/Rim",
+        "trigger_value": "Kho / Rim",
         "warning_text": "Món kho/rim thường mặn và có thể nhiều chất béo. Nên hạn chế nước kho, chọn phần nạc và ăn kèm rau."
       },
       {
@@ -854,7 +854,7 @@
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Món sống/tái có nguy cơ làm tiêu chảy nặng hơn hoặc kéo dài. Nên chọn món chín kỹ hoàn toàn."
       },
       {
@@ -1039,7 +1039,7 @@
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Khi mang thai nên tránh thịt/cá/trứng sống hoặc tái do nguy cơ nhiễm khuẩn/ký sinh trùng. Hãy chọn món chín kỹ hoàn toàn."
       },
       {
@@ -1104,7 +1104,7 @@
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Món sống/tái làm tăng nguy cơ nhiễm khuẩn, không phù hợp khi có vết thương hở hoặc mới phẫu thuật. Nên chọn món chín kỹ."
       },
       {

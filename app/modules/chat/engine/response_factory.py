@@ -31,6 +31,7 @@ def serialize_food_results(search_result: SearchResponse | None) -> list[dict[st
             "occasion_context": item.occasion_context,
             "matchScore": item.matchScore,
             "reason": item.reason,
+            "dining_context": item.dining_context,
         }
         for item in search_result.results
     ]

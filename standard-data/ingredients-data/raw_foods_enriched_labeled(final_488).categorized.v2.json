@@ -2311,7 +2311,7 @@
     "soft_tags": [
       "Món khô",
       "Chiên / Rán",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Giàu đạm",
       "Dai / Sần sật",
@@ -2992,7 +2992,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Từ sữa / Phô mai",
       "Nóng hổi"
@@ -3357,7 +3357,7 @@
       "Món khô",
       "Hấp / Luộc",
       "Hải sản",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món Việt truyền thống"
     ],
     "raw_ingredients": [
@@ -4100,7 +4100,7 @@
     "soft_tags": [
       "Món khô",
       "Gỏi / Nộm / Trộn",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dai / Sần sật",
       "Hải sản"
     ],
@@ -4181,8 +4181,8 @@
       "Gỏi / Nộm / Trộn",
       "Hải sản",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
-      "Sống/Chín tái"
+      "Thanh mát / Giải nhiệt",
+      "Sống / Chín tái"
     ],
     "raw_ingredients": [
       "250 g filet cá trích tươi",
@@ -4647,7 +4647,7 @@
       "Gỏi / Nộm / Trộn",
       "Giàu chất xơ",
       "Healthy / Eat Clean",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món chay"
     ],
     "raw_ingredients": [
@@ -5328,7 +5328,7 @@
       "Cuốn / Gói",
       "Hải sản",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt"
+      "Thanh mát / Giải nhiệt"
     ],
     "raw_ingredients": [
       "250 g filet cá trích tươi",
@@ -5632,7 +5632,7 @@
     ],
     "soft_tags": [
       "Món khô",
-      "Kho/Rim",
+      "Kho / Rim",
       "Nội tạng",
       "Giàu đạm",
       "Giàu tinh bột",
@@ -6604,7 +6604,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Giàu đạm",
       "Mềm",
@@ -6732,7 +6732,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Mềm",
       "Món Việt truyền thống"
@@ -6802,7 +6802,7 @@
       "Cuốn / Gói",
       "Hải sản",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt"
+      "Thanh mát / Giải nhiệt"
     ],
     "raw_ingredients": [
       "500 g thịt ba rọi",
@@ -6923,7 +6923,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Mềm",
       "Món Việt truyền thống"
@@ -7355,7 +7355,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Mềm",
       "Món Việt truyền thống"
@@ -7444,7 +7444,7 @@
     "soft_tags": [
       "Món khô",
       "Chiên / Rán",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Giàu tinh bột",
       "Giòn / Giòn rụm",

@@ -415,7 +415,7 @@
       "Món nước",
       "Hấp / Luộc",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món Việt truyền thống",
       "Hải sản"
     ],
@@ -542,7 +542,7 @@
       "Hải sản",
       "Giàu chất xơ",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Mềm"
     ],
     "raw_ingredients": [
@@ -791,7 +791,7 @@
       "Hấp / Luộc",
       "Giàu chất xơ",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Mềm",
       "Món Việt truyền thống"
     ],
@@ -855,7 +855,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Món khô",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Giàu đạm",
       "Mềm",
@@ -913,7 +913,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Món khô",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Nội tạng",
       "Giàu đạm",
@@ -969,7 +969,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Món khô",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Giàu đạm",
       "Dai / Sần sật",
@@ -1030,7 +1030,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Món khô",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu chất xơ",
       "Giàu đạm",
       "Mềm",
@@ -1245,7 +1245,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Mềm",
       "Món Việt truyền thống"
@@ -1551,7 +1551,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Khó tiêu / Nặng bụng",
       "Mềm",
@@ -1682,7 +1682,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Giàu đạm",
       "Mềm",
@@ -1753,7 +1753,7 @@
       "Hải sản",
       "Giàu chất xơ",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Mềm"
     ],
     "raw_ingredients": [
@@ -2594,7 +2594,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Món khô",
-      "Kho/Rim",
+      "Kho / Rim",
       "Giàu đạm",
       "Giòn / Giòn rụm",
       "Mềm",
@@ -4609,7 +4609,7 @@
     ],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Nội tạng",
       "Từ sữa / Phô mai"
     ],
@@ -4761,7 +4761,7 @@
       "Món khô",
       "Cuốn / Gói",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dai / Sần sật"
     ],
     "raw_ingredients": [
@@ -4845,7 +4845,7 @@
       "Cuốn / Gói",
       "Giàu chất xơ",
       "Giàu đạm",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dai / Sần sật"
     ],
     "raw_ingredients": [
@@ -5296,7 +5296,7 @@
     "preprocessing_ingredients": [],
     "soft_tags": [
       "Nước sền sệt",
-      "Kho/Rim",
+      "Kho / Rim",
       "Hải sản",
       "Giàu đạm",
       "Ẩm thực đường phố"
@@ -5543,7 +5543,7 @@
     "soft_tags": [
       "Nước sền sệt",
       "Hấp / Luộc",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dai / Sần sật",
       "Mềm"
     ],
@@ -5660,7 +5660,7 @@
       "Hấp / Luộc",
       "Từ sữa / Phô mai",
       "Nhiều dầu mỡ / Calo cao",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh"
     ],
     "raw_ingredients": [
@@ -5988,7 +5988,7 @@
       "Món khô",
       "Gỏi / Nộm / Trộn",
       "Từ sữa / Phô mai",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh",
       "Mềm"
     ],
@@ -6090,7 +6090,7 @@
       "Món khô",
       "Gỏi / Nộm / Trộn",
       "Từ sữa / Phô mai",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh"
     ],
     "raw_ingredients": [
@@ -6377,7 +6377,7 @@
       "Nước sền sệt",
       "Hấp / Luộc",
       "Từ sữa / Phô mai",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dai / Sần sật"
     ],
     "raw_ingredients": [
@@ -6451,7 +6451,7 @@
     "soft_tags": [
       "Món khô",
       "Hấp / Luộc",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh",
       "Mềm",
       "Món Việt truyền thống",
@@ -6500,7 +6500,7 @@
     "soft_tags": [
       "Món khô",
       "Cuốn / Gói",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Mềm"
     ],
     "raw_ingredients": [

@@ -37,7 +37,7 @@ OCCASION_CONTEXT_OPTIONS = sorted([
 
 DISH_TYPE_OPTIONS = sorted([
     "Lẩu", "Nướng", "Hấp / Luộc", "Chiên / Rán", "Xào", "Rang",
-    "Hầm / Ninh", "Kho/Rim", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
+    "Hầm / Ninh", "Kho / Rim", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
     "Súp", "Cháo", "Món nước", "Món khô", "Nước sền sệt",
 ])
 
@@ -55,8 +55,8 @@ NUTRITION_OPTIONS = sorted([
 ])
 
 TEXTURE_OPTIONS = sorted([
-    "Nóng hổi", "Thanh mát/Giải nhiệt", "Món lạnh",
-    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống/Chín tái",
+    "Nóng hổi", "Thanh mát / Giải nhiệt", "Món lạnh",
+    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống / Chín tái",
 ])
 
 # ---------------------------------------------------------------------------
@@ -319,6 +319,7 @@ async def list_foods(
             meal_context=f.meal_context or [],
             occasion_context=f.occasion_context or [],
             primary_category=get_primary_category(f.core_ingredient_keys),
+            dining_context=f.dining_context,
         )
         for f in foods
     ]
@@ -372,6 +373,7 @@ async def get_food_detail(
         is_favorite=is_fav,
         user_rating=user_rating,
         user_notes=user_notes,
+        dining_context=food.dining_context,
     )
 
 

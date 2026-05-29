@@ -55,8 +55,8 @@ TAG_ALIAS_MAP = {
     # 2. NHIỆT ĐỘ & CẢM GIÁC
     # ==========================
     "nong hoi": "Nóng hổi",
-    "thanh mat / giai nhiet": "Thanh mát/Giải nhiệt",
-    "thanh mat/giai nhiet": "Thanh mát/Giải nhiệt",
+    "thanh mat / giai nhiet": "Thanh mát / Giải nhiệt",
+    "thanh mat/giai nhiet": "Thanh mát / Giải nhiệt",
     "mon lanh": "Món lạnh",
 
     # ==========================
@@ -69,8 +69,8 @@ TAG_ALIAS_MAP = {
     "dai/san sat": "Dai / Sần sật",
     "san sat": "Dai / Sần sật",
     "mem": "Mềm",
-    "song / chin tai": "Sống/Chín tái",
-    "song/chin tai": "Sống/Chín tái",
+    "song / chin tai": "Sống / Chín tái",
+    "song/chin tai": "Sống / Chín tái",
 
     # ==========================
     # 4. DẠNG MÓN
@@ -100,8 +100,8 @@ TAG_ALIAS_MAP = {
     "ham / ninh": "Hầm / Ninh",
     "ham/ninh": "Hầm / Ninh",
     "lau": "Lẩu",
-    "kho / rim": "Kho/Rim",
-    "kho/rim": "Kho/Rim",
+    "kho / rim": "Kho / Rim",
+    "kho/rim": "Kho / Rim",
     "sup": "Súp",
     "chao": "Cháo",
     "rang": "Rang",

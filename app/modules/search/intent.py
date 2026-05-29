@@ -141,7 +141,7 @@ def supervisor_agent(user_input: str):
        - NGUYÊN TẮC THÉP: LLM chỉ là "Máy ghi âm", tuyệt đối KHÔNG ĐƯỢC SUY DIỄN nhu cầu dựa trên bệnh lý.
        - Thời điểm/bữa ăn: "sáng mai" -> "Ăn sáng"; "tối nay" -> "Ăn tối"; "khuya" -> "Ăn khuya".
        - Ngữ cảnh: "no bụng" -> "Ăn no"; "ăn vặt" -> "Ăn vặt"; "nhậu" -> "Mồi nhậu".
-       - Tính chất: "món nước" -> "Món nước"; "nóng hổi" -> "Nóng hổi"; "thanh mát" -> "Thanh mát/Giải nhiệt".
+       - Tính chất: "món nước" -> "Món nước"; "nóng hổi" -> "Nóng hổi"; "thanh mát" -> "Thanh mát / Giải nhiệt".
 
     7. exclude_soft_tags (PHỦ ĐỊNH CHỦ ĐỘNG): CHỈ ĐIỀN khi user đích thân dùng các từ ngữ phủ định rõ ràng (không/ít/tránh/sợ/đừng) đối với một tính chất món ăn.
        - Mặc định PHẢI TRẢ [] nếu user không nói các từ khóa phủ định sở thích.

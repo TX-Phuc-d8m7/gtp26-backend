@@ -106,9 +106,9 @@ MEDICAL_ADVICE_ALIAS_MAP = {
 
 valid_soft_tags = [
     "Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy",
-    "Nóng hổi", "Thanh mát/Giải nhiệt", "Món nước", "Món khô", "Nước sền sệt", "Món lạnh", "Sống/Chín tái",
-    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", 
-    "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Hầm / Ninh", "Lẩu", "Kho/Rim", "Súp", "Cháo", "Rang",
+    "Nóng hổi", "Thanh mát / Giải nhiệt", "Món nước", "Món khô", "Nước sền sệt", "Món lạnh", "Sống / Chín tái",
+    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm",
+    "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Hầm / Ninh", "Lẩu", "Kho / Rim", "Súp", "Cháo", "Rang",
     "Ăn no", "Ăn vặt", "Mồi nhậu", "Ăn sáng", "Ăn trưa", "Ăn chiều / xế", "Ăn tối", "Ăn khuya", "Tráng miệng", "Giải rượu", "Giải cảm", "Ấm bụng",
     "Đặc sản Đà Nẵng", "Ẩm thực đường phố", "Món Việt truyền thống", "Món Á", "Món Âu", "Thức ăn nhanh", "Món chay",
     "Giàu chất xơ", "Giàu đạm", "Giàu vitamin", "Giàu tinh bột", "Nội tạng", "Từ sữa / Phô mai", "Thực phẩm chế biến sẵn", "Bánh ngọt",
@@ -119,7 +119,7 @@ valid_soft_tags = [
 TASTE_PROFILE_TAGS = {"Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy"}
 MEAL_CONTEXT_TAGS = {"Ăn sáng", "Ăn trưa", "Ăn tối", "Ăn chiều / xế", "Ăn khuya"}
 OCCASION_CONTEXT_TAGS = {"Ăn no", "Ăn vặt", "Mồi nhậu", "Tráng miệng", "Giải rượu", "Giải cảm", "Ấm bụng"}
-DISH_TYPE_TAGS = {"Lẩu", "Nướng", "Cháo", "Súp", "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Kho/Rim", "Chiên / Rán", "Hấp / Luộc", "Xào", "Rang"}
+DISH_TYPE_TAGS = {"Lẩu", "Nướng", "Cháo", "Súp", "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Kho / Rim", "Chiên / Rán", "Hấp / Luộc", "Xào", "Rang"}
 
 # --- Trọng số & Cấu hình cho thuật toán tính điểm (Scoring) ---
 USER_SOFT_TAG_BONUS = 0.018
@@ -177,11 +177,11 @@ MEDICAL_CAUTION_INGREDIENT_KEY_RULES = {
 TAG_ALIAS_MAP = {
     "hap/luoc": "Hấp / Luộc",
     "hap / luoc": "Hấp / Luộc",
-    "song / chin tai": "Sống/Chín tái",
+    "song / chin tai": "Sống / Chín tái",
     "cuon/goi": "Cuốn / Gói",
     "thanh dam": "Thanh đạm",
-    "thanh mat / giai nhiet": "Thanh mát/Giải nhiệt",
-    "thanh mat/giai nhiet": "Thanh mát/Giải nhiệt",
+    "thanh mat / giai nhiet": "Thanh mát / Giải nhiệt",
+    "thanh mat/giai nhiet": "Thanh mát / Giải nhiệt",
     "do an nhanh": "Thức ăn nhanh",
     "an dem": "Ăn khuya",
     "it beo": "Thanh đạm",
@@ -219,9 +219,9 @@ USER_INGREDIENT_CATEGORY_TAG_MAP = {
     "dam da": ["Đậm đà"],
     "dam vi": ["Đậm đà"],
     "noi tang": ["Nội tạng"],
-    "do song": ["Sống/Chín tái"],
-    "tai": ["Sống/Chín tái"],
-    "song tai": ["Sống/Chín tái"],
+    "do song": ["Sống / Chín tái"],
+    "tai": ["Sống / Chín tái"],
+    "song tai": ["Sống / Chín tái"],
     "goi": ["Gỏi / Nộm / Trộn"],
     "nom": ["Gỏi / Nộm / Trộn"],
     "tron": ["Gỏi / Nộm / Trộn"],

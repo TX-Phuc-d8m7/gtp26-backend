@@ -886,7 +886,7 @@
       "Dễ tiêu",
       "Thanh đạm",
       "Hấp / Luộc",
-      "Thanh mát/Giải nhiệt"
+      "Thanh mát / Giải nhiệt"
     ],
     "exclude_ingredient": [
       "duong phen",
@@ -943,7 +943,7 @@
       "Thực phẩm chế biến sẵn",
       "Nội tạng",
       "Chiên / Rán",
-      "Kho/Rim",
+      "Kho / Rim",
       "Thức ăn nhanh",
       "Khó tiêu / Nặng bụng"
     ],
@@ -954,7 +954,7 @@
       "Giàu vitamin",
       "Healthy / Eat Clean",
       "Dễ tiêu",
-      "Thanh mát/Giải nhiệt"
+      "Thanh mát / Giải nhiệt"
     ],
     "exclude_ingredient": [
       "mam tom",
@@ -1019,7 +1019,7 @@
       "Hải sản",
       "Nội tạng",
       "Từ sữa / Phô mai",
-      "Kho/Rim",
+      "Kho / Rim",
       "Lẩu"
     ],
     "prefer_soft_tag": [
@@ -1108,7 +1108,7 @@
       "Xào",
       "Nướng",
       "Gỏi / Nộm / Trộn",
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Khó tiêu / Nặng bụng",
       "Thực phẩm chế biến sẵn"
     ],
@@ -1187,7 +1187,7 @@
       "Chua",
       "Nhiều dầu mỡ / Calo cao",
       "Chiên / Rán",
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Thực phẩm chế biến sẵn",
       "Béo ngậy",
       "Khó tiêu / Nặng bụng",
@@ -1246,7 +1246,7 @@
       "Nội tạng",
       "Thực phẩm chế biến sẵn",
       "Chiên / Rán",
-      "Kho/Rim",
+      "Kho / Rim",
       "Thức ăn nhanh",
       "Khó tiêu / Nặng bụng",
       "Món lạnh",
@@ -1258,7 +1258,7 @@
       "Giàu chất xơ",
       "Healthy / Eat Clean",
       "Giàu vitamin",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dễ tiêu",
       "Súp",
       "Cháo"
@@ -1332,12 +1332,12 @@
       "Cay",
       "Chiên / Rán",
       "Thực phẩm chế biến sẵn",
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Dai / Sần sật"
     ],
     "prefer_soft_tag": [
       "Giàu chất xơ",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dễ tiêu",
       "Món nước",
       "Súp",
@@ -1398,7 +1398,7 @@
       "Chiên / Rán",
       "Giòn / Giòn rụm",
       "Món lạnh",
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Khó tiêu / Nặng bụng",
       "Thực phẩm chế biến sẵn",
       "Dai / Sần sật"
@@ -1487,7 +1487,7 @@
       "Hấp / Luộc",
       "Món chay",
       "Giàu vitamin",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Dễ tiêu",
       "Healthy / Eat Clean",
       "Súp",
@@ -1556,7 +1556,7 @@
       "Cay",
       "Chua",
       "Béo ngậy",
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Hải sản",
       "Thực phẩm chế biến sẵn",
       "Từ sữa / Phô mai",
@@ -1573,7 +1573,7 @@
       "Cháo",
       "Súp",
       "Hấp / Luộc",
-      "Kho/Rim",
+      "Kho / Rim",
       "Rang",
       "Giàu tinh bột"
     ],
@@ -1644,10 +1644,10 @@
       "Nướng",
       "Nhiều dầu mỡ / Calo cao",
       "Khó tiêu / Nặng bụng",
-      "Sống/Chín tái"
+      "Sống / Chín tái"
     ],
     "prefer_soft_tag": [
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Món lạnh",
       "Mềm",
       "Dễ tiêu",
@@ -1705,7 +1705,7 @@
       "Nhiều dầu mỡ / Calo cao",
       "Béo ngậy",
       "Cay",
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Thực phẩm chế biến sẵn",
       "Món lạnh",
       "Chiên / Rán",
@@ -1802,7 +1802,7 @@
       "Thanh đạm",
       "Hấp / Luộc",
       "Dễ tiêu",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Gỏi / Nộm / Trộn",
       "Giàu đạm"
     ],
@@ -1866,7 +1866,7 @@
       "Dễ tiêu",
       "Healthy / Eat Clean",
       "Giàu vitamin",
-      "Thanh mát/Giải nhiệt",
+      "Thanh mát / Giải nhiệt",
       "Nướng",
       "Xào"
     ],
@@ -1929,7 +1929,7 @@
     "name": "Phụ nữ mang thai",
     "tag_type": "STATUS",
     "exclude_soft_tag": [
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Giải rượu",
       "Nhiều dầu mỡ / Calo cao",
       "Khó tiêu / Nặng bụng",
@@ -2017,7 +2017,7 @@
     "tag_type": "STATUS",
     "exclude_soft_tag": [
       "Cay",
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Khó tiêu / Nặng bụng",
       "Giải rượu",
       "Thực phẩm chế biến sẵn",
@@ -2090,7 +2090,7 @@
     "name": "Vết thương hở / Mới phẫu thuật",
     "tag_type": "STATUS",
     "exclude_soft_tag": [
-      "Sống/Chín tái",
+      "Sống / Chín tái",
       "Cay",
       "Hải sản",
       "Nhiều dầu mỡ / Calo cao",

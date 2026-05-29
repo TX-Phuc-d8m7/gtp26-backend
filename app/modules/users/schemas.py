@@ -63,7 +63,7 @@ DISH_TYPE_OPTIONS: list[str] = sorted([
     "Gỏi / Nộm / Trộn",
     "Hầm / Ninh",
     "Hấp / Luộc",
-    "Kho/Rim",
+    "Kho / Rim",
     "Lẩu",
     "Món khô",
     "Món nước",

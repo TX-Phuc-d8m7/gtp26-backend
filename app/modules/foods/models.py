@@ -26,6 +26,10 @@ class Food(Base):
     meal_context = Column(ARRAY(Text), nullable=False, default=[])
     occasion_context = Column(ARRAY(Text), nullable=False, default=[])
     
+    # Ngữ cảnh phục vụ: "restaurant" | "home_cooked" | "both"
+    # Dùng để quyết định có hiển thị tính năng "Quán gần đây" không.
+    dining_context = Column(String, nullable=True, default="both")
+
     # gemini-embedding-001 need vector 3072 dimension
     embedding = Column(HALFVEC(3072), nullable=True)
 

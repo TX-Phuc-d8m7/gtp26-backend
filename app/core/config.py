@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
+from urllib.parse import quote_plus
 
 from dotenv import load_dotenv
 
@@ -43,9 +44,16 @@ class Settings:
 
     @property
     def database_url(self) -> str:
+        encoded_password = quote_plus(self.db_password)
+        # Cloud Run connects to Cloud SQL via Unix socket (path starts with "/")
+        if self.db_host.startswith("/"):
+            return (
+                f"postgresql+asyncpg://{self.db_username}:{encoded_password}"
+                f"@/{self.db_name}?host={self.db_host}"
+            )
         return (
             "postgresql+asyncpg://"
-            f"{self.db_username}:{self.db_password}@{self.db_host}:{self.db_port}/{self.db_name}"
+            f"{self.db_username}:{encoded_password}@{self.db_host}:{self.db_port}/{self.db_name}"
         )
 
 

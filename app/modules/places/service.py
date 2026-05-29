@@ -12,7 +12,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from fastapi import HTTPException, status
-from sqlalchemy import delete, select
+from sqlalchemy import delete, select, text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -917,6 +917,38 @@ async def search_food_places(
     radius_m: int = DEFAULT_RADIUS_M,
 ) -> FoodPlaceSearchResponse:
     normalized_location_text = (location_text or DEFAULT_LOCATION_TEXT).strip() or DEFAULT_LOCATION_TEXT
+
+    # ── Kiểm tra dining_context từ DB — chỉ tìm quán cho món "restaurant" ────
+    _dining_ctx = "both"  # mặc định an toàn: không tìm quán
+    try:
+        _ctx_result = await db.execute(
+            text("SELECT dining_context FROM foods WHERE LOWER(name) = LOWER(:name) LIMIT 1"),
+            {"name": dish},
+        )
+        _ctx_row = _ctx_result.fetchone()
+        if _ctx_row and _ctx_row[0]:
+            _dining_ctx = _ctx_row[0]
+    except Exception as _ctx_err:
+        print(f"[DINING CTX] lookup lỗi: {_ctx_err} — tiếp tục bình thường")
+
+    if _dining_ctx != "restaurant":
+        print(f"[DINING CTX] '{dish}' → {_dining_ctx!r}, bỏ qua tìm quán")
+        return FoodPlaceSearchResponse(
+            query=dish,
+            dish=dish,
+            location_text=normalized_location_text,
+            latitude=latitude,
+            longitude=longitude,
+            radius_m=radius_m,
+            results=[],
+            strict_results=[],
+            fallback_results=[],
+            used_fallback_results=False,
+            result_label="Không hỗ trợ gợi ý địa điểm",
+            provider="dining_context_filter",
+        )
+    # ─────────────────────────────────────────────────────────────────────────
+
     query = build_food_place_query(
         dish,
         normalized_location_text,
