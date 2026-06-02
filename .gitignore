@@ -47,6 +47,7 @@ lerna-debug.log*
 
 # Local agent/worktree state
 .claude/
+.codex/
 
 # temp directory
 .temp

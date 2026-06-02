@@ -33,6 +33,10 @@ class Settings:
     run_embedding_on_startup: bool = _env_bool("RUN_EMBEDDING_ON_STARTUP", False)
     embedding_backfill_limit: int = int(os.getenv("EMBEDDING_BACKFILL_LIMIT", "0"))
     embedding_backfill_sleep_seconds: float = float(os.getenv("EMBEDDING_BACKFILL_SLEEP_SECONDS", "3"))
+    search_pipeline_version: str = os.getenv("SEARCH_PIPELINE_VERSION", "legacy")
+    semantic_retrieval_top_k: int = int(os.getenv("SEMANTIC_RETRIEVAL_TOP_K", "100"))
+    semantic_min_score: float = float(os.getenv("SEMANTIC_MIN_SCORE", "0.0"))
+    search_return_limit: int = int(os.getenv("SEARCH_RETURN_LIMIT", "5"))
 
     @property
     def database_url(self) -> str:

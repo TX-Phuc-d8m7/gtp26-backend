@@ -17,6 +17,7 @@ from app.db.seed import seed_data
 async def init_db() -> None:
     async with engine.begin() as conn:
         await conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
+        await conn.execute(text("ALTER EXTENSION vector UPDATE"))
         await conn.run_sync(Base.metadata.create_all)
         await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS taste_profile TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))
         await conn.execute(text("ALTER TABLE foods ADD COLUMN IF NOT EXISTS meal_context TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[]"))

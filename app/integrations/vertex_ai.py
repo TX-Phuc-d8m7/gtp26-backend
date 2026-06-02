@@ -36,6 +36,11 @@ def build_food_embed_text(food: Food) -> str:
     Phải đồng bộ với cách seed_service.py tạo embedding khi seed dữ liệu.
     """
     core_ingreds_str = ", ".join(food.core_ingredients) if food.core_ingredients else "Không có"
+    raw_ingreds_str  = ", ".join(food.raw_ingredients)  if food.raw_ingredients  else "Không có"
+    instructions     = (food.raw_instructions or "").strip()
+    if len(instructions) > 700:
+        instructions = instructions[:700].rsplit(" ", 1)[0] + "..."
+    instructions_str = instructions if instructions else "Không có"
     soft_tags_str    = ", ".join(food.soft_tags)        if food.soft_tags        else "Không có"
     taste_str        = ", ".join(food.taste_profile)    if food.taste_profile    else "Không có"
     meal_str         = ", ".join(food.meal_context)     if food.meal_context     else "Không có"
@@ -45,6 +50,8 @@ def build_food_embed_text(food: Food) -> str:
         f"Món ăn: {food.name}. "
         f"Mô tả: {food.description} "
         f"Nguyên liệu chính: {core_ingreds_str}. "
+        f"Nguyên liệu đầy đủ: {raw_ingreds_str}. "
+        f"Cách chế biến: {instructions_str}. "
         f"Tính chất: {soft_tags_str}. "
         f"Hồ sơ vị: {taste_str}. "
         f"Bữa ăn phù hợp: {meal_str}. "

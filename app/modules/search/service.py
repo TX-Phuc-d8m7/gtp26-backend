@@ -1430,6 +1430,8 @@ async def resolve_food_conflicts(user_input: str, db: AsyncSession):
         "symptoms": symptoms,
         "final_exclude_ings": list(user_dislikes_ings.union(medical_exclude_ings)),
         "final_include_ings": list(safe_user_include_ings),
+        "user_like_ings": list(user_likes_ings),
+        "user_dislike_ings": list(user_dislikes_ings),
         "allergy_constraints": list(allergy_constraints),
         "disease_constraints": list(disease_constraints),
         "allergy_exclude_ings": list(allergy_exclude_ings),
@@ -1556,6 +1558,7 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, hãy tư vấn người dùng m�
 [QUY TẮC AN TOÀN KHI VIẾT]
 - [Top món ăn đã qua lọc và xếp hạng] chỉ là danh sách ứng viên tốt nhất theo dữ liệu, không đồng nghĩa tất cả đều an toàn tuyệt đối.
 - Chỉ được nhắc tên món có trong [Top món ăn đã qua lọc và xếp hạng]. Không tự thêm món mới, không suy diễn món tương tự, không bịa món ngoài danh sách.
+- Thứ tự trong [Top món ăn đã qua lọc và xếp hạng] là thứ tự cuối cùng của hệ thống. Không được sắp xếp lại, thay thế, thêm hoặc loại món khỏi danh sách này.
 - Không được gọi một món là "rất phù hợp", "rất an toàn", "lựa chọn tuyệt vời" nếu món đó có tag/nguyên liệu cần lưu ý theo [Hướng dẫn sức khỏe bắt buộc].
 - Với món đúng sở thích người dùng nhưng có rủi ro sức khỏe, phải dùng ngôn ngữ thận trọng như: "có thể cân nhắc nếu điều chỉnh", "đáp ứng sở thích nhưng cần ăn thận trọng", "không phải lựa chọn tối ưu nếu ăn ngoài".
 - Nếu có món an toàn hơn theo bệnh lý, hãy nói rõ món đó nên được ưu tiên hơn món đúng sở thích nhưng nhiều rủi ro.
@@ -1590,7 +1593,7 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, hãy tư vấn người dùng m�
 # 4. HÀM TÌM KIẾM CHÍNH (Được gọi từ API)
 # =====================================================================
 
-async def search_food(
+async def search_food_legacy(
     query: str,
     db: AsyncSession,
     thread_id: uuid.UUID | None = None,
@@ -2226,4 +2229,31 @@ async def search_food(
         query_log_id=query_log_id,
         retrieval_note=EMBEDDING_FALLBACK_RETRIEVAL_NOTE if retrieval_mode == "lexical_fallback" else None,
         ai_response=ai_response_text or None
+    )
+
+
+async def search_food(
+    query: str,
+    db: AsyncSession,
+    thread_id: uuid.UUID | None = None,
+    debug: bool = False,
+) -> SearchResponse:
+    """Feature-flagged entrypoint for legacy and semantic-first pipelines."""
+    from app.core.config import settings
+
+    if settings.search_pipeline_version == "semantic_first":
+        from app.modules.search.pipeline.orchestrator import semantic_first_search_food
+
+        return await semantic_first_search_food(
+            query=query,
+            db=db,
+            thread_id=thread_id,
+            debug=debug,
+        )
+
+    return await search_food_legacy(
+        query=query,
+        db=db,
+        thread_id=thread_id,
+        debug=debug,
     )
