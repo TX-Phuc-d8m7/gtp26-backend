@@ -9,22 +9,60 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import User
-from app.schemas import (
+from app.modules.users.models import User
+from app.modules.foods.schemas import (
     FilterOptionsResponse,
+    FoodCategoriesResponse,
     FoodDetailResponse,
     FoodListResponse,
 )
 from app.modules.auth.service import get_current_user_optional
 from app.modules.foods.service import (
     get_filter_options,
+    get_food_categories,
     get_food_detail,
     list_foods,
 )
 
 router = APIRouter(prefix="/foods", tags=["Food Library"])
 
-# ⚠️ Route tĩnh (/filter-options) phải đặt TRƯỚC route có path param (/{food_id})
+# ⚠️ Route tĩnh (/filter-options, /categories) phải đặt TRƯỚC route có path param (/{food_id})
+
+
+# ---------------------------------------------------------------------------
+# Categories — danh sách nhóm món theo nguyên liệu chính (từ ALIAS_RULES)
+# ---------------------------------------------------------------------------
+
+@router.get(
+    "/categories",
+    response_model=FoodCategoriesResponse,
+    summary="Danh sách category nhóm món ăn theo nguyên liệu chính",
+)
+async def list_food_categories(
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Trả về danh sách các nhóm nguyên liệu chính (category) có trong thư viện món ăn,
+    kèm số lượng món thuộc từng nhóm.
+
+    Category được suy ra từ `group_keys` trong ALIAS_RULES — cùng quy tắc đã dùng để
+    seed và filter ingredient. Chỉ trả về các nhóm có ý nghĩa với người dùng cuối
+    (ẩn các nhóm y tế nội bộ như `gia_vi_man_natri_cao`, `purine_vua`, ...).
+
+    ```json
+    {
+      "categories": [
+        {"key": "ca_co_vay",  "label": "Cá có vảy",       "count": 38},
+        {"key": "giap_xac",   "label": "Tôm · Cua · Ghẹ", "count": 25},
+        {"key": "hai_san",    "label": "Hải sản",          "count": 12},
+        ...
+      ]
+    }
+    ```
+
+    Dùng `key` để truyền vào `GET /foods?category=<key>` để lọc món thuộc nhóm đó.
+    """
+    return await get_food_categories(db)
 
 
 # ---------------------------------------------------------------------------
@@ -71,6 +109,17 @@ async def browse_foods(
     # Tìm kiếm text
     q: Optional[str] = Query(default=None, description="Tìm theo tên hoặc mô tả món"),
 
+    # Lọc theo category (group_key suffix, ví dụ: "hai_san", "thit_bo", "ca_co_vay")
+    # Lấy danh sách key hợp lệ từ GET /foods/categories
+    category: Optional[str] = Query(
+        default=None,
+        description=(
+            "Lọc theo nhóm nguyên liệu chính. Truyền key (không có 'group:'), "
+            "ví dụ: category=hai_san, category=thit_bo. "
+            "Xem danh sách key hợp lệ tại GET /foods/categories."
+        ),
+    ),
+
     # Filter theo từng nhóm tag (multi-select, lặp param hoặc dùng dấu phẩy)
     taste_profile: Optional[List[str]] = Query(
         default=None,
@@ -95,6 +144,10 @@ async def browse_foods(
     nutrition: Optional[List[str]] = Query(
         default=None,
         description="Dinh dưỡng: Giàu đạm, Giàu chất xơ, Hải sản, Nội tạng, ...",
+    ),
+    texture: Optional[List[str]] = Query(
+        default=None,
+        description="Kết cấu / Nhiệt độ: Nóng hổi, Giòn / Giòn rụm, Dai / Sần sật, Mềm, ...",
     ),
     soft_tags: Optional[List[str]] = Query(
         default=None,
@@ -141,12 +194,14 @@ async def browse_foods(
     total, items = await list_foods(
         db,
         q=q,
+        category=category,
         taste_profile=taste_profile,
         meal_context=meal_context,
         occasion_context=occasion_context,
         dish_type=dish_type,
         diet_style=diet_style,
         nutrition=nutrition,
+        texture=texture,
         soft_tags=soft_tags,
         ingredients=ingredients,
         sort_by=sort_by,

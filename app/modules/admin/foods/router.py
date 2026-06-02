@@ -10,8 +10,9 @@ from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile, 
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import User
-from app.schemas import (
+from app.modules.users.models import User
+from app.modules.admin.alias_overrides.schemas import RebuildFoodKeysResponse
+from app.modules.admin.foods.schemas import (
     AdminFoodCreate,
     AdminFoodListResponse,
     AdminFoodResult,
@@ -21,7 +22,6 @@ from app.schemas import (
     FoodImportPreviewResponse,
     RebuildAllEmbeddingsResponse,
     RebuildEmbeddingResponse,
-    RebuildFoodKeysResponse,
 )
 from app.modules.admin.foods.service import (
     create_food,

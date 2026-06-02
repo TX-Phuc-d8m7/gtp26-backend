@@ -13,10 +13,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from scripts.generate_ingredient_key_preview import (
     ALIAS_RULES,
+    COLLISION_SENSITIVE_TOKENS,
     alias_matches,
     dedupe_keep_order,
     make_rule,
     normalize_base_key,
+    normalize_text_keep_accents,
 )
 
 FAMILY_FILTER_GROUP_KEYS = {
@@ -24,6 +26,16 @@ FAMILY_FILTER_GROUP_KEYS = {
     "group:thit_heo",
     "group:thit_ga",
     "group:thit_vit",
+}
+
+EXACT_FILTER_INTENT_MATCHES = {
+    # Chỉ dùng trong filter intent khi LLM/user đã giữ dấu rõ ràng là "cá".
+    # Không map "ca" trần để tránh nhầm với cà chua/cà rốt/cà tím.
+    "cá": [{
+        "canonical_key": "canon:ca",
+        "group_keys": ["group:ca_co_vay"],
+        "specificity": 1,
+    }],
 }
 
 
@@ -62,7 +74,7 @@ def build_override_rules(overrides: Sequence) -> list[dict]:
 
 async def load_enabled_alias_override_rules(db: AsyncSession) -> list[dict]:
     """Load enabled admin alias overrides from the database as alias rules."""
-    from app.models import IngredientAliasOverride
+    from app.modules.admin.alias_overrides.models import IngredientAliasOverride
 
     result = await db.execute(
         select(IngredientAliasOverride).where(IngredientAliasOverride.enabled.is_(True))
@@ -112,16 +124,39 @@ def _matched_filter_candidates(
     Food identity may keep broad + specific keys, but filters should prefer the
     most specific alias. Example: "mam tom" should filter by canon:mam_tom,
     not by canon:tom, unless another rule explicitly asks for "tom".
+
+    Filter-context fallback: tag rules in tags_data.json may store ingredient
+    names without Vietnamese accents (e.g. "nam" instead of "nấm"). The primary
+    accent-sensitive match and the normal key fallback both fail for these tokens
+    when they belong to COLLISION_SENSITIVE_TOKENS (which blocks ambiguous
+    single-token key fallbacks during food seeding). In filter context the author
+    intent is unambiguous, so exact key equality (base_key == alias_key) is
+    allowed as a secondary fallback for collision-sensitive tokens only.
     """
     base_key = normalize_base_key(ingredient)
     matches: list[dict] = []
+    exact_text = normalize_text_keep_accents(ingredient)
+
+    for match in EXACT_FILTER_INTENT_MATCHES.get(exact_text, []):
+        matches.append({
+            "canonical_key": match["canonical_key"],
+            "group_keys": list(match.get("group_keys", []) or []),
+            "specificity": match.get("specificity", 1),
+        })
 
     for rule in all_alias_rules(extra_rules):
         for alias in rule.get("aliases", []) or []:
             single_alias_rule = _rule_with_single_alias(rule, alias)
-            if not alias_matches(ingredient, base_key, single_alias_rule):
-                continue
             alias_key = normalize_base_key(alias)
+            matched = alias_matches(ingredient, base_key, single_alias_rule)
+            if not matched:
+                # Fallback for unaccented collision-sensitive tokens in tag rules:
+                # "nam" → alias_key "nam" (from alias "nấm") → allow exact key match.
+                # Exact equality is strict enough to avoid false positives.
+                if base_key in COLLISION_SENSITIVE_TOKENS and base_key == alias_key:
+                    matched = True
+            if not matched:
+                continue
             matches.append({
                 "canonical_key": rule["canonical_key"],
                 "group_keys": list(rule.get("group_keys", []) or []),
@@ -161,8 +196,13 @@ def generate_filter_keys(
     """
     filter_keys: list[str] = []
     for ingredient in ingredients or []:
+        raw_ingredient = (ingredient or "").strip()
+        if raw_ingredient.startswith(("base:", "canon:", "group:")):
+            filter_keys.append(raw_ingredient)
+            continue
+
         matches = _matched_filter_candidates(
-            ingredient,
+            raw_ingredient,
             extra_rules=extra_rules,
         )
         if matches:
@@ -185,7 +225,7 @@ def generate_filter_keys(
             else:
                 filter_keys.extend(safe_group_keys)
         else:
-            base_key = normalize_base_key(ingredient)
+            base_key = normalize_base_key(raw_ingredient)
             if base_key:
                 filter_keys.append(f"base:{base_key}")
 

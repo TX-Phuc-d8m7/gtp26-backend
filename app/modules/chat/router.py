@@ -9,20 +9,24 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import User
-from app.schemas import (
+from app.modules.users.models import User
+from app.modules.chat.schemas import (
     ChatMessageListResponse,
     ChatMessageResult,
+    GuestChatSendMessageRequest,
+    GuestChatSendMessageResponse,
     ChatSendMessageRequest,
     ChatSendMessageResponse,
     ChatThreadCreate,
     ChatThreadListResponse,
     ChatThreadResult,
     ChatThreadUpdate,
+    FoodRecommendationFeedbackRequest,
+    FoodRecommendationFeedbackResult,
     MessageEditRequest,
     MessageFeedbackRequest,
 )
-from app.modules.auth.service import get_current_user
+from app.modules.auth.service import get_current_user, get_current_user_optional
 from app.modules.chat.service import (
     create_thread,
     delete_thread,
@@ -31,7 +35,9 @@ from app.modules.chat.service import (
     list_messages,
     list_threads,
     regenerate_message,
+    send_guest_message,
     send_message,
+    set_food_recommendation_feedback,
     set_message_feedback,
     update_thread,
 )
@@ -235,6 +241,8 @@ async def send_message_endpoint(
         user_id=current_user.id,
         query=payload.query,
         skip_profile=payload.skip_profile,
+        lat=payload.lat,
+        lng=payload.lng,
         db=db,
     )
     if result is None:
@@ -243,6 +251,36 @@ async def send_message_endpoint(
             detail="Không tìm thấy hội thoại.",
         )
     return result
+
+
+@router.post(
+    "/guest/messages",
+    response_model=GuestChatSendMessageResponse,
+    summary="Public guest chat dùng chung intent dispatcher",
+)
+async def send_guest_message_endpoint(
+    payload: GuestChatSendMessageRequest,
+    current_user: Optional[User] = Depends(get_current_user_optional),
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Public guest chat endpoint:
+    - Không cần đăng nhập
+    - Không lưu thread/message vào DB
+    - Dùng cùng intent dispatcher với luồng chat chính
+
+    Nếu request có access token hợp lệ và `skip_profile=false`, hệ thống vẫn có thể
+    tận dụng hồ sơ sức khỏe của user cho các intent cần thiết.
+    """
+    return await send_guest_message(
+        query=payload.query,
+        skip_profile=payload.skip_profile,
+        lat=payload.lat,
+        lng=payload.lng,
+        history=payload.history,
+        current_user_id=current_user.id if current_user else None,
+        db=db,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -321,6 +359,48 @@ async def message_feedback_endpoint(
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Không tìm thấy tin nhắn hoặc tin nhắn không phải từ AI.",
+        )
+    return result
+
+
+@router.post(
+    "/threads/{thread_id}/messages/{message_id}/food-feedback",
+    response_model=FoodRecommendationFeedbackResult,
+    summary="Đánh giá từng món trong câu trả lời AI",
+)
+async def food_recommendation_feedback_endpoint(
+    thread_id: uuid.UUID,
+    message_id: uuid.UUID,
+    payload: FoodRecommendationFeedbackRequest,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Tạo hoặc cập nhật feedback cho một món cụ thể trong `food_results`.
+
+    Mỗi user chỉ có một feedback cuối cùng cho một cặp
+    `assistant_message_id + food_id`.
+    """
+    try:
+        result = await set_food_recommendation_feedback(
+            thread_id=thread_id,
+            message_id=message_id,
+            user_id=current_user.id,
+            data=payload,
+            db=db,
+        )
+    except ValueError as exc:
+        if str(exc) == "FOOD_NOT_IN_ASSISTANT_MESSAGE":
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Món ăn này không nằm trong danh sách gợi ý của câu trả lời AI.",
+            ) from exc
+        raise
+
+    if result is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Không tìm thấy hội thoại hoặc tin nhắn AI.",
         )
     return result
 

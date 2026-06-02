@@ -55,7 +55,7 @@ def expected_method_from_name(name_lower, full_text):
         ("Xào", ["xào"]),
         ("Gỏi / Nộm / Trộn", ["gỏi", "nộm", "trộn", "salad"]),
         ("Cuốn / Gói", ["cuốn", "gói"]),
-        ("Kho/Rim", ["kho", "rim"]),
+        ("Kho / Rim", ["kho", "rim"]),
         ("Rang", ["rang"]),
     ]
     for tag, keywords in checks:

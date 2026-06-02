@@ -9,8 +9,8 @@ from sqlalchemy import Text, func, or_, select
 from sqlalchemy.dialects.postgresql import array as pg_array
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import Food
-from app.schemas import (
+from app.modules.foods.models import Food
+from app.modules.admin.foods.schemas import (
     AdminFoodCreate,
     AdminFoodResult,
     AdminFoodUpdate,
@@ -52,6 +52,7 @@ def _to_result(food: Food) -> AdminFoodResult:
         meal_context=food.meal_context or [],
         occasion_context=food.occasion_context or [],
         has_embedding=bool(food.embedding),
+        dining_context=food.dining_context,
     )
 
 
@@ -203,6 +204,7 @@ async def create_food(
         taste_profile=data.taste_profile,
         meal_context=data.meal_context,
         occasion_context=data.occasion_context,
+        dining_context=data.dining_context or "both",
     )
     db.add(food)
     await db.flush()  # lấy food.id
@@ -270,6 +272,8 @@ async def update_food(
     if data.occasion_context is not None and data.occasion_context != food.occasion_context:
         food.occasion_context = data.occasion_context
         need_rebuild_embed = True
+    if data.dining_context is not None:
+        food.dining_context = data.dining_context
 
     if need_rebuild_keys:
         await _rebuild_keys(food, db)
@@ -391,7 +395,7 @@ async def import_foods_preview(
     """
     Dry-run import: validate và kiểm tra trùng lặp, chưa lưu vào DB.
     """
-    from app.schemas import FoodImportItem
+    from app.modules.admin.foods.schemas import FoodImportItem
     from pydantic import ValidationError
 
     # Lấy tên đã có trong DB
@@ -431,7 +435,7 @@ async def import_foods_apply(
     Áp dụng import: lưu các món hợp lệ vào DB.
     Bỏ qua món đã trùng tên.
     """
-    from app.schemas import FoodImportItem
+    from app.modules.admin.foods.schemas import FoodImportItem
 
     existing_names = set(
         (await db.execute(select(Food.name))).scalars().all()

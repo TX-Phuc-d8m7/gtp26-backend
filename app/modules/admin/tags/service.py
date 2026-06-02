@@ -8,8 +8,8 @@ from typing import List, Optional, Tuple
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import Tag
-from app.schemas import AdminTagCreate, AdminTagResult, AdminTagUpdate
+from app.modules.foods.models import Tag
+from app.modules.admin.tags.schemas import AdminTagCreate, AdminTagResult, AdminTagUpdate
 
 
 def _to_result(tag: Tag) -> AdminTagResult:

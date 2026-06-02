@@ -25,7 +25,7 @@
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['dầu ăn']
 
 ### #195 Đậu hũ nhồi thịt sốt cà
-- Tags: Đậm đà, Nước sền sệt, Kho/Rim, Giàu đạm, Mềm, Món Việt truyền thống, Ăn no, Ấm bụng
+- Tags: Đậm đà, Nước sền sệt, Kho / Rim, Giàu đạm, Mềm, Món Việt truyền thống, Ăn no, Ấm bụng
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['dầu ăn']
 
 ### #459 Mỳ xíu chay

@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+.env
+*.pyc
+*.pyo
+.git/
+.gitignore
+standard-data/ingredients-data/
+standard-data/generated-rules/individual/
+standard-data/generated-rules/individual.all.tags_data.json
+standard-data/alias-rules/
+standard-data/testing_data/
+standard-data/dining-context/
+standard-data/tags_data.backup.json
+standard-data/tags_data.reviewed.json

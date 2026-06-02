@@ -185,6 +185,7 @@ ALIAS_RULES: list[dict] = [
             "thịt bò băm",
             "thịt bò cắt mỏng",
             "thịt bò phile",
+            "bò khô",
         ],
         ["group:thit_bo", "group:thit_do"],
         notes="Không map alias 'bò' trần để tránh nhầm với bơ.",
@@ -569,6 +570,12 @@ ALIAS_RULES: list[dict] = [
             "hắc xì dầu",
         ],
         ["group:gia_vi_man_natri_cao"],
+    ),
+    make_rule(
+        "canon:chao",
+        ["chao", "chao đỏ", "chao bông mai"],
+        ["group:dau_nanh_len_men", "group:purine_vua"],
+        notes="Chao là đậu hũ/đậu nành lên men: không cấm tuyệt đối cho gout nhưng cần cảnh báo khẩu phần.",
     ),
     make_rule(
         "canon:muoi_tom",

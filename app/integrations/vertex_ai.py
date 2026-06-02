@@ -12,7 +12,7 @@ from google.genai import types
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import Food
+from app.modules.foods.models import Food
 
 # ---------------------------------------------------------------------------
 # Client (dùng chung với food_service)

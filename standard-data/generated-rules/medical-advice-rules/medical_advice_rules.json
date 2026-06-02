@@ -21,6 +21,16 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Ẩm thực đường phố",
         "warning_text": "Quán đường phố thường dùng chung vỉ nướng, chảo, muỗng gắp cho nhiều loại hải sản. Hãy hỏi về nguy cơ nhiễm chéo trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Xào",
+        "warning_text": "Món xào dễ dùng chung chảo/dầu với tôm cua. Nếu dị ứng giáp xác, cần hỏi bếp có thể xào riêng bằng dụng cụ sạch không."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nướng",
+        "warning_text": "Món nướng hải sản dễ nhiễm chéo trên vỉ than hoặc kẹp gắp. Nên chọn món không nướng chung vỉ với tôm, cua, ghẹ, bề bề."
       }
     ]
   },
@@ -46,6 +56,16 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Xào",
         "warning_text": "Món xào hải sản dễ dùng chung chảo với mực, ốc, nghêu, sò. Nếu dị ứng nặng, nên chọn món chế biến riêng thay vì chỉ yêu cầu bỏ topping."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Lẩu",
+        "warning_text": "Lẩu hải sản thường dùng nghêu, sò, mực hoặc nước luộc thân mềm để tạo vị ngọt. Cần chọn nước lẩu riêng không hải sản."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Gỏi hoặc món trộn hải sản có thể chứa mực, ốc, sò, nghêu thái nhỏ. Nên hỏi kỹ thành phần và tránh nước trộn đã dùng chung hải sản."
       }
     ]
   },
@@ -71,6 +91,16 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Đậm đà",
         "warning_text": "Các món đậm đà thường dùng nước mắm, mắm nêm hoặc hạt nêm hải sản. Hãy yêu cầu xác nhận gia vị nền trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món Việt truyền thống",
+        "warning_text": "Món Việt truyền thống rất thường dùng nước mắm hoặc mắm cá. Nếu dị ứng cá, cần hỏi rõ gia vị nền và nước chấm đi kèm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Gỏi/nộm thường dùng nước mắm hoặc cá khô/chả cá trong topping. Cần yêu cầu nước trộn không có nguồn cá."
       }
     ]
   },
@@ -96,6 +126,16 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Ăn vặt",
         "warning_text": "Món ăn vặt có thể dùng đậu phộng, bơ đậu phộng hoặc topping hạt. Hãy kiểm tra cả phần nhân, sốt và topping."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Bánh ngọt",
+        "warning_text": "Một số bánh ngọt dùng bơ đậu phộng, bột đậu phộng hoặc rắc hạt. Cần hỏi rõ nhân, kem, sốt và phần trang trí."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Các loại sốt sệt có thể dùng đậu phộng xay hoặc bơ đậu phộng để tạo độ béo. Nên yêu cầu sốt riêng và xác nhận thành phần."
       }
     ]
   },
@@ -146,6 +186,16 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Món Âu",
         "warning_text": "Nhiều món Âu dùng bơ, kem, phô mai hoặc sốt sữa. Hãy yêu cầu món không dairy và xác nhận bếp không dùng bơ khi chế biến."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Tráng miệng",
+        "warning_text": "Kem, mousse, flan, cheesecake và nhiều món tráng miệng thường chứa sữa, bơ hoặc kem. Cần chọn món không dairy được xác nhận rõ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Sốt sền sệt có thể dùng sữa, bơ, kem hoặc phô mai. Nếu dị ứng sữa bò, cần hỏi nền sốt trước khi ăn."
       }
     ]
   },
@@ -246,6 +296,16 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Món Á",
         "warning_text": "Nhiều món mì, cơm chiên, bánh xèo, tempura hoặc topping có trứng. Cần dặn bỏ trứng và hỏi phần bột/sốt có trứng không."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Món trộn có thể dùng mayonnaise, sốt trứng hoặc topping trứng. Nên yêu cầu sốt riêng và xác nhận không có trứng trong nước trộn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thức ăn nhanh",
+        "warning_text": "Burger, sandwich, bánh kẹp hoặc đồ ăn nhanh có thể dùng mayonnaise, sốt trứng hoặc bánh có trứng. Cần hỏi kỹ sốt và vỏ bánh."
       }
     ]
   },
@@ -401,6 +461,21 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Chiên / Rán",
         "warning_text": "Đồ chiên rán dễ nhiều năng lượng và chất béo, làm kiểm soát đường huyết kém hơn. Nếu có thể, chọn hấp, luộc, nướng ít dầu."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Tráng miệng",
+        "warning_text": "Món tráng miệng thường có đường hoặc tinh bột nhanh. Nếu vẫn dùng, nên chọn khẩu phần nhỏ và tránh ăn lúc đói."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Thức ăn nhanh",
+        "warning_text": "Thức ăn nhanh thường nhiều tinh bột tinh chế, chất béo và sốt ngọt/mặn. Nên chọn khẩu phần nhỏ, thêm rau và tránh nước ngọt."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Sốt sền sệt có thể chứa đường, bột hoặc nước sốt ngọt. Nên xin để riêng sốt, dùng ít và ưu tiên rau/đạm trước phần tinh bột."
       }
     ]
   },
@@ -434,8 +509,28 @@
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Kho/Rim",
+        "trigger_value": "Kho / Rim",
         "warning_text": "Món kho/rim thường ngấm rất nhiều gia vị mặn. Tuyệt đối hạn chế chan phần nước sốt/nước kho vào cơm, chỉ nên gắp phần cái và ăn kèm nhiều rau luộc để cân bằng lượng natri."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Món có phần nước/sốt sền sệt thường dễ đậm vị và nhiều natri. Nên dùng ít phần nước chan, dặn giảm mắm/hạt nêm và ăn kèm thêm rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Súp",
+        "warning_text": "Súp có thể dùng nước hầm hoặc gia vị mặn. Nên dặn nêm nhạt, tránh thêm nước tương/nước mắm và ưu tiên phần rau, đạm nạc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Cháo",
+        "warning_text": "Cháo dễ ăn nhưng có thể được nêm mặn. Nên dặn nêm nhạt, hạn chế chà bông, trứng muối, đồ kho mặn hoặc nước mắm ăn kèm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Món trộn thường phụ thuộc vào nước mắm hoặc nước sốt. Nên xin để riêng nước trộn, dùng ít sốt và tránh topping mặn."
       }
     ]
   },
@@ -500,7 +595,7 @@
     ]
   },
   "Viêm loét dạ dày": {
-    "general_advice": "Ưu tiên món mềm, chín kỹ, ít dầu, không quá cay/chua, ăn chậm và chia nhỏ bữa nếu dễ đau hoặc cồn cào dạ dày.",
+    "general_advice": "Ưu tiên món lỏng và mềm như cháo, súp để bọc niêm mạc. Cần ăn chậm, nhai thật kỹ, tránh tuyệt đối gia vị chua/cay và chia nhỏ bữa nếu đau hoặc cồn cào dạ dày.",
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
@@ -519,18 +614,58 @@
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Thịt/cá sống hoặc tái có thể làm dạ dày đang viêm khó chịu hơn. Nên chọn món chín kỹ."
       },
       {
         "trigger_type": "soft_tag",
         "trigger_value": "Rang",
         "warning_text": "Món rang khô/cứng có thể khó tiêu. Nên ăn chậm, nhai kỹ và chọn phần mềm hơn nếu có."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Đậm đà",
+        "warning_text": "Món đậm vị có thể nhiều tiêu, nước mắm hoặc gia vị kích ứng. Nên dặn nêm nhẹ, giảm nước chấm và tránh ăn quá nóng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Thức ăn dạng lỏng rất tốt để hòa loãng axit dạ dày, nhưng cần tránh chan phần váng mỡ, để nguội bớt để không làm rát niêm mạc đang viêm. Món nước nóng và đậm gia vị có thể làm dạ dày khó chịu nếu ăn vội. Nên ăn chậm, để nguội bớt và tránh thêm ớt/chanh/giấm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nóng hổi",
+        "warning_text": "Món quá nóng có thể làm dạ dày khó chịu hơn. Nên để nguội bớt, ăn chậm và tránh thêm ớt, tiêu hoặc chanh."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giòn / Giòn rụm",
+        "warning_text": "Các phần thức ăn cứng, giòn rụm (như vỏ chiên, bánh tráng nướng) khi nuốt có thể cọ xát và làm xước vết loét. Nên nhai thật kỹ thành bột hoặc nhúng mềm vào nước dùng trước khi ăn."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Gỏi / Nộm / Trộn",
+        "warning_text": "Món gỏi thường kết hợp rau củ sống thô cứng và gia vị chua cay - đây là tác nhân kích ứng mạnh. Người đau dạ dày nên cân nhắc kỹ hoặc chỉ ăn một lượng rất nhỏ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Béo ngậy",
+        "warning_text": "Chất béo làm chậm quá trình tiêu hóa, khiến thức ăn lưu lại trong dạ dày lâu hơn và tăng tiết axit. Nên vớt bỏ lớp váng mỡ và hạn chế nước sốt béo."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món lạnh",
+        "warning_text": "Nhiệt độ lạnh làm co thắt cơ dạ dày và giảm lưu lượng máu cần thiết để chữa lành vết loét. Hãy ưu tiên đồ ăn ấm nóng."
       }
     ]
   },
   "Tim mạch": {
     "general_advice": "Ưu tiên rau, ngũ cốc nguyên hạt, đạm nạc, cá phù hợp, ít muối, ít đường, hạn chế mỡ động vật, đồ chiên và thực phẩm chế biến sẵn.",
+    "lifestyle_tips": [
+      "Không hút thuốc lá — đây là yếu tố nguy cơ tim mạch lớn nhất có thể kiểm soát được; nicotine làm co mạch và tăng nguy cơ đông máu.",
+      "Hạn chế rượu bia ở mức tối thiểu hoặc không uống: ngay cả lượng nhỏ cũng làm tăng nhịp tim và huyết áp; không có mức 'an toàn' tuyệt đối khi đã có bệnh tim mạch được chẩn đoán.",
+      "Kiểm soát căng thẳng và ngủ đủ giấc: stress mạn tính làm tăng cortisol, gây viêm và co mạch — hai yếu tố thúc đẩy tiến triển bệnh tim mạch."
+    ],
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
@@ -556,6 +691,36 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Nội tạng",
         "warning_text": "Nội tạng thường nhiều cholesterol. Nếu có bệnh tim mạch/rối loạn mỡ máu, nên tránh hoặc dùng rất ít theo hướng dẫn bác sĩ."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Mồi nhậu",
+        "warning_text": "Món nhậu thường đi kèm rượu bia — tuyệt đối không uống rượu bia khi có bệnh tim mạch vì alcohol làm tăng nhịp tim, huyết áp và nguy cơ loạn nhịp. Nếu muốn ăn món này, hãy uống nước lọc thay rượu bia."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Món nước có thể nhiều muối trong nước dùng. Nên ăn phần cái, hạn chế húp nước và dặn giảm gia vị."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Lẩu",
+        "warning_text": "Lẩu thường nhiều muối, chất béo và dễ ăn quá nhiều. Nên chọn nước lẩu thanh, nhiều rau, đạm nạc và hạn chế húp nước."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Kho / Rim",
+        "warning_text": "Món kho/rim thường mặn và có thể nhiều chất béo. Nên hạn chế nước kho, chọn phần nạc và ăn kèm rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Từ sữa / Phô mai",
+        "warning_text": "Phô mai, kem và sốt sữa có thể nhiều chất béo bão hòa. Nên dùng khẩu phần nhỏ hoặc chọn món không sốt béo."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Ngọt",
+        "warning_text": "Món ngọt và đồ uống có đường không có lợi cho kiểm soát cân nặng, đường huyết và tim mạch. Nên dùng rất ít hoặc đổi sang lựa chọn ít đường."
       }
     ]
   },
@@ -616,11 +781,26 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Giải cảm",
         "warning_text": "Món giải cảm nên ăn ấm, vừa gia vị, không quá cay. Uống đủ nước và nghỉ ngơi vẫn là quan trọng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món khô",
+        "warning_text": "Món khô có thể làm khó nuốt hoặc rát họng hơn. Nên ăn chậm, uống nước ấm và ưu tiên món mềm/ẩm nếu đang ho hoặc viêm họng."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món nước",
+        "warning_text": "Món nước ấm thường dễ nuốt hơn khi đau họng, nhưng nên tránh quá cay, quá nóng hoặc quá nhiều tiêu/sa tế."
       }
     ]
   },
   "Gout": {
-    "general_advice": "Hạn chế nội tạng, thịt đỏ, hải sản nhiều purin, nước hầm đậm, rượu bia và đồ uống/ngọt nhiều đường; uống đủ nước và kiểm soát khẩu phần đạm.",
+    "general_advice": "Hạn chế nội tạng, thịt đỏ, hải sản nhiều purin, nước hầm đậm, rượu bia và đồ uống/ngọt nhiều đường; kiểm soát khẩu phần đạm và ưu tiên rau xanh.",
+    "lifestyle_tips": [
+      "Uống đủ 2 lít nước mỗi ngày — đây là cách hiệu quả nhất giúp thận đào thải uric acid, đặc biệt quan trọng trong và sau cơn gout cấp.",
+      "Tuyệt đối không uống rượu bia: alcohol ức chế thận đào thải uric acid và làm nồng độ uric acid tăng vọt; bia còn cung cấp thêm purin từ men bia.",
+      "Không nhịn đói: nhịn ăn làm nồng độ uric acid trong máu tăng nhanh và có thể kích hoạt hoặc kéo dài cơn gout cấp."
+    ],
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
@@ -646,6 +826,26 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Mồi nhậu",
         "warning_text": "Bia rượu làm tăng nguy cơ cơn gout. Nếu món mang tính nhậu, nên uống nước lọc và tránh rượu bia."
+      },
+      {
+        "trigger_type": "ingredient",
+        "trigger_value": "chao",
+        "warning_text": "Chao là thực phẩm đậu nành lên men và thường mặn; với gout nên dùng rất ít nước chấm chao, không chấm đậm và ưu tiên phần rau luộc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Lẩu",
+        "warning_text": "Lẩu thường có nước hầm đậm và nhiều đạm/purin hòa tan. Nên ăn ít nước lẩu, chọn rau và đạm vừa phải, tránh rượu bia."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Đậm đà",
+        "warning_text": "Món đậm vị thường đi kèm nước hầm, mắm hoặc sốt mặn. Với gout, nên giảm nước sốt/nước dùng và kiểm soát khẩu phần đạm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Phần sốt/nước sền sệt có thể cô đặc từ nước hầm hoặc gia vị mặn. Nên dùng ít sốt và tránh chan nhiều vào cơm/bún."
       }
     ]
   },
@@ -654,7 +854,7 @@
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Món sống/tái có nguy cơ làm tiêu chảy nặng hơn hoặc kéo dài. Nên chọn món chín kỹ hoàn toàn."
       },
       {
@@ -679,8 +879,8 @@
       }
     ]
   },
-  "Nhiệt miệng/Loét miệng": {
-    "general_advice": "Ưu tiên món mềm, nguội vừa, ít cay/chua/mặn, dễ nhai nuốt; tránh món giòn cứng, quá nóng hoặc gia vị mạnh làm xót vết loét.",
+  "Nhiệt miệng / Loét miệng": {
+    "general_advice": "Ưu tiên món mềm, nguội vừa, ít cay/chua/mặn, dễ nhai nuốt. Tránh món giòn cứng, quá nóng hoặc gia vị mạnh làm xót vết loét.",
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
@@ -706,6 +906,11 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Mặn",
         "warning_text": "Vị mặn đậm có thể gây xót vùng loét. Nên nêm nhạt và chấm rất ít."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Món khô",
+        "warning_text": "Món khô có thể khó nhai nuốt và cọ vào vết loét. Nên chọn phần mềm, ăn chậm, uống thêm nước và tránh đồ quá giòn."
       }
     ]
   },
@@ -736,6 +941,16 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Nước sền sệt",
         "warning_text": "Sốt sệt/cà ri/kho có thể nhiều dầu và gia vị. Nên dùng ít phần sốt, tăng rau và uống nước ấm."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Lẩu",
+        "warning_text": "Lẩu dễ khiến ăn lâu và ăn quá nhiều. Nên chọn khẩu phần nhỏ, ưu tiên rau mềm, tránh nước lẩu quá béo hoặc quá cay."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu đạm",
+        "warning_text": "Một bữa quá nhiều đạm có thể làm đầy bụng lâu hơn. Nên ăn khẩu phần vừa, nhai kỹ và cân bằng với rau mềm."
       }
     ]
   },
@@ -766,6 +981,26 @@
         "trigger_type": "soft_tag",
         "trigger_value": "Ăn no",
         "warning_text": "Mục tiêu là ăn đủ no, không quá no. Nên ăn rau trước, đạm nạc sau và kiểm soát phần tinh bột."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Giàu tinh bột",
+        "warning_text": "Món nhiều tinh bột dễ làm dư năng lượng nếu ăn khẩu phần lớn. Nên giảm phần cơm/bún/mì/bánh, tăng rau và đạm nạc."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Từ sữa / Phô mai",
+        "warning_text": "Phô mai, kem hoặc sốt sữa thường làm món nhiều năng lượng. Nên dùng khẩu phần nhỏ hoặc chọn phiên bản ít béo."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Nước sền sệt",
+        "warning_text": "Sốt sệt có thể chứa nhiều dầu, đường hoặc tinh bột. Nên dùng ít sốt, không chan thêm và tăng phần rau."
+      },
+      {
+        "trigger_type": "soft_tag",
+        "trigger_value": "Tráng miệng",
+        "warning_text": "Món tráng miệng dễ làm dư năng lượng. Nếu vẫn ăn, chọn khẩu phần nhỏ và tránh gọi thêm đồ uống ngọt."
       }
     ]
   },
@@ -804,7 +1039,7 @@
     "conditional_warnings": [
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Khi mang thai nên tránh thịt/cá/trứng sống hoặc tái do nguy cơ nhiễm khuẩn/ký sinh trùng. Hãy chọn món chín kỹ hoàn toàn."
       },
       {
@@ -869,7 +1104,7 @@
       },
       {
         "trigger_type": "soft_tag",
-        "trigger_value": "Sống/Chín tái",
+        "trigger_value": "Sống / Chín tái",
         "warning_text": "Món sống/tái làm tăng nguy cơ nhiễm khuẩn, không phù hợp khi có vết thương hở hoặc mới phẫu thuật. Nên chọn món chín kỹ."
       },
       {

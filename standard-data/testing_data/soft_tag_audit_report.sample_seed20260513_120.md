@@ -25,12 +25,12 @@
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['sốt cà chua']
 
 ### #239 Khoai lang nướng
-- Tags: Cay, Món khô, Kho/Rim, Giàu tinh bột, Mềm, Món Việt truyền thống, Ấm bụng
+- Tags: Cay, Món khô, Kho / Rim, Giàu tinh bột, Mềm, Món Việt truyền thống, Ấm bụng
 - P1 `method_name_mismatch`: Tên món gợi ý 'Nướng' nhưng tag hiện tại không có
 - P1 `spicy_false_positive`: Có 'Cay' nhưng ớt/tiêu có thể chỉ là gia vị phụ
 
 ### #452 Mướp đắng kho tiêu chay
-- Tags: Đậm đà, Nước sền sệt, Kho/Rim, Đắng, Mềm, Món Việt truyền thống, Món chay, Ăn trưa
+- Tags: Đậm đà, Nước sền sệt, Kho / Rim, Đắng, Mềm, Món Việt truyền thống, Món chay, Ăn trưa
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['nước tương']
 
 ### #266 Bánh tráng kẹp hành
@@ -79,7 +79,7 @@
 - P2 `healthy_conflict`: 'Healthy / Eat Clean' mâu thuẫn với tag dầu mỡ/béo/chế biến sẵn
 
 ### #423 Khoai tây múi cau nướng
-- Tags: Đậm đà, Món khô, Kho/Rim, Cay, Hải sản, Giàu đạm, Mềm, Món Việt truyền thống
+- Tags: Đậm đà, Món khô, Kho / Rim, Cay, Hải sản, Giàu đạm, Mềm, Món Việt truyền thống
 - P1 `method_name_mismatch`: Tên món gợi ý 'Nướng' nhưng tag hiện tại không có
 - P2 `hidden_seafood_in_ingredients`: Tên món không thể hiện hải sản nhưng ingredients có hải sản; cần review dữ liệu gốc
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['xí muội băm', 'sa tế']
@@ -122,7 +122,7 @@
 - P2 `hidden_seafood_in_ingredients`: Tên món không thể hiện hải sản nhưng ingredients có hải sản; cần review dữ liệu gốc
 
 ### #408 Salad Hy Lạp
-- Tags: Béo ngậy, Món khô, Gỏi / Nộm / Trộn, Từ sữa / Phô mai, Giàu chất xơ, Healthy / Eat Clean, Thanh mát/Giải nhiệt, Món Âu
+- Tags: Béo ngậy, Món khô, Gỏi / Nộm / Trộn, Từ sữa / Phô mai, Giàu chất xơ, Healthy / Eat Clean, Thanh mát / Giải nhiệt, Món Âu
 - P2 `healthy_conflict`: 'Healthy / Eat Clean' mâu thuẫn với tag dầu mỡ/béo/chế biến sẵn
 
 ### #68 Bánh xèo tôm nhảy
@@ -138,7 +138,7 @@
 - P2 `hidden_seafood_in_ingredients`: Tên món không thể hiện hải sản nhưng ingredients có hải sản; cần review dữ liệu gốc
 
 ### #216 Cơm thịt heo rim mực
-- Tags: Đậm đà, Món khô, Kho/Rim, Béo ngậy, Hải sản, Giàu đạm, Món Việt truyền thống, Ăn trưa
+- Tags: Đậm đà, Món khô, Kho / Rim, Béo ngậy, Hải sản, Giàu đạm, Món Việt truyền thống, Ăn trưa
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['dầu ăn']
 
 ### #412 Bánh mì nướng kiểu Pháp
@@ -150,11 +150,11 @@
 - P1 `method_name_mismatch`: Tên món gợi ý 'Xào' nhưng tag hiện tại không có
 
 ### #127 Mực sữa chiên nước mắm
-- Tags: Đậm đà, Món khô, Kho/Rim, Hải sản, Giàu đạm, Món Việt truyền thống, Ăn no
+- Tags: Đậm đà, Món khô, Kho / Rim, Hải sản, Giàu đạm, Món Việt truyền thống, Ăn no
 - P1 `method_name_mismatch`: Tên món gợi ý 'Chiên / Rán' nhưng tag hiện tại không có
 
 ### #479 Đậu hũ sốt ngũ vị
-- Tags: Đậm đà, Nước sền sệt, Kho/Rim, Béo ngậy, Giàu đạm, Giòn / Giòn rụm, Mềm, Món Việt truyền thống
+- Tags: Đậm đà, Nước sền sệt, Kho / Rim, Béo ngậy, Giàu đạm, Giòn / Giòn rụm, Mềm, Món Việt truyền thống
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['dầu ăn']
 
 ### #346 Bánh bao kim sa
@@ -170,7 +170,7 @@
 - P2 `hidden_seafood_in_ingredients`: Tên món không thể hiện hải sản nhưng ingredients có hải sản; cần review dữ liệu gốc
 
 ### #256 Khoai tây lốc xoáy
-- Tags: Béo ngậy, Nước sền sệt, Kho/Rim, Nhiều dầu mỡ / Calo cao, Giòn / Giòn rụm, Ẩm thực đường phố, Món Việt truyền thống, Ăn vặt
+- Tags: Béo ngậy, Nước sền sệt, Kho / Rim, Nhiều dầu mỡ / Calo cao, Giòn / Giòn rụm, Ẩm thực đường phố, Món Việt truyền thống, Ăn vặt
 - P1 `rich_false_positive`: Có 'Béo ngậy' nhưng chưa thấy nguyên liệu/cách nấu tạo độ béo rõ
 
 ### #59 Bánh canh xương chả
@@ -190,11 +190,11 @@
 - P2 `core_not_grounded`: Core ingredient không xuất hiện trực tiếp trong source: ['thịt nạc xay']
 
 ### #321 Rau câu ngũ sắc
-- Tags: Ngọt, Món nước, Hấp / Luộc, Béo ngậy, Hải sản, Từ sữa / Phô mai, Thanh mát/Giải nhiệt, Món lạnh
+- Tags: Ngọt, Món nước, Hấp / Luộc, Béo ngậy, Hải sản, Từ sữa / Phô mai, Thanh mát / Giải nhiệt, Món lạnh
 - P2 `hidden_seafood_in_ingredients`: Tên món không thể hiện hải sản nhưng ingredients có hải sản; cần review dữ liệu gốc
 
 ### #276 Khoai môn lệ phố
-- Tags: Béo ngậy, Nước sền sệt, Kho/Rim, Giàu tinh bột, Giòn / Giòn rụm, Mềm, Món Việt truyền thống
+- Tags: Béo ngậy, Nước sền sệt, Kho / Rim, Giàu tinh bột, Giòn / Giòn rụm, Mềm, Món Việt truyền thống
 - P1 `rich_false_positive`: Có 'Béo ngậy' nhưng chưa thấy nguyên liệu/cách nấu tạo độ béo rõ
 
 ### #165 Tu hài nướng mỡ hành

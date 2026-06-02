@@ -5,13 +5,17 @@ from __future__ import annotations
 import uuid
 from typing import List, Literal, Optional, Tuple
 
-from sqlalchemy import Text, func, or_, select
+from sqlalchemy import Text, cast, func, or_, select, text
+from sqlalchemy.dialects.postgresql import ARRAY as PgARRAY
 from sqlalchemy.dialects.postgresql import array as pg_array
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import FavoriteFood, Food
-from app.schemas import (
+from app.modules.favorites.models import FavoriteFood
+from app.modules.foods.models import Food
+from app.modules.foods.schemas import (
     FilterOptionsResponse,
+    FoodCategoryItem,
+    FoodCategoriesResponse,
     FoodDetailResponse,
     FoodListItem,
 )
@@ -33,7 +37,7 @@ OCCASION_CONTEXT_OPTIONS = sorted([
 
 DISH_TYPE_OPTIONS = sorted([
     "Lẩu", "Nướng", "Hấp / Luộc", "Chiên / Rán", "Xào", "Rang",
-    "Hầm / Ninh", "Kho/Rim", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
+    "Hầm / Ninh", "Kho / Rim", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
     "Súp", "Cháo", "Món nước", "Món khô", "Nước sền sệt",
 ])
 
@@ -51,9 +55,123 @@ NUTRITION_OPTIONS = sorted([
 ])
 
 TEXTURE_OPTIONS = sorted([
-    "Nóng hổi", "Thanh mát/Giải nhiệt", "Món lạnh",
-    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống/Chín tái",
+    "Nóng hổi", "Thanh mát / Giải nhiệt", "Món lạnh",
+    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống / Chín tái",
 ])
+
+# ---------------------------------------------------------------------------
+# Category (group_keys) — nguồn: ALIAS_RULES trong scripts/generate_ingredient_key_preview.py
+#
+# Chỉ expose các group có ý nghĩa nguyên liệu rõ ràng với người dùng cuối.
+# Ẩn các group nội bộ dùng để lọc y tế (gia_vi_man_natri_cao, cay_kich_ung,
+# ruou_bia, purine_vua, ...) — những group này không phù hợp để browse UI.
+# ---------------------------------------------------------------------------
+
+# Nhãn hiển thị cho từng group key (prefix "group:" đã lược bỏ làm key dict).
+GROUP_KEY_DISPLAY_LABELS: dict[str, str] = {
+    "group:ca_co_vay":              "Cá có vảy",
+    "group:giap_xac":               "Tôm · Cua · Ghẹ",
+    "group:than_mem":               "Mực · Bạch tuộc · Thân mềm",
+    "group:hai_san":                "Hải sản",
+    "group:thit_bo":                "Thịt bò",
+    "group:thit_heo":               "Thịt heo",
+    "group:thit_ga":                "Thịt gà",
+    "group:thit_vit":               "Thịt vịt",
+    "group:noitang":                "Nội tạng",
+    "group:thit_che_bien_san":      "Thịt chế biến sẵn",
+    "group:trung":                  "Trứng",
+    "group:tinh_bot":               "Tinh bột · Ngũ cốc",
+    "group:sua_va_che_pham_tu_sua": "Sữa · Phô mai · Bơ",
+    "group:dau_nanh":               "Đậu nành & chế phẩm",
+    "group:dau_phong":              "Đậu phộng",
+    "group:hat_cay":                "Hạt cây",
+    "group:me_vung":                "Mè · Vừng",
+    "group:nam":                    "Nấm",
+    "group:mang":                   "Măng",
+    "group:gia_do":                 "Giá đỗ",
+    "group:mam_len_men":            "Mắm · Nước chấm lên men",
+}
+
+# Thứ tự ưu tiên xác định primary_category: key nào xuất hiện đầu tiên trong
+# danh sách này (và tồn tại trong core_ingredient_keys của món) sẽ được chọn.
+# Sắp xếp từ cụ thể → tổng quát trong cùng nhóm (cá có vảy trước hải sản chung).
+CATEGORY_PRIORITY: list[str] = [
+    "group:ca_co_vay",
+    "group:giap_xac",
+    "group:than_mem",
+    "group:hai_san",            # catch-all hải sản hỗn hợp
+    "group:thit_bo",
+    "group:thit_heo",
+    "group:thit_ga",
+    "group:thit_vit",
+    "group:noitang",
+    "group:thit_che_bien_san",
+    "group:trung",
+    "group:tinh_bot",
+    "group:sua_va_che_pham_tu_sua",
+    "group:dau_nanh",
+    "group:dau_phong",
+    "group:hat_cay",
+    "group:me_vung",
+    "group:nam",
+    "group:mang",
+    "group:gia_do",
+    "group:mam_len_men",
+]
+
+_CATEGORY_PRIORITY_SET = set(CATEGORY_PRIORITY)
+
+
+def get_primary_category(core_ingredient_keys: list[str] | None) -> str | None:
+    """
+    Trả về nhãn category chính của món dựa trên core_ingredient_keys.
+
+    Ví dụ: ["base:ca_nuc", "canon:ca_nuc", "group:ca_co_vay", "group:hai_san"]
+    → "Cá có vảy"  (group:ca_co_vay khớp trước group:hai_san trong CATEGORY_PRIORITY)
+    """
+    if not core_ingredient_keys:
+        return None
+    keys_set = set(core_ingredient_keys)
+    for key in CATEGORY_PRIORITY:
+        if key in keys_set:
+            return GROUP_KEY_DISPLAY_LABELS[key]
+    return None
+
+
+async def get_food_categories(db: AsyncSession) -> FoodCategoriesResponse:
+    """
+    Đếm số món trong mỗi category dựa trên core_ingredient_keys.
+
+    Dùng unnest() trong FROM clause (lateral join PostgreSQL) để mở rộng mảng
+    thành hàng, rồi GROUP BY — tránh lỗi HAVING với set-returning functions.
+    Chỉ trả về các category trong GROUP_KEY_DISPLAY_LABELS (ẩn group y tế nội bộ).
+    """
+    # Lấy số lượng theo từng group key trong DB
+    result = await db.execute(text("""
+        SELECT k, count(*)::int AS cnt
+        FROM foods, unnest(core_ingredient_keys) AS k
+        WHERE k LIKE 'group:%'
+        GROUP BY k
+    """))
+    counts: dict[str, int] = {row.k: row.cnt for row in result.all()}
+
+    # Duyệt theo CATEGORY_PRIORITY để giữ thứ tự hiển thị, lọc bỏ group nội bộ
+    items: list[FoodCategoryItem] = []
+    for key in CATEGORY_PRIORITY:
+        label = GROUP_KEY_DISPLAY_LABELS.get(key)
+        if label is None:
+            continue
+        cnt = counts.get(key, 0)
+        if cnt == 0:
+            continue  # Ẩn category chưa có dữ liệu
+        items.append(FoodCategoryItem(
+            key=key.removeprefix("group:"),
+            label=label,
+            count=cnt,
+        ))
+
+    return FoodCategoriesResponse(categories=items)
+
 
 # ---------------------------------------------------------------------------
 # Helper: filter ARRAY column chứa ít nhất 1 trong danh sách values (OR)
@@ -61,11 +179,15 @@ TEXTURE_OPTIONS = sorted([
 
 def _array_contains_any(column, values: List[str]):
     """
-    WHERE column && ARRAY[values]
+    WHERE column && ARRAY[values]::text[]
     Dùng toán tử overlap (&&) thay vì nhiều ANY() riêng lẻ.
     GIN index được tối ưu đặc biệt cho toán tử này — 1 index lookup duy nhất.
+
+    cast(..., PgARRAY(Text())) bắt buộc để tránh lỗi:
+      "operator does not exist: text[] && character varying[]"
+    PostgreSQL không tự coerce VARCHAR[] → TEXT[] khi dùng toán tử &&.
     """
-    return column.op("&&")(pg_array(values, type_=Text()))
+    return column.op("&&")(cast(pg_array(values), PgARRAY(Text())))
 
 
 def _array_ilike(column, keyword: str):
@@ -84,12 +206,14 @@ async def list_foods(
     db: AsyncSession,
     *,
     q: Optional[str] = None,
+    category: Optional[str] = None,
     taste_profile: Optional[List[str]] = None,
     meal_context: Optional[List[str]] = None,
     occasion_context: Optional[List[str]] = None,
     dish_type: Optional[List[str]] = None,
     diet_style: Optional[List[str]] = None,
     nutrition: Optional[List[str]] = None,
+    texture: Optional[List[str]] = None,
     soft_tags: Optional[List[str]] = None,
     ingredients: Optional[List[str]] = None,
     sort_by: Literal["name", "relevance"] = "name",
@@ -130,13 +254,22 @@ async def list_foods(
     if occasion_context:
         where_clauses.append(_array_contains_any(Food.occasion_context, occasion_context))
 
-    # dish_type, diet_style, nutrition, soft_tags đều lưu trong soft_tags
+    # dish_type, diet_style, nutrition, texture, soft_tags đều lưu trong soft_tags
     combined_soft = []
-    for group in [dish_type, diet_style, nutrition, soft_tags]:
+    for group in [dish_type, diet_style, nutrition, texture, soft_tags]:
         if group:
             combined_soft.extend(group)
     if combined_soft:
         where_clauses.append(_array_contains_any(Food.soft_tags, combined_soft))
+
+    # Lọc theo category (group_key) — dùng overlap operator &&
+    # Frontend truyền suffix không có "group:" (ví dụ: "hai_san"), backend thêm prefix.
+    if category:
+        group_key = f"group:{category.strip()}" if not category.startswith("group:") else category.strip()
+        if group_key in GROUP_KEY_DISPLAY_LABELS:
+            where_clauses.append(
+                _array_contains_any(Food.core_ingredient_keys, [group_key])
+            )
 
     # Tìm theo nguyên liệu (ILIKE trong mảng core_ingredients)
     if ingredients:
@@ -185,6 +318,8 @@ async def list_foods(
             taste_profile=f.taste_profile or [],
             meal_context=f.meal_context or [],
             occasion_context=f.occasion_context or [],
+            primary_category=get_primary_category(f.core_ingredient_keys),
+            dining_context=f.dining_context,
         )
         for f in foods
     ]
@@ -238,6 +373,7 @@ async def get_food_detail(
         is_favorite=is_fav,
         user_rating=user_rating,
         user_notes=user_notes,
+        dining_context=food.dining_context,
     )
 
 

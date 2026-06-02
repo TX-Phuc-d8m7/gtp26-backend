@@ -20,6 +20,7 @@ from .types import CriticalSafetyRules, ExtractedIntent, RejectedFood, Retrieved
 
 if TYPE_CHECKING:
     from sqlalchemy.ext.asyncio import AsyncSession
+    from app.modules.users.models import UserHealthProfile
 
 
 SEMANTIC_PIPELINE_VERSION = "semantic_first_v1"
@@ -87,7 +88,7 @@ def _coerce_list(value: Any) -> list[str]:
 
 
 def _food_result_from_scored(scored: ScoredFood) -> FoodResult:
-    from app.schemas import FoodResult
+    from app.modules.search.schemas import FoodResult
 
     food = scored.food
     return FoodResult(
@@ -102,6 +103,7 @@ def _food_result_from_scored(scored: ScoredFood) -> FoodResult:
         occasion_context=_coerce_list(_get_field(food, "occasion_context", [])),
         matchScore=round(scored.final_score * 100, 2),
         reason=build_reason(scored),
+        dining_context=_get_field(food, "dining_context"),
     )
 
 
@@ -141,7 +143,7 @@ def _build_ai_insight(
     payload: dict[str, Any],
     critical_exclude_ings: list[str],
 ) -> AIInsight:
-    from app.schemas import AIInsight
+    from app.modules.search.schemas import AIInsight
 
     return AIInsight(
         exclude=_dedupe(payload.get("medical_exclude_tags", []) + critical_exclude_ings),
@@ -174,7 +176,7 @@ def _build_empty_response(
     *,
     retrieval_note: str | None = None,
 ) -> SearchResponse:
-    from app.schemas import AIInsight, SearchResponse
+    from app.modules.search.schemas import AIInsight, SearchResponse
 
     ai_insight = _build_ai_insight(payload or {}, []) if payload else AIInsight(exclude=[], include=[], prefer=[])
     return SearchResponse(
@@ -198,12 +200,13 @@ async def _generate_response_text(
 ) -> tuple[str, dict]:
     from app.modules.search import service as legacy_search
 
-    return await legacy_search.run_post_processing_with_timeout(
+    ai_response_text, _food_reasons_map, runtime = await legacy_search.run_post_processing_with_timeout(
         query,
         payload.get("symptoms", []),
         results,
         retrieval_notes,
     )
+    return ai_response_text, runtime
 
 
 async def _retrieve_candidates(
@@ -249,7 +252,9 @@ async def _retrieve_candidates(
 async def semantic_first_search_food(
     query: str,
     db: "AsyncSession",
+    profile: "UserHealthProfile | None" = None,
     thread_id: uuid.UUID | None = None,
+    top_k: int = 5,
     debug: bool = False,
 ) -> SearchResponse:
     """Run the 4-stage Semantic Retrieval -> Safety -> Rerank -> Explanation flow."""
@@ -264,7 +269,7 @@ async def semantic_first_search_food(
     llm_runtime["pipeline_version"] = SEMANTIC_PIPELINE_VERSION
     retrieval_notes: list[str] = []
 
-    payload = await legacy_search.resolve_food_conflicts(query, db)
+    payload = await legacy_search.resolve_food_conflicts(query, db, profile=profile)
     if not payload:
         return _build_empty_response(query)
 
@@ -313,10 +318,11 @@ async def semantic_first_search_food(
         safety_rules,
     )
 
+    return_limit = max(1, min(top_k, _setting_int("search_return_limit", 5)))
     ranked = rank_candidates(
         safe_candidates,
         intent,
-        limit=_setting_int("search_return_limit", 5),
+        limit=return_limit,
         min_score=_setting_float("semantic_min_score", 0.0),
     )
     results = [_food_result_from_scored(scored) for scored in ranked]
@@ -398,7 +404,7 @@ async def semantic_first_search_food(
         print(f"[SEMANTIC QUERY LOG] Không thể lưu query log: {exc}")
         await db.rollback()
 
-    from app.schemas import SearchResponse
+    from app.modules.search.schemas import SearchResponse
 
     return SearchResponse(
         query=query,

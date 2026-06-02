@@ -1,0 +1,480 @@
+id,name,dining_context,reason
+cc2c9ffa-93eb-4534-8081-842422a5cca6,Ba chỉ bò cuộn nấm kim châm nướng,both,Có thể tự làm hoặc mua ở quán nướng
+1e45a09b-ab00-4a96-8816-4550a012dc5d,Beefsteak bò Mỹ,restaurant,Món ăn phương Tây phổ biến ở nhà hàng
+b416d08f-2ac3-4dfa-95e3-90d3c102e9bf,Bánh Brownie hạt óc chó,both,Có thể tự làm hoặc mua ở tiệm bánh
+eed75fe7-8fc9-4d21-b62d-be79ab463cba,Bánh Cheesecake,both,Có thể tự làm hoặc mua ở tiệm bánh
+f9238c03-8f2b-4788-aeef-e82f1fb9bcc8,Bánh Crepe nhân mặn,both,Có thể tự làm hoặc mua ở tiệm bánh/quán ăn vặt
+da564712-66e9-4443-80a3-2da0dc2f2ab0,Bánh Lava socola chảy,both,Có thể tự làm hoặc mua ở tiệm bánh
+4127ec3e-b543-4658-b453-07159bacfc54,Bánh Macaron,restaurant,Món bánh ngọt đặc trưng thường mua ở tiệm
+6e9dde2e-954c-4ad2-ba46-9dce184cb7ec,Bánh Mousse socola,both,Có thể tự làm hoặc mua ở tiệm bánh
+9fdcf2a6-3ab8-41ab-a2cf-0311b7a801f9,Bánh Tart trứng nướng,both,Có thể tự làm hoặc mua ở tiệm bánh
+79e7d91c-d920-41cf-9829-0b1641fc68b6,Bánh Tiramisu,both,Có thể tự làm hoặc mua ở tiệm bánh
+31d2d017-535a-4ee6-84bd-ff4a35ab1095,Bánh Waffle kem tươi,both,Có thể tự làm hoặc mua ở tiệm bánh/quán ăn vặt
+2b19c35e-17cb-46f4-a4d7-80ec1706bff4,Bánh bao kim sa,restaurant,"Món ăn sáng, ăn vặt phổ biến ở quán"
+6f494cea-6c3e-4bf3-a3c7-424e68bcfb91,Bánh bao trứng muối,restaurant,"Món ăn sáng, ăn vặt phổ biến ở quán"
+822a867c-95fb-4a27-ab94-5d578ccf7f65,Bánh bèo,restaurant,"Món ăn vặt, đặc sản vùng miền phổ biến ở quán"
+a8684a1e-63fe-4521-b0eb-20c73ba02935,Bánh bèo khay,restaurant,"Món ăn vặt, đặc sản vùng miền phổ biến ở quán"
+fc2e71bf-31fb-4ff7-993d-4714b8692ddb,Bánh bò nướng,restaurant,Tên riêng của một món ăn vặt phổ biến
+6e1365f0-3ef4-4757-bb72-fdb2b6288d32,Bánh bò thốt nốt,restaurant,Tên riêng của một món ăn vặt phổ biến
+9b3b1841-2e2c-4d8e-b8a3-2d3bd1501a1a,Bánh bông lan trứng muối,restaurant,Tên riêng của một món ăn vặt phổ biến
+a0d1dfc4-ad43-44f3-af44-643daf8cdb16,Bánh bột lọc nhân đậu xanh,restaurant,Tên riêng của một món ăn vặt phổ biến
+713f94f8-b11c-4341-aa90-84fda28b4cc2,Bánh cam đường,restaurant,Tên riêng của một món ăn vặt phổ biến
+2153fb9f-7772-4bee-9e0b-ffbab2fc1109,Bánh canh Nam Phổ,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+1fe1a28c-cacd-49eb-be9a-291c2128f0e5,Bánh canh chả cua,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+a18a3c54-f2b0-40d6-8146-9cd293727bba,Bánh canh chả cá,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+b5b1b864-c904-439b-8e15-d5cb5e835f48,Bánh canh cua,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+b5850d9c-a599-4ccf-b11c-510f6cdcfba3,Bánh canh cá lóc,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+7fd1089c-747e-4aaf-90a5-bb37bb67d574,Bánh canh ghẹ,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+1e140108-7f1c-4f45-86d7-d710d9c82ed2,Bánh canh ruộng,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+9c44ea6a-75e0-4427-8d50-b6b771f9c9e3,Bánh canh tôm thịt,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+d4d25ce7-6d74-4d2c-b112-b3d275ba91e3,Bánh canh vịt,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+df751b63-6efd-4f19-9e8e-10d9bb25d4b2,Bánh canh xương chả,restaurant,Tên riêng của một món ăn đặc sản nổi tiếng
+5008ee33-859f-461d-8217-90b702593490,Bánh chiên bột lọc chiên,restaurant,Tên riêng của một món ăn vặt phổ biến
+d7c9a2aa-9acf-482a-ba37-3d3e6fd3985d,Bánh chuối chiên,restaurant,Tên riêng của một món ăn vặt phổ biến
+59442112-e57a-4b61-91cf-59290080a4f4,Bánh chuối hấp cốt dừa,both,Phổ biến ở cả nhà và quán ăn vặt
+1d84cf8b-8956-4450-a24a-f39b73b0521a,Bánh chín tầng mây,both,Phổ biến ở cả nhà và quán ăn vặt
+2e81d43a-a201-4437-b6b4-33cd61df8f36,Bánh chưng chiên,both,Phổ biến ở cả nhà và quán ăn vặt
+4f6edb18-f765-4958-8656-8de6a0460799,Bánh crepe sầu riêng,restaurant,Tên riêng của một món tráng miệng phổ biến
+0046eb97-bb71-4c3b-a5fe-c7a021f3c76e,Bánh cuốn,restaurant,Tên riêng của một món ăn sáng/ăn vặt nổi tiếng
+ac18c492-4735-4b88-9396-9735fbf433b0,Bánh cuốn nóng thịt băm,restaurant,Tên riêng của một món ăn sáng/ăn vặt nổi tiếng
+d1182410-4b43-4e12-ae2b-e41333114722,Bánh căn,restaurant,Tên riêng của một món ăn vặt/sáng nổi tiếng
+b0dd1fe5-4017-4d35-a39a-144e1572991a,Bánh da lợn,both,Phổ biến ở cả nhà và quán ăn vặt
+35412076-3e83-4f66-9438-95abd1e5add4,Bánh dẻo nhân đậu xanh,both,Phổ biến ở cả nhà và quán ăn vặt
+1951a28f-f74a-4406-80c5-21d806854923,Bánh flan caramel,restaurant,Tên riêng của một món tráng miệng phổ biến
+69960658-e48a-48ec-a74f-4722c5c5aa65,Bánh giò nóng,restaurant,Tên riêng của một món ăn sáng/ăn vặt nổi tiếng
+4633a40b-607b-4c51-8059-32e1fcb43350,Bánh gói,both,Phổ biến ở cả nhà và quán ăn vặt
+f1b37cdb-25a8-4027-a798-7e7c7573564d,Bánh gối,restaurant,Tên riêng của một món ăn vặt phổ biến
+5caf5191-0efd-431b-8cfb-73362e985a59,Bánh gối nhân thịt trứng cút,both,"Món ăn vặt phổ biến, có thể tự làm hoặc mua."
+6a032b81-6f16-44bc-b7f4-bfaf6695a221,Bánh khoai mì nướng,both,"Món ăn vặt phổ biến, có thể tự làm hoặc mua."
+fbe89a3e-0b45-4c8c-81b1-b4aa83ae763c,Bánh khoai mỡ chiên,both,"Món ăn vặt phổ biến, có thể tự làm hoặc mua."
+dac64d32-0a6a-48b0-8b3a-3b019b59afa4,Bánh kẹp trứng cút,both,"Món ăn vặt phổ biến, có thể tự làm hoặc mua."
+4ab4f0ad-4041-4885-8086-fd3458ba33e3,Bánh lọc,restaurant,"Đặc sản nổi tiếng, thường bán ở quán."
+1fc26c4a-70f4-4eae-9452-7d0677bba5ad,Bánh lọc trần,restaurant,"Đặc sản nổi tiếng, thường bán ở quán."
+4f7b4fba-dc32-4e46-b9c0-5e9705cba9bb,Bánh lọc trần chay,restaurant,"Đặc sản nổi tiếng, thường bán ở quán."
+e8f09820-f8b1-4da8-9ec4-3c2eafadb6f8,Bánh mochi kem lạnh,restaurant,"Món tráng miệng hiện đại, thường bán ở tiệm bánh."
+30f94b74-c5b5-44df-bc48-7b23735a1285,Bánh mousse chanh leo,restaurant,"Món tráng miệng hiện đại, thường bán ở tiệm bánh."
+5e0250cd-13d9-4f36-aded-021626d58ce0,Bánh mì bơ tỏi nướng giòn,both,"Món ăn vặt phổ biến, có thể tự làm hoặc mua."
+4c3473e5-3bc3-40c0-8ce2-aca962426295,Bánh mì bột lọc,restaurant,"Món ăn đường phố phổ biến, thường bán ở quán."
+86f26dc0-5c2f-4ad8-89b7-7568d61572ab,Bánh mì chả bò,restaurant,"Món ăn đường phố phổ biến, thường bán ở quán."
+1745db6b-5d5a-4d15-82a6-a7d44d77a527,Bánh mì heo quay,restaurant,"Món ăn đường phố phổ biến, thường bán ở quán."
+bf63e314-9d28-4746-8060-0add45afde45,Bánh mì kẹp xúc xích,both,"Món ăn nhanh, có thể tự làm hoặc mua."
+8ea50ccc-c0a2-4080-bdef-47ca6893f661,Bánh mì nướng bơ tỏi phô mai chảy,both,"Món ăn vặt phổ biến, có thể tự làm hoặc mua."
+09e3476f-c728-421a-ac71-dd581dd861f3,Bánh mì nướng kiểu Pháp,both,"Phổ biến ở cả nhà và quán, không đủ thông tin rõ ràng"
+4f34fca6-1701-46c0-bf4a-06377ad4eac8,Bánh mì nướng muối ớt,restaurant,Món ăn vặt đường phố phổ biến
+98b466aa-6e6f-47c5-86aa-339b4f6514d0,Bánh mì xíu mại,restaurant,Món ăn sáng phổ biến ở quán
+89160c80-c8b9-461c-8047-9ebd7124360b,Bánh nậm,restaurant,"Đặc sản vùng miền, thường bán ở quán"
+efa084b8-881d-4fba-be97-f3f10caf6e59,Bánh nậm chay,restaurant,"Đặc sản vùng miền, thường bán ở quán"
+1cc9140e-69ca-4791-8aef-2a3e8c525b03,Bánh quy bơ hạt điều,both,Có thể làm tại nhà hoặc mua ở tiệm bánh
+44fd6af8-e21a-42b3-b934-dbd8147a2556,Bánh ram ít,restaurant,"Đặc sản vùng miền, thường bán ở quán"
+60c8ee67-6c43-43aa-b71c-26adbd3804e6,Bánh rán Doraemon,both,Có thể làm tại nhà hoặc mua ở tiệm bánh
+9d388c06-45e6-4f9f-9e1c-6094810518d2,Bánh rán mật,restaurant,Món ăn vặt đường phố phổ biến
+b82bdbc1-4301-4adf-9c84-026f927d3e66,Bánh su kem,restaurant,Món bánh ngọt phổ biến ở tiệm bánh
+4615b238-2ba5-4df3-8035-5e091419b0e0,Bánh su kem vỏ giòn,restaurant,Món bánh ngọt phổ biến ở tiệm bánh
+c4a6abaa-90f3-43f8-bc73-0917488656f2,Bánh sừng bò,restaurant,Món bánh ngọt phổ biến ở tiệm bánh
+041a2684-4937-4982-bf70-d59790637804,Bánh sừng bò (Croissant),restaurant,Món bánh ngọt phổ biến ở tiệm bánh
+196e6b0d-7aef-47a8-96ff-42572e5776cc,Bánh tai heo,restaurant,Món ăn vặt đường phố phổ biến
+7364f50a-37c3-4329-9591-071660f273b3,Bánh tart trứng,restaurant,Món bánh ngọt phổ biến ở tiệm bánh
+9e629f51-bc6f-481b-9f9b-808f035f6b56,Bánh tiêu,restaurant,Tên riêng của một món ăn đường phố nổi tiếng
+7e9c388c-1975-46b2-9d4a-668626b09848,Bánh trung thu rau câu,both,Có thể làm tại nhà hoặc mua ở quán
+65840dc3-4a82-4343-90ba-e5a633d6d474,Bánh tráng bơ Tây Ninh,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+f7f45930-8402-4c0e-a936-1d895d38d069,Bánh tráng chấm sốt tắc,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+38ff72f3-ff3d-49a5-b4d2-8ac2fa1e39e2,Bánh tráng cuốn bơ,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+0e581ef5-a8d4-427b-ad82-c5f0f9c7274d,Bánh tráng cuốn sốt bơ,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+bba147a3-d1f1-4839-a292-7fddc2be250b,Bánh tráng cuốn sốt me,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+4ea7ee85-f9ef-4ec2-981b-dfe815737e2f,Bánh tráng kẹp,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+f7faa9fa-fa9d-4244-a1df-704b0aac6da6,Bánh tráng kẹp hành,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+e1b9ca8b-a46d-475b-a18b-f02caa94dd4c,Bánh tráng mâm,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+2c5d0b8f-ec13-4ab1-a8cc-5477e25d6714,Bánh tráng mắm ruốc nướng,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+8e0035b7-bbc0-48ec-bf49-20ec2f00897d,Bánh tráng nướng,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+420ce340-5775-466a-b16e-000ab188b4e2,Bánh tráng phơi sương muối nhuyễn,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+f3994e48-9fa3-48a7-a104-49b957682721,Bánh tráng trộn,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+30fddbec-5f0f-41ea-b5db-1258f55cf1df,Bánh tráng xoài,restaurant,Tên riêng của một món ăn vặt nổi tiếng
+f8e870dd-f8a2-408b-af40-86b20a915fba,Bánh táo nướng,both,Có thể tự làm hoặc mua ở tiệm bánh.
+87834dd3-5cac-4e6b-a86c-15bb2b173942,Bánh tôm Hồ Tây,restaurant,"Món ăn đặc trưng của một địa danh, thường bán ở quán."
+b5861a7d-56b5-4145-bb83-e4caca282dfb,Bánh waffle,both,"Có thể tự làm hoặc mua ở quán cà phê, tiệm bánh."
+2bd2b979-5e8f-4a82-957e-022a7ea30dd7,Bánh xèo Nhật Bản,restaurant,"Món ăn đặc trưng của Nhật Bản, thường bán ở nhà hàng."
+b3c3dbbe-cd49-44be-8c17-b2137ca753b2,Bánh xèo chay,both,Phổ biến ở cả nhà và quán ăn chay.
+7319898b-a83d-4f83-bede-d366fc5d1ebc,Bánh xèo gạo lứt chay,both,Phổ biến ở cả nhà và quán ăn chay.
+1c656717-09d2-4aec-8be3-5f3822b4bc52,Bánh xèo hành hải sản,restaurant,Món bánh xèo thường bán ở quán ăn.
+8c533597-d012-42c9-91d1-173cde16182e,Bánh xèo miền Trung,restaurant,"Món ăn đặc sản vùng miền, thường bán ở quán."
+92428598-dd81-4b06-8883-59eba4099172,Bánh xèo tôm nhảy,restaurant,"Món ăn đặc sản vùng miền, thường bán ở quán."
+e8991d20-09f3-4c05-96e1-999a76dec1e2,Bánh đa cua,restaurant,"Món ăn đặc sản, thường bán ở quán."
+0f2a291b-649d-4573-8f15-0f0e018dc0cb,Bánh đập,restaurant,"Món ăn đặc sản vùng miền, thường bán ở quán."
+0b38fc07-827a-41a3-953d-751375b26868,Bánh đậu xanh trái cây,both,"Có thể tự làm hoặc mua ở tiệm bánh, quán chè."
+2fe2b25d-afe2-41d8-b2ff-97872f35053c,Bê thui,restaurant,"Món đặc sản, thường bán ở nhà hàng."
+b33afa9b-7dbd-4008-9198-94943708720e,Bì cuốn chay,both,Phổ biến ở cả nhà và quán ăn chay.
+661b3b6f-cc4d-47a0-9eee-d2182b728475,Bít tết sốt tiêu đen,restaurant,Món ăn thường được phục vụ tại nhà hàng.
+9d54efcc-dde2-49a6-b453-bc2767dea1bf,Bò bía mặn,restaurant,món ăn đường phố nổi tiếng
+f0150e70-0b05-4d85-9c60-a2a4df6c5fce,Bò cuộn phô mai nướng,both,có thể nhà làm hoặc mua ở quán
+0ffee675-f270-43e9-85e7-4dedd88c9585,Bò hầm rượu vang kiểu Pháp,both,có thể nhà làm hoặc mua ở quán
+a7068f15-f225-4dcc-8ef5-421e18cb387d,Bò kho chay,both,có thể nhà làm hoặc mua ở quán
+392f4146-e977-4b45-af9f-e762f9f153f9,Bò lá lốt nướng,restaurant,món ăn đường phố nổi tiếng
+a2473a19-45f4-40b2-85e3-3b9c3181c581,Bò lúc lắc khoai tây,both,có thể nhà làm hoặc mua ở quán
+6d8c8be3-ca1f-42d9-8c75-4e2e48269ec0,Bò xào cần tỏi,home_cooked,tên mô tả công thức nấu tại nhà
+a2f43dfe-e7de-48f4-9010-e5891774c5b6,Bò xào khổ qua,home_cooked,tên mô tả công thức nấu tại nhà
+daa52469-9a09-487c-98e2-717f8dce2aa7,Bún Thái,restaurant,tên riêng của món ăn nổi tiếng
+ffe8cb30-9c85-49b1-b878-a8f4334d4bdc,Bún bò Huế,restaurant,đặc sản vùng miền nổi tiếng
+036a5d92-3cf6-4fa7-8d73-88a49e931e3a,Bún bò tái bắp,restaurant,tên riêng của món ăn nổi tiếng
+78049975-5c64-4dda-bb92-01c01c7577a1,Bún bắp bò gốc Huế,restaurant,tên riêng của món ăn nổi tiếng
+06af5233-4027-4578-b679-88fad9fee438,Bún bề bề,restaurant,tên riêng của món ăn nổi tiếng
+36d517c4-8705-462a-8858-6f09aa24cf17,Bún chay nước lèo,both,có thể nhà làm hoặc mua ở quán
+00529e3f-37f8-4b55-8b40-c4fba7134783,Bún chả Hà Nội,restaurant,đặc sản vùng miền nổi tiếng
+56a6ded9-093f-4e69-a66a-727c95d9edad,Bún chả cá,restaurant,tên riêng món ăn phổ biến ở quán
+29a16c08-90b2-43e6-8702-73b49df33b99,Bún chả cá chay,restaurant,tên riêng món ăn phổ biến ở quán
+6bb5712b-dd03-41fb-b297-14d05031791a,Bún chả tôm,restaurant,tên riêng món ăn phổ biến ở quán
+589ebe0f-9da3-4476-9239-242c36af2c4b,Bún cá ngừ,restaurant,tên riêng món ăn phổ biến ở quán
+5e68bf0e-5f77-4d2a-9112-69a2d62b2153,Bún cá rô đồng,restaurant,tên riêng món ăn phổ biến ở quán
+2ccc9f7f-908a-4add-aa21-9c83d160179e,Bún dọc mùng,restaurant,tên riêng món ăn phổ biến ở quán
+ea5e0e3a-7f43-4846-8f84-5e021c87e81a,Bún gạo lứt trộn ức gà,both,có thể tự làm hoặc mua ở quán ăn healthy
+ce8a2750-ab3c-4a68-a718-bdda310daf19,Bún hải sản,restaurant,tên riêng món ăn phổ biến ở quán
+1ed15c3f-18fe-4ad8-8970-0a87b5064022,Bún hến,restaurant,tên riêng món ăn phổ biến ở quán
+b9054dc3-5df2-439a-8973-445ce3ac64c0,Bún lòng xào nghệ,restaurant,tên riêng món ăn phổ biến ở quán
+95260a2f-5904-4f43-8be0-108a5735885f,Bún măng vịt,restaurant,tên riêng món ăn phổ biến ở quán
+b12a1533-095c-42ef-8e38-a06c5cd3493c,Bún mắm nêm,restaurant,tên riêng món ăn phổ biến ở quán
+7ac9375c-e7b1-4c03-bab9-9d8e03260513,Bún mắm tai mui,restaurant,tên riêng món ăn phổ biến ở quán
+5c41a1e7-63cb-4e10-965f-820b21dcf3d1,Bún riêu cua đồng,restaurant,tên riêng món ăn phổ biến ở quán
+b3c77ede-0679-48f0-9f35-cc9eb54ccc02,Bún riêu ốc,restaurant,tên riêng món ăn phổ biến ở quán
+36d3c9c6-37ac-4b07-b54a-c2ccae90af10,Bún sứa,restaurant,tên riêng của món ăn nổi tiếng
+52928e02-c25a-46ca-a0cb-b070f2653025,Bún thang,restaurant,tên riêng của món ăn nổi tiếng
+de31913e-2de7-4337-8ec1-3fb86d5d13ec,Bún thịt nướng,restaurant,tên riêng của món ăn nổi tiếng
+c8af8d98-b03d-492f-aac7-765999282b50,Bún xào nghệ chay,both,có thể nấu ở nhà hoặc bán ở quán
+f5f58893-1578-499e-8436-b1c20071b601,Bún đậu mắm tôm,restaurant,tên riêng của món ăn đường phố nổi tiếng
+9a872b92-0cb2-4f91-b992-c23620ed4ee4,Bún ốc,restaurant,tên riêng của món ăn nổi tiếng
+b1ceb0b7-368c-4006-9bcc-f44ecb07d6d1,Bạch tuộc nướng sa tế,restaurant,"món ăn vặt, nhậu phổ biến ở quán"
+0380e193-3611-431e-bc62-1f7d9f6e4b09,Bắp xào mỡ hành,restaurant,món ăn vặt đường phố phổ biến
+d7af5d62-785e-4abf-9103-b0ed4caf9339,Canh bầu nấu tôm hành,home_cooked,tên mô tả công thức nấu tại nhà
+87bd74bc-689c-4ced-82bc-7eeaef7f1812,Canh chua cá lóc,both,phổ biến ở cả nhà và quán ăn bình dân
+30f0f266-797a-4205-86a7-ee64843c226c,Canh chua cá đuối,both,phổ biến ở cả nhà và quán ăn bình dân
+63eabbe4-9d59-414b-b153-3859bb01f4a1,Canh chua nấm chay,home_cooked,tên mô tả công thức nấu tại nhà
+623aebe2-c836-42e7-a0c4-ac07ba420f78,Canh cua rau đay mồng tơi,home_cooked,tên mô tả công thức nấu tại nhà
+e06afd08-c9a5-4a0d-9db6-9a959290c765,Canh khổ qua nhồi thịt,home_cooked,tên mô tả công thức nấu tại nhà
+b19e3327-bf34-4443-80ae-31ea2141473b,Canh khổ qua nhồi đậu hũ,home_cooked,tên mô tả công thức nấu tại nhà
+6b5dc396-b5ce-49bc-bd78-b92743235385,Canh kim chi thịt heo đậu hũ,home_cooked,Tên mô tả công thức nấu tại nhà
+c7abd370-6c42-4196-b863-54dfd26e9aa3,Canh mít non nấu tôm,home_cooked,Tên mô tả công thức nấu tại nhà
+529d2603-9978-4517-9f73-1af475fc95d5,Canh mướp nấu nấm,home_cooked,Tên mô tả công thức nấu tại nhà
+b93b1c2c-dd8d-4220-8c33-717dcdfc2ab8,Canh mướp nấu thịt băm,home_cooked,Tên mô tả công thức nấu tại nhà
+ab474800-285d-49f9-a3aa-c0e1fbd3a742,Canh ngao nấu dứa,home_cooked,Tên mô tả công thức nấu tại nhà
+6ccd9670-e704-4191-98a5-7456ee465702,Canh rau muống nấu hến,home_cooked,Tên mô tả công thức nấu tại nhà
+d380de38-c476-429f-ab6c-5a0c72a587d7,Canh rau ngót nấu thịt băm,home_cooked,Tên mô tả công thức nấu tại nhà
+67cce900-3d85-46cd-91b0-035808459b94,Canh rau ngót nấu tôm băm,home_cooked,Tên mô tả công thức nấu tại nhà
+cf30adb9-8811-4ddf-91f2-d80de9d432af,Canh rong biển hạt sen,home_cooked,Tên mô tả công thức nấu tại nhà
+755cd5df-d4f4-4891-b908-8756fa0243b4,Canh rong biển đậu hũ trắng,home_cooked,Tên mô tả công thức nấu tại nhà
+1dd3ed03-b285-48b2-91e3-efa44984889a,Canh tương đậu Hàn Quốc,both,Phổ biến ở cả nhà và quán ăn
+59df921c-7953-4e63-b046-9e06f02b7b24,Cao lầu Hội An,restaurant,Tên riêng của món ăn đặc sản nổi tiếng
+a69927f8-7a6c-4a89-b033-a8c4cb49994f,Chuối nướng cốt dừa,both,Có thể nhà làm hoặc mua ở quán
+9f0a6009-488f-45ba-ae5a-45e9620bc9b6,Chuối nếp nướng cốt dừa,both,Có thể nhà làm hoặc mua ở quán
+66e79370-246b-433d-8382-176a5dae793e,Cháo gà,both,Phổ biến ở cả nhà và quán ăn
+5a43c30d-d450-45b6-a7e5-c78578cada39,Cháo hàu,both,Phổ biến ở cả nhà lẫn quán.
+1b803562-8ac6-4f4e-96ba-e0b09af02ab4,Cháo lòng,restaurant,"Món ăn đường phố, bán phổ biến ở quán."
+a17b9ecb-dc89-4c38-b5e9-4fa872ee4350,Cháo lươn Nghệ An,restaurant,"Đặc sản vùng miền, thường bán ở quán."
+e9680e12-441d-42df-95fe-82be84034824,Cháo lươn xanh,both,Phổ biến ở cả nhà lẫn quán.
+ca9453ba-3fdf-4473-a8ce-5d1dec9d3536,Cháo ngao,both,Phổ biến ở cả nhà lẫn quán.
+ec064fd8-f686-48b4-81eb-c91633964140,Cháo nghêu,both,Phổ biến ở cả nhà lẫn quán.
+786f1a56-a3d2-4219-bf78-d3a26b5023e5,Cháo quẩy,restaurant,"Món ăn đường phố, bán phổ biến ở quán."
+d266f267-b3aa-466e-8bb2-19fda6a48fef,Cháo sườn,restaurant,"Món ăn đường phố, bán phổ biến ở quán."
+6a56c371-27e0-4ad3-a48f-967d182d9ffc,Cháo vịt,both,Phổ biến ở cả nhà lẫn quán.
+20b87313-57fe-4cee-922f-cdb13910cea4,Chân gà hấp xì dầu,both,Phổ biến ở cả nhà lẫn quán.
+10fed71d-4e34-42d4-81be-076578c3b920,Chân gà sả tắc,both,Phổ biến ở cả nhà lẫn quán.
+af682b4b-bf9a-4cc7-9afe-cda980cfa993,Chíp chíp hấp sả,both,Phổ biến ở cả nhà lẫn quán.
+a9392074-7f13-43ee-8f53-67966d53106f,Chả bắp chiên xù chay,both,Phổ biến ở cả nhà lẫn quán.
+3da27a21-2ed9-4d60-80ed-2f4d5346f857,Chả giò chay (Ram chay),restaurant,Món ăn phổ biến ở quán ăn chay.
+8e8f170a-4824-4d8f-86a5-11c5e31ff24b,Chả lụa chay kho tiêu,home_cooked,Tên mô tả công thức nấu tại nhà.
+a1811b73-5aa1-46c6-9713-3e6295116d86,Chả nấm bào ngư,both,Phổ biến ở cả nhà và quán ăn.
+5584fb15-0f98-4ad3-b1c3-cc579d1d1354,Cua gạch rang muối,restaurant,"Món hải sản đặc trưng, thường bán ở quán."
+ecba89b3-482c-49fd-aa68-8d1d358af828,Cua huỳnh đế hấp,restaurant,"Món hải sản đặc trưng, thường bán ở quán."
+27eae8eb-cc4d-4f83-b85b-11c19f01f575,Cua rang me,restaurant,"Món hải sản đặc trưng, thường bán ở quán."
+7b303a2a-21b8-4de0-9ffc-41742c97c2b9,Cà pháo mắm tôm,home_cooked,"Món ăn kèm cơm nhà, thường tự làm."
+59121a6d-95cb-4840-bcc6-cc14f703bbee,Cà ri Thái xanh,restaurant,"Món ăn nước ngoài, thường bán ở nhà hàng."
+09815866-97b4-4875-b7c6-f8360234a9b3,Cà tím nướng mỡ hành,both,Phổ biến ở cả nhà và quán ăn.
+5715787a-6fb9-493e-904d-5b5a67c25403,Cá chìa vôi nướng muối ớt,restaurant,"Món hải sản nướng, thường bán ở quán."
+e005e01f-e3f3-483c-b9ed-d95cb5b9f2c2,Cá diêu hồng nướng giấy bạc,both,Phổ biến ở cả nhà và quán ăn.
+b9ad0352-de58-4635-bf2c-c40b943f9a06,Cá dìa nướng muối ớt,restaurant,"Món hải sản nướng, thường bán ở quán."
+9aef0780-af99-4d44-a4f0-b8fc8be5b58e,Cá hanh hấp xì dầu,both,Phổ biến ở cả nhà và quán ăn.
+c931abbb-abca-4038-8a88-4dbac7c8adfc,Cá hanh nướng giấy bạc,both,Phổ biến ở cả nhà và quán ăn.
+13a60b55-90e5-4b8c-a223-30c15797290f,Cá hồi nướng măng tây,both,Phổ biến ở cả nhà và quán ăn.
+adc8c1bf-cc94-4ea5-b340-1e2d43d25818,Cá hồi nướng sốt Teriyaki,both,Phổ biến ở cả nhà và quán ăn.
+2c01df3c-d7a5-4b6e-b1db-7752b8b0df44,Cá hồi áp chảo sốt chanh dây,both,Phổ biến ở cả nhà và quán ăn.
+b5aed8b7-7632-4063-aa49-68a182b423b6,Cá kho tộ,both,Phổ biến ở cả nhà và quán cơm bình dân
+0f090e2a-577f-4ff7-9f20-4861f1cc5b64,Cá mú hấp xì dầu,restaurant,"Món ăn nhà hàng, tiệc tùng"
+316d6487-44a6-42c6-bb0b-758a15aaf9f3,Cá nục hấp cuốn bánh tráng,restaurant,"Món đặc sản vùng miền, thường bán ở quán"
+3b68cbe1-502e-4d20-a7e6-56b597394e39,Cá thu Nhật kho cà chua,home_cooked,Tên mô tả công thức nấu tại nhà
+f0903b71-6bed-4e76-bbe7-227d8d4f5552,Cá viên chiên mắm,restaurant,Món ăn vặt đường phố phổ biến
+ef4ecc96-c122-4eb7-acf0-289f6d1d92c6,Cá đuối nướng sả nghệ,restaurant,Món nướng thường bán ở quán ăn
+b208b263-03f6-436d-9c62-fca07b78adbb,Cơm bò gyudon Nhật Bản,restaurant,Món ăn đặc trưng của nhà hàng Nhật Bản
+a0d79ddd-f451-4f18-a961-210468f130e9,Cơm chiên Dương Châu,restaurant,"Món cơm chiên nổi tiếng, thường bán ở quán"
+1599521c-1a9b-4a17-920a-04a919f3ea6c,Cơm chiên cá mặn,restaurant,Món cơm chiên phổ biến ở quán ăn
+12fb4204-82ed-4f55-84c2-9c85d0c65fdc,Cơm chiên hải sản,restaurant,Món cơm chiên phổ biến ở quán ăn
+e6f99bbf-da9c-4d96-8310-ff1cd3311672,Cơm chiên hải sản trứng muối,restaurant,Món cơm chiên phổ biến ở quán ăn
+5acd7524-5acf-4cb6-ae38-fe098a741e52,Cơm chiên kim chi bò Mỹ,restaurant,Món cơm chiên phổ biến ở quán ăn
+1b35a154-7de5-43b9-8114-478988a3bda8,Cơm chiên lá é chay,restaurant,Món cơm chiên phổ biến ở quán ăn
+23e4cc91-855f-4b3a-8a11-b3e84796d239,Cơm chiên tỏi trứng,both,Có thể nấu ở nhà hoặc bán ở quán
+58c1c0dc-0ba6-4977-a5a6-bc6abc59cfad,Cơm cháy kho quẹt,both,Phổ biến ở cả nhà và quán ăn vặt
+6b499aa5-9744-4060-bb05-feb38dabe0b1,Cơm cà ri Nhật Bản,restaurant,"món ăn có tên riêng, phổ biến ở quán ăn"
+cc9f55ee-302b-4fc6-a486-64a6acf3e794,Cơm cá nục kho cà chua,both,món cơm nhà nhưng cũng bán ở quán bình dân
+c3686158-e603-4001-8146-9c83ff5e9e22,Cơm gà Hải Nam,restaurant,"món ăn có tên riêng, phổ biến ở quán ăn"
+3ad4d56a-8f01-4e82-8f3e-ebb26dfd0d36,Cơm gà kho sả ớt,both,món cơm nhà nhưng cũng bán ở quán bình dân
+530cb3e7-8372-4c46-8684-d27015cfcbe7,Cơm gà quay,restaurant,"món ăn có tên riêng, phổ biến ở quán ăn"
+9149ee5b-c17c-47ae-b613-5b73b894411c,Cơm gà xối mỡ,restaurant,"món ăn có tên riêng, phổ biến ở quán ăn"
+1ce4aed2-4c1a-4d86-86b3-12b1a91b4502,Cơm hấp lá sen chay,restaurant,"món ăn có tên riêng, phổ biến ở quán ăn"
+10dc7ad2-1675-48ac-92c1-59ddb000a442,Cơm hến,restaurant,"món ăn đặc sản vùng miền, phổ biến ở quán ăn"
+acdae402-502a-49a9-af1b-629c9f29521c,Cơm lòng gà,both,món cơm nhà nhưng cũng bán ở quán bình dân
+ea6cacf2-3d7c-4589-9dcc-e90e721eb24a,Cơm mực nhồi thịt sốt cà,both,món cơm nhà nhưng cũng bán ở quán bình dân
+1c4c57fc-195f-49e2-8ea9-e9df974658db,Cơm niêu,restaurant,"món ăn có tên riêng, phổ biến ở quán ăn"
+0f2968d9-5cf5-4fce-8f65-3ed3280cdbfa,Cơm nắm cá ngừ mayo,both,có thể tự làm hoặc mua ở cửa hàng tiện lợi
+ce310731-63bb-48b4-ac39-651be3e86149,Cơm rang dưa bò,restaurant,"món ăn có tên riêng, phổ biến ở quán ăn"
+dd14255c-4e85-4ad4-a8ec-7a92fa15ac56,Cơm thịt heo rim mực,both,món cơm nhà nhưng cũng bán ở quán bình dân
+d387ddd8-e785-497b-9024-96860db32d56,Cơm thịt heo rim tôm,both,món cơm nhà nhưng cũng bán ở quán bình dân
+913ac378-e0e4-45a5-a7c8-96cdee10029d,Cơm trộn Hàn Quốc,restaurant,món ăn đặc trưng của ẩm thực Hàn Quốc
+8d72bc11-bfdc-4fc9-a2f3-e545b08ba33e,Cơm trứng cuộn Omurice,restaurant,món ăn đặc trưng của ẩm thực Nhật Bản
+0c169c66-6a53-4162-884d-2985068265ce,Cơm tấm sườn bì chả,restaurant,tên riêng của món ăn đường phố nổi tiếng
+e21a181e-4c93-4f7f-b859-ab1783ac8bf5,Cơm tấm sườn nướng,restaurant,tên riêng của món ăn đường phố nổi tiếng
+83cf87be-c593-4958-b23a-7b66ffabc704,Cơm tấm sườn ốp la,restaurant,tên riêng của món ăn đường phố nổi tiếng
+93db942f-db26-49c4-9983-1e42475cbbcc,Dimsum,restaurant,tên riêng của món ăn nổi tiếng
+563c6ac4-fa1c-4090-81c6-365a7c7f680b,Dồi sụn nướng,both,phổ biến ở cả nhà và quán ăn vặt
+596b6afb-1542-406a-8b1c-375dbbc6901d,Gan ngỗng áp chảo,restaurant,"món ăn cao cấp, thường phục vụ ở nhà hàng"
+d5f8a906-f492-45c9-98c7-06b96bad1ac3,Gan rim tỏi ớt,home_cooked,tên mô tả công thức nấu tại nhà
+7650973a-bc92-42f2-a6b5-5d593d379d05,Ghẹ rang me,both,phổ biến ở cả nhà và quán ăn hải sản
+8aecef2d-6528-478f-bdf5-2961ac7c41dc,Ghẹ xanh hấp,both,phổ biến ở cả nhà và quán ăn hải sản
+7619b2db-b678-4ada-8aaa-55217889dae6,Gà hầm rượu vang,home_cooked,tên mô tả công thức nấu tại nhà
+ccef82ac-8f1a-4dfc-b252-b6196c8771fc,Gà kho gừng,home_cooked,tên mô tả công thức nấu tại nhà
+045ef57c-7d8f-4595-9795-9b38efe89ba1,Gà nướng phủ muối ớt,both,có thể nhà làm hoặc mua ở quán
+d8bd6cda-8919-423d-a87c-76bbb17881dd,Gà rán Hàn Quốc,restaurant,món ăn đặc trưng của ẩm thực Hàn Quốc
+e4ba8fa3-b51c-4fc5-b51d-ae1031865011,Gà rán sốt cay,restaurant,"Món ăn có tên riêng, phổ biến ở quán ăn."
+d79e53b4-5e76-4325-b2a5-4c17e03ad4cd,Gà xào bắp cải phô mai Hàn Quốc,both,Có thể nấu tại nhà hoặc tìm thấy ở quán ăn Hàn Quốc.
+838fbedb-9b98-4c25-aa89-469d86154a0f,Gà xào cung bảo,restaurant,"Món ăn có tên riêng, phổ biến ở nhà hàng Trung Quốc."
+da423139-314e-4ba5-b732-6d8bc07d42f1,Gà xào hạt điều kiểu Thái,restaurant,"Món ăn có tên riêng, phổ biến ở nhà hàng Thái."
+20966002-dbe7-4204-974f-5a5211e96cec,Gỏi bò khô,restaurant,"Món ăn vặt, phổ biến ở quán ăn vặt, nhà hàng."
+5f830acb-54f1-478d-9b9d-3c862eb18cc1,Gỏi cá lạc,both,Món gỏi có thể làm tại nhà hoặc bán ở quán ăn.
+e6663ee7-11c7-43dc-a7fd-fcca8275ec5a,Gỏi cá trích,restaurant,"Đặc sản vùng miền, thường bán ở quán ăn."
+52c8da5c-580e-463a-940e-3ec58536c5ed,Gỏi hoa chuối chay,both,Món gỏi chay có thể làm tại nhà hoặc bán ở quán chay.
+dcca26b2-0886-4859-a346-28b87437a576,Gỏi mít non chay,both,Món gỏi chay có thể làm tại nhà hoặc bán ở quán chay.
+a1564a79-32be-433d-a861-e0f4a6490642,Gỏi rong biển,both,Món gỏi có thể làm tại nhà hoặc bán ở quán ăn.
+340e4630-b53b-495b-8c19-56b16d4280e2,Gỏi sứa trộn,both,Món gỏi có thể làm tại nhà hoặc bán ở quán ăn.
+bbe63ebd-44e0-4161-b7e7-a24522d9342d,Gỏi xoài cá trê chiên xù,both,Món gỏi có thể làm tại nhà hoặc bán ở quán ăn.
+eacc676e-80a9-480a-a0c8-09c8cf3e3b6e,Gỏi xoài khô mực,restaurant,"Món ăn vặt, phổ biến ở quán ăn vặt."
+68c87fe3-b7cb-4721-bf12-46a66dda8d8a,Gỏi đu đủ Thái,restaurant,"Món ăn có tên riêng, phổ biến ở nhà hàng Thái."
+01573ec5-eae1-42db-9958-681493008820,Hoành thánh chiên,restaurant,"Món ăn vặt, phổ biến ở quán ăn vặt, nhà hàng."
+631a7e48-99dd-4488-97e9-06a1fa742f9f,Hoành thánh nước,restaurant,Tên riêng của món ăn phổ biến ở quán.
+918c1a23-cf0e-4ffd-8134-d2aec5b86118,Hàu sữa nướng mỡ hành,restaurant,"Món ăn đường phố, thường bán ở quán."
+60cbfdff-c250-403a-9586-4f01074a5149,Hồ lô nướng,restaurant,"Món ăn đường phố, thường bán ở quán."
+d3749b13-8b25-40ec-a7e3-375704c1eb9b,Hủ tiếu Nam Vang,restaurant,Tên riêng của món ăn đặc sản nổi tiếng.
+8561a9f8-dba4-4d45-8b06-f500527ee4da,Hủ tiếu khô,restaurant,Tên riêng của món ăn phổ biến ở quán.
+3105cc16-af4a-4cf7-bb03-b63112ca4d68,Hủ tiếu mực,restaurant,Tên riêng của món ăn phổ biến ở quán.
+d284ce57-1a61-48a0-8902-a9801cd4fdec,Kem bơ,restaurant,"Món tráng miệng phổ biến ở quán, tiệm."
+eeedf73f-6b73-4d82-a004-9c82f9f0aa1f,Kem bơ sầu riêng,restaurant,"Món tráng miệng phổ biến ở quán, tiệm."
+daa44eae-8b66-4de0-884d-40e1fa08138f,Kem nhãn,restaurant,"Món tráng miệng phổ biến ở quán, tiệm."
+32235c3b-52a1-4109-bb86-fee0d0f47a7d,Kem ống,restaurant,"Món ăn vặt đường phố, thường bán ở quán."
+fdddd396-908b-4d2f-9a92-77985a3d7b7e,Khoai lang nướng,both,Phổ biến ở cả nhà lẫn quán.
+e9c447ba-783d-4794-b89a-56ce4304665b,Khoai môn lệ phố,restaurant,"Món ăn vặt, tráng miệng phổ biến ở quán."
+f5839f38-411c-4255-aa4a-1a7c130ab3dd,Khoai tây chiên,restaurant,"Món ăn vặt phổ biến ở quán, nhà hàng."
+ffd95816-c8b6-49a1-8303-9f0dfd2146a1,Khoai tây chiên lắc phô mai,restaurant,"Món ăn vặt phổ biến ở quán, nhà hàng."
+a312953b-cbd7-4fac-b7d2-e2a1bc7f52a0,Khoai tây lốc xoáy,restaurant,"Món ăn vặt đường phố, thường bán ở quán."
+fa846728-8fd2-48b6-a9e9-c512852da061,Khâu nhục,restaurant,"Món ăn đặc sản nổi tiếng, thường bán ở quán"
+49c1164f-9422-45ba-9a55-0146a893a1fa,Khổ qua rừng kho tiêu,both,Món ăn gia đình nhưng cũng có ở quán cơm bình dân
+32108436-49e8-49d9-9cd0-fb21100cb398,Khổ qua xào trứng,home_cooked,Tên mô tả công thức nấu tại nhà
+8056a4d3-c4d1-4f1b-88db-91200b35dfa3,Kim chi chay,both,Có thể tự làm hoặc mua ở quán ăn Hàn Quốc
+b5807c7c-3428-47b7-a09c-c8d92ae99a04,Kimbap truyền thống,restaurant,"Món ăn đặc trưng của ẩm thực Hàn Quốc, thường bán ở quán"
+00582784-52bd-4928-a452-3c2cee730892,Lạp Thái,restaurant,"Món ăn đặc sản của Lào, thường bán ở quán"
+0396f33f-8b01-4b9c-880c-2858db4eef6b,Lẩu Thái Tomyum,restaurant,"Món lẩu đặc trưng của Thái Lan, thường bán ở quán"
+96122c4a-361c-4d07-9dfa-2bdd59c7c8f1,Lẩu chao chay,restaurant,Món lẩu thường được bán ở các nhà hàng lẩu chay
+e39a4886-25d6-4cad-9149-7de9abf89b00,Lẩu cá bớp măng chua,restaurant,Món lẩu thường được bán ở các nhà hàng lẩu
+530e448b-a3e5-44fa-ba91-d1609d5fdd44,Lẩu gà lá é,restaurant,"Món lẩu đặc sản, thường bán ở quán"
+ea715cf7-e921-4d04-8540-e3c613587cee,Lẩu hải sản chua cay,restaurant,Món lẩu thường được bán ở các nhà hàng lẩu
+07941976-b565-49d9-ae9a-376a29c8f345,Lẩu nấm chay,restaurant,Món lẩu thường được bán ở các nhà hàng lẩu chay
+88458bb7-7a9c-430c-9dc6-eb71fa449702,Milo dầm trân châu,restaurant,Món đồ uống giải khát phổ biến ở quán
+b358f84e-7432-4e10-b1e4-da296bbda8de,Miến lươn nước,restaurant,"Món ăn sáng phổ biến, thường bán ở quán"
+11ff7323-d96a-4a72-91ae-9447918cbc51,Miến lươn trộn,restaurant,"Món ăn sáng phổ biến, thường bán ở quán"
+faed34a8-da77-48de-9603-0961d5794a69,Miến măng chay,both,"Phổ biến cả nhà và quán, không đủ thông tin rõ ràng"
+b9f858d9-270b-42ed-9029-e2aa5b21286e,Miến măng gà,both,"Phổ biến cả nhà và quán, không đủ thông tin rõ ràng"
+c3408f7a-3487-48c8-b793-3c9b83791766,Miến trộn Thái Lan,restaurant,"Tên món ăn đặc trưng, thường bán ở quán"
+d6d5628d-82b8-45b2-814f-37393019a1f1,Miến xào Hàn Quốc,restaurant,"Tên món ăn đặc trưng, thường bán ở quán"
+d39f842f-c144-40ae-8a02-e47a6e409fd9,Miến xào cua,both,"Phổ biến cả nhà và quán, không đủ thông tin rõ ràng"
+f76ac0dc-a949-4931-9d02-eed33485934d,Miến xào cua biển,both,"Phổ biến cả nhà và quán, không đủ thông tin rõ ràng"
+8d4c9e2f-1f8d-43c8-8e20-4e3f7fd90399,Miến xào hải sản,both,"Phổ biến cả nhà và quán, không đủ thông tin rõ ràng"
+06702db7-9720-49f9-a435-4b6e00477e78,Miến xào nấm mèo,both,"Phổ biến cả nhà và quán, không đủ thông tin rõ ràng"
+469e144d-8f3d-44e6-a360-916affd0980c,Mì Quảng Cá lóc,restaurant,"Tên riêng món ăn đặc sản, thường bán ở quán"
+1e57a92f-311a-4599-a68e-72c9a904f094,Mì Quảng Gà ta,restaurant,"Tên riêng món ăn đặc sản, thường bán ở quán"
+b6ae5fdb-d4c3-4d86-85df-b2fbfc435407,Mì Quảng Tôm Thịt,restaurant,"Tên riêng món ăn đặc sản, thường bán ở quán"
+fe0d1b75-d3d3-48c3-a32c-8eb34f0cb3fc,Mì Quảng Vịt,restaurant,"Tên riêng món ăn đặc sản, thường bán ở quán"
+5ffe27d9-22bb-4c03-bf04-84351a922e67,Mì Quảng bò tôm,restaurant,"Tên riêng món ăn đặc sản, thường bán ở quán"
+77c4508c-2bff-4bcf-a246-91b14dad69d9,Mì Quảng chay,restaurant,"Tên riêng món ăn đặc sản, thường bán ở quán"
+3d9bff83-fc25-4f28-8366-cb789a566847,Mì Quảng sườn non,restaurant,"Tên riêng món ăn đặc sản, thường bán ở quán"
+f95861d7-067b-4bdd-8a8e-1139d123f149,Mì Quảng Ếch,restaurant,Tên riêng của món ăn đặc sản nổi tiếng
+af068341-0568-432f-ac1d-94840b4324c5,Mì Ramen nước tương,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+0d94d929-f7c9-497d-bda6-09535da6d5b2,Mì Udon hải sản,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+ff923121-4239-4cfc-b84e-f6ec30f2a98b,Mì bò xào trứng,both,Phổ biến ở cả nhà lẫn quán
+d4f5fd6c-2c5a-4e0c-9094-01ea624feb4d,Mì cay 7 cấp độ,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+57744b18-0ee4-49df-9cbf-af63528448c8,Mì hoành thánh,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+2ae9fe2c-a6a8-4eb8-b914-4525ff0399cb,Mì lạnh Hàn Quốc,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+1daf3733-af3d-4e52-89b8-02261691f7d6,Mì ramen,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+7776ad2e-a0a6-491f-9564-8d559fe2c616,Mì trộn,both,Phổ biến ở cả nhà lẫn quán
+8eb30aff-7cbf-487e-b365-0aca3ac19e7c,Mì trộn Indomie,both,Phổ biến ở cả nhà lẫn quán
+dc94a516-3277-4d69-a05f-3e01a1a37a9a,Mì tương đen Hàn Quốc,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+778c78c8-647c-406f-86c7-2738452196bd,Mì udon,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+0acd4b22-9b16-4480-bf61-6d2eef416926,Mì vằn thắn xá xíu,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+b21857f1-63fe-42b3-880b-0bbb9cf2ce5a,Mì vịt tiềm,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+be723c99-b7a3-4c79-8ec4-b9f1b56bf9ac,Mì xào bò,both,Phổ biến ở cả nhà lẫn quán
+33427127-e499-4cba-b68a-27e653c07ce3,Mì xào giòn,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+b2bde5c7-72ac-408d-b93a-162252f4af73,Mì xào hải sản,both,Phổ biến ở cả nhà lẫn quán
+80fa331c-610e-408c-9d7e-8c32fa5bcae7,Mì xào rau củ,both,Phổ biến ở cả nhà lẫn quán
+87bac17c-062f-47e0-878f-7749c8a6bc4e,Mì xá xíu,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+dea44d4b-c0bc-4552-a17c-3d964abe0d9a,Mì Ý,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+e222ad30-261b-4fd8-9796-b60d51414088,Mì Ý hải sản sốt cà chua,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+809ad67c-c1ca-4105-87fd-ae61b8b0d44a,Mì Ý sốt Pesto,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+c39ff439-ca9f-4de0-87bc-b3497a6ec532,Mì Ý sốt bò băm,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+6473b054-688a-4074-97dd-13f3a8345890,Mì Ý sốt kem nấm,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+48b0e617-9ee3-429c-ad1c-f3af267fe43d,Mít non kho tộ chay,both,Phổ biến ở cả nhà lẫn quán cơm bình dân
+65f5ca4c-13bd-4fa7-9026-487060cc7aef,Mít non trộn tôm thịt,both,Phổ biến ở cả nhà lẫn quán
+b62029d2-53cc-456e-8794-802dfc281c0a,Mướp đắng kho tiêu chay,home_cooked,Tên mô tả công thức nấu tại nhà
+505448f6-fe4b-4c95-a051-4024adea3b3b,Mực chiên giòn,both,Phổ biến ở cả nhà lẫn quán
+01ce2d8c-5fa0-46d9-aa2f-15933d7fb1fa,Mực nang nướng sa tế,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+776f794a-a1b9-44f0-bf25-9297d5511527,Mực nướng sa tế,restaurant,"Món ăn phổ biến ở quán ăn, nhà hàng"
+61ad0324-5aed-4b77-bcbd-9bc69e944c8d,Mực sữa chiên nước mắm,both,Phổ biến ở cả nhà và quán ăn
+972905b1-d3c0-4a79-9aa4-610cf1672695,Mực xào cần tỏi,both,Phổ biến ở cả nhà và quán ăn
+936bd0be-ab51-4ef9-aa70-1c8be2dce2e2,Mực xào dứa,both,Phổ biến ở cả nhà và quán ăn
+1cf7b102-7def-4e34-aada-2c2350b19db2,Mỳ xíu chay,restaurant,"Món ăn có tên riêng, thường bán ở quán"
+91ec91ee-1a8c-4ada-bd3e-224413167c21,Nem chua rán,restaurant,Món ăn vặt đường phố phổ biến
+470d1cbe-d4b0-4ef3-8047-2b5309c5f8bb,Nem lụi,restaurant,"Món ăn đặc sản, thường bán ở quán"
+132fafee-d072-409b-b8f7-620b2faad517,Nem nướng Nha Trang,restaurant,Món ăn đặc sản vùng miền nổi tiếng
+be87c197-3f81-4671-99d0-5baf28a06768,Nghêu hấp thái,restaurant,"Món ăn phổ biến ở quán nhậu, nhà hàng"
+93c33263-6ffd-42cf-9d45-60964c20c439,Nhum biển nướng,restaurant,Hải sản nướng thường bán ở quán
+49f36394-4a26-4f61-a658-813150309190,Nấm kho rau củ,home_cooked,Tên mô tả công thức nấu tại nhà
+05ac7215-4744-4b97-8c66-d2d590bdef55,Nấm kim châm chiên giòn,both,Phổ biến ở cả nhà và quán ăn
+021e4eca-e9d3-4945-89c5-1919db7ee16e,Nấm nướng giấy bạc chay,both,Phổ biến ở cả nhà và quán ăn
+4a9bad98-2859-42b6-ba69-9b9de545067d,Nấm rơm kho tộ,both,Phổ biến ở cả nhà và quán ăn
+bf3bbd7a-19df-43c2-8f85-0d0e78bd2636,Nấm đùi gà kho tiêu,both,Phổ biến ở cả nhà và quán ăn
+aab2c3fd-dbe7-41d0-8057-cac3946c297b,Pad Thái,restaurant,Món ăn đặc trưng của nhà hàng Thái
+1f8f62d3-ff57-4ecc-a5bf-a81770885664,Pasta sốt hải sản cay,both,"Món ăn phổ biến ở cả nhà và quán, không đủ thông tin rõ ràng"
+b522f081-a200-4749-b18a-ba9c2c584d1f,Phô mai que,restaurant,"Món ăn vặt phổ biến ở quán ăn, tiệm street food"
+77269c44-97ba-4097-8655-3d03f9852036,Phở bò gân,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+84ed4ad3-f86c-4171-a395-484c0fc8de2c,Phở bò gầu,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+4b1db034-5901-4399-b3f4-0a80acbdb6ba,Phở bò nạm,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+0d896975-cd59-4b30-b1eb-cac999002ee5,Phở bò trộn,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+87d84a92-6e49-437d-bde7-13d1425e9266,Phở bò viên,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+fb91d668-1453-42a5-ac4a-5b85ad92f317,Phở bắp bò,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+b4a3c93a-fc03-4da6-800d-1889d7dd81dc,Phở cuốn Hà Nội,restaurant,"Tên riêng của một món ăn đặc sản, phổ biến ở quán"
+53b619d3-4120-404e-ad78-c44f4315f90b,Phở cuốn chay,restaurant,"Tên riêng của một món ăn đặc sản, phổ biến ở quán"
+5baff902-a275-456c-87c1-0d78801ecbab,Phở gà,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+6dac75e3-51c8-4ee4-8ab5-7fca2f121fac,Phở gà trộn,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+b9264e2d-59f7-4da4-aae9-7e7570beb38d,Phở khô Gia Lai,restaurant,"Tên riêng của một món ăn đặc sản, phổ biến ở quán"
+b2474d90-78f6-4410-9c99-4b9141236669,Phở sốt vang,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+314651f3-6a08-4037-b41a-f025f5c6ed8a,Phở tái,restaurant,"Tên riêng của một món ăn nổi tiếng, phổ biến ở quán"
+6557cf9d-d1e7-4c66-930f-ff5094fd55b6,Phở tái lăn,restaurant,Tên riêng của món ăn nổi tiếng
+916bd760-82c2-42d1-a902-0ffb89a1e011,Phở xào giòn,restaurant,Tên riêng của món ăn nổi tiếng
+cd7fedc9-d2c1-4ded-a78a-37a45693da78,Phở xào mềm,restaurant,Tên riêng của món ăn nổi tiếng
+f9c197dd-eb39-4557-ab95-6fd295faa934,Pizza 4 loại phô mai,restaurant,"Món ăn phổ biến ở nhà hàng, tiệm ăn"
+9a610d2e-0932-44be-b059-8abb9e6dc8af,Pizza Bò băm,restaurant,"Món ăn phổ biến ở nhà hàng, tiệm ăn"
+12cc1137-2ee6-4577-bbaf-dcb12fd2ec13,Pizza Hải sản,restaurant,"Món ăn phổ biến ở nhà hàng, tiệm ăn"
+caef60b1-74ae-4396-acc0-24e0947151e7,Pizza Phô mai,restaurant,"Món ăn phổ biến ở nhà hàng, tiệm ăn"
+91da0df4-acc9-404b-9f9f-209015874ae3,Pizza tôm phô mai,restaurant,"Món ăn phổ biến ở nhà hàng, tiệm ăn"
+04914a5d-2838-41d8-9427-5db369686e52,Pizza xúc xích phô mai,restaurant,"Món ăn phổ biến ở nhà hàng, tiệm ăn"
+24cc072a-7643-4d23-a33a-0bf5eb30231c,Poke Bowl cá hồi,restaurant,"Món ăn phổ biến ở nhà hàng, tiệm ăn"
+899492f5-0566-4b3d-9695-13f39f5d04fb,Ram cuốn cải,both,Phổ biến ở cả nhà và quán ăn
+66a2d5cc-f25d-4089-bb62-ad1db71eb302,Ram tôm đất Bình Định,restaurant,Tên riêng của món ăn đặc sản vùng miền
+5d0506d5-ad59-453f-861d-f6835e08b88a,Rau câu ngũ sắc,both,Phổ biến ở cả nhà và quán ăn
+c575d922-ff31-4eeb-af0a-1ff6a65c3937,Rau câu phô mai,both,Phổ biến ở cả nhà và quán ăn
+8eec0ad9-fe35-45d7-82cf-b42e3ea9e876,Rau câu sơn thủy,both,Phổ biến ở cả nhà và quán ăn
+17434562-884e-47db-aebe-84761d2782dc,Rau câu trái dừa nguyên quả,both,"Phổ biến ở cả nhà và quán, không đủ thông tin rõ ràng"
+64c295e8-fb70-4efd-8dea-97aacc0fc0d2,Rau lang luộc,home_cooked,Món cơm nhà đơn giản
+7d2ff548-5742-4512-995e-dfa0e4f0e462,Rau lang xào tỏi,home_cooked,Món cơm nhà đơn giản
+ec56c95d-9410-4842-bd7e-8bd72db84383,Rau muống xào ốc giác,both,"Phổ biến ở cả nhà và quán, không đủ thông tin rõ ràng"
+1d6aa851-4dde-4020-b613-09a6e1191901,Răng mực xào bơ tỏi,restaurant,"Món ăn vặt, nhậu phổ biến ở quán"
+b659b70b-242d-49c3-9f14-7d2f7d67a91d,Salad Caesar,restaurant,"Tên riêng món salad nổi tiếng, thường bán ở quán"
+0d6c4a32-e04a-498d-82bd-39419d33cf9d,Salad Hy Lạp,restaurant,"Tên riêng món salad nổi tiếng, thường bán ở quán"
+53b480ff-6c87-4ffa-b4eb-e9776089b925,Salad Nga,restaurant,"Tên riêng món salad nổi tiếng, thường bán ở quán"
+e3936c0f-5b99-4ff4-b963-c9601510017f,Salad bơ tôm áp chảo,restaurant,"Món salad hiện đại, thường bán ở quán"
+23afb919-7089-4ca3-bf92-4d4b9469536b,Salad cá ngừ,restaurant,"Món salad hiện đại, thường bán ở quán"
+6f0ba5c5-ad09-4156-a8e7-f3cdf0b1fe03,Salad diêm mạch,restaurant,"Món salad hiện đại, thường bán ở quán"
+4f754fc0-016a-4a68-9281-be1b2c3111e3,Salad gà nướng,restaurant,"Món salad hiện đại, thường bán ở quán"
+fd425cd8-becf-4834-a412-f0c591cc8f8b,Salad ức gà (Eat Clean),restaurant,"Món salad hiện đại, thường bán ở quán"
+51e4a3a0-726e-4386-bd8c-7b27e6e90ce7,Salad ức gà sốt mè rang,restaurant,"Món salad hiện đại, thường bán ở quán"
+89071726-773c-4edf-a2e9-f3eee95dcb03,Sandwich cá hồi xông khói,restaurant,"Món ăn sáng, ăn nhẹ phổ biến ở quán"
+1e17d657-5104-4bbd-b1e3-9d42e1e33619,Sushi cá hồi,restaurant,"Tên riêng món ăn nổi tiếng, thường bán ở nhà hàng Nhật."
+0739fd4f-c849-4c97-9b3a-d03ef50db54c,Sò huyết rang me,restaurant,"Món hải sản phổ biến ở quán ăn, nhà hàng."
+8175c22a-345f-459a-9cc4-0b46ae17e78b,Sò lông nướng mỡ hành,restaurant,"Món hải sản phổ biến ở quán ăn, nhà hàng."
+77dab961-9717-4bba-921c-8f12f6a60997,Sò lụa hấp sả,restaurant,"Món hải sản phổ biến ở quán ăn, nhà hàng."
+8905c720-5701-4ee9-96d4-470a4a5f4313,Sò điệp nướng mỡ hành,restaurant,"Món hải sản phổ biến ở quán ăn, nhà hàng."
+26ba83b4-9891-4cc0-9163-0e14a94caf1f,Súp bí đỏ,both,Súp có thể nấu tại nhà hoặc bán ở quán.
+509be33c-8741-427e-bc07-750444960048,Súp bắp non tóc tiên chay,both,Súp có thể nấu tại nhà hoặc bán ở quán.
+573748b8-3465-47ad-8a34-213fe2ef0800,Súp cua óc heo,restaurant,"Món súp đặc trưng thường bán ở quán ăn, tiệm."
+3a4f1e74-be8d-4949-9496-b422eb9f62c4,Súp hải sản kiểu Ý,restaurant,Món súp kiểu Ý thường bán ở nhà hàng.
+85e341e4-7904-47b6-9912-b39272af3d62,Súp nấm tuyết chay,both,Súp có thể nấu tại nhà hoặc bán ở quán.
+c4b50ac4-4e64-47cd-a733-7dc3b91a9bb3,Súp rong biển đậu hũ Nhật,both,Súp có thể nấu tại nhà hoặc bán ở quán.
+134f62fe-f373-423c-a611-d96279c30eb8,Súp vi cá,restaurant,Món súp cao cấp thường bán ở nhà hàng.
+a95d1ac7-d68b-45d0-a8bc-4ed740ff8fe6,Sườn cừu nướng thảo mộc,restaurant,Món Âu đặc trưng thường bán ở nhà hàng.
+91a01b03-0881-42b3-98cb-c8ff3eaa6290,Sườn non chiên giòn chay,both,Món chay có thể nấu tại nhà hoặc bán ở quán.
+95eb5cc7-8dcd-42a6-b5d2-ecceb672f091,Sườn non kho thơm,both,Món kho phổ biến ở cả nhà và quán cơm bình dân.
+cb7485e3-335e-4313-8f76-0ef6e950e1fc,Sườn nướng BBQ,both,Phổ biến ở cả nhà và quán ăn.
+5626181f-0ccf-4849-bd24-c183f73af8b9,Sườn xào chua ngọt,both,"Món ăn gia đình phổ biến, cũng có ở quán cơm."
+78332db5-f085-4511-80d3-6ec9e0dfd1bf,Sủi cảo nước,restaurant,"Món ăn có tên riêng, thường bán ở quán ăn."
+758f698a-96e1-49bd-be7d-c960e524d4f9,Sữa chua dẻo trà xanh,restaurant,"Món tráng miệng phổ biến ở quán ăn, tiệm giải khát."
+9de857c4-677f-4cd3-9a73-e533503e1691,Sữa chua nếp cẩm,restaurant,"Món tráng miệng phổ biến ở quán ăn, tiệm giải khát."
+69be9c3e-3294-4f3d-a413-aa3e052abf1b,Sữa chua trân châu Hạ Long,restaurant,"Món ăn có tên riêng, thường bán ở quán ăn."
+b371f46a-a451-4be8-90e4-03bd1d97ac47,Taco thịt bò với salsa xoài,restaurant,"Món ăn quốc tế, thường bán ở nhà hàng."
+6a301aeb-6206-4103-bd58-ac34330eb3e2,Taco tôm cá với salsa xoài,restaurant,"Món ăn quốc tế, thường bán ở nhà hàng."
+7e7b9b49-fe13-4ece-8c78-0c5102d41e1d,Tai heo ngâm mắm tắc,both,"Món nhậu phổ biến, có thể làm tại nhà hoặc mua ở quán."
+a3aaedd0-e52e-46ad-aec8-991da8e584e9,Tempeh áp chảo,both,Món ăn có thể tự chế biến hoặc tìm thấy ở quán chay.
+8d88dcb4-7152-4a94-9615-e32344c5a59b,Thiên lý xào thịt bò,home_cooked,Tên mô tả công thức nấu tại nhà.
+32a96a71-7098-452a-acd9-39cee6a74b1f,Thịt ba chỉ rang cháy cạnh,home_cooked,Tên mô tả công thức nấu tại nhà.
+7b4a8ad0-b148-4147-a6c9-18f4c66608f3,Thịt ba rọi nướng,both,Phổ biến ở cả nhà và quán ăn.
+242348c5-9c1b-45a1-96f4-05956b8abca3,Thịt heo chiên xù (Tonkatsu),restaurant,"Món ăn có tên riêng, thường bán ở nhà hàng."
+f6497047-6ac2-456d-a406-4008a561380c,Thịt heo quay kho cải chua,home_cooked,Tên mô tả công thức nấu tại nhà.
+3edb4234-feaa-411b-9f0e-0bd3d1c9d7f4,Thịt kho tàu,both,Phổ biến ở cả nhà và quán cơm bình dân
+4fc5934f-a9fe-4cba-838b-cf0fd9ca3241,Thịt luộc chấm mắm nêm,home_cooked,"Món ăn đơn giản, thường nấu tại nhà"
+e34d8471-0807-4f67-a32f-3a327ad62175,Thịt luộc tôm chua,both,Phổ biến ở cả nhà và quán ăn
+2761eaa2-3767-4c68-a7af-0d193a5b13c0,Thịt nướng BBQ Hàn Quốc,restaurant,Món ăn đặc trưng của nhà hàng Hàn Quốc
+31f92cdf-56aa-4277-a52f-41c47c04d710,Thịt xông khói cuộn măng tây nướng,both,Có thể tự làm hoặc mua ở quán ăn
+9632fbac-06ac-4215-ab34-9806e895f080,Tokbokki,restaurant,"Món ăn đặc trưng của ẩm thực Hàn Quốc, phổ biến ở quán"
+a43ff353-4411-47d5-9ede-aa840e1707b0,Tokbokki phô mai,restaurant,"Món ăn đặc trưng của ẩm thực Hàn Quốc, phổ biến ở quán"
+3b4ee9ce-edd7-4ee3-9309-b37d7ed9a41b,Trái cây tô trộn sữa chua,both,Có thể tự làm tại nhà hoặc mua ở quán giải khát
+0dda4892-7314-4ade-99a7-17d24eaa2ea8,Trứng chiên hành,home_cooked,"Món ăn đơn giản, thường nấu tại nhà"
+ac9d2914-1bf9-4f0e-8725-5e8786896e8c,Trứng chiên thịt băm,home_cooked,"Món ăn đơn giản, thường nấu tại nhà"
+d9f4f3df-b779-4225-a431-6d9c9e30a1bc,Trứng cút lộn xào me,restaurant,Món ăn vặt đường phố phổ biến
+b050d2dd-5ac9-46e1-bb13-506ffd70df8b,Trứng cút nướng chén phô mai,restaurant,Món ăn vặt đường phố phổ biến
+dffd02ab-ae61-46f9-a9a1-7d996772d0b8,Trứng vịt lộn hầm ngải cứu,both,Có thể nấu tại nhà hoặc tìm thấy ở quán ăn
+19d20c46-3c15-4203-8111-bdc433db675c,Trứng đúc thịt băm,home_cooked,"Món ăn đơn giản, thường nấu tại nhà"
+091f2e5d-a037-4fe7-8ed5-7763c5787e25,Tu hài nướng mỡ hành,restaurant,Món hải sản thường được bán ở nhà hàng
+3dd0e74b-3403-4335-9b07-d35e8143f208,Tàu hũ trân châu đường đen,restaurant,"Món ăn vặt phổ biến ở quán, tiệm chè"
+d75552be-ab77-4edd-834f-183b0af897dc,Tôm cuộn thịt xông khói nướng,both,Có thể tự làm hoặc mua ở quán ăn vặt
+2f19a5d4-d348-43cb-a2ba-efd55be21e85,Tôm càng xanh nướng mọi,restaurant,"Món hải sản nướng phổ biến ở nhà hàng, quán nhậu"
+634e6bee-7b48-4a99-a99e-203c6292f8fa,Tôm hùm nướng bơ tỏi,restaurant,Món hải sản cao cấp thường bán ở nhà hàng
+2547f49d-b473-4a9d-ab15-375235cead7e,Tôm hùm nướng phô mai,restaurant,Món hải sản cao cấp thường bán ở nhà hàng
+916ae475-3846-471a-ae55-b1be977ecb34,Tôm hùm đất sốt Cajun,restaurant,Món ăn đặc trưng của các quán hải sản
+20fb5ed7-4493-454c-97f2-e80db40ed9b8,Tôm mũ ni nướng bơ tỏi,restaurant,"Món hải sản nướng phổ biến ở nhà hàng, quán nhậu"
+52bc28f4-09dd-480c-956d-0499321be2b3,Tôm sú hấp bia,both,"Món hải sản đơn giản, có thể làm tại nhà hoặc quán"
+801a80b2-2eec-40f8-af37-729b3f4dc6dc,Tôm tít rang muối,both,Món hải sản rang muối phổ biến ở cả nhà và quán
+151fd89c-b52b-47b1-bee9-986167cd6f63,Tôm đất rang muối,both,Món hải sản rang muối phổ biến ở cả nhà và quán
+6cfc3f9a-062e-419a-8800-7beb207923e7,Tôm đất xóc tỏi,both,Món hải sản xóc tỏi có thể làm tại nhà hoặc quán
+c870910e-6721-4d59-82d8-00f222483d43,Vẹm xanh nướng mỡ hành,restaurant,"Món hải sản nướng phổ biến ở quán nhậu, vỉa hè"
+2e3fb17c-9e7a-4d74-a8b7-f905de8b440b,Vịt quay Bắc Kinh,restaurant,"Món đặc sản nổi tiếng, thường bán ở nhà hàng"
+2f9aff23-4d9b-4091-8ecb-7ebade526bb8,Xiên que nướng,restaurant,Món ăn vặt đường phố phổ biến ở quán
+7ed33a56-258b-4d40-95c0-2b330e92b773,Xôi chiên nhân thịt,restaurant,"Món ăn vặt, bữa sáng phổ biến ở quán"
+9ca35a69-0926-438e-8500-ff9a50af742e,Xôi gà,restaurant,tên riêng của món ăn đường phố phổ biến
+32528e9a-dad4-4508-b138-4d2f1b247510,Xôi mặn,restaurant,tên riêng của món ăn đường phố phổ biến
+5a55eeba-9938-4056-a007-d191e0054ade,Xôi xoài Thái Lan,restaurant,món ăn đặc trưng của ẩm thực Thái Lan
+7810ae2e-3889-4ba4-808f-f1569ca37940,Xôi xéo,restaurant,tên riêng của món ăn đường phố nổi tiếng
+5a83a753-2af1-4920-9666-9fb8dd47033c,Yaourt muối,restaurant,"món ăn vặt phổ biến, thường bán ở quán"
+b03e7a59-b3ae-4f32-9b89-e1ef5bd18032,Đùi gà nướng kiểu Nhật,both,có thể tự làm hoặc mua ở nhà hàng
+9c84b26b-45a6-4b47-a205-39424b3023a4,Đậu bắp luộc chấm chao,home_cooked,"món ăn cơm nhà đơn giản, tên mô tả cách chế biến"
+405a7d17-cddf-4bd7-b551-0e92140262f9,Đậu hũ Tứ Xuyên,restaurant,món ăn đặc trưng của ẩm thực Tứ Xuyên
+d3d0c725-2959-449e-80a1-aadbffa8fc93,Đậu hũ bao bố,both,có thể tự làm hoặc mua ở quán cơm bình dân
+aa5369b5-465e-4d77-96a0-f2887277b51e,Đậu hũ chiên sả ớt,both,có thể tự làm hoặc mua ở quán cơm bình dân
+78916f0d-a7ed-43ab-a319-141a557aa2ef,Đậu hũ kho dứa,home_cooked,tên mô tả công thức nấu tại nhà
+ce11d49e-72fa-4659-8e30-bf1109a64335,Đậu hũ kho tương hột,home_cooked,tên mô tả công thức nấu tại nhà
+570d07dc-77c8-422f-983a-a1758b64fb98,Đậu hũ nhồi thịt sốt cà,home_cooked,tên mô tả công thức nấu tại nhà
+f47ca872-1e17-4587-92a2-bee42c306b67,Đậu hũ non sốt nấm,home_cooked,tên mô tả công thức nấu tại nhà
+c6550f12-c0a9-42c2-bcc1-27e088f49532,Đậu hũ sốt cà chua,home_cooked,tên mô tả công thức nấu tại nhà
+ef85d120-88e0-4149-a035-1065eb30a15c,Đậu hũ sốt ngũ vị,both,Phổ biến ở cả nhà và quán ăn
+67132218-721c-432d-bf02-2a9945543829,Đậu hũ xào nấm đông cô,both,Phổ biến ở cả nhà và quán ăn
+fc208340-00f5-409f-b296-0451ceaee496,Đồ viên chiên thập cẩm,both,Phổ biến ở cả nhà và quán ăn
+9c37c8ad-09b7-4ca9-850e-e026ae9c226f,Ốc bươu hấp sả,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+ee90b522-203e-4ee5-9a27-c72b10339230,Ốc hút cốt dừa,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+f380ad2d-85d0-401f-b8b9-c08f5e3cb103,Ốc hút xào sả ớt,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+d54bb3c0-a710-48c6-8cc6-777d8707ed50,Ốc hương hấp sả,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+7c07120e-3518-4f96-b38e-c748cc79b41b,Ốc hương rang muối tuyết,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+f93e39a8-c848-4c8b-8a47-b1dc12fc71d8,Ốc hương xào bơ tỏi,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+831bfd72-0381-4ec4-ac3c-247111aaaaa2,Ốc len xào dừa,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+bf7eade6-23bd-4dc0-828e-5db5243de5be,Ốc móng tay xào me,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+006bc55d-3c31-404d-9eca-e81f1b770195,Ốc móng tay xào rau muống,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+47d74b56-d24a-4ae3-93c7-eb2fa0256214,Ốc nhảy hấp sả,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"
+c092a1df-838e-4f58-ad75-b504a53ce1f1,Ốc đinh xào sả ớt,restaurant,"Món ốc phổ biến ở quán ăn vặt, nhà hàng"

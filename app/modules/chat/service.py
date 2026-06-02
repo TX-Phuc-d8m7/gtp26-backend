@@ -2,29 +2,28 @@
 
 from __future__ import annotations
 
+import time
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import List, Optional, Tuple
 
-from sqlalchemy import delete, exists, func, or_, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import ChatMessage, ChatThread
+from app.modules.chat import repository as chat_repo
+from app.modules.chat.engine import context as chat_context
+from app.modules.chat.engine import dispatcher as chat_dispatcher
+from app.modules.chat.engine.context import ConversationContextMessage
+from app.modules.chat.engine.response_factory import build_empty_search_response, build_structured_result
+from app.modules.chat.models import ChatMessage, ChatThread
 
-# ---------------------------------------------------------------------------
-# Cấu hình multi-turn context
-# ---------------------------------------------------------------------------
-
-# Số tin nhắn gần nhất đưa vào context (ví dụ: 6 = 3 lượt user + assistant)
-CONTEXT_WINDOW = 6
-
-# Giới hạn độ dài mỗi tin nhắn trong context để tránh prompt quá dài
-# Assistant messages thường dài → cắt bớt
-CONTEXT_USER_MSG_MAX_LEN = 300
-CONTEXT_ASSISTANT_MSG_MAX_LEN = 200
-from app.schemas import (
+from app.modules.chat.schemas import (
     ChatMessageListResponse,
     ChatMessageResult,
+    FoodRecommendationFeedbackRequest,
+    FoodRecommendationFeedbackResult,
+    GuestChatHistoryItem,
+    GuestChatMessageResult,
+    GuestChatSendMessageResponse,
     ChatSendMessageResponse,
     ChatThreadCreate,
     ChatThreadListResponse,
@@ -63,7 +62,27 @@ def _thread_to_result(thread: ChatThread, message_count: int = 0, last_message_a
     )
 
 
-def _message_to_result(msg: ChatMessage) -> ChatMessageResult:
+def _food_recommendation_feedback_to_result(feedback) -> FoodRecommendationFeedbackResult:
+    return FoodRecommendationFeedbackResult(
+        id=feedback.id,
+        user_id=feedback.user_id,
+        thread_id=feedback.thread_id,
+        assistant_message_id=feedback.assistant_message_id,
+        food_id=feedback.food_id,
+        verdict=feedback.verdict,
+        rating=feedback.rating,
+        reasons=feedback.reasons or [],
+        comment=feedback.comment,
+        tried=feedback.tried,
+        created_at=feedback.created_at,
+        updated_at=feedback.updated_at,
+    )
+
+
+def _message_to_result(
+    msg: ChatMessage,
+    food_recommendation_feedbacks: list[FoodRecommendationFeedbackResult] | None = None,
+) -> ChatMessageResult:
     return ChatMessageResult(
         id=msg.id,
         thread_id=msg.thread_id,
@@ -71,8 +90,31 @@ def _message_to_result(msg: ChatMessage) -> ChatMessageResult:
         content=msg.content,
         query_log_id=msg.query_log_id,
         food_results=msg.food_results,
+        structured_result=msg.structured_result,
+        feedback=msg.feedback,
+        food_recommendation_feedbacks=food_recommendation_feedbacks or [],
         created_at=msg.created_at,
     )
+
+
+def _guest_message_to_result(msg: ConversationContextMessage) -> GuestChatMessageResult:
+    return GuestChatMessageResult(
+        role=msg.role,
+        content=msg.content,
+        food_results=msg.food_results,
+        structured_result=msg.structured_result,
+    )
+
+
+def _message_contains_food_result(msg: ChatMessage, food_id: uuid.UUID) -> bool:
+    """Kiểm tra món được feedback có nằm trong danh sách gợi ý của message không."""
+    food_id_text = str(food_id)
+    for item in msg.food_results or []:
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("id") or "") == food_id_text:
+            return True
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -92,51 +134,16 @@ async def list_threads(
     Lấy danh sách threads của user (không bao gồm đã xoá).
     Mặc định sắp xếp: ghim trên cùng → mới nhất trước.
     """
-    base_where = [
-        ChatThread.user_id == user_id,
-        ChatThread.is_deleted.is_(False),
-    ]
-    if q:
-        base_where.append(ChatThread.title.ilike(f"%{q.strip()}%"))
-
-    # Đếm tổng
-    count_stmt = select(func.count()).select_from(ChatThread).where(*base_where)
-    total = (await db.execute(count_stmt)).scalar_one()
-
-    # Thống kê messages cho mỗi thread (số tin + thời điểm tin cuối)
-    msg_stats = (
-        select(
-            ChatMessage.thread_id,
-            func.count(ChatMessage.id).label("msg_count"),
-            func.max(ChatMessage.created_at).label("last_msg_at"),
-        )
-        .group_by(ChatMessage.thread_id)
-        .subquery()
+    total, rows = await chat_repo.list_thread_summaries(
+        db,
+        user_id=user_id,
+        limit=limit,
+        offset=offset,
+        q=q,
+        pinned_first=pinned_first,
     )
-
-    data_stmt = (
-        select(
-            ChatThread,
-            func.coalesce(msg_stats.c.msg_count, 0).label("message_count"),
-            msg_stats.c.last_msg_at.label("last_message_at"),
-        )
-        .outerjoin(msg_stats, ChatThread.id == msg_stats.c.thread_id)
-        .where(*base_where)
-    )
-
-    if pinned_first:
-        data_stmt = data_stmt.order_by(
-            ChatThread.is_pinned.desc(),
-            ChatThread.updated_at.desc(),
-        )
-    else:
-        data_stmt = data_stmt.order_by(ChatThread.updated_at.desc())
-
-    data_stmt = data_stmt.limit(limit).offset(offset)
-    rows = (await db.execute(data_stmt)).all()
-
     items = [
-        _thread_to_result(row.ChatThread, row.message_count, row.last_message_at)
+        _thread_to_result(row.thread, row.message_count, row.last_message_at)
         for row in rows
     ]
     return total, items
@@ -148,11 +155,11 @@ async def create_thread(
     db: AsyncSession,
 ) -> ChatThreadResult:
     """Tạo thread mới — title tuỳ chọn."""
-    thread = ChatThread(
+    thread = await chat_repo.create_thread(
+        db,
         user_id=user_id,
         title=data.title,
     )
-    db.add(thread)
     await db.commit()
     await db.refresh(thread)
     return _thread_to_result(thread)
@@ -164,34 +171,14 @@ async def get_thread(
     db: AsyncSession,
 ) -> Optional[ChatThreadResult]:
     """Lấy metadata thread. None nếu không tồn tại hoặc không thuộc user."""
-    msg_stats = (
-        select(
-            ChatMessage.thread_id,
-            func.count(ChatMessage.id).label("msg_count"),
-            func.max(ChatMessage.created_at).label("last_msg_at"),
-        )
-        .where(ChatMessage.thread_id == thread_id)
-        .group_by(ChatMessage.thread_id)
-        .subquery()
+    row = await chat_repo.get_thread_summary(
+        db,
+        thread_id=thread_id,
+        user_id=user_id,
     )
-
-    stmt = (
-        select(
-            ChatThread,
-            func.coalesce(msg_stats.c.msg_count, 0).label("message_count"),
-            msg_stats.c.last_msg_at.label("last_message_at"),
-        )
-        .outerjoin(msg_stats, ChatThread.id == msg_stats.c.thread_id)
-        .where(
-            ChatThread.id == thread_id,
-            ChatThread.user_id == user_id,
-            ChatThread.is_deleted.is_(False),
-        )
-    )
-    row = (await db.execute(stmt)).first()
     if row is None:
         return None
-    return _thread_to_result(row.ChatThread, row.message_count, row.last_message_at)
+    return _thread_to_result(row.thread, row.message_count, row.last_message_at)
 
 
 async def update_thread(
@@ -201,24 +188,20 @@ async def update_thread(
     db: AsyncSession,
 ) -> Optional[ChatThreadResult]:
     """Cập nhật title hoặc is_pinned. None nếu không tìm thấy."""
-    thread = (await db.execute(
-        select(ChatThread).where(
-            ChatThread.id == thread_id,
-            ChatThread.user_id == user_id,
-            ChatThread.is_deleted.is_(False),
-        )
-    )).scalar_one_or_none()
+    thread = await chat_repo.get_thread_for_user(
+        db,
+        thread_id=thread_id,
+        user_id=user_id,
+    )
 
     if thread is None:
         return None
 
-    if data.title is not None:
-        thread.title = data.title
-    if data.is_pinned is not None:
-        thread.is_pinned = data.is_pinned
-
-    # Cập nhật thủ công updated_at vì SQLAlchemy onupdate không trigger khi set attr
-    thread.updated_at = func.now()
+    chat_repo.apply_thread_updates(
+        thread,
+        title=data.title,
+        is_pinned=data.is_pinned,
+    )
     await db.commit()
     await db.refresh(thread)
     return _thread_to_result(thread)
@@ -230,18 +213,16 @@ async def delete_thread(
     db: AsyncSession,
 ) -> bool:
     """Soft delete thread. Trả False nếu không tìm thấy."""
-    thread = (await db.execute(
-        select(ChatThread).where(
-            ChatThread.id == thread_id,
-            ChatThread.user_id == user_id,
-            ChatThread.is_deleted.is_(False),
-        )
-    )).scalar_one_or_none()
+    thread = await chat_repo.get_thread_for_user(
+        db,
+        thread_id=thread_id,
+        user_id=user_id,
+    )
 
     if thread is None:
         return False
 
-    thread.is_deleted = True
+    chat_repo.soft_delete_thread(thread)
     await db.commit()
     return True
 
@@ -262,33 +243,37 @@ async def list_messages(
     Lấy danh sách messages trong thread (thứ tự cũ nhất trước — như timeline chat).
     Trả None nếu thread không thuộc user.
     """
-    # Kiểm tra quyền
-    thread = (await db.execute(
-        select(ChatThread).where(
-            ChatThread.id == thread_id,
-            ChatThread.user_id == user_id,
-            ChatThread.is_deleted.is_(False),
-        )
-    )).scalar_one_or_none()
+    thread = await chat_repo.get_thread_for_user(
+        db,
+        thread_id=thread_id,
+        user_id=user_id,
+    )
 
     if thread is None:
         return None
 
-    count_stmt = select(func.count()).select_from(ChatMessage).where(
-        ChatMessage.thread_id == thread_id
+    total, messages = await chat_repo.list_messages(
+        db,
+        thread_id=thread_id,
+        limit=limit,
+        offset=offset,
     )
-    total = (await db.execute(count_stmt)).scalar_one()
-
-    data_stmt = (
-        select(ChatMessage)
-        .where(ChatMessage.thread_id == thread_id)
-        .order_by(ChatMessage.created_at.asc())
-        .limit(limit)
-        .offset(offset)
+    assistant_message_ids = [m.id for m in messages if m.role == "assistant"]
+    feedback_rows = await chat_repo.list_food_recommendation_feedbacks(
+        db,
+        user_id=user_id,
+        message_ids=assistant_message_ids,
     )
-    messages = (await db.execute(data_stmt)).scalars().all()
+    feedbacks_by_message: dict[uuid.UUID, list[FoodRecommendationFeedbackResult]] = {}
+    for feedback in feedback_rows:
+        feedbacks_by_message.setdefault(feedback.assistant_message_id, []).append(
+            _food_recommendation_feedback_to_result(feedback)
+        )
 
-    return total, [_message_to_result(m) for m in messages]
+    return total, [
+        _message_to_result(m, feedbacks_by_message.get(m.id))
+        for m in messages
+    ]
 
 
 # ---------------------------------------------------------------------------
@@ -300,13 +285,15 @@ async def send_message(
     user_id: uuid.UUID,
     query: str,
     skip_profile: bool,
+    lat: float | None,
+    lng: float | None,
     db: AsyncSession,
 ) -> Optional[ChatSendMessageResponse]:
     """
     Luồng chính khi user gửi tin nhắn trong chatbot:
     1. Kiểm tra thread thuộc user.
     2. Lưu user message.
-    3. Uỷ quyền cho _run_search_and_save: build context → augment profile → search → save assistant msg.
+    3. Uỷ quyền cho dispatcher intent: classify → route handler → save assistant msg.
     4. Auto-gen title từ câu hỏi đầu tiên nếu thread chưa có title.
 
     Trả None nếu thread không tồn tại hoặc không thuộc user.
@@ -317,74 +304,95 @@ async def send_message(
         return None
 
     # 2. Lưu user message
-    user_msg = ChatMessage(
+    user_msg = await chat_repo.create_message(
+        db,
         thread_id=thread_id,
         role="user",
         content=query.strip(),
+        structured_result=build_structured_result(
+            "user_context",
+            {
+                "lat": lat,
+                "lng": lng,
+            },
+        ) if lat is not None or lng is not None else None,
     )
-    db.add(user_msg)
-    await db.flush()
 
     # 3. Auto-title từ câu hỏi đầu tiên (trước khi search để không chặn flow)
     if not thread.title:
-        thread.title = _auto_title(query)
+        chat_repo.apply_thread_updates(thread, title=_auto_title(query))
         await db.flush()
 
     # 4. Search + lưu assistant message (logic dùng chung với regenerate & edit)
-    return await _run_search_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    return await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
 
 
-async def _build_conversation_context(
-    thread_id: uuid.UUID,
-    exclude_msg_id: uuid.UUID,
+async def send_guest_message(
+    *,
+    query: str,
+    skip_profile: bool,
+    lat: float | None,
+    lng: float | None,
+    history: list[GuestChatHistoryItem],
+    current_user_id: uuid.UUID | None,
     db: AsyncSession,
-    limit: int = CONTEXT_WINDOW,
-) -> str:
+) -> GuestChatSendMessageResponse:
     """
-    Lấy `limit` tin nhắn gần nhất trong thread (không tính tin nhắn hiện tại),
-    format thành chuỗi ngữ cảnh hội thoại để LLM supervisor hiểu được context.
-
-    Ví dụ output:
-        [Lịch sử hội thoại]
-        Người dùng: Tôi bị cao huyết áp, gợi ý món ăn sáng
-        Trợ lý: Với tình trạng cao huyết áp, tôi gợi ý cháo yến mạch…
-        Người dùng: Món nào không cần nấu?
-        Trợ lý: Bạn có thể chọn bánh mì nguyên cám…
-
-    Trả chuỗi rỗng nếu thread chưa có lịch sử (tin nhắn đầu tiên).
+    Public guest chat endpoint:
+    - Không lưu thread/message vào DB
+    - Dùng chung intent dispatcher với chat đã đăng nhập
+    - Có thể tận dụng profile nếu request kèm token hợp lệ và skip_profile=false
     """
-    msgs = (await db.execute(
-        select(ChatMessage)
-        .where(
-            ChatMessage.thread_id == thread_id,
-            ChatMessage.id != exclude_msg_id,
+    user_structured_result = build_structured_result(
+        "user_context",
+        {
+            "lat": lat,
+            "lng": lng,
+        },
+    ) if lat is not None or lng is not None else None
+
+    recent_messages = [
+        chat_context.snapshot_from_guest_history_item(item)
+        for item in history[-chat_context.CONTEXT_WINDOW:]
+    ]
+    user_message = ConversationContextMessage(
+        role="user",
+        content=query.strip(),
+        structured_result=user_structured_result,
+    )
+
+    handler_result = await chat_dispatcher.dispatch_intent_from_context(
+        raw_query=user_message.content,
+        user_id=current_user_id,
+        user_structured_result=user_message.structured_result,
+        recent_messages=recent_messages,
+        skip_profile=skip_profile,
+        db=db,
+        thread_id=None,
+    )
+
+    if handler_result.search_result is None:
+        handler_result.search_result = build_empty_search_response(
+            query=user_message.content,
+            ai_response=handler_result.content,
+            retrieval_note=(
+                "Intent này không sinh danh sách món mới; search_result rỗng được giữ lại để tương thích frontend."
+            ),
         )
-        .order_by(ChatMessage.created_at.desc())
-        .limit(limit)
-    )).scalars().all()
 
-    if not msgs:
-        return ""
-
-    # Đảo lại để hiển thị cũ → mới
-    msgs = list(reversed(msgs))
-
-    lines = ["[Lịch sử hội thoại]"]
-    for msg in msgs:
-        if msg.role == "user":
-            label = "Người dùng"
-            max_len = CONTEXT_USER_MSG_MAX_LEN
-        else:
-            label = "Trợ lý"
-            max_len = CONTEXT_ASSISTANT_MSG_MAX_LEN
-
-        content = msg.content.strip()
-        if len(content) > max_len:
-            content = content[:max_len] + "…"
-        lines.append(f"{label}: {content}")
-
-    return "\n".join(lines)
-
+    assistant_message = ConversationContextMessage(
+        role="assistant",
+        content=handler_result.content,
+        food_results=handler_result.food_results,
+        structured_result=handler_result.structured_result,
+    )
+    return GuestChatSendMessageResponse(
+        user_message=_guest_message_to_result(user_message),
+        assistant_message=_guest_message_to_result(assistant_message),
+        intent=handler_result.intent,
+        search_result=handler_result.search_result,
+        place_result=handler_result.place_result,
+    )
 
 def _build_fallback_content(search_result) -> str:
     """Tạo nội dung fallback khi không có ai_response (lỗi LLM)."""
@@ -393,45 +401,20 @@ def _build_fallback_content(search_result) -> str:
     names = ", ".join(r.name for r in search_result.results[:3])
     return f"Dựa trên yêu cầu của bạn, tôi gợi ý: {names}."
 
-
-def _serialize_food_results(search_result) -> Optional[list]:
-    """Serialize danh sách FoodResult thành list dict để lưu JSONB."""
-    if not search_result.results:
-        return None
-    return [
-        {
-            "id": str(r.id),
-            "name": r.name,
-            "description": r.description,
-            "img_url": r.img_url,
-            "core_ingredients": r.core_ingredients,
-            "soft_tags": r.soft_tags,
-            "taste_profile": r.taste_profile,
-            "meal_context": r.meal_context,
-            "occasion_context": r.occasion_context,
-            "matchScore": r.matchScore,
-            "reason": r.reason,
-        }
-        for r in search_result.results
-    ]
-
-
 async def _get_thread_for_user(
     thread_id: uuid.UUID,
     user_id: uuid.UUID,
     db: AsyncSession,
 ) -> Optional[ChatThread]:
     """Lấy thread nếu thuộc user và chưa bị xoá. Dùng chung cho nhiều hàm."""
-    return (await db.execute(
-        select(ChatThread).where(
-            ChatThread.id == thread_id,
-            ChatThread.user_id == user_id,
-            ChatThread.is_deleted.is_(False),
-        )
-    )).scalar_one_or_none()
+    return await chat_repo.get_thread_for_user(
+        db,
+        thread_id=thread_id,
+        user_id=user_id,
+    )
 
 
-async def _run_search_and_save(
+async def _run_dispatch_and_save(
     thread_id: uuid.UUID,
     user_id: uuid.UUID,
     user_msg: ChatMessage,
@@ -440,58 +423,63 @@ async def _run_search_and_save(
 ) -> "ChatSendMessageResponse":
     """
     Dùng chung cho send_message, regenerate_message, edit_and_resend:
-    - Build conversation context từ lịch sử thread (không tính user_msg hiện tại)
-    - Augment với health profile
-    - Gọi search_food
-    - Tạo và lưu assistant message
+    - Phân loại intent từ context gần nhất
+    - Dispatch sang handler tương ứng
+    - Lưu assistant message với payload có cấu trúc
     - Cập nhật updated_at của thread
     - Trả ChatSendMessageResponse
     """
-    from app.modules.search.service import search_food
-    from app.modules.users.service import augment_query_with_profile, get_profile
+    t_total_start = time.perf_counter()
+    print(f"\n{'='*60}")
+    print(f"⏱️ [TIMING] send_message bắt đầu | query={user_msg.content[:60]!r}")
 
-    # Build context từ lịch sử
-    history_context = await _build_conversation_context(thread_id, user_msg.id, db)
-    raw_query = user_msg.content
-    query_with_context = (
-        f"{history_context}\n\n[Câu hỏi hiện tại]\n{raw_query}"
-        if history_context else raw_query
+    handler_result = await chat_dispatcher.dispatch_user_intent(
+        thread_id=thread_id,
+        user_id=user_id,
+        user_msg=user_msg,
+        skip_profile=skip_profile,
+        db=db,
     )
+    t_dispatch_done = time.perf_counter()
+    print(f"⏱️ [TIMING] dispatch_user_intent DONE: {(t_dispatch_done - t_total_start)*1000:.0f}ms")
 
-    # Augment health profile
-    effective_query = query_with_context
-    if not skip_profile:
-        profile = await get_profile(user_id, db)
-        effective_query = augment_query_with_profile(query_with_context, profile)
-
-    # Gọi AI search
-    search_result = await search_food(effective_query, db, thread_id=thread_id)
+    if handler_result.search_result is None:
+        handler_result.search_result = build_empty_search_response(
+            query=user_msg.content,
+            ai_response=handler_result.content,
+            retrieval_note=(
+                "Intent này không sinh danh sách món mới; search_result rỗng được giữ lại để tương thích frontend."
+            ),
+        )
 
     # Tạo assistant message
-    assistant_msg = ChatMessage(
+    assistant_msg = await chat_repo.create_message(
+        db,
         thread_id=thread_id,
         role="assistant",
-        content=search_result.ai_response or _build_fallback_content(search_result),
-        query_log_id=search_result.query_log_id,
-        food_results=_serialize_food_results(search_result),
+        content=handler_result.content,
+        query_log_id=handler_result.query_log_id,
+        food_results=handler_result.food_results,
+        structured_result=handler_result.structured_result,
     )
-    db.add(assistant_msg)
 
     # Cập nhật thread updated_at
-    await db.execute(
-        update(ChatThread)
-        .where(ChatThread.id == thread_id)
-        .values(updated_at=func.now())
-    )
+    await chat_repo.touch_thread_updated_at(db, thread_id=thread_id)
 
     await db.commit()
     await db.refresh(user_msg)
     await db.refresh(assistant_msg)
+    t_total_end = time.perf_counter()
+    print(f"⏱️ [TIMING] DB save: {(t_total_end - t_dispatch_done)*1000:.0f}ms")
+    print(f"⏱️ [TIMING] *** TOTAL end-to-end: {(t_total_end - t_total_start)*1000:.0f}ms ***")
+    print(f"{'='*60}\n")
 
     return ChatSendMessageResponse(
         user_message=_message_to_result(user_msg),
         assistant_message=_message_to_result(assistant_msg),
-        search_result=search_result,
+        intent=handler_result.intent,
+        search_result=handler_result.search_result,
+        place_result=handler_result.place_result,
     )
 
 
@@ -517,34 +505,27 @@ async def regenerate_message(
         return None
 
     # Tìm assistant message
-    asst_msg = (await db.execute(
-        select(ChatMessage).where(
-            ChatMessage.id == message_id,
-            ChatMessage.thread_id == thread_id,
-            ChatMessage.role == "assistant",
-        )
-    )).scalar_one_or_none()
+    asst_msg = await chat_repo.get_assistant_message(
+        db,
+        thread_id=thread_id,
+        message_id=message_id,
+    )
     if asst_msg is None:
         return None
 
     # Tìm user message liền trước (theo thứ tự thời gian)
-    user_msg = (await db.execute(
-        select(ChatMessage).where(
-            ChatMessage.thread_id == thread_id,
-            ChatMessage.role == "user",
-            ChatMessage.created_at < asst_msg.created_at,
-        )
-        .order_by(ChatMessage.created_at.desc())
-        .limit(1)
-    )).scalar_one_or_none()
+    user_msg = await chat_repo.get_previous_user_message(
+        db,
+        thread_id=thread_id,
+        before_created_at=asst_msg.created_at,
+    )
     if user_msg is None:
         return None
 
     # Xoá assistant message cũ để không lẫn vào context
-    await db.delete(asst_msg)
-    await db.flush()
+    await chat_repo.delete_message(db, asst_msg)
 
-    return await _run_search_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    return await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
 
 
 # ---------------------------------------------------------------------------
@@ -566,21 +547,90 @@ async def set_message_feedback(
     if not await _get_thread_for_user(thread_id, user_id, db):
         return None
 
-    msg = (await db.execute(
-        select(ChatMessage).where(
-            ChatMessage.id == message_id,
-            ChatMessage.thread_id == thread_id,
-            ChatMessage.role == "assistant",
-        )
-    )).scalar_one_or_none()
+    msg = await chat_repo.get_assistant_message(
+        db,
+        thread_id=thread_id,
+        message_id=message_id,
+    )
 
     if msg is None:
         return None
 
-    msg.feedback = feedback  # None = xoá feedback
+    chat_repo.set_message_feedback(msg, feedback)
     await db.commit()
     await db.refresh(msg)
     return _message_to_result(msg)
+
+
+# ---------------------------------------------------------------------------
+# Food Recommendation Feedback — đánh giá từng món gợi ý
+# ---------------------------------------------------------------------------
+
+async def set_food_recommendation_feedback(
+    thread_id: uuid.UUID,
+    message_id: uuid.UUID,
+    user_id: uuid.UUID,
+    data: FoodRecommendationFeedbackRequest,
+    db: AsyncSession,
+) -> Optional[FoodRecommendationFeedbackResult]:
+    """
+    Tạo hoặc cập nhật feedback của user cho một món trong assistant message.
+    Trả None nếu thread/message không thuộc user. Raise ValueError nếu food_id
+    không nằm trong food_results của assistant message.
+    """
+    if not await _get_thread_for_user(thread_id, user_id, db):
+        return None
+
+    msg = await chat_repo.get_assistant_message(
+        db,
+        thread_id=thread_id,
+        message_id=message_id,
+    )
+    if msg is None:
+        return None
+
+    if not _message_contains_food_result(msg, data.food_id):
+        raise ValueError("FOOD_NOT_IN_ASSISTANT_MESSAGE")
+
+    normalized_reasons = [
+        reason.strip()
+        for reason in data.reasons
+        if reason.strip()
+    ]
+    normalized_comment = data.comment.strip() if data.comment and data.comment.strip() else None
+
+    feedback = await chat_repo.get_food_recommendation_feedback(
+        db,
+        user_id=user_id,
+        assistant_message_id=message_id,
+        food_id=data.food_id,
+    )
+    if feedback is None:
+        feedback = await chat_repo.create_food_recommendation_feedback(
+            db,
+            user_id=user_id,
+            thread_id=thread_id,
+            assistant_message_id=message_id,
+            food_id=data.food_id,
+            verdict=data.verdict,
+            rating=data.rating,
+            reasons=normalized_reasons,
+            comment=normalized_comment,
+            tried=data.tried,
+        )
+    else:
+        chat_repo.apply_food_recommendation_feedback_updates(
+            feedback,
+            verdict=data.verdict,
+            rating=data.rating,
+            reasons=normalized_reasons,
+            comment=normalized_comment,
+            tried=data.tried,
+        )
+
+    await db.commit()
+    await db.refresh(feedback)
+    return _food_recommendation_feedback_to_result(feedback)
 
 
 # ---------------------------------------------------------------------------
@@ -608,27 +658,39 @@ async def edit_and_resend(
         return None
 
     # Tìm user message cần edit
-    user_msg = (await db.execute(
-        select(ChatMessage).where(
-            ChatMessage.id == message_id,
-            ChatMessage.thread_id == thread_id,
-            ChatMessage.role == "user",
-        )
-    )).scalar_one_or_none()
+    user_msg = await chat_repo.get_user_message(
+        db,
+        thread_id=thread_id,
+        message_id=message_id,
+    )
 
     if user_msg is None:
         return None
 
     # Xoá tất cả messages sau user message (assistant cũ + các lượt tiếp theo)
-    await db.execute(
-        delete(ChatMessage).where(
-            ChatMessage.thread_id == thread_id,
-            ChatMessage.created_at > user_msg.created_at,
-        )
+    await chat_repo.delete_messages_after(
+        db,
+        thread_id=thread_id,
+        created_at=user_msg.created_at,
     )
 
     # Cập nhật nội dung user message
-    user_msg.content = data.query.strip()
+    structured_result = None
+    update_structured_result = data.lat is not None or data.lng is not None
+    if update_structured_result:
+        structured_result = build_structured_result(
+            "user_context",
+            {
+                "lat": data.lat,
+                "lng": data.lng,
+            },
+        )
+    chat_repo.update_message_content_and_context(
+        user_msg,
+        content=data.query.strip(),
+        structured_result=structured_result,
+        update_structured_result=update_structured_result,
+    )
     await db.flush()
 
-    return await _run_search_and_save(thread_id, user_id, user_msg, data.skip_profile, db)
+    return await _run_dispatch_and_save(thread_id, user_id, user_msg, data.skip_profile, db)

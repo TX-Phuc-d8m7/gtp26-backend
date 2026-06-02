@@ -1,5 +1,5 @@
 {
-  "name": "Nhiệt miệng/Loét miệng",
+  "name": "Nhiệt miệng / Loét miệng",
   "tag_type": "SYMPTON",
   "exclude_soft_tag": [
     "Cay",
@@ -12,10 +12,10 @@
     "Nướng",
     "Nhiều dầu mỡ / Calo cao",
     "Khó tiêu / Nặng bụng",
-    "Sống/Chín tái"
+    "Sống / Chín tái"
   ],
   "prefer_soft_tag": [
-    "Thanh mát/Giải nhiệt",
+    "Thanh mát / Giải nhiệt",
     "Món lạnh",
     "Mềm",
     "Dễ tiêu",

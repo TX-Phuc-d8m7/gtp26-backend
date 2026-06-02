@@ -30,15 +30,15 @@ VALID_SOFT_TAGS = [
     # Vị chủ đạo
     "Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy",
     # Nhiệt độ & cảm giác
-    "Nóng hổi", "Thanh mát/Giải nhiệt", "Món lạnh",
+    "Nóng hổi", "Thanh mát / Giải nhiệt", "Món lạnh",
     # Kết cấu
-    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống/Chín tái",
+    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống / Chín tái",
     # Dạng món
     "Món nước", "Món khô", "Nước sền sệt",
     # Phương pháp chế biến
     "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào",
     "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Hầm / Ninh",
-    "Lẩu", "Kho/Rim", "Súp", "Cháo", "Rang",
+    "Lẩu", "Kho / Rim", "Súp", "Cháo", "Rang",
     # [NHÓM ĐỊA PHƯƠNG & DANH MỤC — Gán đúng xuất xứ]
     "Đặc sản Đà Nẵng", "Ẩm thực đường phố", "Món Việt truyền thống",
     "Món Á", "Món Âu", "Thức ăn nhanh", "Món chay", "Hải sản",
@@ -56,7 +56,7 @@ TASTE_TAGS = {"Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "
 FORM_TAGS = {"Món nước", "Món khô", "Nước sền sệt"}
 METHOD_TAGS = {
     "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
-    "Hầm / Ninh", "Lẩu", "Kho/Rim", "Súp", "Cháo", "Rang"
+    "Hầm / Ninh", "Lẩu", "Kho / Rim", "Súp", "Cháo", "Rang"
 }
 MEAL_TIME_TAGS = {"Ăn sáng", "Ăn trưa", "Ăn tối", "Ăn chiều / xế", "Ăn khuya"}
 OCCASION_TAGS = {"Ăn no", "Ăn vặt", "Mồi nhậu", "Tráng miệng", "Giải rượu", "Giải cảm", "Ấm bụng"}
@@ -104,12 +104,12 @@ TAG_PRIORITY = [
     "Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy",
     "Món nước", "Món khô", "Nước sền sệt",
     "Chiên / Rán", "Nướng", "Hấp / Luộc", "Xào", "Gỏi / Nộm / Trộn", "Cuốn / Gói",
-    "Hầm / Ninh", "Lẩu", "Kho/Rim", "Súp", "Cháo", "Rang",
+    "Hầm / Ninh", "Lẩu", "Kho / Rim", "Súp", "Cháo", "Rang",
     "Hải sản", "Nội tạng", "Từ sữa / Phô mai", "Thực phẩm chế biến sẵn", "Bánh ngọt",
     "Giàu chất xơ", "Giàu đạm", "Giàu vitamin", "Giàu tinh bột",
     "Dễ tiêu", "Khó tiêu / Nặng bụng", "Healthy / Eat Clean", "Nhiều dầu mỡ / Calo cao",
-    "Nóng hổi", "Thanh mát/Giải nhiệt", "Món lạnh",
-    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống/Chín tái",
+    "Nóng hổi", "Thanh mát / Giải nhiệt", "Món lạnh",
+    "Giòn / Giòn rụm", "Dai / Sần sật", "Mềm", "Sống / Chín tái",
     "Đặc sản Đà Nẵng", "Ẩm thực đường phố", "Món Việt truyền thống", "Món Á", "Món Âu",
     "Thức ăn nhanh", "Món chay",
     "Ăn sáng", "Ăn trưa", "Ăn tối", "Ăn chiều / xế", "Ăn khuya", "Ăn no", "Ăn vặt",
@@ -263,7 +263,7 @@ def method_has_evidence(tag: str, food_name: str, full_text: str) -> bool:
         "Xào": ["xào", "đảo chảo"],
         "Gỏi / Nộm / Trộn": ["gỏi", "nộm", "trộn", "salad"],
         "Cuốn / Gói": ["cuốn", "gói"],
-        "Kho/Rim": ["kho", "rim", "om"],
+        "Kho / Rim": ["kho", "rim", "om"],
         "Rang": ["rang"],
         "Hầm / Ninh": ["hầm", "ninh", "nước dùng", "nước hầm", "canh"],
     }
@@ -334,7 +334,7 @@ def infer_method_tags(food_name: str, full_text: str) -> list[str]:
         ("Xào", ["xào", "đảo chảo"]),
         ("Gỏi / Nộm / Trộn", ["gỏi", "nộm", "trộn", "salad"]),
         ("Cuốn / Gói", ["cuốn", "gói"]),
-        ("Kho/Rim", ["kho", "rim", "om"]),
+        ("Kho / Rim", ["kho", "rim", "om"]),
         ("Rang", ["rang"]),
         ("Hầm / Ninh", ["hầm", "ninh", "nước dùng", "nước hầm"]),
     ]
@@ -402,7 +402,7 @@ def correct_primary_method_tag(tags: list[str], food_name: str, raw_instructions
             ("Xào", ["xào"]),
             ("Gỏi / Nộm / Trộn", [] if should_ignore_prep_mix_as_method(name_lower) else ["gỏi", "nộm", "trộn"]),
             ("Cuốn / Gói", ["cuốn"]),
-            ("Kho/Rim", ["kho", "rim"]),
+            ("Kho / Rim", ["kho", "rim"]),
             ("Rang", ["rang"]),
         ]
         for tag, keywords in name_priority:
@@ -413,7 +413,7 @@ def correct_primary_method_tag(tags: list[str], food_name: str, raw_instructions
     if not preferred:
         current_methods = [tag for tag in tags if tag in METHOD_TAGS]
         has_supported_current_method = any(method_has_evidence(tag, food_name, full_text) for tag in current_methods)
-        replaceable_method_noise = not current_methods or all(tag in {"Kho/Rim"} for tag in current_methods)
+        replaceable_method_noise = not current_methods or all(tag in {"Kho / Rim"} for tag in current_methods)
         if not has_supported_current_method and replaceable_method_noise:
             preferred = infer_strong_method_from_text(food_name, full_text)
 
@@ -543,7 +543,7 @@ SYSTEM_PROMPT = f"""Bạn là chuyên gia ẩm thực Việt Nam có nhiều nă
     • "Nướng": Chế biến bằng nhiệt trực tiếp (thịt nướng, cá nướng, sườn nướng). ĐẶC BIỆT chú ý các món có từ "nướng" trong tên.
     • "Chiên / Rán": Làm chín bằng dầu/mỡ (cá chiên, chả giò rán, bánh xèo).
     • "Xào": Đảo nhanh với ít dầu (rau xào, mì xào, bò xào).
-    • "Kho/Rim": Nấu lửa nhỏ với gia vị mặn ngọt cho keo lại (thịt kho, cá kho, tôm rim).
+    • "Kho / Rim": Nấu lửa nhỏ với gia vị mặn ngọt cho keo lại (thịt kho, cá kho, tôm rim).
     • "Lẩu": Món nước ăn nóng trực tiếp trên bếp (lẩu thái, lẩu hải sản).
     • "Cuốn / Gói": Các món dùng bánh tráng, lá để cuộn nguyên liệu (gỏi cuốn, phở cuốn, chả giò sống).
     • "Rang": Rang khô không dầu hoặc ít dầu (lạc rang, tôm rang, cơm rang khô).
@@ -587,7 +587,7 @@ SYSTEM_PROMPT = f"""Bạn là chuyên gia ẩm thực Việt Nam có nhiều nă
         - GÁN: Kết cấu mềm là ĐẶC TRƯNG — cháo, bánh bao, đậu phụ mềm, trứng hấp
         - GÁN: Thịt hầm nhừ, cá kho mềm
 
-        • "Sống/Chín tái":
+        • "Sống / Chín tái":
         - GÁN: Thịt/cá sống hoặc chín tái (gỏi sống, sashimi, nem chua sống, bò tái)
         - KHÔNG GÁN: Rau sống ăn kèm không tính là "Sống / Chín tái"
     

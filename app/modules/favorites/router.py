@@ -9,8 +9,8 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.session import get_db
-from app.models import User
-from app.schemas import (
+from app.modules.users.models import User
+from app.modules.favorites.schemas import (
     FavoriteFoodCreate,
     FavoriteFoodResult,
     FavoriteFoodUpdate,

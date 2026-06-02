@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
+from urllib.parse import quote_plus
 
 from dotenv import load_dotenv
 
@@ -30,6 +31,7 @@ class Settings:
     run_seed_on_startup: bool = _env_bool("RUN_SEED_ON_STARTUP", False)
     sync_tags_on_startup: bool = _env_bool("SYNC_TAGS_ON_STARTUP", False)
     sync_foods_on_startup: bool = _env_bool("SYNC_FOODS_ON_STARTUP", False)
+    sync_foods_delete_stale_on_startup: bool = _env_bool("SYNC_FOODS_DELETE_STALE_ON_STARTUP", False)
     run_embedding_on_startup: bool = _env_bool("RUN_EMBEDDING_ON_STARTUP", False)
     embedding_backfill_limit: int = int(os.getenv("EMBEDDING_BACKFILL_LIMIT", "0"))
     embedding_backfill_sleep_seconds: float = float(os.getenv("EMBEDDING_BACKFILL_SLEEP_SECONDS", "3"))
@@ -37,12 +39,25 @@ class Settings:
     semantic_retrieval_top_k: int = int(os.getenv("SEMANTIC_RETRIEVAL_TOP_K", "100"))
     semantic_min_score: float = float(os.getenv("SEMANTIC_MIN_SCORE", "0.0"))
     search_return_limit: int = int(os.getenv("SEARCH_RETURN_LIMIT", "5"))
+    google_maps_api_key: str = os.getenv("GOOGLE_MAPS_API_KEY", "")
+    serpapi_api_key: str = os.getenv("SERPAPI_API_KEY", "")
+    places_cache_ttl_days: int = int(os.getenv("PLACES_CACHE_TTL_DAYS", "7"))
+    refresh_token_expire_days: int = int(os.getenv("REFRESH_TOKEN_EXPIRE_DAYS", "30"))
+    password_reset_token_expire_minutes: int = int(os.getenv("PASSWORD_RESET_TOKEN_EXPIRE_MINUTES", "30"))
+    gemini_text_model: str = os.getenv("GEMINI_TEXT_MODEL", "gemini-2.5-flash-lite")
 
     @property
     def database_url(self) -> str:
+        encoded_password = quote_plus(self.db_password)
+        # Cloud Run connects to Cloud SQL via Unix socket (path starts with "/")
+        if self.db_host.startswith("/"):
+            return (
+                f"postgresql+asyncpg://{self.db_username}:{encoded_password}"
+                f"@/{self.db_name}?host={self.db_host}"
+            )
         return (
             "postgresql+asyncpg://"
-            f"{self.db_username}:{self.db_password}@{self.db_host}:{self.db_port}/{self.db_name}"
+            f"{self.db_username}:{encoded_password}@{self.db_host}:{self.db_port}/{self.db_name}"
         )
 
 
