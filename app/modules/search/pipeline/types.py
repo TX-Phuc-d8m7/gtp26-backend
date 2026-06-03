@@ -10,7 +10,6 @@ from typing import Any
 class ExtractedIntent:
     health_constraints: list[str] = field(default_factory=list)
     include_dishes: list[str] = field(default_factory=list)
-    exclude_dishes: list[str] = field(default_factory=list)
     preferred_ingredients: list[str] = field(default_factory=list)
     disliked_ingredients: list[str] = field(default_factory=list)
     preferred_ingredient_keys: list[str] = field(default_factory=list)
@@ -21,6 +20,7 @@ class ExtractedIntent:
     occasion_context: list[str] = field(default_factory=list)
     medical_prefer_tags: list[str] = field(default_factory=list)
     medical_prefer_ingredients: list[str] = field(default_factory=list)
+    medical_avoid_tags: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -38,6 +38,7 @@ class CriticalSafetyRules:
     critical_exclude_tags: list[str] = field(default_factory=list)
     allergy_constraints: list[str] = field(default_factory=list)
     allergy_exclude_ingredients: list[str] = field(default_factory=list)
+    exclude_dishes: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -61,7 +62,7 @@ class ScoreBreakdown:
     preference_bonus: float = 0.0
     medical_bonus: float = 0.0
     dislike_penalty: float = 0.0
-    dish_penalty: float = 0.0
+    medical_penalty: float = 0.0
     final_score: float = 0.0
     matched_signals: list[str] = field(default_factory=list)
 

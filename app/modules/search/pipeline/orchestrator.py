@@ -7,19 +7,23 @@ from typing import TYPE_CHECKING, Any
 
 from app.core.config import settings
 
+from ._utils import coerce_list as _coerce_list, dedupe as _dedupe, get_field as _get_field
 from .explanation import build_generation_guardrails, build_reason
 from .intent import intent_from_conflict_payload
 from .retrieval import (
+    RETRIEVAL_EXPANSION_FACTOR,
     build_semantic_query_text,
     lexical_retrieve_foods,
+    needs_retrieval_expansion,
     semantic_retrieve_foods,
 )
-from .safety import apply_critical_safety_filter
+from .safety import apply_critical_safety_filter, select_critical_exclude_tags
 from .scoring import rank_candidates
 from .types import CriticalSafetyRules, ExtractedIntent, RejectedFood, RetrievedFood, ScoredFood
 
 if TYPE_CHECKING:
     from sqlalchemy.ext.asyncio import AsyncSession
+    from app.modules.search.schemas import AIInsight, FoodResult, SearchResponse
     from app.modules.users.models import UserHealthProfile
 
 
@@ -50,17 +54,6 @@ def _setting_float(name: str, default: float) -> float:
         return default
 
 
-def _dedupe(values: list[str]) -> list[str]:
-    seen: set[str] = set()
-    result: list[str] = []
-    for value in values or []:
-        normalized = str(value or "").strip()
-        if normalized and normalized.lower() not in seen:
-            seen.add(normalized.lower())
-            result.append(normalized)
-    return result
-
-
 def _json_safe(value: Any) -> Any:
     if isinstance(value, uuid.UUID):
         return str(value)
@@ -69,22 +62,6 @@ def _json_safe(value: Any) -> Any:
     if isinstance(value, (list, tuple, set)):
         return [_json_safe(item) for item in value]
     return value
-
-
-def _get_field(food: Any, field_name: str, default: Any = None) -> Any:
-    if isinstance(food, dict):
-        return food.get(field_name, default)
-    return getattr(food, field_name, default)
-
-
-def _coerce_list(value: Any) -> list[str]:
-    if value is None:
-        return []
-    if isinstance(value, str):
-        return [value]
-    if isinstance(value, (list, tuple, set)):
-        return [str(item) for item in value if item is not None]
-    return [str(value)]
 
 
 def _food_result_from_scored(scored: ScoredFood) -> FoodResult:
@@ -164,9 +141,10 @@ def _build_safety_rules(
     return CriticalSafetyRules(
         health_constraints=_dedupe(payload.get("symptoms", [])),
         excluded_ingredient_keys=critical_exclude_ingredient_keys,
-        critical_exclude_tags=_dedupe(payload.get("medical_exclude_tags", [])),
+        critical_exclude_tags=select_critical_exclude_tags(payload.get("symptoms", [])),
         allergy_constraints=_dedupe(payload.get("allergy_constraints", [])),
         allergy_exclude_ingredients=_dedupe(payload.get("allergy_exclude_ings", [])),
+        exclude_dishes=_dedupe(payload.get("user_exclude_dishes", [])),
     )
 
 
@@ -216,7 +194,13 @@ async def _retrieve_candidates(
     semantic_query_text: str,
     retrieval_notes: list[str],
     llm_runtime: dict[str, Any],
-) -> tuple[list[RetrievedFood], str]:
+) -> tuple[list[RetrievedFood], str, list[float] | None]:
+    """Retrieve candidates and return (candidates, retrieval_mode, query_vector).
+
+    query_vector is returned for semantic mode so the caller can perform
+    expansion retrieval if the safety filter starves the result pool.
+    For lexical_fallback, query_vector is None (whole table already scanned).
+    """
     from app.modules.search import service as legacy_search
 
     top_k = _setting_int("semantic_retrieval_top_k", 100)
@@ -234,19 +218,21 @@ async def _retrieve_candidates(
         )
         if candidates:
             llm_runtime["retrieval_mode"] = "semantic"
-            return candidates, "semantic"
+            return candidates, "semantic", list(query_vector)
+        llm_runtime["retrieval_empty_reason"] = "no_embedded_foods"
+    else:
+        retrieval_notes.append(EMBEDDING_FALLBACK_RETRIEVAL_NOTE)
+        llm_runtime["user_visible_retrieval_note_applied"] = True
 
-    retrieval_notes.append(EMBEDDING_FALLBACK_RETRIEVAL_NOTE)
     llm_runtime["retrieval_mode"] = "lexical_fallback"
     llm_runtime.setdefault("fallbacks_used", []).append("embedding")
-    llm_runtime["user_visible_retrieval_note_applied"] = True
     candidates = await lexical_retrieve_foods(
         db,
         query,
         intent,
         top_k=top_k,
     )
-    return candidates, "lexical_fallback"
+    return candidates, "lexical_fallback", None
 
 
 async def semantic_first_search_food(
@@ -295,7 +281,7 @@ async def semantic_first_search_food(
     )
     semantic_query_text = build_semantic_query_text(query, intent)
 
-    candidates, retrieval_mode = await _retrieve_candidates(
+    candidates, retrieval_mode, query_vector = await _retrieve_candidates(
         db,
         query,
         intent,
@@ -313,12 +299,31 @@ async def semantic_first_search_food(
         extra_rules=alias_override_rules,
     )
     safety_rules = _build_safety_rules(payload, critical_exclude_ingredient_keys)
+
+    return_limit = max(1, min(top_k, _setting_int("search_return_limit", 5)))
     safe_candidates, rejected_candidates = apply_critical_safety_filter(
         candidates,
         safety_rules,
     )
 
-    return_limit = max(1, min(top_k, _setting_int("search_return_limit", 5)))
+    if (
+        query_vector is not None
+        and needs_retrieval_expansion(len(safe_candidates), return_limit, retrieval_mode)
+    ):
+        expanded_top_k = (
+            _setting_int("semantic_retrieval_top_k", 100) * RETRIEVAL_EXPANSION_FACTOR
+        )
+        wider_candidates = await semantic_retrieve_foods(db, query_vector, top_k=expanded_top_k)
+        llm_runtime["retrieval_expansion_attempted"] = True
+        llm_runtime["retrieval_expanded_top_k"] = expanded_top_k
+        if len(wider_candidates) > len(candidates):
+            candidates = wider_candidates
+            safe_candidates, rejected_candidates = apply_critical_safety_filter(
+                candidates,
+                safety_rules,
+            )
+            llm_runtime.setdefault("fallbacks_used", []).append("retrieval_expanded")
+
     ranked = rank_candidates(
         safe_candidates,
         intent,
@@ -356,6 +361,7 @@ async def semantic_first_search_food(
         "retrieval": {
             "mode": retrieval_mode,
             "top_k": _setting_int("semantic_retrieval_top_k", 100),
+            "expanded_top_k": llm_runtime.get("retrieval_expanded_top_k"),
             "candidate_count": len(candidates),
             "sample": [_candidate_trace(candidate) for candidate in candidates[:10]],
         },
@@ -364,11 +370,13 @@ async def semantic_first_search_food(
             "excluded_ingredient_keys": critical_exclude_ingredient_keys,
             "critical_exclude_tags": safety_rules.critical_exclude_tags,
             "allergy_constraints": safety_rules.allergy_constraints,
+            "exclude_dishes": safety_rules.exclude_dishes,
             "rejected_count": len(rejected_candidates),
             "rejected_sample": [_rejected_trace(item) for item in rejected_candidates[:20]],
             "safe_count": len(safe_candidates),
         },
         "soft_scoring": {
+            "medical_avoid_tags": intent.medical_avoid_tags,
             "scored_count": len(safe_candidates),
             "returned_count": len(results),
             "top_results": [_scored_trace(item) for item in ranked],
@@ -412,11 +420,7 @@ async def semantic_first_search_food(
         results=results,
         disclaimer=SEARCH_DISCLAIMER,
         query_log_id=query_log_id,
-        retrieval_note=(
-            EMBEDDING_FALLBACK_RETRIEVAL_NOTE
-            if retrieval_mode == "lexical_fallback"
-            else None
-        ),
+        retrieval_note=retrieval_notes[0] if retrieval_notes else None,
         retrieval_trace=_json_safe(excluded_summary) if debug else None,
         ai_response=ai_response_text or None,
     )

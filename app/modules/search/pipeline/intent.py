@@ -58,7 +58,6 @@ def intent_from_conflict_payload(
     return ExtractedIntent(
         health_constraints=_dedupe(payload.get("symptoms", [])),
         include_dishes=_dedupe(payload.get("user_include_dishes", [])),
-        exclude_dishes=_dedupe(payload.get("user_exclude_dishes", [])),
         preferred_ingredients=preferred_ingredients,
         disliked_ingredients=disliked_ingredients,
         preferred_ingredient_keys=_generate_keys(
@@ -85,4 +84,5 @@ def intent_from_conflict_payload(
         occasion_context=_dedupe(grouped_include.get("occasion_context", [])),
         medical_prefer_tags=_dedupe(payload.get("medical_prefer_tags", [])),
         medical_prefer_ingredients=medical_prefer_ingredients,
+        medical_avoid_tags=_dedupe(payload.get("medical_exclude_tags", [])),
     )

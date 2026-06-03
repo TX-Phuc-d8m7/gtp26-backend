@@ -6,23 +6,45 @@ from typing import Any, Iterable
 
 from app.modules.search.safety import detect_allergy_text_matches
 
+from ._utils import (
+    coerce_list as _coerce_list,
+    dedupe,
+    dish_phrase_matches as _dish_phrase_matches,
+    get_field as _get_field,
+    normalize_text,
+    normalized_overlap as _normalized_overlap,
+)
 from .types import CriticalSafetyRules, RejectedFood, RetrievedFood, SafetyDecision
 
+# Hard filter theo tag chỉ dành cho chống chỉ định TUYỆT ĐỐI về sinh học.
+# Mirror quyết định legacy (app/modules/search/service.py:377-385):
+# exclude_soft_tag của đa số bệnh trộn tag nguy hiểm cao với tag "nên tránh"
+# (Nướng, Xào, Đậm đà...) — hard filter toàn bộ gây over-filtering.
+# Tag "nên tránh" được xử lý bằng penalty trong scoring (medical_avoid_tags).
+# Lưu ý ranh giới an toàn: với các bệnh chuyển hóa (Tiểu đường, Cao huyết áp...)
+# chống chỉ định tuyệt đối nằm ở INGREDIENT KEYS (vẫn hard-filter ở orchestrator);
+# tag mức món ăn chỉ mang tính khuyến nghị tuân thủ chế độ ăn.
+CRITICAL_TAG_WHITELIST: dict[str, list[str]] = {
+    "Gout": ["Hải sản"],
+    "Gút": ["Hải sản"],  # alias tiếng Việt phòng hồ sơ nhập tay không qua enum UI
+}
+_CRITICAL_TAG_WHITELIST_NORMALIZED: dict[str, list[str]] = {
+    normalize_text(condition): tags
+    for condition, tags in CRITICAL_TAG_WHITELIST.items()
+}
 
-def _get_field(food: Any, field_name: str, default: Any = None) -> Any:
-    if isinstance(food, dict):
-        return food.get(field_name, default)
-    return getattr(food, field_name, default)
 
+def select_critical_exclude_tags(health_constraints: list[str]) -> list[str]:
+    """Chỉ trả về tag thuộc whitelist chống chỉ định tuyệt đối theo bệnh.
 
-def _coerce_list(value: Any) -> list[str]:
-    if value is None:
-        return []
-    if isinstance(value, str):
-        return [value]
-    if isinstance(value, (list, tuple, set)):
-        return [str(item) for item in value if item is not None]
-    return [str(value)]
+    Lookup không phân biệt hoa thường/dấu (hồ sơ user là free text).
+    """
+    critical: list[str] = []
+    for condition in health_constraints or []:
+        critical.extend(
+            _CRITICAL_TAG_WHITELIST_NORMALIZED.get(normalize_text(condition), [])
+        )
+    return dedupe(critical)
 
 
 def _ordered_overlap(left: Iterable[str], right: Iterable[str]) -> list[str]:
@@ -59,7 +81,7 @@ def evaluate_critical_safety(
             matched_values=ingredient_matches,
         )
 
-    tag_matches = _ordered_overlap(
+    tag_matches = _normalized_overlap(
         get_food_scoring_tags(food),
         rules.critical_exclude_tags,
     )
@@ -68,6 +90,17 @@ def evaluate_critical_safety(
             reject=True,
             reason="critical_tag_overlap",
             matched_values=tag_matches,
+        )
+
+    dish_matches = _dish_phrase_matches(
+        rules.exclude_dishes,
+        str(_get_field(food, "name", "")),
+    )
+    if dish_matches:
+        return SafetyDecision(
+            reject=True,
+            reason="excluded_dish_name",
+            matched_values=dish_matches,
         )
 
     allergy_matches = detect_allergy_text_matches(

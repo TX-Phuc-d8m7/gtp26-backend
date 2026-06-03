@@ -2,10 +2,14 @@
 
 from __future__ import annotations
 
-import re
-import unicodedata
-from typing import Any, Iterable
+from typing import Any
 
+from ._utils import (
+    coerce_list as _coerce_list,
+    get_field as _get_field,
+    normalized_overlap as _overlap,
+    phrase_matches as _phrase_matches,
+)
 from .safety import get_food_scoring_tags
 from .types import ExtractedIntent, RetrievedFood, ScoreBreakdown, ScoredFood
 
@@ -18,56 +22,10 @@ INCLUDE_DISH_BONUS = 0.05
 
 DISLIKED_INGREDIENT_PENALTY = 0.15
 DISLIKED_TAG_PENALTY = 0.10
-EXCLUDE_DISH_PENALTY = 0.18
+MEDICAL_AVOID_PENALTY = 0.12  # mạnh hơn disliked_tag (0.10): lý do y khoa > sở thích
 
-MAX_TAG_BONUS = 0.12
+MAX_TOTAL_BONUS = 0.12
 MAX_PENALTY = 0.30
-
-
-def _get_field(food: Any, field_name: str, default: Any = None) -> Any:
-    if isinstance(food, dict):
-        return food.get(field_name, default)
-    return getattr(food, field_name, default)
-
-
-def _coerce_list(value: Any) -> list[str]:
-    if value is None:
-        return []
-    if isinstance(value, str):
-        return [value]
-    if isinstance(value, (list, tuple, set)):
-        return [str(item) for item in value if item is not None]
-    return [str(value)]
-
-
-def _normalize_text(value: str) -> str:
-    text = unicodedata.normalize("NFD", str(value or ""))
-    text = "".join(char for char in text if unicodedata.category(char) != "Mn")
-    text = text.replace("đ", "d").replace("Đ", "D").lower()
-    text = re.sub(r"[^a-z0-9]+", " ", text)
-    return re.sub(r"\s+", " ", text).strip()
-
-
-def _overlap(left: Iterable[str], right: Iterable[str]) -> list[str]:
-    right_keys = {_normalize_text(item) for item in (right or [])}
-    matched: list[str] = []
-    seen: set[str] = set()
-    for value in left or []:
-        key = _normalize_text(value)
-        if key and key in right_keys and key not in seen:
-            seen.add(key)
-            matched.append(str(value))
-    return matched
-
-
-def _phrase_matches(needles: Iterable[str], haystack: str) -> list[str]:
-    normalized_haystack = f" {_normalize_text(haystack)} "
-    matched: list[str] = []
-    for needle in needles or []:
-        normalized_needle = _normalize_text(needle)
-        if normalized_needle and f" {normalized_needle} " in normalized_haystack:
-            matched.append(str(needle))
-    return matched
 
 
 def _combined_food_text(food: Any) -> str:
@@ -142,19 +100,19 @@ def score_candidate(candidate: RetrievedFood, intent: ExtractedIntent) -> Scored
         breakdown.dislike_penalty += min(0.20, len(disliked_tag_matches) * DISLIKED_TAG_PENALTY)
         signals.append("disliked_tag_penalty")
 
+    medical_avoid_matches = _overlap(food_tags, intent.medical_avoid_tags)
+    if medical_avoid_matches:
+        breakdown.medical_penalty += min(0.24, len(medical_avoid_matches) * MEDICAL_AVOID_PENALTY)
+        signals.append("medical_avoid_tag_penalty")
+
     combined_text = _combined_food_text(food)
     disliked_ingredient_text_matches = _phrase_matches(intent.disliked_ingredients, combined_text)
     if disliked_ingredient_text_matches and not disliked_ingredient_matches:
         breakdown.dislike_penalty += DISLIKED_INGREDIENT_PENALTY
         signals.append("disliked_ingredient_text_penalty")
 
-    exclude_dish_matches = _phrase_matches(intent.exclude_dishes, dish_name)
-    if exclude_dish_matches:
-        breakdown.dish_penalty += EXCLUDE_DISH_PENALTY
-        signals.append("exclude_dish_penalty")
-
     bonus = min(
-        MAX_TAG_BONUS,
+        MAX_TOTAL_BONUS,
         breakdown.tag_bonus
         + breakdown.context_bonus
         + breakdown.preference_bonus
@@ -162,7 +120,7 @@ def score_candidate(candidate: RetrievedFood, intent: ExtractedIntent) -> Scored
     )
     penalty = min(
         MAX_PENALTY,
-        breakdown.dislike_penalty + breakdown.dish_penalty,
+        breakdown.dislike_penalty + breakdown.medical_penalty,
     )
     breakdown.final_score = _clamp_score(semantic_score + bonus - penalty)
     breakdown.matched_signals = signals

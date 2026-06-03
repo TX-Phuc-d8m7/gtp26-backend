@@ -2,25 +2,34 @@
 
 from __future__ import annotations
 
-import re
-import unicodedata
 from typing import TYPE_CHECKING, Any
 
+from ._utils import (
+    coerce_list as _coerce_list,
+    dedupe as _dedupe,
+    get_field as _get_field,
+    normalize_text as _normalize_text,
+)
 from .types import ExtractedIntent, RetrievedFood
 
 if TYPE_CHECKING:
     from sqlalchemy.ext.asyncio import AsyncSession
 
 
-def _dedupe(values: list[str]) -> list[str]:
-    seen: set[str] = set()
-    result: list[str] = []
-    for value in values or []:
-        normalized = str(value or "").strip()
-        if normalized and normalized.lower() not in seen:
-            seen.add(normalized.lower())
-            result.append(normalized)
-    return result
+RETRIEVAL_EXPANSION_FACTOR = 5
+
+
+def needs_retrieval_expansion(
+    safe_count: int,
+    return_limit: int,
+    retrieval_mode: str,
+) -> bool:
+    """Mở rộng pool khi safety filter loại gần hết candidates semantic.
+
+    Chỉ áp dụng cho semantic: lexical fallback đã quét toàn bộ bảng nên
+    không còn gì để mở rộng.
+    """
+    return retrieval_mode == "semantic" and safe_count < return_limit
 
 
 def build_semantic_query_text(query: str, intent: ExtractedIntent) -> str:
@@ -68,10 +77,12 @@ async def semantic_retrieve_foods(
     if food_model is None:
         from app.models import Food as food_model
     from sqlalchemy import select
+    from sqlalchemy.orm import defer
 
     distance_expr = food_model.embedding.cosine_distance(query_vector)
     stmt = (
         select(food_model, distance_expr.label("distance"))
+        .options(defer(food_model.embedding))
         .where(food_model.embedding.is_not(None))
         .order_by(distance_expr)
         .limit(top_k)
@@ -87,30 +98,6 @@ async def semantic_retrieve_foods(
         )
         for index, row in enumerate(rows, 1)
     ]
-
-
-def _normalize_text(value: str) -> str:
-    text = unicodedata.normalize("NFD", str(value or ""))
-    text = "".join(char for char in text if unicodedata.category(char) != "Mn")
-    text = text.replace("đ", "d").replace("Đ", "D").lower()
-    text = re.sub(r"[^a-z0-9]+", " ", text)
-    return re.sub(r"\s+", " ", text).strip()
-
-
-def _get_field(food: Any, field_name: str, default: Any = None) -> Any:
-    if isinstance(food, dict):
-        return food.get(field_name, default)
-    return getattr(food, field_name, default)
-
-
-def _coerce_list(value: Any) -> list[str]:
-    if value is None:
-        return []
-    if isinstance(value, str):
-        return [value]
-    if isinstance(value, (list, tuple, set)):
-        return [str(item) for item in value if item is not None]
-    return [str(value)]
 
 
 def lexical_score_food(food: Any, query: str, intent: ExtractedIntent) -> float:
@@ -171,8 +158,13 @@ async def lexical_retrieve_foods(
     if food_model is None:
         from app.models import Food as food_model
     from sqlalchemy import select
+    from sqlalchemy.orm import defer
 
-    rows = (await db.execute(select(food_model))).scalars().all()
+    rows = (
+        (await db.execute(select(food_model).options(defer(food_model.embedding))))
+        .scalars()
+        .all()
+    )
     scored_rows = [
         (food, lexical_score_food(food, query, intent))
         for food in rows
