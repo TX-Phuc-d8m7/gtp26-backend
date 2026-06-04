@@ -1,0 +1,38 @@
+[
+  {
+    "group": "Dị ứng",
+    "query": "Tôi bị dị ứng tôm cua ghẹ, muốn ăn món giàu đạm an toàn.",
+    "http_status": 200,
+    "latency_ms": 38765,
+    "result_count": 3,
+    "results": [
+      "Đậu hũ non sốt nấm",
+      "Đậu hũ xào nấm đông cô",
+      "Cá viên chiên mắm"
+    ]
+  },
+  {
+    "group": "Bệnh lý",
+    "query": "Tôi bị tiểu đường type 2, buổi tối ăn gì vừa no vừa không tăng đường huyết?",
+    "http_status": 200,
+    "latency_ms": 16154,
+    "result_count": 3,
+    "results": [
+      "Phở cuốn chay",
+      "Bò xào khổ qua",
+      "Cá hanh hấp xì dầu"
+    ]
+  },
+  {
+    "group": "Triệu chứng",
+    "query": "Tôi đang bị cảm ho mệt mỏi, ăn gì dễ nuốt và mau hồi phục?",
+    "http_status": 200,
+    "latency_ms": 13686,
+    "result_count": 3,
+    "results": [
+      "Cháo gà",
+      "Súp bí đỏ",
+      "Canh mướp nấu nấm"
+    ]
+  }
+]

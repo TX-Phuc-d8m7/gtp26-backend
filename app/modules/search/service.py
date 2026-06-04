@@ -48,7 +48,6 @@ from app.modules.search.explanation import (
     build_food_reason,
     run_post_processing_with_timeout,
 )
-from app.modules.search.validation import run_final_validation_with_timeout
 from app.modules.search.filtering import (
     apply_adaptive_context_exclude_filter_with_trace,
     apply_adaptive_context_include_filter_with_trace,
@@ -93,13 +92,6 @@ from app.modules.search.tracing import (
     matched_keys,
 )
 from app.modules.users.models import UserHealthProfile
-
-
-async def _noop_validation(
-    foods: list,
-) -> tuple[list, list, dict]:
-    """Placeholder trả về khi validation bị bỏ qua (không có symptoms)."""
-    return foods, [], {"status": "skipped", "latency_ms": 0, "error_message": None}
 
 
 async def search_food(
@@ -799,56 +791,17 @@ async def search_food(
             build_returned_trace_item(rank, result),
         )
 
-    # --- Bước 7: Final Validation → Post-processing ---
+    # --- Bước 7: Post-processing ---
     #
-    # final_validation_agent: validate từng món theo health constraints,
-    #                         xác định PASS / WARN / REJECT, loại REJECT
-    #                         và viết reason ngắn cho từng card món ăn.
-    # post_processing_agent : là nơi DUY NHẤT sinh ai_response cuối cùng,
-    #                         dựa trên danh sách món đã qua validation.
-    #
-    # Lưu ý: validation được phép ghi reason từng card, nhưng không được viết
-    # ai_response. Post-processing là nơi duy nhất viết response tổng quan.
+    # Các ràng buộc sức khỏe đã được xử lý bởi safety/filtering/ranking trước đó.
+    # Post-processing viết ai_response và reason tự nhiên cho từng món; nếu Gemini
+    # lỗi/timeout thì giữ reason fallback đã sinh ở bước map schema.
 
-    # Chuẩn bị tham số cho validation
-    _medical_e_tags_for_validation = list(medical_e_tags) if symptoms else []
-    _medical_e_ings_for_validation = list(final_e_ings) if symptoms else []
-
-    validated_foods, rejected_foods_info, validation_runtime = (
-        await run_final_validation_with_timeout(
-            user_query=query,
-            symptoms=symptoms,
-            forbidden_tags=_medical_e_tags_for_validation,
-            forbidden_ingredients=_medical_e_ings_for_validation,
-            top_foods=results_list,
-        )
-        if symptoms
-        else await _noop_validation(results_list)
-    )
-
-    # Ghi runtime validation
-    llm_runtime["validation_status"] = validation_runtime.get("status", "ok")
-    llm_runtime["stage_latency_ms"]["validation"] = validation_runtime.get("latency_ms", 0)
-    if validation_runtime.get("error_message"):
-        llm_runtime["validation_error"] = validation_runtime["error_message"]
-    if validation_runtime.get("status") == "fallback":
-        llm_runtime["fallbacks_used"].append("validation")
-
-    # Áp dụng validation vào danh sách món trước khi sinh ai_response.
-    validation_applied = validation_runtime.get("status") == "ok"
-    if validation_applied:
-        results_list = validated_foods
-        returned_count = len(results_list)
-    if rejected_foods_info:
-        print(
-            f"🚫 [VALIDATION] Loại {len(rejected_foods_info)} món: "
-            + ", ".join(f['name'] for f in rejected_foods_info)
-        )
-
+    post_processing_foods = results_list[:5]
     ai_response_text, _food_reasons_map, post_processing_runtime = await run_post_processing_with_timeout(
         query,
         symptoms,
-        results_list,
+        post_processing_foods,
         retrieval_notes,
     )
 
@@ -860,21 +813,19 @@ async def search_food(
     if post_processing_runtime.get("status") == "fallback":
         llm_runtime["fallbacks_used"].append("post_processing")
 
-    # --- Áp dụng LLM food_reasons từ post_processing (có điều kiện) ---
-    # Case A: không symptoms → apply
-    # Case B: symptoms + validation OK → KHÔNG apply (validation đã viết reason)
-    # Case C: symptoms + validation fallback → apply (có medical warnings)
-    _should_apply_post_reasons = (not symptoms) or (not validation_applied)
-    if _should_apply_post_reasons and _food_reasons_map:
+    # Ghi reason tự nhiên từ LLM vào từng card món ăn nếu post-processing thành công.
+    if _food_reasons_map:
         updated_results: list[FoodResult] = []
+        applied_reason_count = 0
         for food_result in results_list:
             post_reason = _food_reasons_map.get(food_result.name.lower())
             if post_reason:
                 updated_results.append(food_result.model_copy(update={"reason": post_reason}))
+                applied_reason_count += 1
             else:
-                updated_results.append(food_result)  # giữ deterministic reason làm fallback
+                updated_results.append(food_result)
         results_list = updated_results
-        print(f"[POST-PROCESSING] Đã apply LLM reasons cho {sum(1 for r in results_list if r.reason)} / {len(results_list)} món.")
+        print(f"[POST-PROCESSING] Đã apply LLM reasons cho {applied_reason_count}/{len(results_list)} món.")
 
     ai_insight = AIInsight(
         exclude=safety_e_tags + final_e_ings,
@@ -930,12 +881,6 @@ async def search_food(
             "missing_embedding_count": missing_embedding_count,
             "zero_vector_count": zero_vector_count,
             "scored_count": scored_count,
-        },
-        "final_validation": {
-            "status": validation_runtime.get("status", "ok"),
-            "applied": validation_applied,
-            "rejected_foods": rejected_foods_info,
-            "latency_ms": validation_runtime.get("latency_ms", 0),
         },
         "llm_runtime": llm_runtime,
         "retrieval_trace": retrieval_trace,

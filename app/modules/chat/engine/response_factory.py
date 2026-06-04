@@ -45,6 +45,21 @@ def build_structured_result(kind: str, data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def build_search_message_content(search_result: SearchResponse) -> str:
+    """Tạo nội dung chat cho kết quả search, có ghép warning nếu safety layer trả về."""
+    content = search_result.ai_response or (
+        "Xin lỗi, mình chưa tìm được món phù hợp cho yêu cầu này."
+        if not search_result.results
+        else f"Mình đã tìm được {len(search_result.results)} gợi ý phù hợp cho bạn."
+    )
+    warning_text = (search_result.ai_insight.warning_message or "").strip()
+    if not warning_text:
+        return content
+    if warning_text in content:
+        return content
+    return f"{warning_text}\n\n{content}"
+
+
 def coerce_food_result_items(items: list[dict[str, Any]] | None) -> list[FoodResult]:
     """Ép list dict đã lưu trong chat message về FoodResult, bỏ qua item lỗi."""
     results: list[FoodResult] = []
@@ -74,11 +89,19 @@ def build_search_response_from_food_results(
     food_results: list[dict[str, Any]],
     ai_response: str,
     retrieval_note: str | None = None,
+    ai_insight: dict[str, Any] | None = None,
 ) -> SearchResponse:
     """Tạo SearchResponse từ food_results đã lưu trong chat history."""
+    if ai_insight:
+        try:
+            parsed_insight = AIInsight(**ai_insight)
+        except Exception:
+            parsed_insight = AIInsight(exclude=[], include=[], prefer=[])
+    else:
+        parsed_insight = AIInsight(exclude=[], include=[], prefer=[])
     return SearchResponse(
         query=query,
-        ai_insight=AIInsight(exclude=[], include=[], prefer=[]),
+        ai_insight=parsed_insight,
         results=coerce_food_result_items(food_results),
         disclaimer=CHAT_SEARCH_DISCLAIMER,
         retrieval_note=retrieval_note,

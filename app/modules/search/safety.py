@@ -187,6 +187,53 @@ def coerce_text_list(value: Any) -> list[str]:
     return [str(value)]
 
 
+def _unique_non_empty(items: Iterable[str]) -> list[str]:
+    """Giữ thứ tự tương đối và loại bỏ giá trị rỗng/trùng lặp."""
+    seen = set()
+    results: list[str] = []
+    for item in items or []:
+        text = str(item or "").strip()
+        if not text:
+            continue
+        key = normalize_vietnamese_text(text)
+        if key in seen:
+            continue
+        seen.add(key)
+        results.append(text)
+    return results
+
+
+def _format_vi_list(items: Iterable[str], limit: int = 5) -> str:
+    """Format danh sách ngắn bằng tiếng Việt để dùng trong câu cảnh báo."""
+    values = _unique_non_empty(items)
+    if not values:
+        return ""
+    visible = values[:limit]
+    if len(values) > limit:
+        visible.append(f"{len(values) - limit} yếu tố khác")
+    if len(visible) == 1:
+        return visible[0]
+    return f"{', '.join(visible[:-1])} và {visible[-1]}"
+
+
+def _build_preference_conflict_warning(
+    *,
+    conflicts: Iterable[str],
+    symptoms: Iterable[str],
+) -> str | None:
+    """Viết cảnh báo tự nhiên khi sở thích người dùng xung đột với rule sức khỏe."""
+    conflict_text = _format_vi_list(conflicts)
+    symptom_text = _format_vi_list(symptoms)
+    if not conflict_text or not symptom_text:
+        return None
+    return (
+        f"Mình nhận thấy yêu cầu có {conflict_text}, nhưng các yếu tố này đang xung đột "
+        f"với tình trạng {symptom_text} vì có thể không an toàn hoặc làm triệu chứng khó chịu hơn. "
+        "Vì vậy mình sẽ ưu tiên gợi ý những món dịu hơn và phù hợp hơn; nếu bạn vẫn muốn ăn gần khẩu vị đó, "
+        "hãy chọn phiên bản không dùng các nguyên liệu/gia vị cần tránh."
+    )
+
+
 def build_allergy_text_source(food: Any) -> str:
     """Gộp core_ingredients thành một chuỗi text để phục vụ kiểm tra dị ứng."""
     parts: list[str] = []
@@ -578,7 +625,10 @@ async def resolve_food_conflicts(
 
     warning_message = None
     if all_conflicts:
-        warning_message = f"Hệ thống phát hiện bạn muốn ăn đồ có ({', '.join(all_conflicts)}), nhưng với tình trạng ({', '.join(symptoms)}), bạn cần kiêng chúng để đảm bảo an toàn."
+        warning_message = _build_preference_conflict_warning(
+            conflicts=all_conflicts,
+            symptoms=symptoms,
+        )
     if supervisor_runtime.get("status") == "fallback":
         warning_message = SUPERVISOR_FALLBACK_WARNING
 

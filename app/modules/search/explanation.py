@@ -41,6 +41,7 @@ def _join_reason_items(items: list[str], limit: int = 2) -> str:
             cleaned.append(item)
     return ", ".join(cleaned[:limit])
 
+
 def build_food_reason(
     food: Food,
     match_score: float,
@@ -51,7 +52,7 @@ def build_food_reason(
     """
     Sinh lý do ngắn cho từng card món ăn bằng rule/template.
 
-    Không gọi LLM ở đây để giữ tốc độ và đảm bảo lý do bám sát scoring thật.
+    Đây chỉ là fallback trước khi post-processing LLM ghi đè reason tự nhiên.
     """
     requested_ingredients_text = _join_reason_items(requested_ingredients, limit=3)
     matched_user_tags = score_details.get("matched_user_prefer_tags", []) or []
@@ -73,32 +74,30 @@ def build_food_reason(
     if score_details.get("main_meal_request") and serving_role in PRIMARY_MEAL_ROLES:
         signals.append("phù hợp làm bữa chính")
     if user_context_tags:
-        signals.append(f"khớp ngữ cảnh {_join_reason_items(user_context_tags)}")
+        signals.append(f"phù hợp với {_join_reason_items(user_context_tags)}")
     if user_soft_taste_tags:
-        signals.append(f"khớp sở thích {_join_reason_items(user_soft_taste_tags)}")
+        signals.append(f"gần với sở thích {_join_reason_items(user_soft_taste_tags)}")
     if matched_medical_tags:
-        signals.append(f"có tín hiệu tốt cho sức khỏe như {_join_reason_items(matched_medical_tags)}")
+        signals.append(f"có đặc điểm hỗ trợ như {_join_reason_items(matched_medical_tags)}")
 
     if ingredient_priority_match and requested_ingredients_text:
-        opening = f"Khớp nguyên liệu bạn muốn ({requested_ingredients_text})"
+        opening = f"Món này có nguyên liệu bạn muốn ({requested_ingredients_text})"
         if signals:
             opening += f" và {signals[0]}"
-        opening += f", với điểm phù hợp {match_score:.1f}%."
+        opening += "."
     elif requested_ingredients_text:
         opening = (
-            f"Được gợi ý như lựa chọn thay thế an toàn hơn khi món có "
-            f"{requested_ingredients_text} không đủ nổi bật sau lọc sức khỏe/ngữ cảnh"
+            f"Món này là lựa chọn thay thế sau khi lọc sức khỏe/ngữ cảnh "
+            f"khi món có {requested_ingredients_text} chưa đủ nổi bật."
         )
         if signals:
-            opening += f"; món này {signals[0]}"
-        opening += f", điểm phù hợp {match_score:.1f}%."
+            opening += f" Món vẫn {signals[0]}."
     elif signals:
-        opening = f"Được gợi ý vì {signals[0]}"
+        opening = f"Món này được gợi ý vì {signals[0]}."
         if len(signals) > 1:
-            opening += f" và {signals[1]}"
-        opening += f", điểm phù hợp {match_score:.1f}%."
+            opening += f" Đồng thời món {signals[1]}."
     else:
-        opening = f"Được xếp hạng cao nhờ mức tương đồng với câu hỏi, điểm phù hợp {match_score:.1f}%."
+        opening = "Món này là lựa chọn cân bằng theo dữ liệu món ăn và câu hỏi của bạn."
 
     explicit_conflicts = score_details.get("explicit_preference_conflicts", []) or []
     if explicit_conflicts:
@@ -107,15 +106,14 @@ def build_food_reason(
             for conflict in explicit_conflicts[:2]
         )
         opening += (
-            f" Lưu ý: {conflict_text}; hệ thống vẫn đưa vào vì sau lọc sức khỏe/ngữ cảnh, "
-            "đây là lựa chọn thay thế có điểm phù hợp cao."
+            f" Lưu ý: {conflict_text}; hệ thống vẫn đưa vào như một lựa chọn thay thế."
         )
 
     if matched_avoid_tags:
         caution_tags = _join_reason_items(matched_avoid_tags)
         return (
-            f"{opening} Tuy nhiên món có tín hiệu cần lưu ý ({caution_tags}), "
-            "nên xem là lựa chọn cần điều chỉnh theo khuyến nghị sức khỏe."
+            f"{opening} Tuy nhiên món có điểm cần lưu ý ({caution_tags}), "
+            "nên điều chỉnh khi ăn."
         )
 
     medical_caution_matches = score_details.get("medical_caution_matches", []) or []
@@ -125,8 +123,8 @@ def build_food_reason(
             limit=2,
         )
         return (
-            f"{opening} Tuy nhiên món có thành phần cần dùng vừa phải "
-            f"({caution_labels}), nên kiểm soát khẩu phần/nước chấm theo khuyến nghị sức khỏe."
+            f"{opening} Món có thành phần cần dùng vừa phải "
+            f"({caution_labels}), nên kiểm soát khẩu phần."
         )
 
     return opening
@@ -161,11 +159,7 @@ def build_fallback_ai_response_with_notes(
 def _parse_post_processing_result(
     raw: dict,
 ) -> tuple[str, dict[str, str]]:
-    """Parse kết quả JSON từ post_processing_agent thành (ai_response, food_reasons_map).
-
-    food_reasons_map: dict keyed by lowercase tên món → LLM reason.
-    Dùng lowercase để so sánh không phân biệt chữ hoa/thường khi apply về FoodResult.
-    """
+    """Parse kết quả JSON từ post_processing_agent thành ai_response và reason từng món."""
     ai_response = (raw.get("ai_response") or "").strip()
     food_reasons_map: dict[str, str] = {}
     for item in raw.get("food_reasons") or []:
@@ -181,7 +175,7 @@ def _get_per_food_medical_warnings(
     food_ingredients: list[str],
     symptoms: list[str],
 ) -> list[str]:
-    """Trả về cảnh báo y tế liên quan đến soft_tags/ingredients của một món cụ thể."""
+    """Trả về warning_text từ medical_advice_rules khớp riêng với một món."""
     warnings: list[str] = []
     for symptom in symptoms:
         rule = MEDICAL_ADVICE_RULES.get(symptom) or MEDICAL_ADVICE_RULES.get(
@@ -189,15 +183,16 @@ def _get_per_food_medical_warnings(
         )
         if not rule:
             continue
-        for cond in rule.get("conditional_warnings", []):
-            trigger_type = cond["trigger_type"]
-            trigger_value = cond["trigger_value"]
+        for condition in rule.get("conditional_warnings", []):
+            trigger_type = condition.get("trigger_type")
+            trigger_value = condition.get("trigger_value")
+            warning_text = condition.get("warning_text")
             matched = (
                 (trigger_type == "soft_tag" and trigger_value in food_soft_tags)
                 or (trigger_type == "ingredient" and trigger_value in food_ingredients)
             )
-            if matched and cond["warning_text"] not in warnings:
-                warnings.append(cond["warning_text"])
+            if matched and warning_text and warning_text not in warnings:
+                warnings.append(warning_text)
     return warnings
 
 
@@ -344,7 +339,7 @@ def post_processing_agent(
     # --- Bước 5: Bơm luật vào Prompt (Dynamic Rule Injection) ---
     system_prompt = f"""\
 Bạn là chuyên gia tư vấn dinh dưỡng và ẩm thực tận tâm tại Đà Nẵng.
-Nhiệm vụ: Dựa vào dữ liệu có sẵn, trả về JSON gồm 2 phần: tổng quan ngắn và lý do riêng cho từng món.
+Nhiệm vụ: Dựa vào dữ liệu có sẵn, trả về JSON gồm tổng quan ngắn và lý do riêng cho từng món.
 
 [Tình trạng sức khỏe của người dùng]
 {symptoms_text}
@@ -377,12 +372,12 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, trả về JSON gồm 2 phần: 
 - Không chỉ nhắc duy nhất món #1 hoặc 1-2 món đầu; top 5 đều là kết quả trả về nên cần được đề cập trong ai_response, trừ khi danh sách có ít hơn 5 món.
 
 [QUY TẮC CHO TRƯỜNG "food_reasons" — lý do từng món]
-- Viết lý do tự nhiên (25-55 chữ) cho TỪNG món trong danh sách top, dùng tiếng Việt.
-- Giải thích tại sao món phù hợp với câu hỏi của người dùng — không chỉ liệt kê tên tag kỹ thuật.
-- Nếu "medical_warnings_for_this_food" của món đó không rỗng: lồng cảnh báo vào lý do một cách tự nhiên, không tách rời.
-  VD: "Bún bò đậm đà, giàu đạm — phù hợp bữa trưa; nên ăn phần cái, hạn chế húp nước dùng nếu đang kiêng muối."
-- Nếu "medical_warnings_for_this_food" rỗng: chỉ nêu tại sao món phù hợp, không thêm cảnh báo không có căn cứ.
-- Không nhắc điểm số, matchScore, tên tag kỹ thuật (ví dụ: "soft_tag", "meal_context").
+- BẮT BUỘC trả đúng một reason cho TỪNG món trong danh sách top.
+- Mỗi reason dài 25-55 chữ, tự nhiên, dễ hiểu, không dùng bullet.
+- Giải thích vì sao món phù hợp với bệnh lý/yêu cầu của người dùng dựa trên dữ liệu món, không bịa thêm thông tin.
+- Nếu món có "medical_warnings_for_this_food": phải lồng ít nhất một advice/warning vào reason bằng lời tự nhiên.
+- Nếu món không có warning riêng: chỉ nêu điểm phù hợp chính như mềm, dễ ăn, nhẹ bụng, thanh mát, hợp bữa, nguyên liệu phù hợp.
+- Không nhắc điểm số, matchScore, tên field kỹ thuật hoặc cụm như "soft_tags", "meal_context", "medical_warnings_for_this_food".
 - Tên món trong food_reasons phải khớp chính xác với tên món trong danh sách top.
 
 """
@@ -396,7 +391,7 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, trả về JSON gồm 2 phần: 
                 "items": {
                     "type": "OBJECT",
                     "properties": {
-                        "name":   {"type": "STRING"},
+                        "name": {"type": "STRING"},
                         "reason": {"type": "STRING"},
                     },
                     "required": ["name", "reason"],
