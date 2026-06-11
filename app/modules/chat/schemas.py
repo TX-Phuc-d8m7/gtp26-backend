@@ -160,6 +160,9 @@ class ChatSendMessageResponse(BaseModel):
     intent: Optional[str] = None
     search_result: Optional[SearchResponse] = None
     place_result: Optional[FoodPlaceSearchResponse] = None
+    # Tiêu đề thread hiện tại sau lượt gửi (đã auto-gen nếu là tin đầu tiên).
+    # Frontend dùng trường này để cập nhật title mà không cần round-trip thêm.
+    thread_title: Optional[str] = None
 
 
 class GuestChatSendMessageResponse(BaseModel):

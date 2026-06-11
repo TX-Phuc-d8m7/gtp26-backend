@@ -119,7 +119,6 @@ valid_soft_tags = [
 TASTE_PROFILE_TAGS = {"Đậm đà", "Thanh đạm", "Chua", "Cay", "Mặn", "Ngọt", "Đắng", "Béo ngậy"}
 MEAL_CONTEXT_TAGS = {"Ăn sáng", "Ăn trưa", "Ăn tối", "Ăn chiều / xế", "Ăn khuya"}
 OCCASION_CONTEXT_TAGS = {"Ăn no", "Ăn vặt", "Mồi nhậu", "Tráng miệng", "Giải rượu", "Giải cảm", "Ấm bụng"}
-DISH_TYPE_TAGS = {"Lẩu", "Nướng", "Cháo", "Súp", "Gỏi / Nộm / Trộn", "Cuốn / Gói", "Kho / Rim", "Chiên / Rán", "Hấp / Luộc", "Xào", "Rang"}
 
 # --- Trọng số & Cấu hình cho thuật toán tính điểm (Scoring) ---
 USER_SOFT_TAG_BONUS = 0.018
@@ -143,14 +142,16 @@ MIN_CONTEXT_FILTER_CANDIDATES = 5
 PRIMARY_MEAL_ROLES = {"one_dish_meal", "main_dish"}
 # Các ingredient include được phép thu hẹp candidate như hard filter thích nghi.
 # Hiện chỉ bật cho intent "món cá" để tránh làm cứng các nguyên liệu mơ hồ như cà chua.
-ADAPTIVE_INGREDIENT_INCLUDE_KEYS = {"canon:ca", "group:ca_co_vay"}
+ADAPTIVE_INGREDIENT_INCLUDE_KEYS: set[str] = set()
 MEAL_ROLE_ADJUSTMENTS = {
     "one_dish_meal": 0.08,
     "main_dish": 0.05,
-    "side_soup": -0.08,
-    "side_vegetable": -0.08,
-    "snack_dessert": -0.16,
-    "unknown": -0.02,
+    # Role chỉ là tín hiệu phụ. Không phạt quá nặng canh/súp/rau vì trong
+    # nhiều bệnh lý, đặc biệt dạ dày/tim mạch/béo phì, chúng có thể an toàn hơn.
+    "side_soup": -0.02,
+    "side_vegetable": -0.03,
+    "snack_dessert": -0.08,
+    "unknown": -0.01,
 }
 PREFERENCE_CONFLICT_PAIRS = [
     ("Món khô", "Món nước"),
@@ -297,12 +298,6 @@ def _strip_accents(text: str) -> str:
             result = result.replace(ch, target).replace(ch.upper(), target.upper())
     return result
 
-def _normalize_ingredient_match_text(value: str) -> str:
-    """Làm sạch văn bản nguyên liệu (bỏ dấu, chuyển chữ thường, giữ lại ký tự cơ bản)."""
-    text_value = _strip_accents(value or "").lower()
-    text_value = re.sub(r"[^a-z0-9/\s-]", " ", text_value)
-    return re.sub(r"\s+", " ", text_value).strip()
-
 def _normalize_search_text(value: str) -> str:
     """Chuẩn hóa text tự do để match keyword theo từ/cụm từ."""
     text_value = _strip_accents(value or "").lower()
@@ -320,21 +315,6 @@ def _phrase_in_text(text_value: str, phrase: str) -> bool:
 def _has_any_phrase(text_value: str, phrases: list[str]) -> bool:
     """True nếu text khớp với ít nhất một phrase trong danh sách đầu vào."""
     return any(_phrase_in_text(text_value, phrase) for phrase in phrases)
-
-def _ingredient_phrase_matches(text_value: str, phrase: str) -> bool:
-    """Kiểm tra xem một cụm từ (phrase) có tồn tại độc lập trong chuỗi văn bản (text_value) không."""
-    normalized_phrase = _normalize_ingredient_match_text(phrase)
-    if not normalized_phrase:
-        return False
-    # Sử dụng Regex để tìm cụm từ chính xác, không bị dính chữ (Word boundary)
-    pattern = rf"(?<![a-z0-9]){re.escape(normalized_phrase)}(?![a-z0-9])"
-    return re.search(pattern, text_value) is not None
-
-def _food_has_excluded_ingredient(food: Food, excluded_ingredients: list[str]) -> bool:
-    """Kiểm tra xem món ăn có chứa nguyên liệu nằm trong danh sách cần loại trừ hay không."""
-    ingredient_text = " ".join(food.core_ingredients or [])
-    normalized_text = _normalize_ingredient_match_text(ingredient_text)
-    return any(_ingredient_phrase_matches(normalized_text, ing) for ing in excluded_ingredients)
 
 def _food_has_any_ingredient_key(food: Food, target_keys: list[str]) -> bool:
     """Kiểm tra món ăn có giao với các ingredient key cần lọc hay không."""

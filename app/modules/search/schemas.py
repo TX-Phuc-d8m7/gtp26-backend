@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime
 from typing import Any, Dict, List, Literal, Optional
 
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 
 
 class AIInsight(BaseModel):
@@ -12,12 +12,6 @@ class AIInsight(BaseModel):
     include: List[str]
     prefer: List[str]
     warning_message: Optional[str] = None
-
-
-class Filters(BaseModel):
-    hard: List[str]
-    dietary: List[str]
-    soft: List[str]
 
 
 class FoodResult(BaseModel):

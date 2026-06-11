@@ -138,6 +138,35 @@ def _format_top_food_names_for_fallback(top_foods: list[FoodResult]) -> str:
         return names[0]
     return f"{names[0]} và {names[1]}"
 
+def build_no_symptoms_ai_response(
+    top_foods: list[FoodResult],
+    retrieval_notes: list[str] | None = None,
+) -> str:
+    """Tạo ai_response template cho queries không có bệnh lý — không cần gọi LLM.
+
+    Dùng khi symptoms == [] để tiết kiệm latency của LLM post-processing.
+    Giữ nguyên food_reasons deterministic từ build_food_reason() ở bước map schema.
+    """
+    names = [food.name for food in (top_foods or []) if food.name]
+    count = len(names)
+    if count == 0:
+        return "Mình đã tìm được các gợi ý phù hợp cho bạn."
+
+    if count == 1:
+        names_text = names[0]
+    elif count == 2:
+        names_text = f"{names[0]} và {names[1]}"
+    else:
+        names_text = ", ".join(names[:-1]) + f" và {names[-1]}"
+
+    base = f"Mình gợi ý {count} món phù hợp với yêu cầu của bạn: {names_text}."
+
+    notes = [n.strip() for n in (retrieval_notes or []) if n.strip()]
+    if notes:
+        return f"{base} {' '.join(notes)}"
+    return base
+
+
 def build_fallback_ai_response_with_notes(
     top_foods: list[FoodResult],
     symptoms: list[str],

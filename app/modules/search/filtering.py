@@ -16,6 +16,7 @@ from app.modules.search.common import (
     _normalize_search_text,
     _phrase_in_text,
     canonicalize_soft_tags,
+    get_food_scoring_tags,
     has_matching_context,
     matched_canonical_tags,
 )
@@ -96,47 +97,122 @@ def apply_adaptive_dish_name_include_filter_with_trace(
     foods: list[Food],
     requested_dishes: list[str],
     trace: dict,
-) -> tuple[list[Food], bool, int]:
+    medical_exclude_tags: list[str] | None = None,
+) -> tuple[list[Food], bool, int, list[str], list[dict]]:
     """
     Lọc ưu tiên theo nhóm tên món sau safety filter và trước semantic search.
 
     Chỉ bỏ qua hard-filter khi không có món nào khớp, để hệ thống còn cơ hội
-    trả lựa chọn thay thế thay vì rỗng hoàn toàn.
+    trả lựa chọn thay thế thay vì rỗng hoàn toàn. Nếu món user muốn khớp tag
+    y khoa cần tránh, món đó không được dùng để thu hẹp candidate.
     """
     normalized_requested = []
+    requested_label_by_key: dict[str, str] = {}
     for dish in requested_dishes or []:
         canonical = _normalize_search_text(dish)
         if canonical and canonical not in normalized_requested:
             normalized_requested.append(canonical)
+            requested_label_by_key[canonical] = dish
     if not foods or not normalized_requested:
-        return foods, False, 0
+        return foods, False, 0, [], []
 
     matched_foods = [
         food for food in foods
         if food_name_matches_any_dish_base(food, normalized_requested)
     ]
-    if matched_foods:
-        matched_ids = {food.id for food in matched_foods}
-        for food in foods:
-            if food.id in matched_ids:
-                continue
-            append_trace_item(trace, "dish_name_filtered_out", {
-                **food_trace_snapshot(food),
-                "stage": "dish_name_filter",
-                "reason": "missing_requested_dish_base",
-                "requested_dishes": requested_dishes,
-            })
+    if not matched_foods:
         print(
-            f"🍜 [DISH NAME FILTER] Giữ {len(matched_foods)}/{len(foods)} món "
-            f"khớp nhóm món user muốn: {requested_dishes}"
+            f"🍜 [DISH NAME FILTER] Bỏ qua lọc nhóm món {requested_dishes} "
+            "vì không còn món nào khớp sau lớp lọc an toàn."
         )
-        return matched_foods, True, len(matched_foods)
+        return foods, False, len(matched_foods), [], []
 
+    canonical_medical_exclude_tags = canonicalize_soft_tags(medical_exclude_tags or [])
+    selected_foods = matched_foods
+    blocked_requested_dishes: list[str] = []
+    blocked_details: list[dict] = []
+
+    if canonical_medical_exclude_tags:
+        safe_by_id: dict = {}
+        blocked_by_food_id: dict = {}
+
+        for requested_key in normalized_requested:
+            requested_label = requested_label_by_key.get(requested_key, requested_key)
+            dish_matches = [
+                food for food in matched_foods
+                if food_name_matches_any_dish_base(food, [requested_key])
+            ]
+            if not dish_matches:
+                continue
+
+            dish_safe_foods = []
+            dish_blocked_details = []
+            for food in dish_matches:
+                matched_tags = matched_canonical_tags(
+                    get_food_scoring_tags(food),
+                    canonical_medical_exclude_tags,
+                )
+                if matched_tags:
+                    detail = {
+                        "requested_dish": requested_label,
+                        "food_id": str(food.id),
+                        "food_name": food.name,
+                        "matched_tags": matched_tags,
+                    }
+                    blocked_by_food_id[food.id] = detail
+                    dish_blocked_details.append(detail)
+                    continue
+
+                safe_by_id[food.id] = food
+                dish_safe_foods.append(food)
+
+            if not dish_safe_foods and dish_blocked_details:
+                blocked_requested_dishes.append(requested_label)
+                blocked_details.extend(dish_blocked_details)
+
+        for detail in blocked_by_food_id.values():
+            food = next((item for item in matched_foods if str(item.id) == detail["food_id"]), None)
+            if food is None:
+                continue
+            append_trace_item(trace, "dish_name_medical_conflict_filter", {
+                **food_trace_snapshot(food),
+                "stage": "dish_name_medical_conflict_filter",
+                "reason": "requested_dish_matches_medical_exclude_tags",
+                "requested_dish": detail["requested_dish"],
+                "matched_tags": detail["matched_tags"],
+            })
+
+        if safe_by_id:
+            selected_foods = list(safe_by_id.values())
+        elif blocked_details:
+            blocked_names = ", ".join(dict.fromkeys(blocked_requested_dishes))
+            blocked_food_ids = set(blocked_by_food_id.keys())
+            fallback_foods = [
+                food for food in foods
+                if food.id not in blocked_food_ids
+            ]
+            print(
+                f"🍜 [DISH NAME FILTER] Không ưu tiên nhóm món {blocked_names} "
+                "vì toàn bộ món khớp đang trùng tag y khoa cần tránh."
+            )
+            return fallback_foods, False, len(matched_foods), blocked_requested_dishes, blocked_details
+
+    matched_ids = {food.id for food in selected_foods}
+    for food in foods:
+        if food.id in matched_ids:
+            continue
+        append_trace_item(trace, "dish_name_filtered_out", {
+            **food_trace_snapshot(food),
+            "stage": "dish_name_filter",
+            "reason": "missing_safe_requested_dish_base",
+            "requested_dishes": requested_dishes,
+            "blocked_requested_dishes": blocked_requested_dishes,
+        })
     print(
-        f"🍜 [DISH NAME FILTER] Bỏ qua lọc nhóm món {requested_dishes} "
-        "vì không còn món nào khớp sau lớp lọc an toàn."
+        f"🍜 [DISH NAME FILTER] Giữ {len(selected_foods)}/{len(foods)} món "
+        f"khớp nhóm món user muốn và không trùng tag y khoa cần tránh: {requested_dishes}"
     )
-    return foods, False, len(matched_foods)
+    return selected_foods, True, len(selected_foods), blocked_requested_dishes, blocked_details
 
 def apply_adaptive_context_include_filter_with_trace(
     foods: list[Food],

@@ -154,11 +154,39 @@ def phrase_matches(text: str, phrase: str) -> bool:
     )
 
 
+def has_normalized_token(text: str, token: str) -> bool:
+    normalized = normalize_text(text)
+    normalized_token = normalize_text(token)
+    if not normalized or not normalized_token:
+        return False
+    return bool(
+        re.search(rf"(?<!\w){re.escape(normalized_token)}(?!\w)", normalized)
+    )
+
+
 def is_false_positive_match(rule_name: str, text: str, word: str) -> bool:
-    text = normalize_text(text)
+    raw_text = " ".join((text or "").lower().strip().split())
+    normalized_text = normalize_text(text)
     word = normalize_text(word)
+
+    if word == "chao":
+        has_chao = bool(re.search(r"(?<!\w)chao(?!\w)", raw_text))
+        has_chao_soup = bool(re.search(r"(?<!\w)cháo(?!\w)", raw_text))
+        if has_chao_soup and not has_chao:
+            return True
+
+    bell_pepper_pattern = r"(?<!\w)ot chuong(?:\s+(?:do|vang|xanh|ngot))?(?!\w)"
+    if word == "ot" and re.search(bell_pepper_pattern, normalized_text):
+        text_without_bell_pepper = re.sub(
+            bell_pepper_pattern,
+            " ",
+            normalized_text,
+        )
+        if not has_normalized_token(text_without_bell_pepper, "ớt"):
+            return True
+
     exceptions = FALSE_POSITIVE_EXCEPTIONS.get(rule_name, [])
-    return any(phrase_matches(text, exception) for exception in exceptions)
+    return any(phrase_matches(normalized_text, exception) for exception in exceptions)
 
 
 def load_tag_exclusion_rules() -> dict[str, list[str]]:
@@ -235,7 +263,7 @@ def parse_csv_file(csv_path: Path, source_kind: str) -> list[dict[str, str]]:
                 if header[idx]
             }
             tc_id = row_map.get("Test Case ID", "").strip()
-            if not tc_id.startswith("TC-"):
+            if not tc_id.startswith(("TC-", "OB-", "GAS-", "HBP-")):
                 continue
 
             category = row_map.get("Nhóm", "").strip()
@@ -763,8 +791,14 @@ def print_parse_summary(test_cases: list[dict[str, str]]) -> None:
 
 
 async def run(args: argparse.Namespace) -> None:
-    benchmark_paths = [Path(path).expanduser() for path in args.benchmark_csv]
-    extended_paths = [Path(path).expanduser() for path in args.extended_csv]
+    benchmark_paths = [
+        Path(path).expanduser()
+        for path in (args.benchmark_csv or [str(DEFAULT_BENCHMARK_CSV)])
+    ]
+    extended_paths = [
+        Path(path).expanduser()
+        for path in (args.extended_csv or [str(DEFAULT_EXTENDED_CSV)])
+    ]
     test_cases = parse_all_test_cases(benchmark_paths, extended_paths)
     print_parse_summary(test_cases)
 
@@ -833,13 +867,13 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--benchmark-csv",
         action="append",
-        default=[str(DEFAULT_BENCHMARK_CSV)],
+        default=None,
         help="CSV benchmark 35 case. Có thể truyền nhiều lần.",
     )
     parser.add_argument(
         "--extended-csv",
         action="append",
-        default=[str(DEFAULT_EXTENDED_CSV)],
+        default=None,
         help="CSV extended pattern cases. Có thể truyền nhiều lần.",
     )
     parser.add_argument(

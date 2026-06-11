@@ -216,21 +216,46 @@ def _format_vi_list(items: Iterable[str], limit: int = 5) -> str:
     return f"{', '.join(visible[:-1])} và {visible[-1]}"
 
 
+def _lower_first_text(value: str) -> str:
+    """Hạ chữ cái đầu để đặt tên bệnh lý tự nhiên trong giữa câu."""
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    return text[:1].lower() + text[1:]
+
+
+def _display_conflict_label(value: str) -> str:
+    """Đổi tag kỹ thuật thành cách gọi thân thiện hơn trong warning."""
+    text = str(value or "").strip()
+    labels = {
+        "Cay": "món cay",
+        "Chua": "món chua",
+        "Chiên / Rán": "món chiên/rán",
+        "Nướng": "món nướng",
+        "Nóng hổi": "món quá nóng",
+        "Mặn": "món mặn",
+        "Đậm đà": "món đậm vị",
+        "Nhiều dầu mỡ / Calo cao": "món nhiều dầu mỡ",
+        "Khó tiêu / Nặng bụng": "món khó tiêu",
+        "Béo ngậy": "món béo ngậy",
+    }
+    return labels.get(text, text)
+
+
 def _build_preference_conflict_warning(
     *,
     conflicts: Iterable[str],
     symptoms: Iterable[str],
 ) -> str | None:
     """Viết cảnh báo tự nhiên khi sở thích người dùng xung đột với rule sức khỏe."""
-    conflict_text = _format_vi_list(conflicts)
-    symptom_text = _format_vi_list(symptoms)
+    conflict_text = _format_vi_list(_display_conflict_label(item) for item in conflicts)
+    symptom_text = _format_vi_list(_lower_first_text(item) for item in symptoms)
     if not conflict_text or not symptom_text:
         return None
     return (
-        f"Mình nhận thấy yêu cầu có {conflict_text}, nhưng các yếu tố này đang xung đột "
-        f"với tình trạng {symptom_text} vì có thể không an toàn hoặc làm triệu chứng khó chịu hơn. "
-        "Vì vậy mình sẽ ưu tiên gợi ý những món dịu hơn và phù hợp hơn; nếu bạn vẫn muốn ăn gần khẩu vị đó, "
-        "hãy chọn phiên bản không dùng các nguyên liệu/gia vị cần tránh."
+        f"Mình thấy bạn đang muốn ăn {conflict_text}. Tuy nhiên, với tình trạng {symptom_text}, "
+        "những lựa chọn này có thể làm triệu chứng khó chịu hơn hoặc không phù hợp với chế độ ăn hiện tại. "
+        "Vì vậy mình sẽ ưu tiên các món nhẹ hơn và phù hợp hơn với sức khỏe của bạn."
     )
 
 

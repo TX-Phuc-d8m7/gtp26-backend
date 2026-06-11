@@ -65,12 +65,17 @@ async def admin_update_user(
     - `is_active`: khoá/mở tài khoản.
     - `full_name`: đổi tên hiển thị.
 
-    ⚠️ Admin không thể tự hạ quyền chính mình để tránh lock-out.
+    ⚠️ Admin không thể tự hạ quyền hoặc tự khóa chính mình để tránh lock-out.
     """
     if str(user_id) == str(current_admin.id) and payload.role is not None and payload.role != "admin":
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Admin không thể tự hạ quyền chính mình.",
+        )
+    if str(user_id) == str(current_admin.id) and payload.is_active is False:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Admin không thể tự khóa tài khoản của chính mình.",
         )
 
     result = await update_user(user_id, payload, db)

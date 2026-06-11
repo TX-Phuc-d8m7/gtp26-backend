@@ -41,6 +41,39 @@ async def init_db() -> None:
         await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_favorite_foods_user_id ON favorite_foods (user_id)"))
         await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_favorite_foods_food_id ON favorite_foods (food_id)"))
         await conn.execute(text("ALTER TABLE favorite_foods ADD COLUMN IF NOT EXISTS rating INTEGER"))
+        await conn.execute(text("""
+            DELETE FROM favorite_foods ff
+            WHERE NOT EXISTS (
+                SELECT 1 FROM users u WHERE u.id = ff.user_id
+            )
+            OR NOT EXISTS (
+                SELECT 1 FROM foods f WHERE f.id = ff.food_id
+            )
+        """))
+        await conn.execute(text("""
+            DO $$
+            BEGIN
+                IF NOT EXISTS (
+                    SELECT 1 FROM pg_constraint WHERE conname = 'fk_favorite_foods_user_id'
+                ) THEN
+                    ALTER TABLE favorite_foods
+                    ADD CONSTRAINT fk_favorite_foods_user_id
+                    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE;
+                END IF;
+            END $$;
+        """))
+        await conn.execute(text("""
+            DO $$
+            BEGIN
+                IF NOT EXISTS (
+                    SELECT 1 FROM pg_constraint WHERE conname = 'fk_favorite_foods_food_id'
+                ) THEN
+                    ALTER TABLE favorite_foods
+                    ADD CONSTRAINT fk_favorite_foods_food_id
+                    FOREIGN KEY (food_id) REFERENCES foods(id) ON DELETE CASCADE;
+                END IF;
+            END $$;
+        """))
         await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_chat_threads_user_id ON chat_threads (user_id)"))
         await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_chat_threads_updated_at ON chat_threads (updated_at)"))
         await conn.execute(text("CREATE INDEX IF NOT EXISTS ix_chat_messages_thread_id ON chat_messages (thread_id)"))

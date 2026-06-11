@@ -5,11 +5,12 @@ from __future__ import annotations
 import uuid
 from typing import List, Literal, Optional, Tuple
 
-from sqlalchemy import Text, func, or_, select
+from sqlalchemy import Text, delete, func, or_, select
 from sqlalchemy.dialects.postgresql import array as pg_array
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.modules.foods.models import Food
+from app.modules.favorites.models import FavoriteFood
 from app.modules.admin.foods.schemas import (
     AdminFoodCreate,
     AdminFoodResult,
@@ -305,6 +306,7 @@ async def delete_food(food_id: uuid.UUID, db: AsyncSession) -> bool:
     if food.img_url:
         delete_food_image(food.img_url)
 
+    await db.execute(delete(FavoriteFood).where(FavoriteFood.food_id == food_id))
     await db.delete(food)
     await db.commit()
     return True

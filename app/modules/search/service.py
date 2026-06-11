@@ -37,6 +37,7 @@ from app.modules.search.common import (
     client,
     get_food_scoring_tags,
     get_gemini_text_model,
+    infer_soft_tags_from_user_ingredient_phrase,
     matched_canonical_tags,
     split_food_category_tags,
     valid_health_tags,
@@ -46,6 +47,7 @@ from app.modules.search.explanation import (
     _build_no_result_ai_response,
     _build_no_result_retrieval_note,
     build_food_reason,
+    build_no_symptoms_ai_response,
     run_post_processing_with_timeout,
 )
 from app.modules.search.filtering import (
@@ -413,25 +415,58 @@ async def search_food(
     )
     context_after_count = len(filtered_foods)
 
-    filtered_foods, dish_name_filter_applied, _dish_name_match_count = (
+    (
+        filtered_foods,
+        dish_name_filter_applied,
+        _dish_name_match_count,
+        blocked_requested_dishes,
+        blocked_requested_dish_details,
+    ) = (
         apply_adaptive_dish_name_include_filter_with_trace(
             foods=filtered_foods,
             requested_dishes=user_include_dishes,
             trace=retrieval_trace,
+            medical_exclude_tags=medical_e_tags,
         )
     )
     if user_include_dishes:
         requested_dishes_text = ", ".join(user_include_dishes)
+        blocked_requested_dishes_text = ", ".join(dict.fromkeys(blocked_requested_dishes))
+        if blocked_requested_dishes:
+            blocked_tags = []
+            for detail in blocked_requested_dish_details:
+                for tag in detail.get("matched_tags", []) or []:
+                    if tag not in blocked_tags:
+                        blocked_tags.append(tag)
+            blocked_tags_text = ", ".join(blocked_tags) if blocked_tags else "các tag y khoa cần tránh"
+            health_context = ", ".join(symptoms) if symptoms else "hồ sơ sức khỏe hiện tại"
+            blocked_warning = (
+                f"Các món bạn muốn như {blocked_requested_dishes_text} thuộc nhóm cần tránh "
+                f"({blocked_tags_text}) nên không được ưu tiên với tình trạng {health_context}."
+            )
+            warning_message = f"{warning_message} {blocked_warning}" if warning_message else blocked_warning
+
         if dish_name_filter_applied:
             retrieval_notes.append(
-                f"Hệ thống đã ưu tiên lọc theo nhóm tên món người dùng muốn "
+                f"Hệ thống đã ưu tiên lọc theo nhóm tên món người dùng muốn còn phù hợp "
                 f"({requested_dishes_text}) trước khi semantic search."
             )
+            if blocked_requested_dishes:
+                retrieval_notes.append(
+                    f"Một số nhóm món người dùng muốn ({blocked_requested_dishes_text}) "
+                    "không được ưu tiên vì xung đột với lưu ý sức khỏe."
+                )
         else:
-            retrieval_notes.append(
-                f"Không tìm thấy món khớp nhóm tên món người dùng muốn "
-                f"({requested_dishes_text}) sau lớp lọc an toàn; hệ thống trả lựa chọn thay thế."
-            )
+            if blocked_requested_dishes:
+                retrieval_notes.append(
+                    f"Nhóm món {blocked_requested_dishes_text} không được ưu tiên vì xung đột "
+                    "với lưu ý sức khỏe, nên mình sẽ gợi ý món thay thế phù hợp hơn."
+                )
+            else:
+                retrieval_notes.append(
+                    f"Riêng nhóm món {requested_dishes_text} hiện chưa có lựa chọn đủ phù hợp "
+                    "sau khi đối chiếu với các lưu ý sức khỏe, nên mình sẽ gợi ý món thay thế an toàn hơn."
+                )
 
     filtered_foods, ingredient_include_filter_applied, _ingredient_include_match_count, ingredient_include_scope = (
         apply_adaptive_ingredient_include_filter_with_trace(
@@ -460,8 +495,15 @@ async def search_food(
         main_meal_request=main_meal_request,
         require_primary_role=primary_ingredient_priority_only,
     )
-    if include_ingredient_keys and final_p_ings and not ingredient_include_filter_applied:
-        requested_ingredients_text = ", ".join(final_p_ings)
+    include_ingredients_for_note = [
+        ingredient for ingredient in final_p_ings
+        if not any(
+            tag in user_include_tags
+            for tag in infer_soft_tags_from_user_ingredient_phrase(ingredient)
+        )
+    ]
+    if include_ingredient_keys and include_ingredients_for_note and not ingredient_include_filter_applied:
+        requested_ingredients_text = ", ".join(include_ingredients_for_note)
         if ingredient_priority_food_ids:
             primary_label = " trong vai trò món chính" if primary_ingredient_priority_only else ""
             retrieval_notes.append(
@@ -470,17 +512,16 @@ async def search_food(
             )
         elif primary_ingredient_priority_only and include_ingredient_match_count:
             side_match_message = (
-                "Có món phụ/canh/salad khớp nguyên liệu người dùng muốn "
-                f"({requested_ingredients_text}), nhưng không xem đó là món chính cho bữa trưa/tối; "
-                "các món trả về ưu tiên lựa chọn bữa chính an toàn hơn."
+                f"Mình có tìm thấy món phụ, canh hoặc salad có {requested_ingredients_text}, "
+                "nhưng chưa phù hợp để làm món chính cho bữa trưa/tối. "
+                "Mình sẽ ưu tiên vài món chính nhẹ và an toàn hơn."
             )
             retrieval_notes.append(side_match_message)
             warning_message = f"{warning_message} {side_match_message}" if warning_message else side_match_message
         else:
             no_match_message = (
-                "Không tìm thấy món an toàn khớp nguyên liệu người dùng muốn "
-                f"({requested_ingredients_text}) sau khi áp dụng bộ lọc bệnh lý/ngữ cảnh; "
-                "các món trả về là lựa chọn thay thế an toàn hơn."
+                f"Riêng {requested_ingredients_text} hiện chưa có món nào đủ phù hợp "
+                "sau khi đối chiếu với các lưu ý sức khỏe của bạn, nên mình sẽ gợi ý vài lựa chọn thay thế gần nhu cầu hơn."
             )
             retrieval_notes.append(no_match_message)
             warning_message = f"{warning_message} {no_match_message}" if warning_message else no_match_message
@@ -793,39 +834,50 @@ async def search_food(
 
     # --- Bước 7: Post-processing ---
     #
-    # Các ràng buộc sức khỏe đã được xử lý bởi safety/filtering/ranking trước đó.
-    # Post-processing viết ai_response và reason tự nhiên cho từng món; nếu Gemini
-    # lỗi/timeout thì giữ reason fallback đã sinh ở bước map schema.
+    # Có bệnh lý/dị ứng → gọi LLM để lồng cảnh báo y tế vào ai_response và rewrite
+    # food_reasons tự nhiên hơn theo từng bệnh lý.
+    #
+    # Không có bệnh lý → bỏ qua LLM (~3s latency), dùng template nhẹ cho ai_response
+    # và giữ nguyên deterministic food_reasons đã sinh ở bước map schema (bước 6).
 
     post_processing_foods = results_list[:5]
-    ai_response_text, _food_reasons_map, post_processing_runtime = await run_post_processing_with_timeout(
-        query,
-        symptoms,
-        post_processing_foods,
-        retrieval_notes,
-    )
 
-    # Ghi runtime post_processing
-    llm_runtime["post_processing_status"] = post_processing_runtime.get("status", "ok")
-    llm_runtime["stage_latency_ms"]["post_processing"] = post_processing_runtime.get("latency_ms", 0)
-    if post_processing_runtime.get("error_message"):
-        llm_runtime["post_processing_error"] = post_processing_runtime["error_message"]
-    if post_processing_runtime.get("status") == "fallback":
-        llm_runtime["fallbacks_used"].append("post_processing")
+    if symptoms:
+        ai_response_text, _food_reasons_map, post_processing_runtime = await run_post_processing_with_timeout(
+            query,
+            symptoms,
+            post_processing_foods,
+            retrieval_notes,
+        )
 
-    # Ghi reason tự nhiên từ LLM vào từng card món ăn nếu post-processing thành công.
-    if _food_reasons_map:
-        updated_results: list[FoodResult] = []
-        applied_reason_count = 0
-        for food_result in results_list:
-            post_reason = _food_reasons_map.get(food_result.name.lower())
-            if post_reason:
-                updated_results.append(food_result.model_copy(update={"reason": post_reason}))
-                applied_reason_count += 1
-            else:
-                updated_results.append(food_result)
-        results_list = updated_results
-        print(f"[POST-PROCESSING] Đã apply LLM reasons cho {applied_reason_count}/{len(results_list)} món.")
+        # Ghi runtime post_processing
+        llm_runtime["post_processing_status"] = post_processing_runtime.get("status", "ok")
+        llm_runtime["stage_latency_ms"]["post_processing"] = post_processing_runtime.get("latency_ms", 0)
+        if post_processing_runtime.get("error_message"):
+            llm_runtime["post_processing_error"] = post_processing_runtime["error_message"]
+        if post_processing_runtime.get("status") == "fallback":
+            llm_runtime["fallbacks_used"].append("post_processing")
+
+        # Ghi reason tự nhiên từ LLM vào từng card món ăn nếu post-processing thành công.
+        if _food_reasons_map:
+            updated_results: list[FoodResult] = []
+            applied_reason_count = 0
+            for food_result in results_list:
+                post_reason = _food_reasons_map.get(food_result.name.lower())
+                if post_reason:
+                    updated_results.append(food_result.model_copy(update={"reason": post_reason}))
+                    applied_reason_count += 1
+                else:
+                    updated_results.append(food_result)
+            results_list = updated_results
+            print(f"[POST-PROCESSING] Đã apply LLM reasons cho {applied_reason_count}/{len(results_list)} món.")
+    else:
+        # Không có bệnh lý → bỏ qua LLM post-processing hoàn toàn.
+        # build_food_reason() ở bước 6 đã tạo deterministic reasons đủ dùng.
+        ai_response_text = build_no_symptoms_ai_response(post_processing_foods, retrieval_notes)
+        llm_runtime["post_processing_status"] = "skipped_no_symptoms"
+        llm_runtime["stage_latency_ms"]["post_processing"] = 0
+        print("[POST-PROCESSING] Bỏ qua LLM — không có bệnh lý, dùng template response.")
 
     ai_insight = AIInsight(
         exclude=safety_e_tags + final_e_ings,

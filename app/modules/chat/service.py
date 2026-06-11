@@ -324,7 +324,8 @@ async def send_message(
         await db.flush()
 
     # 4. Search + lưu assistant message (logic dùng chung với regenerate & edit)
-    return await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    result = await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    return result.model_copy(update={"thread_title": thread.title})
 
 
 async def send_guest_message(
@@ -501,7 +502,8 @@ async def regenerate_message(
     Trả None nếu thread/message không tồn tại hoặc không thuộc user.
     """
     # Kiểm tra thread
-    if not await _get_thread_for_user(thread_id, user_id, db):
+    thread = await _get_thread_for_user(thread_id, user_id, db)
+    if thread is None:
         return None
 
     # Tìm assistant message
@@ -525,7 +527,8 @@ async def regenerate_message(
     # Xoá assistant message cũ để không lẫn vào context
     await chat_repo.delete_message(db, asst_msg)
 
-    return await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    result = await _run_dispatch_and_save(thread_id, user_id, user_msg, skip_profile, db)
+    return result.model_copy(update={"thread_title": thread.title})
 
 
 # ---------------------------------------------------------------------------
@@ -654,7 +657,8 @@ async def edit_and_resend(
     `message_id` là ID của user message cần edit.
     Trả None nếu không tìm thấy.
     """
-    if not await _get_thread_for_user(thread_id, user_id, db):
+    thread = await _get_thread_for_user(thread_id, user_id, db)
+    if thread is None:
         return None
 
     # Tìm user message cần edit
@@ -693,4 +697,5 @@ async def edit_and_resend(
     )
     await db.flush()
 
-    return await _run_dispatch_and_save(thread_id, user_id, user_msg, data.skip_profile, db)
+    result = await _run_dispatch_and_save(thread_id, user_id, user_msg, data.skip_profile, db)
+    return result.model_copy(update={"thread_title": thread.title})

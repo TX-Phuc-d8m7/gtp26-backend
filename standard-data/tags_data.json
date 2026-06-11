@@ -29,11 +29,13 @@
       "cua thit",
       "thit cua bien",
       "ghe",
+      "sua",
       "be be",
       "be be boc non",
       "cang tom hum",
       "chao tom",
       "cha cua",
+      "hau sua",
       "thanh cua",
       "mam tom",
       "mam tep",
@@ -672,8 +674,7 @@
     "tag_type": "ALLERGY",
     "exclude_soft_tag": [
       "Bánh ngọt",
-      "Thực phẩm chế biến sẵn",
-      "Từ sữa / Phô mai"
+      "Thực phẩm chế biến sẵn"
     ],
     "prefer_soft_tag": [],
     "exclude_ingredient": [
@@ -1198,18 +1199,17 @@
       "Bánh ngọt",
       "Món khô",
       "Đậm đà",
-      "Nướng"
+      "Nướng",
+      "Xào",
+      "Lẩu"
     ],
     "prefer_soft_tag": [
       "Dễ tiêu",
       "Mềm",
-      "Hấp / Luộc",
       "Súp",
       "Cháo",
       "Thanh đạm",
-      "Ấm bụng",
-      "Hầm / Ninh",
-      "Món nước"
+      "Ấm bụng"
     ],
     "exclude_ingredient": [
       "khoai lang",
@@ -1222,17 +1222,17 @@
       "sả"
     ],
     "prefer_ingredient": [
-      "khoai tay", 
-      "ca rot", 
-      "bi do", 
+      "khoai tay",
+      "ca rot",
+      "bi do",
       "uc ga",
-      "thit heo nac", 
-      "ca loc", 
-      "dau hu", 
+      "thit heo nac",
+      "ca loc",
+      "dau hu",
       "gao",
       "mien", 
       "bun", 
-      "hat sen", 
+      "hat sen",
       "trung"
     ]
   },
@@ -1790,11 +1790,7 @@
       "Thức ăn nhanh",
       "Bánh ngọt",
       "Chiên / Rán",
-      "Nội tạng",
-      "Thực phẩm chế biến sẵn",
-      "Khó tiêu / Nặng bụng",
-      "Từ sữa / Phô mai",
-      "Xào"
+      "Thực phẩm chế biến sẵn"
     ],
     "prefer_soft_tag": [
       "Healthy / Eat Clean",
@@ -1803,27 +1799,9 @@
       "Hấp / Luộc",
       "Dễ tiêu",
       "Thanh mát / Giải nhiệt",
-      "Gỏi / Nộm / Trộn",
       "Giàu đạm"
     ],
-    "exclude_ingredient": [
-      "mo heo",
-      "sua dac",
-      "thit ba chi",
-      "thit ba roi",
-      "da heo",
-      "long heo",
-      "xuc xich",
-      "lap xuong",
-      "pate",
-      "whipping cream",
-      "mayonnaise",
-      "pho mai",
-      "bo",
-      "top mo",
-      "thit mo",
-      "coca"
-    ],
+    "exclude_ingredient": [],
     "prefer_ingredient": [
       "uc ga",
       "dau hu",
@@ -1836,11 +1814,8 @@
       "ca chua",
       "dua leo",
       "thit nac",
-      "trung",
-      "tom",
       "dau olive",
-      "sua chua khong duong",
-      "cac loai rau thom"
+      "sua chua khong duong"
     ]
   },
   {

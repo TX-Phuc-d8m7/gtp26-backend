@@ -81,6 +81,12 @@ async def deactivate_my_account(
     Dữ liệu lịch sử vẫn được giữ lại. Sau request này token hiện tại
     sẽ không còn dùng được ở các endpoint yêu cầu active user.
     """
+    if current_user.role == "admin":
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Admin không thể tự vô hiệu hóa tài khoản của chính mình để tránh khóa quyền quản trị.",
+        )
+
     await deactivate_account(current_user, db)
     return UserDeactivateResponse(
         success=True,

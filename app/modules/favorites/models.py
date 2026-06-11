@@ -3,7 +3,7 @@ from __future__ import annotations
 import uuid
 
 from pgvector.sqlalchemy import HALFVEC
-from sqlalchemy import Boolean, Column, DateTime, Integer, String, Text, UniqueConstraint, func
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String, Text, UniqueConstraint, func
 from sqlalchemy.dialects.postgresql import ARRAY, JSONB, UUID
 
 from app.db.session import Base
@@ -17,8 +17,18 @@ class FavoriteFood(Base):
     )
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    user_id = Column(UUID(as_uuid=True), nullable=False, index=True)
-    food_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    user_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("users.id", ondelete="CASCADE", name="fk_favorite_foods_user_id"),
+        nullable=False,
+        index=True,
+    )
+    food_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("foods.id", ondelete="CASCADE", name="fk_favorite_foods_food_id"),
+        nullable=False,
+        index=True,
+    )
     notes = Column(Text, nullable=False, default="")
     # Đánh giá 1-5 sao (nullable = chưa đánh giá)
     rating = Column(Integer, nullable=True)

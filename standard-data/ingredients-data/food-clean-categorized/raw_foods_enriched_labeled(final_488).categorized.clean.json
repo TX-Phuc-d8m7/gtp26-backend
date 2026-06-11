@@ -18471,7 +18471,7 @@
   },
   {
     "name": "Xôi gà",
-    "description": "Xôi gà là món ăn sáng quen thuộc, mang đến hương vị đậm đà khó cưỡng. Từng hạt nếp dẻo thơm quyện cùng vị béo ngậy của thịt gà, lạp xưởng và xá xíu, tạo nên một bản giao hưởng vị giác đầy lôi cuốn. Món ăn này không chỉ ấm bụng mà còn cung cấp năng lượng dồi dào, giúp bạn khởi đầu ngày mới tràn đầy hứng khởi.",
+    "description": "Xôi gà là món ăn sáng quen thuộc với nếp dẻo, thịt gà, nấm đông cô, lạp xưởng và xá xíu. Món có vị đậm đà, dễ no nhưng chứa nhiều tinh bột và nguyên liệu chế biến sẵn, nên cần kiểm soát khẩu phần nếu đang ăn kiêng hoặc có bệnh lý cần hạn chế calo.",
     "core_ingredient_indices": [
       0,
       1,
@@ -18502,7 +18502,9 @@
       "Giàu đạm",
       "Giàu tinh bột",
       "Mềm",
-      "Món Việt truyền thống"
+      "Món Việt truyền thống",
+      "Nhiều dầu mỡ / Calo cao",
+      "Thực phẩm chế biến sẵn"
     ],
     "raw_ingredients": [
       "150 g nếp Thái",
@@ -18528,7 +18530,8 @@
     ],
     "raw_instructions": "Nếp vo sạch, ngâm nước qua đêm, để ráo.\nNấm đông cô ngâm mềm, cắt lát. Lạp xưởng, xá xíu cắt lát mỏng.\nQuét dầu vào khuôn, xếp gà, nấm, lạp xưởng, xá xíu xuống đáy.\nTrộn nếp với chút muối, hành lá, nước tương, cho vào khuôn, nén nhẹ.\nHấp cách thủy 40 phút đến khi nếp chín dẻo.\nÚp ngược khuôn ra đĩa, dùng nóng.\nBí quyết: Để xôi không bị nhão, hãy đảm bảo nếp được ngâm đủ thời gian và hấp đúng nhiệt độ.",
     "taste_profile": [
-      "Đậm đà"
+      "Đậm đà",
+      "Béo ngậy"
     ],
     "meal_context": [
       "Ăn sáng",
@@ -23997,7 +24000,7 @@
   },
   {
     "name": "Kimbap truyền thống",
-    "description": "Kimbap truyền thống là sự kết hợp hài hòa của cơm dẻo thơm, lá kim giòn nhẹ cùng nhân đầy đặn từ thịt bò xào đậm đà, trứng chiên mềm mại và các loại rau củ tươi ngon như cà rốt, cải bó xôi. Mỗi cuộn kimbap mang đến vị thanh đạm, chút béo ngậy và cảm giác no bụng, rất thích hợp cho bữa trưa nhanh gọn hay bữa tối nhẹ nhàng. Chấm kèm tương ớt và mayonnaise sẽ làm món ăn thêm phần hấp dẫn, bùng nổ vị giác.",
+    "description": "Kimbap truyền thống là món cuốn từ cơm trắng, lá kim, thịt bò xào, trứng chiên và rau củ như cà rốt, cải bó xôi. Món dễ ăn và no bụng nhưng có tinh bột từ cơm, dầu trong phần xào/chiên và sốt mayonnaise ăn kèm, nên cần kiểm soát khẩu phần nếu đang ăn kiêng hoặc cần hạn chế calo.",
     "core_ingredient_indices": [
       0,
       1,
@@ -24046,7 +24049,9 @@
       "Giàu chất xơ",
       "Giàu đạm",
       "Giàu tinh bột",
-      "Món Á"
+      "Món Á",
+      "Nhiều dầu mỡ / Calo cao",
+      "Thực phẩm chế biến sẵn"
     ],
     "raw_ingredients": [
       "1 bịch lá kim",
@@ -24080,7 +24085,8 @@
     ],
     "raw_instructions": "Cơm xới đều,để nguội bớt rồi trộn đều cùng 1 chút muối,1 chút dầu mè và mè rang.Đậy kín để giữ cơm có được độ ấm khi làm.\nThịt bò thái con chì (Dùng cán dao đạp dập để khi xào không bị co lại),nấm hương ngâm nở và thái nhỏ ướp chung vs thịt bò và 2 tép tỏi đập dập.thêm vào 2 muỗng canh xì dầu,1 muỗng canh+1 muỗng cà phê đường.ướp cho ngấm gia vị.\nCà rốt thái sợi bóp cùng 1 chút muối.Cải bó xôi trần qua nước sôi tầm 30 giây-1 phút sao cho cải héo lại là được.sau đó xả sạch lại với nước lạnh rồi bóp kiệt nước.Cắt đôi,ướp cùng 1 chút muối,1 chút dầu mè và 1 tép tỏi đập dập.\nCho vào chảo 1 chút dầu ăn rồi lau sạch bằng giấy ăn.đổ trứng sau khi khuấy đều vào chiên thành lớp mỏng.Chờ nguội rồi thái sợi.\nXào bò cùng nấm hương.sau đó chỉ sử dụng thịt bò. (Nấm hương chỉ tạo độ thơm cho thịt bò).cà rốt bóp sạch nước và xào trong 40 giây.\nTrải mành,đặt lên trên 1 miếng lá kim (mặt bóng úp xuống mành,mặt ráp ngửa lên trên.Trải 1 lớp cơm mỏng,đều,chừa lại khoảng 2cm k trải cơm.Sau đó xếp lần lượt các nguyên liệu sao cho cân đối giữa lớp cơm và cuốn lại thật chặt tay.Dùng dao sạch cắt khúc vừa ăn.\nPha sốt chấm tương ớt và mayonnaise tỉ lệ 1:1 (có thể điều chỉnh sao cho vừa khẩu vị ăn).Vậy là đã hoàn thành món kimbap truyền thống rồi.Lần sau mình sẽ hướng dẫn mọi người món kimbap cá ngừ 😘",
     "taste_profile": [
-      "Thanh đạm"
+      "Đậm đà",
+      "Béo ngậy"
     ],
     "meal_context": [
       "Ăn sáng",
@@ -30608,7 +30614,6 @@
       "Ăn tối"
     ],
     "occasion_context": [
-      "Mồi nhậu",
       "Tráng miệng"
     ]
   },
