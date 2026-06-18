@@ -5,7 +5,7 @@ PROJECT_ID=$(gcloud config get-value project)
 REGION="asia-southeast1"
 SERVICE="food-ai-backend"
 IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/food-ai/backend:latest"
-CLOUD_SQL="${PROJECT_ID}:${REGION}:food-ai-db"
+CLOUD_SQL="${PROJECT_ID}:${REGION}:food-ai-db-v17"
 
 SYNC_TAGS=false
 SYNC_FOODS=false

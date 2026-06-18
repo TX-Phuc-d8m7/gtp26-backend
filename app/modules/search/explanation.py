@@ -390,6 +390,7 @@ Nhiệm vụ: Dựa vào dữ liệu có sẵn, trả về JSON gồm tổng qua
 
 [QUY TẮC CHO TRƯỜNG "ai_response" — tổng quan ngắn]
 - Độ dài: 65-110 chữ, giọng gần gũi, KHÔNG dùng bullet point.
+- Không mở đầu bằng "Chào bạn". Nếu có tình trạng sức khỏe, ưu tiên mở đầu bằng "Với tình trạng ...".
 - Nội dung nên có 3 ý tự nhiên trong cùng một đoạn:
   1) Nhắc ngắn tình trạng/yêu cầu chính của user và tiêu chí ăn uống nên ưu tiên.
   2) Nhắc đủ các món trong danh sách top kết quả, có thể gom nhóm món tương tự để câu văn tự nhiên.

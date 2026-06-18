@@ -224,22 +224,187 @@ def _lower_first_text(value: str) -> str:
     return text[:1].lower() + text[1:]
 
 
+WARNING_TAG_LABELS = {
+    "Từ sữa / Phô mai": "từ sữa hoặc phô mai",
+    "Chiên / Rán": "chiên hoặc rán",
+    "Nhiều dầu mỡ / Calo cao": "nhiều dầu mỡ hoặc calo cao",
+    "Thực phẩm chế biến sẵn": "thực phẩm chế biến sẵn",
+    "Thức ăn nhanh": "thức ăn nhanh",
+    "Béo ngậy": "béo ngậy",
+    "Ngọt": "đồ ngọt",
+    "Bánh ngọt": "bánh ngọt",
+    "Cay": "cay",
+    "Chua": "chua",
+    "Đậm đà": "đậm vị",
+    "Mặn": "mặn",
+    "Nướng": "nướng",
+    "Xào": "xào",
+    "Gỏi / Nộm / Trộn": "gỏi, nộm hoặc món trộn",
+    "Sống / Chín tái": "sống hoặc chín tái",
+    "Món lạnh": "món lạnh",
+    "Món khô": "món khô",
+    "Khó tiêu / Nặng bụng": "khó tiêu hoặc nặng bụng",
+    "Giòn / Giòn rụm": "giòn hoặc giòn rụm",
+    "Lẩu": "lẩu",
+}
+
+WARNING_INGREDIENT_LABELS = {
+    "tom": "tôm",
+    "tep": "tép",
+    "cua": "cua",
+    "ghe": "ghẹ",
+    "be be": "bề bề",
+    "mam tom": "mắm tôm",
+    "mam tep": "mắm tép",
+    "mam ruoc": "mắm ruốc",
+    "muc": "mực",
+    "bach tuoc": "bạch tuộc",
+    "oc": "ốc",
+    "so": "sò",
+    "ngheu": "nghêu",
+    "hen": "hến",
+    "hau": "hàu",
+    "vem": "vẹm",
+    "sữa": "sữa",
+    "sua": "sữa",
+    "sua chua": "sữa chua",
+    "pho mai": "phô mai",
+    "bo lat": "bơ lạt",
+    "bo man": "bơ mặn",
+    "kem": "kem",
+    "whipping cream": "whipping cream",
+    "cream cheese": "cream cheese",
+    "sot kem": "sốt kem",
+    "lap xuong": "lạp xưởng",
+    "xuc xich": "xúc xích",
+    "pate": "pate",
+    "thit hun khoi": "thịt hun khói",
+    "dua chua": "dưa chua",
+    "ca phao": "cà pháo",
+    "kim chi": "kim chi",
+    "tiêu": "tiêu",
+    "ớt": "ớt",
+    "chanh": "chanh",
+    "giấm": "giấm",
+    "tỏi": "tỏi",
+    "sả": "sả",
+}
+
+WARNING_CONDITION_PROFILES = {
+    "Dị ứng động vật giáp xác": {
+        "kind": "allergy",
+        "avoid": "nhóm món này",
+        "preference": "lựa chọn phù hợp",
+    },
+    "Dị ứng động vật thân mềm": {
+        "kind": "allergy",
+        "avoid": "nhóm món này",
+        "preference": "lựa chọn phù hợp",
+    },
+    "Dị ứng sữa bò": {
+        "kind": "allergy",
+        "avoid": "các món có nguy cơ chứa sữa, bơ, kem hoặc phô mai",
+        "preference": "lựa chọn phù hợp",
+    },
+    "Cao huyết áp": {
+        "kind": "condition",
+        "preference": "các món thanh đạm, ít muối và ít dầu mỡ",
+        "criteria": ["thanh đạm", "ít muối", "ít dầu mỡ"],
+    },
+    "Viêm loét dạ dày": {
+        "kind": "condition",
+        "preference": "các món mềm, ấm, ít gia vị và dễ tiêu",
+        "criteria": ["mềm", "ấm", "ít gia vị", "dễ tiêu"],
+    },
+    "Béo phì": {
+        "kind": "condition",
+        "preference": "các món giàu đạm, nhiều chất xơ, thanh đạm và ít dầu mỡ",
+        "criteria": ["giàu đạm", "nhiều chất xơ", "thanh đạm", "ít dầu mỡ"],
+    },
+}
+
+
 def _display_conflict_label(value: str) -> str:
     """Đổi tag kỹ thuật thành cách gọi thân thiện hơn trong warning."""
     text = str(value or "").strip()
-    labels = {
-        "Cay": "món cay",
-        "Chua": "món chua",
-        "Chiên / Rán": "món chiên/rán",
-        "Nướng": "món nướng",
-        "Nóng hổi": "món quá nóng",
-        "Mặn": "món mặn",
-        "Đậm đà": "món đậm vị",
-        "Nhiều dầu mỡ / Calo cao": "món nhiều dầu mỡ",
-        "Khó tiêu / Nặng bụng": "món khó tiêu",
-        "Béo ngậy": "món béo ngậy",
-    }
-    return labels.get(text, text)
+    normalized = normalize_vietnamese_text(text)
+    return WARNING_TAG_LABELS.get(
+        text,
+        WARNING_INGREDIENT_LABELS.get(normalized, _lower_first_text(text)),
+    )
+
+
+def _split_warning_conditions(symptoms: Iterable[str]) -> tuple[list[str], list[str]]:
+    """Tách dị ứng và bệnh lý chỉ để chọn văn phong cảnh báo."""
+    allergies: list[str] = []
+    conditions: list[str] = []
+    for symptom in symptoms or []:
+        text = str(symptom or "").strip()
+        if not text:
+            continue
+        profile = WARNING_CONDITION_PROFILES.get(text)
+        is_allergy = profile and profile.get("kind") == "allergy"
+        if is_allergy or "dị ứng" in normalize_vietnamese_text(text):
+            allergies.append(text)
+        else:
+            conditions.append(text)
+    return allergies, conditions
+
+
+def _format_health_context(allergies: list[str], conditions: list[str]) -> str:
+    """Format cụm tình trạng sức khỏe tự nhiên hơn cho warning."""
+    parts: list[str] = []
+    if allergies:
+        parts.append(f"tiền sử {_format_vi_list(_lower_first_text(item) for item in allergies)}")
+    if conditions:
+        parts.append(f"tình trạng {_format_vi_list(_lower_first_text(item) for item in conditions)}")
+    return _format_vi_list(parts, limit=3)
+
+
+def _warning_risk_phrase(allergies: list[str], conditions: list[str]) -> str:
+    if allergies and conditions:
+        return "không an toàn hoặc chưa phù hợp với tình trạng sức khỏe của bạn hiện tại"
+    if allergies:
+        return "không an toàn cho bạn"
+    return "chưa phù hợp với tình trạng sức khỏe của bạn hiện tại"
+
+
+def _warning_next_step(allergies: list[str], conditions: list[str]) -> str:
+    avoid_phrases: list[str] = []
+    allergy_preference_phrases: list[str] = []
+    condition_preference_phrases: list[str] = []
+    condition_criteria: list[str] = []
+    for symptom in allergies:
+        profile = WARNING_CONDITION_PROFILES.get(symptom, {})
+        avoid = str(profile.get("avoid") or "").strip()
+        preference = str(profile.get("preference") or "").strip()
+        if avoid:
+            avoid_phrases.append(avoid)
+        if preference:
+            allergy_preference_phrases.append(preference)
+    for symptom in conditions:
+        profile = WARNING_CONDITION_PROFILES.get(symptom, {})
+        preference = str(profile.get("preference") or "").strip()
+        criteria = profile.get("criteria") or []
+        if criteria:
+            condition_criteria.extend(str(item).strip() for item in criteria if str(item).strip())
+        elif preference:
+            condition_preference_phrases.append(preference)
+
+    avoid_text = _format_vi_list(avoid_phrases, limit=2)
+    preference_phrases = condition_preference_phrases or allergy_preference_phrases
+    if condition_criteria:
+        preference_text = f"các món {_format_vi_list(condition_criteria, limit=8)}"
+    else:
+        preference_text = _format_vi_list(preference_phrases, limit=2)
+
+    if avoid_text and preference_text:
+        return f"mình sẽ tránh {avoid_text} và ưu tiên {preference_text} hơn nhé."
+    if avoid_text:
+        return f"mình sẽ tránh {avoid_text} và ưu tiên lựa chọn phù hợp hơn nhé."
+    if preference_text:
+        return f"mình sẽ ưu tiên {preference_text} hơn nhé."
+    return "mình sẽ ưu tiên các món phù hợp với tình trạng sức khoẻ của bạn hơn nhé."
 
 
 def _build_preference_conflict_warning(
@@ -249,13 +414,14 @@ def _build_preference_conflict_warning(
 ) -> str | None:
     """Viết cảnh báo tự nhiên khi sở thích người dùng xung đột với rule sức khỏe."""
     conflict_text = _format_vi_list(_display_conflict_label(item) for item in conflicts)
-    symptom_text = _format_vi_list(_lower_first_text(item) for item in symptoms)
-    if not conflict_text or not symptom_text:
+    allergies, conditions = _split_warning_conditions(symptoms)
+    health_context = _format_health_context(allergies, conditions)
+    if not conflict_text or not health_context:
         return None
     return (
-        f"Mình thấy bạn đang muốn ăn {conflict_text}. Tuy nhiên, với tình trạng {symptom_text}, "
-        "những lựa chọn này có thể làm triệu chứng khó chịu hơn hoặc không phù hợp với chế độ ăn hiện tại. "
-        "Vì vậy mình sẽ ưu tiên các món nhẹ hơn và phù hợp hơn với sức khỏe của bạn."
+        f"Mình thấy bạn đang quan tâm đến nhóm món {conflict_text}. Tuy nhiên, với {health_context}, "
+        f"nhóm này có thể {_warning_risk_phrase(allergies, conditions)}. "
+        f"Thay vào đó {_warning_next_step(allergies, conditions)}"
     )
 
 
